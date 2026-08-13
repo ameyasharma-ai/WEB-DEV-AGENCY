@@ -39,9 +39,7 @@ const Header = () => {
               href="/"
               className={`navbar-logo block w-full text-2xl font-bold tracking-tighter ${
                 sticky ? "py-4" : "py-6"
-              } ${
-                !sticky && pathUrl === "/" ? "text-white" : "text-dark dark:text-white"
-              }`}
+              } text-dark dark:text-white`}
             >
               {agencyConfig.name}
             </Link>
@@ -59,21 +57,21 @@ const Header = () => {
                   className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                     navbarOpen ? "top-[7px] rotate-45" : ""
                   } ${
-                    (!sticky && pathUrl === "/") ? "bg-white" : "bg-dark dark:bg-white"
+                    (!sticky && pathUrl === "/") ? "bg-dark dark:bg-white" : "bg-dark dark:bg-white"
                   }`}
                 />
                 <span
                   className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                     navbarOpen ? "opacity-0" : ""
                   } ${
-                    (!sticky && pathUrl === "/") ? "bg-white" : "bg-dark dark:bg-white"
+                    (!sticky && pathUrl === "/") ? "bg-dark dark:bg-white" : "bg-dark dark:bg-white"
                   }`}
                 />
                 <span
                   className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                     navbarOpen ? "top-[-8px] -rotate-45" : ""
                   } ${
-                    (!sticky && pathUrl === "/") ? "bg-white" : "bg-dark dark:bg-white"
+                    (!sticky && pathUrl === "/") ? "bg-dark dark:bg-white" : "bg-dark dark:bg-white"
                   }`}
                 />
               </button>
@@ -92,8 +90,6 @@ const Header = () => {
                         className={`ud-menu-scroll flex py-2 text-sm font-medium transition-colors lg:inline-flex lg:py-6 ${
                           pathUrl === menuItem.path
                             ? "text-primary"
-                            : (!sticky && pathUrl === "/" && !navbarOpen)
-                            ? "text-gray-300 hover:text-white"
                             : "text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
                         }`}
                       >
@@ -109,9 +105,7 @@ const Header = () => {
               <button
                 aria-label="theme toggler"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className={`flex h-8 w-8 items-center justify-center transition-colors mr-6 ${
-                  !sticky && pathUrl === "/" ? "text-gray-300 hover:text-white" : "text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
-                }`}
+                className="flex h-8 w-8 items-center justify-center transition-colors mr-6 text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
               >
                 {/* Sun icon for dark mode */}
                 <svg viewBox="0 0 16 16" className="hidden h-5 w-5 fill-current dark:block">
@@ -125,13 +119,7 @@ const Header = () => {
 
               <Link
                 href="/contact"
-                className={`rounded-full px-6 py-2.5 text-sm font-medium transition-all ${
-                  sticky
-                    ? "bg-dark text-white hover:bg-dark/90 dark:bg-white dark:text-dark dark:hover:bg-white/90"
-                    : pathUrl === "/"
-                    ? "bg-white text-dark hover:bg-white/90"
-                    : "bg-dark text-white hover:bg-dark/90 dark:bg-white dark:text-dark dark:hover:bg-white/90"
-                }`}
+                className="rounded-full px-6 py-2.5 text-sm font-medium transition-all bg-dark text-white hover:bg-dark/90 dark:bg-white dark:text-dark dark:hover:bg-white/90"
               >
                 {agencyConfig.cta.primary}
               </Link>

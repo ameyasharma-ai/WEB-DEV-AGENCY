@@ -4,10 +4,10 @@ const Problem = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
               Your website is more than a brochure.
             </h2>
-            <p className="text-xl text-gray-400 font-medium max-w-lg">
+            <p className="text-lg sm:text-xl text-gray-400 font-medium max-w-lg">
               A poor website does more damage than you think. It silently loses potential customers, makes competitors appear stronger, and fails to provide useful business data.
             </p>
           </div>

@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 import Providers from "./providers";
@@ -21,6 +22,7 @@ export default function RootLayout({
 
             <Footer />
             <ScrollToTop />
+            <WhatsAppButton />
           </div>
         </Providers>
       </body>

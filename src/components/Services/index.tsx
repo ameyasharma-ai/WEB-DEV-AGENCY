@@ -12,16 +12,6 @@ const services = [
     ]
   },
   {
-    title: "Data Analytics",
-    description: "Dashboards and reporting systems that turn business data into actionable decisions. Know exactly what your users are doing.",
-    features: [
-      "Business Dashboards",
-      "KPI Tracking",
-      "Automated Reporting",
-      "Customer Analytics"
-    ]
-  },
-  {
     title: "Digital Growth",
     description: "Clear digital positioning and strategy based on your business objectives. We build the engine that drives your growth.",
     features: [
@@ -38,10 +28,10 @@ const Services = () => {
     <section id="services" className="bg-gray-50 dark:bg-dark-2 py-24 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mb-16 md:mb-24 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-6 leading-tight">
             Built for businesses that take their digital presence seriously.
           </h2>
-          <p className="text-xl text-body-color dark:text-dark-6 font-medium">
+          <p className="text-lg sm:text-xl text-body-color dark:text-dark-6 font-medium">
             We don't assemble websites from templates. We design, build, and optimize digital assets that produce measurable business outcomes.
           </p>
         </div>
