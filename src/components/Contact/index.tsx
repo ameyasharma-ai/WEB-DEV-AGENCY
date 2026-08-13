@@ -1,143 +1,137 @@
+"use client";
+import { useState } from "react";
+
 const Contact = () => {
+  const [status, setStatus] = useState("idle");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("submitting");
+    // Simulate form submission
+    setTimeout(() => {
+      setStatus("success");
+    }, 1500);
+  };
+
   return (
-    <section id="contact" className="relative py-20 md:py-[120px]">
-      <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
-      <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
-      <div className="container px-4">
-        <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div className="ud-contact-content-wrapper">
-              <div className="ud-contact-title mb-12 lg:mb-[150px]">
-                <span className="mb-6 block text-base font-medium text-dark dark:text-white">
-                  CONTACT US
-                </span>
-                <h2 className="max-w-[260px] text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
-                  Let&#39;s talk about your problem.
-                </h2>
-              </div>
-              <div className="mb-12 flex flex-wrap justify-between lg:mb-0">
-                <div className="mb-8 flex w-[330px] max-w-full">
-                  <div className="mr-6 text-[32px] text-primary">
-                    <svg
-                      width="29"
-                      height="35"
-                      viewBox="0 0 29 35"
-                      className="fill-current"
-                    >
-                      <path d="M14.5 0.710938C6.89844 0.710938 0.664062 6.72656 0.664062 14.0547C0.664062 19.9062 9.03125 29.5859 12.6406 33.5234C13.1328 34.0703 13.7891 34.3437 14.5 34.3437C15.2109 34.3437 15.8672 34.0703 16.3594 33.5234C19.9688 29.6406 28.3359 19.9062 28.3359 14.0547C28.3359 6.67188 22.1016 0.710938 14.5 0.710938ZM14.9375 32.2109C14.6641 32.4844 14.2812 32.4844 14.0625 32.2109C11.3828 29.3125 2.57812 19.3594 2.57812 14.0547C2.57812 7.71094 7.9375 2.625 14.5 2.625C21.0625 2.625 26.4219 7.76562 26.4219 14.0547C26.4219 19.3594 17.6172 29.2578 14.9375 32.2109Z" />
-                      <path d="M14.5 8.58594C11.2734 8.58594 8.59375 11.2109 8.59375 14.4922C8.59375 17.7188 11.2187 20.3984 14.5 20.3984C17.7812 20.3984 20.4062 17.7734 20.4062 14.4922C20.4062 11.2109 17.7266 8.58594 14.5 8.58594ZM14.5 18.4297C12.3125 18.4297 10.5078 16.625 10.5078 14.4375C10.5078 12.25 12.3125 10.4453 14.5 10.4453C16.6875 10.4453 18.4922 12.25 18.4922 14.4375C18.4922 16.625 16.6875 18.4297 14.5 18.4297Z" />
+    <section id="contact" className="relative py-24 md:py-32 bg-white dark:bg-dark border-t border-gray-100 dark:border-dark-3">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap -mx-4 items-start">
+          <div className="w-full lg:w-5/12 px-4 mb-16 lg:mb-0">
+            <div className="max-w-md">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-6">
+                Let's find what's holding your website back.
+              </h2>
+              <p className="text-xl text-body-color dark:text-dark-6 font-medium mb-12">
+                Get a free website & growth audit. We'll analyze your design, performance, SEO, and conversion architecture.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-primary" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="mb-[18px] text-lg font-semibold text-dark dark:text-white">
-                      Our Location
-                    </h3>
-                    <p className="text-base text-body-color dark:text-dark-6">
-                      401 Broadway, 24th Floor, Orchard Cloud View, London
-                    </p>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-bold text-dark dark:text-white">Performance Analysis</h4>
+                    <p className="text-body-color dark:text-dark-6">Deep dive into Core Web Vitals and load times.</p>
                   </div>
                 </div>
-                <div className="mb-8 flex w-[330px] max-w-full">
-                  <div className="mr-6 text-[32px] text-primary">
-                    <svg
-                      width="34"
-                      height="25"
-                      viewBox="0 0 34 25"
-                      className="fill-current"
-                    >
-                      <path d="M30.5156 0.960938H3.17188C1.42188 0.960938 0 2.38281 0 4.13281V20.9219C0 22.6719 1.42188 24.0938 3.17188 24.0938H30.5156C32.2656 24.0938 33.6875 22.6719 33.6875 20.9219V4.13281C33.6875 2.38281 32.2656 0.960938 30.5156 0.960938ZM30.5156 2.875C30.7891 2.875 31.0078 2.92969 31.2266 3.09375L17.6094 11.3516C17.1172 11.625 16.5703 11.625 16.0781 11.3516L2.46094 3.09375C2.67969 2.98438 2.89844 2.875 3.17188 2.875H30.5156ZM30.5156 22.125H3.17188C2.51562 22.125 1.91406 21.5781 1.91406 20.8672V5.00781L15.0391 12.9922C15.5859 13.3203 16.1875 13.4844 16.7891 13.4844C17.3906 13.4844 17.9922 13.3203 18.5391 12.9922L31.6641 5.00781V20.8672C31.7734 21.5781 31.1719 22.125 30.5156 22.125Z" />
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-primary" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="mb-[18px] text-lg font-semibold text-dark dark:text-white">
-                      How Can We Help?
-                    </h3>
-                    <p className="text-base text-body-color dark:text-dark-6">
-                      info@yourdomain.com
-                    </p>
-                    <p className="mt-1 text-base text-body-color dark:text-dark-6">
-                      contact@yourdomain.com
-                    </p>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-bold text-dark dark:text-white">UX/UI Evaluation</h4>
+                    <p className="text-body-color dark:text-dark-6">Identify friction points in your user journey.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-primary" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-bold text-dark dark:text-white">SEO Foundations</h4>
+                    <p className="text-body-color dark:text-dark-6">Check technical SEO and structure optimization.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <div
-              className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
-              data-wow-delay=".2s
-              "
-            >
-              <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
-                Send us a Message
-              </h3>
-              <form>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="fullName"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Full Name*
-                  </label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    placeholder="Adam Gelius"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
+          
+          <div className="w-full lg:w-7/12 px-4">
+            <div className="bg-gray-50 dark:bg-dark-2 rounded-[2rem] p-8 sm:p-12 shadow-sm border border-gray-100 dark:border-dark-3">
+              {status === "success" ? (
+                <div className="text-center py-16">
+                  <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <h3 className="text-3xl font-bold text-dark dark:text-white mb-4">Audit Requested</h3>
+                  <p className="text-body-color dark:text-dark-6 text-lg">
+                    Thank you. Our team will review your details and get back to you within 24 hours.
+                  </p>
                 </div>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="email"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Email*
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="example@yourmail.com"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
-                </div>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="phone"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Phone*
-                  </label>
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="+885 1254 5211 552"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
-                </div>
-                <div className="mb-[30px]">
-                  <label
-                    htmlFor="message"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Message*
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={1}
-                    placeholder="type your message here"
-                    className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  ></textarea>
-                </div>
-                <div className="mb-0">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
-                  >
-                    Send
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Name</label>
+                      <input type="text" required placeholder="John Doe" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Business Name</label>
+                      <input type="text" required placeholder="Acme Corp" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Email</label>
+                      <input type="email" required placeholder="john@acme.com" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Website URL</label>
+                      <input type="url" placeholder="https://acme.com" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-semibold text-dark dark:text-white mb-2">What do you need?</label>
+                    <select className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none">
+                      <option>Free Website Audit</option>
+                      <option>New Website Project</option>
+                      <option>Data Analytics Dashboard</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Message (Optional)</label>
+                    <textarea rows={4} placeholder="Tell us more about your business..." className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"></textarea>
+                  </div>
+                  
+                  <button type="submit" disabled={status === "submitting"} className="w-full bg-dark hover:bg-dark/90 dark:bg-white dark:hover:bg-white/90 text-white dark:text-dark text-lg font-bold py-5 rounded-xl transition-all hover:scale-[1.01] flex items-center justify-center">
+                    {status === "submitting" ? (
+                       <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                       </svg>
+                    ) : "Get My Free Audit"}
                   </button>
-                </div>
-              </form>
+                </form>
+              )}
             </div>
           </div>
         </div>
