@@ -4,7 +4,7 @@ import { agencyConfig } from "@/config/agency";
 
 const Hero = () => {
   return (
-    <section className="relative z-10 overflow-hidden bg-white dark:bg-dark pt-[120px] pb-16 md:pt-[150px] xl:pt-[200px] xl:pb-[100px] min-h-screen flex items-center">
+    <section className="relative z-10 overflow-hidden bg-white dark:bg-dark pt-[160px] pb-16 md:pt-[180px] xl:pt-[220px] xl:pb-[100px] min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center -mx-4">
           <div className="w-full px-4 text-center lg:w-10/12 xl:w-8/12 mx-auto">

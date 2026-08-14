@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const KanyaadhanCaseStudy = () => {
   return (
-    <main className="pt-24 md:pt-32 pb-24 bg-white dark:bg-dark">
+    <main className="pt-[160px] md:pt-[180px] pb-24 bg-white dark:bg-dark">
       <div className="container mx-auto px-4">
         
         {/* Back Link */}
@@ -36,8 +36,8 @@ const KanyaadhanCaseStudy = () => {
         </div>
 
         {/* Main Cover Image */}
-        <div className="relative w-full aspect-video md:aspect-[21/9] rounded-3xl overflow-hidden mb-20 shadow-2xl border border-gray-100 dark:border-dark-3 bg-gray-50 dark:bg-dark-2">
-           <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084313.png" alt="Kanyaadhan Storefront" fill className="object-cover object-top" />
+        <div className="w-full rounded-3xl overflow-hidden mb-20 shadow-2xl border border-gray-100 dark:border-dark-3 bg-gray-50 dark:bg-dark-2">
+           <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084415.png" alt="Kanyaadhan Storefront" width={1920} height={1080} className="w-full h-auto object-contain" />
         </div>
 
         {/* Content Grid */}
@@ -76,11 +76,11 @@ const KanyaadhanCaseStudy = () => {
 
             {/* In-content Gallery */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md">
-                 <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084427.png" alt="Kanyaadhan Collections" fill className="object-cover object-top" />
+               <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md bg-gray-50 dark:bg-dark-2">
+                 <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084427.png" alt="Kanyaadhan Collections" width={960} height={720} className="w-full h-auto object-contain" />
                </div>
-               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md">
-                 <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084337.png" alt="Kanyaadhan Product Details" fill className="object-cover object-top" />
+               <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md bg-gray-50 dark:bg-dark-2">
+                 <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084337.png" alt="Kanyaadhan Product Details" width={960} height={720} className="w-full h-auto object-contain" />
                </div>
             </div>
 
@@ -91,8 +91,8 @@ const KanyaadhanCaseStudy = () => {
               </p>
             </section>
             
-            <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-xl">
-               <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084415.png" alt="Kanyaadhan Homepage" fill className="object-cover object-top" />
+            <div className="w-full rounded-3xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-xl bg-gray-50 dark:bg-dark-2">
+               <Image src="/images/projects/kanyaadhan/Screenshot_2026-08-14_084313.png" alt="Kanyaadhan Homepage" width={1920} height={1080} className="w-full h-auto object-contain" />
             </div>
 
           </div>

@@ -35,21 +35,23 @@ const About = () => {
 
             <div className="w-full px-4 lg:w-5/12 lg:ml-auto">
               <div className="flex flex-col gap-6">
-                <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-dark-3 bg-white dark:bg-dark-2">
+                <div className="relative w-full rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-dark-3 bg-white dark:bg-dark-2">
                   <Image
                     src="/images/about_agrimitra.png"
                     alt="Digital architecture"
-                    fill
-                    className="object-cover"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-auto object-contain"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-dark-3 bg-white dark:bg-dark-2">
+                  <div className="relative w-full rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-dark-3 bg-white dark:bg-dark-2 flex items-center justify-center">
                     <Image
                       src="/images/about_kanyaadhan.png"
                       alt="Modern code editor"
-                      fill
-                      className="object-cover"
+                      width={1080}
+                      height={1080}
+                      className="w-full h-auto object-contain"
                     />
                   </div>
                   <div className="bg-primary flex flex-col justify-center items-center rounded-[2rem] p-4 sm:p-6 shadow-xl text-center text-white aspect-square">

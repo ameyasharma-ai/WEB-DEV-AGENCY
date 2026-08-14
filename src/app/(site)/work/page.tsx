@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const WorkPage = () => {
   return (
-    <main className="pt-24 md:pt-32">
+    <main className="pt-[160px] md:pt-[180px]">
       <Portfolio />
     </main>
   );

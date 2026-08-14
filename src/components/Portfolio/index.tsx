@@ -68,7 +68,7 @@ const Portfolio = () => {
                 </div>
                 
                 {project.image ? (
-                  <img src={project.image} alt={project.name} className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700" />
+                  <img src={project.image} alt={project.name} className="w-full h-full object-contain object-center p-4 md:p-8 transform group-hover:scale-105 transition-transform duration-700" />
                 ) : (
                   <div className="absolute top-16 left-8 right-8 bottom-[-20px] bg-white dark:bg-dark-2 rounded-t-xl shadow-lg border border-gray-200 dark:border-dark-4 overflow-hidden transform group-hover:-translate-y-4 transition-transform duration-700 ease-out">
                      <div className="w-full h-6 border-b border-gray-100 dark:border-dark-3 flex items-center px-3 space-x-1.5">

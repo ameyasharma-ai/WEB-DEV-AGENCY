@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const AgriMitraCaseStudy = () => {
   return (
-    <main className="pt-24 md:pt-32 pb-24 bg-white dark:bg-dark">
+    <main className="pt-[160px] md:pt-[180px] pb-24 bg-white dark:bg-dark">
       <div className="container mx-auto px-4">
         
         {/* Back Link */}
@@ -43,8 +43,8 @@ const AgriMitraCaseStudy = () => {
         </div>
 
         {/* Main Cover Image */}
-        <div className="relative w-full aspect-video md:aspect-[21/9] rounded-3xl overflow-hidden mb-20 shadow-2xl border border-gray-100 dark:border-dark-3 bg-gray-50 dark:bg-dark-2">
-           <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082645.png" alt="AgriMitra Dashboard" fill className="object-cover object-top" />
+        <div className="w-full rounded-3xl overflow-hidden mb-20 shadow-2xl border border-gray-100 dark:border-dark-3 bg-gray-50 dark:bg-dark-2">
+           <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082645.png" alt="AgriMitra Dashboard" width={1920} height={1080} className="w-full h-auto object-contain" />
         </div>
 
         {/* Content Grid */}
@@ -83,11 +83,11 @@ const AgriMitraCaseStudy = () => {
 
             {/* In-content Gallery */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md">
-                 <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082614.png" alt="AgriMitra UI" fill className="object-cover" />
+               <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md bg-gray-50 dark:bg-dark-2">
+                 <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082614.png" alt="AgriMitra UI" width={960} height={720} className="w-full h-auto object-contain" />
                </div>
-               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md">
-                 <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082716.png" alt="AgriMitra Charts" fill className="object-cover" />
+               <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-md bg-gray-50 dark:bg-dark-2">
+                 <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082716.png" alt="AgriMitra Charts" width={960} height={720} className="w-full h-auto object-contain" />
                </div>
             </div>
 
@@ -98,8 +98,8 @@ const AgriMitraCaseStudy = () => {
               </p>
             </section>
             
-            <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-xl">
-               <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082651.png" alt="AgriMitra Data Visualization" fill className="object-cover" />
+            <div className="w-full rounded-3xl overflow-hidden border border-gray-100 dark:border-dark-3 shadow-xl bg-gray-50 dark:bg-dark-2">
+               <Image src="/images/projects/agrimitra/Screenshot_2026-08-14_082651.png" alt="AgriMitra Data Visualization" width={1920} height={1080} className="w-full h-auto object-contain" />
             </div>
 
           </div>
