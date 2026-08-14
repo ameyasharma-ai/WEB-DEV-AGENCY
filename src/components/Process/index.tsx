@@ -47,9 +47,9 @@ const Process = () => {
              <div className="absolute top-0 left-0 h-full bg-primary/20 w-1/3"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
+          <div className="flex flex-wrap justify-center gap-8 lg:gap-4 relative z-10">
             {steps.map((step, index) => (
-              <div key={index} className="flex flex-col relative group">
+              <div key={index} className="flex flex-col relative group w-full md:w-[calc(50%-1rem)] lg:w-[calc(20%-1rem)]">
                 <div className="w-24 h-24 lg:w-20 lg:h-20 rounded-full bg-gray-50 dark:bg-dark-2 border border-gray-200 dark:border-dark-3 flex items-center justify-center mb-6 text-2xl font-bold text-dark dark:text-white transition-transform group-hover:scale-110 shadow-sm mx-auto lg:mx-0">
                   {step.num}
                 </div>

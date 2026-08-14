@@ -3,27 +3,33 @@ import Link from 'next/link';
 
 const projects = [
   {
-    name: "Fintech Dashboard",
-    type: "Studio Concept",
-    industry: "Financial Services",
-    problem: "Complex data presentation was leading to user drop-off.",
-    solution: "A streamlined, intuitive dashboard focusing on actionable insights.",
-    imageColor: "bg-blue-100 dark:bg-blue-900/20"
+    name: "Nomads elixir",
+    slug: "nomadselixir",
+    type: "Live Project",
+    industry: "E-Commerce / Wellness",
+    problem: "Needed a clean, conversion-oriented Shopify storefront to highlight essential oils.",
+    solution: "A custom Shopify theme with tailored sections, optimized imagery, and fast performance.",
+    image: "/images/projects/nomadselixir/main.png",
+    imageColor: "bg-amber-100 dark:bg-amber-900/20"
   },
   {
-    name: "E-Commerce Platform",
-    type: "Studio Concept",
-    industry: "Retail",
-    problem: "Slow load times and confusing navigation reduced conversions.",
-    solution: "A high-performance Next.js storefront with sub-second transitions.",
-    imageColor: "bg-purple-100 dark:bg-purple-900/20"
+    name: "AgriMitra",
+    slug: "agrimitra",
+    type: "Live Project",
+    industry: "Agritech / AI",
+    problem: "Lack of consolidated weather and soil data for accurate crop yield prediction.",
+    solution: "A scalable, multilingual AI-based platform with interactive dashboards and API integrations.",
+    image: "/images/projects/agrimitra/main.png",
+    imageColor: "bg-green-100 dark:bg-green-900/20"
   },
   {
-    name: "Corporate Marketing Site",
-    type: "Studio Concept",
-    industry: "B2B SaaS",
-    problem: "The website failed to communicate enterprise-level trust.",
-    solution: "A complete brand repositioning and Apple-level visual redesign.",
+    name: "Kanyaadhan",
+    slug: "kanyaadhan",
+    type: "Live Project",
+    industry: "E-Commerce / Jewelry",
+    problem: "Needed a refined shopping experience for bespoke bridal jewelry.",
+    solution: "A customized Shopify theme featuring specialized product discovery and streamlined checkout.",
+    image: "/images/projects/kanyaadhan/main.png",
     imageColor: "bg-emerald-100 dark:bg-emerald-900/20"
   }
 ];
@@ -53,28 +59,30 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group cursor-pointer">
-              {/* Project Image Placeholder */}
+            <Link key={index} href={project.slug ? `/work/${project.slug}` : "/work"} className="group cursor-pointer block w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
               <div className={`w-full aspect-[4/3] rounded-2xl ${project.imageColor} mb-8 relative overflow-hidden transition-all duration-500 group-hover:shadow-2xl border border-gray-100 dark:border-dark-3`}>
-                <div className="absolute top-4 left-4 bg-white/80 dark:bg-dark-2/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-dark dark:text-white uppercase tracking-wider">
+                <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-dark-2/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-dark dark:text-white uppercase tracking-wider">
                   {project.type}
                 </div>
                 
-                {/* Minimal browser frame for preview */}
-                <div className="absolute top-16 left-8 right-8 bottom-[-20px] bg-white dark:bg-dark-2 rounded-t-xl shadow-lg border border-gray-200 dark:border-dark-4 overflow-hidden transform group-hover:-translate-y-4 transition-transform duration-700 ease-out">
-                   <div className="w-full h-6 border-b border-gray-100 dark:border-dark-3 flex items-center px-3 space-x-1.5">
-                     <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-dark-4"></div>
-                     <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-dark-4"></div>
-                     <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-dark-4"></div>
-                   </div>
-                   <div className="p-4 opacity-50">
-                     <div className="w-1/3 h-4 bg-gray-200 dark:bg-dark-4 rounded mb-4"></div>
-                     <div className="w-full h-24 bg-gray-100 dark:bg-dark-5 rounded mb-4"></div>
-                     <div className="w-2/3 h-2 bg-gray-200 dark:bg-dark-4 rounded"></div>
-                   </div>
-                </div>
+                {project.image ? (
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700" />
+                ) : (
+                  <div className="absolute top-16 left-8 right-8 bottom-[-20px] bg-white dark:bg-dark-2 rounded-t-xl shadow-lg border border-gray-200 dark:border-dark-4 overflow-hidden transform group-hover:-translate-y-4 transition-transform duration-700 ease-out">
+                     <div className="w-full h-6 border-b border-gray-100 dark:border-dark-3 flex items-center px-3 space-x-1.5">
+                       <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-dark-4"></div>
+                       <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-dark-4"></div>
+                       <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-dark-4"></div>
+                     </div>
+                     <div className="p-4 opacity-50">
+                       <div className="w-1/3 h-4 bg-gray-200 dark:bg-dark-4 rounded mb-4"></div>
+                       <div className="w-full h-24 bg-gray-100 dark:bg-dark-5 rounded mb-4"></div>
+                       <div className="w-2/3 h-2 bg-gray-200 dark:bg-dark-4 rounded"></div>
+                     </div>
+                  </div>
+                )}
               </div>
 
               <div>
@@ -91,7 +99,7 @@ const Portfolio = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

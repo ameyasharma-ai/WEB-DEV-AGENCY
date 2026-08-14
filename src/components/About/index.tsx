@@ -33,43 +33,32 @@ const About = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="-mx-2 flex flex-wrap sm:-mx-4 lg:-mx-2 xl:-mx-4">
-                <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                  <div className="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
-                    <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-dark-4">
-                      <Image
-                        src="/images/about_architecture.png"
-                        alt="Digital architecture and wireframe visualization"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
+            <div className="w-full px-4 lg:w-5/12 lg:ml-auto">
+              <div className="flex flex-col gap-6">
+                <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-dark-3 bg-white dark:bg-dark-2">
+                  <Image
+                    src="/images/about_agrimitra.png"
+                    alt="Digital architecture"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                  <div className="mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
-                    <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-dark-4">
-                      <Image
-                        src="/images/about_code.png"
-                        alt="Modern code editor with syntax highlighting"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-dark-3 bg-white dark:bg-dark-2">
+                    <Image
+                      src="/images/about_kanyaadhan.png"
+                      alt="Modern code editor"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <div className="bg-primary relative z-10 mb-4 flex items-center justify-center overflow-hidden rounded-2xl px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
-                    <div>
-                      <span className="block text-5xl font-extrabold text-white">
-                        09
-                      </span>
-                      <span className="block text-base font-semibold text-white">
-                        We have
-                      </span>
-                      <span className="block text-base font-medium text-white text-opacity-70">
-                        Years of experience
-                      </span>
-                    </div>
+                  <div className="bg-primary flex flex-col justify-center items-center rounded-[2rem] p-4 sm:p-6 shadow-xl text-center text-white aspect-square">
+                    <span className="block text-5xl sm:text-6xl lg:text-5xl xl:text-6xl font-extrabold mb-2">
+                      09
+                    </span>
+                    <span className="block text-xs sm:text-sm font-bold tracking-wider uppercase opacity-90">
+                      Years of<br />Experience
+                    </span>
                   </div>
                 </div>
               </div>

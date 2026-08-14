@@ -29,18 +29,20 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="flex flex-col h-full border-l-2 border-primary/20 dark:border-primary/10 pl-6 md:pl-8">
-              <svg className="w-8 h-8 text-primary/40 mb-6" fill="currentColor" viewBox="0 0 32 32">
-                <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-2.2 1.8-4 4-4V8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-2.2 1.8-4 4-4V8z" />
-              </svg>
-              <p className="text-lg md:text-xl font-medium text-dark dark:text-white mb-8 flex-grow leading-relaxed">
+            <div key={index} className="flex flex-col h-full bg-gray-50/50 dark:bg-dark-2/50 rounded-3xl p-8 md:p-10 border border-gray-100 dark:border-dark-3 transition-colors hover:bg-gray-50 dark:hover:bg-dark-2">
+              <p className="text-lg md:text-xl font-medium text-dark dark:text-white mb-10 flex-grow leading-relaxed">
                 "{testimonial.quote}"
               </p>
-              <div>
-                <p className="font-bold text-dark dark:text-white">{testimonial.author}</p>
-                <p className="text-sm font-medium text-gray-500 dark:text-gray-400">{testimonial.role}</p>
+              <div className="flex items-center gap-4 mt-auto">
+                <div className="w-12 h-12 rounded-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 flex items-center justify-center text-lg font-bold text-dark dark:text-white shadow-sm">
+                  {testimonial.author.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-bold text-dark dark:text-white">{testimonial.author}</p>
+                  <p className="text-sm font-medium text-body-color dark:text-dark-6">{testimonial.role}</p>
+                </div>
               </div>
             </div>
           ))}

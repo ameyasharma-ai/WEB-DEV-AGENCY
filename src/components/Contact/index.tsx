@@ -4,29 +4,46 @@ import { useState } from "react";
 const Contact = () => {
   const [status, setStatus] = useState("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
-    // Simulate form submission
-    setTimeout(() => {
-      setStatus("success");
-    }, 1500);
+    
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-white dark:bg-dark border-t border-gray-100 dark:border-dark-3">
+    <section id="contact" className="relative py-12 md:py-32 bg-white dark:bg-dark border-t border-gray-100 dark:border-dark-3">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4 items-start">
-          <div className="w-full lg:w-5/12 px-4 mb-16 lg:mb-0">
+          <div className="w-full lg:w-5/12 px-4 mb-8 lg:mb-0">
             <div className="max-w-md">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-6">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-4 md:mb-6">
                 Let's find what's holding your website back.
               </h2>
-              <p className="text-xl text-body-color dark:text-dark-6 font-medium mb-12">
+              <p className="text-lg md:text-xl text-body-color dark:text-dark-6 font-medium mb-8 md:mb-12">
                 Get a free website & growth audit. We'll analyze your design, performance, SEO, and conversion architecture.
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6 hidden sm:block">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-primary" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -70,7 +87,7 @@ const Contact = () => {
           </div>
           
           <div className="w-full lg:w-7/12 px-4">
-            <div className="bg-gray-50 dark:bg-dark-2 rounded-[2rem] p-8 sm:p-12 shadow-sm border border-gray-100 dark:border-dark-3">
+            <div className="bg-gray-50 dark:bg-dark-2 rounded-[2rem] p-6 sm:p-12 shadow-sm border border-gray-100 dark:border-dark-3">
               {status === "success" ? (
                 <div className="text-center py-16">
                   <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -84,42 +101,53 @@ const Contact = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Name</label>
-                      <input type="text" required placeholder="John Doe" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                      <input type="text" name="name" required placeholder="John Doe" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Business Name</label>
-                      <input type="text" required placeholder="Acme Corp" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Email</label>
-                      <input type="email" required placeholder="john@acme.com" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                      <input type="text" name="business" required placeholder="Acme Corp" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Website URL</label>
-                      <input type="url" placeholder="https://acme.com" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Email Address</label>
+                      <input type="email" name="email" required placeholder="john@example.com" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
                     </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-dark dark:text-white mb-2">What do you need?</label>
-                    <select className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none">
-                      <option>Free Website Audit</option>
-                      <option>New Website Project</option>
-                      <option>Data Analytics Dashboard</option>
-                      <option>Other</option>
-                    </select>
+                    <div>
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Phone / WhatsApp</label>
+                      <input type="tel" name="phone" required placeholder="+91 98765 43210" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Website URL (Optional)</label>
+                      <input type="url" name="website" placeholder="https://yourwebsite.com" className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">What do you need?</label>
+                      <select name="service" required className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none">
+                        <option value="">Select a service...</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="data-analytics">Data Analytics</option>
+                        <option value="digital-strategy">Digital Strategy</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Approximate Budget</label>
+                      <select name="budget" required className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none">
+                        <option value="">Select budget range...</option>
+                        <option value="under-25k">Under ₹25,000</option>
+                        <option value="25k-50k">₹25,000 - ₹50,000</option>
+                        <option value="50k-1L">₹50,000 - ₹1 Lakh</option>
+                        <option value="1L+">₹1 Lakh+</option>
+                      </select>
+                    </div>
                   </div>
                   
                   <div>
                     <label className="block text-sm font-semibold text-dark dark:text-white mb-2">Message (Optional)</label>
-                    <textarea rows={4} placeholder="Tell us more about your business..." className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-5 py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"></textarea>
+                    <textarea name="message" rows={3} placeholder="Tell us more about your business..." className="w-full bg-white dark:bg-dark border border-gray-200 dark:border-dark-4 rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"></textarea>
                   </div>
                   
                   <button type="submit" disabled={status === "submitting"} className="w-full bg-dark hover:bg-dark/90 dark:bg-white dark:hover:bg-white/90 text-white dark:text-dark text-lg font-bold py-5 rounded-xl transition-all hover:scale-[1.01] flex items-center justify-center">

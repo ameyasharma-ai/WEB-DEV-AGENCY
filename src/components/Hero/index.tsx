@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="w-full px-4 text-center lg:w-10/12 xl:w-8/12 mx-auto">
             <div className="mx-auto max-w-4xl text-center mb-12">
               <h1 className="mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-dark dark:text-white leading-tight lg:leading-[1.1] break-words">
-                Websites that make businesses <span className="text-gray-400">impossible to ignore.</span>
+                Websites that make businesses <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-300 dark:from-gray-300 dark:to-gray-100">impossible to ignore.</span>
               </h1>
               <p className="mb-12 text-base sm:text-lg md:text-xl font-medium text-body-color dark:text-dark-6 max-w-2xl mx-auto px-4 sm:px-0">
                 {agencyConfig.description}
@@ -36,7 +36,7 @@ const Hero = () => {
             <div className="mt-12 sm:mt-20 relative mx-auto max-w-[1000px] rounded-[32px] bg-gray-50/50 p-2 sm:p-4 dark:bg-dark-2/50 backdrop-blur-sm border border-gray-200/50 dark:border-dark-3/50 shadow-2xl">
               <div className="relative aspect-[4/3] sm:aspect-[16/9] w-full rounded-2xl bg-gray-100 dark:bg-dark-3 overflow-hidden shadow-sm border border-gray-200 dark:border-dark-4">
                 <Image 
-                  src="/images/hero_workspace.png" 
+                  src="/images/hero_nomads.png" 
                   alt="Premium Workspace"
                   fill
                   className="object-cover"

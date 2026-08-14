@@ -1,8 +1,9 @@
 import About from "@/components/About";
 import { Metadata } from "next";
+import { agencyConfig } from "@/config/agency";
 
 export const metadata: Metadata = {
-  title: "About Us | [AGENCY NAME]",
+  title: `About Us | ${agencyConfig.name}`,
   description: "Learn more about our agency, our engineering-first approach, and how we help businesses grow.",
 };
 

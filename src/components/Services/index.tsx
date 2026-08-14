@@ -36,11 +36,11 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group rounded-3xl bg-white dark:bg-dark p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-3 flex flex-col h-full"
+              className="group rounded-3xl bg-white dark:bg-dark p-8 md:p-12 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-3 flex flex-col h-full"
             >
               <h3 className="text-2xl font-bold text-dark dark:text-white mb-4">
                 {service.title}
