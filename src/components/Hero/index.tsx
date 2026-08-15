@@ -34,12 +34,13 @@ const Hero = () => {
             
             {/* Real Workspace Image */}
             <div className="mt-12 sm:mt-20 relative mx-auto max-w-[1000px] rounded-[32px] bg-gray-50/50 p-2 sm:p-4 dark:bg-dark-2/50 backdrop-blur-sm border border-gray-200/50 dark:border-dark-3/50 shadow-2xl">
-              <div className="relative aspect-[4/3] sm:aspect-[16/9] w-full rounded-2xl bg-gray-100 dark:bg-dark-3 overflow-hidden shadow-sm border border-gray-200 dark:border-dark-4">
+              <div className="w-full rounded-2xl bg-gray-100 dark:bg-dark-3 overflow-hidden shadow-sm border border-gray-200 dark:border-dark-4 flex items-center justify-center">
                 <Image 
                   src="/images/hero_nomads.png" 
                   alt="Premium Workspace"
-                  fill
-                  className="object-cover"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-auto object-contain"
                   priority
                 />
               </div>
