@@ -29,7 +29,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="flex flex-col h-full bg-white dark:bg-dark-2/50 rounded-3xl p-8 md:p-10 border border-gray-200 dark:border-dark-3 transition-colors hover:shadow-lg dark:hover:bg-dark-2">
               <p className="text-lg md:text-xl font-medium text-dark dark:text-white mb-10 flex-grow leading-relaxed">
