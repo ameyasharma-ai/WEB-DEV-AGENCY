@@ -2,23 +2,33 @@ import React from 'react';
 
 const services = [
   {
-    title: "Web Design & Development",
-    description: "High-performance, high-converting marketing websites, web applications, and e-commerce platforms engineered for speed and SEO.",
+    title: "High-Converting Websites",
+    description: "Lightning-fast, beautifully designed marketing websites built with Next.js and React to instantly build trust and capture leads.",
     features: [
-      "Custom Web Applications",
-      "Marketing Websites",
+      "Custom Web Development",
+      "Next.js & React Architectures",
       "Performance Optimization",
       "SEO Foundations"
     ]
   },
   {
-    title: "Digital Growth",
-    description: "Clear digital positioning and strategy based on your business objectives. We build the engine that drives your growth.",
+    title: "E-Commerce & Sales Funnels",
+    description: "We architect Shopify storefronts and dedicated sales funnels that guide your traffic seamlessly from discovery to purchase.",
     features: [
-      "Website Audits",
-      "Conversion Optimization",
-      "Analytics Implementation",
-      "Digital Strategy"
+      "Shopify Theme Development",
+      "Landing Page Funnels",
+      "Conversion Rate Optimization",
+      "Mobile-First Buyer Journeys"
+    ]
+  },
+  {
+    title: "Data & AI Integrations",
+    description: "We plug powerful analytics and custom AI APIs into your infrastructure so you can make decisions based on real data.",
+    features: [
+      "Google Analytics Setup",
+      "Custom API Integrations",
+      "Predictive AI Models",
+      "Data Dashboards"
     ]
   }
 ];
@@ -29,14 +39,14 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 md:mb-24 max-w-3xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-6 leading-tight">
-            Built for businesses that take their digital presence seriously.
+            We build websites, funnels, and apps that drive measurable outcomes.
           </h2>
           <p className="text-lg sm:text-xl text-body-color dark:text-dark-6 font-medium">
-            We don't assemble websites from templates. We design, build, and optimize digital assets that produce measurable business outcomes.
+            We are an engineering-first agency. We combine cutting-edge tech (React, Next.js, AI) with proven conversion psychology to give your business an unfair advantage.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div 
               key={index} 
