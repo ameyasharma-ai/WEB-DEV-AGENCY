@@ -9,7 +9,7 @@ export default function Providers({ children }: PropsWithChildren) {
     <ThemeProvider
       attribute="class"
       enableSystem={false}
-      defaultTheme="dark"
+      defaultTheme="light"
     >
       <Toaster />
       {children}
