@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { agencyConfig } from '@/config/agency';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://yourdomain.com';
+  const baseUrl = 'https://arclanestudios.vercel.app';
 
   return [
     {
@@ -28,6 +28,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/work/agrimitra`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/work/nomadselixir`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/work/kanyaadhan`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
   ];
 }

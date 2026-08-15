@@ -11,12 +11,12 @@ import { Metadata } from "next";
 import { agencyConfig } from "@/config/agency";
 
 export const metadata: Metadata = {
-  title: `${agencyConfig.name} | Premium Web Development & Analytics`,
+  title: `${agencyConfig.name} | Premium Web Development & Digital Experiences`,
   description: agencyConfig.description,
   openGraph: {
-    title: `${agencyConfig.name} | Premium Web Development & Analytics`,
+    title: `${agencyConfig.name} | Premium Web Development & Digital Experiences`,
     description: agencyConfig.description,
-    url: "https://yourdomain.com",
+    url: "https://arclanestudios.vercel.app",
     siteName: agencyConfig.name,
     images: [
       {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${agencyConfig.name} | Premium Web Development & Analytics`,
+    title: `${agencyConfig.name} | Premium Web Development & Digital Experiences`,
     description: agencyConfig.description,
     images: ["/images/hero_workspace.png"],
   },
