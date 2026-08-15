@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    quote: "Vanguard completely reimagined our digital presence. We saw a 40% increase in lead conversion within the first month of launching the new site.",
+    quote: "Arclane Studios completely reimagined our digital presence. We saw a 40% increase in lead conversion within the first month of launching the new site.",
     author: "Sarah Jenkins",
     role: "CMO, TechFlow",
   },

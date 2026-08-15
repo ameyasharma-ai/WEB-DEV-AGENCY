@@ -1,5 +1,5 @@
 export const agencyConfig = {
-  name: "Vanguard Digital",
+  name: "Arclane Studios",
   tagline: "Websites that make businesses impossible to ignore.",
   description: "We build exceptional digital experiences that make businesses look better, perform better, and generate more opportunities.",
   email: "Arclane.Tech@gmail.com",
