@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${agencyConfig.name} | Premium Web Development & Digital Experiences`,
     description: agencyConfig.description,
-    url: "https://arclanestudios.vercel.app",
+    url: "https://www.arclanestudios.space",
     siteName: agencyConfig.name,
     images: [
       {

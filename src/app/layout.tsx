@@ -10,7 +10,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { agencyConfig } from "@/config/agency";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arclanestudios.vercel.app"),
+  metadataBase: new URL("https://www.arclanestudios.space"),
   title: {
     template: `%s | ${agencyConfig.name}`,
     default: `${agencyConfig.name} | Premium Web Development`,

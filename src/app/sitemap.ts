@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { agencyConfig } from '@/config/agency';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://arclanestudios.vercel.app';
+  const baseUrl = 'https://www.arclanestudios.space';
 
   return [
     {
