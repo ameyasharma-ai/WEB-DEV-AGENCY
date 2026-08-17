@@ -52,13 +52,13 @@ const Header = () => {
           </div>
 
           {/* Centered Navigation (Desktop) / Mobile Toggle */}
-          <div className="flex flex-1 items-center justify-end lg:justify-center gap-2">
+          <div className="flex flex-1 items-center justify-end xl:justify-center gap-2">
             
             {/* Mobile Theme Toggle */}
             <button
               aria-label="theme toggler"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="flex h-10 w-10 items-center justify-center rounded-full transition-colors text-body-color hover:bg-gray-100 hover:text-dark dark:text-gray-300 dark:hover:bg-dark-3 dark:hover:text-white lg:hidden z-50"
+              className="flex h-10 w-10 items-center justify-center rounded-full transition-colors text-body-color hover:bg-gray-100 hover:text-dark dark:text-gray-300 dark:hover:bg-dark-3 dark:hover:text-white xl:hidden z-50"
             >
               <svg viewBox="0 0 16 16" className="hidden h-5 w-5 fill-current dark:block">
                 <path d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
@@ -73,7 +73,7 @@ const Header = () => {
               onClick={navbarToggleHandler}
               id="navbarToggler"
               aria-label="Mobile Menu"
-              className="block rounded-lg px-3 py-[6px] lg:hidden z-50"
+              className="block rounded-lg px-3 py-[6px] xl:hidden z-50"
             >
               <span className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? "top-[7px] rotate-45" : ""} bg-dark dark:bg-white`} />
               <span className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? "opacity-0" : ""} bg-dark dark:bg-white`} />
@@ -83,17 +83,17 @@ const Header = () => {
             {/* Navigation Menu */}
             <nav
               id="navbarCollapse"
-              className={`navbar absolute right-4 z-40 w-[250px] rounded-xl border border-gray-200 bg-white px-6 py-4 duration-300 shadow-xl dark:border-dark-3 dark:bg-dark-2 lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:shadow-none lg:opacity-100 ${
-                navbarOpen ? "visibility top-[110%] opacity-100" : "invisible top-[120%] opacity-0 lg:visible"
+              className={`navbar absolute right-4 z-40 w-[250px] rounded-xl border border-gray-200 bg-white px-6 py-4 duration-300 shadow-xl dark:border-dark-3 dark:bg-dark-2 xl:static xl:w-auto xl:border-none xl:!bg-transparent xl:p-0 xl:shadow-none xl:opacity-100 ${
+                navbarOpen ? "visibility top-[110%] opacity-100" : "invisible top-[120%] opacity-0 xl:visible"
               }`}
             >
-              <ul className="block lg:flex lg:gap-x-6 xl:gap-x-10">
+              <ul className="block xl:flex xl:gap-x-6 2xl:gap-x-10">
                 {menuData.map((menuItem, index) => (
                   <li key={index} className="group relative">
                     <Link
                       onClick={() => setNavbarOpen(false)}
                       href={menuItem.path || "/"}
-                      className={`ud-menu-scroll flex py-2 text-sm font-semibold transition-colors lg:inline-flex lg:py-6 ${
+                      className={`ud-menu-scroll flex py-2 text-sm font-semibold transition-colors xl:inline-flex xl:py-6 ${
                         pathUrl === menuItem.path
                           ? "text-primary"
                           : "text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
@@ -108,7 +108,7 @@ const Header = () => {
           </div>
           
           {/* CTA & Theme Toggle (Right) */}
-          <div className="hidden lg:flex items-center justify-end flex-shrink-0 z-50">
+          <div className="hidden xl:flex items-center justify-end flex-shrink-0 z-50">
             <button
               aria-label="theme toggler"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
