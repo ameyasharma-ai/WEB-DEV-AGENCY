@@ -2,7 +2,7 @@ export const agencyConfig = {
   name: "Arclane Studios",
   tagline: "Websites that make businesses impossible to ignore.",
   description: "We build exceptional digital experiences that make businesses look better, perform better, and generate more opportunities.",
-  email: "arclane.tech@gmail.com",
+  email: "arclanestudios@outlook.com",
   phone: "+91 9097999898",
   address: "Bengaluru, Karnataka, India",
   social: {
