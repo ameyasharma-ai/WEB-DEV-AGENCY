@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToHash from "@/components/Common/ScrollToHash";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning className="!scroll-smooth scroll-pt-[140px] md:scroll-pt-[160px]" lang="en">
+    <html suppressHydrationWarning className="scroll-pt-[140px] md:scroll-pt-[160px]" lang="en">
       <body>
         <Providers>
           <div className="isolate">
@@ -35,6 +36,7 @@ export default function RootLayout({
 
             <Footer />
             <ScrollToTop />
+            <ScrollToHash />
             <WhatsAppButton />
           </div>
         </Providers>
