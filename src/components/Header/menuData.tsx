@@ -4,7 +4,7 @@ const menuData: Menu[] = [
   {
     id: 1,
     title: "Work",
-    path: "/work",
+    path: "/#work",
     newTab: false,
   },
   {
@@ -28,7 +28,7 @@ const menuData: Menu[] = [
   {
     id: 5,
     title: "About",
-    path: "/about",
+    path: "/#about",
     newTab: false,
   },
   {
@@ -40,7 +40,7 @@ const menuData: Menu[] = [
   {
     id: 6,
     title: "Contact",
-    path: "/contact",
+    path: "/#contact",
     newTab: false,
   }
 ];

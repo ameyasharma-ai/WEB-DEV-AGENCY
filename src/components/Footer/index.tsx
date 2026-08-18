@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-2/12 px-4 mb-12 lg:mb-0">
             <h4 className="text-lg font-semibold mb-6 text-white tracking-tight">Work</h4>
             <ul className="space-y-3">
-              <li><Link href="/work" className="text-gray-400 hover:text-white transition">Portfolio</Link></li>
+              <li><Link href="/#work" className="text-gray-400 hover:text-white transition">Portfolio</Link></li>
               <li><Link href="/#services" className="text-gray-400 hover:text-white transition">Services</Link></li>
               <li><Link href="/#process" className="text-gray-400 hover:text-white transition">Our Process</Link></li>
             </ul>
@@ -44,9 +44,9 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-2/12 px-4 mb-12 lg:mb-0">
             <h4 className="text-lg font-semibold mb-6 text-white tracking-tight">Company</h4>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-400 hover:text-white transition">About Us</Link></li>
+              <li><Link href="/#about" className="text-gray-400 hover:text-white transition">About Us</Link></li>
               <li><Link href="/pricing" className="text-gray-400 hover:text-white transition">Pricing</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
+              <li><Link href="/#contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
             </ul>
           </div>
 

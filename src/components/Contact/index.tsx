@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import FadeIn from "@/components/Common/FadeIn";
 
 const Contact = () => {
   const [status, setStatus] = useState("idle");
@@ -33,15 +34,16 @@ const Contact = () => {
   return (
     <section id="contact" className="relative py-12 md:py-32 bg-white dark:bg-dark border-t border-gray-100 dark:border-dark-3">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap -mx-4 items-start">
-          <div className="w-full lg:w-5/12 px-4 mb-8 lg:mb-0">
-            <div className="max-w-md">
-              <h2 className="text-3xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-4 md:mb-6">
-                Let's find what's holding your website back.
-              </h2>
-              <p className="text-lg md:text-xl text-body-color dark:text-dark-6 font-medium mb-8 md:mb-12">
-                Get a free website & growth audit. We'll analyze your design, performance, SEO, and conversion architecture.
-              </p>
+        <FadeIn delay={0.1}>
+          <div className="flex flex-wrap -mx-4 items-start">
+            <div className="w-full lg:w-5/12 px-4 mb-8 lg:mb-0">
+              <div className="max-w-md">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-4 md:mb-6">
+                  Let's find what's holding your website back.
+                </h2>
+                <p className="text-lg md:text-xl text-body-color dark:text-dark-6 font-medium mb-8 md:mb-12">
+                  Get a free website & growth audit. We'll analyze your design, performance, SEO, and conversion architecture.
+                </p>
               
               <div className="space-y-4 md:space-y-6 hidden sm:block">
                 <div className="flex items-start">
@@ -162,7 +164,8 @@ const Contact = () => {
               )}
             </div>
           </div>
-        </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

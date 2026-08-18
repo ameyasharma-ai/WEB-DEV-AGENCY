@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import FadeIn from "@/components/Common/FadeIn";
 
 const pricingTiers = [
   {
@@ -125,7 +126,8 @@ const Pricing = () => {
       {/* Hero Section */}
       <section className="pt-16 pb-20 md:pt-24 md:pb-32 bg-white dark:bg-dark">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <FadeIn delay={0.1}>
+            <div className="max-w-4xl mx-auto text-center">
             <span className="block text-sm font-bold tracking-widest text-primary uppercase mb-6">Pricing</span>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-dark dark:text-white leading-tight mb-8">
               Simple pricing. Serious websites.
@@ -141,14 +143,16 @@ const Pricing = () => {
                 View Our Work
               </Link>
             </div>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Pricing Cards Section */}
       <section className="pb-24 bg-white dark:bg-dark relative">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto relative z-10">
+          <FadeIn delay={0.2}>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto relative z-10">
             {pricingTiers.map((tier, index) => (
               <div 
                 key={index} 
@@ -198,14 +202,16 @@ const Pricing = () => {
                 </p>
               </div>
             ))}
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Not Sure Which Plan Section */}
       <section className="py-20 md:py-32 bg-gray-50 dark:bg-dark-2">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
+          <FadeIn delay={0.1}>
+            <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-extrabold text-dark dark:text-white mb-6">
               Not sure which one is right for you?
             </h2>
@@ -215,14 +221,16 @@ const Pricing = () => {
             <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-bold text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90">
               Get a Free Website Audit
             </Link>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Value Differentiation Section */}
       <section className="py-24 md:py-32 bg-white dark:bg-dark border-t border-gray-100 dark:border-dark-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-16 items-start max-w-7xl mx-auto">
+          <FadeIn delay={0.1}>
+            <div className="flex flex-col lg:flex-row gap-16 items-start max-w-7xl mx-auto">
             <div className="w-full lg:w-1/2">
               <h2 className="text-3xl md:text-5xl font-extrabold text-dark dark:text-white mb-6 leading-tight">
                 You're not just paying for pages.
@@ -246,14 +254,16 @@ const Pricing = () => {
                 ))}
               </div>
             </div>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Custom Project Section */}
       <section className="py-24 bg-dark text-white border-t border-dark-3">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
+          <FadeIn delay={0.1}>
+            <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
               Have something more complex?
             </h2>
@@ -268,14 +278,16 @@ const Pricing = () => {
                 Discuss a Custom Project
               </Link>
             </div>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-24 md:py-32 bg-gray-50 dark:bg-dark-2">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <FadeIn delay={0.1}>
+            <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-extrabold text-dark dark:text-white mb-6">
                 Common Questions
@@ -309,15 +321,17 @@ const Pricing = () => {
                   </div>
                 </div>
               ))}
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Final CTA */}
       <section className="py-24 md:py-32 bg-white dark:bg-dark border-t border-gray-100 dark:border-dark-3">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
+          <FadeIn delay={0.1}>
+            <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-extrabold text-dark dark:text-white mb-6">
               Your website should do more than exist.
             </h2>
@@ -332,7 +346,8 @@ const Pricing = () => {
                 Contact Us
               </Link>
             </div>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import FadeIn from "@/components/Common/FadeIn";
+
 const Process = () => {
   const steps = [
     {
@@ -32,7 +34,8 @@ const Process = () => {
   return (
     <section id="process" className="py-24 md:py-32 bg-white dark:bg-dark overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="mb-16 md:mb-24">
+        <FadeIn delay={0.1}>
+          <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
           <h2 className="text-4xl md:text-5xl font-extrabold text-dark dark:text-white tracking-tight mb-6">
             The Process
           </h2>
@@ -61,8 +64,9 @@ const Process = () => {
                 </p>
               </div>
             ))}
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

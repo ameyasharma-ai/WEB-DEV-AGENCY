@@ -1,8 +1,11 @@
+import FadeIn from "@/components/Common/FadeIn";
+
 const Problem = () => {
   return (
     <section className="py-24 md:py-32 bg-gray-50 dark:bg-dark text-dark dark:text-white border-t border-gray-100 dark:border-dark-3">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center -mx-4">
+        <FadeIn delay={0.1}>
+          <div className="flex flex-wrap items-center -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
               Your website is more than a brochure.
@@ -31,8 +34,9 @@ const Problem = () => {
                 <p className="text-3xl font-extrabold text-primary">We fix that.</p>
               </div>
             </div>
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

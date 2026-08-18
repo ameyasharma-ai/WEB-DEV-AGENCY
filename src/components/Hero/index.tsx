@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { agencyConfig } from "@/config/agency";
+import FadeIn from "@/components/Common/FadeIn";
 
 const Hero = () => {
   return (
     <section className="relative z-10 overflow-hidden bg-white dark:bg-dark pt-[160px] pb-16 md:pt-[180px] xl:pt-[220px] xl:pb-[100px] min-h-screen flex items-center">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center -mx-4">
+        <FadeIn delay={0.1}>
+          <div className="flex flex-wrap items-center -mx-4">
           <div className="w-full px-4 text-center lg:w-10/12 xl:w-8/12 mx-auto">
             <div className="mx-auto max-w-4xl text-center mb-12">
               <h1 className="mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-dark dark:text-white leading-tight lg:leading-[1.1] break-words">
@@ -46,8 +48,9 @@ const Hero = () => {
               </div>
             </div>
             
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
