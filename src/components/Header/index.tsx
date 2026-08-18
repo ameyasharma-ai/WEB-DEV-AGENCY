@@ -35,7 +35,7 @@ const Header = () => {
       <div className="w-full bg-gradient-to-r from-orange-500 via-white to-green-500 py-2.5 px-4 flex justify-center">
         <div className="bg-white/95 px-4 py-1.5 rounded-full shadow-sm text-xs sm:text-sm font-extrabold text-dark flex items-center gap-2 border border-gray-100">
           <span>🇮🇳 Independence Day Special: Premium Websites starting at ₹19,999!</span>
-          <Link href="/contact" className="text-primary underline hover:opacity-80">Claim Offer</Link>
+          <Link href="/#contact" className="text-primary underline hover:opacity-80">Claim Offer</Link>
         </div>
       </div>
       <div className="container mx-auto px-4">
@@ -125,7 +125,7 @@ const Header = () => {
             </button>
 
             <Link
-              href="/contact"
+              href="/#contact"
               className="rounded-full px-6 py-2.5 text-sm font-bold transition-all bg-dark text-white hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90"
             >
               {agencyConfig.cta.primary}

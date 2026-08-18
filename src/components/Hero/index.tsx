@@ -20,7 +20,7 @@ const Hero = () => {
               
               <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0 px-4 sm:px-0">
                 <Link
-                  href="/contact"
+                  href="/#contact"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-medium text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90"
                 >
                   {agencyConfig.cta.primary}

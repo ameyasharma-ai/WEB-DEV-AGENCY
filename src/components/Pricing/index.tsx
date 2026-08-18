@@ -20,7 +20,7 @@ const pricingTiers = [
       "Basic setup",
     ],
     cta: "Start with Starter",
-    link: "/contact",
+    link: "/#contact",
     isRecommended: false,
   },
   {
@@ -42,7 +42,7 @@ const pricingTiers = [
       "30 days post-launch support",
     ],
     cta: "Choose Growth",
-    link: "/contact",
+    link: "/#contact",
     isRecommended: true,
   },
   {
@@ -63,7 +63,7 @@ const pricingTiers = [
       "Post-launch support",
     ],
     cta: "Discuss Your Project",
-    link: "/contact",
+    link: "/#contact",
     isRecommended: false,
   },
 ];
@@ -136,7 +136,7 @@ const Pricing = () => {
               Choose the level of website experience your business needs. From focused starter sites to fully custom digital experiences, we build around your goals—not just a list of pages.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-bold text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90">
+              <Link href="/#contact" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-bold text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90">
                 Get a Free Website Audit
               </Link>
               <Link href="/work" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-bold text-dark transition-all hover:bg-gray-100 dark:text-white dark:hover:bg-dark-3">
@@ -218,7 +218,7 @@ const Pricing = () => {
             <p className="text-lg md:text-xl text-body-color dark:text-dark-6 font-medium mb-10">
               Tell us what you're trying to accomplish. We'll recommend the right level of solution based on your business, goals, and requirements.
             </p>
-            <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-bold text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90">
+            <Link href="/#contact" className="inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-bold text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90">
               Get a Free Website Audit
             </Link>
             </div>
@@ -274,7 +274,7 @@ const Pricing = () => {
               <span className="text-sm font-bold tracking-widest text-primary uppercase mb-6 block border border-primary/30 px-6 py-2 rounded-full bg-primary/5">
                 Custom pricing based on scope
               </span>
-              <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-bold text-dark transition-all hover:bg-gray-100 hover:scale-[1.02]">
+              <Link href="/#contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-bold text-dark transition-all hover:bg-gray-100 hover:scale-[1.02]">
                 Discuss a Custom Project
               </Link>
             </div>
@@ -339,10 +339,10 @@ const Pricing = () => {
               Let's find out what your current digital presence could be doing better.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-bold text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90">
+              <Link href="/#contact" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-dark px-8 py-4 text-base font-bold text-white transition-all hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90">
                 Get a Free Website Audit
               </Link>
-              <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-bold text-dark transition-all hover:bg-gray-100 dark:text-white dark:hover:bg-dark-3 border border-gray-200 dark:border-dark-3">
+              <Link href="/#contact" className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-bold text-dark transition-all hover:bg-gray-100 dark:text-white dark:hover:bg-dark-3 border border-gray-200 dark:border-dark-3">
                 Contact Us
               </Link>
             </div>

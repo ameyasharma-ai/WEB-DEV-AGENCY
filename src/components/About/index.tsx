@@ -27,7 +27,7 @@ const About = () => {
                   </p>
 
                   <a
-                    href="/contact"
+                    href="/#contact"
                     className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-center text-base font-medium text-white hover:bg-primary/90"
                   >
                     Start a Conversation
