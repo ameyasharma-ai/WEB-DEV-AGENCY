@@ -50,13 +50,32 @@ const NomadsElixirCaseStudy = () => {
           {/* Main Content */}
           <div className="lg:col-span-8 space-y-16">
             <section>
-              <h2 className="text-3xl font-bold text-dark dark:text-white mb-6">How the Project Was Developed</h2>
-              <p className="text-lg text-body-color dark:text-dark-6 leading-relaxed mb-6">
-                The Nomads elixir storefront was developed on Shopify, leveraging theme customization for a clean, conversion-oriented product experience. We implemented tailored product detail sections, collection layouts, and content blocks to highlight essential oils and wellness benefits.
-              </p>
+              <h2 className="text-3xl font-bold text-dark dark:text-white mb-6">Short Explanation</h2>
               <p className="text-lg text-body-color dark:text-dark-6 leading-relaxed">
-                Performance was prioritized with optimized imagery, structured metadata, and minimal script overhead to ensure a fast and accessible shopping experience across devices.
+                Nomads elixir is a high-converting e-commerce storefront dedicated to premium essential oils. The platform focuses on educating customers about wellness benefits while ensuring a frictionless purchasing journey. Built on Shopify, it utilizes a custom-designed theme that balances aesthetics with robust e-commerce functionality.
               </p>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold text-dark dark:text-white mb-6">Project Goals</h2>
+              <ul className="space-y-4 text-lg text-body-color dark:text-dark-6">
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 text-2xl leading-none">•</span>
+                  Create a visually immersive experience that highlights the purity of essential oils.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 text-2xl leading-none">•</span>
+                  Optimize the conversion funnel from product discovery to checkout.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 text-2xl leading-none">•</span>
+                  Ensure rapid page load times and mobile-first responsiveness.
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 text-2xl leading-none">•</span>
+                  Implement tailored collection layouts for seamless inventory browsing.
+                </li>
+              </ul>
             </section>
 
             {/* In-content Gallery */}
@@ -70,9 +89,9 @@ const NomadsElixirCaseStudy = () => {
             </div>
 
             <section>
-              <h2 className="text-3xl font-bold text-dark dark:text-white mb-6">Optimized for Conversion</h2>
-              <p className="text-lg text-body-color dark:text-dark-6 leading-relaxed mb-6">
-                A key focus of this build was reducing friction in the purchasing journey. The site architecture was streamlined to guide users effortlessly from education about essential oils directly to the checkout flow.
+              <h2 className="text-3xl font-bold text-dark dark:text-white mb-6">Development Details</h2>
+              <p className="text-lg text-body-color dark:text-dark-6 leading-relaxed">
+                The storefront was engineered using Shopify's modern theme architecture (Liquid, HTML5, CSS3, Vanilla JavaScript). We heavily customized the template to introduce specialized product detail sections, dynamic content blocks, and optimized imagery. Performance was a key focus, achieved by minimizing script overhead, lazy loading images, and structuring metadata for maximum SEO visibility. The resulting platform delivers a premium, app-like shopping experience directly in the browser.
               </p>
             </section>
             
@@ -85,26 +104,27 @@ const NomadsElixirCaseStudy = () => {
           {/* Sidebar / Meta */}
           <div className="lg:col-span-4">
             <div className="sticky top-32 bg-gray-50 dark:bg-dark-2 rounded-3xl p-8 border border-gray-100 dark:border-dark-3 shadow-sm">
-              <h3 className="text-xl font-bold text-dark dark:text-white mb-6 border-b border-gray-200 dark:border-dark-4 pb-4">Key Technologies Used</h3>
+              <h3 className="text-xl font-bold text-dark dark:text-white mb-6 border-b border-gray-200 dark:border-dark-4 pb-4">Tech Stack Used</h3>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Platform</h4>
-                  <p className="text-body-color dark:text-dark-6 font-medium">Shopify Theme</p>
+                  <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Platform & Build</h4>
+                  <p className="text-body-color dark:text-dark-6 font-medium">Shopify OS 2.0, Liquid</p>
                 </div>
                 
                 <div>
                   <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Frontend Stack</h4>
-                  <p className="text-body-color dark:text-dark-6 font-medium">HTML, CSS, JavaScript</p>
+                  <p className="text-body-color dark:text-dark-6 font-medium">HTML5, Custom CSS, Vanilla JavaScript</p>
+                </div>
+                
+                <div>
+                  <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Performance</h4>
+                  <p className="text-body-color dark:text-dark-6 font-medium">Lazy Loading, Image Optimization, Minified Scripts</p>
                 </div>
                 
                 <div>
                   <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Focus Areas</h4>
-                  <ul className="text-body-color dark:text-dark-6 font-medium space-y-1">
-                    <li>Theme Customization</li>
-                    <li>Performance Optimization</li>
-                    <li>Conversion Rate Optimization</li>
-                  </ul>
+                  <p className="text-body-color dark:text-dark-6 font-medium">Theme Customization, Conversion Optimization</p>
                 </div>
               </div>
             </div>
