@@ -90,17 +90,31 @@ const Header = () => {
               <ul className="block xl:flex xl:gap-x-6 2xl:gap-x-10">
                 {menuData.map((menuItem, index) => (
                   <li key={index} className="group relative">
-                    <Link
-                      onClick={() => setNavbarOpen(false)}
-                      href={menuItem.path || "/"}
-                      className={`ud-menu-scroll flex py-2 text-sm font-semibold transition-colors xl:inline-flex xl:py-6 ${
-                        pathUrl === menuItem.path
-                          ? "text-primary"
-                          : "text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
-                      }`}
-                    >
-                      {menuItem.title}
-                    </Link>
+                    {menuItem.path?.startsWith("/#") && pathUrl !== "/" ? (
+                      <a
+                        onClick={() => setNavbarOpen(false)}
+                        href={menuItem.path}
+                        className={`ud-menu-scroll flex py-2 text-sm font-semibold transition-colors xl:inline-flex xl:py-6 ${
+                          pathUrl === menuItem.path
+                            ? "text-primary"
+                            : "text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
+                        }`}
+                      >
+                        {menuItem.title}
+                      </a>
+                    ) : (
+                      <Link
+                        onClick={() => setNavbarOpen(false)}
+                        href={menuItem.path || "/"}
+                        className={`ud-menu-scroll flex py-2 text-sm font-semibold transition-colors xl:inline-flex xl:py-6 ${
+                          pathUrl === menuItem.path
+                            ? "text-primary"
+                            : "text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
+                        }`}
+                      >
+                        {menuItem.title}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
