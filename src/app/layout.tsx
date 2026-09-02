@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning className="scroll-pt-[140px] md:scroll-pt-[160px]" lang="en">
+    <html suppressHydrationWarning className="scroll-pt-[90px] md:scroll-pt-[110px]" lang="en">
       <body>
         <Providers>
           <div className="isolate">
