@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const PricingPage = () => {
   return (
-    <main className="pt-[160px] md:pt-[180px]">
+    <main className="pt-[100px] md:pt-[120px]">
       <Pricing />
     </main>
   );
