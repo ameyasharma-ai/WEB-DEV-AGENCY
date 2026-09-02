@@ -9,23 +9,12 @@ import menuData from "./menuData";
 const Header = () => {
   const pathUrl = usePathname();
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Close mobile menu on click outside
@@ -42,22 +31,18 @@ const Header = () => {
   }, [navbarOpen]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-out px-3 sm:px-6">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full px-3 sm:px-6">
       <div
         ref={navRef}
-        className={`mx-auto transition-all duration-500 ease-out ${
-          scrolled
-            ? "mt-3 md:mt-4 max-w-5xl rounded-full bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border border-zinc-200/80 dark:border-zinc-800/80 shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] px-4 sm:px-6 py-2.5 md:py-3"
-            : "mt-2 md:mt-4 max-w-6xl rounded-full bg-white/40 dark:bg-zinc-950/30 backdrop-blur-md border border-zinc-200/40 dark:border-zinc-800/30 px-4 sm:px-8 py-3.5 md:py-4"
-        }`}
+        className="mx-auto mt-3 sm:mt-4 max-w-6xl rounded-full bg-white/85 dark:bg-zinc-950/85 backdrop-blur-xl border border-zinc-200/80 dark:border-zinc-800/80 shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] px-4 sm:px-6 py-2.5 md:py-3"
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            className="group flex items-center gap-2 text-xl md:text-2xl font-black tracking-tight text-zinc-950 dark:text-white transition-opacity hover:opacity-90"
+            className="group flex items-center gap-2 text-xl md:text-2xl font-black tracking-tight text-zinc-950 dark:text-white transition-opacity hover:opacity-90 whitespace-nowrap flex-shrink-0"
           >
-            <span className="relative flex h-2.5 w-2.5">
+            <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
@@ -72,7 +57,7 @@ const Header = () => {
                 <Link
                   key={menuItem.id}
                   href={menuItem.path || "/"}
-                  className={`relative px-3.5 py-1.5 rounded-full text-[13px] font-medium tracking-tight transition-all duration-200 ${
+                  className={`relative px-3.5 py-1.5 rounded-full text-[13px] font-medium tracking-tight whitespace-nowrap transition-all duration-200 ${
                     isActive
                       ? "text-zinc-950 dark:text-white font-semibold bg-white dark:bg-zinc-800 shadow-sm"
                       : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white hover:bg-white/60 dark:hover:bg-zinc-800/50"
@@ -85,7 +70,7 @@ const Header = () => {
           </nav>
 
           {/* Right Action Items */}
-          <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
             {/* Theme Toggle Button */}
             <button
               aria-label="Toggle Theme"
@@ -98,7 +83,7 @@ const Header = () => {
                     viewBox="0 0 16 16"
                     className="hidden h-4 w-4 fill-current dark:block"
                   >
-                    <path d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
+                    <path d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
                   </svg>
                   <svg
                     viewBox="0 0 23 23"
@@ -113,7 +98,7 @@ const Header = () => {
             {/* CTA Button */}
             <Link
               href="/#contact"
-              className="hidden sm:inline-flex items-center justify-center rounded-full bg-zinc-950 px-4 md:px-5 py-2 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-black hover:scale-105 active:scale-95 shadow-sm dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100"
+              className="hidden sm:inline-flex items-center justify-center rounded-full bg-zinc-950 px-4 md:px-5 py-2 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-black hover:scale-105 active:scale-95 shadow-sm dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100 whitespace-nowrap"
             >
               {agencyConfig.cta.primary}
             </Link>
