@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { agencyConfig } from "@/config/agency";
 import menuData from "./menuData";
 
@@ -11,161 +11,117 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Close mobile menu on click outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setNavbarOpen(false);
-      }
-    };
-    if (navbarOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [navbarOpen]);
+  const navbarToggleHandler = () => setNavbarOpen(!navbarOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full px-3 sm:px-6">
-      <div
-        ref={navRef}
-        className="mx-auto mt-3 sm:mt-4 max-w-6xl rounded-full bg-white/85 dark:bg-zinc-950/85 backdrop-blur-xl border border-zinc-200/80 dark:border-zinc-800/80 shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] px-4 sm:px-6 py-2.5 md:py-3"
-      >
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="group flex items-center gap-2 text-xl md:text-2xl font-black tracking-tight text-zinc-950 dark:text-white transition-opacity hover:opacity-90 whitespace-nowrap flex-shrink-0"
-          >
-            <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span>{agencyConfig.name}</span>
-          </Link>
+    <header
+      className="fixed top-0 left-0 right-0 z-50 w-full bg-white/90 backdrop-blur-md dark:bg-dark/90 border-b border-gray-100 dark:border-dark-3/40"
+    >
+      <div className="container mx-auto px-4">
+        <div className="relative flex items-center justify-between h-20">
+          
+          {/* Logo (Left) */}
+          <div className="flex-shrink-0 z-50">
+            <Link
+              href="/"
+              className="navbar-logo block text-2xl font-extrabold tracking-tighter text-dark dark:text-white whitespace-nowrap"
+            >
+              {agencyConfig.name}
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 bg-zinc-100/70 dark:bg-zinc-900/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-zinc-200/50 dark:border-zinc-800/50">
-            {menuData.map((menuItem) => {
-              const isActive = pathUrl === menuItem.path;
-              return (
-                <Link
-                  key={menuItem.id}
-                  href={menuItem.path || "/"}
-                  className={`relative px-3.5 py-1.5 rounded-full text-[13px] font-medium tracking-tight whitespace-nowrap transition-all duration-200 ${
-                    isActive
-                      ? "text-zinc-950 dark:text-white font-semibold bg-white dark:bg-zinc-800 shadow-sm"
-                      : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white hover:bg-white/60 dark:hover:bg-zinc-800/50"
-                  }`}
-                >
-                  {menuItem.title}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Right Action Items */}
-          <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
-            {/* Theme Toggle Button */}
+          {/* Centered Navigation (Desktop) / Mobile Toggle */}
+          <div className="flex flex-1 items-center justify-end xl:justify-center gap-2">
+            
+            {/* Mobile Theme Toggle */}
             <button
-              aria-label="Toggle Theme"
+              aria-label="theme toggler"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 bg-zinc-100/80 hover:bg-zinc-200/80 text-zinc-700 dark:bg-zinc-800/80 dark:hover:bg-zinc-700/80 dark:text-zinc-200 border border-zinc-200/60 dark:border-zinc-700/60 hover:scale-105 active:scale-95"
+              className="flex h-10 w-10 items-center justify-center rounded-full transition-colors text-body-color hover:bg-gray-100 hover:text-dark dark:text-gray-300 dark:hover:bg-dark-3 dark:hover:text-white xl:hidden z-50"
             >
               {mounted && (
                 <>
-                  <svg
-                    viewBox="0 0 16 16"
-                    className="hidden h-4 w-4 fill-current dark:block"
-                  >
+                  <svg viewBox="0 0 16 16" className="hidden h-5 w-5 fill-current dark:block">
                     <path d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
                   </svg>
-                  <svg
-                    viewBox="0 0 23 23"
-                    className="h-4 w-4 fill-current dark:hidden"
-                  >
+                  <svg viewBox="0 0 23 23" className="h-5 w-5 fill-current dark:hidden">
+                    <path d="M16.6111 15.855C17.591 15.1394 18.3151 14.1979 18.7723 13.1623C16.4824 13.4065 14.1342 12.4631 12.6795 10.4711C11.2248 8.47905 11.0409 5.95516 11.9705 3.84818C10.8449 3.9685 9.72768 4.37162 8.74781 5.08719C5.7759 7.25747 5.12529 11.4308 7.29558 14.4028C9.46586 17.3747 13.6392 18.0253 16.6111 15.855Z" />
+                  </svg>
+                </>
+              )}
+            </button>
+            
+            {/* Mobile Toggle Button */}
+            <button
+              onClick={navbarToggleHandler}
+              id="navbarToggler"
+              aria-label="Mobile Menu"
+              className="block rounded-lg px-3 py-[6px] xl:hidden z-50"
+            >
+              <span className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? "top-[7px] rotate-45" : ""} bg-dark dark:bg-white`} />
+              <span className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? "opacity-0" : ""} bg-dark dark:bg-white`} />
+              <span className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? "top-[-8px] -rotate-45" : ""} bg-dark dark:bg-white`} />
+            </button>
+            
+            {/* Navigation Menu (Desktop & Mobile Dropdown) */}
+            <nav
+              id="navbarCollapse"
+              className={`navbar absolute right-4 z-40 w-[250px] rounded-xl border border-gray-200 bg-white px-6 py-4 duration-300 shadow-xl dark:border-dark-3 dark:bg-dark-2 xl:static xl:w-auto xl:border-none xl:!bg-transparent xl:p-0 xl:shadow-none xl:opacity-100 ${
+                navbarOpen ? "visibility top-[110%] opacity-100" : "invisible top-[120%] opacity-0 xl:visible"
+              }`}
+            >
+              <ul className="block xl:flex xl:gap-x-6 2xl:gap-x-10">
+                {menuData.map((menuItem, index) => (
+                  <li key={index} className="group relative">
+                    <Link
+                      onClick={() => setNavbarOpen(false)}
+                      href={menuItem.path || "/"}
+                      className={`ud-menu-scroll flex py-2 text-sm font-semibold transition-colors xl:inline-flex xl:py-6 ${
+                        pathUrl === menuItem.path
+                          ? "text-primary"
+                          : "text-body-color hover:text-dark dark:text-gray-300 dark:hover:text-white"
+                      }`}
+                    >
+                      {menuItem.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+          
+          {/* CTA & Theme Toggle (Right) */}
+          <div className="hidden xl:flex items-center justify-end flex-shrink-0 z-50">
+            <button
+              aria-label="theme toggler"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="flex h-10 w-10 items-center justify-center rounded-full transition-colors mr-4 text-body-color hover:bg-gray-100 hover:text-dark dark:text-gray-300 dark:hover:bg-dark-3 dark:hover:text-white"
+            >
+              {mounted && (
+                <>
+                  <svg viewBox="0 0 16 16" className="hidden h-5 w-5 fill-current dark:block">
+                    <path d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
+                  </svg>
+                  <svg viewBox="0 0 23 23" className="h-5 w-5 fill-current dark:hidden">
                     <path d="M16.6111 15.855C17.591 15.1394 18.3151 14.1979 18.7723 13.1623C16.4824 13.4065 14.1342 12.4631 12.6795 10.4711C11.2248 8.47905 11.0409 5.95516 11.9705 3.84818C10.8449 3.9685 9.72768 4.37162 8.74781 5.08719C5.7759 7.25747 5.12529 11.4308 7.29558 14.4028C9.46586 17.3747 13.6392 18.0253 16.6111 15.855Z" />
                   </svg>
                 </>
               )}
             </button>
 
-            {/* CTA Button */}
             <Link
               href="/#contact"
-              className="hidden sm:inline-flex items-center justify-center rounded-full bg-zinc-950 px-4 md:px-5 py-2 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-black hover:scale-105 active:scale-95 shadow-sm dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100 whitespace-nowrap"
+              className="rounded-full px-6 py-2.5 text-sm font-bold transition-all bg-dark text-white hover:bg-dark/90 hover:scale-[1.02] dark:bg-white dark:text-dark dark:hover:bg-white/90"
             >
               {agencyConfig.cta.primary}
             </Link>
-
-            {/* Mobile Hamburger Button */}
-            <button
-              onClick={() => setNavbarOpen(!navbarOpen)}
-              aria-label="Toggle Menu"
-              className="flex h-9 w-9 items-center justify-center rounded-full xl:hidden bg-zinc-100/80 dark:bg-zinc-800/80 border border-zinc-200/60 dark:border-zinc-700/60 text-zinc-900 dark:text-white"
-            >
-              <div className="w-4 flex flex-col items-center justify-center gap-1">
-                <span
-                  className={`h-0.5 w-full bg-current rounded-full transition-all duration-300 ${
-                    navbarOpen ? "rotate-45 translate-y-1.5" : ""
-                  }`}
-                />
-                <span
-                  className={`h-0.5 w-full bg-current rounded-full transition-all duration-300 ${
-                    navbarOpen ? "opacity-0" : ""
-                  }`}
-                />
-                <span
-                  className={`h-0.5 w-full bg-current rounded-full transition-all duration-300 ${
-                    navbarOpen ? "-rotate-45 -translate-y-1.5" : ""
-                  }`}
-                />
-              </div>
-            </button>
           </div>
         </div>
-
-        {/* Mobile Dropdown Menu */}
-        {navbarOpen && (
-          <div className="xl:hidden mt-3 pt-3 border-t border-zinc-200/60 dark:border-zinc-800/60 animate-fadeIn">
-            <div className="flex flex-col gap-1 py-1">
-              {menuData.map((menuItem) => {
-                const isActive = pathUrl === menuItem.path;
-                return (
-                  <Link
-                    key={menuItem.id}
-                    onClick={() => setNavbarOpen(false)}
-                    href={menuItem.path || "/"}
-                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                      isActive
-                        ? "bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-white font-semibold"
-                        : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
-                    }`}
-                  >
-                    <span>{menuItem.title}</span>
-                    {isActive && (
-                      <span className="h-1.5 w-1.5 rounded-full bg-zinc-950 dark:bg-white" />
-                    )}
-                  </Link>
-                );
-              })}
-              <div className="pt-2 sm:hidden">
-                <Link
-                  onClick={() => setNavbarOpen(false)}
-                  href="/#contact"
-                  className="w-full flex items-center justify-center rounded-full bg-zinc-950 px-4 py-2.5 text-xs font-semibold text-white dark:bg-white dark:text-zinc-950"
-                >
-                  {agencyConfig.cta.primary}
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </header>
   );
