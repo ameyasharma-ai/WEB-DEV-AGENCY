@@ -22,9 +22,17 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
 
 export default async function DynamicSitePage({ params }: SitePageProps) {
   const { slug } = await params;
-  const filePath = path.join(process.cwd(), "public", "sites", slug, "index.html");
 
-  if (!fs.existsSync(filePath)) {
+  // Resolve file path across both local root development and Vercel monorepo deployments
+  const candidates = [
+    path.join(process.cwd(), "public", "sites", slug, "index.html"),
+    path.join(process.cwd(), "web-dev-agency", "public", "sites", slug, "index.html"),
+    path.join(__dirname, "../../../../../public", "sites", slug, "index.html"),
+  ];
+
+  let filePath = candidates.find((p) => fs.existsSync(p));
+
+  if (!filePath) {
     notFound();
   }
 
