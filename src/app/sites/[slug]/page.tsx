@@ -29,14 +29,31 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
 export default async function DynamicSitePage({ params }: SitePageProps) {
   const { slug } = await params;
 
+  // Security: Sanitize slug to strictly alphanumeric and single dashes (prevents directory traversal attacks e.g. ../../)
+  const sanitizedSlug = (slug || "").replace(/[^a-zA-Z0-9-]/g, "").toLowerCase();
+  if (!sanitizedSlug || sanitizedSlug.length > 50) {
+    notFound();
+  }
+
   // Resolve file path across both local root development and Vercel monorepo deployments
   const candidates = [
-    path.join(process.cwd(), "public", "sites", slug, "index.html"),
-    path.join(process.cwd(), "web-dev-agency", "public", "sites", slug, "index.html"),
-    path.join(__dirname, "../../../../../public", "sites", slug, "index.html"),
+    path.join(process.cwd(), "public", "sites", sanitizedSlug, "index.html"),
+    path.join(process.cwd(), "web-dev-agency", "public", "sites", sanitizedSlug, "index.html"),
+    path.join(__dirname, "../../../../../public", "sites", sanitizedSlug, "index.html"),
   ];
 
-  let filePath = candidates.find((p) => fs.existsSync(p));
+  let filePath = candidates.find((p) => {
+    try {
+      if (fs.existsSync(p)) {
+        // Double check canonical path resides within an allowed sites directory
+        const resolved = path.resolve(p);
+        return resolved.includes(path.join("public", "sites"));
+      }
+    } catch {
+      return false;
+    }
+    return false;
+  });
 
   if (!filePath) {
     notFound();
