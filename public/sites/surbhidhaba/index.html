@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Surbhi Dhaba | Authentic North Indian Restaurant in SP Verma Rd, Patna</title>
+    <meta name="description" content="Experience authentic North Indian cuisine, Tandoor specials, and royal Dhaba Thalis at Surbhi Dhaba, SP Verma Road, Patna. Order via WhatsApp or call +91-79799-59051.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dhaba: {
+                            bg: '#1C1917',
+                            surface: '#292524',
+                            surfaceHover: '#383230',
+                            primary: '#D97706',
+                            secondary: '#F59E0B',
+                            text: '#FAFAF9',
+                            muted: '#A8A29E'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        syne: ['Syne', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Zero Horizontal Overflow & Smooth Scrolling */
+        html, body {
+            overflow-x: hidden;
+            background-color: #1C1917;
+            color: #FAFAF9;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1C1917;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #292524;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-dhaba-bg text-dhaba-text pb-28 md:pb-0 selection:bg-dhaba-primary selection:text-white">
+
+    <!-- Announcement Bar (Sits naturally in flow before header) -->
+    <div class="bg-gradient-to-r from-amber-700 via-amber-600 to-amber-700 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 animate-pulse shrink-0"></i>
+        <span>Open Today: 11:00 AM – 11:30 PM • SP Verma Rd, Patna</span>
+        <a href="tel:+917979959051" class="hidden sm:inline-block underline font-bold ml-2 hover:text-amber-100 transition-colors">+91 79799 59051</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-[#1C1917] border-b border-zinc-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-600 to-amber-700 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                    <i data-lucide="utensils-crossed" class="w-6 h-6 text-white"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-extrabold text-xl sm:text-2xl text-white tracking-tight">Surbhi <span class="text-amber-500">Dhaba</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold -mt-1">North Indian Restaurant</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#why-us" class="hover:text-amber-500 transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+917979959051" class="h-11 px-4 rounded-xl border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 text-white font-medium text-sm flex items-center gap-2 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/917979959051?text=Hello%20Surbhi%20Dhaba,%20I%20want%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="h-11 px-5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-semibold text-sm flex items-center gap-2 shadow-lg shadow-amber-900/30 transition-all hover:scale-[1.02]">
+                    <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+                    <span>Order WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle Button (Min 48px touch target) -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#1C1917] border-l border-zinc-800 rounded-tl-3xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white">
+                        <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-white">Surbhi Dhaba</h3>
+                        <p class="text-xs text-amber-500">SP Verma Rd, Patna</p>
+                    </div>
+                </div>
+                <button id="close-menu-btn" aria-label="Close Menu" class="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-900 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 py-6 text-lg font-medium">
+                <a href="#menu" class="mobile-nav-link text-zinc-300 hover:text-amber-500 transition-colors py-2 border-b border-zinc-900">Explore Menu</a>
+                <a href="#why-us" class="mobile-nav-link text-zinc-300 hover:text-amber-500 transition-colors py-2 border-b border-zinc-900">Why Choose Us</a>
+                <a href="#about" class="mobile-nav-link text-zinc-300 hover:text-amber-500 transition-colors py-2 border-b border-zinc-900">Our Heritage Story</a>
+                <a href="#reviews" class="mobile-nav-link text-zinc-300 hover:text-amber-500 transition-colors py-2 border-b border-zinc-900">Customer Reviews</a>
+                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-amber-500 transition-colors py-2">Location & Hours</a>
+            </nav>
+        </div>
+
+        <div class="space-y-3 pt-6 border-t border-zinc-800">
+            <a href="https://wa.me/917979959051?text=Hello%20Surbhi%20Dhaba,%20I%20want%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg">
+                <i data-lucide="message-square" class="w-5 h-5 fill-current"></i>
+                <span>Order on WhatsApp</span>
+            </a>
+            <a href="tel:+917979959051" class="w-full h-12 rounded-xl bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-white font-medium flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-5 h-5 text-amber-500"></i>
+                <span>Call +91 79799 59051</span>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-[#1C1917] via-[#221F1D] to-[#1C1917]">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D97706_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+            
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 text-left space-y-6">
+                        
+                        <!-- Trust Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 shadow-md">
+                            <div class="flex items-center text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-white">4.0 <span class="text-zinc-400 font-normal">from 1,415+ Google Reviews</span></span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: font-extrabold font-serif text-white leading-[1.15] break-words">
+                            Authentic North Indian Flavors & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-300">Royal Dhaba Feasts</span> in Patna
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed max-w-2xl break-words">
+                            Savor the legendary taste of aromatic tandoori specials, rich buttery gravies, and traditional dhaba thalis right at SP Verma Road, Patna. Freshly prepared, hygienically served.
+                        </p>
+
+                        <!-- CTA Group -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                            <a href="https://wa.me/917979959051?text=Hello%20Surbhi%20Dhaba,%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="h-14 px-8 rounded-2xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-amber-900/40 hover:scale-[1.02] transition-all">
+                                <i data-lucide="message-square" class="w-5 h-5 fill-current"></i>
+                                <span>Order on WhatsApp Now</span>
+                            </a>
+                            <a href="#menu" class="h-14 px-8 rounded-2xl bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 text-white font-semibold text-base flex items-center justify-center gap-2 transition-all">
+                                <i data-lucide="utensils" class="w-5 h-5 text-amber-500"></i>
+                                <span>View Full Menu</span>
+                            </a>
+                        </div>
+
+                        <!-- Quick Location Meta -->
+                        <div class="flex items-center gap-3 text-xs sm:text-sm text-zinc-400 pt-4">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                            <span>SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual / Image Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <!-- Glow background -->
+                            <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-600 to-amber-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                            
+                            <div class="relative bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl p-3">
+                                <div class="aspect-[4/3] rounded-xl overflow-hidden relative">
+                                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="North Indian Thali & Curry at Surbhi Dhaba Patna" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                        <span class="bg-amber-600/90 text-white text-xs font-bold px-3 py-1 rounded-full w-max mb-2">Chef's Special Thali</span>
+                                        <h3 class="text-xl font-bold font-serif text-white">Shahi Paneer & Butter Naan Combo</h3>
+                                        <p class="text-xs text-zinc-300 mt-1">Served piping hot with fresh salad & chutney.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="border-y border-zinc-800 bg-[#221F1D] py-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    
+                    <div class="space-y-1 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                        <div class="flex items-center justify-center gap-1.5 text-amber-500 font-bold text-2xl sm:text-3xl font-serif">
+                            <span>4.0</span>
+                            <i data-lucide="star" class="w-6 h-6 fill-amber-500"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-zinc-400 font-medium">1,415+ Google Reviews</p>
+                    </div>
+
+                    <div class="space-y-1 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                        <div class="text-amber-500 font-bold text-2xl sm:text-3xl font-serif">SP Verma Rd</div>
+                        <p class="text-xs sm:text-sm text-zinc-400 font-medium">Prime Patna Location</p>
+                    </div>
+
+                    <div class="space-y-1 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                        <div class="text-amber-500 font-bold text-2xl sm:text-3xl font-serif">11 AM - 11:30 PM</div>
+                        <p class="text-xs sm:text-sm text-zinc-400 font-medium">Open Daily (Lunch & Dinner)</p>
+                    </div>
+
+                    <div class="space-y-1 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                        <div class="text-amber-500 font-bold text-2xl sm:text-3xl font-serif">100% Fresh</div>
+                        <p class="text-xs sm:text-sm text-zinc-400 font-medium">Authentic Dhaba Spices</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Digital Menu Section -->
+        <section id="menu" class="py-20 md:py-32 bg-[#1C1917]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                    <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">Culinary Masterpieces</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-white">Explore Our Signature Menu</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Click any dish to instantly order via WhatsApp or reserve your table at Surbhi Dhaba, Patna.</p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="flex items-center justify-center gap-2 sm:gap-4 overflow-x-auto pb-6 mb-8 scrollbar-none">
+                    <button onclick="filterMenu('tandoor')" class="menu-tab-btn active px-5 py-3 rounded-xl font-semibold text-sm transition-all whitespace-nowrap bg-amber-600 text-white shadow-lg shadow-amber-900/30">
+                        🔥 Tandoor Specials
+                    </button>
+                    <button onclick="filterMenu('thalis')" class="menu-tab-btn px-5 py-3 rounded-xl font-semibold text-sm transition-all whitespace-nowrap bg-zinc-900 text-zinc-300 hover:bg-zinc-800 border border-zinc-800">
+                        🍛 Dhaba Thalis
+                    </button>
+                    <button onclick="filterMenu('main')" class="menu-tab-btn px-5 py-3 rounded-xl font-semibold text-sm transition-all whitespace-nowrap bg-zinc-900 text-zinc-300 hover:bg-zinc-800 border border-zinc-800">
+                        🥘 Main Course
+                    </button>
+                    <button onclick="filterMenu('breads')" class="menu-tab-btn px-5 py-3 rounded-xl font-semibold text-sm transition-all whitespace-nowrap bg-zinc-900 text-zinc-300 hover:bg-zinc-800 border border-zinc-800">
+                        🫓 Breads & Beverages
+                    </button>
+                </div>
+
+                <!-- Menu Items Grid -->
+                <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cards injected dynamically via JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 md:py-32 bg-[#221F1D] border-t border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">The Surbhi Promise</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-white">Why Patna Loves Surbhi Dhaba</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">We combine traditional dhaba flavor with top-tier hygiene and prompt service.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-600/50 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 mb-6">
+                                <i data-lucide="flame" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Authentic Recipes</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">Traditional slow-cooked gravies and authentic tandoori smoke flavor handed down generations.</p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-amber-500 flex items-center gap-1">
+                            <span>100% Secret Spices</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-600/50 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 mb-6">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Generous Portions</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">True dhaba-style hearty portions designed to satisfy big appetites without breaking the bank.</p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-amber-500 flex items-center gap-1">
+                            <span>Value for Money</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-600/50 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 mb-6">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Hygiene First</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">Clean kitchen protocols, purified water, and fresh farm-sourced vegetables used daily.</p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-amber-500 flex items-center gap-1">
+                            <span>Pristine Cleanliness</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-600/50 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 mb-6">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Lightning Fast Service</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">Quick dine-in turnaround and prompt takeaway packaging to keep food hot and fresh.</p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-amber-500 flex items-center gap-1">
+                            <span>Instant WhatsApp Dispatch</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About / Story Section -->
+        <section id="about" class="py-20 md:py-32 bg-[#1C1917]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    
+                    <div class="lg:col-span-6 relative">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior at Surbhi Dhaba Patna" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                                <div class="bg-zinc-900/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl w-full">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-amber-600 flex items-center justify-center text-white font-bold">14+</div>
+                                        <div>
+                                            <h4 class="font-bold text-white text-sm">Years of Culinary Excellence</h4>
+                                            <p class="text-xs text-zinc-400">Serving Patnaites on SP Verma Road</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">Our Heritage</span>
+                        <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-white">The Surbhi Dhaba Story</h2>
+                        <p class="text-zinc-300 text-base leading-relaxed">
+                            Nestled right in the bustling heart of Patna at SP Verma Road, Surbhi Dhaba has been a beloved culinary landmark for families, students, and food enthusiasts alike.
+                        </p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            What started as a humble dhaba with a passion for genuine North Indian spices has grown into a 4.0-star rated restaurant with over 1,415 verified happy reviews. Our master chefs grind fresh spices daily and fire up the tandoor at dawn to bring you smoky, buttery perfection in every single bite.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                                <div class="text-2xl font-bold font-serif text-amber-500 mb-1">1,415+</div>
+                                <div class="text-xs text-zinc-400">Verified Google Reviews</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                                <div class="text-2xl font-bold font-serif text-amber-500 mb-1">100%</div>
+                                <div class="text-xs text-zinc-400">Pure Taste & Quality</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="https://wa.me/917979959051?text=Hello%20Surbhi%20Dhaba,%20I%20would%20like%20to%20know%20more%20about%20your%20catering%20services." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold hover:text-amber-400 transition-colors">
+                                <span>Inquire about Bulk Orders & Catering</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="py-20 md:py-32 bg-[#221F1D] border-t border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">Patna Diners Speak</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-white">Loved by 1,415+ Foodies</h2>
+                    <div class="flex items-center justify-center gap-2 pt-2">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                        </div>
+                        <span class="text-white font-bold text-lg">4.0 / 5.0 Rating</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- Review 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-sm text-zinc-300 italic leading-relaxed">
+                                "Best paneer tikka and butter naan on SP Verma Road! The food is consistently fresh and tastes like home-cooked dhaba goodness. Highly recommended."
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Rahul Kumar</h4>
+                                <p class="text-xs text-zinc-500">Local Guide • Patna</p>
+                            </div>
+                            <span class="text-[10px] bg-zinc-800 text-zinc-400 px-2.5 py-1 rounded-full">Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-sm text-zinc-300 italic leading-relaxed">
+                                "Ordered through WhatsApp for family dinner. The food arrived piping hot within 25 minutes. Dal Makhani was creamy and rich. Absolute value for money!"
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Priya Sharma</h4>
+                                <p class="text-xs text-zinc-500">Patna Diner</p>
+                            </div>
+                            <span class="text-[10px] bg-zinc-800 text-zinc-400 px-2.5 py-1 rounded-full">Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                            </div>
+                            <p class="text-sm text-zinc-300 italic leading-relaxed">
+                                "Surbhi Dhaba never disappoints. Great ambiance for quick dinner with friends. Tandoori items are top notch. Their Special Thali is more than enough for one person."
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Amitabh Sinha</h4>
+                                <p class="text-xs text-zinc-500">Regular Customer</p>
+                            </div>
+                            <span class="text-[10px] bg-zinc-800 text-zinc-400 px-2.5 py-1 rounded-full">Google Review</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Location & Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-[#1C1917]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm">Visit Or Order</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-white">Location & Contact Us</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Drop by for a memorable meal or send us a quick inquiry.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Contact Info & Hours Card -->
+                    <div class="lg:col-span-5 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold font-serif text-white mb-2">Surbhi Dhaba</h3>
+                            <p class="text-sm text-zinc-400">Authentic North Indian Restaurant in the heart of Patna.</p>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1">Address</strong>
+                                    <span class="text-zinc-300">SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1">Phone / WhatsApp</strong>
+                                    <a href="tel:+917979959051" class="text-amber-400 hover:underline">+91 79799 59051</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 shrink-0">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block mb-1">Operating Hours</strong>
+                                    <span class="text-zinc-300">Monday – Sunday: 11:00 AM – 11:30 PM</span>
+                                    <span class="text-xs text-amber-500 block mt-1 font-semibold">● Open All Days (Lunch & Dinner)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Directions Button -->
+                        <div class="pt-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Surbhi+Dhaba+SP+Verma+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg transition-all">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Google Maps Directions</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map & Form Right Column -->
+                    <div class="lg:col-span-7 space-y-8">
+                        
+                        <!-- Responsive Google Maps Embed -->
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl h-80 sm:h-96 w-full relative bg-zinc-900">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848729571!2d85.137569!3d25.609318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58ce245bca1b%3A0x7d24a9e59ef80a56!2sSurbhi%20Dhaba%2C%20SP%20Verma%20Rd%2C%20Old%20Jakkanpur%2C%20Lodipur%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Surbhi Dhaba Location Map">
+                            </iframe>
+                        </div>
+
+                        <!-- Quick Inquiry Form -->
+                        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                            <h4 class="text-xl font-bold font-serif text-white mb-4">Send Table or Catering Inquiry</h4>
+                            <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-medium text-zinc-400 mb-1">Your Name</label>
+                                        <input type="text" id="form-name" required placeholder="Enter your name" class="w-full h-12 bg-zinc-800 border border-zinc-700 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-amber-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-zinc-400 mb-1">Phone Number</label>
+                                        <input type="tel" id="form-phone" required placeholder="+91 98765 43210" class="w-full h-12 bg-zinc-800 border border-zinc-700 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-amber-500">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-400 mb-1">Inquiry Type</label>
+                                    <select id="form-type" class="w-full h-12 bg-zinc-800 border border-zinc-700 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-amber-500">
+                                        <option value="Table Reservation">Table Reservation</option>
+                                        <option value="Home Delivery / Takeaway">Home Delivery / Takeaway</option>
+                                        <option value="Party & Catering">Party & Bulk Catering</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-400 mb-1">Message / Dishes</label>
+                                    <textarea id="form-msg" rows="3" placeholder="Mention dishes or number of people..." class="w-full bg-zinc-800 border border-zinc-700 rounded-xl p-4 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+                                </div>
+                                <button type="submit" id="form-submit-btn" class="w-full h-12 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-semibold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>Send Inquiry via WhatsApp</span>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-zinc-800">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white">
+                            <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif font-extrabold text-xl text-white">Surbhi Dhaba</span>
+                    </div>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Authentic North Indian Restaurant & Tandoor specialists located at SP Verma Road, Patna. Rated 4.0★ with over 1,415 reviews.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Our Menu</a></li>
+                        <li><a href="#why-us" class="hover:text-amber-500 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">Heritage Story</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Google Reviews (1,415+)</a></li>
+                        <li><a href="#contact" class="hover:text-amber-500 transition-colors">Location & Map</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4">Operating Hours</h4>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li>Monday: 11:00 AM – 11:30 PM</li>
+                        <li>Tuesday: 11:00 AM – 11:30 PM</li>
+                        <li>Wednesday: 11:00 AM – 11:30 PM</li>
+                        <li>Thursday: 11:00 AM – 11:30 PM</li>
+                        <li>Friday: 11:00 AM – 11:30 PM</li>
+                        <li>Saturday & Sunday: 11:00 AM – 11:30 PM</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-4">Connect & Order</h4>
+                    <p class="text-xs text-zinc-400 mb-4">Quick food orders & table bookings directly on WhatsApp.</p>
+                    <a href="https://wa.me/917979959051?text=Hello%20Surbhi%20Dhaba,%20I%20want%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs shadow-lg">
+                        <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+                        <span>+91 79799 59051</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>© <span id="current-year"></span> Surbhi Dhaba, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <span>SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Action Bar (Mobile-Only) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#1C1917] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+917979959051" class="flex-1 h-12 bg-zinc-900 border border-zinc-700 text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917979959051?text=Hello%20Surbhi%20Dhaba,%20I%20want%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="flex-1 h-12 bg-gradient-to-r from-amber-600 to-amber-500 text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-amber-900/40 active:scale-95 transition-transform">
+            <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+            <span>WhatsApp Order</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-amber-600/20 border border-amber-600/40 text-amber-500 flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-white">Inquiry Ready!</h3>
+            <p class="text-xs text-zinc-300 leading-relaxed">
+                We are redirecting you to WhatsApp with your typed message so Surbhi Dhaba team can confirm your order instantly.
+            </p>
+            <button onclick="closeSuccessModal()" class="w-full h-12 bg-amber-600 hover:bg-amber-500 text-white font-semibold rounded-xl text-sm">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Lucide Icons Initialization
+        lucide.createIcons();
+
+        // Mobile Navigation Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openDrawer() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openDrawer);
+        closeMenuBtn.addEventListener('click', closeDrawer);
+        menuBackdrop.addEventListener('click', closeDrawer);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+        // Digital Menu Database
+        const menuData = {
+            tandoor: [
+                { name: "Paneer Tikka Special", price: "₹240", desc: "Succulent cottage cheese cubes marinated in spicy yogurt & grilled in clay tandoor.", image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80" },
+                { name: "Tandoori Mushroom", price: "₹220", desc: "Fresh button mushrooms stuffed with spiced khoya & roasted over charcoal.", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" },
+                { name: "Veg Seekh Kebab", price: "₹200", desc: "Minced vegetables blended with aromatic dhaba spices on skewers.", image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" }
+            ],
+            thalis: [
+                { name: "Surbhi Special Dhaba Thali", price: "₹290", desc: "Shahi Paneer, Dal Makhani, Mix Veg, 2 Butter Naan, Jeera Rice, Raita, Salad & Sweet.", image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" },
+                { name: "Maharaja Royal Thali", price: "₹350", desc: "Paneer Butter Masala, Malai Kofta, Dal Tadka, 3 Tandoori Roti/Naan, Pulao, Raita, Papad & Dessert.", image: "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=600&q=80" },
+                { name: "Quick Economy Thali", price: "₹180", desc: "Dal Fry, Seasonal Veg, 4 Tandoori Roti, Rice & Salad.", image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" }
+            ],
+            main: [
+                { name: "Paneer Butter Masala", price: "₹230", desc: "Soft paneer cubes simmered in a velvety, rich tomato & butter gravy.", image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80" },
+                { name: "Dal Makhani (Dhaba Style)", price: "₹190", desc: "Whole black lentils simmered overnight with generous dollops of butter and cream.", image: "https://images.unsplash.com/photo-1546833998-877b37c2e5c4?auto=format&fit=crop&w=600&q=80" },
+                { name: "Kadhai Paneer", price: "₹240", desc: "Cottage cheese tossed with bell peppers, onions, and freshly ground kadhai masala.", image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
+                { name: "Mix Veg Handi", price: "₹210", desc: "Fresh garden vegetables cooked in traditional clay pot with rich gravy.", image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80" }
+            ],
+            breads: [
+                { name: "Butter Naan", price: "₹45", desc: "Classic clay-oven baked leavened bread brushed with melting butter.", image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" },
+                { name: "Garlic Naan", price: "₹60", desc: "Naan topped with freshly minced garlic and cilantro.", image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" },
+                { name: "Tandoori Butter Roti", price: "₹20", desc: "Whole wheat bread baked in tandoor and buttered.", image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
+                { name: "Sweet Lassi (Dhaba Special)", price: "₹60", desc: "Thick, creamy traditional yogurt shake topped with malai.", image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" }
+            ]
+        };
+
+        function renderMenu(category) {
+            const grid = document.getElementById('menu-grid');
+            const items = menuData[category] || [];
+            
+            grid.innerHTML = items.map(item => `
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-amber-600/50 transition-all duration-300 shadow-xl">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 px-3 py-1 rounded-full text-amber-500 font-bold text-sm">
+                                ${item.price}
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-bold font-serif text-white text-lg">${item.name}</h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed">${item.desc}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/917979959051?text=Hello%20Surbhi%20Dhaba,%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}%20(${item.price})." target="_blank" rel="noopener noreferrer" class="w-full h-11 bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
+                            <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+                            <span>Order Dish on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        function filterMenu(category) {
+            // Update active button state
+            document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-600', 'text-white', 'shadow-lg', 'shadow-amber-900/30');
+                btn.classList.add('bg-zinc-900', 'text-zinc-300', 'border', 'border-zinc-800');
+            });
+            event.currentTarget.classList.remove('bg-zinc-900', 'text-zinc-300', 'border', 'border-zinc-800');
+            event.currentTarget.classList.add('bg-amber-600', 'text-white', 'shadow-lg', 'shadow-amber-900/30');
+
+            renderMenu(category);
+        }
+
+        // Initial menu render
+        renderMenu('tandoor');
+
+        // Form submission handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const type = document.getElementById('form-type').value;
+            const msg = document.getElementById('form-msg').value;
+
+            const whatsappText = `Hello Surbhi Dhaba,%0A%0A*New Inquiry:*%0A- *Name:* ${encodeURIComponent(name)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Type:* ${encodeURIComponent(type)}%0A- *Message:* ${encodeURIComponent(msg)}`;
+            
+            // Show success modal
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            lucide.createIcons();
+
+            // Open WhatsApp after short delay
+            setTimeout(() => {
+                window.open(`https://wa.me/917979959051?text=${whatsappText}`, '_blank');
+            }, 1500);
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.getElementById('inquiry-form').reset();
+        }
+    </script>
+</body>
+</html>

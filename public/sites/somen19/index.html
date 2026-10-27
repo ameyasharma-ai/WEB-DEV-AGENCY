@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somen19 | Premium Local Retail & Services in Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#FAFAF8',
+                        surface: '#FFFFFF',
+                        primary: '#8B1E0F',
+                        'primary-dark': '#6E170A',
+                        secondary: '#C85A32',
+                        textPrimary: '#1C1917',
+                        textMuted: '#78716C',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Custom scrollbar & utilities */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAFAF8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8B1E0F;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAF8] text-[#1C1917] font-inter antialiased overflow-x-hidden pb-24 md:pb-0">
+
+    <!-- Announcement Bar (Sits naturally in flow before header) -->
+    <div class="bg-[#8B1E0F] text-white py-2 px-4 text-xs sm:text-sm font-medium text-center flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Today • Visit us at Sri Krishna Puri, Patna or chat on WhatsApp!</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#FAFAF8] border-b border-zinc-200 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-[#8B1E0F] flex items-center justify-center text-white font-syne font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    S
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-xl sm:text-2xl text-[#1C1917] tracking-tight">Somen19</span>
+                    <span class="text-[10px] uppercase tracking-widest text-[#78716C] font-semibold -mt-1">Patna, Bihar</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-[#78716C]">
+                <a href="#services" class="hover:text-[#8B1E0F] transition-colors">Services</a>
+                <a href="#about" class="hover:text-[#8B1E0F] transition-colors">About</a>
+                <a href="#gallery" class="hover:text-[#8B1E0F] transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-[#8B1E0F] transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-[#8B1E0F] transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-[#8B1E0F] transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Header Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919117678678" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-300 bg-white text-[#1C1917] hover:border-[#8B1E0F] font-semibold text-sm transition-all shadow-sm">
+                    <i data-lucide="phone" class="w-4 h-4 text-[#8B1E0F]"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#8B1E0F] hover:bg-[#6E170A] text-white font-semibold text-sm transition-all shadow-md hover:shadow-lg">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button (Min 48px touch target) -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-100 text-[#1C1917] hover:bg-zinc-200 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Drawer (Z-[100] sits on top of header and backdrop) -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#FAFAF8] border-l border-zinc-200 rounded-tl-3xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-200">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-xl bg-[#8B1E0F] flex items-center justify-center text-white font-syne font-bold text-lg">
+                        S
+                    </div>
+                    <span class="font-syne font-extrabold text-xl text-[#1C1917]">Somen19</span>
+                </div>
+                <button id="close-btn" aria-label="Close Menu" class="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-200 text-[#1C1917]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 pt-6 font-semibold text-base text-[#1C1917]">
+                <a href="#services" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-[#8B1E0F]">
+                    <span>Services</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#78716C]"></i>
+                </a>
+                <a href="#about" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-[#8B1E0F]">
+                    <span>About Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#78716C]"></i>
+                </a>
+                <a href="#gallery" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-[#8B1E0F]">
+                    <span>Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#78716C]"></i>
+                </a>
+                <a href="#reviews" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-[#8B1E0F]">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#78716C]"></i>
+                </a>
+                <a href="#faq" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-[#8B1E0F]">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#78716C]"></i>
+                </a>
+                <a href="#contact" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-[#8B1E0F]">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#78716C]"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-200 flex flex-col gap-3">
+            <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#8B1E0F] text-white font-semibold text-base shadow-md">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <a href="tel:+919117678678" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-white text-[#1C1917] font-semibold text-base">
+                <i data-lucide="phone" class="w-5 h-5 text-[#8B1E0F]"></i>
+                <span>Call +91 91176 78678</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span>4.0 ★ (3,857+ Verified Google Reviews)</span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-[#1C1917] leading-[1.15] mb-6 break-words">
+                        Your Trusted Local Destination in <span class="text-[#8B1E0F]">Sri Krishna Puri, Patna</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg md:text-xl text-[#78716C] mb-8 leading-relaxed font-normal break-words max-w-2xl">
+                        Experience exceptional quality, premium retail selections, and dependable local services right at Azad Bhavan, West Boring Canal Rd. Drop by or connect instantly on WhatsApp!
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20want%20to%20inquire%20about%20your%20offerings." target="_blank" class="h-14 px-8 rounded-xl bg-[#8B1E0F] hover:bg-[#6E170A] text-white font-bold text-base flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Azad+Bhavan+23B+West+Boring+Canal+Rd+Sri+Krishna+Puri+Patna+Bihar+800001" target="_blank" class="h-14 px-8 rounded-xl bg-white border-2 border-zinc-300 hover:border-[#8B1E0F] text-[#1C1917] font-bold text-base flex items-center justify-center gap-3 transition-all shadow-sm">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-[#8B1E0F]"></i>
+                            <span>Get Directions</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Tag -->
+                    <div class="mt-8 flex items-center gap-3 text-sm text-[#78716C]">
+                        <i data-lucide="navigation" class="w-4 h-4 text-[#8B1E0F]"></i>
+                        <span>Azad Bhavan, 23B, West Boring Canal Rd, opposite Durga Mandir, Patna</span>
+                    </div>
+
+                </div>
+
+                <!-- Hero Image Grid / Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-zinc-200">
+                        <img src="https://images.unsplash.com/photo-1556742049-0a67d5536253?auto=format&fit=crop&w=800&q=80" alt="Somen19 Storefront & Services" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                            <div class="text-white">
+                                <span class="bg-[#8B1E0F] text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-2 inline-block">Prime Location</span>
+                                <h3 class="font-syne font-bold text-lg sm:text-xl">Opposite Durga Mandir, Patna</h3>
+                                <p class="text-xs sm:text-sm text-zinc-200">Easy accessibility with ample parking & prompt service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Trust Card -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-zinc-200 hidden sm:flex items-center gap-4 max-w-xs">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800 shrink-0 font-syne font-bold text-xl">
+                            4.0★
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-[#1C1917]">3,857+ Happy Customers</p>
+                            <p class="text-xs text-[#78716C]">Consistently rated top-tier in Patna</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-200 bg-white py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-zinc-200">
+                
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="flex items-center gap-1 text-amber-500 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                        <span class="font-syne font-extrabold text-2xl text-[#1C1917]">4.0 / 5.0</span>
+                    </div>
+                    <p class="text-sm text-[#78716C]">Based on 3,857+ Google Reviews</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-4 pt-6 sm:pt-4">
+                    <div class="flex items-center gap-2 text-[#8B1E0F] mb-1">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span class="font-syne font-extrabold text-xl text-[#1C1917]">Sri Krishna Puri</span>
+                    </div>
+                    <p class="text-sm text-[#78716C]">West Boring Canal Rd, Patna</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-4 pt-6 sm:pt-4">
+                    <div class="flex items-center gap-2 text-emerald-700 mb-1">
+                        <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                        <span class="font-syne font-extrabold text-xl text-[#1C1917]">Verified & Trusted</span>
+                    </div>
+                    <p class="text-sm text-[#78716C]">Prompt WhatsApp & In-Store Support</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Offerings Grid -->
+    <section id="services" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-[#8B1E0F] font-bold text-xs sm:text-sm uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">Our Offerings</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-[#1C1917] mt-3 mb-4">
+                    Tailored Retail & Local Services
+                </h2>
+                <p class="text-sm sm:text-base text-[#78716C]">
+                    Discover what makes Somen19 the preferred neighborhood choice in Patna. Professional assistance guaranteed.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-red-50 text-[#8B1E0F] flex items-center justify-center mb-6 group-hover:bg-[#8B1E0F] group-hover:text-white transition-colors">
+                            <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-[#1C1917] mb-3">Premium Retail Products</h3>
+                        <p class="text-sm text-[#78716C] leading-relaxed mb-6">
+                            Handpicked selection of quality goods meeting strict local standards. Visit our store at Azad Bhavan for exclusive items.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20am%20interested%20in%20your%20Retail%20Products." target="_blank" class="w-full h-12 rounded-xl bg-zinc-100 hover:bg-[#8B1E0F] hover:text-white text-[#1C1917] font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-red-50 text-[#8B1E0F] flex items-center justify-center mb-6 group-hover:bg-[#8B1E0F] group-hover:text-white transition-colors">
+                            <i data-lucide="award" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-[#1C1917] mb-3">Specialized Local Services</h3>
+                        <p class="text-sm text-[#78716C] leading-relaxed mb-6">
+                            Reliable, customer-focused services tailored for residents and businesses across Patna with unmatched attention to detail.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20would%20like%20to%20know%20more%20about%20your%20Specialized%20Services." target="_blank" class="w-full h-12 rounded-xl bg-zinc-100 hover:bg-[#8B1E0F] hover:text-white text-[#1C1917] font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-red-50 text-[#8B1E0F] flex items-center justify-center mb-6 group-hover:bg-[#8B1E0F] group-hover:text-white transition-colors">
+                            <i data-lucide="headphones" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-[#1C1917] mb-3">Customer Assistance & Support</h3>
+                        <p class="text-sm text-[#78716C] leading-relaxed mb-6">
+                            Have questions or need prompt assistance? Reach us directly by phone or WhatsApp for quick guidance and recommendations.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20need%20customer%20assistance." target="_blank" class="w-full h-12 rounded-xl bg-zinc-100 hover:bg-[#8B1E0F] hover:text-white text-[#1C1917] font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 md:py-24 bg-white border-y border-zinc-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5">
+                    <span class="text-[#8B1E0F] font-bold text-xs sm:text-sm uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">Our Competitive Edge</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-[#1C1917] mt-3 mb-4">
+                        Why Patnaites Trust Somen19
+                    </h2>
+                    <p class="text-sm sm:text-base text-[#78716C] mb-6 leading-relaxed">
+                        Backed by thousands of verified reviews, we pride ourselves on transparency, prime accessibility, and genuine customer satisfaction.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20let's%20connect!" target="_blank" class="h-12 px-6 rounded-xl bg-[#8B1E0F] hover:bg-[#6E170A] text-white font-bold text-sm flex items-center gap-2 shadow-md">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Chat with Us Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    
+                    <!-- Feature 1 -->
+                    <div class="bg-[#FAFAF8] p-6 rounded-2xl border border-zinc-200">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B1E0F] text-white flex items-center justify-center mb-4 font-bold">
+                            01
+                        </div>
+                        <h3 class="font-syne font-bold text-lg text-[#1C1917] mb-2">Prime Location</h3>
+                        <p class="text-xs sm:text-sm text-[#78716C] leading-relaxed">
+                            Easily accessible at Azad Bhavan, West Boring Canal Rd, right opposite Durga Mandir.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-[#FAFAF8] p-6 rounded-2xl border border-zinc-200">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B1E0F] text-white flex items-center justify-center mb-4 font-bold">
+                            02
+                        </div>
+                        <h3 class="font-syne font-bold text-lg text-[#1C1917] mb-2">Verified Rating</h3>
+                        <p class="text-xs sm:text-sm text-[#78716C] leading-relaxed">
+                            Over 3,857+ authentic Google reviews reflecting consistent 4.0-star excellence.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-[#FAFAF8] p-6 rounded-2xl border border-zinc-200">
+                        <div class="w-12 h-12 rounded-xl bg-[#8B1E0F] text-white flex items-center justify-center mb-4 font-bold">
+                            03
+                        </div>
+                        <h3 class="font-syne font-bold text-lg text-[#1C1917] mb-2">Instant Response</h3>
+                        <p class="text-xs sm:text-sm text-[#78716C] leading-relaxed">
+                            Quick inquiries answered promptly via phone and WhatsApp (+91 91176 78678).
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-zinc-200">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="About Somen19 Patna" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-[#8B1E0F] font-bold text-xs sm:text-sm uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full mb-3">Our Story</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-[#1C1917] mb-6">
+                        Rooted in Sri Krishna Puri, Serving All of Patna
+                    </h2>
+                    <p class="text-sm sm:text-base text-[#78716C] mb-4 leading-relaxed">
+                        Somen19 has established itself as a reliable landmark at Azad Bhavan, 23B, West Boring Canal Rd. Situated right opposite the revered Durga Mandir, our establishment blends local familiarity with professional retail and customer services.
+                    </p>
+                    <p class="text-sm sm:text-base text-[#78716C] mb-8 leading-relaxed">
+                        With close to 4,000 community ratings, our commitment remains unwavering: providing seamless interactions, high-grade offerings, and a welcoming environment for every visitor.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 w-full pt-6 border-t border-zinc-200">
+                        <div>
+                            <span class="font-syne font-extrabold text-3xl sm:text-4xl text-[#8B1E0F] block">3,857+</span>
+                            <span class="text-xs sm:text-sm text-[#78716C]">Google Reviews</span>
+                        </div>
+                        <div>
+                            <span class="font-syne font-extrabold text-3xl sm:text-4xl text-[#1C1917] block">4.0 ★</span>
+                            <span class="text-xs sm:text-sm text-[#78716C]">Overall Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-16 md:py-24 bg-white border-y border-zinc-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-[#8B1E0F] font-bold text-xs sm:text-sm uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">Visual Showcase</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-[#1C1917] mt-3 mb-4">
+                    Inside Somen19 & Surroundings
+                </h2>
+                <p class="text-sm sm:text-base text-[#78716C]">
+                    A glimpse of our premises at Sri Krishna Puri, Patna. Drop in anytime during working hours!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group bg-zinc-200">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Store View 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group bg-zinc-200">
+                    <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&w=800&q=80" alt="Store View 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group bg-zinc-200 sm:col-span-2 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1542744094-3a31246264d0?auto=format&fit=crop&w=800&q=80" alt="Store View 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-[#8B1E0F] font-bold text-xs sm:text-sm uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-[#1C1917] mt-3 mb-4">
+                    What Patnaites Say About Us
+                </h2>
+                <p class="text-sm sm:text-base text-[#78716C]">
+                    Read verified feedback from our valued customers across Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-[#78716C] leading-relaxed mb-6 italic">
+                            "Very convenient location at West Boring Canal Road. Prompt service and courteous staff. Highly recommended for locals in Sri Krishna Puri!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
+                        <div class="w-10 h-10 rounded-full bg-[#8B1E0F] text-white font-bold flex items-center justify-center text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#1C1917]">Abhishek Kumar</h4>
+                            <p class="text-xs text-[#78716C]">Verified Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-[#78716C] leading-relaxed mb-6 italic">
+                            "Easy to locate right opposite Durga Mandir at Azad Bhavan. WhatsApp response was super fast when I had questions before visiting."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
+                        <div class="w-10 h-10 rounded-full bg-[#8B1E0F] text-white font-bold flex items-center justify-center text-sm">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#1C1917]">Pooja Sinha</h4>
+                            <p class="text-xs text-[#78716C]">Verified Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-[#78716C] leading-relaxed mb-6 italic">
+                            "Professional setup with great offerings. 3,800+ reviews speak for themselves. Glad to have Somen19 right in our neighborhood."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
+                        <div class="w-10 h-10 rounded-full bg-[#8B1E0F] text-white font-bold flex items-center justify-center text-sm">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#1C1917]">Rajesh Mishra</h4>
+                            <p class="text-xs text-[#78716C]">Verified Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-16 md:py-24 bg-white border-y border-zinc-200">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="text-[#8B1E0F] font-bold text-xs sm:text-sm uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-[#1C1917] mt-3 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-sm sm:text-base text-[#78716C]">
+                    Everything you need to know about visiting or contacting Somen19.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="faq-item border border-zinc-200 rounded-2xl bg-[#FAFAF8] overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-syne font-bold text-base sm:text-lg text-[#1C1917] flex items-center justify-between gap-4">
+                        <span>Where is Somen19 located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#8B1E0F] shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#78716C] leading-relaxed">
+                        We are conveniently located at Azad Bhavan, 23B, West Boring Canal Rd, right opposite to Durga Mandir in Sri Krishna Puri, Patna, Bihar 800001.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item border border-zinc-200 rounded-2xl bg-[#FAFAF8] overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-syne font-bold text-base sm:text-lg text-[#1C1917] flex items-center justify-between gap-4">
+                        <span>How can I contact Somen19 instantly?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#8B1E0F] shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#78716C] leading-relaxed">
+                        You can call us directly or chat on WhatsApp at +91 91176 78678 for instant inquiries and support.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item border border-zinc-200 rounded-2xl bg-[#FAFAF8] overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-syne font-bold text-base sm:text-lg text-[#1C1917] flex items-center justify-between gap-4">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#8B1E0F] shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#78716C] leading-relaxed">
+                        We are open every day from 9:00 AM to 8:00 PM. Feel free to drop by or reach out via WhatsApp during business hours.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item border border-zinc-200 rounded-2xl bg-[#FAFAF8] overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-syne font-bold text-base sm:text-lg text-[#1C1917] flex items-center justify-between gap-4">
+                        <span>Can I get directions directly from Google Maps?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#8B1E0F] shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#78716C] leading-relaxed">
+                        Yes! You can click the "Get Directions" button anywhere on our website to instantly open our exact location on Google Maps for hassle-free navigation.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-[#8B1E0F] font-bold text-xs sm:text-sm uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">Visit & Connect</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-[#1C1917] mt-3 mb-4">
+                    Location & Inquiry Form
+                </h2>
+                <p class="text-sm sm:text-base text-[#78716C]">
+                    We would love to hear from you. Drop by our store or send us a message below.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Map -->
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-zinc-200 shadow-sm space-y-6">
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-50 text-[#8B1E0F] flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-[#1C1917] mb-1">Our Address</h3>
+                                <p class="text-sm text-[#78716C] leading-relaxed">
+                                    Azad Bhavan, 23B, West Boring Canal Rd, opposite to Durga Mandir, Sri Krishna Puri, Patna, Bihar 800001
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-50 text-[#8B1E0F] flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-[#1C1917] mb-1">Phone & WhatsApp</h3>
+                                <a href="tel:+919117678678" class="text-sm text-[#8B1E0F] font-semibold hover:underline block">+91 91176 78678</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-50 text-[#8B1E0F] flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-[#1C1917] mb-1">Business Hours</h3>
+                                <p class="text-sm text-[#78716C]">Monday – Sunday: 9:00 AM – 8:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-200 flex flex-col sm:flex-row gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Azad+Bhavan+23B+West+Boring+Canal+Rd+Sri+Krishna+Puri+Patna+Bihar+800001" target="_blank" class="flex-1 h-12 rounded-xl bg-[#8B1E0F] hover:bg-[#6E170A] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+                                <i data-lucide="map" class="w-4 h-4"></i>
+                                <span>Get Directions on Maps</span>
+                            </a>
+                            <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20need%20assistance." target="_blank" class="flex-1 h-12 rounded-xl border border-zinc-300 hover:border-[#8B1E0F] bg-white text-[#1C1917] font-bold text-sm flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-[#8B1E0F]"></i>
+                                <span>Chat on WhatsApp</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden shadow-sm border border-zinc-200">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7785!2d85.1234!3d25.6123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ0LjMiTiA4NcKwMDcnMzYuMiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Somen19 Location Map">
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <!-- Working Inquiry Form -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-zinc-200 shadow-sm">
+                        <h3 class="font-syne font-bold text-2xl text-[#1C1917] mb-2">Send an Inquiry</h3>
+                        <p class="text-sm text-[#78716C] mb-6">Fill out the form below and we will get back to you promptly.</p>
+                        
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-[#1C1917] uppercase tracking-wider mb-2">Your Name *</label>
+                                <input type="text" id="name" required class="w-full h-12 px-4 rounded-xl border border-zinc-300 focus:border-[#8B1E0F] focus:ring-1 focus:ring-[#8B1E0F] outline-none text-sm text-[#1C1917] bg-[#FAFAF8]" placeholder="Enter your full name">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-[#1C1917] uppercase tracking-wider mb-2">Phone / WhatsApp *</label>
+                                <input type="tel" id="phone" required class="w-full h-12 px-4 rounded-xl border border-zinc-300 focus:border-[#8B1E0F] focus:ring-1 focus:ring-[#8B1E0F] outline-none text-sm text-[#1C1917] bg-[#FAFAF8]" placeholder="Enter your phone number">
+                            </div>
+
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-[#1C1917] uppercase tracking-wider mb-2">Service / Interest</label>
+                                <select id="service" class="w-full h-12 px-4 rounded-xl border border-zinc-300 focus:border-[#8B1E0F] focus:ring-1 focus:ring-[#8B1E0F] outline-none text-sm text-[#1C1917] bg-[#FAFAF8]">
+                                    <option value="Retail Products">Retail Products</option>
+                                    <option value="Specialized Services">Specialized Services</option>
+                                    <option value="Store Visit">Store Visit Inquiry</option>
+                                    <option value="General Support">General Support</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-[#1C1917] uppercase tracking-wider mb-2">Message *</label>
+                                <textarea id="message" rows="4" required class="w-full p-4 rounded-xl border border-zinc-300 focus:border-[#8B1E0F] focus:ring-1 focus:ring-[#8B1E0F] outline-none text-sm text-[#1C1917] bg-[#FAFAF8]" placeholder="How can we help you?"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full h-14 rounded-xl bg-[#8B1E0F] hover:bg-[#6E170A] text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg transition-all">
+                                <span id="btn-text">Submit Inquiry</span>
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+
+                        <!-- Success Popup Modal Inside Form Card -->
+                        <div id="success-modal" class="hidden mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-emerald-700 shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Inquiry Submitted Successfully!</h4>
+                                <p class="text-xs text-emerald-800">Thank you for reaching out. We will contact you shortly.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1C1917] text-white pt-16 pb-12 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+                
+                <!-- Col 1 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-xl bg-[#8B1E0F] flex items-center justify-center text-white font-syne font-bold text-xl">
+                            S
+                        </div>
+                        <span class="font-syne font-extrabold text-2xl text-white">Somen19</span>
+                    </div>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Your trusted destination for quality retail and local services at Sri Krishna Puri, Patna.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-400 text-sm font-semibold">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span>4.0 ★ (3,857+ Google Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="flex flex-col gap-3">
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Quick Links</h3>
+                    <a href="#services" class="text-sm text-zinc-400 hover:text-white transition-colors">Services</a>
+                    <a href="#about" class="text-sm text-zinc-400 hover:text-white transition-colors">About Us</a>
+                    <a href="#gallery" class="text-sm text-zinc-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="#reviews" class="text-sm text-zinc-400 hover:text-white transition-colors">Customer Reviews</a>
+                    <a href="#faq" class="text-sm text-zinc-400 hover:text-white transition-colors">FAQ</a>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="flex flex-col gap-3">
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Contact Details</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Azad Bhavan, 23B, West Boring Canal Rd, opposite to Durga Mandir, Sri Krishna Puri, Patna, Bihar 800001
+                    </p>
+                    <a href="tel:+919117678678" class="text-sm text-zinc-300 hover:text-white font-semibold">Phone: +91 91176 78678</a>
+                    <a href="https://wa.me/919117678678" target="_blank" class="text-sm text-emerald-400 font-semibold hover:underline">WhatsApp Chat Available</a>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="flex flex-col gap-3">
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Hours & Map</h3>
+                    <p class="text-sm text-zinc-400">Monday – Sunday</p>
+                    <p class="text-sm text-zinc-400 font-semibold">9:00 AM – 8:00 PM</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Azad+Bhavan+23B+West+Boring+Canal+Rd+Sri+Krishna+Puri+Patna+Bihar+800001" target="_blank" class="mt-2 inline-flex items-center gap-2 text-sm text-[#8B1E0F] bg-white px-4 py-2.5 rounded-xl font-bold justify-center hover:bg-zinc-100 transition-colors">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Open Google Maps</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> Somen19. All rights reserved.</p>
+                <p>Designed with excellence for Patna, Bihar.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Bar (Visible on mobile viewports only) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#1C1917] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919117678678" class="flex-1 h-12 rounded-xl bg-white text-[#1C1917] font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="phone" class="w-4 h-4 text-[#8B1E0F]"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919117678678?text=Hello%20Somen19,%20I%20am%20visiting%20your%20website." target="_blank" class="flex-1 h-12 rounded-xl bg-[#8B1E0F] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-btn');
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                faqItems.forEach(otherItem => {
+                    otherItem.querySelector('.faq-content').classList.add('hidden');
+                    otherItem.querySelector('i').style.transform = 'rotate(0deg)';
+                });
+
+                // Open current if it was closed
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Submission
+        const inquiryForm = document.getElementById('inquiry-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const successModal = document.getElementById('success-modal');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Submitting...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Inquiry';
+                inquiryForm.reset();
+                successModal.classList.remove('hidden');
+
+                // Hide success modal after 5 seconds
+                setTimeout(() => {
+                    successModal.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
