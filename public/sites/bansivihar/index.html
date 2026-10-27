@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Bansi Vihar Restaurant | Pure Vegetarian Dining in Patna</title>
+    <meta name="description" content="Experience authentic pure vegetarian North & South Indian cuisine at Bansi Vihar Restaurant, Fraser Road, Patna. Rated 4.1★ with 9,850+ reviews. Book tables & order online.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF8F5',
+                        terracotta: '#993322',
+                        saffron: '#D97706',
+                        rust: '#7F1D1D',
+                        charcoal: '#1C1917',
+                        taupe: '#78716C'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-cream text-charcoal font-sans antialiased overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-terracotta text-white text-xs sm:text-sm py-2 px-4 text-center font-medium sticky top-0 z-[60] shadow-sm flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 text-saffron shrink-0"></i>
+        <span>Open Today: 10:30 AM – 10:30 PM • Pure Vegetarian Dining & Sweets on Fraser Road</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-[33px] sm:top-[37px] z-50 bg-cream/100 border-b border-stone-200 shadow-sm transition-all duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-terracotta flex items-center justify-center text-white font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    BV
+                </div>
+                <div>
+                    <span class="font-serif font-extrabold text-xl sm:text-2xl tracking-tight text-charcoal block leading-none">Bansi Vihar</span>
+                    <span class="text-xs uppercase tracking-widest text-terracotta font-semibold mt-1 block">Pure Veg • Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700">
+                <a href="#specialties" class="hover:text-terracotta transition-colors">Specialties</a>
+                <a href="#about" class="hover:text-terracotta transition-colors">Our Heritage</a>
+                <a href="#menu" class="hover:text-terracotta transition-colors">Menu</a>
+                <a href="#reviews" class="hover:text-terracotta transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-terracotta transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop CTA Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+916122224804" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-stone-300 text-stone-800 hover:border-terracotta hover:text-terracotta text-sm font-semibold transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-terracotta"></i>
+                    <span>+91 612 222 4804</span>
+                </a>
+                <a href="#reservation" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-terracotta hover:bg-rust text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-stone-200/80 hover:bg-stone-300 text-stone-900 transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-[70px] bottom-0 right-0 z-[100] w-full max-w-xs bg-cream border-l border-stone-200 rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-stone-200 mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-terracotta flex items-center justify-center text-white font-serif font-bold text-lg">
+                        BV
+                    </div>
+                    <span class="font-serif font-bold text-lg text-charcoal">Bansi Vihar</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-lg bg-stone-200 hover:bg-stone-300 text-stone-800">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 text-base font-medium text-stone-800">
+                <a href="#specialties" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200/50 transition-colors">
+                    <i data-lucide="utensils" class="w-5 h-5 text-terracotta"></i> Specialties
+                </a>
+                <a href="#about" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200/50 transition-colors">
+                    <i data-lucide="award" class="w-5 h-5 text-terracotta"></i> Our Heritage
+                </a>
+                <a href="#menu" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200/50 transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5 text-terracotta"></i> Full Menu
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200/50 transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-terracotta"></i> Reviews (9,850+)
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200/50 transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-terracotta"></i> Location & Contact
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-stone-200 flex flex-col gap-3">
+            <a href="tel:+916122224804" class="w-full py-3 rounded-xl bg-terracotta text-white font-semibold text-center flex items-center justify-center gap-2 shadow-md">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call +91 612 222 4804
+            </a>
+            <a href="https://wa.me/916122224804?text=Hello%20Bansi%20Vihar,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-emerald-700 text-white font-semibold text-center flex items-center justify-center gap-2 shadow-md">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Chat
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-cream via-stone-100/50 to-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-600">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                        </div>
+                        <span>4.1★ Rating from 9,850+ Google Reviews</span>
+                    </div>
+
+                    <!-- Hero Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-charcoal leading-[1.15] mb-6 break-words">
+                        Patna’s Legendary <span class="text-terracotta italic">Pure Vegetarian</span> Culinary Landmark
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-stone-700 leading-relaxed mb-8 max-w-2xl font-normal">
+                        For decades, Bansi Vihar on Fraser Road has served authentic North Indian thalis, exquisite South Indian dosas, and divine traditional sweets with unmatched warmth and heritage flavor.
+                    </p>
+
+                    <!-- CTA Group -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#reservation" class="px-8 py-4 rounded-xl bg-terracotta hover:bg-rust text-white font-bold text-center shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2.5">
+                            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                            <span>Reserve a Table</span>
+                        </a>
+                        <a href="#menu" class="px-8 py-4 rounded-xl bg-white border-2 border-stone-300 hover:border-terracotta text-stone-800 font-bold text-center transition-all flex items-center justify-center gap-2.5 shadow-sm">
+                            <i data-lucide="book-open" class="w-5 h-5 text-terracotta"></i>
+                            <span>Explore Menu</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Info Icons -->
+                    <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-stone-200 w-full text-stone-600">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-terracotta shrink-0">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-stone-900 text-sm">100% Pure</span>
+                                <span class="text-xs text-stone-600">Veg Kitchen</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-terracotta shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-stone-900 text-sm">Fraser Road</span>
+                                <span class="text-xs text-stone-600">Dak Bunglow Chauraha</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-terracotta shrink-0">
+                                <i data-lucide="heart" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-stone-900 text-sm">9,850+</span>
+                                <span class="text-xs text-stone-600">Happy Patrons</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="aspect-[4/3] sm:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-200">
+                            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1000&q=80" alt="Delicious Indian Thali Spread" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <!-- Floating Badge Card -->
+                        <div class="absolute -bottom-6 -left-6 sm:left-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-stone-200 flex items-center gap-4 max-w-xs">
+                            <div class="w-12 h-12 rounded-xl bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="block font-bold text-stone-900 text-sm">Patna's Pride</span>
+                                <span class="text-xs text-stone-600">Authentic recipes passed down through generations.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-stone-900 text-white py-8 border-y border-stone-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-stone-800">
+                <div class="px-2 pt-4 md:pt-0">
+                    <span class="block font-serif text-3xl sm:text-4xl font-bold text-saffron mb-1">9,850+</span>
+                    <span class="text-xs sm:text-sm text-stone-300 uppercase tracking-wider">Google Reviews (4.1★)</span>
+                </div>
+                <div class="px-2 pt-4 md:pt-0">
+                    <span class="block font-serif text-3xl sm:text-4xl font-bold text-saffron mb-1">Decades</span>
+                    <span class="text-xs sm:text-sm text-stone-300 uppercase tracking-wider">Of Culinary Legacy</span>
+                </div>
+                <div class="px-2 pt-4 md:pt-0">
+                    <span class="block font-serif text-3xl sm:text-4xl font-bold text-saffron mb-1">100%</span>
+                    <span class="text-xs sm:text-sm text-stone-300 uppercase tracking-wider">Pure Vegetarian</span>
+                </div>
+                <div class="px-2 pt-4 md:pt-0">
+                    <span class="block font-serif text-3xl sm:text-4xl font-bold text-saffron mb-1">Fraser Rd</span>
+                    <span class="text-xs sm:text-sm text-stone-300 uppercase tracking-wider">Prime Patna Location</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Specialties Grid -->
+    <section id="specialties" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-terracotta uppercase tracking-widest text-xs font-bold mb-3 block">Culinary Masterpieces</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-stone-900 mb-4">Our Signature Specialties</h2>
+                <p class="text-stone-600 text-sm sm:text-base">Prepared with pristine ingredients, authentic spices, and the timeless love of traditional Indian cookery.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-stone-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden bg-stone-100 relative">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="North Indian Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-terracotta text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Bestseller</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">Royal North Indian Thali</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">An abundant royal feast featuring paneer butter masala, dal makhani, assorted breads, rice, raita, and rich dessert.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-stone-100 mt-4 pt-4">
+                        <span class="font-bold text-terracotta text-lg">Authentic Flavors</span>
+                        <a href="#reservation" class="px-4 py-2 bg-stone-100 hover:bg-terracotta hover:text-white text-stone-800 text-sm font-semibold rounded-xl transition-all">Order / Reserve</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-stone-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden bg-stone-100 relative">
+                            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80" alt="South Indian Dosa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-saffron text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Crispy & Fresh</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">South Indian Delicacies</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">Golden, crispy masalas dosas and fluffy idlis served piping hot with authentic coconut chutney and piping sambhar.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-stone-100 mt-4 pt-4">
+                        <span class="font-bold text-terracotta text-lg">Traditional Recipe</span>
+                        <a href="#reservation" class="px-4 py-2 bg-stone-100 hover:bg-terracotta hover:text-white text-stone-800 text-sm font-semibold rounded-xl transition-all">Order / Reserve</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-stone-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden bg-stone-100 relative">
+                            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" alt="Indian Sweets & Snacks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-emerald-700 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Sweet Endings</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">Sweets & Chaat Counter</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">Mouth-watering traditional sweets, rabri jalebi, and delectable street-style chaats made with pure ghee and hygiene.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-stone-100 mt-4 pt-4">
+                        <span class="font-bold text-terracotta text-lg">Pure Ghee</span>
+                        <a href="#reservation" class="px-4 py-2 bg-stone-100 hover:bg-terracotta hover:text-white text-stone-800 text-sm font-semibold rounded-xl transition-all">Order / Reserve</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-stone-100 border-y border-stone-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-terracotta uppercase tracking-widest text-xs font-bold mb-3 block">The Bansi Vihar Promise</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-stone-900 mb-4">Why Patna Loves Dining With Us</h2>
+                <p class="text-stone-600 text-sm sm:text-base">We take pride in our uncompromising standards of taste, hygiene, and genuine hospitality.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-6">
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-stone-900 mb-3">Decades of Legacy</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Trusted across generations in Patna for authentic, consistent taste and memorable family gatherings.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-stone-900 mb-3">100% Pure Vegetarian</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Strictly vegetarian kitchen adhering to the highest standards of cleanliness, freshness, and pure ingredients.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-6">
+                        <i data-lucide="map-pin" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-stone-900 mb-3">Prime Central Location</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Conveniently situated at Marwari Campus, Fraser Road, near Bank of India, easily accessible from all parts of Patna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Heritage Section -->
+    <section id="about" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-stone-200">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-stone-200 mt-8">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Dining Experience" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-terracotta uppercase tracking-widest text-xs font-bold mb-3 block">Our Story</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-stone-900 mb-6">A Culinary Landmark on Fraser Road</h2>
+                    <p class="text-stone-700 text-base leading-relaxed mb-4">
+                        Bansi Vihar Restaurant has been an integral part of Patna's culinary fabric for years. Located strategically near Dak Bunglow Chauraha on Fraser Road, we have welcomed families, business travelers, and food lovers seeking comforting, delicious pure vegetarian meals.
+                    </p>
+                    <p class="text-stone-700 text-base leading-relaxed mb-8">
+                        Whether you are stopping by for a hearty South Indian breakfast, a sumptuous North Indian lunch thali, or treating your family to evening sweets and snacks, our dedication to authentic flavors and warm hospitality remains unmatched.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 w-full pt-6 border-t border-stone-200">
+                        <div>
+                            <span class="block font-serif text-3xl font-bold text-terracotta mb-1">9,850+</span>
+                            <span class="text-sm text-stone-600 font-medium">Google Reviews & counting</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-3xl font-bold text-terracotta mb-1">100%</span>
+                            <span class="text-sm text-stone-600 font-medium">Pure Vegetarian Quality</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Preview -->
+    <section id="menu" class="py-20 bg-stone-100 border-y border-stone-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-terracotta uppercase tracking-widest text-xs font-bold mb-3 block">Taste the Tradition</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-stone-900 mb-4">Explore Our Menu Highlights</h2>
+                <p class="text-stone-600 text-sm sm:text-base">Browse through our most loved categories prepared fresh every day.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12">
+                <button onclick="switchTab('north-indian')" id="btn-north-indian" class="menu-tab-btn px-6 py-3 rounded-xl font-semibold text-sm transition-all bg-terracotta text-white shadow-md">
+                    North Indian Thalis
+                </button>
+                <button onclick="switchTab('south-indian')" id="btn-south-indian" class="menu-tab-btn px-6 py-3 rounded-xl font-semibold text-sm transition-all bg-white text-stone-700 border border-stone-300 hover:border-terracotta">
+                    South Indian
+                </button>
+                <button onclick="switchTab('snacks')" id="btn-snacks" class="menu-tab-btn px-6 py-3 rounded-xl font-semibold text-sm transition-all bg-white text-stone-700 border border-stone-300 hover:border-terracotta">
+                    Snacks & Chaat
+                </button>
+                <button onclick="switchTab('sweets')" id="btn-sweets" class="menu-tab-btn px-6 py-3 rounded-xl font-semibold text-sm transition-all bg-white text-stone-700 border border-stone-300 hover:border-terracotta">
+                    Sweets & Beverages
+                </button>
+            </div>
+
+            <!-- Tab Content Containers -->
+            <div id="content-north-indian" class="menu-tab-content grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Special Bansi Vihar Thali</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Paneer sabzi, seasonal veg, dal makhani, pulao, 2 butter tandoori roti, raita, sweet & papad.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Popular</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Paneer Butter Masala Meal</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Rich creamy cottage cheese gravy served with butter naan or steamed jeera rice.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Chef Choice</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Deluxe Veg Thali</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Complete wholesome meal with 3 sabzis, dal, rice, poori, salad, and dessert.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Best Value</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Dal Makhani & Naan Combo</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Slow-cooked buttery black lentils paired with flaky garlic naan.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Classic</span>
+                </div>
+            </div>
+
+            <div id="content-south-indian" class="menu-tab-content grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto hidden">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Masala Dosa</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Crispy golden crepe filled with spiced potato masala, served with sambhar and chutneys.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Top Seller</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Butter Paper Masala Dosa</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Extra large, paper-thin crispy dosa roasted in pure butter.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Crispy</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Idli Sambar (2 Pcs)</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Soft, fluffy steamed rice cakes soaked in piping hot lentil soup.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Healthy</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Rava Onion Dosa</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Lacy semolina crepe loaded with finely chopped onions and green chillies.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Crispy</span>
+                </div>
+            </div>
+
+            <div id="content-snacks" class="menu-tab-content grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto hidden">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Pav Bhaji</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Spiced vegetable mash cooked on a tawa with butter, served with soft toasted pav.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Favorite</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Chole Bhature</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Fluffy deep-fried bread served with spicy chickpea curry and pickles.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Rich</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Raj Kachori Chaat</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Crispy giant shell stuffed with potatoes, sprouts, curd, tamarind, and sev.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Zesty</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Veg Cutlet / Samosa</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Crispy fried savory snacks served with mint and tamarind chutneys.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Quick</span>
+                </div>
+            </div>
+
+            <div id="content-sweets" class="menu-tab-content grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto hidden">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Rabri Jalebi</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Crispy hot jalebis paired with thick, sweetened chilled rabri.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Divine</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Gulab Jamun (2 Pcs)</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Soft milk-solid dumplings soaked in fragrant rose sugar syrup.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Classic</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Fresh Filter Coffee</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Authentic South Indian decoction coffee brewed with frothy milk.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Aromatic</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex justify-between items-center gap-4">
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-stone-900 mb-1">Badam Milk</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm">Rich warm milk infused with almonds, saffron, and cardamom.</p>
+                    </div>
+                    <span class="font-bold text-terracotta text-lg shrink-0">Nourishing</span>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#reservation" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-terracotta hover:bg-rust text-white font-bold shadow-md transition-all">
+                    <span>Reserve Your Table to Dine In</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-semibold mb-4 shadow-sm">
+                    <div class="flex items-center text-amber-600">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                    </div>
+                    <span>4.1★ Rating across 9,850+ Google Reviews</span>
+                </div>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-stone-900 mb-4">Loved by Patrons Across Patna</h2>
+                <p class="text-stone-600 text-sm sm:text-base">Read authentic experiences from food enthusiasts who visit us on Fraser Road.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-stone-700 text-sm leading-relaxed mb-6">"Bansi Vihar is an absolute institution in Patna! Their North Indian thali is delicious, and the south Indian dosas are super crispy. Located right near Dak Bunglow, it's our go-to family restaurant."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center">
+                            AK
+                        </div>
+                        <div>
+                            <span class="block font-bold text-stone-900 text-sm">Abhinav Kumar</span>
+                            <span class="text-xs text-stone-600">Local Guide • 142 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-stone-700 text-sm leading-relaxed mb-6">"Best pure vegetarian restaurant on Fraser Road. The sweets and rabri jalebi counter is simply unbeatable. Clean ambience, prompt service, and great taste every single time."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center">
+                            PS
+                        </div>
+                        <div>
+                            <span class="block font-bold text-stone-900 text-sm">Priya Sinha</span>
+                            <span class="text-xs text-stone-600">Patna Resident</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-stone-700 text-sm leading-relaxed mb-6">"A wonderful place for family dining. Highly reliable food quality, completely pure veg, and wonderful location near Bank of India on Fraser Road. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center">
+                            RM
+                        </div>
+                        <div>
+                            <span class="block font-bold text-stone-900 text-sm">Rajesh Mishra</span>
+                            <span class="text-xs text-stone-600">Frequent Patron</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-20 bg-stone-100 border-y border-stone-200">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-terracotta uppercase tracking-widest text-xs font-bold mb-3 block">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-stone-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-stone-600 text-sm sm:text-base">Everything you need to know about dining at Bansi Vihar Restaurant.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(1)" class="w-full p-6 text-left font-serif font-bold text-lg text-stone-900 flex justify-between items-center gap-4 focus:outline-none">
+                        <span>Is Bansi Vihar Restaurant 100% pure vegetarian?</span>
+                        <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-body-1" class="hidden px-6 pb-6 text-stone-600 text-sm leading-relaxed">
+                        Yes, absolutely! Bansi Vihar is a 100% pure vegetarian restaurant. We prepare all our North Indian, South Indian dishes, snacks, and sweets with strict adherence to vegetarian standards and pristine ingredients.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(2)" class="w-full p-6 text-left font-serif font-bold text-lg text-stone-900 flex justify-between items-center gap-4 focus:outline-none">
+                        <span>Do you accept table reservations for families and groups?</span>
+                        <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-body-2" class="hidden px-6 pb-6 text-stone-600 text-sm leading-relaxed">
+                        Yes, you can easily reserve a table in advance using our online reservation form on this website or by calling us directly at +91 612 222 4804. We accommodate both small family lunches and larger gatherings.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(3)" class="w-full p-6 text-left font-serif font-bold text-lg text-stone-900 flex justify-between items-center gap-4 focus:outline-none">
+                        <span>Where is Bansi Vihar located in Patna?</span>
+                        <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-body-3" class="hidden px-6 pb-6 text-stone-600 text-sm leading-relaxed">
+                        We are centrally located at Marwari Campus, Chauraha, Fraser Rd, near Bank Of India, Dak Bunglow, Fraser Road Area, Patna, Bihar 800001. It is one of the most accessible and prominent locations in the city.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(4)" class="w-full p-6 text-left font-serif font-bold text-lg text-stone-900 flex justify-between items-center gap-4 focus:outline-none">
+                        <span>What are your operating hours?</span>
+                        <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-body-4" class="hidden px-6 pb-6 text-stone-600 text-sm leading-relaxed">
+                        We are open every day of the week from 10:30 AM to 10:30 PM, serving breakfast, lunch, evening snacks, dinner, and fresh sweets.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-terracotta uppercase tracking-widest text-xs font-bold mb-3 block">Visit & Connect</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-stone-900 mb-4">Location & Table Reservation</h2>
+                <p class="text-stone-600 text-sm sm:text-base">We look forward to welcoming you to Bansi Vihar Restaurant on Fraser Road.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Info & Reservation Form -->
+                <div class="lg:col-span-6 bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-stone-200" id="reservation">
+                    <h3 class="font-serif font-bold text-2xl text-stone-900 mb-2">Book Your Table / Inquiry</h3>
+                    <p class="text-stone-600 text-sm mb-8">Fill out the quick form below and our team will confirm your reservation instantly.</p>
+
+                    <form id="reservation-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Your Name *</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none text-stone-900 text-sm bg-stone-50" placeholder="Rahul Sharma">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none text-stone-900 text-sm bg-stone-50" placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Number of Guests *</label>
+                                <select id="guests" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none text-stone-900 text-sm bg-stone-50">
+                                    <option value="1-2">1 - 2 Guests</option>
+                                    <option value="3-4" selected>3 - 4 Guests</option>
+                                    <option value="5-8">5 - 8 Guests</option>
+                                    <option value="8+">8+ Large Family Group</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Preferred Time *</label>
+                                <input type="time" id="time" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none text-stone-900 text-sm bg-stone-50" value="13:00">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Special Requests / Occasion</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-terracotta focus:ring-1 focus:ring-terracotta outline-none text-stone-900 text-sm bg-stone-50" placeholder="Any dietary preference or seating request..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-terracotta hover:bg-rust text-white font-bold text-center shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                            <span>Confirm Table Reservation</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Google Maps & Contact Card -->
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    <!-- Map Box -->
+                    <div class="bg-white p-4 rounded-3xl shadow-xl border border-stone-200 overflow-hidden">
+                        <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden relative bg-stone-200">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788437936177!2d85.137564!3d25.610052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef340df6b%3A0xc47e30d666872584!2sBansi%20Vihar%20Restaurant!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full object-cover">
+                            </iframe>
+                        </div>
+                        <div class="p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div>
+                                <span class="block font-bold text-stone-900 text-sm">Bansi Vihar Restaurant</span>
+                                <span class="text-xs text-stone-600">Marwari Campus, Chauraha, Fraser Rd, Patna</span>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Bansi+Vihar+Restaurant+Fraser+Road+Patna" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-semibold text-xs tracking-wider uppercase transition-all flex items-center gap-2 shrink-0">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details Box -->
+                    <div class="bg-stone-900 text-white p-8 rounded-3xl shadow-xl flex flex-col gap-6">
+                        <h4 class="font-serif font-bold text-xl text-saffron">Quick Contact Info</h4>
+                        <div class="space-y-4 text-sm text-stone-300">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-saffron shrink-0 mt-0.5"></i>
+                                <span>Marwari Campus, Chauraha, Fraser Rd, near Bank Of India, Dak Bunglow, Fraser Road Area, Patna, Bihar 800001</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-saffron shrink-0"></i>
+                                <a href="tel:+916122224804" class="hover:text-white transition-colors font-semibold">+91 612 222 4804</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-saffron shrink-0"></i>
+                                <span>Open Every Day: 10:30 AM – 10:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 py-16 border-t border-stone-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-terracotta flex items-center justify-center text-white font-serif font-bold text-lg">
+                            BV
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">Bansi Vihar</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-stone-400 leading-relaxed">
+                        Patna’s premier pure vegetarian restaurant delivering decades of legacy taste, unmatched hygiene, and authentic flavors on Fraser Road.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="flex items-center text-amber-400 text-xs font-semibold gap-1 bg-stone-900 px-3 py-1.5 rounded-lg border border-stone-800">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                            <span>4.1★ (9,850+ Google Reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#specialties" class="hover:text-white transition-colors">Specialties</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">Our Heritage</a></li>
+                        <li><a href="#menu" class="hover:text-white transition-colors">Menu Highlights</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-stone-400">
+                        <li class="flex justify-between">
+                            <span>Monday – Sunday:</span>
+                            <span class="text-white font-medium">10:30 AM – 10:30 PM</span>
+                        </li>
+                        <li class="pt-2 text-xs text-amber-400">
+                            * Kitchen open all days for Dine-In, Takeaway, and Sweets Counter.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Contact & Location</h4>
+                    <p class="text-sm text-stone-400 mb-4">
+                        Marwari Campus, Chauraha, Fraser Rd, near Bank Of India, Dak Bunglow, Patna, Bihar 800001
+                    </p>
+                    <a href="tel:+916122224804" class="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-saffron transition-colors">
+                        <i data-lucide="phone" class="w-4 h-4 text-terracotta"></i>
+                        <span>+91 612 222 4804</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+                <p>&copy; <span id="current-year"></span> Bansi Vihar Restaurant, Patna. All rights reserved.</p>
+                <p>100% Pure Vegetarian Dining Landmark on Fraser Road.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-stone-200 p-3 flex gap-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+        <a href="tel:+916122224804" class="flex-1 py-3 px-4 rounded-xl bg-terracotta text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/916122224804?text=Hello%20Bansi%20Vihar,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-emerald-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-stone-900 mb-2">Reservation Received!</h3>
+            <p class="text-stone-600 text-sm mb-6">Thank you, <span id="modal-name" class="font-bold text-stone-800"></span>. We have received your table inquiry for <span id="modal-guests" class="font-bold text-stone-800"></span> guests at <span id="modal-time" class="font-bold text-stone-800"></span>. Our manager will call you shortly to confirm.</p>
+            <button onclick="closeModal()" class="w-full py-3.5 rounded-xl bg-terracotta text-white font-bold text-sm hover:bg-rust transition-colors shadow-md">
+                Got It, Thank You!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Menu Tab Switching Logic
+        function switchTab(categoryId) {
+            // Hide all contents
+            const contents = document.querySelectorAll('.menu-tab-content');
+            contents.forEach(el => el.classList.add('hidden'));
+
+            // Remove active style from all tab buttons
+            const buttons = document.querySelectorAll('.menu-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-terracotta', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-stone-700', 'border', 'border-stone-300');
+            });
+
+            // Show selected content
+            document.getElementById('content-' + categoryId).classList.remove('hidden');
+
+            // Style active tab button
+            const activeBtn = document.getElementById('btn-' + categoryId);
+            activeBtn.classList.remove('bg-white', 'text-stone-700', 'border', 'border-stone-300');
+            activeBtn.classList.add('bg-terracotta', 'text-white', 'shadow-md');
+        }
+
+        // FAQ Accordion Logic
+        function toggleFaq(id) {
+            const body = document.getElementById('faq-body-' + id);
+            const icon = document.getElementById('faq-icon-' + id);
+
+            if (body.classList.contains('hidden')) {
+                body.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                body.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Form Submission & Modal Logic
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const guests = document.getElementById('guests').value;
+            const time = document.getElementById('time').value;
+
+            document.getElementById('modal-name').textContent = name;
+            document.getElementById('modal-guests').textContent = guests;
+            document.getElementById('modal-time').textContent = time;
+
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            document.getElementById('reservation-form').reset();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>
