@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercules Health Club | Best Gym & Fitness Centre in Patna</title>
+    <meta name="description" content="Join Hercules Health Club at Rajendra Path, Patna. Expert trainers, state-of-the-art strength training, cardio & personal coaching. Claim your free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#DC2626',
+                        'primary-hover': '#EF4444',
+                        secondary: '#F59E0B',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and safety */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #DC2626;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090B;
+            color: #FAFAFA;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center sticky top-0 z-50 flex items-center justify-center gap-2 shadow-md">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Today: 5:00 AM – 10:00 PM | Rajendra Path, Patna</span>
+    </div>
+
+    <!-- 100% Opaque Sticky Header -->
+    <header class="sticky top-8 sm:top-9 z-40 bg-[#09090B] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-amber-600 flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="dumbbell" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-white block leading-none">HERCULES</span>
+                    <span class="text-[10px] tracking-widest text-primary font-bold uppercase block mt-1">Health Club Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium text-textMuted hover:text-white transition-colors">Services</a>
+                <a href="#about" class="text-sm font-medium text-textMuted hover:text-white transition-colors">About Us</a>
+                <a href="#gallery" class="text-sm font-medium text-textMuted hover:text-white transition-colors">Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-textMuted hover:text-white transition-colors">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-textMuted hover:text-white transition-colors">FAQ</a>
+                <a href="#contact" class="text-sm font-medium text-textMuted hover:text-white transition-colors">Contact</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+917488492598" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-semibold text-white hover:border-primary transition-all">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-primary"></i>
+                    <span>+91 74884 92598</span>
+                </a>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-xs font-bold text-white shadow-lg shadow-primary/25 transition-all transform hover:-translate-y-0.5">
+                    Claim Free Trial
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:border-primary transition-colors focus:outline-none" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop & Drawer -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <i data-lucide="dumbbell" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Hercules Gym</span>
+                </div>
+                <button id="menu-close" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-textMuted hover:text-white transition-colors" aria-label="Close menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 mt-6">
+                <a href="#services" class="mobile-nav-link text-base font-semibold text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">Services & Pricing</a>
+                <a href="#about" class="mobile-nav-link text-base font-semibold text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">About Us</a>
+                <a href="#gallery" class="mobile-nav-link text-base font-semibold text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">Facility Gallery</a>
+                <a href="#reviews" class="mobile-nav-link text-base font-semibold text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">Google Reviews</a>
+                <a href="#faq" class="mobile-nav-link text-base font-semibold text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">FAQ</a>
+                <a href="#contact" class="mobile-nav-link text-base font-semibold text-zinc-300 hover:text-primary transition-colors py-2">Location & Contact</a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+917488492598" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-sm font-bold text-white flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                <span>Call +91 74884 92598</span>
+            </a>
+            <a href="https://wa.me/917488492598?text=Hi%20Hercules%20Health%20Club,%20I%20want%20to%20book%20a%20free%20gym%20trial!" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-sm font-bold text-white flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-[#09090B]">
+        <!-- Ambient radial glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-primary/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-zinc-800 mb-6 shadow-inner">
+                        <div class="flex items-center text-amber-500 gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white">3.8 ★</span>
+                        <span class="text-xs text-textMuted">from 72 Google Reviews</span>
+                    </div>
+
+                    <!-- Hero Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Transform Your Body at Patna's Premier <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Fitness Hub</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-textMuted mb-8 leading-relaxed max-w-2xl break-words">
+                        Build raw strength, shred fat, and elevate your lifestyle with state-of-the-art equipment, expert trainers, and high-energy training at Rajendra Path, Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="#contact" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-base shadow-xl shadow-primary/30 transition-all transform hover:-translate-y-1">
+                            <span>Claim Free Trial</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/917488492598?text=Hi%20Hercules%20Health%20Club,%20I%20want%20to%20know%20more%20about%20gym%20membership%20plans!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-emerald-500 text-white font-bold text-base transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-500"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust highlights -->
+                    <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-zinc-800/80">
+                        <div>
+                            <span class="block font-syne font-extrabold text-xl sm:text-2xl text-white">72+</span>
+                            <span class="text-xs text-textMuted">Verified Reviews</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne font-extrabold text-xl sm:text-2xl text-white">5 AM</span>
+                            <span class="text-xs text-textMuted">Daily Opening</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne font-extrabold text-xl sm:text-2xl text-white">100%</span>
+                            <span class="text-xs text-textMuted">Pro Equipment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Card Column -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary to-amber-500 opacity-30 blur-lg"></div>
+                        <div class="relative bg-surface border border-zinc-800 rounded-2xl p-4 sm:p-6 shadow-2xl">
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Hercules Health Club interior gym floor in Patna" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                                    <div class="flex items-center gap-2 text-white text-xs font-semibold bg-zinc-900/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-700">
+                                        <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                                        <span>Open Now • Closes at 10 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-900 border border-zinc-800">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+                                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-white">Rajendra Path, Patna</h4>
+                                            <p class="text-[11px] text-textMuted">Near Bhattacharya More, Ghrounda</p>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Hercules+Health+Club+Patna" target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-bold hover:underline">Map →</a>
+                                </div>
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-900 border border-zinc-800">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-500 flex items-center justify-center">
+                                            <i data-lucide="phone-call" class="w-4 h-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-white">Instant Support</h4>
+                                            <p class="text-[11px] text-textMuted">+91 74884 92598</p>
+                                        </div>
+                                    </div>
+                                    <a href="tel:+917488492598" class="text-xs text-amber-500 font-bold hover:underline">Call Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Offerings Grid -->
+    <section id="services" class="py-20 bg-surface/50 border-t border-zinc-800/80">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-primary uppercase block mb-3">Our Core Programs</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Engineered for Maximum Results
+                </h2>
+                <p class="text-textMuted text-sm sm:text-base">
+                    Whether you want to build lean muscle mass, tone up, or increase endurance, we have the right gear and expert guidance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Strength Training</h3>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">
+                            Heavy duty dumbbells, Olympic barbells, power racks, and pin-loaded machines for total body muscle growth.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:text-white transition-colors">
+                        <span>Inquire Plan</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white transition-all">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Personal Coaching</h3>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">
+                            One-on-one customized training routines, form corrections, and dietary guidance tailored to your fitness level.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-amber-500 group-hover:text-white transition-colors">
+                        <span>Inquire Plan</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Cardio Endurance</h3>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">
+                            Modern treadmills, upright bikes, and elliptical trainers to burn stubborn body fat and improve cardiovascular health.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-500 group-hover:text-white transition-colors">
+                        <span>Inquire Plan</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Weight Loss & Tone</h3>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">
+                            Specialized fat loss circuits, HIIT training protocols, and metabolic conditioning for fast, sustainable results.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-purple-500 group-hover:text-white transition-colors">
+                        <span>Inquire Plan</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-primary uppercase block mb-3">Why Hercules Health Club</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Built for Serious Fitness Enthusiasts in Patna
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-8">
+                        Located conveniently at Rajendra Path near Bhattacharya More, we provide a motivating, distraction-free environment equipped with everything you need to crush your fitness goals.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-1">Expert Trainers</h3>
+                                <p class="text-xs text-textMuted leading-relaxed">Certified professionals guiding your workouts safely.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-1">Flexible Timings</h3>
+                                <p class="text-xs text-textMuted leading-relaxed">Open 17 hours a day from 5:00 AM to 10:00 PM.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-1">Modern Equipment</h3>
+                                <p class="text-xs text-textMuted leading-relaxed">Well-maintained heavy weights & cardio machines.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-500 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-1">Prime Location</h3>
+                                <p class="text-xs text-textMuted leading-relaxed">Easy access from Rajendra Path & Bhattacharya More.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-primary to-amber-500 opacity-20 blur-xl"></div>
+                    <div class="relative bg-surface border border-zinc-800 rounded-2xl p-6 shadow-2xl">
+                        <div class="aspect-video rounded-xl overflow-hidden mb-6">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Gym equipment at Hercules Health Club Patna" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold">3.8★</div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Trusted by Patna Locals</h4>
+                                    <p class="text-xs text-textMuted">Join 72+ satisfied members today</p>
+                                </div>
+                            </div>
+                            <a href="#contact" class="px-4 py-2 rounded-lg bg-primary text-xs font-bold text-white hover:bg-primary-hover transition-colors">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 bg-surface/40 border-t border-zinc-800/80">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-surface border border-zinc-800 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <div class="lg:col-span-6">
+                        <span class="text-xs font-bold tracking-widest text-primary uppercase block mb-3">Our Story</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                            Dedicated to Empowering Patna's Fitness Journey
+                        </h2>
+                        <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-6">
+                            Hercules Health Club has been a cornerstone of fitness in Patna, located centrally at Rajendra Path near Bhattacharya More. We believe fitness is not just about lifting weights; it's about discipline, community, and transforming mindset.
+                        </p>
+                        <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-8">
+                            Our spacious workout floor features comprehensive strength training setups, professional guidance, and an energetic atmosphere that pushes you to break your personal bests every single day.
+                        </p>
+                        <div class="flex items-center gap-6">
+                            <div class="border-l-2 border-primary pl-4">
+                                <span class="font-syne font-bold text-2xl text-white block">72+</span>
+                                <span class="text-xs text-textMuted">Google Reviews</span>
+                            </div>
+                            <div class="border-l-2 border-amber-500 pl-4">
+                                <span class="font-syne font-bold text-2xl text-white block">17 Hrs</span>
+                                <span class="text-xs text-textMuted">Daily Access</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Workout session" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800 mt-8">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Weights area" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-primary uppercase block mb-3">Facility Showcase</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Take a Tour of Hercules Health Club
+                </h2>
+                <p class="text-textMuted text-sm sm:text-base">
+                    Clean, well-lit, and fully equipped gym floor designed for optimal workouts.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym floor Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white">Main Workout Floor</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Free weights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white">Dumbbell & Barbell Section</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Cardio zone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white">Cardio Equipment</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Strength training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white">Strength & Resistance</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Gym atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white">High Energy Atmosphere</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="Personal training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-xs font-bold text-white">Expert Guidance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-surface/40 border-t border-zinc-800/80">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-primary uppercase block mb-3">Member Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    What Patna Fitness Enthusiasts Say
+                </h2>
+                <div class="flex items-center justify-center gap-2 mt-3">
+                    <div class="flex text-amber-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                    </div>
+                    <span class="text-sm font-bold text-white">3.8 / 5.0 Rating</span>
+                    <span class="text-xs text-textMuted">(72 Google Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">
+                            "One of the best gyms in the Rajendra Path area. Excellent equipment for heavy lifting and very cooperative trainers. Highly recommend for serious fitness folks!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-sm">A</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Amit Kumar</h4>
+                            <p class="text-[11px] text-textMuted">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">
+                            "Great atmosphere near Bhattacharya More. Open early from 5 AM which fits my morning schedule perfectly. Very spacious and well maintained."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold text-sm">R</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Rahul Singh</h4>
+                            <p class="text-[11px] text-textMuted">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-textMuted leading-relaxed mb-6">
+                            "Awesome gym with top-notch personal training. Trainers pay close attention to form and diet. Saw great fat loss results in just 2 months."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center font-bold text-sm">P</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Priya Sharma</h4>
+                            <p class="text-[11px] text-textMuted">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold tracking-widest text-primary uppercase block mb-3">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-textMuted text-sm sm:text-base">
+                    Everything you need to know about joining Hercules Health Club.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base text-white">What are the operating hours of Hercules Health Club?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-textMuted leading-relaxed">
+                        We are open daily from 5:00 AM to 10:00 PM, giving you ample flexibility for early morning workouts or late evening sessions.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base text-white">Where is the gym located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-textMuted leading-relaxed">
+                        We are conveniently located at Rajendra Path, near Bhattacharya More, Radhe Krishn Colony, Ghrounda, Patna, Bihar 800001.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base text-white">Do you offer a free gym trial before joining?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-textMuted leading-relaxed">
+                        Yes! You can claim a free trial session by filling out our contact form or messaging us directly on WhatsApp at +91 74884 92598.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base text-white">Are personal trainers available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-textMuted leading-relaxed">
+                        Absolutely. We have certified trainers on-site who provide expert guidance, personalized routines, and form supervision for beginners and advanced athletes alike.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-surface/40 border-t border-zinc-800/80">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-primary uppercase block mb-3">Get In Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Visit Us or Claim Your Free Trial
+                </h2>
+                <p class="text-textMuted text-sm sm:text-base">
+                    Drop by our gym at Rajendra Path, Patna or drop us a message below.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Column: Contact Form & Info -->
+                <div class="lg:col-span-6 bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8">
+                    <h3 class="text-xl font-bold font-syne text-white mb-6">Send Us an Inquiry</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-textMuted mb-2">Your Full Name</label>
+                            <input type="text" id="name" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors" placeholder="e.g. Rohit Kumar">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-textMuted mb-2">Phone / WhatsApp Number</label>
+                            <input type="tel" id="phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors" placeholder="e.g. +91 98765 43210">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-textMuted mb-2">Select Program</label>
+                            <select id="service" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors">
+                                <option value="Free Trial">Free Trial Session</option>
+                                <option value="Strength Training">Strength Training</option>
+                                <option value="Personal Coaching">Personal Coaching</option>
+                                <option value="Weight Loss">Weight Loss & Tone</option>
+                                <option value="General Membership">General Membership Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-textMuted mb-2">Message or Goal</label>
+                            <textarea id="message" rows="3" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors" placeholder="Tell us your fitness goals..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-sm shadow-lg shadow-primary/25 transition-all flex items-center justify-center gap-2">
+                            <span>Submit Inquiry</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Map & Hours -->
+                <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8">
+                        <h3 class="text-xl font-bold font-syne text-white mb-4">Location & Hours</h3>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Address</h4>
+                                    <p class="text-xs text-textMuted leading-relaxed">Rajendra Path, near Bhattacharya More, Radhe Krishn Colony, Ghrounda, Patna, Bihar 800001</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-500 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="clock" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Operating Hours</h4>
+                                    <p class="text-xs text-textMuted">Monday – Sunday: 5:00 AM – 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Google Maps Embed -->
+                        <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 mb-4">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848482483!2d85.1375!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef0000001%3A0x0!2sRajendra%20Path%2C%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Hercules Health Club Patna Map">
+                            </iframe>
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Hercules+Health+Club+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-white text-xs font-bold flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="compass" class="w-4 h-4 text-primary"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold font-syne text-white mb-2">Inquiry Submitted!</h3>
+            <p id="modal-text" class="text-sm text-textMuted mb-6">Thank you! We have received your request and will contact you via phone or WhatsApp shortly.</p>
+            <button id="modal-close" class="w-full py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-sm shadow-lg shadow-primary/25 transition-all">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-800/80 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+                            <i data-lucide="dumbbell" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <span class="font-syne font-extrabold text-lg text-white block leading-none">HERCULES</span>
+                            <span class="text-[10px] tracking-widest text-primary font-bold uppercase block mt-1">Health Club Patna</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-textMuted leading-relaxed">
+                        Patna's premier gym and fitness centre offering state-of-the-art strength training, expert coaching, and high-energy workouts.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-amber-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <span>3.8 ★ Rating across 72+ Google Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-textMuted">
+                        <li><a href="#services" class="hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Facility Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Google Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact & Location</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-white uppercase tracking-wider mb-4">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-xs text-textMuted">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white font-medium">5:00 AM – 10:00 PM</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white font-medium">5:00 AM – 10:00 PM</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white font-medium">5:00 AM – 10:00 PM</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white font-medium">5:00 AM – 10:00 PM</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white font-medium">5:00 AM – 10:00 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-medium">5:00 AM – 10:00 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-white font-medium">5:00 AM – 10:00 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-white uppercase tracking-wider mb-4">Contact & Location</h4>
+                    <ul class="space-y-3 text-xs text-textMuted">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                            <span>Rajendra Path, near Bhattacharya More, Ghrounda, Patna 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="tel:+917488492598" class="hover:text-white transition-colors">+91 74884 92598</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                            <a href="https://wa.me/917488492598" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp Chat</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-textMuted gap-4">
+                <p>&copy; <span id="current-year"></span> Hercules Health Club, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Hercules+Health+Club+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Google Maps Profile</a>
+                    <a href="tel:+917488492598" class="hover:text-white transition-colors">Emergency Call</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+917488492598" class="flex-1 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-bold text-white flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917488492598?text=Hi%20Hercules%20Health%20Club,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-xs font-bold text-white flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Current Year for Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('lucide-chevron-down') || btn.querySelector('[data-lucide="chevron-down"]');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn [data-lucide]').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Submission & Success Modal
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const modalText = document.getElementById('modal-text');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameInput = document.getElementById('name').value;
+            const phoneInput = document.getElementById('phone').value;
+            const serviceInput = document.getElementById('service').value;
+
+            // Sanitize and set text
+            modalText.textContent = `Thank you, ${nameInput}! We have received your inquiry for ${serviceInput}. Our team at Hercules Health Club Patna will call/WhatsApp you at ${phoneInput} shortly.`;
+            
+            successModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            contactForm.reset();
+        });
+
+        modalClose.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
