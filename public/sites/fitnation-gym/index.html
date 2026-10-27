@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>FITNATION GYM | Premier Fitness & Health Club in Kadamkuan, Patna</title>
+    <meta name="description" content="Join Fitnation Gym in Kadamkuan, Patna. Rated 4.5★ with 212+ reviews. Expert trainers, modern equipment, weight training, and cardio. Claim your free trial pass today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#FF2A5F',
+                        'primary-hover': '#FF4D79',
+                        secondary: '#FFB800',
+                        textPrimary: '#FFFFFF',
+                        textMuted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and zero overflow protection */
+        html, body {
+            overflow-x: hidden;
+            background-color: #09090B;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF2A5F;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-[#09090B] text-white font-inter pb-28 md:pb-0">
+
+    <!-- Announcement Bar (Sits naturally above header) -->
+    <div class="bg-gradient-to-r from-primary to-[#FF6B35] text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 animate-bounce"></i>
+        <span>SPECIAL OFFER: Get 1 Month FREE Personal Training on Annual Memberships!</span>
+        <a href="tel:+919031002808" class="underline hover:text-secondary ml-1 hidden sm:inline">Claim Now →</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-[#09090B] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
+                    <i data-lucide="dumbbell" class="w-6 h-6 text-white"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-xl sm:text-2xl tracking-wider text-white">FITNATION</span>
+                    <span class="text-[10px] tracking-widest text-primary font-bold uppercase -mt-1">Gym & Health Club</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#programs" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Programs</a>
+                <a href="#why-us" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Fitnation%20Gym!" target="_blank" rel="noopener noreferrer" class="h-11 px-4 rounded-xl border border-zinc-700 bg-zinc-900 hover:bg-zinc-800 text-white font-medium text-sm flex items-center gap-2 transition-all">
+                    <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="tel:+919031002808" class="h-11 px-5 rounded-xl bg-primary hover:bg-[#FF4D79] text-white font-bold text-sm flex items-center gap-2 shadow-lg shadow-primary/30 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>Call Now</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Solid Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 sm:top-14 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#09090B] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 overflow-y-auto lg:hidden">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
+                        <i data-lucide="dumbbell" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="font-syne font-extrabold text-lg text-white">FITNATION</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 py-6">
+                <a href="#programs" class="mobile-nav-link text-lg font-medium text-textMuted hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Programs</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#why-us" class="mobile-nav-link text-lg font-medium text-textMuted hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link text-lg font-medium text-textMuted hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>About Gym</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-lg font-medium text-textMuted hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-lg font-medium text-textMuted hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Reviews (212+)</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#faq" class="mobile-nav-link text-lg font-medium text-textMuted hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-lg font-medium text-textMuted hover:text-primary py-2 flex items-center justify-between">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Fitnation%20Gym!" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-medium flex items-center justify-center gap-2">
+                <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <a href="tel:+919031002808" class="w-full h-12 rounded-xl bg-primary text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/30">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                <span>Call +91 90310 02808</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-32 overflow-hidden">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-inner">
+                        <div class="flex items-center text-secondary">
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-white">4.5 ★ <span class="text-textMuted font-normal">(212+ Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Main H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        TRANSFORM YOUR BODY AT PATNA'S PREMIER <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">FITNESS ARENA</span>
+                    </h1>
+
+                    <!-- Value Proposition Subheadline -->
+                    <p class="text-base sm:text-lg text-textMuted mb-8 leading-relaxed max-w-2xl">
+                        Welcome to <strong class="text-white">Fitnation Gym</strong> located in Kadamkuan, Patna. Experience top-tier strength conditioning, world-class cardio equipment, and expert trainers dedicated to your fitness goals.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20claim%20my%20Free%20Trial%20Pass%20at%20Fitnation%20Gym!" target="_blank" rel="noopener noreferrer" class="h-14 px-8 rounded-xl bg-primary hover:bg-[#FF4D79] text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-primary/30 transition-all hover:scale-[1.02]">
+                            <i data-lucide="ticket" class="w-5 h-5"></i>
+                            <span>Claim Free Trial Pass</span>
+                        </a>
+                        <a href="https://wa.me/919031002808?text=Hi,%20I%20have%20an%20inquiry%20about%20membership%20at%20Fitnation%20Gym." target="_blank" rel="noopener noreferrer" class="h-14 px-8 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-white font-semibold text-base flex items-center justify-center gap-3 transition-all hover:scale-[1.02]">
+                            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Location highlight tag -->
+                    <div class="flex items-center gap-2 mt-6 text-xs sm:text-sm text-textMuted">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary"></i>
+                        <span>3rd Floor, Ambition Ojha Plaza, Above Domino's, Kadamkuan, Patna</span>
+                    </div>
+                </div>
+
+                <!-- Hero Image / Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl aspect-[4/3] sm:aspect-square group">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Fitnation Gym Interior Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-700 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+                                    <i data-lucide="flame" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-sm">Elite Equipment</h4>
+                                    <p class="text-xs text-textMuted">Advanced Machines & Free Weights</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-primary text-white text-xs font-bold">Open Daily</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-zinc-950 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="flex items-center gap-1 text-secondary mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-secondary"></i>
+                        <span class="font-syne font-extrabold text-2xl text-white">4.5</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-textMuted">Google Rating Score</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <span class="font-syne font-extrabold text-2xl text-primary mb-1">212+</span>
+                    <span class="text-xs sm:text-sm text-textMuted">Verified Google Reviews</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <span class="font-syne font-extrabold text-2xl text-white mb-1">Kadamkuan</span>
+                    <span class="text-xs sm:text-sm text-textMuted">Prime Patna Location</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <span class="font-syne font-extrabold text-2xl text-secondary mb-1">100%</span>
+                    <span class="text-xs sm:text-sm text-textMuted">Certified Expert Trainers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs / Offerings Grid -->
+    <section id="programs" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm">WORLD-CLASS WORKOUTS</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-2 mb-4">OUR SPECIALIZED FITNESS PROGRAMS</h2>
+                <p class="text-textMuted text-base">Designed for all fitness levels—whether you want to build muscle, lose fat, or boost athletic endurance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1: Weight Training -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Weight Training</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">Build raw strength and muscle hypertrophy with our extensive range of dumbbells, barbells, and plate-loaded resistance machines.</p>
+                    </div>
+                    <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20know%20more%20about%20Weight%20Training%20at%20Fitnation%20Gym." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Cardio Fitness -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Cardio Fitness</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">Enhance cardiovascular endurance and burn stubborn fat using state-of-the-art treadmills, stationary bikes, and elliptical trainers.</p>
+                    </div>
+                    <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20know%20more%20about%20Cardio%20Fitness%20at%20Fitnation%20Gym." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3: Personal Training -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Personal Training</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">Achieve rapid results with 1-on-1 expert coaching, customized workout schedules, and personalized dietary guidance.</p>
+                    </div>
+                    <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20know%20more%20about%20Personal%20Training%20at%20Fitnation%20Gym." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4: Strength Conditioning -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="shield" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Strength Conditioning</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">Functional training protocols designed to improve agility, core stability, stamina, and overall physical performance.</p>
+                    </div>
+                    <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20know%20more%20about%20Strength%20Conditioning%20at%20Fitnation%20Gym." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 sm:py-28 bg-zinc-950 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm">THE FITNATION ADVANTAGE</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-2 mb-4">WHY GYM GOERS IN PATNA CHOOSE US</h2>
+                <p class="text-textMuted text-base">We provide a premium, motivating fitness environment with everything you need to reach your peak potential.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Prime Kadamkuan Location</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Conveniently situated on the 3rd Floor of Ambition Ojha Plaza (Above Domino's Pizza, opposite Sabzi Mandi) in Kadamkuan.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Certified Expert Trainers</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Train under professional instructors who guide you with proper posture, safe techniques, and customized routines.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Modern Equipment</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Well-maintained, high-grade gym machinery and free weights imported for maximum workout efficiency and safety.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">High-Energy Community</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">An inspiring, friendly, and non-judgmental community of fitness enthusiasts pushing each other to succeed.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym weights" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Workout training" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2">THE FITNATION STORY</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">YOUR ULTIMATE FITNESS DESTINATION IN KADAMKUAN, PATNA</h2>
+                    
+                    <p class="text-textMuted text-base leading-relaxed mb-6">
+                        Located strategically on the 3rd floor of Ambition Ojha Plaza (right above Domino's Pizza and opposite Sabzi Mandi), <strong class="text-white">Fitnation Gym</strong> has become a landmark health club for fitness enthusiasts across Patna.
+                    </p>
+
+                    <p class="text-textMuted text-base leading-relaxed mb-8">
+                        Whether your goal is rapid fat loss, bodybuilding, strength enhancement, or overall health maintenance, our gym offers an energizing atmosphere with top-tier equipment and personalized guidance to ensure you reach your milestones faster.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full mb-8">
+                        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                            <span class="block font-syne font-extrabold text-3xl text-primary mb-1">212+</span>
+                            <span class="text-xs text-textMuted">Satisfied Reviews</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                            <span class="block font-syne font-extrabold text-3xl text-secondary mb-1">4.5★</span>
+                            <span class="text-xs text-textMuted">Google Rating</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20visit%20Fitnation%20Gym%20for%20a%20tour." target="_blank" rel="noopener noreferrer" class="h-14 px-8 rounded-xl bg-primary hover:bg-[#FF4D79] text-white font-bold text-base flex items-center gap-3 shadow-xl shadow-primary/30 transition-all">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span>Visit Us Today</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 sm:py-28 bg-zinc-950 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm">GYM INTERIOR & EQUIPMENT</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-2 mb-4">EXPLORE OUR TRAINING FLOOR</h2>
+                <p class="text-textMuted text-base">Take a virtual glance inside Fitnation Gym, Kadamkuan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group relative">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym floor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Weight Training Arena</span>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group relative">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Cardio zone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Cardio & Endurance Zone</span>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group relative">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Dumbbells rack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Professional Dumbbells & Barbells</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm">VERIFIED MEMBER REVIEWS</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-2 mb-4">WHAT OUR MEMBERS SAY</h2>
+                <div class="flex items-center justify-center gap-2 mt-3">
+                    <div class="flex text-secondary">
+                        <i data-lucide="star" class="w-5 h-5 fill-secondary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-secondary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-secondary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-secondary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-secondary"></i>
+                    </div>
+                    <span class="text-white font-bold">4.5 / 5.0 (212+ Google Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-secondary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"One of the best gyms in Kadamkuan, Patna! Great equipment, very hygienic environment, and the trainers are extremely helpful. Highly recommended for anyone serious about fitness."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">R</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Rahul Kumar</h4>
+                            <span class="text-xs text-textMuted">Local Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-secondary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Amazing gym located right above Domino's Pizza in Ambition Ojha Plaza. Very spacious with modern machines for both cardio and weight training. Trainers push you to give your best!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 text-secondary font-bold flex items-center justify-center">A</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Amitabh Sinha</h4>
+                            <span class="text-xs text-textMuted">Local Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-secondary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Best workout vibe in Patna! The trainers give personal attention and the membership rates are very reasonable for the quality provided. 5 stars!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center">P</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Priya Sharma</h4>
+                            <span class="text-xs text-textMuted">Local Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 sm:py-28 bg-zinc-950 border-t border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm">GOT QUESTIONS?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-2 mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-textMuted text-base">Everything you need to know about joining Fitnation Gym, Patna.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Where is Fitnation Gym located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Fitnation Gym is conveniently located on the 3rd Floor of Ambition Ojha Plaza, right above Domino's Pizza and opposite Sabzi Mandi, Kadamkuan, Patna, Bihar 800003.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Do you offer a free trial pass for new members?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Yes! We offer a free trial pass so you can experience our equipment, trainers, and gym environment before committing to a membership. Click the WhatsApp button to claim yours instantly.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Are certified personal trainers available?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Absolutely. We have certified and experienced personal trainers available to provide 1-on-1 coaching, custom workout plans, and diet counselling tailored to your specific fitness goals.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        We are open daily from morning 6:00 AM to 10:00 PM, giving you the flexibility to work out around your busy schedule.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm">VISIT OR GET IN TOUCH</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-2 mb-4">LOCATION & CONTACT US</h2>
+                <p class="text-textMuted text-base">Drop by our Kadamkuan gym or send us a quick inquiry.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contact Details & Form -->
+                <div class="lg:col-span-6 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
+                    <h3 class="font-syne font-bold text-2xl text-white mb-6">Send Us An Inquiry</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Your Name</label>
+                            <input type="text" id="name" required placeholder="e.g. Rahul Verma" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white focus:border-primary focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="e.g. +91 98765 43210" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white focus:border-primary focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Interested Program</label>
+                            <select id="service" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white focus:border-primary focus:outline-none transition-colors">
+                                <option value="Weight Training">Weight Training</option>
+                                <option value="Cardio Fitness">Cardio Fitness</option>
+                                <option value="Personal Training">Personal Training</option>
+                                <option value="Strength Conditioning">Strength Conditioning</option>
+                                <option value="General Inquiry">General Inquiry / Trial Pass</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-textMuted mb-2">Message / Goal</label>
+                            <textarea id="message" rows="4" placeholder="Tell us about your fitness goals..." class="w-full p-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white focus:border-primary focus:outline-none transition-colors"></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full h-14 rounded-xl bg-primary hover:bg-[#FF4D79] text-white font-bold text-base flex items-center justify-center gap-2 shadow-xl shadow-primary/30 transition-all">
+                            <span id="btn-text">Submit Inquiry</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map & Address Info -->
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl space-y-6">
+                        <h3 class="font-syne font-bold text-xl text-white">Gym Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Address</h4>
+                                <p class="text-textMuted text-sm">3rd Floor Ambition ojha Plaza Above Domino's Pizza, opposite Sabzi Mandi, Kadamkuan, Patna, Bihar 800003</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Phone / WhatsApp</h4>
+                                <a href="tel:+919031002808" class="text-textMuted text-sm hover:text-primary transition-colors">+91 90310 02808</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Opening Hours</h4>
+                                <p class="text-textMuted text-sm">Monday – Sunday: 6:00 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-3xl overflow-hidden border border-zinc-800 h-64 sm:h-80 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778234678123!2d85.145!3d25.609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzMyLjQiTiA4NcKwMDgnNDguMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            class="w-full h-full">
+                        </iframe>
+                        <div class="absolute bottom-4 right-4">
+                            <a href="https://maps.google.com/?q=Fitnation+Gym+Kadamkuan+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-xs shadow-lg hover:bg-primary transition-colors flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Col 1 -->
+                <div class="flex flex-col items-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
+                            <i data-lucide="dumbbell" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-syne font-extrabold text-xl text-white">FITNATION</span>
+                    </div>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6">
+                        Patna's premier fitness gym and health club located in Kadamkuan. Rated 4.5★ with over 212+ happy reviews.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919031002808" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-textMuted hover:text-primary flex items-center justify-center transition-colors">
+                            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
+                        </a>
+                        <a href="tel:+919031002808" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-textMuted hover:text-primary flex items-center justify-center transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#programs" class="text-textMuted hover:text-primary transition-colors">Programs</a></li>
+                        <li><a href="#why-us" class="text-textMuted hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="text-textMuted hover:text-primary transition-colors">About Story</a></li>
+                        <li><a href="#gallery" class="text-textMuted hover:text-primary transition-colors">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="text-textMuted hover:text-primary transition-colors">Google Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Fitness Offerings</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#programs" class="text-textMuted hover:text-primary transition-colors">Weight Training</a></li>
+                        <li><a href="#programs" class="text-textMuted hover:text-primary transition-colors">Cardio Fitness</a></li>
+                        <li><a href="#programs" class="text-textMuted hover:text-primary transition-colors">Personal Training</a></li>
+                        <li><a href="#programs" class="text-textMuted hover:text-primary transition-colors">Strength Conditioning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Location & Hours</h4>
+                    <p class="text-textMuted text-sm mb-3">3rd Floor, Ambition Ojha Plaza, Above Domino's, Kadamkuan, Patna - 800003</p>
+                    <p class="text-textMuted text-sm">Open Daily: 6:00 AM – 10:00 PM</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-textMuted">
+                <p>&copy; <span id="current-year"></span> FITNATION GYM, Patna. All rights reserved.</p>
+                <p>Designed for High Performance & Conversion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="https://wa.me/919031002808?text=Hi,%20I%20want%20to%20inquire%20about%20Fitnation%20Gym%20membership!" target="_blank" rel="noopener noreferrer" class="flex-1 h-12 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-bold text-sm flex items-center justify-center gap-2">
+            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+919031002808" class="flex-1 h-12 rounded-xl bg-primary text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/30">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p class="text-textMuted text-sm mb-6">Thank you for reaching out to Fitnation Gym. Our team will call or WhatsApp you shortly to discuss your membership & free trial pass.</p>
+            <button id="close-modal" class="w-full h-12 rounded-xl bg-primary text-white font-bold text-base">Okay, Thanks!</button>
+        </div>
+    </div>
+
+    <!-- Script Execution & Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Current Year for Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion Logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                faqBtns.forEach(otherBtn => {
+                    otherBtn.nextElementSibling.classList.add('hidden');
+                    const otherIcon = otherBtn.querySelector('svg');
+                    if(otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if(!isOpen) {
+                    content.classList.remove('hidden');
+                    if(icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    if(icon) icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Contact Form Submission & Success Modal
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending Inquiry...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Inquiry';
+                contactForm.reset();
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+            }, 1000);
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
