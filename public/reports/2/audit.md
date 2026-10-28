@@ -10,11 +10,11 @@ WhatsApp & Follow-up Phone Call: Direct WhatsApp messaging followed by a quick c
 [WHATSAPP_START]
 Hi Team Cult Fraser Road,
 
-I noticed your fitness center has strong 4.6★ reviews in Fraser Road, but lacked a dedicated local landing page for new Patna member inquiries.
+I noticed your fitness center has strong 4.6★ reviews in Patna near Buddha Smriti Park, but lacked a dedicated local landing page for instant membership inquiries.
 
-Maine aapke center ke liye ek custom live website concept design kiya hai — jisme direct WhatsApp trial booking, batch timings, aur workout formats integrate kiye hain:
+Maine aapke center ke liye ek custom local website concept design kiya hai — jisme direct WhatsApp trial booking, batch timings, aur workout formats integrate kiye hain:
 
-🔗 https://cultfraser.arclanestudios.space
+🔗 https://www.cult.fit/
 
 Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 
@@ -22,7 +22,7 @@ Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 [WHATSAPP_END]
 
 [CALL_SCRIPT_START]
-"Hi Team Cult Fraser Road, Ameya here from Arclane Studios. Maine aapke fitness center ke liye ek custom live website concept banakar WhatsApp par share kiya tha. Bas ek minute check karna tha ki kya aapko link receive hua aur aapne demo glance kiya? We tailored it specifically with direct WhatsApp trial booking and mobile-first speed highlighting your Fraser Road location. Aapko overall look aur concept kaisa laga? Agar aapko concept aur design direction pasand aaye, to hum isme aapki exact center details aur trial schedule integrate karke live kar sakte hain. Jab bhi aap free hon batayein, we can connect on a quick 5-minute walkthrough."
+"Hi Team Cult Fraser Road, Ameya here. Maine aapke fitness center ke liye ek custom local website concept banakar WhatsApp par share kiya tha. Bas ek minute check karna tha ki kya aapko link receive hua aur aapne demo glance kiya? We tailored it specifically with direct WhatsApp trial booking and local schedule highlights for Fraser Road. Aapko overall look aur concept kaisa laga? Agar aapko design direction pasand aaye, to hum isme aapki exact center details aur membership setup integrate kar sakte hain. Jab bhi aap free hon batayein, we can connect on a quick 5-minute walkthrough."
 [CALL_SCRIPT_END]
 
 ---
@@ -31,166 +31,170 @@ Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 # 🌐 COMPLETE WEBSITE STRATEGY & ARCHITECTURE REPORT: Cult Fraser Road, Patna
 
 ## 1. BUSINESS ANALYSIS
-* **What the business offers:** Premium group workouts (boxing, yoga, dance fitness, strength training), state-of-the-art gym equipment, trainer-led fitness formats, and flexible fitness passes (Cultpass ELITE and PRO) located in Patna.
-* **Who its ideal customers are:** Urban fitness enthusiasts, working professionals, and health-conscious individuals in and around Fraser Road and Buddha Smriti Park, Patna, looking for high-energy group workouts and modern gym facilities.
-* **What the business makes different:** Backed by the robust Cult.fit ecosystem, premium equipment, highly energetic instructor-led group classes, prime accessible location beside Buddha Smriti Park, and tech-enabled fitness tracking.
-* **What customers appreciate most:** Energetic workout environment, clean and premium facilities, friendly and professional trainers, convenient location in Fraser Road, and structured workout formats.
-* **Problems the website should solve:** While Cult.fit has a massive national app, local franchise centers often lack hyper-local engagement touchpoints for walk-in inquiries, direct local WhatsApp trial bookings, and immediate neighborhood accessibility details.
-* **The primary conversion goal of the website:** Drive direct WhatsApp trial bookings and instant phone inquiries for local Patna residents.
+* **What the business offers:** Premium fitness center offering group workouts (dance fitness, yoga, boxing, S&C), Cultpass Elite/Pro access, weight loss bootcamps, transform programs, and sports play access (badminton, swimming).
+* **Who its ideal customers are:** Urban fitness enthusiasts, working professionals, and health-conscious individuals in Patna looking for high-energy, community-driven workouts and structured weight loss programs.
+* **What makes the business different:** Prime location at Abhay Bhawan near Buddha Smriti Park, tech-enabled fitness tracking, trainer-led group formats, and access to India's coolest fitness community.
+* **What customers appreciate most:** High energy levels, clean and well-equipped workout floors, professional trainers, and engaging group class formats.
+* **Problems the website should solve:** The parent brand (cult.fit) has a generic national website, but local center pages in Patna often lack hyper-local visibility, direct local contact accessibility, and localized trial booking friction reduction.
+* **The primary conversion goal of the website:** Free trial booking, WhatsApp membership inquiry, and direct local directions to the Fraser Road facility.
 
 ---
 
 ## 2. WEBSITE CONCEPT
-* **Overall Visual Direction:** Sleek modern dark mode with high-energy neon accents.
-* **Brand Personality:** Energetic, authoritative, high-performance, and community-driven.
-* **Website Mood:** Vibrant, motivating, dynamic, and premium.
-* **Market Positioning:** Premium fitness leader in Patna's Fraser Road area.
-* **Design Focus:** Conversion-focused mobile experience with frictionless trial booking triggers.
+* **Overall Visual Direction:** Sleek modern dark mode with vibrant energetic neon accents.
+* **Brand Personality:** Energetic, authoritative, premium, and community-focused.
+* **Website Mood:** High-octane, motivating, professional, and tech-forward.
+* **Market Positioning:** Premium yet accessible fitness destination in Patna.
+* **Design Focus:** Conversion-focused layout prioritizing mobile trial bookings and instant WhatsApp connectivity.
 
 ---
 
 ## 3. COLOR PALETTE
-* **Primary Color:** Deep Obsidian — `#09090B` (Usage: Brand identity, deep immersive background)
-* **Secondary Color:** Electric Red — `#EF4444` (Usage: Cult brand signature accents and callouts)
-* **Accent Color:** Neon Lime / Energy Green — `#22C55E` (Usage: High-visibility WhatsApp CTAs and success indicators)
-* **Background Color:** Rich Dark Charcoal — `#121214` (Usage: Main page background)
-* **Surface/Card Color:** Elevated Zinc Card — `#18181B` (Usage: Component cards, workout format containers)
+* **Primary Color:** Deep Obsidian — `#09090B` (Usage: Brand identity, background, primary sections)
+* **Secondary Color:** Electric Red — `#EF4444` (Usage: Brand accent, energy highlights)
+* **Accent Color:** Vibrant Coral — `#F87171` (Usage: High-visibility CTAs, key badges)
+* **Background Color:** Rich Dark — `#121214` (Usage: Main page background)
+* **Surface/Card Color:** Elevated Charcoal — `#18181B` (Usage: Component cards, pricing tiers)
 * **Main Text Color:** Crisp White — `#FAFAFA` (Usage: High-contrast body text)
 * **Muted Text Color:** Cool Gray — `#A1A1AA` (Usage: Subtitles, captions, metadata)
-* **Button Color:** High-Impact Red — `#DC2626` (Usage: Primary action buttons)
-* **Hover Color:** Bright Red Hover — `#B91C1C` (Usage: Interactive hover states)
+* **Button Color:** High-Contrast Red — `#DC2626` (Usage: Primary action buttons)
+* **Hover Color:** Bright Red Hover — `#B91C1C` (Usage: Interactive states)
 
-*These colors align precisely with the high-energy fitness aesthetic of Cult.fit while maintaining absolute WCAG AAA contrast compliance against dark surfaces.*
+*All color pairings exceed WCAG AA contrast standards for dark mode UI/UX.*
 
 ---
 
 ## 4. TYPOGRAPHY
-* **Heading Font:** Syne (Bold, geometric, premium high-impact modern feel)
-* **Body Font:** Inter (Crisp, highly legible clean sans-serif for mobile readability)
-* **Button Font Style:** Inter, 600 weight, uppercase tracking, clean modern finish.
-* **Suitable Font Weights:** Headings (700/800), Body (400/500), Accents (600)
+* **Heading Font:** Syne (Geometric, bold, modern display font)
+* **Body Font:** Inter (Clean, highly legible sans-serif)
+* **Button Font Style:** Inter, 600 weight, 0.05em letter spacing, uppercase
+* **Suitable Font Weights:** Headings (600/700/800), Body (400/500), Accents (500/600)
 * **Recommended Heading Sizes:** H1 (48px–64px / 36px mobile), H2 (32px–40px / 28px mobile), H3 (22px–26px)
 * **Recommended Paragraph Sizes:** Body (16px–18px / 1.6 line height), Small/Caption (13px–14px)
 
 ---
 
 ## 5. LOGO DIRECTION
-* **Logo Style:** Minimalist bold wordmark paired with the iconic Cult red geometric brand signature.
-* **Icon Concept:** Modern typographic emblem representing strength, energy, and community motion.
-* **Typography Style:** Clean geometric sans-serif logotype.
-* **Suitable Colors:** Cult Red (`#EF4444`) and Crisp White (`#FAFAFA`).
-* **Horizontal Logo Variation:** Header navigation layout with clean spacing.
-* **Square Favicon / App-Icon Variation:** Simplified 1:1 red-and-black icon for browser tabs and mobile home screen shortcuts.
+* **Logo Style:** Minimalist wordmark with bold geometric emblem ("cult.").
+* **Icon Concept:** Bold typographic brand mark signifying modern fitness culture.
+* **Typography Style:** Heavy sans-serif lowercase logotype.
+* **Suitable Colors:** Red and White on Dark Obsidian.
+* **Horizontal Logo Variation:** Clean header placement.
+* **Square Favicon / App-Icon Variation:** Red "c." monogram on black background.
 
 ---
 
 ## 6. WEBSITE STRUCTURE
-* **Home:** High-converting Patna center landing experience.
-* **Workouts & Passes:** Detailed breakdown of ELITE, PRO, and group classes available at Fraser Road.
-* **Facility Gallery:** High-resolution interior, equipment, and workout environment showcase.
-* **Reviews / Testimonials:** Filterable local Patna member feedback & Google review highlights.
-* **FAQ:** Resolving common questions regarding trials, batch timings, and passes.
-* **Contact & Location:** Interactive Buddha Smriti Park / Fraser Road map, operating hours, and direct WhatsApp booking.
+* **Home:** High-impact hyper-local landing page for Fraser Road, Patna.
+* **Workouts & Classes:** Detailed breakdown of ELITE, PRO, and Bootcamp formats.
+* **Schedule & Timings:** Batch timings for morning and evening sessions.
+* **Reviews & Success Stories:** Authentic local Google review highlights and transformation milestones.
+* **Location & Contact:** Interactive map linking to Buddha Smriti Park landmark, direct WhatsApp inquiry, and trial booking form.
 
 ---
 
 ## 7. HOMEPAGE STRUCTURE
-1. **Announcement Bar / Top Notification:** Free trial session alert for Patna residents + Direct helpline.
-2. **Header / Navigation:** Logo, anchor links (Workouts, Gallery, Reviews, Location), Book Trial CTA.
-3. **Hero Section:** High-impact value proposition, 4.6★ Google rating badge, primary trial booking & WhatsApp CTAs.
-4. **Trust & Social Proof Bar:** 302+ verified Google reviews, 4.6★ rating, prime Fraser Road location badge.
-5. **Core Workouts & Formats:** Grid layout showcasing Group Classes, Strength Training, Yoga, and Dance Fitness.
-6. **Why Cult Fraser Road:** 4 key differentiators (expert trainers, premium equipment, prime location, energetic community).
-7. **Facility Gallery:** High-res visual showcase of the 1st and 2nd floor Abhay Bhawan center.
-8. **Member Success Stories:** Authentic Google review highlights from Patna members.
-9. **FAQ Accordion:** Answers to trial bookings, batch pauses, and membership access.
-10. **Location & Directions:** Interactive map pointing to Abhay Bhawan, Fraser Rd, beside Buddha Smriti Park, Patna.
-11. **Final High-Conversion CTA:** Strong closing hook for free trial registration.
-12. **Footer:** Operating hours, address, legal, copyright, and developer credit.
+1. **Announcement Bar:** Free trial offer & direct emergency helpline for Fraser Road center.
+2. **Header / Navigation:** Logo, anchor links, "Book Free Trial" CTA button (100% solid opaque background).
+3. **Hero Section:** High-impact value proposition, 4.6★ rating badge, direct trial booking form.
+4. **Trust Indicators Bar:** 303+ Google reviews, prime Patna location, certified trainers.
+5. **Core Workouts Grid:** Group classes, ELITE gym access, and weight loss bootcamp cards.
+6. **Why Cult Fraser Road:** 4 key differentiators (expert trainers, state-of-the-art equipment, hygiene, community).
+7. **Schedule & Formats:** Interactive breakdown of dance fitness, yoga, boxing, and strength training.
+8. **Customer Testimonials:** Real member feedback from Patna.
+9. **Location & Directions:** Embedded map (Buddha Smriti Park landmark) and opening hours.
+10. **FAQ Accordion:** Answering top membership and trial questions.
+11. **Final Conversion CTA:** Strong closing banner with instant WhatsApp booking.
+12. **Footer:** Copyright, social links, local address NAP details.
 
 ---
 
 ## 8. WEBSITE COPY
-* **Hero Heading:** Patna’s Coolest Fitness Community at Fraser Road
-* **Hero Supporting Paragraph:** Experience trainer-led group workouts, world-class equipment, and high-energy sessions at Abhay Bhawan, Fraser Road. Join 300+ happy members achieving their fitness goals.
-* **Primary Call-to-Action:** Book Free Trial
+* **Hero Heading:** Patna’s Coolest Fitness Community Is Right Here on Fraser Road.
+* **Hero Supporting Paragraph:** Experience trainer-led group workouts, state-of-the-art equipment, and high-energy sessions designed to make fitness fun and sustainable.
+* **Primary Call-to-Action:** Book a Free Trial
 * **Secondary Call-to-Action:** Chat on WhatsApp
-* **About Section Copy:** Located in the heart of Patna near Buddha Smriti Park, Cult Fraser Road brings you high-energy group workouts, expert trainers, and a thriving fitness community designed to make every workout fun and effective.
+* **About Section Copy:** Located right beside Buddha Smriti Park, Cult Fraser Road brings world-class fitness infrastructure, expert coaching, and an electric community vibe to the heart of Patna.
 * **Service Descriptions:** 
-  - **Group Classes:** High-energy trainer-led sessions including Boxing, Yoga, and Dance Fitness.
-  - **Elite Gym Access:** Premium full-service gym floor equipped with state-of-the-art strength and cardio machines.
-  - **Expert Personal Training:** Customized 1:1 guidance tailored to your body goals and nutrition needs.
-* **Why Choose Us Section:** Prime centrally located facility, certified expert trainers, flexible membership passes, and an unbeatable energetic community vibe.
-* **Review Section Heading & Subheading:** Loved by Patna Fitness Enthusiasts — See what our community has to say about their workouts at Fraser Road.
-* **FAQ Section:** Quick answers regarding trial passes, batch timings, and center access.
-* **Final Call-to-Action:** Ready to #BeBetterEveryDay? Claim your free trial session at Cult Fraser Road today.
+  - *ELITE Group Classes:* High-energy trainer-led sessions including Dance Fitness, Yoga, and Boxing.
+  - *Strength & Conditioning:* Premium equipment and personal training for ultimate muscle toning.
+  - *Cult Bootcamp:* 6-week intensive weight loss program with dedicated nutritionist support.
+* **Why Choose Us Section:** 
+  - *Expert Coaches:* Certified trainers dedicated to injury prevention and form correction.
+  - *Prime Location:* Centrally located at Abhay Bhawan, Fraser Road with easy accessibility.
+  - *Vibrant Community:* Workout with like-minded fitness enthusiasts in small batches.
+* **Review Section Heading & Subheading:** Loved by Patna. Rated 4.6★ by over 300+ active members.
+* **FAQ Section:** 
+  - *Can I book a trial class before getting a membership?* Yes! You can book a complimentary trial session directly via WhatsApp or our booking form.
+  - *Where is the center located?* We are on the 1st and 2nd floor, Abhay Bhawan, Fraser Rd, beside Buddha Smriti Park, Patna.
+* **Final Call-to-Action:** Ready to Transform Your Fitness Journey? Claim your free trial session today and experience the energy.
 
 ---
 
 ## 9. IMAGE DIRECTION
-* **Hero Image Style:** High-energy dynamic group workout shot with professional studio lighting and energetic participants.
-* **Service Images:** Action shots of dumbbells, yoga sessions, and boxing bags inside a modern gym floor.
-* **Gallery Images:** Interior shots of the 1st and 2nd floor Abhay Bhawan facility, cardio zone, and stretching area.
-* **Lighting Style:** Cinematic dark gym lighting with vibrant red accent highlights.
-* **Stock-Image Search Keywords:** `"modern gym workout fitness center interior dumbbells"`, `"group fitness class high energy boxing yoga"`.
+* **Hero Image Style:** High-energy indoor gym workout with dramatic lighting and active participants.
+* **Service Images:** Action shots of yoga, boxing bag workouts, and strength training.
+* **Gallery Images:** Modern gym interior, dumbbell racks, group class studio, and reception lounge.
+* **Lighting Style:** Cinematic dark gym interior with vibrant red accent lighting.
+* **Suitable Stock-Image Search Keywords:** `"modern gym interior crossfit workout group fitness"`
 
 ---
 
 ## 10. ANIMATIONS AND INTERACTIONS
-* **Smooth Scrolling:** Seamless anchor navigation across all sections.
-* **Scroll-Triggered Reveals:** Subtle fade-up on workout cards and review grids.
-* **Hover Micro-Interactions:** 1.02x card scaling and red border glow on interactive elements.
-* **Sticky Navigation:** Solid opaque backdrop header on scroll down.
-* **Performance:** Optimized for lightning-fast mobile loading speeds under 1.5 seconds.
+* **Smooth Scrolling:** Instant anchor jump navigation.
+* **Scroll-Triggered Reveals:** Fade-up entrance for cards and section titles.
+* **Button & Card Hover Interactions:** Micro-scale zoom (1.02x) with red shadow glow.
+* **Sticky Navigation:** 100% solid opaque backdrop on scroll.
+* **Mobile Drawer:** Smooth slide-in menu with backdrop lock.
 
 ---
 
 ## 11. MOBILE EXPERIENCE
-* **Mobile Navigation:** Clean hamburger menu with 100% opaque drawer.
-* **Sticky Bottom Bar:** Fixed bottom bar with instant "Book Trial" and "WhatsApp" quick-action buttons.
-* **Click-to-Call Functionality:** Native `tel:` and `wa.me` links on all contact elements.
-* **Responsive Typography:** Fluid clamp scaling for flawless mobile readability.
-* **Touch-Friendly Targets:** Minimum 44px tap targets for effortless mobile conversion.
+* **Mobile Navigation:** Clean hamburger menu with solid opaque drawer.
+* **Sticky Bottom Bar:** Fixed action bar with "Call Now" and "WhatsApp" buttons.
+* **Click-to-Call Functionality:** Active `tel:` and `wa.me` integration.
+* **Responsive Typography:** Fluid clamp scaling for zero text clipping.
+* **Touch-Friendly Targets:** Minimum 44px hit areas on all buttons.
 
 ---
 
 ## 12. LOCAL SEO STRATEGY
-* **Primary Local Keywords:** `"Fitness center in Fraser Road Patna"`, `"Gym near Buddha Smriti Park Patna"`, `"Cult fit Fraser Road Patna"`.
-* **Page Title:** Cult Fraser Road, Patna | Best Fitness Center & Gym in Fraser Road
-* **Meta Description:** Join Cult Fraser Road, Patna. Experience premium group workouts, expert trainers & world-class equipment near Buddha Smriti Park. Book your free trial today!
-* **LocalBusiness Schema (JSON-LD):** Configured with exact NAP data for Abhay Bhawan, Fraser Rd, Patna, 4.6★ rating, and 302 reviews.
-* **Google Maps Embed:** Interactive responsive map iframe using the official venue coordinates.
+* **Primary Local Keywords:** `"Fitness center in Fraser Road Patna"`, `"Gym near Buddha Smriti Park"`, `"Cult fit Fraser Road Patna"`.
+* **Page Title:** Cult Fraser Road, Patna | Fitness Center & Gym in Fraser Road
+* **Meta Description:** Join Cult Fraser Road, Patna's premier fitness center. Enjoy group classes, elite gym equipment, and expert trainers near Buddha Smriti Park. Book a free trial!
+* **LocalBusiness Schema (JSON-LD):** Included with exact NAP, geo-coordinates, operating hours, and 4.6★ aggregate rating.
+* **Google Maps Embed:** Fully integrated interactive map pointing to Abhay Bhawan, Fraser Road.
 
 ---
 
 ## 13. CONVERSION FEATURES
-* **One-Click WhatsApp Trial Booking:** Pre-filled instant messaging link.
-* **Floating Mobile Action Bar:** Persistent call and WhatsApp triggers.
-* **Interactive Trial Form:** Frictionless name, phone, and time slot selection.
-* **Google Maps Directions Button:** One-tap navigation to Abhay Bhawan, Fraser Road.
-* **Direct Google Review Link:** Encouraging local members to share feedback.
+* **One-Click WhatsApp Enquiry:** Instant pre-filled chat link for trial bookings.
+* **Click-to-Call Floating Button:** Direct phone dialing for mobile visitors.
+* **Interactive Trial Booking Form:** Clean inquiry form with success confirmation.
+* **Google Maps Directions Button:** One-tap navigation trigger to Buddha Smriti Park.
 
 ---
 
 ## 14. FINAL ANTIGRAVITY PROMPT
+
 ```markdown
 You are an expert full-stack web developer and UI/UX designer. Build a complete, responsive, modern, production-grade website for the following business:
 
 **Business Name:** Cult Fraser Road, Patna | Fitness Center in Fraser Road, Patna
-**Category / Industry:** Fitness Center & Gym
+**Category / Industry:** Fitness Center / Gym
 **Location / Address:** 1st and 2nd floor, Abhay Bhawan, Fraser Rd, beside Buddha Smriti Park, Fraser Road Area, Patna, Bihar 800001
-**Google Maps URL:** https://www.google.com/maps/search/?api=1&query=Cult+Fraser+Road+Patna+Abhay+Bhawan
+**Google Maps URL:** https://www.google.com/maps/search/?api=1&query=Cult+Fraser+Road+Patna
 **Phone / WhatsApp:** +918296178975
-**Google Rating & Reviews:** 4.6 ★ (302 reviews)
-**Primary Conversion Goal:** Drive direct WhatsApp trial bookings and gym membership inquiries
+**Google Rating & Reviews:** 4.6 ★ (303 reviews)
+**Primary Conversion Goal:** Free Trial Booking & WhatsApp Membership Inquiry
 
 ### DESIGN SYSTEM & BRAND SPECIFICATIONS:
-- **Visual Style:** Sleek modern dark mode with high-energy Cult red accents and clean typography.
+- **Visual Style:** Sleek modern dark mode with high-energy vibrant red accents.
 - **Color Palette:**
   - Background: #09090B
   - Surface/Card: #18181B
-  - Primary Accent: #EF4444 (Cult Red)
-  - Secondary: #22C55E (WhatsApp Green)
+  - Primary Accent: #EF4444
+  - Secondary: #F87171
   - Text Primary: #FAFAFA
   - Text Muted: #A1A1AA
   - Button & Hover: #DC2626 / #B91C1C
@@ -198,28 +202,36 @@ You are an expert full-stack web developer and UI/UX designer. Build a complete,
 - **Icons:** Use Lucide React icons or FontAwesome CDN.
 
 ### REQUIRED PAGES & SECTIONS (SINGLE-PAGE OR MULTI-PAGE APP):
-1. **100% Solid Opaque Sticky Header & Announcement Bar:** Logo, Navigation links, Phone & WhatsApp CTAs, Free trial alert. Header MUST have a 100% solid opaque background (`bg-[#09090B]`) with `sticky top-0 z-50 border-b border-zinc-800`.
-2. **Hero Section:** H1 heading, value proposition subheadline, Trust rating badge (4.6★ from 302 Google Reviews), Primary CTA button ("Book Free Trial") and Secondary CTA ("Chat on WhatsApp").
-3. **Trust & Social Proof Bar:** Key stats (302+ Reviews, 4.6★ Rating, Prime Fraser Road Location, Certified Trainers).
-4. **Services / Workouts Grid:** Interactive cards showcasing Group Classes, Elite Gym Access, Personal Training, and Yoga with icons, descriptions, and trial booking triggers.
-5. **Why Choose Us Section:** 4 feature cards highlighting competitive differentiators.
-6. **About / Story Section:** Two-column layout with authentic business narrative centered around Patna's fitness culture.
-7. **Interactive Facility Gallery:** Responsive grid with high-res fitness imagery of the Fraser Road center.
-8. **Customer Reviews Section:** Testimonial cards featuring authentic Google reviews, star ratings, and Patna member names.
-9. **FAQ Accordion:** Interactive expandable FAQ resolving top customer questions regarding trials and passes.
-10. **Interactive Location & Contact Section:** Contact information, business hours table, interactive Google Maps embed using the exact Google Maps URL, and a working "Get Directions" button. Also include a working free trial inquiry form with validation and success state.
+1. **100% Solid Opaque Sticky Header & Announcement Bar:** Logo, Navigation links, Phone & WhatsApp CTAs, Free trial alert. Header MUST have a 100% solid opaque background (no transparency/sweep-through) with 'sticky top-0 z-50 border-b border-zinc-800 bg-[#09090B]'.
+2. **Hero Section:** H1 heading ("Patna’s Coolest Fitness Community Is Right Here on Fraser Road"), value proposition subheadline, Trust rating badge (4.6★ from 303+ Google Reviews), Primary CTA button ("Book Free Trial") and Secondary CTA ("Chat on WhatsApp").
+3. **Trust & Social Proof Bar:** Key stats (4.6★ rating, 303+ reviews, prime Fraser Road location, certified coaches).
+4. **Services / Offerings Grid:** Interactive cards showcasing ELITE Group Classes, Strength Training, and Cult Bootcamp with icons, concise descriptions, and inquiry buttons.
+5. **Why Choose Us Section:** 4 feature cards highlighting expert trainers, prime location, hygiene, and community vibe.
+6. **About / Story Section:** Two-column layout with authentic business narrative near Buddha Smriti Park.
+7. **Interactive Showcase / Gallery:** Responsive grid with workout and gym interior image placeholders.
+8. **Customer Reviews Section:** Testimonial cards featuring authentic Google reviews, star ratings, and reviewer names from Patna.
+9. **FAQ Accordion:** Interactive expandable FAQ resolving top customer questions about trials and memberships.
+10. **Interactive Location & Contact Section:** Contact information, business hours table, interactive Google Maps embed using the exact Google Maps URL (https://www.google.com/maps/search/?api=1&query=Cult+Fraser+Road+Patna), and a working trial booking form with validation and success state.
 11. **Sticky Mobile Action Bar:** Fixed at the bottom on mobile viewports with "Call" and "WhatsApp" quick-action buttons.
 12. **Footer:** Brand identity, quick links, opening hours, contact details, link to Google Maps, copyright notice.
 
 ### INTERACTION, MOBILE-FIRST & TECHNICAL REQUIREMENTS:
-- **Mobile-First Priority (Strict Responsive Typography):** 
-  - Hero H1 MUST use: `text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-syne text-white leading-[1.15] mb-6 break-words`.
+- **Mobile-First Priority (Strict Responsive Typography):** Over 80% of local customers browse on mobile (360px–428px). You MUST use wrap-safe fluid typography:
+  - Hero H1 MUST use: `text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-syne text-white leading-[1.15] mb-6 break-words`. NEVER use raw `text-4xl`, `text-5xl`, or `text-7xl` on mobile as it causes horizontal word clipping on long words.
   - Section H2 MUST use: `text-2xl sm:text-3xl md:text-4xl font-bold font-syne break-words`.
-- **Zero Horizontal Overflow:** Ensure `overflow-x-hidden` on html and body with fluid responsive containers (`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`).
-- **100% Solid Opaque Header:** Every website header and mobile menu drawer MUST have a 100% solid, fully opaque background (`bg-[#09090B]`) with zero transparency bleed.
-- **Flawless Mobile Drawer:** Mobile menu drawer must be solid, elevated (`fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 bg-[#09090B] border-l border-zinc-800 shadow-2xl`) positioned cleanly below the top announcement banner with backdrop overlay (`z-[90]`).
-- **Sticky Mobile Action Bar & Body Padding:** Fixed at the bottom on mobile screens (`md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800`) with high-contrast buttons. Add `pb-28 lg:pb-0` to body.
-- **Fully Interactive Components (Zero Bugs):** Working mobile hamburger menu, working FAQ accordion, working trial booking form with success modal, and responsive Google Maps embed.
+- **Zero Horizontal Overflow:** Ensure 'overflow-x-hidden' on html and body with fluid responsive containers ('w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8') so there are zero horizontal layout glitches or scrollbars.
+- **100% Solid Opaque Header (Zero Transparency Bleed):** Every website header and mobile menu drawer MUST have a 100% solid, fully opaque background ('bg-[#09090b]') so hero text and images NEVER sweep or bleed through the navigation bar when scrolling.
+- **Flawless Mobile Drawer:** Mobile menu drawer must be solid, elevated ('fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#09090b] border-l border-zinc-800 shadow-2xl') positioned cleanly below the top announcement banner with backdrop overlay ('z-[90]') and body scroll lock.
+- **Sticky Mobile Action Bar & Body Padding:** Fixed at the bottom on mobile screens ('md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800') with high-contrast, glowing 'Call Now' (tel:+918296178975) and 'WhatsApp' (wa.me/918296178975) buttons. Add 'pb-28 lg:pb-0' to body so footer, statistics, and trust badges are NEVER obscured by the sticky action bar.
+- **Agency-Grade Visual Polish:** Crisp solid elevated surfaces, radial gradient ambient lighting matching the primary red accent color, dark elevated card surfaces with subtle border highlights on hover.
+- **Fully Interactive Components (Zero Bugs):**
+  - Working mobile hamburger toggle menu with clean 100% opaque drawer ('top-11 sm:top-12' spacing, 'rounded-tl-2xl'), smooth slide-in, and backdrop dismiss.
+  - Interactive working FAQ accordion with animated chevron rotation.
+  - Testimonial cards with 5-star ratings and authentic review quotes.
+  - Working trial booking form with real-time validation, loading state, and success modal popup.
+  - Responsive Google Maps embed using the exact URL (https://www.google.com/maps/search/?api=1&query=Cult+Fraser+Road+Patna) and working 'Get Directions' button.
+  - Active, clickable phone ('tel:+918296178975'), WhatsApp ('wa.me/918296178975'), and maps links.
+- **Typography & Assets:** Load Google Fonts (Syne / Inter), Lucide Icons CDN, and high-resolution, relevant Unsplash imagery with gradient fallback backgrounds.
 
 Generate the complete, clean, working code for this website now.
 ```
