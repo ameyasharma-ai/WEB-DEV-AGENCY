@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Zone | Best Gym & Fitness Center in Anandpuri, Patna</title>
+    <meta name="description" content="Transform your body at Workout Zone, the premier fitness gym in Anandpuri, Patna. Expert trainers, modern equipment, strength training & cardio. Book a free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#CCFF00',
+                        'primary-hover': '#D4FF33',
+                        secondary: '#FF3333',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090B;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% OPAQUE STICKY HEADER -->
+    <div id="announcement-bar" class="bg-[#CCFF00] text-black text-xs sm:text-sm font-semibold py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
+        <span>🔥 Limited Time Offer: Get 1 Month Personal Training FREE on Annual Memberships! <a href="#contact" class="underline hover:text-zinc-900 ml-1 font-bold">Claim Now &rarr;</a></span>
+        <button onclick="document.getElementById('announcement-bar').style.display='none'" class="absolute right-4 hover:opacity-70 p-1" aria-label="Close Announcement">
+            <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+    </div>
+
+    <header class="sticky top-0 z-40 w-full bg-[#09090b] border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-[#CCFF00] flex items-center justify-center text-black font-syne font-extrabold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    WZ
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white">WORKOUT ZONE</span>
+                    <span class="text-[10px] text-zinc-400 tracking-widest uppercase -mt-1">Anandpuri, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#services" class="hover:text-[#CCFF00] transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-[#CCFF00] transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-[#CCFF00] transition-colors">About</a>
+                <a href="#gallery" class="hover:text-[#CCFF00] transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-[#CCFF00] transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-[#CCFF00] transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-[#CCFF00] transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop CTA Buttons -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="https://wa.me/917762880002?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Workout%20Zone%20Anandpuri" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 bg-zinc-900 text-white text-sm font-semibold hover:border-[#CCFF00] hover:text-[#CCFF00] transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-[#CCFF00]"></i>
+                    WhatsApp
+                </a>
+                <a href="tel:+917762880002" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#CCFF00] text-black text-sm font-bold hover:bg-[#D4FF33] shadow-lg shadow-[#CCFF00]/15 hover:shadow-[#CCFF00]/30 transition-all">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    +91 77628 80002
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer & Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-[#CCFF00] flex items-center justify-center text-black font-syne font-extrabold text-base">
+                        WZ
+                    </div>
+                    <span class="font-syne font-bold text-white text-base">Workout Zone</span>
+                </div>
+                <button id="close-btn" class="p-2 rounded-xl bg-zinc-900 text-zinc-400 hover:text-white" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 py-6 text-base font-medium text-zinc-300">
+                <a href="#services" class="mobile-link hover:text-[#CCFF00] flex items-center justify-between py-2 border-b border-zinc-900"><span>Services</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#why-us" class="mobile-link hover:text-[#CCFF00] flex items-center justify-between py-2 border-b border-zinc-900"><span>Why Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-link hover:text-[#CCFF00] flex items-center justify-between py-2 border-b border-zinc-900"><span>About Anandpuri</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#gallery" class="mobile-link hover:text-[#CCFF00] flex items-center justify-between py-2 border-b border-zinc-900"><span>Gallery</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-link hover:text-[#CCFF00] flex items-center justify-between py-2 border-b border-zinc-900"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#faq" class="mobile-link hover:text-[#CCFF00] flex items-center justify-between py-2 border-b border-zinc-900"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-link hover:text-[#CCFF00] flex items-center justify-between py-2"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/917762880002?text=Hi,%20I%20want%20to%20book%20a%20free%20trial" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold flex items-center justify-center gap-2 hover:border-[#CCFF00]">
+                <i data-lucide="message-circle" class="w-5 h-5 text-[#CCFF00]"></i>
+                Chat on WhatsApp
+            </a>
+            <a href="tel:+917762880002" class="w-full py-3 rounded-xl bg-[#CCFF00] text-black font-bold flex items-center justify-center gap-2 hover:bg-[#D4FF33]">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                Call Now (+91 77628 80002)
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 2. HERO SECTION -->
+        <section class="py-12 sm:py-20 lg:py-28 relative">
+            <!-- Radial Glow Background -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-[#CCFF00]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-white">3.8 ★ Google Rating</span>
+                        <span class="text-zinc-500">•</span>
+                        <span class="text-xs text-zinc-400">308+ Reviews</span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        BUILD YOUR <span class="text-[#CCFF00] underline decoration-[#CCFF00]/40">ULTIMATE PHYSIQUE</span> IN ANANDPURI
+                    </h1>
+
+                    <!-- Value Proposition -->
+                    <p class="text-base sm:text-lg text-zinc-400 mb-8 leading-relaxed max-w-2xl break-words">
+                        Welcome to <strong class="text-white">Workout Zone</strong> – Patna's premier destination for serious strength training, advanced cardio, and personalized fitness coaching. Located right opposite SBI Bank on West Boring Canal Road.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#contact" class="px-8 py-4 rounded-xl bg-[#CCFF00] text-black font-syne font-bold text-center hover:bg-[#D4FF33] shadow-xl shadow-[#CCFF00]/20 hover:scale-[1.02] transition-all">
+                            Book Free Trial
+                        </a>
+                        <a href="https://wa.me/917762880002?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20membership%20plans%20at%20Workout%20Zone." target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-syne font-bold text-center hover:border-[#CCFF00] hover:text-[#CCFF00] flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-[#CCFF00]"></i>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-zinc-800/80 w-full">
+                        <div>
+                            <p class="font-syne font-bold text-2xl sm:text-3xl text-white">308+</p>
+                            <p class="text-xs sm:text-sm text-zinc-400 mt-1">Google Reviews</p>
+                        </div>
+                        <div>
+                            <p class="font-syne font-bold text-2xl sm:text-3xl text-[#CCFF00]">100%</p>
+                            <p class="text-xs sm:text-sm text-zinc-400 mt-1">Pro Equipment</p>
+                        </div>
+                        <div>
+                            <p class="font-syne font-bold text-2xl sm:text-3xl text-white">5 AM</p>
+                            <p class="text-xs sm:text-sm text-zinc-400 mt-1">Early Open Daily</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-zinc-800 shadow-2xl aspect-[4/3] sm:aspect-square bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Workout Zone Gym Floor Patna" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md p-4 rounded-xl border border-zinc-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00]">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-white">West Boring Canal Road</p>
+                                    <p class="text-[11px] text-zinc-400">Opp. SBI Bank, Anandpuri, Patna</p>
+                                </div>
+                            </div>
+                            <a href="#contact" class="text-xs font-bold text-[#CCFF00] hover:underline">Locate &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TRUST & SOCIAL PROOF BAR -->
+        <section class="py-8 my-8 rounded-2xl bg-zinc-900 border border-zinc-800 px-6 sm:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-[#CCFF00] flex items-center justify-center text-black font-bold">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-syne font-bold text-white text-base">Top Rated in Anandpuri</h4>
+                        <p class="text-xs text-zinc-400">308+ verified local reviews</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4 md:border-x md:border-zinc-800">
+                    <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-[#CCFF00]">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-syne font-bold text-white text-base">Expert Personal Trainers</h4>
+                        <p class="text-xs text-zinc-400">Customized transformation plans</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-end gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-[#CCFF00]">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-syne font-bold text-white text-base">Open 5:00 AM – 10:00 PM</h4>
+                        <p class="text-xs text-zinc-400">Flexible schedule for busy pros</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SERVICES / OFFERINGS GRID -->
+        <section id="services" class="py-16 sm:py-24">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CCFF00] bg-[#CCFF00]/10 px-3 py-1 rounded-full">Our Core Programs</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">TRAIN WITH PURPOSE, RESULTS GUARANTEED</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Whether your goal is muscle gain, rapid fat loss, or athletic conditioning, Workout Zone has the right program for you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#CCFF00]/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00] mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Strength Training</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Heavy-duty power racks, Olympic barbells, plate-loaded machines, and dumbbells up to 50kg.</p>
+                    </div>
+                    <a href="https://wa.me/917762880002?text=Hi,%20I%20am%20interested%20in%20Strength%20Training%20at%20Workout%20Zone." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-bold text-[#CCFF00] hover:underline pt-4 border-t border-zinc-800">
+                        Book Session <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#CCFF00]/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00] mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Cardio & Fat Loss</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Advanced treadmills, cross trainers, exercise bikes, and high-intensity interval training zones.</p>
+                    </div>
+                    <a href="https://wa.me/917762880002?text=Hi,%20I%20am%20interested%20in%20Cardio%20%26%20Fat%20Loss%20programs." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-bold text-[#CCFF00] hover:underline pt-4 border-t border-zinc-800">
+                        Book Session <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#CCFF00]/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00] mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Personal Coaching</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">1-on-1 expert trainer supervision, customized diet charts, and weekly progress tracking.</p>
+                    </div>
+                    <a href="https://wa.me/917762880002?text=Hi,%20I%20want%20to%20know%20more%20about%20Personal%20Coaching." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-bold text-[#CCFF00] hover:underline pt-4 border-t border-zinc-800">
+                        Book Session <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#CCFF00]/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00] mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Functional Fitness</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Battle ropes, kettlebells, medicine balls, agility ladders, and core stability equipment.</p>
+                    </div>
+                    <a href="https://wa.me/917762880002?text=Hi,%20I%20am%20interested%20in%20Functional%20Fitness%20classes." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-bold text-[#CCFF00] hover:underline pt-4 border-t border-zinc-800">
+                        Book Session <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. WHY CHOOSE US SECTION -->
+        <section id="why-us" class="py-16 sm:py-24 border-t border-zinc-800/80">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CCFF00] bg-[#CCFF00]/10 px-3 py-1 rounded-full">The Workout Zone Edge</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-6">WHY PATNA FITNESS ENTHUSIASTS CHOOSE US</h2>
+                    <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-8">
+                        We aren't just another commercial gym. We are a community of dedicated fitness lovers backed by world-class machinery, hygienic floors, and professional trainers who genuinely care about your transformation.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] shrink-0">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Hygienic & Sanitized</h4>
+                                <p class="text-xs text-zinc-400">Regular equipment sanitization and clean locker facilities.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] shrink-0">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">High-Energy Vibe</h4>
+                                <p class="text-xs text-zinc-400">Powerful sound system and motivating workout ambiance.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Prime Anandpuri Location</h4>
+                                <p class="text-xs text-zinc-400">Opposite SBI Bank on West Boring Canal Road with easy parking.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] shrink-0">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Affordable Pricing</h4>
+                                <p class="text-xs text-zinc-400">Flexible monthly, quarterly & annual packages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym weights" class="rounded-2xl object-cover w-full aspect-[4/5] border border-zinc-800">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?alt=format&fit=crop&w=600&q=80" alt="Workout session" class="rounded-2xl object-cover w-full aspect-[4/5] border border-zinc-800">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ABOUT / STORY SECTION -->
+        <section id="about" class="py-16 sm:py-24 border-t border-zinc-800/80">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-[#CCFF00]/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <div class="lg:col-span-7">
+                        <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CCFF00] bg-[#CCFF00]/10 px-3 py-1 rounded-full">Our Story</span>
+                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-6">BUILT FOR PATNA'S DEDICATED FITNESS COMMUNITY</h2>
+                        <p class="text-sm sm:text-base text-zinc-300 leading-relaxed mb-4">
+                            Located centrally at West Boring Canal Rd, right opposite SBI Bank in Anandpuri, Patna, <strong class="text-white">Workout Zone</strong> was founded with a singular mission: to provide world-class fitness infrastructure without compromise.
+                        </p>
+                        <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-8">
+                            Over the years, we have helped hundreds of members achieve remarkable transformations. Whether you're stepping into a gym for the first time or you're an experienced lifter pushing your limits, our welcoming environment and expert trainers ensure you reach your pinnacle.
+                        </p>
+                        <div class="flex items-center gap-6">
+                            <div>
+                                <p class="font-syne font-extrabold text-2xl text-[#CCFF00]">308+</p>
+                                <p class="text-xs text-zinc-400">Happy Members</p>
+                            </div>
+                            <div class="w-px h-10 bg-zinc-800"></div>
+                            <div>
+                                <p class="font-syne font-extrabold text-2xl text-white">Anandpuri</p>
+                                <p class="text-xs text-zinc-400">Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-2xl overflow-hidden border border-zinc-800 aspect-video lg:aspect-square bg-zinc-950">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Workout Zone Interior" class="object-cover w-full h-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. INTERACTIVE SHOWCASE / GALLERY -->
+        <section id="gallery" class="py-16 sm:py-24 border-t border-zinc-800/80">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CCFF00] bg-[#CCFF00]/10 px-3 py-1 rounded-full">Gym Tour</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">EXPLORE OUR FACILITY</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Take a virtual glance at our fully-equipped workout floor in Anandpuri.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative rounded-2xl overflow-hidden aspect-video border border-zinc-800 group bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80" alt="Free Weights Area" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="font-syne font-bold text-white text-base">Heavy Dumbbell & Barbell Section</p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden aspect-video border border-zinc-800 group bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=600&q=80" alt="Cardio Zone" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="font-syne font-bold text-white text-base">Advanced Cardio & Treadmills</p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden aspect-video border border-zinc-800 group bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=600&q=80" alt="Machine Training" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="font-syne font-bold text-white text-base">Pin & Plate Loaded Machines</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CUSTOMER REVIEWS SECTION -->
+        <section id="reviews" class="py-16 sm:py-24 border-t border-zinc-800/80">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CCFF00] bg-[#CCFF00]/10 px-3 py-1 rounded-full">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">WHAT OUR MEMBERS SAY</h2>
+                <div class="flex items-center justify-center gap-2 mt-2">
+                    <div class="flex text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <span class="text-white font-bold text-sm">3.8 ★ rating across 308+ Google reviews</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-6">"Best gym in Anandpuri area! The equipment is well maintained and the trainers are very cooperative. Great atmosphere for serious bodybuilding."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] font-bold flex items-center justify-center text-sm">AK</div>
+                        <div>
+                            <p class="font-syne font-bold text-white text-sm">Abhishek Kumar</p>
+                            <p class="text-xs text-zinc-500">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-6">"Very convenient location right opposite SBI Bank on West Boring Canal Road. Trainers push you hard to get results. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] font-bold flex items-center justify-center text-sm">RS</div>
+                        <div>
+                            <p class="font-syne font-bold text-white text-sm">Rahul Sharma</p>
+                            <p class="text-xs text-zinc-500">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-6">"Spacious workout floors, great ventilation, and friendly crowd. Pricing is very reasonable for the quality provided."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] font-bold flex items-center justify-center text-sm">PS</div>
+                        <div>
+                            <p class="font-syne font-bold text-white text-sm">Priya Singh</p>
+                            <p class="text-xs text-zinc-500">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ ACCORDION -->
+        <section id="faq" class="py-16 sm:py-24 border-t border-zinc-800/80">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CCFF00] bg-[#CCFF00]/10 px-3 py-1 rounded-full">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Everything you need to know about joining Workout Zone in Anandpuri.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Workout Zone is open daily from 5:00 AM to 10:00 PM, giving you maximum flexibility to work out before work, during the day, or late evening.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Do you offer a free trial session?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Yes! We offer a complimentary trial workout so you can experience our equipment, vibe, and training environment before committing. Click "Book Free Trial" or message us on WhatsApp to schedule.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Where exactly is Workout Zone located in Anandpuri?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        We are conveniently located at West Boring Canal Rd, directly opposite SBI Bank in Anandpuri, Patna, Bihar 800001. Easy landmark access and parking available!
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Are personal trainers available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Absolutely. Our certified personal trainers provide expert guidance, posture correction, and customized workout routines tailored specifically to your fitness level.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+        <section id="contact" class="py-16 sm:py-24 border-t border-zinc-800/80">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left: Contact Info & Hours -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CCFF00] bg-[#CCFF00]/10 px-3 py-1 rounded-full">Get In Touch</span>
+                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-6">VISIT WORKOUT ZONE TODAY</h2>
+                        <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-8">
+                            Drop by our gym in Anandpuri or reach out instantly via phone or WhatsApp. Let's start your fitness journey.
+                        </p>
+
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-base mb-1">Address</h4>
+                                    <p class="text-xs sm:text-sm text-zinc-400">West Boring Canal Rd, opp. SBI Bank, Anandpuri, Patna, Bihar 800001</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] shrink-0">
+                                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-base mb-1">Phone / WhatsApp</h4>
+                                    <a href="tel:+917762880002" class="text-xs sm:text-sm text-[#CCFF00] hover:underline font-semibold">+91 77628 80002</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] shrink-0">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-base mb-1">Operating Hours</h4>
+                                    <p class="text-xs sm:text-sm text-zinc-400">Monday – Sunday: 5:00 AM – 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Workout+Zone+West+Boring+Canal+Rd+Anandpuri+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-syne font-bold text-center hover:border-[#CCFF00] hover:text-[#CCFF00] flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="navigation" class="w-5 h-5 text-[#CCFF00]"></i>
+                        Get Directions on Google Maps
+                    </a>
+                </div>
+
+                <!-- Right: Contact Form & Map -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Working Contact Form -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8">
+                        <h3 class="font-syne font-bold text-xl text-white mb-2">Book Your Free Trial / Inquiry</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 mb-6">Fill out the form below and our team will get back to you instantly.</p>
+
+                        <form id="inquiry-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Your Name *</label>
+                                    <input type="text" id="form-name" required placeholder="Abhishek Kumar" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-[#CCFF00]">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Phone Number *</label>
+                                    <input type="tel" id="form-phone" required placeholder="+91 98765 43210" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-[#CCFF00]">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Select Service Interest</label>
+                                <select id="form-service" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#CCFF00]">
+                                    <option value="Free Trial">Book Free Trial</option>
+                                    <option value="Strength Training">Strength Training</option>
+                                    <option value="Cardio & Fat Loss">Cardio & Fat Loss</option>
+                                    <option value="Personal Coaching">Personal Coaching</option>
+                                    <option value="Annual Membership">Annual Membership Offer</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Message / Preferred Timing</label>
+                                <textarea id="form-message" rows="3" placeholder="I want to join morning batch..." class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-[#CCFF00]"></textarea>
+                            </div>
+                            <button type="submit" id="form-submit-btn" class="w-full py-4 rounded-xl bg-[#CCFF00] text-black font-syne font-bold hover:bg-[#D4FF33] transition-all flex items-center justify-center gap-2">
+                                <span>Submit Inquiry</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-3xl overflow-hidden border border-zinc-800 h-64 sm:h-80 bg-zinc-900">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.777085732152!2d85.1205!3d25.6125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ5LjAiTiA4NcKwMDcnMTMuOCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Workout Zone Anandpuri Patna Location Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 11. STICKY MOBILE ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+917762880002" class="flex-1 py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-syne font-bold text-xs sm:text-sm flex items-center justify-center gap-2">
+            <i data-lucide="phone-call" class="w-4 h-4 text-[#CCFF00]"></i>
+            Call Now
+        </a>
+        <a href="https://wa.me/917762880002?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Workout%20Zone" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-[#CCFF00] text-black font-syne font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#CCFF00]/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            WhatsApp
+        </a>
+    </div>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 mt-20 pt-16 pb-20 md:pb-16 text-zinc-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <!-- Brand Column -->
+            <div class="md:col-span-1">
+                <a href="#" class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-[#CCFF00] flex items-center justify-center text-black font-syne font-extrabold text-base">
+                        WZ
+                    </div>
+                    <span class="font-syne font-extrabold text-lg text-white">WORKOUT ZONE</span>
+                </a>
+                <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                    Patna's elite fitness destination for strength, conditioning, and personal transformation in Anandpuri.
+                </p>
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/917762880002" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] hover:bg-zinc-800 transition-colors" aria-label="WhatsApp">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                    <a href="tel:+917762880002" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] hover:bg-zinc-800 transition-colors" aria-label="Phone">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Workout+Zone+West+Boring+Canal+Rd+Anandpuri+Patna" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#CCFF00] hover:bg-zinc-800 transition-colors" aria-label="Google Maps">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#services" class="hover:text-[#CCFF00] transition-colors">Programs & Services</a></li>
+                    <li><a href="#why-us" class="hover:text-[#CCFF00] transition-colors">Why Choose Us</a></li>
+                    <li><a href="#about" class="hover:text-[#CCFF00] transition-colors">About Anandpuri Gym</a></li>
+                    <li><a href="#gallery" class="hover:text-[#CCFF00] transition-colors">Gym Gallery</a></li>
+                    <li><a href="#reviews" class="hover:text-[#CCFF00] transition-colors">Google Reviews</a></li>
+                </ul>
+            </div>
+
+            <!-- Operating Hours -->
+            <div>
+                <h4 class="font-syne font-bold text-white text-base mb-4">Opening Hours</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li class="flex justify-between"><span>Monday:</span> <span class="text-white font-semibold">5:00 AM – 10:00 PM</span></li>
+                    <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white font-semibold">5:00 AM – 10:00 PM</span></li>
+                    <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white font-semibold">5:00 AM – 10:00 PM</span></li>
+                    <li class="flex justify-between"><span>Thursday:</span> <span class="text-white font-semibold">5:00 AM – 10:00 PM</span></li>
+                    <li class="flex justify-between"><span>Friday:</span> <span class="text-white font-semibold">5:00 AM – 10:00 PM</span></li>
+                    <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-semibold">5:00 AM – 10:00 PM</span></li>
+                    <li class="flex justify-between"><span>Sunday:</span> <span class="text-white font-semibold">5:00 AM – 10:00 PM</span></li>
+                </ul>
+            </div>
+
+            <!-- Location & Contact -->
+            <div>
+                <h4 class="font-syne font-bold text-white text-base mb-4">Contact Info</h4>
+                <p class="text-xs text-zinc-400 mb-3">West Boring Canal Rd, opp. SBI Bank, Anandpuri, Patna, Bihar 800001</p>
+                <p class="text-xs text-zinc-400 mb-3">Phone: <a href="tel:+917762880002" class="text-[#CCFF00] font-semibold">+91 77628 80002</a></p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Workout+Zone+West+Boring+Canal+Rd+Anandpuri+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#CCFF00] hover:underline">
+                    View on Google Maps &rarr;
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; <span id="current-year"></span> Workout Zone, Anandpuri, Patna. All rights reserved.</p>
+            <p>Designed for High Performance Fitness.</p>
+        </div>
+    </footer>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center relative">
+            <div class="w-16 h-16 rounded-full bg-[#CCFF00]/10 text-[#CCFF00] flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p id="success-modal-msg" class="text-sm text-zinc-400 mb-6">Thank you for reaching out to Workout Zone. We have received your request and will contact you via phone/WhatsApp shortly.</p>
+            <button id="close-modal-btn" class="w-full py-3.5 rounded-xl bg-[#CCFF00] text-black font-syne font-bold hover:bg-[#D4FF33]">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        closeBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                faqToggles.forEach(t => {
+                    t.nextElementSibling.classList.add('hidden');
+                    t.querySelector('i').style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Form Submission & Success Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const service = document.getElementById('form-service').value;
+
+            // Basic sanitization check
+            if(!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            inquiryForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if(e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
