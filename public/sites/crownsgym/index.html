@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown's Gym | Patna's Premier Fitness & Bodybuilding Hub</title>
+    <meta name="description" content="Transform your body at Crown's Gym, Rajbansi Nagar, Patna. Featuring expert trainers, modern equipment, strength training, and fat loss programs. Claim your free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#F59E0B',
+                        secondary: '#D97706',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and safety */
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom smooth transition for drawer */
+        .drawer-transform {
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .drawer-transform.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] font-inter antialiased pb-28 lg:pb-0 overflow-x-hidden">
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% SOLID OPAQUE STICKY HEADER -->
+    <div id="top-bar" class="w-full bg-[#18181B] border-b border-zinc-800 text-xs sm:text-sm py-2 px-4 text-center text-zinc-300 font-medium z-50">
+        🔥 <span class="text-primary font-bold">Limited Time Offer:</span> Claim your Free Trial Session on WhatsApp Now! | Open Today: 5:00 AM - 10:00 PM
+    </div>
+
+    <header class="sticky top-0 z-40 w-full bg-[#09090b] border-b border-zinc-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="dumbbell" class="w-6 h-6 text-black stroke-[2.5]"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne tracking-wider text-white">CROWN'S <span class="text-primary">GYM</span></span>
+                    <span class="text-[10px] tracking-widest text-zinc-400 uppercase -mt-1">Rajbansi Nagar, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#services" class="hover:text-primary transition-colors">Programs</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#timings" class="hover:text-primary transition-colors">Batch Timings</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919304382080" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-white hover:border-zinc-700 text-sm font-semibold transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-secondary text-black font-bold text-sm shadow-lg shadow-primary/20 transition-all hover:scale-105">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                    <span>Free Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE BACKDROP & DRAWER (Z-Index Hierarchy Managed) -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 flex flex-col justify-between drawer-transform shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <i data-lucide="dumbbell" class="w-5 h-5 text-black"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Crown's Gym</span>
+                </div>
+                <button id="close-drawer" aria-label="Close Navigation Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-zinc-300">
+                <a href="#services" class="mobile-nav-link hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Programs</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#why-us" class="mobile-nav-link hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Why Choose Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#timings" class="mobile-nav-link hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Batch Timings</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-nav-link hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Google Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#faq" class="mobile-nav-link hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-nav-link hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20want%20to%20claim%20my%20free%20trial!" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-primary hover:bg-secondary text-black font-bold text-center flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
+                <span>Claim Free Trial on WhatsApp</span>
+            </a>
+            <a href="tel:+919304382080" class="w-full py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold text-center flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <span>Call +91 93043 82080</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-[#09090B]">
+        <!-- Ambient Glow Background -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-inner">
+                        <div class="flex items-center gap-1 text-primary">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.6★ Rated from <span class="text-primary font-bold">347+ Google Reviews</span></span>
+                    </div>
+
+                    <!-- Hero H1 -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Transform Your Body at <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-200">Patna’s Trusted</span> Fitness Hub
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-zinc-300 leading-relaxed mb-8 max-w-2xl break-words">
+                        Welcome to <strong class="text-white">Crown's Gym</strong>, located in Rai Commercial Complex, Rajbansi Nagar, Patna. Featuring professional trainers, top-tier strength equipment, and result-driven fat loss programs designed for your success.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20would%20like%20to%20claim%20my%20Free%20Trial!" target="_blank" rel="noopener noreferrer" class="h-14 px-8 rounded-xl bg-primary hover:bg-secondary text-black font-extrabold text-base flex items-center justify-center gap-3 shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
+                            <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
+                            <span>Claim Free Trial on WhatsApp</span>
+                        </a>
+                        <a href="#timings" class="h-14 px-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-white font-semibold text-base flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="clock" class="w-5 h-5 text-primary"><span></span></i>
+                            <span>View Gym Timings</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Pill -->
+                    <div class="flex items-center gap-2 mt-8 text-xs sm:text-sm text-zinc-400">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                        <span>3rd Floor, Rai Commercial Complex, Shivpuri, Rajbansi Nagar, Patna</span>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Crown's Gym interior and weights equipment in Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge Inside Hero Card -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-white">State-of-the-Art Setup</p>
+                                    <p class="text-xs text-zinc-400">Shivpuri, Rajbansi Nagar</p>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-md bg-primary text-black font-bold text-xs uppercase">Open Now</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-[#18181B]/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                
+                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="flex items-center gap-1 text-primary mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                        <span class="font-syne font-extrabold text-2xl text-white">4.6</span>
+                        <span class="text-xs text-zinc-400">/5</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">347+ Google Reviews</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="flex items-center gap-2 text-primary mb-1">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                        <span class="font-syne font-extrabold text-2xl text-white">Expert</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Certified Personal Trainers</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="flex items-center gap-2 text-primary mb-1">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        <span class="font-syne font-extrabold text-2xl text-white">Modern</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Advanced Equipment Setup</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="flex items-center gap-2 text-primary mb-1">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span class="font-syne font-extrabold text-2xl text-white">Prime</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Rajbansi Nagar, Patna</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4. SERVICES / PROGRAMS GRID -->
+    <section id="services" class="py-20 md:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider mb-4 inline-block">Our Fitness Programs</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Engineered For Maximum Results
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Whether you want to build lean muscle, shred body fat, or increase stamina, Crown's Gym has the right program and trainers for you.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Program 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Strength Training</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                            Heavy duty racks, Olympic barbells, dumbells up to heavy weights, and specialized machines for hypertrophy and raw power.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20am%20interested%20in%20Strength%20Training%20programs." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-zinc-200 hover:text-primary font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Fat Loss & Cardio</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                            Advanced treadmills, ellipticals, and high-intensity interval training (HIIT) protocols designed to torch calories fast.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20am%20interested%20in%20Fat%20Loss%20%26%20Cardio%20programs." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-zinc-200 hover:text-primary font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Personal Training</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                            1-on-1 customized coaching, personalized diet guidance, and continuous posture correction for accelerated body transformation.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20am%20interested%20in%20Personal%20Training%20sessions." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-zinc-200 hover:text-primary font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">General Fitness</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                            Maintain peak physical health, boost daily energy levels, and stay fit with our balanced overall wellness routines.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20am%20interested%20in%20General%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-zinc-200 hover:text-primary font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-20 md:py-28 bg-[#18181B]/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5">
+                    <span class="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider mb-4 inline-block">The Crown's Advantage</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Why Fitness Enthusiasts in Patna Choose Us
+                    </h2>
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8">
+                        Located conveniently on the 3rd floor of Rai Commercial Complex in Rajbansi Nagar, we combine high-energy workout environments with hygiene, discipline, and expert guidance.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-zinc-200 font-medium">Spacious workout floor with top-grade ventilation</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-zinc-200 font-medium">Experienced and supportive trainers for beginners & pros</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-zinc-200 font-medium">Clean locker rooms, changing areas, and purified water</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">Modern Equipment</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400">
+                            Ergonomically designed weight machines and free weights imported to ensure safe and effective muscle targeting.
+                        </p>
+                    </div>
+
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">Expert Trainers</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400">
+                            Our trainers are passionate about fitness, keeping a close eye on your posture and pushing you safely toward your goals.
+                        </p>
+                    </div>
+
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">Safe & Clean Vibe</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400">
+                            Regular equipment sanitization and a friendly, respectful crowd makes working out comfortable for both men and women.
+                        </p>
+                    </div>
+
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">Proven Track Record</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400">
+                            Rated 4.6 stars across 347+ Google reviews from satisfied members achieving real body transformations in Patna.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 6. BATCH TIMINGS SECTION -->
+    <section id="timings" class="py-20 md:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider mb-4 inline-block">Schedule</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Morning & Evening Batch Timings
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Flexible hours to fit your busy lifestyle. Train before work or after college.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Morning Batch -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 relative overflow-hidden group hover:border-primary/50 transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                            <i data-lucide="sun" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold font-syne text-white">Morning Batches</h3>
+                            <p class="text-xs text-zinc-400">Start your day with high energy</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between items-center py-3 border-b border-zinc-800 text-sm">
+                            <span class="text-zinc-300 font-medium">Early Morning Shift</span>
+                            <span class="text-primary font-bold">5:00 AM – 9:00 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-zinc-800 text-sm">
+                            <span class="text-zinc-300 font-medium">Late Morning Shift</span>
+                            <span class="text-primary font-bold">9:00 AM – 12:00 PM</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20want%20to%20join%20the%20Morning%20Batch." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-primary hover:bg-secondary text-black font-bold text-center block text-sm transition-all shadow-lg shadow-primary/20">
+                        Book Morning Slot
+                    </a>
+                </div>
+
+                <!-- Evening Batch -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 relative overflow-hidden group hover:border-primary/50 transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                            <i data-lucide="moon" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold font-syne text-white">Evening Batches</h3>
+                            <p class="text-xs text-zinc-400">Unwind and crush your workout</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between items-center py-3 border-b border-zinc-800 text-sm">
+                            <span class="text-zinc-300 font-medium">Evening Shift 1</span>
+                            <span class="text-primary font-bold">4:00 PM – 7:00 PM</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-zinc-800 text-sm">
+                            <span class="text-zinc-300 font-medium">Evening Shift 2</span>
+                            <span class="text-primary font-bold">7:00 PM – 10:00 PM</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20want%20to%20join%20the%20Evening%20Batch." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-primary hover:bg-secondary text-black font-bold text-center block text-sm transition-all shadow-lg shadow-primary/20">
+                        Book Evening Slot
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 7. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 md:py-28 bg-[#18181B]/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider mb-4 inline-block">Google Reviews</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Loved By Patna's Fitness Community
+                </h2>
+                <div class="flex items-center justify-center gap-2 text-primary mt-2">
+                    <div class="flex items-center gap-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                    </div>
+                    <span class="text-white font-bold text-lg">4.6 / 5.0</span>
+                    <span class="text-zinc-400 text-sm">(347+ Verified Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-primary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6 leading-relaxed">
+                            "Crown's Gym is easily one of the best gyms in Rajbansi Nagar, Patna. The equipment is modern, the floor is spacious, and trainers are exceptionally helpful with form correction."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">A</div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Ankit Kumar</p>
+                            <p class="text-xs text-zinc-400">Local Guide • 148 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-primary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6 leading-relaxed">
+                            "Great ambiance for heavy lifting and cardio alike. Located on the 3rd floor of Rai Commercial Complex, it's very accessible. Highly recommended for anyone serious about fitness!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">P</div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Priya Sinha</p>
+                            <p class="text-xs text-zinc-400">Google Reviewer • 42 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-primary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6 leading-relaxed">
+                            "Best gym experience in Patna! Personal training here helped me lose 10 kgs in 3 months. Trainers motivate you every single day. Value for money."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">R</div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Rohit Verma</p>
+                            <p class="text-xs text-zinc-400">Local Guide • 96 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 8. FAQ ACCORDION -->
+    <section id="faq" class="py-20 md:py-28 bg-[#09090B]">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider mb-4 inline-block">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Everything you need to know before joining Crown's Gym in Patna.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Can I get a free trial session before joining?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Yes! We offer a free trial workout session so you can experience our equipment, meet our trainers, and check out the atmosphere. Simply tap the "Free Trial" button to book your slot instantly via WhatsApp.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Where is Crown's Gym located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Crown's Gym is conveniently located on the 3rd floor of Rai Commercial Complex, RKM Rd, Shivpuri, Rajbansi Nagar, Patna, Bihar 801103. Easily accessible from all major landmarks in Patna.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Are certified personal trainers available?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Absolutely. We have experienced and certified personal trainers who specialize in fat loss, muscle building, strength conditioning, and customized diet planning.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        We are open from 5:00 AM to 10:00 PM with dedicated morning and evening shifts to accommodate students, working professionals, and early birds alike.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 9. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 md:py-28 bg-[#18181B]/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contact Details & Form -->
+                <div class="lg:col-span-6">
+                    <span class="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider mb-4 inline-block">Get In Touch</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Visit Crown's Gym Today
+                    </h2>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1">Address</h3>
+                                <p class="text-sm text-zinc-400">3rd floor, Rai Commercial Complex, RKM Rd, Shivpuri, Rajbansi Nagar, Patna, Bihar 801103</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1">Phone / WhatsApp</h3>
+                                <a href="tel:+919304382080" class="text-sm text-primary hover:underline font-semibold">+91 93043 82080</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1">Timing</h3>
+                                <p class="text-sm text-zinc-400">Monday to Sunday: 5:00 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Inquiry Form -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-bold font-syne text-white mb-4">Quick Inquiry & Trial Booking</h3>
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Phone / WhatsApp Number</label>
+                                <input type="tel" id="phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Interested Service</label>
+                                <select id="service" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                    <option value="Free Trial">Free Trial Session</option>
+                                    <option value="Strength Training">Strength Training</option>
+                                    <option value="Fat Loss Program">Fat Loss & Cardio</option>
+                                    <option value="Personal Training">Personal Training</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-primary hover:bg-secondary text-black font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all hover:scale-[1.02]">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Submit & Connect on WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Google Maps Embed & Directions -->
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7785507346!2d85.105!3d25.612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQzLjIiTiA4NcKwMDYnMTguMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            title="Crown's Gym Google Map Location"
+                            class="w-full h-full grayscale contrast-125 opacity-90 hover:grayscale-0 transition-all">
+                        </iframe>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Crown%27s+gym+Shivpuri+Rajbansi+Nagar+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-white font-bold text-center flex items-center justify-center gap-3 transition-all shadow-lg">
+                        <i data-lucide="navigation" class="w-5 h-5 text-primary"></i>
+                        <span>Get Directions on Google Maps</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 10. STICKY MOBILE ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+919304382080" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-bold text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919304382080?text=Hi%20Crown's%20Gym,%20I%20want%20to%20claim%20my%20Free%20Trial!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-primary text-black font-extrabold text-sm shadow-lg shadow-primary/20">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-[#09090B] border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand Info -->
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                            <i data-lucide="dumbbell" class="w-5 h-5 text-black"></i>
+                        </div>
+                        <span class="text-xl font-extrabold font-syne text-white">CROWN'S <span class="text-primary">GYM</span></span>
+                    </a>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-4">
+                        Patna’s premier gym and fitness center located in Rajbansi Nagar. Committed to building stronger bodies and healthier lifestyles.
+                    </p>
+                    <div class="flex items-center gap-3 text-primary">
+                        <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        <span class="text-white text-xs font-bold">4.6★ (347 Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold font-syne mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Programs & Services</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#timings" class="hover:text-primary transition-colors">Batch Timings</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Google Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div>
+                    <h3 class="text-white font-bold font-syne mb-4">Fitness Programs</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Strength Training</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Fat Loss & Cardio</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Personal Coaching</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">General Fitness</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Timing -->
+                <div>
+                    <h3 class="text-white font-bold font-syne mb-4">Contact Info</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 mb-2">
+                        <strong class="text-white">Address:</strong> 3rd floor, Rai Commercial Complex, RKM Rd, Shivpuri, Rajbansi Nagar, Patna, Bihar 801103
+                    </p>
+                    <p class="text-xs sm:text-sm text-zinc-400 mb-4">
+                        <strong class="text-white">Phone:</strong> <a href="tel:+919304382080" class="text-primary hover:underline">+91 93043 82080</a>
+                    </p>
+                    <p class="text-xs sm:text-sm text-zinc-400">
+                        <strong class="text-white">Hours:</strong> Mon - Sun: 5:00 AM – 10:00 PM
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Crown's Gym, Patna. All rights reserved.</p>
+                <p class="flex items-center gap-1">Designed for High Performance Fitness in Patna, Bihar</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl max-w-md w-full p-6 sm:p-8 text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mb-2">Trial Booking Request Received!</h3>
+            <p class="text-sm text-zinc-300 mb-6" id="modal-msg">We are redirecting you to WhatsApp to instantly confirm your free trial session with Crown's Gym.</p>
+            <button id="close-modal" class="w-full py-3.5 rounded-xl bg-primary text-black font-extrabold text-sm hover:bg-secondary transition-colors">
+                Continue to WhatsApp
+            </button>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawer = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu(open) {
+            if (open) {
+                mobileDrawer.classList.add('open');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileDrawer.classList.remove('open');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', () => toggleMenu(true));
+        closeDrawer.addEventListener('click', () => toggleMenu(false));
+        menuBackdrop.addEventListener('click', () => toggleMenu(false));
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Handling & WhatsApp Redirect
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        let whatsappRedirectUrl = '';
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+
+            // Basic sanitization
+            const cleanName = name.replace(/[<>]/g, '');
+            const cleanPhone = phone.replace(/[<>]/g, '');
+            const cleanService = service.replace(/[<>]/g, '');
+
+            const whatsappMessage = `Hi Crown's Gym, my name is ${cleanName} (Phone: ${cleanPhone}). I am interested in ${cleanService} and would like to know more details and book my slot.`;
+            whatsappRedirectUrl = `https://wa.me/919304382080?text=${encodeURIComponent(whatsappMessage)}`;
+
+            document.getElementById('modal-msg').textContent = `Thank you ${cleanName}! We are opening WhatsApp to instantly connect you with Crown's Gym, Rajbansi Nagar, Patna.`;
+            successModal.classList.remove('hidden');
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            if (whatsappRedirectUrl) {
+                window.open(whatsappRedirectUrl, '_blank', 'noopener noreferrer');
+            }
+        });
+    </script>
+</body>
+</html>
