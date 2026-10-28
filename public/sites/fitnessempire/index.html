@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Empire | Premier Gym & Fitness Center in Kankarbagh, Patna</title>
+    <meta name="description" content="Fitness Empire is Patna's top-rated gym in Kankarbagh, offering expert personal training, strength training, fat loss & weight management programs. 4.8★ rated with 100+ reviews. Claim your free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#EF4444',
+                        secondary: '#F59E0B',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EF4444;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090B;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 md:pb-0 bg-[#09090B]">
+
+    <!-- 1. Announcement Bar -->
+    <div class="bg-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center sticky top-0 z-50 flex items-center justify-center gap-2 shadow-md">
+        <i data-lucide="Flame" class="w-4 h-4 animate-pulse"></i>
+        <span>Special Offer: Claim Your Free Trial Session Today! WhatsApp Now: <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20claim%20my%20free%20gym%20trial%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="underline font-bold">+91 95082 54941</a></span>
+    </div>
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="flex flex-col space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="bg-primary p-2 rounded-xl text-white">
+                        <i data-lucide="Dumbbell" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="font-syne font-extrabold text-lg tracking-wider text-white">FITNESS</span>
+                        <span class="font-syne font-extrabold text-lg text-primary">EMPIRE</span>
+                    </div>
+                </div>
+                <button id="mobile-menu-close" class="p-2 text-zinc-400 hover:text-white bg-zinc-900 rounded-xl">
+                    <i data-lucide="X" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col space-y-4 font-medium text-lg">
+                <a href="#services" class="mobile-nav-link text-zinc-300 hover:text-primary transition py-2 flex items-center justify-between">
+                    <span>Services</span>
+                    <i data-lucide="ChevronRight" class="w-5 h-5 text-zinc-600"></i>
+                </a>
+                <a href="#why-us" class="mobile-nav-link text-zinc-300 hover:text-primary transition py-2 flex items-center justify-between">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="ChevronRight" class="w-5 h-5 text-zinc-600"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link text-zinc-300 hover:text-primary transition py-2 flex items-center justify-between">
+                    <span>About Us</span>
+                    <i data-lucide="ChevronRight" class="w-5 h-5 text-zinc-600"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-zinc-300 hover:text-primary transition py-2 flex items-center justify-between">
+                    <span>Gallery</span>
+                    <i data-lucide="ChevronRight" class="w-5 h-5 text-zinc-600"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-zinc-300 hover:text-primary transition py-2 flex items-center justify-between">
+                    <span>Reviews</span>
+                    <i data-lucide="ChevronRight" class="w-5 h-5 text-zinc-600"></i>
+                </a>
+                <a href="#faq" class="mobile-nav-link text-zinc-300 hover:text-primary transition py-2 flex items-center justify-between">
+                    <span>FAQ</span>
+                    <i data-lucide="ChevronRight" class="w-5 h-5 text-zinc-600"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-primary transition py-2 flex items-center justify-between">
+                    <span>Location & Contact</span>
+                    <i data-lucide="ChevronRight" class="w-5 h-5 text-zinc-600"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20claim%20my%20free%20gym%20trial%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow-lg text-center">
+                <i data-lucide="MessageCircle" class="w-5 h-5"></i>
+                WhatsApp Chat
+            </a>
+            <a href="tel:+919508254941" class="w-full bg-primary hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow-lg text-center">
+                <i data-lucide="Phone" class="w-5 h-5"></i>
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-[37px] sm:top-[41px] z-40 bg-[#09090b] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-primary p-2.5 rounded-2xl text-white shadow-lg shadow-primary/20 group-hover:scale-105 transition">
+                    <i data-lucide="Dumbbell" class="w-7 h-7"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-xl sm:text-2xl tracking-wider text-white">FITNESS</span>
+                    <span class="text-xs uppercase font-semibold text-primary tracking-widest -mt-1">Empire • Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-zinc-300">
+                <a href="#services" class="hover:text-primary transition">Services</a>
+                <a href="#why-us" class="hover:text-primary transition">Why Us</a>
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#gallery" class="hover:text-primary transition">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </nav>
+
+            <!-- Header Action CTAs -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20claim%20my%20free%20gym%20trial%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold py-2.5 px-4 rounded-xl flex items-center gap-2 transition shadow-lg">
+                    <i data-lucide="MessageCircle" class="w-4 h-4"></i>
+                    WhatsApp
+                </a>
+                <a href="#contact" class="bg-primary hover:bg-red-600 text-white text-sm font-semibold py-2.5 px-5 rounded-xl flex items-center gap-2 transition shadow-lg shadow-primary/20">
+                    <i data-lucide="Flame" class="w-4 h-4"></i>
+                    Free Trial
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-toggle" class="lg:hidden p-3 text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 rounded-xl focus:outline-none">
+                <i data-lucide="Menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Flow -->
+    <main>
+        <!-- 2. Hero Section -->
+        <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-[#09090B]">
+            <!-- Ambient Glow Effect -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left">
+                        <!-- Trust Rating Badge -->
+                        <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-full mb-6 shadow-md">
+                            <div class="flex text-amber-500">
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.8★ (109+ Google Reviews)</span>
+                        </div>
+
+                        <!-- H1 Heading -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                            BUILD YOUR <span class="text-primary underline decoration-primary/50">EMPIRE</span>. TRANSFORM YOUR BODY.
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-lg text-zinc-400 mb-8 max-w-xl leading-relaxed">
+                            Patna’s premier high-energy fitness destination in Kankarbagh. State-of-the-art equipment, elite certified trainers, and a results-driven training atmosphere.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                            <a href="#contact" class="bg-primary hover:bg-red-600 text-white font-bold py-4 px-8 rounded-2xl flex items-center justify-center gap-3 transition shadow-xl shadow-primary/30 text-base">
+                                <i data-lucide="Zap" class="w-5 h-5"></i>
+                                Claim Free Trial
+                            </a>
+                            <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20chat%20about%20membership%20plans%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 hover:bg-zinc-800 text-white font-semibold py-4 px-8 rounded-2xl border border-zinc-800 flex items-center justify-center gap-3 transition text-base">
+                                <i data-lucide="MessageCircle" class="w-5 h-5 text-emerald-500"></i>
+                                Chat on WhatsApp
+                            </a>
+                        </div>
+
+                        <!-- Quick Location Tag -->
+                        <div class="flex items-center gap-2 mt-8 text-zinc-400 text-xs sm:text-sm">
+                            <i data-lucide="MapPin" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span>Transport Nagar Rd, Maurya Vihar Colony, Kankarbagh, Patna</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Card / Image -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Fitness Empire Gym Floor Patna" class="w-full h-full object-cover transform hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-2xl flex items-center gap-4 shadow-xl">
+                                <div class="bg-primary/20 p-3 rounded-xl text-primary">
+                                    <i data-lucide="Award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-sm sm:text-base">Certified Elite Trainers</h4>
+                                    <p class="text-xs text-zinc-400">Customized fat loss & muscle building programs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Trust & Social Proof Bar -->
+        <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="flex flex-col items-center p-4">
+                        <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1 flex items-center gap-1">
+                            <span>4.8</span>
+                            <span class="text-amber-500">★</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-zinc-400">Google Rating (109 Reviews)</p>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border-l border-zinc-800">
+                        <div class="text-3xl sm:text-4xl font-extrabold font-syne text-primary mb-1">100%</div>
+                        <p class="text-xs sm:text-sm text-zinc-400">Professional Equipment</p>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border-l border-zinc-800">
+                        <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">Expert</div>
+                        <p class="text-xs sm:text-sm text-zinc-400">Certified Personal Trainers</p>
+                    </div>
+                    <div class="flex flex-col items-center p-4 border-l border-zinc-800">
+                        <div class="text-3xl sm:text-4xl font-extrabold font-syne text-secondary mb-1">Prime</div>
+                        <p class="text-xs sm:text-sm text-zinc-400">Kankarbagh Patna Location</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Services / Offerings Grid -->
+        <section id="services" class="py-20 md:py-28 bg-[#09090B]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Elite Training Programs</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        TRAIN HARDER, GET STRONGER
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">
+                        Whether you want to build massive muscle, shred stubborn body fat, or kickstart your fitness journey, we have customized programs designed for real results.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-lg">
+                        <div>
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition">
+                                <i data-lucide="Dumbbell" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-3">Strength Training</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Heavy-duty power racks, Olympic barbells, dumbbells, and plate-loaded machines to maximize muscle hypertrophy and power.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Strength%20Training%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-900 hover:bg-primary text-white font-semibold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition border border-zinc-800 group-hover:border-primary">
+                            <span>Inquire Now</span>
+                            <i data-lucide="ArrowRight" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-lg">
+                        <div>
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition">
+                                <i data-lucide="UserCheck" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-3">Personal Training</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                1-on-1 expert guidance with customized workout routines, posture correction, and tailored nutrition coaching.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Personal%20Training%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-900 hover:bg-primary text-white font-semibold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition border border-zinc-800 group-hover:border-primary">
+                            <span>Inquire Now</span>
+                            <i data-lucide="ArrowRight" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-lg">
+                        <div>
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition">
+                                <i data-lucide="Flame" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-3">Fat Loss Programs</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                High-intensity interval training (HIIT), cardio conditioning, and metabolism-boosting circuits to shred fat fast.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Fat%20Loss%20Programs%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-900 hover:bg-primary text-white font-semibold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition border border-zinc-800 group-hover:border-primary">
+                            <span>Inquire Now</span>
+                            <i data-lucide="ArrowRight" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-lg">
+                        <div>
+                            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition">
+                                <i data-lucide="HeartPulse" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-3">Weight Management</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Sustainable lifestyle transformation, structured calorie guidance, and muscle toning for long-term health.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Weight%20Management%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-900 hover:bg-primary text-white font-semibold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition border border-zinc-800 group-hover:border-primary">
+                            <span>Inquire Now</span>
+                            <i data-lucide="ArrowRight" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Why Choose Us Section -->
+        <section id="why-us" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5">
+                        <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">The Empire Advantage</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                            WHY PATNA FITNESS ENTHUSIASTS CHOOSE US
+                        </h2>
+                        <p class="text-zinc-400 text-sm sm:text-base mb-8 leading-relaxed">
+                            We aren't just another gym; we are a community of dedicated fitness seekers. From our top-tier modern machines to our highly motivating environment, everything is engineered for your success.
+                        </p>
+                        <a href="#contact" class="bg-primary hover:bg-red-600 text-white font-semibold py-3.5 px-7 rounded-xl inline-flex items-center gap-2 transition shadow-lg shadow-primary/20">
+                            <i data-lucide="CheckCircle" class="w-5 h-5"></i>
+                            Join Fitness Empire Today
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Feature 1 -->
+                        <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-md">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
+                                <i data-lucide="ShieldCheck" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-lg text-white mb-2">Certified Trainers</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">
+                                Professional trainers with years of experience in injury prevention, bodybuilding, and athletic conditioning.
+                            </p>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-md">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
+                                <i data-lucide="Zap" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-lg text-white mb-2">Modern Equipment</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">
+                                Heavy-duty imported weights, ergonomic resistance machines, and advanced cardio treadmills & bikes.
+                            </p>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-md">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
+                                <i data-lucide="MapPin" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-lg text-white mb-2">Prime Kankarbagh Location</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">
+                                Easily accessible location at Maurya Vihar Colony, Transport Nagar Rd with ample parking space.
+                            </p>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-md">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
+                                <i data-lucide="Users" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-lg text-white mb-2">High-Energy Community</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">
+                                A clean, disciplined, and motivating workout atmosphere that pushes you to break your personal records.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. About / Story Section -->
+        <section id="about" class="py-20 md:py-28 bg-[#09090B]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Fitness Empire Gym Interior" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-60"></div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-2xl hidden sm:block">
+                            <p class="font-syne font-extrabold text-3xl mb-1">4.8 ★</p>
+                            <p class="text-xs uppercase tracking-wider font-semibold">109+ Happy Members</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Our Story & Mission</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                            BUILT FOR THOSE WHO DEMAND EXCELLENCE
+                        </h2>
+                        <p class="text-zinc-400 text-sm sm:text-base mb-6 leading-relaxed">
+                            Located in the heart of Kankarbagh at Maurya Vihar Colony, <strong>Fitness Empire</strong> was founded with a singular mission: to provide world-class fitness infrastructure and expert training to the fitness enthusiasts of Patna.
+                        </p>
+                        <p class="text-zinc-400 text-sm sm:text-base mb-8 leading-relaxed">
+                            We believe that fitness is not a seasonal hobby, but a lifestyle. Whether you are taking your first step into a gym or you are an advanced bodybuilder preparing for a competition, our doors are open to help you conquer your goals.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0">
+                                    <i data-lucide="Check" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-sm font-medium text-zinc-300">Hygenic & Sanitized</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0">
+                                    <i data-lucide="Check" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-sm font-medium text-zinc-300">Spacious Workout Floor</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0">
+                                    <i data-lucide="Check" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-sm font-medium text-zinc-300">Locker & Changing Rooms</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0">
+                                    <i data-lucide="Check" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-sm font-medium text-zinc-300">Affordable Memberships</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Interactive Showcase / Gallery -->
+        <section id="gallery" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Gym Showcase</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        TAKE A TOUR OF FITNESS EMPIRE
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">
+                        Explore our well-maintained gym floor equipped with professional weight machines, dumbbells, and cardio setups.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym Floor Patna" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition"></div>
+                        <div class="absolute bottom-4 left-4 bg-zinc-950/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-zinc-800 text-xs font-semibold text-white">
+                            Main Workout Floor
+                        </div>
+                    </div>
+                    <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Weight Training Equipment" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition"></div>
+                        <div class="absolute bottom-4 left-4 bg-zinc-950/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-zinc-800 text-xs font-semibold text-white">
+                            Free Weights & Dumbbells
+                        </div>
+                    </div>
+                    <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Strength & Fitness" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition"></div>
+                        <div class="absolute bottom-4 left-4 bg-zinc-950/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-zinc-800 text-xs font-semibold text-white">
+                            Strength Zone
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Customer Reviews Section -->
+        <section id="reviews" class="py-20 md:py-28 bg-[#09090B]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Google Reviews</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        WHAT OUR MEMBERS SAY
+                    </h2>
+                    <div class="flex items-center justify-center gap-2 mt-3">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="Star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-5 h-5 fill-amber-500"></i>
+                        </div>
+                        <span class="text-white font-bold text-lg">4.8 / 5.0</span>
+                        <span class="text-zinc-400 text-sm">(109 Google Reviews)</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Review 1 -->
+                    <div class="bg-surface border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between shadow-lg">
+                        <div>
+                            <div class="flex text-amber-500 mb-4">
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6 italic">
+                                "Best gym in Kankarbagh Patna! The trainers are extremely knowledgeable and the equipment is top notch. Lost 6 kgs in 2 months with their guidance."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
+                                AK
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Abhishek Kumar</h4>
+                                <p class="text-xs text-zinc-400">Google Local Guide</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-surface border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between shadow-lg">
+                        <div>
+                            <div class="flex text-amber-500 mb-4">
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6 italic">
+                                "Amazing workout atmosphere. Clean environment, helpful trainers, and great crowd. Highly recommended for anyone serious about fitness."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Priya Singh</h4>
+                                <p class="text-xs text-zinc-400">Gym Member</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-surface border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between shadow-lg">
+                        <div>
+                            <div class="flex text-amber-500 mb-4">
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6 italic">
+                                "Prime location in Transport Nagar Kankarbagh. Affordable membership fees and excellent personal training. 5 stars!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
+                                RM
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Rahul Maurya</h4>
+                                <p class="text-xs text-zinc-400">Google Reviewer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ Accordion -->
+        <section id="faq" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Got Questions?</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        FREQUENTLY ASKED QUESTIONS
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">
+                        Everything you need to know about joining Fitness Empire.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                            <span>Where is Fitness Empire located in Patna?</span>
+                            <i data-lucide="ChevronDown" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            We are conveniently located at H5VP+72W Laxmi Market, Transport Nagar Rd, Maurya Vihar Colony, Kankarbagh, Kumhrar, Patna, Bihar 800026.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                            <span>How can I claim my free trial session?</span>
+                            <i data-lucide="ChevronDown" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            You can easily claim your free trial by clicking the "WhatsApp" or "Free Trial" button on our website, or calling us directly at +91 95082 54941.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                            <span>Are personal trainers available for beginners?</span>
+                            <i data-lucide="ChevronDown" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            Yes! We have certified personal trainers who specialize in helping beginners start safely with proper form, customized workout plans, and diet charts.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                            <span>What are the gym operating hours?</span>
+                            <i data-lucide="ChevronDown" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            We are open Monday through Saturday from 6:00 AM to 10:00 PM. (Sunday morning special hours or rest).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Interactive Location & Contact Section -->
+        <section id="contact" class="py-20 md:py-28 bg-[#09090B]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Get In Touch</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        VISIT OR CONTACT FITNESS EMPIRE
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">
+                        Ready to begin? Drop by our gym in Kankarbagh Patna or send us a message below.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Information & Form -->
+                    <div class="lg:col-span-6 bg-surface border border-zinc-800 p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-2xl text-white mb-6">Send an Inquiry</h3>
+                            
+                            <form id="contact-form" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Name</label>
+                                    <input type="text" id="form-name" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition" placeholder="Enter your full name">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone Number</label>
+                                    <input type="tel" id="form-phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition" placeholder="Enter 10-digit mobile number">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Interested Service</label>
+                                    <select id="form-service" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition">
+                                        <option value="Free Trial">Claim Free Trial</option>
+                                        <option value="Strength Training">Strength Training</option>
+                                        <option value="Personal Training">Personal Training</option>
+                                        <option value="Fat Loss Program">Fat Loss Program</option>
+                                        <option value="Weight Management">Weight Management</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Message (Optional)</label>
+                                    <textarea id="form-message" rows="3" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition" placeholder="Any specific fitness goals?"></textarea>
+                                </div>
+                                <button type="submit" id="form-submit-btn" class="w-full bg-primary hover:bg-red-600 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                                    <span id="btn-text">Submit Inquiry</span>
+                                    <i data-lucide="Send" class="w-4 h-4"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <a href="tel:+919508254941" class="flex items-center gap-2 text-zinc-300 hover:text-primary transition text-sm font-semibold">
+                                <i data-lucide="Phone" class="w-4 h-4 text-primary"><span>+91 95082 54941</span></i>
+                            </a>
+                            <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20inquire%20about%20Fitness%20Empire%20memberships!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-emerald-500 hover:text-emerald-400 transition text-sm font-semibold">
+                                <i data-lucide="MessageCircle" class="w-4 h-4"></i>
+                                <span>WhatsApp Chat</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed & Location Details -->
+                    <div class="lg:col-span-6 flex flex-col gap-6">
+                        <div class="bg-surface border border-zinc-800 p-8 rounded-3xl shadow-xl">
+                            <h3 class="font-syne font-bold text-2xl text-white mb-4">Location & Hours</h3>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="MapPin" class="w-5 h-5 text-primary shrink-0 mt-1"></i>
+                                    <p class="text-zinc-300 text-sm leading-relaxed">
+                                        H5VP+72W Laxmi Market, Transport Nagar Rd, Maurya Vihar Colony, Kankarbagh, Kumhrar, Patna, Bihar 800026
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="Clock" class="w-5 h-5 text-primary shrink-0"></i>
+                                    <p class="text-zinc-300 text-sm">Mon - Sat: 6:00 AM - 10:00 PM</p>
+                                </div>
+                            </div>
+
+                            <a href="https://www.google.com/maps/search/?api=1&query=Fitness+Empire+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition text-sm shadow-md">
+                                <i data-lucide="Navigation" class="w-4 h-4 text-primary"></i>
+                                Get Directions on Google Maps
+                            </a>
+                        </div>
+
+                        <!-- Responsive Map Embed -->
+                        <div class="w-full h-[280px] sm:h-[320px] rounded-3xl overflow-hidden border border-zinc-800 shadow-xl">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788481498175!2d85.1632!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58d555555555%3A0x5555555555555555!2sFitness%20Empire%20Kankarbagh%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Fitness Empire Location Map">
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 11. Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919508254941" class="flex-1 bg-primary hover:bg-red-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-sm transition shadow-lg">
+            <i data-lucide="Phone" class="w-4 h-4"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20claim%20my%20free%20gym%20trial%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-sm transition shadow-lg">
+            <i data-lucide="MessageCircle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary p-2.5 rounded-2xl text-white shadow-lg">
+                            <i data-lucide="Dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-syne font-extrabold text-xl tracking-wider text-white">FITNESS</span>
+                            <span class="text-xs uppercase font-semibold text-primary tracking-widest -mt-1">Empire • Patna</span>
+                        </div>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Patna's leading gym in Kankarbagh. Empowering fitness journeys with expert trainers, heavy-duty equipment, and a results-driven culture.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-500 text-sm font-semibold">
+                        <div class="flex">
+                            <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="Star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span>4.8★ (109 Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition">Services & Programs</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition">About Our Gym</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition">Google Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Operating Hours -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex justify-between border-b border-zinc-900 pb-2">
+                            <span>Monday - Saturday:</span>
+                            <span class="text-white font-medium">6:00 AM - 10:00 PM</span>
+                        </li>
+                        <li class="flex justify-between border-b border-zinc-900 pb-2">
+                            <span>Sunday:</span>
+                            <span class="text-white font-medium">Morning Special</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://wa.me/919508254941?text=Hi%2C%20I%20want%20to%20book%20a%20slot%20at%20Fitness%20Empire!" target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-bold hover:underline flex items-center gap-1">
+                            <span>Check Holiday Timings on WhatsApp</span>
+                            <i data-lucide="ExternalLink" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact Empire</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="MapPin" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                            <span>H5VP+72W Laxmi Market, Transport Nagar Rd, Maurya Vihar Colony, Kankarbagh, Kumhrar, Patna, Bihar 800026</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="Phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="tel:+919508254941" class="hover:text-white transition">+91 95082 54941</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="MessageCircle" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                            <a href="https://wa.me/919508254941" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">WhatsApp Inquiry</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Fitness Empire, Kankarbagh, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Fitness+Empire+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-300 transition">Google Maps Listing</a>
+                    <span>•</span>
+                    <a href="tel:+919508254941" class="hover:text-zinc-300 transition">Direct Call</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 p-8 rounded-3xl max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 bg-emerald-500/20 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="CheckCircle2" class="w-10 h-10"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p class="text-zinc-400 text-sm mb-6">
+                Thank you! Your inquiry has been submitted successfully. Our team at Fitness Empire will contact you shortly via phone or WhatsApp.
+            </p>
+            <button id="close-modal-btn" class="w-full bg-primary hover:bg-red-600 text-white font-bold py-3.5 rounded-xl transition">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript & Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileClose = document.getElementById('mobile-menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileToggle.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion Logic
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+
+                // Close others
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.nextElementSibling.classList.add('hidden');
+                        otherToggle.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Contact Form Validation & Success Modal
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            
+            if (!name || !phone) {
+                alert('Please fill in your name and phone number.');
+                return;
+            }
+
+            // Simulate loading state
+            const submitBtn = document.getElementById('form-submit-btn');
+            const btnText = document.getElementById('btn-text');
+            submitBtn.disabled = true;
+            btnText.textContent = 'Submitting...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Inquiry';
+                contactForm.reset();
+                successModal.classList.remove('hidden');
+            }, 800);
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
