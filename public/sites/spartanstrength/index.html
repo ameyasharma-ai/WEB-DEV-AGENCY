@@ -1,78 +1,954 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spartan Strength Studio | Patliputra, Patna</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #090d16;
-      --card: #111827;
-      --primary: #10b981;
-      --accent: #34d399;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-    .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 24px; background: radial-gradient(circle at center, rgba(17, 24, 39, 0.8) 0%, #090d16 100%); position: relative; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 20px; }
-    h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; line-height: 1.15; margin-bottom: 16px; max-width: 800px; }
-    p.sub { font-size: clamp(16px, 2vw, 19px); color: var(--muted); max-width: 600px; margin-bottom: 32px; line-height: 1.6; }
-    .btn-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: #fff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); transition: transform 0.2s, box-shadow 0.2s; }
-    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6); }
-    .features-grid { max-width: 1100px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .card { background: var(--card); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px; }
-    .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #fff; }
-    .card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-    .info-bar { max-width: 1100px; margin: 0 auto; padding: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
-    footer { text-align: center; padding: 40px 24px; font-size: 13px; color: var(--muted); border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 60px; }
-  </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartan Strength Studio | Premium Gym & Fitness Center in Patliputra, Patna</title>
+    <meta name="description" content="Transform your body at Spartan Strength Studio in Patliputra, Patna. Rated 4.7★ by 144+ members. Expert trainers, state-of-the-art equipment & personalized fitness programs. Claim your free pass today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spartan: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            900: '#881337',
+                            950: '#4c0519',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Syne', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .glow-accent {
+            box-shadow: 0 0 50px -10px rgba(244, 63, 94, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #fda4af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body {
+            background-color: #09090b;
+            color: #f4f4f5;
+        }
+    </style>
 </head>
-<body>
-  <div class="hero">
-    <div class="badge">⭐ 4.7★ (144 Verified Reviews) • Patliputra, Patna</div>
-    <h1>Spartan Strength Studio</h1>
-    <p class="sub">Functional Athletic Conditioning & Calisthenics Hub. Step into Patna's premier training hub with certified guidance and elite equipment.</p>
-    <a href="https://wa.me/919871234567?text=Hi%20Spartan%20Strength%20Studio,%20I%20would%20like%20to%20book%20a%20free%20trial%20session!" class="btn-cta">
-      💬 Book Free Trial on WhatsApp
-    </a>
-  </div>
+<body class="overflow-x-hidden pb-24 md:pb-0 font-sans antialiased selection:bg-spartan-600 selection:text-white">
 
-  <div class="info-bar">
-    <div>
-      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:600">Location</div>
-      <div style="font-weight:600;margin-top:4px">📍 Near Alpana Market, Patliputra Colony, Patna, Bihar 800013</div>
-    </div>
-    <div>
-      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:600">Timings</div>
-      <div style="font-weight:600;margin-top:4px">⏰ Monday-Saturday: 5:30 am–9:30 pm | Sunday: 7:00 am–11:00 am</div>
-    </div>
-    <div>
-      <a href="https://maps.google.com/?q=Spartan+Strength+Studio+Patliputra+Patna" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:700">Open Google Maps →</a>
-    </div>
-  </div>
+    <!-- ==========================================
+         TOP ANNOUNCEMENT BAR
+         ========================================== -->
+    <aside aria-label="Announcement" class="bg-gradient-to-r from-spartan-950 via-spartan-900 to-spartan-950 text-white text-xs sm:text-sm font-medium py-2.5 px-4 text-center border-b border-spartan-800/60 relative z-30">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="bg-spartan-600 text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse">Limited Offer</span>
+            <span>Get your <strong>FREE 1-Day VIP Access Pass</strong> + Free Body Composition Analysis!</span>
+            <a href="#trial-modal" onclick="openTrialModal(event)" class="underline hover:text-spartan-100 font-semibold ml-1 transition-colors">Claim Now &rarr;</a>
+        </div>
+    </aside>
 
-  <div class="features-grid">
-    <div class="card">
-      <h3>🏋️ Elite Equipment & Zones</h3>
-      <p>State-of-the-art biomechanical strength machines, Olympic lifting platforms, and dedicated functional turf for peak athletic output.</p>
-    </div>
-    <div class="card">
-      <h3>⚡ Certified Personal Coaching</h3>
-      <p>Custom nutritional blueprints and scientifically structured progressive overload regimens tailored to your exact metabolic goals.</p>
-    </div>
-    <div class="card">
-      <h3>🔥 Dynamic Group Batches</h3>
-      <p>Early morning and evening high-energy sessions including HIIT, kettlebell circuits, and core conditioning designed for busy schedules.</p>
-    </div>
-  </div>
+    <!-- ==========================================
+         SOLID HEADER (100% OPAQUE)
+         ========================================== -->
+    <header class="sticky top-0 z-40 bg-[#09090b] border-b border-zinc-800/80 shadow-lg">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-spartan-600 to-spartan-900 flex items-center justify-center text-white font-heading font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    S
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-white leading-tight">SPARTAN STRENGTH</span>
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Patliputra, Patna</span>
+                </div>
+            </a>
 
-  <footer>
-    Concept & Technology crafted by <strong>Arclane Studios</strong> • Patna SMB Growth Initiative
-  </footer>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-zinc-300">
+                <a href="#about" class="hover:text-spartan-500 transition-colors">About</a>
+                <a href="#programs" class="hover:text-spartan-500 transition-colors">Programs</a>
+                <a href="#facility" class="hover:text-spartan-500 transition-colors">Facility</a>
+                <a href="#trainers" class="hover:text-spartan-500 transition-colors">Trainers</a>
+                <a href="#reviews" class="hover:text-spartan-500 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-spartan-500 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+919876543210" class="flex items-center gap-2 text-sm font-semibold text-zinc-300 hover:text-white transition-colors">
+                    <i data-lucide="phone-call" class="w-4 h-4 text-spartan-500"></i>
+                    <span>+91 98765 43210</span>
+                </a>
+                <a href="#trial-modal" onclick="openTrialModal(event)" class="bg-spartan-600 hover:bg-spartan-700 text-white font-bold text-sm px-5 py-3 rounded-xl shadow-lg shadow-spartan-600/20 hover:shadow-spartan-600/40 transition-all duration-300 flex items-center gap-2 min-h-[48px]">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                    <span>Free Day Pass</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle navigation menu" class="lg:hidden p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         MOBILE DRAWER & BACKDROP
+         ========================================== -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-spartan-600 flex items-center justify-center text-white font-heading font-extrabold text-base">S</div>
+                    <span class="font-heading font-bold text-base text-white">Spartan Strength</span>
+                </div>
+                <button id="menu-close" aria-label="Close menu" class="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Navigation Links -->
+            <nav class="flex flex-col gap-4 pt-6 text-base font-semibold text-zinc-300">
+                <a href="#about" onclick="closeMobileMenu()" class="flex items-center justify-between py-2 hover:text-spartan-500 border-b border-zinc-900">
+                    <span>About Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#programs" onclick="closeMobileMenu()" class="flex items-center justify-between py-2 hover:text-spartan-500 border-b border-zinc-900">
+                    <span>Programs & Pricing</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#facility" onclick="closeMobileMenu()" class="flex items-center justify-between py-2 hover:text-spartan-500 border-b border-zinc-900">
+                    <span>Facility Tour</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#trainers" onclick="closeMobileMenu()" class="flex items-center justify-between py-2 hover:text-spartan-500 border-b border-zinc-900">
+                    <span>Expert Trainers</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#reviews" onclick="closeMobileMenu()" class="flex items-center justify-between py-2 hover:text-spartan-500 border-b border-zinc-900">
+                    <span>Member Reviews (4.7★)</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#contact" onclick="closeMobileMenu()" class="flex items-center justify-between py-2 hover:text-spartan-500">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Drawer Footer Actions -->
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="#trial-modal" onclick="closeMobileMenu(); openTrialModal(event)" class="w-full bg-spartan-600 hover:bg-spartan-700 text-white font-bold text-center py-3.5 rounded-xl shadow-lg shadow-spartan-600/30 flex items-center justify-center gap-2 min-h-[48px]">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+                <span>Claim Free Day Pass</span>
+            </a>
+            <a href="tel:+919876543210" class="w-full bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-white font-semibold text-center py-3.5 rounded-xl flex items-center justify-center gap-2 min-h-[48px]">
+                <i data-lucide="phone-call" class="w-4 h-4 text-spartan-500"></i>
+                <span>Call +91 98765 43210</span>
+            </a>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- ==========================================
+             HERO SECTION
+             ========================================== -->
+        <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-32 overflow-hidden bg-[#09090b]">
+            <!-- Background glow gradient -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-spartan-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left">
+                        
+                        <!-- Rating Badge -->
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-inner">
+                            <div class="flex items-center gap-1 text-amber-400">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-bold text-white">4.7★ Rating</span>
+                            <span class="text-zinc-500">|</span>
+                            <span class="text-xs sm:text-sm text-zinc-400 font-medium">144+ Verified Reviews in Patna</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words font-heading font-extrabold sm: lg: tracking-tight text-white leading-[1.08] mb-6 break-words">
+                            Forge Your Best Body At <span class="text-gradient">Patliputra’s</span> Elite Gym.
+                        </h1>
+
+                        <!-- Subtitle -->
+                        <p class="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                            Welcome to Spartan Strength Studio—Patna’s premier destination for serious bodybuilding, elite strength training, advanced CrossFit, and personalized fat loss transformations.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
+                            <a href="#trial-modal" onclick="openTrialModal(event)" class="bg-spartan-600 hover:bg-spartan-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-spartan-600/30 hover:shadow-spartan-600/50 transition-all duration-300 flex items-center justify-center gap-3 min-h-[52px]">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                                <span>Claim Free 1-Day Pass</span>
+                            </a>
+                            <a href="#programs" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors flex items-center justify-center gap-2 min-h-[52px]">
+                                <span>Explore Programs</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5 text-zinc-400"></i>
+                            </a>
+                        </div>
+
+                        <!-- Trust Metrics Grid -->
+                        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-zinc-800/80 w-full">
+                            <div>
+                                <span class="block font-heading font-extrabold text-2xl sm:text-3xl text-white">5,000+</span>
+                                <span class="text-xs sm:text-sm text-zinc-400">Sq. Ft. Facility</span>
+                            </div>
+                            <div>
+                                <span class="block font-heading font-extrabold text-2xl sm:text-3xl text-white">10+</span>
+                                <span class="text-xs sm:text-sm text-zinc-400">Expert Trainers</span>
+                            </div>
+                            <div>
+                                <span class="block font-heading font-extrabold text-2xl sm:text-3xl text-white">100%</span>
+                                <span class="text-xs sm:text-sm text-zinc-400">Results Driven</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Hero Visual Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl aspect-[4/3] sm:aspect-square">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80" alt="Spartan Strength Studio gym interior in Patliputra Patna" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent opacity-80"></div>
+                            
+                            <!-- Floating badge overlay -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-spartan-600/20 border border-spartan-500/30 flex items-center justify-center text-spartan-500">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Patliputra Colony, Patna</h4>
+                                        <p class="text-xs text-zinc-400">Open Daily: 5:00 AM – 10:00 PM</p>
+                                    </div>
+                                </div>
+                                <a href="https://maps.google.com/?q=Patliputra+Patna" target="_blank" rel="noopener noreferrer" class="bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-semibold px-3 py-2 rounded-lg transition-colors min-h-[36px] flex items-center">
+                                    Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             WHY SPARTAN (FEATURES)
+             ========================================== -->
+        <section id="about" class="py-20 sm:py-28 bg-zinc-950 border-t border-zinc-900">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+                    <span class="text-spartan-500 font-bold text-xs sm:text-sm uppercase tracking-widest bg-spartan-950/80 px-3.5 py-1.5 rounded-full border border-spartan-800/50 inline-block mb-3">The Spartan Standard</span>
+                    <h2 class="break-words font-heading font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-4">
+                        Why Patna Fitness Enthusiasts Choose Spartan
+                    </h2>
+                    <p class="text-zinc-400 text-base sm:text-lg">
+                        We aren't just a commercial gym; we are a community of dedicated athletes and fitness seekers committed to real, measurable transformation.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Feature 1 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-spartan-500/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-spartan-600/10 border border-spartan-500/30 flex items-center justify-center text-spartan-500 mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-white mb-3">World-Class Equipment</h3>
+                            <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                                Imported heavy-duty racks, calibrated bumper plates, ergonomic resistance machines, and dedicated turf zones designed for maximum hypertrophy and performance.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-zinc-800/60 flex items-center gap-2 text-xs font-semibold text-spartan-400">
+                            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                            <span>Commercial Grade Setup</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-spartan-500/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-spartan-600/10 border border-spartan-500/30 flex items-center justify-center text-spartan-500 mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="users" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-white mb-3">Certified Expert Trainers</h3>
+                            <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                                Our trainers hold elite certifications with years of practical coaching experience in fat loss, muscle conditioning, sports rehab, and functional training.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-zinc-800/60 flex items-center gap-2 text-xs font-semibold text-spartan-400">
+                            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                            <span>1-on-1 Personalized Guidance</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-spartan-500/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-spartan-600/10 border border-spartan-500/30 flex items-center justify-center text-spartan-500 mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="shield-check" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-heading font-bold text-xl text-white mb-3">Hygiene & Safety First</h3>
+                            <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                                Impeccably clean workout floors, sanitized equipment after every session, premium locker rooms, showers, and dedicated steam bath facilities.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-zinc-800/60 flex items-center gap-2 text-xs font-semibold text-spartan-400">
+                            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                            <span>Daily Deep Sanitization</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PROGRAMS & SERVICES
+             ========================================== -->
+        <section id="programs" class="py-20 sm:py-28 bg-[#09090b]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-spartan-500 font-bold text-xs sm:text-sm uppercase tracking-widest bg-spartan-950/80 px-3.5 py-1.5 rounded-full border border-spartan-800/50 inline-block mb-3">Our Training Systems</span>
+                        <h2 class="break-words font-heading font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl text-white tracking-tight">
+                            Programs Built For Results
+                        </h2>
+                    </div>
+                    <p class="text-zinc-400 text-base max-w-md mt-4 md:mt-0">
+                        Whether you want to build raw muscle, shred body fat, or increase athletic endurance, we have a specialized program for you.
+                    </p>
+                </div>
+
+                <!-- Programs Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Program 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition-colors">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Strength Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-zinc-800">Most Popular</span>
+                        </div>
+                        <div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-heading font-bold text-2xl text-white mb-2">Strength & Hypertrophy</h3>
+                                <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                                    Scientific progressive overload programs designed to build lean muscle mass, correct imbalances, and maximize raw power.
+                                </p>
+                            </div>
+                            <a href="#trial-modal" onclick="openTrialModal(event)" class="w-full bg-zinc-800 hover:bg-spartan-600 text-white font-bold text-sm py-3 rounded-xl transition-colors flex items-center justify-center gap-2 min-h-[48px]">
+                                <span>Join Program</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Program 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition-colors">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Fat Loss & Shredding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-zinc-800">Fast Results</span>
+                        </div>
+                        <div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-heading font-bold text-2xl text-white mb-2">Fat Loss & Conditioning</h3>
+                                <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                                    High-intensity interval training, metabolic circuits, and expert nutritional guidance to torch stubborn fat while keeping muscle.
+                                </p>
+                            </div>
+                            <a href="#trial-modal" onclick="openTrialModal(event)" class="w-full bg-zinc-800 hover:bg-spartan-600 text-white font-bold text-sm py-3 rounded-xl transition-colors flex items-center justify-center gap-2 min-h-[48px]">
+                                <span>Join Program</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition-colors">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Personal Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                            <span class="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-zinc-800">1-on-1 VIP</span>
+                        </div>
+                        <div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-heading font-bold text-2xl text-white mb-2">Personalized Coaching</h3>
+                                <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                                    Dedicated 1-on-1 trainer supervision, customized macro meal planning, posture correction, and weekly progress tracking.
+                                </p>
+                            </div>
+                            <a href="#trial-modal" onclick="openTrialModal(event)" class="w-full bg-zinc-800 hover:bg-spartan-600 text-white font-bold text-sm py-3 rounded-xl transition-colors flex items-center justify-center gap-2 min-h-[48px]">
+                                <span>Join Program</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             FACILITY TOUR / GALLERY
+             ========================================== -->
+        <section id="facility" class="py-20 sm:py-28 bg-zinc-950 border-t border-zinc-900">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-spartan-500 font-bold text-xs sm:text-sm uppercase tracking-widest bg-spartan-950/80 px-3.5 py-1.5 rounded-full border border-spartan-800/50 inline-block mb-3">Gym Tour</span>
+                    <h2 class="break-words font-heading font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-4">
+                        State-of-the-Art Training Arena
+                    </h2>
+                    <p class="text-zinc-400 text-base sm:text-lg">
+                        Take a visual peek inside Spartan Strength Studio in Patliputra, Patna.
+                    </p>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym Equipment" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Free Weights Area" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Workout Session" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80" alt="Cardio Zone" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             CUSTOMER REVIEWS / TESTIMONIALS
+             ========================================== -->
+        <section id="reviews" class="py-20 sm:py-28 bg-[#09090b]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-4">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-sm font-bold text-white">4.7 / 5.0 Rating</span>
+                    </div>
+                    <h2 class="break-words font-heading font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-4">
+                        Trusted By 144+ Members in Patna
+                    </h2>
+                    <p class="text-zinc-400 text-base sm:text-lg">
+                        Real stories of grit, discipline, and body transformations from our gym family.
+                    </p>
+                </div>
+
+                <!-- Reviews Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Review 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                                "Best gym in Patliputra hands down! The equipment is top tier and trainers actually pay attention to your form. Lost 8 kgs in 3 months with their guidance."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-spartan-600/20 text-spartan-500 font-bold flex items-center justify-center border border-spartan-500/30">
+                                AK
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Abhishek Kumar</h4>
+                                <span class="text-xs text-zinc-500">Patliputra Resident</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                                "Incredible atmosphere! Very clean, professional, and zero ego lifting. The personal trainers here know sports science inside out."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-spartan-600/20 text-spartan-500 font-bold flex items-center justify-center border border-spartan-500/30">
+                                RS
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Rahul Singh</h4>
+                                <span class="text-xs text-zinc-500">Verified Member</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                                "Spacious, high-end machines, and great crowd. If you are serious about fitness in Patna, Spartan Strength Studio is the place to be."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-spartan-600/20 text-spartan-500 font-bold flex items-center justify-center border border-spartan-500/30">
+                                PM
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Priya Mishra</h4>
+                                <span class="text-xs text-zinc-500">Patna Member</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             FAQ SECTION
+             ========================================== -->
+        <section class="py-20 sm:py-28 bg-zinc-950 border-t border-zinc-900">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-16">
+                    <span class="text-spartan-500 font-bold text-xs sm:text-sm uppercase tracking-widest bg-spartan-950/80 px-3.5 py-1.5 rounded-full border border-spartan-800/50 inline-block mb-3">Got Questions?</span>
+                    <h2 class="break-words font-heading font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl text-white tracking-tight">
+                        Frequently Asked Questions
+                    </h2>
+                </div>
+
+                <!-- FAQ Accordion Container -->
+                <div class="space-y-4">
+                    
+                    <!-- FAQ 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                        <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-heading font-bold text-lg text-white">How do I claim my Free 1-Day VIP Pass?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            Simply click the "Free Day Pass" button anywhere on our website, fill out your quick details, and our front desk will instantly activate your 1-day free gym access pass along with a complimentary body composition analysis.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                        <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-heading font-bold text-lg text-white">What are the gym operating hours?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            Spartan Strength Studio is open 7 days a week. Monday through Saturday: 5:00 AM to 10:00 PM, and Sunday: 6:00 AM to 12:00 PM.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                        <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-heading font-bold text-lg text-white">Are personal trainers available for beginners?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            Absolutely! We specialize in training beginners. Our certified trainers provide customized workout routines, posture correction, and step-by-step guidance so you never feel intimidated.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                        <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-heading font-bold text-lg text-white">Where is Spartan Strength Studio located in Patna?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            We are conveniently located in Patliputra Colony, Patna, Bihar, with ample parking space and easy accessibility from all parts of the city.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             CONTACT & LOCATION MAP SECTION
+             ========================================== -->
+        <section id="contact" class="py-20 sm:py-28 bg-[#09090b] border-t border-zinc-900">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Contact Info & Quick Form -->
+                    <div class="lg:col-span-6">
+                        <span class="text-spartan-500 font-bold text-xs sm:text-sm uppercase tracking-widest bg-spartan-950/80 px-3.5 py-1.5 rounded-full border border-spartan-800/50 inline-block mb-3">Get In Touch</span>
+                        <h2 class="break-words font-heading font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl text-white tracking-tight mb-6">
+                            Visit Spartan Today
+                        </h2>
+                        <p class="text-zinc-400 text-base mb-8">
+                            Ready to take the first step towards your fitness transformation? Drop by our studio in Patliputra or send us a message below.
+                        </p>
+
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-spartan-600/10 border border-spartan-500/30 flex items-center justify-center text-spartan-500 flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Location</h4>
+                                    <p class="text-zinc-400 text-sm">Patliputra Colony, Patna, Bihar 800013</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-spartan-600/10 border border-spartan-500/30 flex items-center justify-center text-spartan-500 flex-shrink-0">
+                                    <i data-lucide="phone-call" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Phone / WhatsApp</h4>
+                                    <a href="tel:+919876543210" class="text-zinc-400 text-sm hover:text-white transition-colors">+91 98765 43210</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-spartan-600/10 border border-spartan-500/30 flex items-center justify-center text-spartan-500 flex-shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Working Hours</h4>
+                                    <p class="text-zinc-400 text-sm">Mon - Sat: 5:00 AM – 10:00 PM<br>Sun: 6:00 AM – 12:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Embed -->
+                    <div class="lg:col-span-6">
+                        <div class="w-full h-[400px] sm:h-[480px] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848419614!2d85.1234567!3d25.6123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ0LjQiTiA4NcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Spartan Strength Studio Patliputra Patna Location Map">
+                            </iframe>
+                            <div class="absolute bottom-4 right-4">
+                                <a href="https://maps.google.com/?q=Patliputra+Patna" target="_blank" rel="noopener noreferrer" class="bg-zinc-900/90 backdrop-blur-md hover:bg-zinc-800 text-white font-bold text-xs px-4 py-3 rounded-xl border border-zinc-800 shadow-xl flex items-center gap-2 min-h-[44px]">
+                                    <i data-lucide="navigation" class="w-4 h-4 text-spartan-500"></i>
+                                    <span>Open in Google Maps</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12 text-zinc-400 text-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-spartan-600 flex items-center justify-center text-white font-heading font-extrabold text-base">S</div>
+                        <span class="font-heading font-extrabold text-lg text-white">SPARTAN STRENGTH STUDIO</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm max-w-sm mb-6 leading-relaxed">
+                        Patliputra’s premier strength and fitness training center. Committed to transforming lives through expert coaching, premium equipment, and uncompromising discipline.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-spartan-500 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-spartan-500 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-spartan-500 transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#programs" class="hover:text-white transition-colors">Programs & Pricing</a></li>
+                        <li><a href="#facility" class="hover:text-white transition-colors">Facility Tour</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Member Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-4">Programs</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#programs" class="hover:text-white transition-colors">Strength & Hypertrophy</a></li>
+                        <li><a href="#programs" class="hover:text-white transition-colors">Fat Loss & Conditioning</a></li>
+                        <li><a href="#programs" class="hover:text-white transition-colors">Personalized Coaching</a></li>
+                        <li><a href="#trial-modal" onclick="openTrialModal(event)" class="hover:text-white transition-colors text-spartan-400 font-semibold">Free Day Pass</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> Spartan Strength Studio, Patliputra, Patna. All rights reserved.</p>
+                <p>Designed with excellence for Patna fitness community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         STICKY MOBILE BOTTOM ACTION BAR
+         ========================================== -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919876543210" class="flex-1 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white font-bold text-sm py-3 rounded-xl flex items-center justify-center gap-2 min-h-[48px]">
+            <i data-lucide="phone-call" class="w-4 h-4 text-spartan-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="#trial-modal" onclick="openTrialModal(event)" class="flex-1 bg-spartan-600 hover:bg-spartan-700 text-white font-bold text-sm py-3 rounded-xl shadow-lg shadow-spartan-600/30 flex items-center justify-center gap-2 min-h-[48px]">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>Free Pass</span>
+        </a>
+    </div>
+
+    <!-- ==========================================
+         INTERACTIVE TRIAL PASS MODAL
+         ========================================== -->
+    <div id="trial-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[110] hidden items-center justify-center p-4">
+        <div class="bg-[#09090b] border border-zinc-800 rounded-2xl w-full max-w-md p-6 sm:p-8 relative shadow-2xl transform transition-all">
+            
+            <button onclick="closeTrialModal()" aria-label="Close modal" class="absolute top-4 right-4 p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-xl bg-spartan-600/20 border border-spartan-500/30 flex items-center justify-center text-spartan-500 mx-auto mb-3">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-heading font-extrabold text-2xl text-white mb-1">Claim Your Free VIP Pass</h3>
+                <p class="text-xs sm:text-sm text-zinc-400">Get 1-Day Full Gym Access + Free Body Composition Analysis at Patliputra, Patna.</p>
+            </div>
+
+            <form id="trial-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label for="visitor-name" class="block text-xs font-semibold text-zinc-300 mb-1.5">Full Name</label>
+                    <input type="text" id="visitor-name" required placeholder="Enter your full name" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-spartan-500 min-h-[48px]">
+                </div>
+
+                <div>
+                    <label for="visitor-phone" class="block text-xs font-semibold text-zinc-300 mb-1.5">Phone Number (WhatsApp)</label>
+                    <input type="tel" id="visitor-phone" required placeholder="10-digit mobile number" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-spartan-500 min-h-[48px]">
+                </div>
+
+                <div>
+                    <label for="visitor-goal" class="block text-xs font-semibold text-zinc-300 mb-1.5">Primary Fitness Goal</label>
+                    <select id="visitor-goal" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-spartan-500 min-h-[48px]">
+                        <option value="Muscle Building">Muscle Building & Strength</option>
+                        <option value="Fat Loss">Fat Loss & Shredding</option>
+                        <option value="General Fitness">General Fitness & Cardio</option>
+                        <option value="Personal Training">Personal Training</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full bg-spartan-600 hover:bg-spartan-700 text-white font-bold text-sm py-4 rounded-xl shadow-lg shadow-spartan-600/30 transition-all flex items-center justify-center gap-2 min-h-[48px] mt-2">
+                    <span id="btn-text">Activate Free Pass Now</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </form>
+
+            <div id="success-msg" class="hidden text-center py-8">
+                <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="check" class="w-8 h-8"></i>
+                </div>
+                <h4 class="font-heading font-bold text-xl text-white mb-2">Pass Activated Successfully!</h4>
+                <p class="text-sm text-zinc-400 mb-6">We have reserved your VIP pass. Our Patna team will WhatsApp your entry pass details shortly.</p>
+                <button onclick="closeTrialModal()" class="bg-zinc-900 border border-zinc-800 text-white font-semibold text-sm px-6 py-3 rounded-xl hover:bg-zinc-800 transition-colors">
+                    Close Window
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT LOGIC
+         ========================================== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            const isOpen = !content.classList.contains('hidden');
+            
+            // Close all
+            document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.faq-content').previousElementSibling?.querySelector('i')?.classList.remove('rotate-180');
+
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Trial Modal Functions
+        const trialModal = document.getElementById('trial-modal');
+
+        function openTrialModal(e) {
+            if (e) e.preventDefault();
+            trialModal.classList.remove('hidden');
+            trialModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeTrialModal() {
+            trialModal.classList.add('hidden');
+            trialModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            // Reset form
+            document.getElementById('trial-form').reset();
+            document.getElementById('trial-form').classList.remove('hidden');
+            document.getElementById('success-msg').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        trialModal.addEventListener('click', (e) => {
+            if (e.target === trialModal) {
+                closeTrialModal();
+            }
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            
+            btn.disabled = true;
+            btnText.textContent = 'Processing...';
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btnText.textContent = 'Activate Free Pass Now';
+                document.getElementById('trial-form').classList.add('hidden');
+                document.getElementById('success-msg').classList.remove('hidden');
+                lucide.createIcons();
+            }, 1000);
+        }
+    </script>
 </body>
 </html>

@@ -1,78 +1,1166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Titan Pro Fitness Club | Rajendra Nagar, Patna</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #090d16;
-      --card: #111827;
-      --primary: #f59e0b;
-      --accent: #fbbf24;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-    .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 24px; background: radial-gradient(circle at center, rgba(17, 24, 39, 0.8) 0%, #090d16 100%); position: relative; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 20px; }
-    h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; line-height: 1.15; margin-bottom: 16px; max-width: 800px; }
-    p.sub { font-size: clamp(16px, 2vw, 19px); color: var(--muted); max-width: 600px; margin-bottom: 32px; line-height: 1.6; }
-    .btn-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: #fff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5); transition: transform 0.2s, box-shadow 0.2s; }
-    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6); }
-    .features-grid { max-width: 1100px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .card { background: var(--card); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px; }
-    .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #fff; }
-    .card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-    .info-bar { max-width: 1100px; margin: 0 auto; padding: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
-    footer { text-align: center; padding: 40px 24px; font-size: 13px; color: var(--muted); border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 60px; }
-  </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Titan Pro Fitness Club | Patna's Premier Gym & Strength Center</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ef4444',
+                        primaryDark: '#dc2626',
+                        darkBg: '#09090b',
+                        cardBg: '#121215',
+                        borderCol: '#27272a'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ef4444;
+        }
+    </style>
 </head>
-<body>
-  <div class="hero">
-    <div class="badge">⭐ 4.6★ (92 Verified Reviews) • Rajendra Nagar, Patna</div>
-    <h1>Titan Pro Fitness Club</h1>
-    <p class="sub">Heavy Iron, Science-Backed Hypertrophy & Fat Loss. Step into Patna's premier training hub with certified guidance and elite equipment.</p>
-    <a href="https://wa.me/919304123456?text=Hi%20Titan%20Pro%20Fitness%20Club,%20I%20would%20like%20to%20book%20a%20free%20trial%20session!" class="btn-cta">
-      💬 Book Free Trial on WhatsApp
-    </a>
-  </div>
+<body class="bg-[#09090b] text-zinc-100 font-sans antialiased overflow-x-hidden pb-24 md:pb-0 selection:bg-primary selection:text-white">
 
-  <div class="info-bar">
-    <div>
-      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:600">Location</div>
-      <div style="font-weight:600;margin-top:4px">📍 Road No. 4, Rajendra Nagar, Patna, Bihar 800016</div>
+    <!-- ==========================================
+         1. ANNOUNCEMENT BAR (Top-most)
+         ========================================== -->
+    <div class="bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center z-50 relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="bg-black/30 px-2 py-0.5 rounded text-[11px] uppercase tracking-wider font-bold">Limited Offer</span>
+            <span>🔥 Get a FREE 1-Day Trial Pass & Free Body Composition Analysis at Rajendra Nagar!</span>
+            <a href="#trial" class="underline hover:text-zinc-200 ml-1 font-bold">Claim Now &rarr;</a>
+        </div>
     </div>
-    <div>
-      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:600">Timings</div>
-      <div style="font-weight:600;margin-top:4px">⏰ Monday-Saturday: 6:00 am–10:00 pm | Sunday: Closed</div>
-    </div>
-    <div>
-      <a href="https://maps.google.com/?q=Titan+Pro+Fitness+Club+Rajendra+Nagar+Patna" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:700">Open Google Maps →</a>
-    </div>
-  </div>
 
-  <div class="features-grid">
-    <div class="card">
-      <h3>🏋️ Elite Equipment & Zones</h3>
-      <p>State-of-the-art biomechanical strength machines, Olympic lifting platforms, and dedicated functional turf for peak athletic output.</p>
-    </div>
-    <div class="card">
-      <h3>⚡ Certified Personal Coaching</h3>
-      <p>Custom nutritional blueprints and scientifically structured progressive overload regimens tailored to your exact metabolic goals.</p>
-    </div>
-    <div class="card">
-      <h3>🔥 Dynamic Group Batches</h3>
-      <p>Early morning and evening high-energy sessions including HIIT, kettlebell circuits, and core conditioning designed for busy schedules.</p>
-    </div>
-  </div>
+    <!-- ==========================================
+         2. 100% SOLID OPAQUE HEADER & NAVIGATION
+         ========================================== -->
+    <header class="bg-[#09090b] border-b border-zinc-800 sticky top-0 z-40 w-full transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
+                    <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="font-heading text-lg sm:text-2xl font-extrabold tracking-tight block text-white">TITAN PRO</span>
+                    <span class="text-[10px] sm:text-xs text-zinc-400 font-medium tracking-widest uppercase block -mt-1">Fitness Club • Patna</span>
+                </div>
+            </a>
 
-  <footer>
-    Concept & Technology crafted by <strong>Arclane Studios</strong> • Patna SMB Growth Initiative
-  </footer>
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">About</a>
+                <a href="#amenities" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Facilities</a>
+                <a href="#trainers" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Trainers</a>
+                <a href="#pricing" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Memberships</a>
+                <a href="#reviews" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Header Action Button (Desktop) -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+919876543210" class="flex items-center gap-2 text-sm font-bold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 px-4 py-2.5 rounded-xl hover:border-zinc-700 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>+91 98765 43210</span>
+                </a>
+                <a href="#trial" class="bg-primary hover:bg-primaryDark text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">
+                    Free Trial Pass
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-white focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         3. MOBILE BACKDROP & DRAWER ARCHITECTURE
+         ========================================== -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
+                        <i data-lucide="dumbbell" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-heading font-bold text-lg text-white">Titan Pro</span>
+                </div>
+                <button id="close-btn" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 text-zinc-400 hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4">
+                <a href="#about" class="mobile-nav-link text-lg font-semibold text-zinc-200 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>About Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#amenities" class="mobile-nav-link text-lg font-semibold text-zinc-200 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Facilities</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#trainers" class="mobile-nav-link text-lg font-semibold text-zinc-200 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Expert Trainers</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#pricing" class="mobile-nav-link text-lg font-semibold text-zinc-200 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Memberships</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-lg font-semibold text-zinc-200 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Member Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-lg font-semibold text-zinc-200 hover:text-primary py-2 flex items-center justify-between">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 space-y-4">
+            <a href="tel:+919876543210" class="w-full flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-800 text-white font-semibold py-3.5 rounded-xl min-h-[48px]">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <span>Call +91 98765 43210</span>
+            </a>
+            <a href="#trial" class="mobile-nav-link w-full flex items-center justify-center gap-2 bg-primary hover:bg-primaryDark text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/30 min-h-[48px]">
+                <span>Claim Free Trial</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         4. HERO SECTION
+         ========================================== -->
+    <section class="relative pt-12 pb-20 md:py-28 overflow-hidden">
+        <!-- Ambient background glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-full">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-zinc-200">4.6★ Rated Across 92+ Google Reviews</span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words font-heading sm: lg: font-extrabold tracking-tight text-white leading-[1.1]">
+                        BUILD YOUR <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-rose-400">ULTIMATE</span> PHYSIQUE.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Welcome to Patna's most elite fitness destination in <span class="text-zinc-200 font-semibold">Rajendra Nagar</span>. Featuring world-class strength equipment, certified personal trainers, and a high-energy community dedicated to results.
+                    </p>
+
+                    <!-- Hero CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#trial" class="w-full sm:w-auto bg-primary hover:bg-primaryDark text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-primary/30 flex items-center justify-center gap-3 transition-all min-h-[48px]">
+                            <span>Claim Free Day Pass</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+919876543210" class="w-full sm:w-auto bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-200 hover:text-white font-semibold text-base px-8 py-4 rounded-xl flex items-center justify-center gap-3 transition-all min-h-[48px]">
+                            <i data-lucide="phone-call" class="w-5 h-5 text-primary"></i>
+                            <span>Call Gym Now</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats Bar -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-zinc-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-extrabold text-white">5,000+</div>
+                            <div class="text-xs sm:text-sm text-zinc-400">Sq. Ft. Facility</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-extrabold text-white">100%</div>
+                            <div class="text-xs sm:text-sm text-zinc-400">Pro Equipment</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-extrabold text-white">4.6★</div>
+                            <div class="text-xs sm:text-sm text-zinc-400">Client Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Titan Pro Fitness Club Gym Floor Rajendra Nagar Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Rajendra Nagar, Patna</h4>
+                                <p class="text-xs text-zinc-400">Open Daily: 5:30 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. TRUST BADGE & SOCIAL PROOF STRIP
+         ========================================== -->
+    <section class="border-y border-zinc-800 bg-zinc-950/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div>
+                    <h3 class="font-heading text-lg font-bold text-white">Trusted by Patna's Fitness Enthusiasts</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400">Rated exceptionally high by weightlifters, bodybuilders, and fitness beginners.</p>
+                </div>
+                <div class="flex items-center gap-6 flex-wrap justify-center">
+                    <div class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2.5 rounded-xl">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-primary"></i>
+                        <span class="text-xs font-bold text-zinc-200">Certified Trainers</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2.5 rounded-xl">
+                        <i data-lucide="zap" class="w-5 h-5 text-primary"></i>
+                        <span class="text-xs font-bold text-zinc-200">Advanced Weight Machines</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2.5 rounded-xl">
+                        <i data-lucide="heart" class="w-5 h-5 text-primary"></i>
+                        <span class="text-xs font-bold text-zinc-200">Hygenic & AC Gym Floor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         6. FACILITIES & AMENITIES SECTION
+         ========================================== -->
+    <section id="amenities" class="py-20 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">World-Class Setup</span>
+                <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">Everything You Need For Maximum Gains</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">We don't just provide equipment; we provide the ultimate training ecosystem designed to push your limits safely.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Facility 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Heavy Duty Free Weights</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Complete collection of Olympic barbells, heavy dumbbells up to 50kg+, power racks, and bumper plates.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-primary flex items-center gap-1">
+                        <span>Built for Strength</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Facility 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Advanced Cardio Zone</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">State-of-the-art treadmills, cross trainers, stationary bikes, and rowing machines for optimal fat loss and stamina.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-primary flex items-center gap-1">
+                        <span>Endurance & Fat Loss</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Facility 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="users" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Expert Personal Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">One-on-one coaching customized to your body type, metabolism, and specific muscle building or toning goals.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-primary flex items-center gap-1">
+                        <span>100% Results Focused</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Facility 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">CrossFit & Functional Area</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Dedicated turf area for functional training, kettlebells, battle ropes, agility ladders, and core conditioning.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-primary flex items-center gap-1">
+                        <span>Agility & Core</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Facility 5 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="thermometer" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Fully Air-Conditioned</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Beat Patna's intense heat with our powerful central AC and advanced ventilation system for comfortable workouts.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-primary flex items-center gap-1">
+                        <span>All-Season Comfort</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Facility 6 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-primary/50 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="droplet" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Locker & Shower Rooms</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Clean, secure lockers and well-maintained changing rooms so you can freshen up before heading to work or college.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 text-xs font-semibold text-primary flex items-center gap-1">
+                        <span>Hygiene Guaranteed</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         7. ABOUT / GYM VIBE SHOWCASE
+         ========================================== -->
+    <section id="about" class="py-20 bg-zinc-950/60 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Gym Workout Patna" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Weightlifting Titan Pro" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Fitness Training Patna" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Titan Pro Gym Floor" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">About Titan Pro Fitness</span>
+                    <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">Patna's Most Passionate Fitness Community</h2>
+                    <p class="text-zinc-400 text-base leading-relaxed">
+                        Located centrally in <span class="text-white font-semibold">Rajendra Nagar, Patna</span>, Titan Pro Fitness Club was founded with a singular mission: to provide a high-performance training ground where ordinary people achieve extraordinary physical transformations.
+                    </p>
+                    <p class="text-zinc-400 text-base leading-relaxed">
+                        Whether your goal is rigorous bodybuilding, effective weight loss, functional strength, or general fitness, our experienced trainers and premium equipment ensure you have every tool needed to succeed.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-center gap-3 bg-zinc-900 border border-zinc-800 p-4 rounded-xl">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm font-bold text-zinc-200">Zero Ego Atmosphere</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-zinc-900 border border-zinc-800 p-4 rounded-xl">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm font-bold text-zinc-200">Diet & Nutrition Guidance</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#trial" class="inline-flex items-center gap-2 bg-primary hover:bg-primaryDark text-white font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-primary/25">
+                            <span>Join The Club Today</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         8. EXPERT TRAINERS SECTION
+         ========================================== -->
+    <section id="trainers" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Elite Mentorship</span>
+                <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">Train With Patna's Finest Coaches</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Our certified trainers bring years of competitive experience and scientific training methodologies to fast-track your progress.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Trainer 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Trainer Rahul Kumar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-lg">Head Coach</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Rahul Kumar</h3>
+                        <p class="text-xs text-primary font-semibold mb-3">Strength & Hypertrophy Specialist (8+ Yrs Exp)</p>
+                        <p class="text-zinc-400 text-sm">Expert in heavy compound lifting, powerlifting technique, and customized mass-building routines.</p>
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Trainer Priya Singh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-lg">Fat Loss & Conditioning</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Priya Singh</h3>
+                        <p class="text-xs text-primary font-semibold mb-3">Fat Loss & Functional Coach (6+ Yrs Exp)</p>
+                        <p class="text-zinc-400 text-sm">Specializes in sustainable fat loss, high-intensity interval training (HIIT), and toning for women & men.</p>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Trainer Amit Sharma" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-lg">Personal Trainer</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Amit Sharma</h3>
+                        <p class="text-xs text-primary font-semibold mb-3">Bodybuilding & Diet Consultant</p>
+                        <p class="text-zinc-400 text-sm">Focuses on contest prep, muscle definition, and rigorous one-on-one personal coaching sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         9. PRICING & MEMBERSHIP PLANS
+         ========================================== -->
+    <section id="pricing" class="py-20 bg-zinc-950/60 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Transparent Value</span>
+                <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">Membership Plans For Every Goal</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">No hidden fees. Full access to premium equipment, expert floor trainers, and air-conditioned workout floors.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Plan 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all">
+                    <div>
+                        <div class="inline-block bg-zinc-800 text-zinc-300 text-xs font-bold px-3 py-1 rounded-full mb-4">Monthly Starter</div>
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">1 Month Pass</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Perfect for short-term visitors or trying out the facility.</p>
+                        <div class="font-heading text-4xl font-extrabold text-white mb-6">₹1,500 <span class="text-xs text-zinc-400 font-normal">/ month</span></div>
+
+                        <ul class="space-y-3 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Full Gym Access</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Cardio & Weight Floors</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Locker Room Access</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-500 line-through">
+                                <i data-lucide="x" class="w-4 h-4 text-zinc-600 shrink-0"></i>
+                                <span>Personal Trainer Consultation</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#trial" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-3.5 rounded-xl text-center transition-all min-h-[48px] flex items-center justify-center">
+                        Choose Monthly
+                    </a>
+                </div>
+
+                <!-- Plan 2 (Featured / Popular) -->
+                <div class="bg-gradient-to-b from-zinc-900 to-zinc-950 border-2 border-primary rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl shadow-primary/10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
+                        Most Popular in Patna 🔥
+                    </div>
+                    <div>
+                        <div class="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4">Best Value</div>
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">6 Months Pro</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Ideal for serious body transformation and muscle gain.</p>
+                        <div class="font-heading text-4xl font-extrabold text-white mb-6">₹6,000 <span class="text-xs text-zinc-400 font-normal">/ 6 months</span></div>
+
+                        <ul class="space-y-3 mb-8 text-sm text-zinc-200">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Full Gym Access (All Hours)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Cardio, Weights & CrossFit Area</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Free Diet & Workout Chart</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Body Composition Analysis</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#trial" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3.5 rounded-xl text-center transition-all shadow-lg shadow-primary/30 min-h-[48px] flex items-center justify-center">
+                        Claim 6 Month Plan
+                    </a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all">
+                    <div>
+                        <div class="inline-block bg-zinc-800 text-zinc-300 text-xs font-bold px-3 py-1 rounded-full mb-4">Ultimate Elite</div>
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">12 Months Elite</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Maximum savings for dedicated fitness enthusiasts.</p>
+                        <div class="font-heading text-4xl font-extrabold text-white mb-6">₹10,000 <span class="text-xs text-zinc-400 font-normal">/ year</span></div>
+
+                        <ul class="space-y-3 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>All 6 Month Benefits Included</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Priority Personal Training Slot</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Free Guest Passes (2 / mo)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-primary shrink-0"></i>
+                                <span>Dedicated Locker Priority</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#trial" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-3.5 rounded-xl text-center transition-all min-h-[48px] flex items-center justify-center">
+                        Choose Annual Elite
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         10. GOOGLE REVIEWS SECTION (4.6★ / 92 Reviews)
+         ========================================== -->
+    <section id="reviews" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-full">
+                    <div class="flex items-center text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm font-bold text-zinc-200">4.6★ Rating • 92+ Google Reviews</span>
+                </div>
+                <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">What Our Members Say</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Real experiences from gym members training with us in Rajendra Nagar, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            "Titan Pro is easily the best gym in Rajendra Nagar. The equipment is top-tier, heavy dumbbells are always available, and the trainers are very cooperative and knowledgeable."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">AK</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Abhishek Kumar</h4>
+                            <p class="text-xs text-zinc-500">Google Local Guide • 1 Year Member</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            "Very clean gym with powerful AC. The environment is extremely motivating. Lost 8 kgs in 3 months under their guidance. Highly recommended for anyone serious about fitness."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">PS</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Pooja Sinha</h4>
+                            <p class="text-xs text-zinc-500">Google Reviewer • 6 Months Member</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            "Awesome crowd and superb management. The squat racks and benches are professional grade. Worth every single rupee of the membership fee."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-zinc-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">RM</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Rohit Mishra</h4>
+                            <p class="text-xs text-zinc-500">Google Reviewer • 2 Year Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         11. FREE TRIAL FORM & CTA SECTION
+         ========================================== -->
+    <section id="trial" class="py-20 bg-zinc-950/80 border-t border-zinc-800 relative overflow-hidden">
+        <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Zero Commitment</span>
+                    <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">Claim Your Free Day Pass & Body Analysis</h2>
+                    <p class="text-zinc-400 text-base leading-relaxed">
+                        Experience Titan Pro Fitness Club firsthand. Fill out the quick form to secure your free trial pass and complimentary body fat & muscle mass analysis at our Rajendra Nagar facility.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-zinc-300">Full 1-Day Access to Gym Floor & Equipment</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-zinc-300">Free InBody / Body Composition Assessment</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-zinc-300">1-on-1 Consultation with Expert Trainer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form Card -->
+                <div class="lg:col-span-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl shadow-2xl">
+                        <h3 class="font-heading text-2xl font-bold text-white mb-6">Get Your Free Pass Instantly</h3>
+                        
+                        <form id="trial-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 uppercase mb-2">Your Full Name</label>
+                                <input type="text" id="name" required placeholder="e.g. Rahul Sharma" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 uppercase mb-2">WhatsApp / Phone Number</label>
+                                <input type="tel" id="phone" required placeholder="e.g. +91 98765 43210" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 uppercase mb-2">Primary Fitness Goal</label>
+                                <select id="goal" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-primary transition-colors text-sm">
+                                    <option value="Muscle Building">Muscle Building & Hypertrophy</option>
+                                    <option value="Fat Loss">Fat Loss & Toning</option>
+                                    <option value="General Fitness">General Fitness & Stamina</option>
+                                    <option value="Personal Training">Personal Coaching</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                                <span id="btn-text">Claim Free Trial Pass</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5" id="btn-icon"></i>
+                            </button>
+
+                            <p class="text-[11px] text-zinc-500 text-center pt-2">
+                                We respect your privacy. No spam. Instant pass delivery via WhatsApp / SMS.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         12. FAQ ACCORDION SECTION
+         ========================================== -->
+    <section class="py-20 border-t border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Got Questions?</span>
+                <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">Frequently Asked Questions</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know about joining Titan Pro Fitness Club in Patna.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 min-h-[48px] focus:outline-none">
+                        <span>What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-3">
+                        Titan Pro Fitness Club is open 7 days a week. Monday to Saturday: 5:30 AM to 10:00 PM, and Sunday: 6:00 AM to 1:00 PM.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 min-h-[48px] focus:outline-none">
+                        <span>Where is Titan Pro Fitness Club located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-3">
+                        We are conveniently located in Rajendra Nagar, Patna, with easy accessibility and ample parking space for two-wheelers and cars.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 min-h-[48px] focus:outline-none">
+                        <span>Are personal trainers available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-3">
+                        Yes! Floor trainers are always available to guide members with proper form and posture. We also offer dedicated one-on-one personal training packages for personalized transformation goals.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 min-h-[48px] focus:outline-none">
+                        <span>Do you provide diet charts and nutrition advice?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-3">
+                        Yes, customized diet and nutrition counseling is included with our 6-month and annual memberships to ensure you reach your fitness goals efficiently.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         13. GOOGLE MAPS & LOCATION SECTION
+         ========================================== -->
+    <section id="contact" class="py-20 bg-zinc-950/60 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Find Us</span>
+                <h2 class="break-words font-heading text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">Visit Titan Pro Fitness Today</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Drop by our Rajendra Nagar facility for a tour of the gym floor.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Location Details Card -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base mb-1">Gym Address</h4>
+                                <p class="text-zinc-400 text-sm leading-relaxed">Rajendra Nagar, Patna, Bihar, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base mb-1">Phone Number</h4>
+                                <a href="tel:+919876543210" class="text-primary hover:underline text-sm font-semibold">+91 98765 43210</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base mb-1">Timing</h4>
+                                <p class="text-zinc-400 text-sm">Mon - Sat: 5:30 AM – 10:00 PM</p>
+                                <p class="text-zinc-400 text-sm">Sun: 6:00 AM – 1:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800">
+                            <a href="https://maps.google.com/?q=Rajendra+Nagar+Patna" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary/25 min-h-[48px]">
+                                <i data-lucide="navigation" class="w-5 h-5"></i>
+                                <span>Get Directions on Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-7">
+                    <div class="w-full h-[450px] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.77123456789!2d85.1500!3d25.6000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzAwLjAiTiA4NcKwMDknMDAuMCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Titan Pro Fitness Club Location Patna">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         14. FOOTER
+         ========================================== -->
+    <footer class="bg-black border-t border-zinc-800 py-16 text-zinc-400">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-heading text-xl font-extrabold text-white block">TITAN PRO</span>
+                            <span class="text-[10px] text-zinc-400 uppercase tracking-widest block -mt-1">Fitness Club • Patna</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Patna's premier destination for serious strength training, fat loss, and muscle conditioning in Rajendra Nagar.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <span class="text-xs bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-lg font-bold text-zinc-200">4.6★ 92+ Google Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="space-y-4">
+                    <h4 class="font-heading text-white font-bold text-base">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Gym</a></li>
+                        <li><a href="#amenities" class="hover:text-primary transition-colors">Facilities & Equipment</a></li>
+                        <li><a href="#trainers" class="hover:text-primary transition-colors">Expert Trainers</a></li>
+                        <li><a href="#pricing" class="hover:text-primary transition-colors">Membership Plans</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Member Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="space-y-4">
+                    <h4 class="font-heading text-white font-bold text-base">Facilities</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><span class="text-zinc-400">Heavy Free Weights</span></li>
+                        <li><span class="text-zinc-400">Advanced Cardio Zone</span></li>
+                        <li><span class="text-zinc-400">CrossFit & Turf Area</span></li>
+                        <li><span class="text-zinc-400">Fully Air-Conditioned</span></li>
+                        <li><span class="text-zinc-400">Locker & Shower Rooms</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="space-y-4">
+                    <h4 class="font-heading text-white font-bold text-base">Contact Us</h4>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Rajendra Nagar, Patna, Bihar, India
+                    </p>
+                    <p class="text-sm text-zinc-400">
+                        Phone: <a href="tel:+919876543210" class="text-primary hover:underline font-semibold">+91 98765 43210</a>
+                    </p>
+                    <div class="pt-2">
+                        <a href="#trial" class="inline-block bg-primary hover:bg-primaryDark text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg shadow-primary/20">
+                            Claim Free Trial Pass
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> Titan Pro Fitness Club, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-1">
+                    <span>Designed for local business excellence</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         15. STICKY MOBILE BOTTOM ACTION BAR
+         ========================================== -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b]/95 backdrop-blur-md border-t border-zinc-800 p-3 grid grid-cols-2 gap-3">
+        <a href="tel:+919876543210" class="flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-800 text-white font-bold py-3 rounded-xl text-sm min-h-[48px] shadow-md">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Hi%20Titan%20Pro%20Fitness,%20I%20want%20to%20claim%20my%20Free%20Trial%20Pass!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-primary hover:bg-primaryDark text-white font-bold py-3 rounded-xl text-sm min-h-[48px] shadow-lg shadow-primary/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- ==========================================
+         16. SUCCESS MODAL POPUP
+         ========================================== -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 max-w-md w-full p-8 rounded-3xl text-center space-y-6 shadow-2xl relative animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-primary/20 text-primary border border-primary/40 flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <div class="space-y-2">
+                <h3 class="font-heading text-2xl font-extrabold text-white">Trial Pass Reserved!</h3>
+                <p class="text-sm text-zinc-400" id="modal-msg">
+                    Thank you! Your free 1-day trial pass & body analysis have been successfully registered for Rajendra Nagar, Patna.
+                </p>
+            </div>
+            <div class="bg-zinc-950 border border-zinc-800 p-4 rounded-xl text-left text-xs text-zinc-300 space-y-1">
+                <p class="font-bold text-white">📍 Location: Rajendra Nagar, Patna</p>
+                <p>⏰ Timing: Show this confirmation at the front desk.</p>
+            </div>
+            <button onclick="closeModal()" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3.5 rounded-xl transition-all min-h-[48px]">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         17. JAVASCRIPT LOGIC
+         ========================================== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
+            const isOpen = !mobileDrawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        menuBackdrop.addEventListener('click', toggleMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // FAQ Accordion Logic
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Form Handling & Success Modal
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const goal = document.getElementById('goal').value;
+
+            // Basic XSS & sanitation check
+            if (!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Processing Pass...';
+            btnIcon.setAttribute('data-lucide', 'loader-2');
+            lucide.createIcons();
+
+            setTimeout(() => {
+                // Reset button
+                submitBtn.disabled = false;
+                btnText.textContent = 'Claim Free Trial Pass';
+                btnIcon.setAttribute('data-lucide', 'arrow-right');
+                lucide.createIcons();
+
+                // Update modal message
+                document.getElementById('modal-msg').textContent = `Thank you ${name}! Your free 1-day trial pass for ${goal} has been registered. We look forward to welcoming you at Rajendra Nagar, Patna.`;
+
+                // Show modal
+                const modal = document.getElementById('success-modal');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+
+                // Reset form
+                document.getElementById('trial-form').reset();
+            }, 1000);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
 </body>
 </html>
