@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Studio | Premier Fitness Gym in Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0A0A0C',
+                        surface: '#16161A',
+                        primary: '#CCFF00',
+                        secondary: '#00F0FF',
+                        textPrimary: '#FFFFFF',
+                        textMuted: '#94A3B8',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #0A0A0C;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #CCFF00;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0C] text-white overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#CCFF00] text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
+        <span>Special Offer: Free Trial Session & Body Assessment this Week!</span>
+        <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20claim%20my%20free%20trial!" target="_blank" rel="noopener noreferrer" class="underline hover:opacity-80 font-bold ml-1">Claim Now</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#0A0A0C] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-[#CCFF00] flex items-center justify-center text-black font-black text-xl font-syne shadow-lg shadow-[#CCFF00]/20 group-hover:scale-105 transition-transform">
+                    F
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-black font-syne tracking-wider text-white">FLEX <span class="text-[#CCFF00]">STUDIO</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-[#94A3B8] font-semibold -mt-1">Patna, Bihar</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-[#94A3B8]">
+                <a href="#services" class="hover:text-[#CCFF00] transition-colors">Programs</a>
+                <a href="#why-us" class="hover:text-[#CCFF00] transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-[#CCFF00] transition-colors">About</a>
+                <a href="#gallery" class="hover:text-[#CCFF00] transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-[#CCFF00] transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-[#CCFF00] transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-[#CCFF00] transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop WhatsApp & Phone CTA -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="tel:+918002891247" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm hover:border-[#CCFF00] transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-[#CCFF00]"></i>
+                    <span>+91 80028 91247</span>
+                </a>
+                <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20would%20like%20to%20know%20more%20about%20gym%20membership." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#CCFF00] text-black font-bold text-sm hover:bg-[#d4ff33] transition-all shadow-lg shadow-[#CCFF00]/10">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                    <span>WhatsApp Chat</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:text-[#CCFF00] transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#0A0A0C] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="flex flex-col gap-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <span class="text-lg font-bold font-syne text-white">Menu</span>
+                <button id="menu-close" aria-label="Close menu" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-[#94A3B8] hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 text-base font-medium text-[#94A3B8]">
+                <a href="#services" class="mobile-link hover:text-[#CCFF00] transition-colors py-2">Programs</a>
+                <a href="#why-us" class="mobile-link hover:text-[#CCFF00] transition-colors py-2">Why Us</a>
+                <a href="#about" class="mobile-link hover:text-[#CCFF00] transition-colors py-2">About</a>
+                <a href="#gallery" class="mobile-link hover:text-[#CCFF00] transition-colors py-2">Gallery</a>
+                <a href="#reviews" class="mobile-link hover:text-[#CCFF00] transition-colors py-2">Reviews</a>
+                <a href="#faq" class="mobile-link hover:text-[#CCFF00] transition-colors py-2">FAQ</a>
+                <a href="#contact" class="mobile-link hover:text-[#CCFF00] transition-colors py-2">Location & Contact</a>
+            </nav>
+        </div>
+        <div class="flex flex-col gap-3 pt-6 border-t border-zinc-800">
+            <a href="tel:+918002891247" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm">
+                <i data-lucide="phone" class="w-4 h-4 text-[#CCFF00]"></i>
+                <span>+91 80028 91247</span>
+            </a>
+            <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#CCFF00] text-black font-bold text-sm shadow-lg shadow-[#CCFF00]/10">
+                <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                <span>WhatsApp Trial Booking</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-[#CCFF00]/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900/90 border border-zinc-800 mb-6 shadow-md">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-white">4.7 ★ <span class="text-[#94A3B8] font-normal">(229 Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Hero Title -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Unleash Your Ultimate Strength at <span class="text-[#CCFF00] underline decoration-[#CCFF00]/40 decoration-wavy">Flex Studio Patna</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-[#94A3B8] font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                        Transform your physique with state-of-the-art equipment, elite personal trainers, and high-energy training programs located right at Raman Market, Ramnagri More, Ashiana-Digha Road.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20would%20like%20to%20book%20my%20Free%20Trial%20session." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#CCFF00] text-black font-extrabold text-base hover:bg-[#d4ff33] transition-all shadow-xl shadow-[#CCFF00]/20 min-h-[52px]">
+                            <i data-lucide="zap" class="w-5 h-5 fill-black"></i>
+                            <span>Book Free Trial</span>
+                        </a>
+                        <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20have%20a%20question%20about%20memberships." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold text-base hover:border-[#00F0FF] hover:text-[#00F0FF] transition-all min-h-[52px]">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Location Quick Tag -->
+                    <div class="flex items-center gap-2 mt-8 text-sm text-[#94A3B8]">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-[#CCFF00]"></i>
+                        <span>Raman Market, Ramnagri More, Ashiana-Digha Rd, Patna</span>
+                    </div>
+
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Flex Studio Gym Interior Patna" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge on Image -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00]">
+                                    <i data-lucide="dumbbell" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold font-syne text-white">Elite Equipment</h4>
+                                    <p class="text-xs text-[#94A3B8]">Pro Grade Machines & Weights</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-[#CCFF00] text-black">Active</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-zinc-950 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="flex items-center gap-1 text-amber-400 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <span class="text-2xl font-black font-syne text-white">4.7 / 5.0</span>
+                    </div>
+                    <p class="text-sm text-[#94A3B8]">Average Rating on Google Reviews</p>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 pt-6 md:pt-4">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i data-lucide="users" class="w-5 h-5 text-[#CCFF00]"></i>
+                        <span class="text-2xl font-black font-syne text-white">229+ Reviews</span>
+                    </div>
+                    <p class="text-sm text-[#94A3B8]">Trusted by Fitness Enthusiasts in Patna</p>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 pt-6 md:pt-4">
+                    <div class="flex items-center gap-2 mb-1">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-[#00F0FF]"></i>
+                        <span class="text-xl font-bold font-syne text-white">Ashiana-Digha Road</span>
+                    </div>
+                    <p class="text-sm text-[#94A3B8]">Prime Location at Ramnagri More</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Programs Grid -->
+    <section id="services" class="py-20 md:py-32 bg-[#0A0A0C] relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-[#CCFF00] mb-3 inline-block bg-[#CCFF00]/10 px-3 py-1 rounded-full border border-[#CCFF00]/20">World-Class Programs</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Designed to Transform Your Body & Mind
+                </h2>
+                <p class="text-sm sm:text-base text-[#94A3B8] leading-relaxed break-words">
+                    Whether you want to build lean muscle mass, melt stubborn fat, or increase athletic endurance, our structured programs deliver guaranteed results.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-surface border border-zinc-800 hover:border-[#CCFF00] rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00] mb-6 group-hover:bg-[#CCFF00] group-hover:text-black transition-colors">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Strength Training</h3>
+                        <p class="text-sm text-[#94A3B8] leading-relaxed mb-6">
+                            Heavy power racks, Olympic barbells, plate-loaded machines, and dumbbells for pure muscle hypertrophy and strength building.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20know%20more%20about%20Strength%20Training." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-[#CCFF00] group-hover:translate-x-1 transition-transform pt-4 border-t border-zinc-800">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface border border-zinc-800 hover:border-[#CCFF00] rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#00F0FF]/10 flex items-center justify-center text-[#00F0FF] mb-6 group-hover:bg-[#00F0FF] group-hover:text-black transition-colors">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Fat Loss & Cardio</h3>
+                        <p class="text-sm text-[#94A3B8] leading-relaxed mb-6">
+                            Advanced treadmills, ellipticals, indoor cycles, and HIIT workout routines designed to incinerate calories and shred body fat.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20know%20more%20about%20Fat%20Loss%20%26%20Cardio." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-[#00F0FF] group-hover:translate-x-1 transition-transform pt-4 border-t border-zinc-800">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-surface border border-zinc-800 hover:border-[#CCFF00] rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Personal Coaching</h3>
+                        <p class="text-sm text-[#94A3B8] leading-relaxed mb-6">
+                            One-on-one expert guidance, custom workout scheduling, and science-backed nutritional advice tailored to your body type.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20know%20more%20about%20Personal%20Coaching." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-purple-400 group-hover:translate-x-1 transition-transform pt-4 border-t border-zinc-800">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface border border-zinc-800 hover:border-[#CCFF00] rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-black transition-colors">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-3">Functional Fitness</h3>
+                        <p class="text-sm text-[#94A3B8] leading-relaxed mb-6">
+                            Kettlebells, battle ropes, medicine balls, and agility training to improve core stability, balance, and daily physical performance.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20know%20more%20about%20Functional%20Fitness." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform pt-4 border-t border-zinc-800">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 md:py-32 bg-zinc-950 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-xs font-bold tracking-widest uppercase text-[#CCFF00] mb-3 inline-block bg-[#CCFF00]/10 px-3 py-1 rounded-full border border-[#CCFF00]/20">Why Flex Studio</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                         Patna's Ultimate Destination For Serious Fitness
+                    </h2>
+                    <p class="text-sm sm:text-base text-[#94A3B8] leading-relaxed mb-8 break-words">
+                        We aren't just a gym; we are a community of dedicated trainers and members pushing past limits every single day. Here is what sets us apart in Ashiana-Digha Road.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                        <div class="bg-surface p-5 rounded-xl border border-zinc-800">
+                            <div class="w-10 h-10 rounded-lg bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00] mb-3">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-base font-bold font-syne text-white mb-2">Certified Trainers</h4>
+                            <p class="text-xs text-[#94A3B8]">Expert coaches providing safe posture and personalized workout charts.</p>
+                        </div>
+                        <div class="bg-surface p-5 rounded-xl border border-zinc-800">
+                            <div class="w-10 h-10 rounded-lg bg-[#00F0FF]/10 flex items-center justify-center text-[#00F0FF] mb-3">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-base font-bold font-syne text-white mb-2">Modern Equipment</h4>
+                            <p class="text-xs text-[#94A3B8]">Imported heavy-duty machines maintained in pristine condition daily.</p>
+                        </div>
+                        <div class="bg-surface p-5 rounded-xl border border-zinc-800">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-3">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-base font-bold font-syne text-white mb-2">High-Energy Vibe</h4>
+                            <p class="text-xs text-[#94A3B8]">Electric environment and motivating music to keep your adrenaline pumping.</p>
+                        </div>
+                        <div class="bg-surface p-5 rounded-xl border border-zinc-800">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 mb-3">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="text-base font-bold font-syne text-white mb-2">Flexible Timings</h4>
+                            <p class="text-xs text-[#94A3B8]">Open early morning till late evening to fit your daily schedule.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Gym Workout" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Fitness Equipment" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                                <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80" alt="Dumbbells rack" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                                <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&w=600&q=80" alt="Personal Training" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 md:py-32 bg-[#0A0A0C]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80" alt="Flex Studio Patna Story" class="object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-6 left-6 right-6 bg-zinc-900/90 backdrop-blur-md p-5 rounded-xl border border-zinc-800">
+                            <p class="text-sm font-semibold text-white italic">"Flex Studio is built for people who refuse to compromise on their health and fitness goals. We provide the right environment, gear, and guidance."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-xs font-bold tracking-widest uppercase text-[#CCFF00] mb-3 inline-block bg-[#CCFF00]/10 px-3 py-1 rounded-full border border-[#CCFF00]/20">Our Story</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Empowering Patna's Fitness Journey Since Day One
+                    </h2>
+                    <p class="text-sm sm:text-base text-[#94A3B8] leading-relaxed mb-6 break-words">
+                        Conveniently situated at Raman Market, Ramnagri More on Ashiana-Digha Road, Flex Studio has rapidly become Patna's most trusted fitness hub. Our mission is to make high-end fitness accessible, engaging, and result-oriented for everyone.
+                    </p>
+                    <p class="text-sm sm:text-base text-[#94A3B8] leading-relaxed mb-8 break-words">
+                        With over 229 verified 5-star Google reviews backing our commitment, we take pride in our clean, disciplined, and energetic workout floors. Whether you are a beginner stepping into a gym for the first time or an experienced athlete, Flex Studio welcomes you.
+                    </p>
+                    <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20visit%20the%20gym%20for%20a%20tour." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-8 py-4 rounded-xl bg-[#CCFF00] text-black font-extrabold text-sm hover:bg-[#d4ff33] transition-all shadow-lg shadow-[#CCFF00]/10 min-h-[48px]">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Visit Our Studio Today</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section id="gallery" class="py-20 md:py-32 bg-zinc-950 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-[#CCFF00] mb-3 inline-block bg-[#CCFF00]/10 px-3 py-1 rounded-full border border-[#CCFF00]/20">Gym Gallery</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Take a Visual Tour of Flex Studio
+                </h2>
+                <p class="text-sm sm:text-base text-[#94A3B8] leading-relaxed break-words">
+                    Spacious workout floors, top-tier free weights, cardio zones, and pristine training areas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym Floor" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Weights Area" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Cardio Section" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Functional Training" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Strength Equipment" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&w=800&q=80" alt="Trainer Guidance" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 md:py-32 bg-[#0A0A0C]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-[#CCFF00] mb-3 inline-block bg-[#CCFF00]/10 px-3 py-1 rounded-full border border-[#CCFF00]/20">Google Verified Reviews</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Loved By 229+ Fitness Enthusiasts in Patna
+                </h2>
+                <div class="flex items-center justify-center gap-2 text-amber-400 mt-3">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <span class="text-white font-bold text-lg ml-2">4.7 / 5.0</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-[#94A3B8] leading-relaxed mb-6 italic">
+                            "Best gym in Ramnagri More area! Amazing equipment, highly supportive trainers, and very motivating atmosphere. Highly recommended for serious workout."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-[#CCFF00]/20 text-[#CCFF00] font-bold font-syne flex items-center justify-center">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Abhishek Kumar</h4>
+                            <span class="text-xs text-[#94A3B8]">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-[#94A3B8] leading-relaxed mb-6 italic">
+                            "Great equipment and clean environment. The trainers pay attention to your posture and give customized diet tips. Very good location at Ashiana-Digha Road."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-[#00F0FF]/20 text-[#00F0FF] font-bold font-syne flex items-center justify-center">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Priya Singh</h4>
+                            <span class="text-xs text-[#94A3B8]">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-[#94A3B8] leading-relaxed mb-6 italic">
+                            "Flex Studio has transformed my fitness routine. The atmosphere pushes you to lift heavier and stay consistent. Best gym value in Patna!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 font-bold font-syne flex items-center justify-center">
+                            RV
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Rahul Verma</h4>
+                            <span class="text-xs text-[#94A3B8]">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 md:py-32 bg-zinc-950 border-t border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-[#CCFF00] mb-3 inline-block bg-[#CCFF00]/10 px-3 py-1 rounded-full border border-[#CCFF00]/20">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-sm sm:text-base text-[#94A3B8] leading-relaxed break-words">
+                    Everything you need to know about joining Flex Studio in Patna.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#CCFF00] transition-colors">
+                        <span>How can I book a free trial session at Flex Studio?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#94A3B8] leading-relaxed border-t border-zinc-800 pt-4">
+                        You can easily book your free trial session by clicking the "Book Free Trial" or "WhatsApp Chat" buttons on our website. You can also call us directly at +91 80028 91247 to reserve your slot.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#CCFF00] transition-colors">
+                        <span>What are the gym opening and closing timings?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#94A3B8] leading-relaxed border-t border-zinc-800 pt-4">
+                        Flex Studio is open Monday through Saturday from 6:00 AM to 10:00 PM, and Sunday from 7:00 AM to 1:00 PM to accommodate both early risers and evening workout enthusiasts.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#CCFF00] transition-colors">
+                        <span>Are personal trainers available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#94A3B8] leading-relaxed border-t border-zinc-800 pt-4">
+                        Yes! We have certified personal trainers who specialize in guiding beginners. They provide customized workout charts, correct postures, and ensure safe and effective progression.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#CCFF00] transition-colors">
+                        <span>Where is Flex Studio located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#CCFF00] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#94A3B8] leading-relaxed border-t border-zinc-800 pt-4">
+                        We are located at Raman Market, Ramnagri More, Ashiana - Digha Rd, Patna, Bihar 800025. Easily accessible with ample parking space for bikes and cars.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 md:py-32 bg-[#0A0A0C]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-[#CCFF00] mb-3 inline-block bg-[#CCFF00]/10 px-3 py-1 rounded-full border border-[#CCFF00]/20">Get In Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Visit Or Connect With Us Today
+                </h2>
+                <p class="text-sm sm:text-base text-[#94A3B8] leading-relaxed break-words">
+                    Drop by our studio at Ramnagri More or send us an inquiry for instant membership details.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Contact Info & Hours -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <div class="bg-surface border border-zinc-800 p-6 rounded-2xl">
+                        <h3 class="text-lg font-bold font-syne text-white mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Flex+Studio+Ramnagri+More+Patna" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 group">
+                                <div class="w-10 h-10 rounded-xl bg-[#CCFF00]/10 flex items-center justify-center text-[#CCFF00] shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white group-hover:text-[#CCFF00] transition-colors">Address</h4>
+                                    <p class="text-xs text-[#94A3B8]">Raman Market, Ramnagri More, Ashiana - Digha Rd, Patna, Bihar 800025</p>
+                                </div>
+                            </a>
+
+                            <a href="tel:+918002891247" class="flex items-start gap-4 group">
+                                <div class="w-10 h-10 rounded-xl bg-[#00F0FF]/10 flex items-center justify-center text-[#00F0FF] shrink-0 mt-1">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white group-hover:text-[#00F0FF] transition-colors">Phone / WhatsApp</h4>
+                                    <p class="text-xs text-[#94A3B8]">+91 80028 91247</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-surface border border-zinc-800 p-6 rounded-2xl">
+                        <h3 class="text-lg font-bold font-syne text-white mb-4">Opening Hours</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between pb-3 border-b border-zinc-800">
+                                <span class="text-[#94A3B8]">Monday – Saturday</span>
+                                <span class="font-bold text-white">6:00 AM – 10:00 PM</span>
+                            </div>
+                            <div class="flex justify-between pt-1">
+                                <span class="text-[#94A3B8]">Sunday</span>
+                                <span class="font-bold text-white">7:00 AM – 1:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Form & Map -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <div class="bg-surface border border-zinc-800 p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold font-syne text-white mb-2">Send an Inquiry</h3>
+                        <p class="text-xs text-[#94A3B8] mb-6">Fill out the form below and we will contact you via phone or WhatsApp shortly.</p>
+                        
+                        <form id="inquiry-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-[#94A3B8] mb-2">Your Name</label>
+                                    <input type="text" id="name" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#CCFF00] transition-colors" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-[#94A3B8] mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#CCFF00] transition-colors" placeholder="Enter phone number">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-[#94A3B8] mb-2">Select Program</label>
+                                <select id="service" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#CCFF00] transition-colors">
+                                    <option value="Strength Training">Strength Training</option>
+                                    <option value="Fat Loss & Cardio">Fat Loss & Cardio</option>
+                                    <option value="Personal Coaching">Personal Coaching</option>
+                                    <option value="Functional Fitness">Functional Fitness</option>
+                                    <option value="Free Trial Session">Free Trial Session</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-[#94A3B8] mb-2">Message (Optional)</label>
+                                <textarea id="message" rows="3" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#CCFF00] transition-colors" placeholder="Any specific questions?"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-[#CCFF00] text-black font-extrabold text-sm hover:bg-[#d4ff33] transition-all shadow-lg shadow-[#CCFF00]/10 flex items-center justify-center gap-2 min-h-[48px]">
+                                <i data-lucide="send" class="w-4 h-4 fill-black"></i>
+                                <span>Send Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-surface h-72">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7725946152!2d85.1051!3d25.6115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQxLjQiTiA4NcKwMDYnMTguNCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Flex Studio Location Map Patna">
+                        </iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 z-[200] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 p-8 rounded-2xl max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-[#CCFF00]/20 text-[#CCFF00] flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold font-syne text-white mb-2">Inquiry Submitted!</h3>
+            <p id="success-text" class="text-sm text-[#94A3B8] mb-6">Thank you for reaching out to Flex Studio. We have received your request and will contact you via phone or WhatsApp shortly.</p>
+            <button id="modal-close-btn" class="w-full py-3 rounded-xl bg-[#CCFF00] text-black font-bold text-sm hover:bg-[#d4ff33] transition-all">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0A0A0C] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+918002891247" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-bold text-xs">
+            <i data-lucide="phone" class="w-4 h-4 text-[#CCFF00]"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918002891247?text=Hi%20Flex%20Studio,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#CCFF00] text-black font-extrabold text-xs shadow-lg shadow-[#CCFF00]/20">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+            <span>WhatsApp Trial</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-[#CCFF00] flex items-center justify-center text-black font-black text-lg font-syne">
+                            F
+                        </div>
+                        <span class="text-xl font-black font-syne tracking-wider text-white">FLEX <span class="text-[#CCFF00]">STUDIO</span></span>
+                    </div>
+                    <p class="text-xs text-[#94A3B8] leading-relaxed">
+                        Patna's premier fitness destination featuring pro-grade equipment, certified trainers, and high-energy workout environment.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-400 text-xs font-semibold">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span>4.7 ★ Rating from 229+ Google Reviews</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-syne text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-[#94A3B8]">
+                        <li><a href="#services" class="hover:text-[#CCFF00] transition-colors">Programs</a></li>
+                        <li><a href="#why-us" class="hover:text-[#CCFF00] transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-[#CCFF00] transition-colors">About Story</a></li>
+                        <li><a href="#gallery" class="hover:text-[#CCFF00] transition-colors">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-[#CCFF00] transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-syne text-white mb-4">Programs</h4>
+                    <ul class="space-y-2 text-xs text-[#94A3B8]">
+                        <li><a href="#services" class="hover:text-[#CCFF00] transition-colors">Strength Training</a></li>
+                        <li><a href="#services" class="hover:text-[#CCFF00] transition-colors">Fat Loss & Cardio</a></li>
+                        <li><a href="#services" class="hover:text-[#CCFF00] transition-colors">Personal Coaching</a></li>
+                        <li><a href="#services" class="hover:text-[#CCFF00] transition-colors">Functional Fitness</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-syne text-white mb-4">Location & Contact</h4>
+                    <ul class="space-y-2 text-xs text-[#94A3B8]">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#CCFF00] shrink-0 mt-0.5"></i>
+                            <span>Raman Market, Ramnagri More, Ashiana - Digha Rd, Patna, Bihar 800025</span>
+                        </li>
+                        <li class="flex items-center gap-2 pt-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-[#00F0FF] shrink-0"></i>
+                            <a href="tel:+918002891247" class="hover:text-white transition-colors">+91 80028 91247</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-zinc-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#94A3B8] gap-4">
+                <p>&copy; <span id="current-year"></span> Flex Studio Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:text-[#CCFF00] transition-colors">Privacy Policy</a>
+                    <a href="#contact" class="hover:text-[#CCFF00] transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Handling with Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+
+            if (!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            inquiryForm.reset();
+        });
+
+        modalCloseBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
