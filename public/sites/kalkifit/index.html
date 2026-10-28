@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALKI FITNESS GYM | Patna's Premier Fitness Club</title>
+    <meta name="description" content="Join Kalki Fitness Gym near Shanti Path, Chandpur Bela, Patna. Rated 4.9★ by 38+ reviews. State-of-the-art equipment, expert trainers, strength training & fat loss.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#EF4444',
+                            dark: '#DC2626',
+                            surface: '#121215',
+                            secondary: '#18181B',
+                            bg: '#000000',
+                        }
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-zinc-100 overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-red-600 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="flame" class="w-4 h-4 animate-bounce"></i>
+        <span>Special Offer: Get 1 Month Free Personal Training on Annual Membership!</span>
+        <a href="#contact" class="underline font-bold ml-1 hidden sm:inline hover:text-zinc-200">Claim Now &rarr;</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#000000] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
+                    K
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white leading-none">KALKI <span class="text-red-600">FITNESS</span></span>
+                    <span class="text-[10px] text-zinc-400 font-medium tracking-widest uppercase mt-0.5">Gym & Health Club</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
+                <a href="#services" class="hover:text-red-500 transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-red-500 transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-red-500 transition-colors">About</a>
+                <a href="#gallery" class="hover:text-red-500 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-red-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-red-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-red-500 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop CTA buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+918539939222" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 bg-zinc-900 text-white font-medium text-sm hover:border-red-500 hover:text-red-500 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-red-500"></i>
+                    <span>+91 85399 39222</span>
+                </a>
+                <a href="https://wa.me/918539939222?text=Hi%20Kalki%20Fitness,%20I%20want%20to%20book%20a%20free%20gym%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 text-white font-semibold text-sm hover:bg-red-700 shadow-lg shadow-red-600/20 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs rounded-tl-2xl p-6 pt-5 bg-[#000000] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 overflow-y-auto lg:hidden">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-black text-lg">K</div>
+                    <span class="font-syne font-bold text-lg text-white">KALKI FITNESS</span>
+                </div>
+                <button id="close-menu-btn" aria-label="Close Menu" class="p-2 rounded-xl bg-zinc-900 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 mt-6 font-medium text-base text-zinc-200">
+                <a href="#services" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-900 hover:text-red-500"><span>Services</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#why-us" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-900 hover:text-red-500"><span>Why Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-900 hover:text-red-500"><span>About</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#gallery" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-900 hover:text-red-500"><span>Gallery</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-900 hover:text-red-500"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#faq" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-900 hover:text-red-500"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between py-2 hover:text-red-500"><span>Contact & Location</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+918539939222" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-center flex items-center justify-center gap-2 hover:bg-zinc-800">
+                <i data-lucide="phone" class="w-4 h-4 text-red-500"></i>
+                <span>Call +91 85399 39222</span>
+            </a>
+            <a href="https://wa.me/918539939222?text=Hi%20Kalki%20Fitness,%20I%20want%20to%20book%20a%20free%20gym%20trial!" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-red-600 text-white font-semibold text-center flex items-center justify-center gap-2 hover:bg-red-700 shadow-lg shadow-red-600/30">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Trial Booking</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-[#000000]">
+        <!-- Ambient Red Glow Background -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-red-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900/90 border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400 gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-white">4.9 ★ <span class="text-zinc-400 font-normal">(38 Verified Google Reviews)</span></span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        TRANSFORM YOUR BODY AT <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">KALKI FITNESS</span> GYM
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                        Patna’s ultimate destination for hardcore strength training, elite fat loss programs, and expert personal coaching near Shanti Path, Chandpur Bela. Start your fitness journey today.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/918539939222?text=Hi%20Kalki%20Fitness,%20I%20would%20like%20to%20book%20my%20FREE%20gym%20trial!" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-red-600/30 transition-all group">
+                            <span>Book Free Trial</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="tel:+918539939222" class="px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-red-500 text-white font-bold text-base flex items-center justify-center gap-3 transition-all">
+                            <i data-lucide="phone-call" class="w-5 h-5 text-red-500"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+
+                    <!-- Micro Features Check -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10 pt-8 border-t border-zinc-900 w-full text-zinc-400 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-red-500 shrink-0"></i>
+                            <span>Modern Equipment</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-red-500 shrink-0"></i>
+                            <span>Certified Trainers</span>
+                        </div>
+                        <div class="flex items-center gap-2 col-span-2 sm:col-span-1">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-red-500 shrink-0"></i>
+                            <span>Prime Location</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 aspect-[4/3] sm:aspect-square">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Kalki Fitness Gym Interior" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Floating Badge on Image -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-zinc-950/90 border border-zinc-800 backdrop-blur-md flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-500">
+                                    <i data-lucide="dumbbell" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Pro Training Floor</h4>
+                                    <p class="text-xs text-zinc-400">Chandpur Bela, Patna</p>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-md bg-red-600 text-white text-xs font-bold">Open Daily</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-zinc-950 border-y border-zinc-800 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-red-500 mb-1">4.9★</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Google Rating</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">38+</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Verified Reviews</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-red-500 mb-1">100%</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Expert Guidance</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">Prime</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Chandpur Bela Patna</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Offerings Grid -->
+    <section id="services" class="py-20 bg-[#000000]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-3 block">What We Offer</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">TRAIN WITH PURPOSE</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Comprehensive fitness programs tailored for all goals, whether you want to build muscle, lose fat, or tone up.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Strength & Muscle Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Heavy-duty free weights, power racks, Olympic barbells, and resistance machines designed to build absolute strength and lean muscle mass.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918539939222?text=Hi,%20I%20want%20to%20know%20more%20about%20Strength%20Training." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between py-3 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm font-semibold hover:bg-red-600 hover:border-red-600 transition-colors">
+                        <span>Inquire About Strength</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Fat Loss & Cardio Fitness</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            High-intensity interval training, treadmills, stationary bikes, and specialized cardio circuits crafted to incinerate calories and burn stubborn fat.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918539939222?text=Hi,%20I%20want%20to%20know%20more%20about%20Fat%20Loss%20Programs." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between py-3 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm font-semibold hover:bg-red-600 hover:border-red-600 transition-colors">
+                        <span>Inquire About Fat Loss</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Personal Training 1-on-1</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Dedicated one-on-one coaching with expert fitness trainers who design custom workout routines, diet plans, and track your weekly progress.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/918539939222?text=Hi,%20I%20want%20to%20know%20more%20about%20Personal%20Training." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between py-3 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm font-semibold hover:bg-red-600 hover:border-red-600 transition-colors">
+                        <span>Inquire Personal Trainer</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-zinc-950 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-3 block">Why Kalki Fitness</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">THE PATNA GYM ADVANTAGE</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">We stand out because of our unwavering commitment to your fitness results and community spirit.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-lg shadow-red-600/20">
+                        01
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">4.9 Star Rated</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        Consistently rated 4.9★ across 38+ authentic Google reviews by satisfied members in Patna.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-lg shadow-red-600/20">
+                        02
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Expert Coaches</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        Experienced fitness trainers who guide your form, prevent injuries, and accelerate your transformation.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-lg shadow-red-600/20">
+                        03
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Modern Equipment</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        Clean, well-maintained, heavy-duty machines and weights suitable for beginners and advanced lifters alike.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-lg shadow-red-600/20">
+                        04
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Proven Results</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        Hundreds of members have successfully achieved weight loss, muscle gain, and overall vitality with us.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 bg-[#000000]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Gym Workout Equipment" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-3">About Kalki Fitness</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">BUILT FOR THOSE WHO PUSH BEYOND LIMITS</h2>
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                        Located near Shanti Path, Chandpur Bela, Jai Prakash Nagar, Patna, Kalki Fitness Gym has established itself as a premier health club. We believe fitness is not just about lifting weights; it's about building discipline, confidence, and a resilient lifestyle.
+                    </p>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        Our facility features spacious workout zones, high-grade iron and rubber weights, cardio setups, and a motivating environment where everyone from beginners to seasoned athletes feel welcome.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full pt-6 border-t border-zinc-800">
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-lg mb-1">Friendly Vibe</h4>
+                            <p class="text-xs text-zinc-400">Supportive community of fitness enthusiasts.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-lg mb-1">Affordable Plans</h4>
+                            <p class="text-xs text-zinc-400">Competitive monthly & annual memberships.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-zinc-950 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-3 block">Gym Gallery</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">EXPLORE OUR FACILITY</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Take a visual tour of our well-equipped training floor in Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Gym Floor Dumbbells" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Cardio Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group">
+                    <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&w=800&q=80" alt="Strength Workout" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-[#000000]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-3 block">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">WHAT OUR MEMBERS SAY</h2>
+                <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                </div>
+                <p class="text-zinc-400 text-sm">4.9★ rating based on 38+ verified reviews on Google.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Best gym in Chandpur Bela area! Excellent equipment, great trainer support, and very motivating environment. Highly recommended for anyone serious about fitness."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-red-600/20 border border-red-500/30 flex items-center justify-center font-bold text-red-500">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Aman Kumar</h4>
+                            <p class="text-xs text-zinc-400">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Kalki Fitness has top-notch machines for weight training. The trainers pay attention to your posture and give personal advice. Worth every penny!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-red-600/20 border border-red-500/30 flex items-center justify-center font-bold text-red-500">
+                            R
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Rahul Sharma</h4>
+                            <p class="text-xs text-zinc-400">Verified Member</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Clean premises, great atmosphere near Shanti Path. Perfect for both muscle building and fat loss. Love working out here!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-red-600/20 border border-red-500/30 flex items-center justify-center font-bold text-red-500">
+                            P
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Priya Singh</h4>
+                            <p class="text-xs text-zinc-400">Verified Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-zinc-950 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-3 block">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-zinc-400 text-sm">Everything you need to know about joining Kalki Fitness Gym.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        Kalki Fitness Gym is open daily with convenient morning and evening shifts to accommodate your daily routine. Contact us on WhatsApp for exact timings!
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Do you offer a free trial session?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        Yes! We offer a free trial workout session so you can experience our equipment and training environment before committing to a membership. Click the WhatsApp trial button to book yours.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Are personal trainers available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        Absolutely. Our certified trainers specialize in guiding beginners through correct posture, weightlifting techniques, and personalized diet schedules.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Where exactly is Kalki Fitness located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        We are conveniently located near Shanti Path, Chandpur Bela, Jai Prakash Nagar, Patna, Bihar 800001. You can easily find us via Google Maps!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-[#000000]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs mb-3 block">Get In Touch</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">VISIT OR CONTACT US</h2>
+                <p class="text-zinc-400 text-sm">Ready to start? Reach out to us or drop by the gym today.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Hours -->
+                <div class="lg:col-span-5 flex flex-col gap-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl">
+                        <h3 class="font-syne font-bold text-xl text-white mb-6">Contact Details</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Address</h4>
+                                    <p class="text-zinc-400 text-xs sm:text-sm mt-1">near Shanti Path, Chandpur Bela, Jai Prakash Nagar, Patna, Bihar 800001</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 shrink-0 mt-1">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Phone / WhatsApp</h4>
+                                    <a href="tel:+918539939222" class="text-zinc-400 text-xs sm:text-sm mt-1 hover:text-red-500 block">+91 85399 39222</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 shrink-0 mt-1">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Operating Hours</h4>
+                                    <p class="text-zinc-400 text-xs sm:text-sm mt-1">Monday – Sunday: Open Daily<br>Morning & Evening Shifts</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-zinc-800 flex gap-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kalki+Fitness+Gym+Chandpur+Bela+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-center text-xs sm:text-sm font-semibold shadow-lg shadow-red-600/20 transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Directions</span>
+                            </a>
+                            <a href="https://wa.me/918539939222?text=Hi%20Kalki%20Fitness,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-zinc-950 border border-zinc-700 hover:border-red-500 text-white text-center text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-red-500"></i>
+                                <span>WhatsApp Chat</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form & Map -->
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl">
+                        <h3 class="font-syne font-bold text-xl text-white mb-2">Send an Instant Inquiry</h3>
+                        <p class="text-zinc-400 text-xs sm:text-sm mb-6">Fill out the form below and our team will get back to you promptly.</p>
+                        
+                        <form id="inquiry-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1">Your Name *</label>
+                                    <input type="text" id="name" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500 transition-colors" placeholder="Aman Kumar">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1">Phone Number *</label>
+                                    <input type="tel" id="phone" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500 transition-colors" placeholder="+91 98765 43210">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1">Interested Program</label>
+                                <select id="service" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500 transition-colors">
+                                    <option>Strength & Muscle Training</option>
+                                    <option>Fat Loss & Cardio Fitness</option>
+                                    <option>Personal Training 1-on-1</option>
+                                    <option>General Gym Membership</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1">Message / Query</label>
+                                <textarea id="message" rows="3" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500 transition-colors" placeholder="I would like to know the monthly membership fees..."></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-sm shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2">
+                                <span>Submit Inquiry</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 h-[250px] sm:h-[300px] w-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.777082496735!2d85.1485!3d25.6022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKalki+Fitness+Gym+Chandpur+Bela+Patna!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            title="Kalki Fitness Gym Location Map">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-24 lg:pb-16 text-zinc-400 text-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-zinc-800/80">
+                <!-- Col 1 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-xl bg-red-600 flex items-center justify-center text-white font-black text-lg">K</div>
+                        <span class="font-syne font-extrabold text-lg text-white">KALKI FITNESS</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                        Patna's premier fitness destination near Shanti Path, Chandpur Bela. Transform your body with state-of-the-art equipment and expert coaching.
+                    </p>
+                    <div class="flex items-center gap-3 text-white">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kalki+Fitness+Gym+Chandpur+Bela+Patna" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+918539939222" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/918539939222" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Services & Programs</a></li>
+                        <li><a href="#why-us" class="hover:text-red-500 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-red-500 transition-colors">About Our Gym</a></li>
+                        <li><a href="#gallery" class="hover:text-red-500 transition-colors">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-red-500 transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Programs</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Strength Training</a></li>
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Fat Loss & Cardio</a></li>
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Personal Coaching</a></li>
+                        <li><a href="#faq" class="hover:text-red-500 transition-colors">Frequently Asked Questions</a></li>
+                        <li><a href="#contact" class="hover:text-red-500 transition-colors">Free Trial Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Location & Hours</h4>
+                    <p class="text-xs text-zinc-400 mb-3">near Shanti Path, Chandpur Bela, Jai Prakash Nagar, Patna, Bihar 800001</p>
+                    <p class="text-xs text-zinc-400 mb-4">Phone: +91 85399 39222</p>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-red-600/10 border border-red-500/20 text-red-500 text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                        <span>Open Daily</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> Kalki Fitness Gym, Patna. All rights reserved.</p>
+                <p>Designed with elite athletic standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#000000] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+918539939222" class="flex-1 py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="phone" class="w-4 h-4 text-red-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918539939222?text=Hi%20Kalki%20Fitness,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-red-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-red-600/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Trial</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl max-w-md w-full text-center relative">
+            <div class="w-16 h-16 rounded-full bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-500 mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p class="text-zinc-400 text-sm mb-6">Thank you for reaching out to Kalki Fitness Gym. Our team will contact you via phone or WhatsApp shortly.</p>
+            <button id="close-modal-btn" class="w-full py-3 rounded-xl bg-red-600 text-white font-bold text-sm hover:bg-red-700 transition-colors">
+                Okay, Thanks
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle svg').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Form Submission & Success Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic sanitization / validation
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            
+            if (!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            
+            // Reset form
+            inquiryForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
