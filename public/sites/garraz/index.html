@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Garraz Gym | Patna's Premier Health Club & Gym</title>
+    <meta name="description" content="Join Fitness Garraz Gym in West Ramkrishna Nagar, Patna. Experience state-of-the-art equipment, expert trainers, strength training, and personalized fat loss programs. Book a free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#10B981',
+                        'primary-hover': '#059669',
+                        secondary: '#F97316',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-current shrink-0"></i>
+        <span>🔥 Limited Offer: Get a FREE 1-Day Trial Pass! Call / WhatsApp Now: <a href="tel:+918434348489" class="underline hover:text-white transition-colors">+91 84343 48489</a></span>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#09090b] border-b border-zinc-800 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-syne font-black text-xl sm:text-2xl group-hover:scale-105 transition-transform">
+                    FG
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-base sm:text-xl tracking-wider text-white">FITNESS GARRAZ</span>
+                    <span class="text-[10px] sm:text-xs text-emerald-400 font-semibold tracking-widest uppercase">GYM & FITNESS CLUB</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
+                <a href="#programs" class="hover:text-emerald-400 transition-colors">Programs</a>
+                <a href="#why-us" class="hover:text-emerald-400 transition-colors">Why Us</a>
+                <a href="#timings" class="hover:text-emerald-400 transition-colors">Timings</a>
+                <a href="#gallery" class="hover:text-emerald-400 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-emerald-400 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-emerald-400 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/918434348489?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="min-h-[48px] px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-sm flex items-center gap-2 transition-all shadow-lg shadow-emerald-500/20 active:scale-95">
+                    <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                    <span>WhatsApp Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-emerald-400 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs rounded-tl-2xl p-6 bg-[#09090b] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <span class="font-syne font-bold text-lg text-white">Menu</span>
+                <button id="menu-close" aria-label="Close Navigation Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 font-medium text-base text-zinc-300">
+                <a href="#programs" class="mobile-nav-link flex items-center gap-3 py-2 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="dumbbell" class="w-5 h-5 text-emerald-400"></i> Programs
+                </a>
+                <a href="#why-us" class="mobile-nav-link flex items-center gap-3 py-2 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i> Why Us
+                </a>
+                <a href="#timings" class="mobile-nav-link flex items-center gap-3 py-2 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="clock" class="w-5 h-5 text-emerald-400"></i> Batch Timings
+                </a>
+                <a href="#gallery" class="mobile-nav-link flex items-center gap-3 py-2 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="image" class="w-5 h-5 text-emerald-400"></i> Gallery
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center gap-3 py-2 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-emerald-400"></i> Reviews
+                </a>
+                <a href="#faq" class="mobile-nav-link flex items-center gap-3 py-2 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="help-circle" class="w-5 h-5 text-emerald-400"></i> FAQ
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-3 py-2 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-emerald-400"></i> Location & Contact
+                </a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 space-y-3">
+            <a href="https://wa.me/918434348489?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+                <span>WhatsApp Trial Booking</span>
+            </a>
+            <a href="tel:+918434348489" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-bold font-syne text-sm flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-5 h-5 text-emerald-400"></i>
+                <span>+91 84343 48489</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-32 overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+                    
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 shadow-sm mx-auto lg:mx-0">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current text-amber-400/50"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.6★ Google Rating (50+ Reviews)</span>
+                    </div>
+
+                    <!-- Main H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] break-words">
+                        TRANSFORM YOUR BODY AT <span class="text-emerald-400 underline decoration-emerald-500/30">PATNA'S PREMIER</span> FITNESS HUB
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Push your limits with state-of-the-art strength equipment, professional personal training, and high-energy bodybuilding programs in Ramkrishan Nagar, Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/918434348489?text=Hi,%20I%20want%20to%20book%20a%20FREE%20trial%20session%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-base flex items-center justify-center gap-3 transition-all shadow-xl shadow-emerald-500/25 group active:scale-95">
+                            <i data-lucide="zap" class="w-5 h-5 fill-current group-hover:rotate-12 transition-transform"></i>
+                            <span>Book Free Trial Now</span>
+                        </a>
+                        <a href="#programs" class="w-full sm:w-auto min-h-[48px] px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-white font-bold font-syne text-base flex items-center justify-center gap-2 transition-all">
+                            <span>View Programs</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Pill -->
+                    <div class="flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm text-zinc-400 pt-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                        <span>West Ramkrishna Nagar, Ramkrishan Nagar, Patna, Bihar 800027</span>
+                    </div>
+                </div>
+
+                <!-- Hero Right Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emerald-500 to-orange-500 opacity-20 blur-xl"></div>
+                    <div class="relative bg-zinc-900 border border-zinc-800 rounded-2xl p-3 shadow-2xl overflow-hidden aspect-[4/3] sm:aspect-square">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Fitness Garraz Gym Workout Floor" class="w-full h-full object-cover rounded-xl">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md border border-zinc-800/80 rounded-xl p-4 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-sm text-white">Expert Trainers</h4>
+                                    <p class="text-xs text-zinc-400">Personalized Guidance</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs">OPEN NOW</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-zinc-950/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/50">
+                    <div class="flex items-center justify-center gap-1 text-amber-400 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <span class="font-syne font-extrabold text-2xl text-white">4.6</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Google Rating</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/50">
+                    <div class="font-syne font-extrabold text-2xl text-emerald-400 mb-1">50+</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Verified Reviews</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/50">
+                    <div class="font-syne font-extrabold text-2xl text-emerald-400 mb-1">100%</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Certified Trainers</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/50">
+                    <div class="font-syne font-extrabold text-2xl text-emerald-400 mb-1">Prime</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Ramkrishan Nagar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs / Services Grid -->
+    <section id="programs" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs uppercase tracking-widest">Our Programs</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">TRAIN HARD, ACHIEVE MORE</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Choose from our specialized fitness regimes crafted for all fitness levels, from beginners to advanced bodybuilders.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Program 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Strength Training</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Build raw power, endurance, and muscle mass with our heavy racks, olympic barbells, and free weights.</p>
+                    </div>
+                    <a href="https://wa.me/918434348489?text=Hi,%20I%20am%20interested%20in%20Strength%20Training%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-zinc-800 hover:bg-emerald-500 hover:text-black text-white font-bold font-syne text-xs flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Fat Loss & Cardio</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Melt stubborn fat and tone your physique with advanced cardio equipment and high-intensity interval routines.</p>
+                    </div>
+                    <a href="https://wa.me/918434348489?text=Hi,%20I%20am%20interested%20in%20Fat%20Loss%20Programs%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-zinc-800 hover:bg-emerald-500 hover:text-black text-white font-bold font-syne text-xs flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Personal Coaching</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Get 1-on-1 expert mentorship, customized diet planning, and goal-oriented workout supervision.</p>
+                    </div>
+                    <a href="https://wa.me/918434348489?text=Hi,%20I%20want%20to%20know%20more%20about%20Personal%20Coaching%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-zinc-800 hover:bg-emerald-500 hover:text-black text-white font-bold font-syne text-xs flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="trophy" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Bodybuilding</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Advanced hypertrophy routines, posing guidance, and heavy compound training for serious physique competitors.</p>
+                    </div>
+                    <a href="https://wa.me/918434348489?text=Hi,%20I%20am%20interested%20in%20Bodybuilding%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-zinc-800 hover:bg-emerald-500 hover:text-black text-white font-bold font-syne text-xs flex items-center justify-center gap-2 transition-all">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-zinc-950 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs uppercase tracking-widest">Why Fitness Garraz</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">BUILT FOR RESULTS, NOT EXCUSES</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Discover what makes us the top-rated fitness club in Ramkrishan Nagar, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Certified Trainers</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Experienced trainers who correct your posture, prevent injuries, and drive constant progress.</p>
+                </div>
+
+                <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Modern Equipment</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Well-maintained heavy duty machines, dumbbells, and cardio gear for every muscle group.</p>
+                </div>
+
+                <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Energetic Community</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Surround yourself with dedicated fitness enthusiasts who motivate you to push past limits.</p>
+                </div>
+
+                <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Clean & Hygienic</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Sanitized workout floors, clean ventilation, and well-maintained changing facilities.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Batch Timings Table -->
+    <section id="timings" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs uppercase tracking-widest">Operating Hours</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">BATCH TIMINGS</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Convenient morning and evening slots to fit your daily schedule.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Morning Batch -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                <i data-lucide="sunrise" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-xl text-white">Morning Batch</h3>
+                                <p class="text-xs text-zinc-400">Rise and Grind</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-sm text-zinc-300">
+                            <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                                <span class="text-zinc-400">Timing Slot 1</span>
+                                <span class="font-bold text-white font-syne">05:30 AM – 11:00 AM</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                                <span class="text-zinc-400">Days Active</span>
+                                <span class="font-bold text-emerald-400 font-syne">Monday – Sunday</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://wa.me/918434348489?text=Hi,%20I%20want%20to%20join%20the%20Morning%20Batch%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-sm flex items-center justify-center gap-2">
+                            <span>Join Morning Batch</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Evening Batch -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400">
+                                <i data-lucide="sunset" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-xl text-white">Evening Batch</h3>
+                                <p class="text-xs text-zinc-400">Unwind & Lift</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-sm text-zinc-300">
+                            <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                                <span class="text-zinc-400">Timing Slot 2</span>
+                                <span class="font-bold text-white font-syne">04:00 PM – 09:30 PM</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                                <span class="text-zinc-400">Days Active</span>
+                                <span class="font-bold text-emerald-400 font-syne">Monday – Sunday</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://wa.me/918434348489?text=Hi,%20I%20want%20to%20join%20the%20Evening%20Batch%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="w-full min-h-[48px] px-4 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-sm flex items-center justify-center gap-2">
+                            <span>Join Evening Batch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-zinc-950 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs uppercase tracking-widest">Gym Floor Gallery</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">EXPLORE OUR FACILITY</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Take a visual tour of our fully equipped workout zones in Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="aspect-video sm:aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group relative">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Gym Equipment 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-sm">Free Weights & Dumbbells</span>
+                    </div>
+                </div>
+                <div class="aspect-video sm:aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group relative">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Gym Equipment 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-sm">Strength Training Floor</span>
+                    </div>
+                </div>
+                <div class="aspect-video sm:aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group relative">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Gym Equipment 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-sm">Cardio & Endurance Zone</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs uppercase tracking-widest">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">WHAT OUR MEMBERS SAY</h2>
+                <div class="flex items-center justify-center gap-1 text-amber-400 mt-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current text-amber-400/50"></i>
+                    <span class="font-syne font-bold text-white ml-2 text-lg">4.6 / 5.0 on Google (50+ Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-6">"Best gym in Ramkrishan Nagar! Excellent equipment, very motivating trainers, and a great crowd for serious bodybuilding."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-syne font-bold">R</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Rahul Kumar</h4>
+                            <p class="text-xs text-zinc-400">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-6">"Very clean gym with top-notch machines. The trainers give personal attention to everyone. Highly recommended for fat loss!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-syne font-bold">A</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Amit Singh</h4>
+                            <p class="text-xs text-zinc-400">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current text-amber-400/50"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed mb-6">"Great atmosphere and affordable membership plans. Convenient morning timings and very helpful staff."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-syne font-bold">V</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Vikash Sharma</h4>
+                            <p class="text-xs text-zinc-400">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-zinc-950 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs uppercase tracking-widest">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Everything you need to know before joining Fitness Garraz Gym.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Do you offer a free trial session?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Yes! We offer a free 1-day trial pass so you can experience our equipment, meet our trainers, and check out the gym floor before taking a membership. Click the WhatsApp button to book your free trial pass instantly.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Our morning batch runs from 05:30 AM to 11:00 AM, and our evening batch runs from 04:00 PM to 09:30 PM, Monday through Sunday.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Are personal trainers available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        Absolutely! We have certified personal trainers on the floor who guide beginners through proper form, customized workout routines, and diet plans.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 min-h-[48px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Where is Fitness Garraz Gym located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed">
+                        We are located at West Ramkrishna Nagar, Ramkrishan Nagar, Patna, Bihar 800027. You can easily navigate via Google Maps using the button in our contact section.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-syne font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">VISIT OR CONTACT US</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Ready to start your fitness journey? Reach out or visit our gym today.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Contact Info & Map -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Our Location</h3>
+                                <p class="text-sm text-zinc-400 leading-relaxed">West Ramkrishna Nagar, Ramkrishan Nagar, Patna, Bihar 800027</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Phone & WhatsApp</h3>
+                                <p class="text-sm text-zinc-400">+91 84343 48489</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Timing Hours</h3>
+                                <p class="text-sm text-zinc-400">Morning: 05:30 AM – 11:00 AM</p>
+                                <p class="text-sm text-zinc-400">Evening: 04:00 PM – 09:30 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Fitness+Garraz+Gym+Ramkrishan+Nagar+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[48px] px-4 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                                <i data-lucide="navigation" class="w-5 h-5 fill-current"></i>
+                                <span>Get Directions</span>
+                            </a>
+                            <a href="tel:+918434348489" class="flex-1 min-h-[48px] px-4 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold font-syne text-sm flex items-center justify-center gap-2">
+                                <i data-lucide="phone" class="w-5 h-5 text-emerald-400"></i>
+                                <span>Call Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 h-[280px]">
+                        <iframe title="Fitness Garraz Gym Map Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.903822187641!2d85.1504!3d25.5786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM0JzQzLjAiTiA4NcKwMDknMDEuNSJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Right: Trial Booking Form -->
+                <div class="lg:col-span-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                        <h3 class="font-syne font-bold text-2xl text-white mb-2">Book Free Trial & Inquire</h3>
+                        <p class="text-sm text-zinc-400 mb-6">Fill out the quick form below and our team will get in touch instantly via WhatsApp or phone call.</p>
+                        
+                        <form id="trial-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Full Name</label>
+                                <input type="text" id="name" required class="w-full min-h-[48px] px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors" placeholder="Enter your full name">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                                <input type="tel" id="phone" required class="w-full min-h-[48px] px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors" placeholder="+91 98765 43210">
+                            </div>
+
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Interested Program</label>
+                                <select id="service" class="w-full min-h-[48px] px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                                    <option value="Free Trial Pass">Free Trial Pass</option>
+                                    <option value="Strength Training">Strength Training</option>
+                                    <option value="Fat Loss & Cardio">Fat Loss & Cardio</option>
+                                    <option value="Personal Coaching">Personal Coaching</option>
+                                    <option value="Bodybuilding">Bodybuilding</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Message (Optional)</label>
+                                <textarea id="message" rows="3" class="w-full p-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors resize-none" placeholder="Any specific questions?"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full min-h-[48px] px-6 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-base flex items-center justify-center gap-2 shadow-xl shadow-emerald-500/20 transition-all active:scale-95">
+                                <i data-lucide="send" class="w-5 h-5 fill-current"></i>
+                                <span>Submit & Book Trial</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 max-w-md w-full text-center space-y-4">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white">Trial Request Received!</h3>
+            <p class="text-sm text-zinc-400">Thank you for reaching out to Fitness Garraz Gym. Our trainer will contact you shortly via WhatsApp to confirm your free trial.</p>
+            <button id="modal-close-btn" class="w-full min-h-[48px] px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-sm">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 grid grid-cols-2 gap-3">
+        <a href="tel:+918434348489" class="min-h-[48px] px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-bold font-syne text-xs flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918434348489?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Fitness%20Garraz%20Gym." target="_blank" rel="noopener noreferrer" class="min-h-[48px] px-4 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-black font-bold font-syne text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-syne font-black text-xl">
+                            FG
+                        </div>
+                        <span class="font-syne font-extrabold text-lg text-white">FITNESS GARRAZ</span>
+                    </div>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Patna's premier fitness destination dedicated to strength training, fat loss, and bodybuilding excellence.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span class="text-xs font-semibold text-zinc-300">4.6★ Rated on Google (50+ Reviews)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#programs" class="hover:text-emerald-400 transition-colors">Programs</a></li>
+                        <li><a href="#why-us" class="hover:text-emerald-400 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#timings" class="hover:text-emerald-400 transition-colors">Batch Timings</a></li>
+                        <li><a href="#gallery" class="hover:text-emerald-400 transition-colors">Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-emerald-400 transition-colors">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Operating Hours</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><strong class="text-zinc-200">Morning:</strong> 05:30 AM – 11:00 AM</li>
+                        <li><strong class="text-zinc-200">Evening:</strong> 04:00 PM – 09:30 PM</li>
+                        <li><strong class="text-zinc-200">Days:</strong> Monday – Sunday</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400 shrink-0 mt-1"></i>
+                            <span>West Ramkrishna Nagar, Ramkrishan Nagar, Patna, Bihar 800027</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                            <a href="tel:+918434348489" class="hover:text-white transition-colors">+91 84343 48489</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-zinc-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Fitness Garraz Gym. All rights reserved.</p>
+                <p>Designed for High Performance in Patna, Bihar.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openDrawer() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openDrawer);
+        menuClose.addEventListener('click', closeDrawer);
+        menuBackdrop.addEventListener('click', closeDrawer);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+        // FAQ Accordion Logic
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(s => s.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    const chevron = button.querySelector('[data-lucide="chevron-down"]');
+                    if (chevron) chevron.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact & Trial Form Submission
+        const trialForm = document.getElementById('trial-form');
+        const successModal = document.getElementById('success-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+
+        trialForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+
+            if (!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Sanitize inputs before displaying or processing
+            const sanitizedName = name.replace(/[<>]/g, '');
+            const sanitizedPhone = phone.replace(/[<>]/g, '');
+
+            // Show Success Modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            
+            // Reset Form
+            trialForm.reset();
+        });
+
+        modalCloseBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Aryan Fitness | Patna's Premier Gym & Fitness Center</title>
+    <meta name="description" content="Join Aryan Fitness in Adarsh Nagar, Patna. Expert trainers, modern equipment, strength training, and personalized weight loss programs. Book your free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#EF4444',
+                        secondary: '#06B6D4',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
+                        'btn-hover': '#DC2626',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        .glow-red {
+            box-shadow: 0 0 40px -10px rgba(239, 68, 68, 0.3);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] pb-28 md:pb-0 overflow-x-hidden">
+
+    <!-- 1. Announcement Bar & 100% Solid Opaque Header -->
+    <div class="bg-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center relative z-50">
+        🔥 Special Offer: Get 20% Off on Annual Memberships + 1 Free Personal Training Session! <a href="#contact" class="underline font-bold ml-1 hover:text-zinc-100">Claim Now</a>
+    </div>
+
+    <header class="sticky top-0 z-40 w-full bg-[#09090B] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-rose-600 flex items-center justify-center text-white font-syne font-extrabold text-xl shadow-lg">
+                    AF
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white block leading-none">ARYAN</span>
+                    <span class="text-xs uppercase tracking-widest text-primary font-semibold">Fitness Center</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+918540039262" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 text-zinc-200 text-sm font-medium hover:border-primary hover:text-primary transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/+918540039262?text=Hi%20Aryan%20Fitness,%20I%20want%20to%20book%20a%20free%20gym%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-btn-hover shadow-lg shadow-primary/25 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-primary focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090B] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-syne font-bold">AF</div>
+                    <span class="font-syne font-bold text-lg text-white">Aryan Fitness</span>
+                </div>
+                <button id="close-btn" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 text-zinc-400 hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 pt-6 text-base font-medium text-zinc-300">
+                <a href="#services" class="mobile-nav-link hover:text-primary transition-colors py-2">Services</a>
+                <a href="#why-us" class="mobile-nav-link hover:text-primary transition-colors py-2">Why Choose Us</a>
+                <a href="#about" class="mobile-nav-link hover:text-primary transition-colors py-2">About Story</a>
+                <a href="#gallery" class="mobile-nav-link hover:text-primary transition-colors py-2">Gym Gallery</a>
+                <a href="#reviews" class="mobile-nav-link hover:text-primary transition-colors py-2">Customer Reviews</a>
+                <a href="#faq" class="mobile-nav-link hover:text-primary transition-colors py-2">FAQ</a>
+                <a href="#contact" class="mobile-nav-link hover:text-primary transition-colors py-2">Location & Map</a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+918540039262" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-700 text-white font-medium min-h-[48px]">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <span>Call +91 85400 39262</span>
+            </a>
+            <a href="https://wa.me/+918540039262?text=Hi%20Aryan%20Fitness,%20I%20want%20to%20book%20a%20free%20gym%20trial!" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-white font-semibold hover:bg-btn-hover min-h-[48px] shadow-lg shadow-primary/30">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. Hero Section -->
+    <section class="relative pt-12 pb-20 md:py-28 overflow-hidden bg-[#09090B]">
+        <!-- Radial Gradient Ambient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[250px] h-[250px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 text-left">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400/50"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.6★ Rated in Patna (41+ Google Reviews)</span>
+                    </div>
+
+                    <!-- Hero Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        TRANSFORM YOUR BODY. <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-rose-500">UNLEASH YOUR POWER.</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                        Welcome to Aryan Fitness—Patna’s premier destination for serious strength training, weight loss, and professional bodybuilding. State-of-the-art equipment, expert trainers, and a high-energy community await you on 70 Feet BPCL Road.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="#contact" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white font-syne font-bold text-base hover:bg-btn-hover glow-red transition-all min-h-[48px]">
+                            <span>Book Free Trial</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/+918540039262?text=Hi%20Aryan%20Fitness,%20I%20want%20to%20know%20more%20about%20membership%20plans." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface border border-zinc-700 text-white font-syne font-bold text-base hover:border-cyan-500 hover:text-cyan-400 transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-cyan-400"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-surface glow-cyan aspect-[4/3] sm:aspect-square">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Aryan Fitness Gym Floor in Patna" class="object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-900/90 backdrop-blur-md border border-zinc-700/60 p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm sm:text-base text-white">Adarsh Nagar's #1 Gym</h4>
+                                <p class="text-xs text-zinc-400">Open Daily • Expert Trainers Onsite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Trust & Social Proof Bar -->
+    <section class="py-10 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 border-r border-zinc-800 last:border-none">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">4.6★</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Google Rating (41+ Reviews)</p>
+                </div>
+                <div class="p-4 md:border-r border-zinc-800 last:border-none">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-primary mb-1">100%</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Professional Equipment</p>
+                </div>
+                <div class="p-4 border-r border-zinc-800 last:border-none">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">Expert</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Certified Personal Trainers</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-cyan-400 mb-1">Patna</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Prime 70 Feet BPCL Road</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Services / Offerings Grid -->
+    <section id="services" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">What We Offer</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">TRAINING PROGRAMS DESIGNED FOR RESULTS</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Whether you want to build muscle, shed body fat, or improve cardiovascular endurance, Aryan Fitness has the right program for you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Strength Training</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Heavy-duty free weights, squat racks, power cages, and professional benches for ultimate muscle building.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:underline">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Weight Loss & Fat Burn</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">High-intensity interval training, customized fat loss regimens, and cardio conditioning circuits.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 group-hover:underline">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Personal Training</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">1-on-1 expert coaching, personalized diet planning, posture correction, and guaranteed milestone tracking.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:underline">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Cardio & Endurance</h3>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-6">Modern treadmills, stationary bikes, and elliptical trainers to boost stamina and heart health.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 group-hover:underline">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">The Aryan Fitness Advantage</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">WHY GYM GOERS IN PATNA CHOOSE US</h2>
+                <p class="text-sm sm:text-base text-zinc-400">We provide more than just equipment—we foster a disciplined, motivating environment where fitness goals become reality.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-[#09090B] border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Professional Trainers</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Experienced trainers dedicated to correcting your form, pushing your limits, and preventing injuries.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[#09090B] border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Clean & Hygienic Facility</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Sanitized equipment, clean workout floors, and well-maintained changing areas for a comfortable experience.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[#09090B] border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Modern Equipment</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Top-tier rubber grip plates, heavy dumbbells, pin-loaded machines, and advanced cardio apparatus.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-[#09090B] border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+                        <i data-lucide="clock" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-2">Flexible Timings</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Open morning and evening hours to seamlessly fit into your college, office, or daily routine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About / Story Section -->
+    <section id="about" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Collage -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym Workout Equipment" class="object-cover w-full h-full">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[3/4] mt-8">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Weight Lifting in Gym" class="object-cover w-full h-full">
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-6">
+                    <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">Our Story & Mission</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">BUILT FOR THOSE WHO REFUSE TO QUIT</h2>
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                        Located conveniently on the 1st floor of Gajadhar Lal Palace, 70 Feet BPCL Road in Adarsh Nagar, Patna, <strong>Aryan Fitness</strong> was founded with a singular mission: to provide a world-class workout environment accessible to every fitness enthusiast in the city.
+                    </p>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        We believe fitness is not a seasonal hobby, but a lifelong commitment. Our community consists of beginners taking their very first step, athletes pushing their boundaries, and everyone in between. Come experience a supportive atmosphere driven by results.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-bold">✓</div>
+                            <span class="text-sm font-semibold text-zinc-200">Personalized Guidance</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">✓</div>
+                            <span class="text-sm font-semibold text-zinc-200">Affordable Packages</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-white font-syne font-bold text-base hover:bg-btn-hover transition-all">
+                        <span>Visit Our Gym</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">Gym Tour</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">INSIDE ARYAN FITNESS</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Take a sneak peek at our spacious training floor, heavy weight racks, and professional fitness equipment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group relative">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym Floor Setup" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="font-syne font-bold text-white text-sm">Main Training Floor</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group relative">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Weightlifting Dumbbells" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="font-syne font-bold text-white text-sm">Dumbbell Rack Area</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-video group relative">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Cardio Machines" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="font-syne font-bold text-white text-sm">Cardio & Treadmill Zone</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">WHAT OUR MEMBERS SAY</h2>
+                <div class="flex items-center justify-center gap-2 text-amber-400 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                </div>
+                <p class="text-sm text-zinc-400">Rated 4.6 out of 5 stars based on 41+ authentic Google Reviews.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6">"Best gym in Adarsh Nagar Patna! Trainers are very supportive and the equipment is top-notch. Highly recommend for serious strength training."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-syne font-bold">AP</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Ankit Prasad</h4>
+                            <p class="text-xs text-zinc-400">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6">"Great ambiance and very clean environment. The location on 70 Feet BPCL Road is easily accessible. Lost 6 kgs in 2 months under their guidance!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-syne font-bold">RK</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Rahul Kumar</h4>
+                            <p class="text-xs text-zinc-400">Gym Member</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6">"Awesome gym with professional trainers who actually pay attention to your form. Affordable membership packages too. 5 stars!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-syne font-bold">VS</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Vikash Singh</h4>
+                            <p class="text-xs text-zinc-400">Verified Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ Accordion -->
+    <section id="faq" class="py-20 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Everything you need to know about joining Aryan Fitness.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-[#09090B] border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-syne font-bold text-base sm:text-lg text-white hover:text-primary transition-colors">
+                        <span>What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                        Aryan Fitness is open daily from early morning till late evening to accommodate both early birds and evening workout enthusiasts. Contact us directly on WhatsApp for exact shift timings.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-[#09090B] border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-syne font-bold text-base sm:text-lg text-white hover:text-primary transition-colors">
+                        <span>Is personal training available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                        Yes! We have certified personal trainers who specialize in working with absolute beginners. They will guide you through proper form, create custom routines, and help you reach your goals safely.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-[#09090B] border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-syne font-bold text-base sm:text-lg text-white hover:text-primary transition-colors">
+                        <span>Can I get a free trial session before joining?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                        Absolutely! We offer free trial sessions so you can experience our facility, check out our equipment, and meet our trainers before making any commitment. Simply click "Book Free Trial" or message us on WhatsApp.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-[#09090B] border border-zinc-800 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-syne font-bold text-base sm:text-lg text-white hover:text-primary transition-colors">
+                        <span>Where is Aryan Fitness located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                        We are conveniently located at 1st floor, Gajadhar lal palace, 70 Feet BPCL Rd, opposite J.K marriage hall, Adarsh Nagar, Dasratha, Mahavir Nagar, Patna, Bihar 800032.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">Get In Touch</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">VISIT OR CONTACT US TODAY</h2>
+                <p class="text-sm sm:text-base text-zinc-400">Drop by our gym or send us a message to kickstart your fitness journey.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Form & Info -->
+                <div class="lg:col-span-6 bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                    <h3 class="font-syne font-bold text-xl text-white mb-6">Send Us an Inquiry</h3>
+                    
+                    <form id="inquiry-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Your Name</label>
+                            <input type="text" id="name" required placeholder="Enter your full name" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:border-primary focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="Enter your 10-digit mobile number" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:border-primary focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Select Service</label>
+                            <select id="service" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:border-primary focus:outline-none transition-colors">
+                                <option value="Strength Training">Strength Training</option>
+                                <option value="Weight Loss">Weight Loss & Fat Burn</option>
+                                <option value="Personal Training">Personal Training</option>
+                                <option value="Cardio">Cardio & Endurance</option>
+                                <option value="Free Trial">Free Trial Booking</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Message</label>
+                            <textarea id="message" rows="3" placeholder="Any specific goals or questions?" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:border-primary focus:outline-none transition-colors"></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-primary text-white font-syne font-bold text-base hover:bg-btn-hover transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                            <span>Submit Inquiry</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map & Address Details -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 mb-6">
+                        <h3 class="font-syne font-bold text-xl text-white mb-6">Location & Details</h3>
+                        <div class="space-y-4 text-sm text-zinc-300">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-1"></i>
+                                <p><strong>Address:</strong> 1st floor, Gajadhar lal palace, 70 Feet BPCL Rd, opp. j.k marrige hall, Adarsh Nagar, Dasratha, Mahavir Nagar, Patna, Bihar 800032</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                                <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918540039262" class="hover:text-primary transition-colors">+91 85400 39262</a></p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="star" class="w-5 h-5 text-amber-400 flex-shrink-0"></i>
+                                <p><strong>Google Rating:</strong> 4.6★ (41+ Reviews)</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-zinc-800">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Aryan+Fitness+Patna+Bihar" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-700 text-white font-medium hover:border-primary hover:text-primary transition-all min-h-[48px]">
+                                <i data-lucide="navigation" class="w-4 h-4 text-primary"></i>
+                                <span>Get Directions on Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Map -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 h-64 sm:h-72 w-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.995966456722!2d85.1275!3d25.5786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM0JzQzLjAiTiA4NfKwMDcnMzkuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Aryan Fitness Patna Location Map">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center relative">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p id="success-msg-text" class="text-sm text-zinc-300 mb-6">Thank you for reaching out to Aryan Fitness. We have received your inquiry and will contact you via phone/WhatsApp shortly.</p>
+            <button id="close-modal-btn" class="w-full py-3.5 rounded-xl bg-primary text-white font-syne font-bold text-base hover:bg-btn-hover transition-all min-h-[48px]">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- 11. Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+918540039262" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-700 text-white font-syne font-bold text-sm min-h-[48px] bg-zinc-900">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/+918540039262?text=Hi%20Aryan%20Fitness,%20I%20want%20to%20book%20a%20free%20gym%20trial!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-white font-syne font-bold text-sm hover:bg-btn-hover shadow-lg shadow-primary/30 min-h-[48px]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. Footer -->
+    <footer class="bg-surface border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-syne font-bold">AF</div>
+                        <span class="font-syne font-bold text-lg text-white">Aryan Fitness</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-4">
+                        Patna’s premier gym and fitness center dedicated to strength training, fat loss, and professional body conditioning.
+                    </p>
+                    <div class="flex items-center gap-3 text-zinc-400">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Aryan+Fitness+Patna+Bihar" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:text-primary transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+918540039262" class="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:text-primary transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/+918540039262" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:text-primary transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Training Services</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Story</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Fitness Programs</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Strength & Powerlifting</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Weight Loss & Fat Burn</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">1-on-1 Personal Training</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Cardio & Endurance</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Free Trial Session</a></li>
+                    </ul>
+                </div>
+
+                <!-- Address & Hours -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Visit Aryan Fitness</h4>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-3">
+                        1st floor, Gajadhar lal palace, 70 Feet BPCL Rd, opp. j.k marrige hall, Adarsh Nagar, Dasratha, Mahavir Nagar, Patna, Bihar 800032
+                    </p>
+                    <p class="text-xs text-primary font-semibold">Open Daily • Morning & Evening Shifts</p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> Aryan Fitness, Patna. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for High Performance & Fitness Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle with Scroll Lock & Backdrop
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        closeBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion Functionality
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('lucide, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                faqToggles.forEach(t => {
+                    t.nextElementSibling.classList.add('hidden');
+                    const otherIcon = t.querySelector('svg');
+                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Interactive Form Submission & Success Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const successMsgText = document.getElementById('success-msg-text');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('name').value.trim();
+            const phoneInput = document.getElementById('phone').value.trim();
+            const serviceInput = document.getElementById('service').value;
+
+            // Basic Sanitization / Validation
+            if (!nameInput || !phoneInput) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Customize success message
+            successMsgText.textContent = `Thank you ${nameInput}! We have received your inquiry for ${serviceInput}. Our team at Aryan Fitness Patna will contact you at ${phoneInput} shortly.`;
+
+            // Show Modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            inquiryForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
