@@ -1,6 +1,6 @@
 [CONTACT_DETAILS]
-Phone: +917280055007
-WhatsApp: +917280055007
+Phone: +917488492598
+WhatsApp: +917488492598
 
 [OUTREACH_PLATFORM]
 WhatsApp & Follow-up Phone Call: Direct WhatsApp messaging followed by a quick courtesy call is the primary outreach workflow for Indian SMBs.
@@ -8,13 +8,13 @@ WhatsApp & Follow-up Phone Call: Direct WhatsApp messaging followed by a quick c
 [FINAL_OUTREACH_MESSAGE]
 
 [WHATSAPP_START]
-Hi Team The Gym Paradox,
+Hi Team Hercules Health Club,
 
-I noticed your gym has stellar 4.9★ reviews from 103 clients in Patliputra Colony, but lacked a dedicated mobile page for instant membership inquiries and trial bookings.
+I noticed your gym has established a solid presence near Bhattacharya More in Patna with 72 reviews, but lacked a dedicated mobile booking page for new membership inquiries.
 
 Maine aapke gym ke liye ek custom live website concept design kiya hai — jisme direct WhatsApp trial booking, workout programs, aur batch timings integrate kiye hain:
 
-🔗 https://gymparadox.arclanestudios.space
+🔗 https://hercules.arclanestudios.space
 
 Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 
@@ -22,52 +22,56 @@ Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 [WHATSAPP_END]
 
 [CALL_SCRIPT_START]
-"Hi Team The Gym Paradox, Ameya here from Arclane Studios. Maine aapke business ke liye ek custom live website concept banakar WhatsApp par share kiya tha. Bas ek minute check karna tha ki kya aapko link receive hua aur aapne demo glance kiya? Great! We tailored it specifically with direct WhatsApp booking, mobile-first speed, and a showcase of your top-rated 4.9★ training programs in Patliputra Colony. Aapko overall look aur concept kaisa laga? Agar aapko concept aur design direction pasand aaye, to hum isme aapki exact services, actual photos aur contact setup integrate kar sakte hain. Jab bhi aap free hon batayein, we can connect on a quick 5-minute walkthrough."
+Hi Team Hercules Health Club, Ameya here from Arclane Studios. Maine aapke gym ke liye ek custom live website concept banakar WhatsApp par share kiya tha. Bas ek minute check karna tha ki kya aapko link receive hua aur aapne demo glance kiya? 
+
+Great! We tailored it specifically with direct WhatsApp trial booking and mobile-first speed for your location near Bhattacharya More, Patna. Aapko overall look aur concept kaisa laga? 
+
+Agar aapko concept aur design direction pasand aaye, to hum isme aapki exact services, actual photos aur contact setup integrate karke live kar sakte hain. Jab bhi aap free hon batayein, we can connect on a quick 5-minute walkthrough.
 [CALL_SCRIPT_END]
 
 ---
 
 [AUDIT_START]
-# 🌐 COMPLETE WEBSITE STRATEGY & ARCHITECTURE REPORT: The Gym Paradox
+# 🌐 COMPLETE WEBSITE STRATEGY & ARCHITECTURE REPORT: Hercules Health Club
 
 ## 1. BUSINESS ANALYSIS
-* **What the business offers:** Premium fitness training, strength conditioning, personal training, customized workout programs, and weight management services situated in a professional facility.
-* **Who its ideal customers are:** Fitness enthusiasts, young professionals, students, and residents of Patliputra Colony and surrounding areas in Patna looking for high-end fitness guidance and a motivating gym culture.
-* **What makes the business different:** Exceptional local reputation reflected by a near-perfect 4.9★ rating across 103 verified Google reviews, indicating elite trainer expertise, cleanliness, and member satisfaction.
-* **What customers appreciate most:** Knowledgeable and supportive trainers, welcoming community atmosphere, well-maintained equipment, and tangible fitness results.
-* **Problems the website should solve:** Absence of a dedicated digital web presence, inability for potential members to book trials online, lack of structured schedule/batch information online, and reliance solely on walk-ins or social media DMs.
-* **The primary conversion goal of the website:** Drive instant WhatsApp trial bookings, membership inquiries, and direct phone calls from local prospects.
+* **What the business offers:** Strength training, cardio workouts, weight management programs, personal fitness training, fitness consulting, and daily workout routines.
+* **Who its ideal customers are:** Local residents, fitness enthusiasts, students, and professionals around the Rajendra Path, Bhattacharya More, and Ghrounda localities in Patna looking for an accessible, result-oriented neighborhood gym.
+* **What makes the business different:** Established local presence right near Bhattacharya More, known neighborhood landmark positioning, and dedicated community fitness focus.
+* **What customers appreciate most:** Accessible location in central Patna, motivating workout atmosphere, and consistent local engagement.
+* **Problems the website should solve:** Complete lack of an existing digital web presence, inability for potential members to check membership rates, schedules, or trainer availability online, missing direct mobile lead capture (WhatsApp inquiries).
+* **The primary conversion goal of the website:** Drive direct WhatsApp trial bookings and instant phone inquiries for gym memberships.
 
 ---
 
 ## 2. WEBSITE CONCEPT
-* **Overall Visual Direction:** Sleek modern dark mode with high-contrast electric accents.
-* **Brand Personality:** Authoritative, energetic, premium, and results-driven.
-* **Website Mood:** High-energy, motivating, and professional fitness environment.
-* **Market Positioning:** Premium, top-tier fitness destination in Patna.
-* **Design Focus:** Conversion-focused and image-driven layout highlighting facility quality and member transformations.
+* **Overall Visual Direction:** Sleek modern dark mode with high-energy neon accent lighting suited for a strength and fitness club.
+* **Brand Personality:** Authoritative, energetic, disciplined, and trustworthy.
+* **Website Mood:** High-octane, premium, motivating, and professional.
+* **Market Positioning:** Modern, reliable neighborhood fitness powerhouse in Patna.
+* **Design Focus:** Conversion-focused and image-forward layout highlighting equipment, training atmosphere, and easy trial booking.
 
 ---
 
 ## 3. COLOR PALETTE
-* **Primary Color:** Deep Charcoal / Obsidian — `#09090B` (Usage: Brand identity, deep background)
-* **Secondary Color:** Zinc Dark — `#18181B` (Usage: Card and surface elements)
-* **Accent Color:** Electric Lime / Neon Gold — `#CCFF00` or `#FACC15` (Usage: High-visibility CTAs, ratings, key highlights)
-* **Background Color:** Rich Black — `#050505` (Usage: Main page background)
-* **Surface/Card Color:** Dark Slate — `#121214` (Usage: Elevated container cards)
-* **Main Text Color:** Crisp White — `#FAFAFA` (Usage: High-contrast body and heading text)
-* **Muted Text Color:** Silver Gray — `#A1A1AA` (Usage: Subtitles, captions, review metadata)
-* **Button Color:** Electric Lime — `#CCFF00` (Usage: Primary action buttons for maximum conversion)
-* **Hover Color:** Bright Yellow-Green — `#B3E600` (Usage: Interactive states)
+* **Primary Color:** Crimson Red — `#E63946` (Usage: Brand identity, energetic headings, key accents)
+* **Secondary Color:** Electric Amber — `#FFB703` (Usage: Supporting badges, rating stars, highlights)
+* **Accent Color:** Neon Flame — `#FF4D4D` (Usage: High-visibility CTAs and interactive hover states)
+* **Background Color:** Obsidian Dark — `#09090B` (Usage: Main immersive page background)
+* **Surface/Card Color:** Zinc Charcoal — `#18181B` (Usage: Component cards, elevated pricing and service containers)
+* **Main Text Color:** Crisp White — `#FAFAFA` (Usage: High-contrast body text)
+* **Muted Text Color:** Slate Gray — `#A1A1AA` (Usage: Subtitles, metadata, captions)
+* **Button Color:** Crimson Red — `#E63946` (Usage: Primary action buttons)
+* **Hover Color:** Bright Red — `#FF334B` (Usage: Interactive hover states)
 
-*The dark fitness aesthetic paired with high-visibility accent colors communicates high energy and premium quality while adhering to strict WCAG contrast standards.*
+*These colors evoke power, energy, and physical transformation while maintaining high WCAG contrast against dark UI backgrounds.*
 
 ---
 
 ## 4. TYPOGRAPHY
-* **HeadingFont:** Syne (Geometric, bold, modern fitness aesthetic)
-* **Body Font:** Inter (Clean, ultra-legible sans-serif for mobile readability)
-* **Button Font Style:** Syne, 600 weight, 0.05em letter-spacing, uppercase.
+* **Heading Font:** Syne (Geometric, bold, modern athletic aesthetic)
+* **Body Font:** Inter (Clean, ultra-legible digital sans-serif)
+* **Button Font Style:** Syne, 600 weight, 0.05em tracking, uppercase
 * **Suitable Font Weights:** Headings (700/800), Body (400/500), Accents (600)
 * **Recommended Heading Sizes:** H1 (48px–64px / 36px mobile), H2 (32px–40px / 28px mobile), H3 (22px–26px)
 * **Recommended Paragraph Sizes:** Body (16px–18px / 1.6 line height), Small/Caption (13px–14px)
@@ -75,105 +79,116 @@ Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 ---
 
 ## 5. LOGO DIRECTION
-* **Logo Style:** Modern minimalist wordmark with bold geometric icon representing strength and infinity/paradox.
-* **Icon Concept:** Abstract interlocking geometric dumbbell/paradox emblem.
-* **Typography Style:** Clean, heavyweight uppercase geometric sans-serif.
-* **Suitable Colors:** Electric Lime on Deep Obsidian.
-* **Horizontal Logo Variation:** Left-aligned in navigation bar.
-* **Square Favicon / App-Icon Variation:** Simplified monogram "GP" on lime background.
+* **Logo Style:** Bold modern wordmark paired with an abstract strength/dumbbell emblem.
+* **Icon Concept:** Minimalist geometric dumbbell or rising energy chevron.
+* **Typography Style:** Heavy geometric sans-serif (Syne or Montserrat Black).
+* **Suitable Colors:** Crimson Red and Pure White on dark background.
+* **Horizontal Logo Variation:** Clean left-aligned icon + logotype for the top navigation bar.
+* **Square Favicon / App-Icon Variation:** Solid red square with a bold white "H" monogram.
 
 ---
 
 ## 6. WEBSITE STRUCTURE
-* **Home:** High-impact landing page featuring hero value proposition, trust proof, core programs, trainer expertise, and interactive WhatsApp booking.
-* **About:** Brand philosophy, facility standards, and trainer credentials.
-* **Programs / Services:** Detailed breakdown of strength training, personal training, and conditioning classes.
-* **Gallery:** High-resolution interior facility and equipment showcase.
-* **Reviews:** Verified 4.9★ Google review carousel.
-* **FAQ:** Addressing membership pricing, timings, trial classes, and beginner readiness.
-* **Contact & Location:** Embedded map for UNO Business Center, Patliputra Colony, phone, WhatsApp, and inquiry form.
+* **Home:** High-impact fitness landing page with quick trial booking.
+* **About:** Gym history, philosophy, and trainer credentials.
+* **Services / Programs:** Detailed breakdown of weight training, cardio, personal training, and fat loss batches.
+* **Gallery:** State-of-the-art equipment, workout floors, and member transformations.
+* **Reviews:** Authentic Google reviews and star ratings.
+* **FAQ:** Membership terms, timings, fees, and trial inquiries.
+* **Contact & Location:** Interactive map for Rajendra Path/Bhattacharya More, opening hours, WhatsApp quick-chat.
 
 ---
 
 ## 7. HOMEPAGE STRUCTURE
-1. **Announcement Bar:** Free Trial Class Available Today — Call / WhatsApp +91 72800 55007
-2. **Header / Navigation:** Logo, Programs, About, Reviews, Contact, WhatsApp CTA button.
-3. **Hero Section:** "Transform Your Body at Patna’s #1 Rated Gym" with 4.9★ Google rating badge and instant trial booking CTA.
-4. **Trust Indicators / Social Proof Bar:** 4.9★ Rating | 100+ 5-Star Reviews | Expert Trainers | Patliputra Colony.
-5. **Core Programs:** Grid cards for Strength Training, Personal Coaching, Fat Loss, and Muscle Building.
-6. **Why The Gym Paradox:** 4 differentiators (Advanced Equipment, Certified Trainers, Hygiene, Custom Plans).
-7. **About Preview:** Introduction to Patna's most dedicated fitness community.
-8. **How It Works (3 Steps):** 1. Claim Free Trial -> 2. Meet Trainer -> 3. Transform.
-9. **Facility Gallery:** Immersive photos of workout zones and dumbbells.
-10. **Google Review Highlights:** Real testimonials from satisfied members.
-11. **Location & Contact:** Interactive map, address at UNO Business Center, Patliputra Colony, Patna.
-12. **FAQ Accordion:** Common questions about memberships and timings.
-13. **Final High-Conversion CTA:** Book your free trial session now via WhatsApp or Call.
-14. **Footer:** Brand details, social links, opening hours, copyright, developer credit.
+1. **Announcement Bar / Top Notification:** Open Daily: 5:00 AM – 10:00 PM | Call / WhatsApp: +91 74884 92598
+2. **Header / Navigation:** Logo, Anchor links (Programs, About, Reviews, Contact), "Book Free Trial" CTA button.
+3. **Hero Section:** Bold headline for Patna fitness seekers, 3.8★ Google rating badge, Primary CTA ("Claim Free Trial") and Secondary CTA ("WhatsApp Us").
+4. **Trust & Social Proof Bar:** 3.8★ Google Rating (72+ Reviews), Prime Location near Bhattacharya More, Certified Trainers.
+5. **Main Services / Core Offerings:** Grid cards for Weight Training, Cardio Zone, Personal Training, and Fat Loss Programs.
+6. **Why Choose Us / Differentiators:** Modern equipment, spacious floor, expert trainers, flexible batch timings.
+7. **Business Story / About Preview:** Patna's trusted fitness destination dedicated to strength and wellness.
+8. **Process / How It Works:** 3 steps: Visit/WhatsApp -> Free Consultation & Trial -> Start Training.
+9. **Interactive Gallery / Work Showcase:** High-resolution photos of gym equipment and workout atmosphere.
+10. **Google Review Highlights:** Testimonials from local members praising the gym environment.
+11. **Service Area & Location Details:** Embedded map for Rajendra Path, Ghrounda, Patna, operating hours table.
+12. **Frequently Asked Questions (FAQ):** Accordion answering membership fees, timings, and beginner guidance.
+13. **Final High-Conversion CTA:** Closing banner with instant WhatsApp trial booking button.
+14. **Footer:** Quick links, operating hours, address, copyright, and developer attribution.
 
 ---
 
 ## 8. WEBSITE COPY
-* **Hero Heading:** Redefine Your Limits at The Gym Paradox
-* **Hero Supporting Paragraph:** Experience Patna's top-rated fitness facility. Expert trainers, state-of-the-art equipment, and a results-driven community dedicated to your transformation.
-* **Primary Call-to-Action:** Book Free Trial
+* **Hero Heading:** Transform Your Body at Patna’s Trusted Fitness Hub.
+* **Hero Supporting Paragraph:** Build strength, torch calories, and reach your peak potential with state-of-the-art equipment and expert guidance right at Rajendra Path, Patna.
+* **Primary Call-to-Action:** Claim Free Trial
 * **Secondary Call-to-Action:** Chat on WhatsApp
-* **About Section Copy:** Located in the heart of Patliputra Colony, The Gym Paradox isn't just a gym—it's a high-performance training ground. We combine world-class equipment with personalized coaching to help you achieve goals you never thought possible.
+* **About Section Copy:** Hercules Health Club is Patna’s premier destination for serious fitness enthusiasts and beginners alike. Located near Bhattacharya More, we provide top-tier equipment, a motivating environment, and personalized guidance to help you smash your fitness goals.
 * **Service Descriptions:** 
-  - *Strength & Conditioning:* Build raw power and functional strength with Olympic weights and professional rigs.
-  - *Personal Training:* 1-on-1 customized coaching tailored precisely to your body type and fitness targets.
-  - *Fat Loss & Transformation:* Structured fat-loss programs backed by expert nutritional guidance.
+  - *Strength Training:* Premium free weights, power racks, and resistance machines to build muscle and power.
+  - *Cardio Conditioning:* High-end treadmills, ellipticals, and bikes for endurance and fat burn.
+  - *Personal Training:* One-on-one customized workout and nutrition plans tailored to your body type.
 * **Why Choose Us Section:** 
-  - *Top-Rated in Patna:* 4.9★ rating backed by over 100 genuine member success stories.
-  - *Elite Trainers:* Certified professionals who guide every rep with precision.
-  - *Immaculate Facility:* Sanitized, modern, premium equipment maintained to highest standards.
-* **Review Section Heading & Subheading:** Loved by Our Members — Read what 100+ fitness enthusiasts in Patna have to say about their journey with us.
+  - *Prime Central Location:* Easily accessible at Rajendra Path, Ghrounda, Patna.
+  - *Top-Grade Equipment:* Well-maintained machines for every muscle group.
+  - *Expert Trainers:* Supportive coaches guiding your form and progress.
+* **Review Section Heading & Subheading:** Trusted by 72+ Fitness Enthusiasts in Patna.
 * **FAQ Section:** 
-  - *Are beginner-friendly training programs available?* Yes! Our trainers customize workouts for all fitness levels, from absolute beginners to advanced athletes.
-  - *How do I book a free trial session?* Simply click the WhatsApp button or call us directly at +91 72800 55007 to schedule your session.
-  - *What are your operational timings?* We operate all week long with flexible morning and evening batches.
-* **Final Call-to-Action:** Ready to Start Your Transformation? Claim your free trial session today and experience The Gym Paradox difference.
+  - *What are the gym operating hours?* We are open every day from 5:00 AM to 10:00 PM.
+  - *Do you offer personal training?* Yes, certified personal trainers are available for customized 1-on-1 coaching.
+  - *Can I get a free trial before joining?* Absolutely! Tap the WhatsApp button above to book your complimentary trial session.
+* **Final Call-to-Action:** Ready to Start Your Fitness Journey? Claim your free trial session today and take the first step towards a stronger you.
 
 ---
 
 ## 9. IMAGE DIRECTION
-* **Hero Image Style:** High-intensity, dramatic lighting shot of a dedicated athlete training in a premium gym environment.
-* **Service Images:** Action shots of barbell squat, dumbbell curls, and personal coaching sessions.
-* **Gallery Images:** Clean, spacious dumbbell racks, cardio zone, turf area, and interior ambiance.
-* **Lighting Style & Photography Mood:** High contrast, moody cinematic gym lighting with neon/lime accent glows.
-* **Suitable Stock-Image Search Keywords:** `"luxury fitness gym dumbbells workout interior"`, `"heavy weightlifting strength training gym"`.
+* **Hero Image Style:** Dynamic high-contrast shot of athletes training with weights in a modern gym interior.
+* **Service Images:** Clean, well-lit shots of dumbbells, power racks, and cardio machines.
+* **Gallery Images:** Interior floor view, dumbbell racks, and stretching zones.
+* **Team or Owner Images:** Approachable fitness trainers assisting members.
+* **Local Area Imagery:** Exterior street view near Bhattacharya More, Patna.
+* **Image Orientation & Composition:** 16:9 for heroes, 4:3 for service cards.
+* **Lighting Style & Photography Mood:** High-contrast dramatic gym lighting with crimson ambient glows.
+* **Suitable Stock-Image Search Keywords:** `"modern gym interior weights dumbbells fitness center"`, `"personal trainer helping client gym"`.
 
 ---
 
 ## 10. ANIMATIONS AND INTERACTIONS
-* **Smooth Scrolling & Fade-ups:** Subtle fade-in animations on section scroll using Intersection Observer.
-* **Button Hover Effects:** Micro-scaling (1.02x) with glowing lime drop shadows.
-* **Sticky Header:** Solid opaque dark background on scroll down to prevent content bleed.
-* **Mobile Drawer:** Smooth slide-in menu with clean backdrop blur overlay.
+* **Smooth Scrolling:** Enabled across all anchor links.
+* **Scroll-Triggered Reveals:** Subtle fade-up animation on cards and section headings.
+* **Button & Card Hover Interactions:** Micro-scaling (1.02x) with smooth shadow elevation.
+* **Sticky Navigation:** Solid opaque background on scroll for seamless readability.
+* **Mobile Drawer Animation:** Smooth slide-in menu with backdrop dimming.
+* **Performance & Accessibility:** Fully respect `prefers-reduced-motion` queries.
 
 ---
 
-## 11. MOBILE Experience
-* **Mobile Navigation:** Clean responsive hamburger menu with instant call and WhatsApp triggers.
-* **Sticky Bottom Bar:** Fixed mobile action bar featuring "Call Now" and "WhatsApp" buttons.
-* **Touch-Friendly Hit Targets:** Optimized 44px+ tap targets across all interactive elements.
-* **Performance:** Sub-2 second load time with lazy-loaded imagery.
+## 11. MOBILE EXPERIENCE
+* **Mobile Navigation:** Clean hamburger toggle opening a 100% opaque slide-in mobile drawer.
+* **Sticky Bottom Bar:** Fixed mobile action bar with direct "Call Now" and "WhatsApp" triggers.
+* **Click-to-Call Functionality:** Active `tel:` and `wa.me` links on all phone numbers.
+* **Responsive Typography:** Fluid clamp sizing ensuring zero text clipping on mobile viewports.
+* **Touch-Friendly Hit Targets:** Minimum 44px tap targets for all buttons.
+* **Performance:** Optimized lightweight build for instantaneous mobile loading.
 
 ---
 
 ## 12. LOCAL SEO STRATEGY
-* **Primary Local Keywords:** `"Best gym in Patliputra Colony"`, `"Gym near Patliputra Patna"`, `"Fitness center Patliputra Colony Patna"`.
-* **Page Title:** The Gym Paradox | Best Gym & Fitness Center in Patliputra Colony, Patna
-* **Meta Description:** Train at Patna's top-rated 4.9★ gym. Expert trainers, advanced equipment, and custom fitness programs at UNO Business Center, Patliputra Colony. Book a trial today!
-* **LocalBusiness Schema (JSON-LD):** Fully structured schema with name, address (`UNO Business Center, New Patliputra Colony, Patliputra Colony, Patna, Bihar 800013`), telephone (`+917280055007`), rating (`4.9` with `103` reviews), and geo coordinates.
+* **Primary Local Keywords:** `"Gym in Rajendra Path Patna"`, `"Best fitness club near Bhattacharya More"`, `"Hercules Health Club Ghrounda Patna"`.
+* **Page Title:** Hercules Health Club | Best Gym & Fitness Centre in Patna (<60 chars).
+* **Meta Description:** Transform your body at Hercules Health Club on Rajendra Path, Patna. State-of-the-art equipment, expert trainers & free trials. Call +91 74884 92598.
+* **Heading Hierarchy:** Single `<h1>` for hero value proposition, semantic `<h2>` for sections.
+* **LocalBusiness Schema (JSON-LD):** Included with name, address, telephone, opening hours, and aggregate rating (3.8★ / 72 reviews).
+* **Google Maps Embed:** Interactive iframe centered on Rajendra Path, Patna.
+* **Image Alt Text Rules:** Descriptive keyword-rich alt attributes for all visuals.
 
 ---
 
 ## 13. CONVERSION FEATURES
-* **One-Click WhatsApp Enquiry:** Instant pre-filled message link to `+917280055007`.
-* **Click-to-Call Floating Button:** Direct phone dialer trigger.
-* **Interactive Trial Booking Form:** Quick single-step form for name, phone, and preferred time slot.
-* **Google Maps Directions Button:** One-tap navigation to Patliputra Colony facility.
+* **One-Click WhatsApp Enquiry:** Instant pre-filled WhatsApp message link for trial bookings.
+* **Click-to-Call Floating Button:** Direct phone dialer trigger for mobile users.
+* **Interactive Trial Booking Form:** Quick lead capture form with instant success validation.
+* **Google Maps Directions Button:** One-tap navigation to the gym location.
+* **Direct Google Review Link:** Encouraging positive client feedback.
 
 ---
 
@@ -182,49 +197,49 @@ Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 ```markdown
 You are an expert full-stack web developer and UI/UX designer. Build a complete, responsive, modern, production-grade website for the following business:
 
-**Business Name:** The Gym Paradox
+**Business Name:** Hercules Health Club
 **Category / Industry:** Gym & Fitness Center
-**Location / Address:** UNO Business Center, New Patliputra Colony, Patliputra Colony, Patna, Bihar 800013
-**Google Maps URL:** https://www.google.com/maps/search/?api=1&query=The+Gym+Paradox+Patliputra+Colony+Patna
-**Phone / WhatsApp:** +917280055007
-**Google Rating & Reviews:** 4.9 ★ (103 reviews)
-**Primary Conversion Goal:** WhatsApp Trial Booking & Phone Inquiries
+**Location / Address:** Rajendra Path, near Bhattacharya More, Radhe Krishn Colony, Ghrounda, Patna, Bihar 800001
+**Google Maps URL:** https://www.google.com/maps/search/?api=1&query=Hercules+Health+Club+Patna
+**Phone / WhatsApp:** +917488492598
+**Google Rating & Reviews:** 3.8 ★ (72 reviews)
+**Primary Conversion Goal:** Drive WhatsApp trial bookings and phone inquiries for gym memberships.
 
 ### DESIGN SYSTEM & BRAND SPECIFICATIONS:
-- **Visual Style:** Sleek modern dark mode with electric lime accents
+- **Visual Style:** Sleek modern dark mode with high-energy crimson and amber accents.
 - **Color Palette:**
-  - Background: #050505
-  - Surface/Card: #121214
-  - Primary Accent: #CCFF00
-  - Secondary: #18181B
+  - Background: #09090B
+  - Surface/Card: #18181B
+  - Primary Accent: #E63946
+  - Secondary: #FFB703
   - Text Primary: #FAFAFA
   - Text Muted: #A1A1AA
-  - Button & Hover: #CCFF00 / #B3E600
+  - Button & Hover: #FF334B
 - **Typography:** Headings: Syne, Body: Inter (Load via Google Fonts).
-- **Icons:** Use Lucide React icons CDN.
+- **Icons:** Use Lucide React icons.
 
 ### REQUIRED PAGES & SECTIONS (SINGLE-PAGE APPLICATION):
-1. **100% Solid Opaque Sticky Header & Announcement Bar:** Logo, Navigation links, Phone & WhatsApp CTAs, Operating hours alert. Header MUST have a 100% solid opaque background (no transparency) with 'sticky top-0 z-50 border-b border-zinc-800 bg-[#050505]'.
-2. **Hero Section:** H1 heading, value proposition subheadline, Trust rating badge (4.9★ from 103 Google Reviews), Primary CTA button ("Book Free Trial") and Secondary CTA ("Chat on WhatsApp").
-3. **Trust & Social Proof Bar:** Key stats (4.9★ Rating, 100+ Reviews, Certified Trainers, Patliputra Colony).
-4. **Services / Offerings Grid:** Interactive cards showcasing Strength & Conditioning, Personal Training, and Fat Loss Programs.
-5. **Why Choose Us Section:** Feature cards highlighting top-rated status, expert trainers, and hygiene.
-6. **About / Story Section:** Two-column layout with authentic business narrative in Patliputra Colony.
-7. **Interactive Showcase / Gallery:** Responsive grid with gym equipment and workout atmosphere images.
-8. **Customer Reviews Section:** Testimonial cards featuring authentic Google reviews and 5-star ratings.
-9. **FAQ Accordion:** Interactive expandable FAQ resolving top customer questions.
-10. **Interactive Location & Contact Section:** Contact info, business hours, interactive Google Maps embed using the exact Google Maps URL (https://www.google.com/maps/search/?api=1&query=The+Gym+Paradox+Patliputra+Colony+Patna), and working trial booking form.
-11. **Sticky Mobile Action Bar:** Fixed at the bottom on mobile viewports with "Call Now" and "WhatsApp" quick-action buttons.
-12. **Footer:** Brand identity, quick links, opening hours, contact details, copyright.
+1. **100% Solid Opaque Sticky Header & Announcement Bar:** Logo, Navigation links, Phone & WhatsApp CTAs, Operating hours alert ('Open Daily: 5:00 AM – 10:00 PM'). Header MUST have a 100% solid opaque background (`bg-[#09090b]`) with `sticky top-0 z-50 border-b border-zinc-800`.
+2. **Hero Section:** H1 heading, value proposition subheadline, Trust rating badge (3.8★ from 72+ Google Reviews), Primary CTA ("Claim Free Trial") and Secondary CTA ("WhatsApp Us").
+3. **Trust & Social Proof Bar:** Key stats (3.8★ Google Rating, 72+ Reviews, Prime Patna Location, Expert Trainers).
+4. **Services / Programs Grid:** Interactive cards showcasing Weight Training, Cardio Conditioning, Personal Training, and Fat Loss Programs with icons, descriptions, and inquiry buttons.
+5. **Why Choose Us Section:** Feature cards highlighting prime location, top equipment, and certified training.
+6. **About / Story Section:** Two-column layout with authentic business narrative and core fitness philosophy.
+7. **Interactive Gallery / Work Showcase:** Responsive grid with gym equipment and workout floor photos.
+8. **Customer Reviews Section:** Testimonial cards featuring authentic Google reviews, 5-star ratings, and local reviewer names.
+9. **FAQ Accordion:** Interactive expandable FAQ resolving top customer questions about timings, fees, and trials.
+10. **Interactive Location & Contact Section:** Contact information, business hours table, interactive Google Maps embed using the exact Google Maps URL (`https://www.google.com/maps/search/?api=1&query=Hercules+Health+Club+Patna`), and a direct "Get Directions" button. Also include a working inquiry form with validation and success state.
+11. **Sticky Mobile Action Bar:** Fixed at the bottom on mobile viewports with "Call Now" (`tel:+917488492598`) and "WhatsApp" (`https://wa.me/917488492598`) quick-action buttons. Add `pb-28 lg:pb-0` to body so elements are never obscured.
+12. **Footer:** Brand identity, quick links, operating hours, contact details, copyright notice.
 
 ### INTERACTION, MOBILE-FIRST & TECHNICAL REQUIREMENTS:
-- **Mobile-First Priority (Strict Responsive Typography):**
-  - Hero H1 MUST use: `text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-syne text-white leading-[1.15] mb-6 break-words`.
-  - Section H2 MUST use: `text-2xl sm:text-3xl md:text-4xl font-bold font-syne break-words`.
+- **Mobile-First Priority (Strict Responsive Typography):** Use wrap-safe fluid typography (`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-syne text-white leading-[1.15] mb-6 break-words`) for Hero H1.
 - **Zero Horizontal Overflow:** Ensure `overflow-x-hidden` on html and body with fluid responsive containers (`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`).
-- **100% Solid Opaque Header:** Header and mobile menu drawer MUST have a 100% solid, fully opaque background (`bg-[#050505]`).
-- **Flavoursome Mobile Drawer & Action Bar:** Mobile menu drawer must be solid (`fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#050505] border-l border-zinc-800 p-6`). Add `pb-28 lg:pb-0` to body so sticky mobile action bar never obscures content.
-- **Fully Interactive Components:** Working mobile menu toggle, interactive FAQ accordion, testimonial cards, working trial booking form with success modal, clickable phone (`tel:+917280055007`) and WhatsApp (`https://wa.me/917280055007`) links.
+- **100% Solid Opaque Header:** Every header and mobile menu drawer MUST have a 100% solid opaque background (`bg-[#09090b]`) so content never bleeds through.
+- **Flawless Mobile Drawer:** Mobile menu drawer must be solid (`top-12 bottom-0 right-0 z-[100] w-full max-w-xs rounded-tl-2xl p-6 bg-[#09090b] border-l border-zinc-800 shadow-2xl`) positioned cleanly below the top banner with backdrop overlay.
+- **Sticky Mobile Action Bar & Body Padding:** Fixed at the bottom on mobile screens (`md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800`).
+- **Fully Interactive Components:** Working mobile hamburger menu, interactive FAQ accordion, working contact form with success modal, responsive Google Maps embed, and active clickable phone/WhatsApp links.
+- **Typography & Assets:** Load Google Fonts (Syne/Inter), Lucide Icons CDN, and high-resolution Unsplash fitness imagery.
 
 Generate the complete, clean, working code for this website now.
 ```
