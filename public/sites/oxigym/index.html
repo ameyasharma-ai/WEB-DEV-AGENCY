@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxigym | Premium Gym & Fitness Center in Patna</title>
+    <meta name="description" content="Oxigym is Patna's premier gym & fitness center offering advanced weight training, cardio, personal training, and expert coaching. Book your free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#22C55E',
+                        secondary: '#16A34A',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] font-inter antialiased overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center sticky top-0 z-[60] flex items-center justify-center gap-2 shadow-md">
+        <i data-lucide="zap" class="w-4 h-4 shrink-0 fill-black"></i>
+        <span>🔥 Limited Time Offer: Get 1 Week Free Trial + Free Body Assessment!</span>
+        <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20claim%20my%20Free%20Trial!" target="_blank" rel="noopener noreferrer" class="underline hover:text-white font-bold ml-1 transition-colors">Claim Now</a>
+    </div>
+
+    <!-- 100% Solid Opaque Header -->
+    <header class="bg-[#09090b] border-b border-zinc-800 sticky top-[37px] sm:top-[41px] z-50 w-full transition-all">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-black font-syne font-extrabold text-2xl shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    O
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-xl sm:text-2xl tracking-wider text-white">OXIGYM</span>
+                    <span class="text-[10px] text-primary tracking-widest uppercase font-semibold">Patna's Elite Gym</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-textMuted">
+                <a href="#programs" class="hover:text-primary transition-colors">Programs</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Header Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+917276623095" class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-textPrimary bg-zinc-900 border border-zinc-800 px-4 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>+91 72766 23095</span>
+                </a>
+                <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20would%20like%20to%20know%20more%20about%20memberships." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-black bg-primary px-4 py-2.5 rounded-xl hover:bg-secondary transition-all shadow-lg shadow-primary/20 hover:scale-[1.02]">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-textPrimary hover:text-primary focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="flex flex-col gap-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-black font-syne font-extrabold text-xl">O</div>
+                    <span class="font-syne font-extrabold text-lg text-white">OXIGYM PATNA</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-textMuted hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 font-medium text-base text-textMuted">
+                <a href="#programs" class="mobile-nav-link hover:text-primary transition-colors flex items-center justify-between py-1"><span>Programs</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#why-us" class="mobile-nav-link hover:text-primary transition-colors flex items-center justify-between py-1"><span>Why Us</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#about" class="mobile-nav-link hover:text-primary transition-colors flex items-center justify-between py-1"><span>About</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#gallery" class="mobile-nav-link hover:text-primary transition-colors flex items-center justify-between py-1"><span>Gallery</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#reviews" class="mobile-nav-link hover:text-primary transition-colors flex items-center justify-between py-1"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#faq" class="mobile-nav-link hover:text-primary transition-colors flex items-center justify-between py-1"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#contact" class="mobile-nav-link hover:text-primary transition-colors flex items-center justify-between py-1"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            </nav>
+        </div>
+        <div class="flex flex-col gap-3 pt-6 border-t border-zinc-800">
+            <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20book%20a%20free%20trial." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-primary text-black font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <a href="tel:+917276623095" class="w-full flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-800 text-textPrimary font-semibold py-3.5 rounded-xl">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <span>Call +91 72766 23095</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:py-24 lg:py-32 overflow-hidden bg-[#09090B]">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-3.5 py-2 rounded-full mb-6 shadow-sm">
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-textPrimary">4.7★ Rating (104+ Google Reviews)</span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        TRANSFORM YOUR BODY AT <span class="text-primary underline decoration-primary/40 underline-offset-8">OXIGYM PATNA</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-textMuted mb-8 leading-relaxed max-w-2xl break-words">
+                        Patna’s ultimate destination for serious fitness. Featuring state-of-the-art strength equipment, dedicated cardio zones, and expert personal trainers at Devendra Rai Lane, Janta Road.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20would%20like%20to%20book%20a%20Free%20Trial." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-primary text-black font-syne font-bold text-base px-8 py-4 rounded-xl hover:bg-secondary transition-all shadow-xl shadow-primary/20 hover:scale-[1.02]">
+                            <i data-lucide="dumbbell" class="w-5 h-5"></i>
+                            <span>Book Free Trial</span>
+                        </a>
+                        <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20chat%20about%20membership%20plans." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-zinc-900 border border-zinc-800 text-textPrimary font-syne font-semibold text-base px-8 py-4 rounded-xl hover:bg-zinc-800 transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-primary"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Location Quick Indicator -->
+                    <div class="flex items-center gap-2 mt-8 text-xs sm:text-sm text-textMuted">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                        <span>Devendra Rai Lane, Janta Road, Patna 1 (Near Bhojpur Vastralay)</span>
+                    </div>
+
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Oxigym Fitness Center Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800/80 p-4 rounded-xl flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Elite Coaching</h4>
+                                    <p class="text-xs text-textMuted">Certified personal trainers</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-primary bg-primary/10 px-2.5 py-1 rounded-md">Open Now</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-surface/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center p-4">
+                    <span class="font-syne font-extrabold text-3xl sm:text-4xl text-primary mb-1">104+</span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Verified Google Reviews</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <span class="font-syne font-extrabold text-3xl sm:text-4xl text-primary mb-1 flex items-center gap-1 justify-center">4.7 <i data-lucide="star" class="w-6 h-6 fill-primary text-primary"></i></span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Overall Client Rating</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <span class="font-syne font-extrabold text-3xl sm:text-4xl text-primary mb-1">100%</span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Pro Grade Equipment</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <span class="font-syne font-extrabold text-3xl sm:text-4xl text-primary mb-1">Patna 1</span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Prime Janta Road Location</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Programs Grid -->
+    <section id="programs" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">Our Programs</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-3 mb-4 break-words">TRAINING PROGRAMS DESIGNED FOR RESULTS</h2>
+                <p class="text-textMuted text-sm sm:text-base">Whether your goal is muscle hypertrophy, fat loss, or overall endurance, Oxigym has the right equipment and guidance for you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Program 1: Weight Training -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Weight Training</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">Heavy-duty racks, Olympic barbells, dumbells up to 50kg, and pin-loaded machines for serious muscle building.</p>
+                    </div>
+                    <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20inquire%20about%20Weight%20Training%20programs." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 border border-zinc-800 text-textPrimary rounded-xl font-semibold text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-colors">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 2: Cardio & Conditioning -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Cardio & Stamina</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">Advanced treadmills, ellipticals, and stationary bikes to boost cardiovascular endurance and heart health.</p>
+                    </div>
+                    <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20inquire%20about%20Cardio%20programs." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 border border-zinc-800 text-textPrimary rounded-xl font-semibold text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-colors">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 3: Personal Training -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Personal Training</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">One-on-one coaching with expert fitness trainers custom-tailored to your body type, metabolism, and schedule.</p>
+                    </div>
+                    <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20inquire%20about%20Personal%20Training." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 border border-zinc-800 text-textPrimary rounded-xl font-semibold text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-colors">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Program 4: Fat Loss & Tone -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Fat Loss & Tone</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">High-intensity interval training (HIIT) circuits and structured fat-loss routines designed to shed stubborn body fat.</p>
+                    </div>
+                    <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20inquire%20about%20Fat%20Loss%20programs." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 border border-zinc-800 text-textPrimary rounded-xl font-semibold text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-colors">
+                        <span>Inquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div>
+                    <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">Why Oxigym</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-3 mb-6 break-words">BUILT FOR PATNA'S FITNESS ENTHUSIASTS</h2>
+                    <p class="text-textMuted text-base mb-8 leading-relaxed">
+                        We don't just provide equipment; we cultivate a high-energy environment where motivation thrives. Rated 4.7 stars across 104+ reviews because we prioritize your progress.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Modern Equipment</h4>
+                                <p class="text-xs text-textMuted">Well-maintained machines and heavy weights.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                <i data-lucide="sparkles" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Spotless Hygiene</h4>
+                                <p class="text-xs text-textMuted">Regular sanitization of floors and weights.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Expert Coaching</h4>
+                                <p class="text-xs text-textMuted">Trainers who correct form and push limits.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Safe Environment</h4>
+                                <p class="text-xs text-textMuted">Welcoming community for men and women.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="relative">
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Oxigym Interior Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-60"></div>
+                        
+                        <div class="absolute bottom-6 left-6 right-6 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-5 rounded-xl flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-primary font-semibold uppercase tracking-wider">Ready to start?</span>
+                                <h4 class="font-syne font-bold text-lg text-white">Claim Your 1 Week Free Trial</h4>
+                            </div>
+                            <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20claim%20my%20Free%20Trial." target="_blank" rel="noopener noreferrer" class="bg-primary text-black font-bold text-sm px-4 py-2.5 rounded-lg hover:bg-secondary transition-all">
+                                Join Free
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-surface border border-zinc-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-8">
+                        <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">About Oxigym</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-3 mb-4 break-words">PATNA'S PREMIER GYM LOCATED AT DEVENDRA RAI LANE</h2>
+                        <p class="text-textMuted text-base leading-relaxed mb-6">
+                            Situated near Bhojpur Vastralay on Janta Road, Patna 1, Oxigym was built with a single mission: to provide world-class fitness infrastructure accessible to everyone in Patna. Whether you're a beginner stepping into a gym for the first time or an experienced lifter looking to break personal records, our facility delivers the right energy, equipment, and expert support.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-6 text-sm text-textPrimary font-medium">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-primary"></i>
+                                <span>Devendra Rai Lane, Patna 1</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                                <span>+91 72766 23095</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                                <span>4.7 ★ Google Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col gap-4">
+                        <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl text-center">
+                            <span class="font-syne font-extrabold text-4xl text-primary block mb-1">104+</span>
+                            <span class="text-sm text-textMuted">Satisfied Reviews on Google Maps</span>
+                        </div>
+                        <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20would%20like%20to%20visit%20the%20gym." target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-primary text-black font-syne font-bold rounded-xl text-center hover:bg-secondary transition-all shadow-lg shadow-primary/20">
+                            Visit Gym Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery Section -->
+    <section id="gallery" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">Gym Floor</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-3 mb-4 break-words">EXPLORE OUR FACILITY</h2>
+                <p class="text-textMuted text-sm sm:text-base">Take a visual tour of Oxigym's spacious workout floor, dumbbells, weight racks, and modern cardio machines.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Oxigym Weight Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Weight Training Area</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Oxigym Cardio Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Cardio & Stamina Zone</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="Oxigym Dumbbells & Racks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Dumbbell & Barbell Racks</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Oxigym Training Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Personal Training & Coaching</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Oxigym Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">Advanced Strength Machines</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Oxigym Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="font-syne font-bold text-white text-lg">High Energy Atmosphere</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full mb-3">
+                    <div class="flex items-center text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-textPrimary">4.7 ★ from 104+ Google Reviews</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">WHAT PATNA SAYS ABOUT OXIGYM</h2>
+                <p class="text-textMuted text-sm sm:text-base">Real reviews from verified gym members who transformed their fitness journey with us.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"One of the best gyms in Patna! Excellent equipment, great trainer guidance, and very energetic environment. Highly recommended for weight training."</p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-zinc-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary font-syne">A</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Ankit Kumar</h4>
+                            <span class="text-xs text-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Very spacious and clean gym located conveniently near Janta Road. The trainers are extremely supportive and helpful with workout form."</p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-zinc-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary font-syne">P</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Priya Singh</h4>
+                            <span class="text-xs text-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Great selection of heavy dumbbells and cardio machines. Affordable membership rates and fantastic atmosphere. Best gym in Patna 1!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 border-t border-zinc-800 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary font-syne">R</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Rahul Verma</h4>
+                            <span class="text-xs text-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-3 mb-4 break-words">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-textMuted text-sm sm:text-base">Everything you need to know about memberships, timings, and training at Oxigym.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>Where is Oxigym located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Oxigym is conveniently located at Devendra Rai Lane, Janta Road, Patna 1 (Near Bhojpur Vastralay, Patna, Bihar 800001). It is easily accessible from all major parts of Patna.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>Do you offer a free trial session?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Yes! We offer a free trial week for new visitors. You can click on the "Book Free Trial" or WhatsApp button to claim your pass instantly.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>Are personal trainers available?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Absolutely. We have certified and experienced personal trainers who provide custom workout plans, nutritional guidance, and one-on-one supervision for faster results.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Oxigym is open daily from morning 6:00 AM to 10:00 PM, accommodating both early birds and evening workout enthusiasts.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>How can I inquire about membership pricing?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        You can easily inquire about monthly, quarterly, or yearly membership plans by messaging us directly on WhatsApp at +91 72766 23095 or calling us.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">Get In Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-3 mb-4 break-words">VISIT OR CONTACT OXIGYM</h2>
+                <p class="text-textMuted text-sm sm:text-base">Drop by our facility at Janta Road or send us a message for quick assistance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Contact Info & Form -->
+                <div class="lg:col-span-6 bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8">
+                    <h3 class="font-syne font-bold text-2xl text-white mb-6">Send an Inquiry</h3>
+                    
+                    <form id="inquiry-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-textPrimary text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Rahul Kumar">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Phone / WhatsApp Number</label>
+                            <input type="tel" id="phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-textPrimary text-sm focus:outline-none focus:border-primary transition-colors" placeholder="+91 98765 43210">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Select Program</label>
+                            <select id="service" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-textPrimary text-sm focus:outline-none focus:border-primary transition-colors">
+                                <option value="Weight Training">Weight Training</option>
+                                <option value="Cardio & Stamina">Cardio & Stamina</option>
+                                <option value="Personal Training">Personal Training</option>
+                                <option value="Fat Loss & Tone">Fat Loss & Tone</option>
+                                <option value="General Inquiry">General Inquiry / Membership</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Message</label>
+                            <textarea id="message" rows="3" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-textPrimary text-sm focus:outline-none focus:border-primary transition-colors" placeholder="I want to know about membership fees..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full py-4 bg-primary text-black font-syne font-bold rounded-xl hover:bg-secondary transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                            <span>Submit & Send via WhatsApp</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map & Address Details -->
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 space-y-6">
+                        <h3 class="font-syne font-bold text-2xl text-white">Oxigym Location</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Address</h4>
+                                    <p class="text-sm text-textMuted leading-relaxed">Devendra Rai Lane, Janta Road, Patna 1 (Near Bhojpur Vastralay, Patna, Bihar 800001)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Phone & WhatsApp</h4>
+                                    <p class="text-sm text-textMuted">+91 72766 23095</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Operating Hours</h4>
+                                    <p class="text-sm text-textMuted">Monday – Sunday: 6:00 AM – 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Oxigym+Devendra+Rai+Lane+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-zinc-900 border border-zinc-800 text-textPrimary font-semibold text-sm rounded-xl flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors">
+                            <i data-lucide="external-link" class="w-4 h-4 text-primary"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="w-full h-[250px] rounded-3xl overflow-hidden border border-zinc-800 bg-surface">
+                        <iframe title="Oxigym Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848492043!2d85.1376!3d25.6120!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQzLjIiTiA4NcKwMDgnMTUuNiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center space-y-6 shadow-2xl relative">
+            <div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <h3 class="font-syne font-extrabold text-2xl text-white">Inquiry Received!</h3>
+            <p class="text-textMuted text-sm leading-relaxed">Thank you for contacting Oxigym. We are redirecting you to WhatsApp to instantly connect with our fitness coach.</p>
+            <button id="close-modal" class="w-full py-3.5 bg-primary text-black font-syne font-bold rounded-xl hover:bg-secondary transition-all">
+                Close & Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+917276623095" class="flex-1 flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-800 text-textPrimary font-semibold py-3 rounded-xl text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917276623095?text=Hi%20Oxigym,%20I%20want%20to%20inquire%20about%20gym%20membership." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-primary text-black font-bold py-3 rounded-xl text-sm shadow-lg shadow-primary/20">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 bg-[#09090B] py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-black font-syne font-extrabold text-xl">O</div>
+                        <span class="font-syne font-extrabold text-xl text-white tracking-wider">OXIGYM</span>
+                    </div>
+                    <p class="text-textMuted text-sm leading-relaxed">
+                        Patna's premier gym & fitness center offering advanced weight training, cardio, and expert personal coaching.
+                    </p>
+                    <div class="flex items-center gap-3 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span class="text-xs font-semibold text-textPrimary">4.7 ★ (104+ Google Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-textMuted">
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Programs</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Oxigym</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Programs -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Fitness Programs</h4>
+                    <ul class="space-y-2.5 text-sm text-textMuted">
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Weight Training</a></li>
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Cardio & Conditioning</a></li>
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Personal Training</a></li>
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Fat Loss & Tone</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-textMuted">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                            <span>Devendra Rai Lane, Janta Road, Patna 1 (Near Bhojpur Vastralay)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="tel:+917276623095" class="hover:text-primary transition-colors">+91 72766 23095</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span>Open Daily: 6:00 AM – 10:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-zinc-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-textMuted gap-4">
+                <p>&copy; <span id="current-year"></span> Oxigym Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Location Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(s => s.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    const svgIcon = btn.querySelector('svg');
+                    if (svgIcon) svgIcon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Interactive Inquiry Form & WhatsApp Redirect
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone) {
+                alert('Please fill in your name and phone number.');
+                return;
+            }
+
+            // Construct WhatsApp URL safely
+            const waText = `Hi Oxigym,%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Program:* ${encodeURIComponent(service)}%0A*Message:* ${encodeURIComponent(message)}`;
+            const waUrl = `https://wa.me/917276623095?text=${waText}`;
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Delay redirect to WhatsApp after modal close or auto
+            closeModal.onclick = () => {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+                window.open(waUrl, '_blank', 'noopener noreferrer');
+            };
+        });
+    </script>
+</body>
+</html>
