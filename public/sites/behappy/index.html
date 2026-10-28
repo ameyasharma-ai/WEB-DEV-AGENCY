@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BE HAPPY NUTRITION & FITNESS CENTER | Kankarbagh Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ECFDF5',
+                            100: '#D1FAE5',
+                            500: '#10B981',
+                            600: '#0D5C3B',
+                            700: '#047857',
+                            900: '#064E3B'
+                        },
+                        gold: {
+                            500: '#D97706',
+                            600: '#B45309'
+                        }
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-[#0D5C3B] text-white text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50 flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 text-gold-500 animate-pulse"></i>
+        <span>Open Daily: 6:00 AM – 9:00 PM | Call/WhatsApp: <a href="tel:+916204535205" class="underline font-bold">+91 6204535205</a></span>
+    </div>
+
+    <!-- 100% Solid Opaque Header -->
+    <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-[#0D5C3B] flex items-center justify-center text-white font-syne font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    BH
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight block leading-tight">BE HAPPY</span>
+                    <span class="text-xs font-semibold tracking-wider text-[#0D5C3B] uppercase block">Nutrition & Fitness Center</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#services" class="text-sm font-semibold text-slate-700 hover:text-[#0D5C3B] transition-colors">Programs</a>
+                <a href="#about" class="text-sm font-semibold text-slate-700 hover:text-[#0D5C3B] transition-colors">Why Us</a>
+                <a href="#gallery" class="text-sm font-semibold text-slate-700 hover:text-[#0D5C3B] transition-colors">Gallery</a>
+                <a href="#reviews" class="text-sm font-semibold text-slate-700 hover:text-[#0D5C3B] transition-colors">Reviews</a>
+                <a href="#faq" class="text-sm font-semibold text-slate-700 hover:text-[#0D5C3B] transition-colors">FAQ</a>
+                <a href="#contact" class="text-sm font-semibold text-slate-700 hover:text-[#0D5C3B] transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action CTA -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="https://wa.me/916204535205?text=Hi,%20I%20want%20to%20book%20a%20free%20consultation%20at%20Be%20Happy%20Nutrition." target="_blank" rel="noopener noreferrer" class="bg-[#0D5C3B] hover:bg-emerald-700 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    WhatsApp Consult
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-white border-l border-slate-200 rounded-tl-3xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-[#0D5C3B] flex items-center justify-center text-white font-syne font-bold">BH</div>
+                    <span class="font-syne font-bold text-slate-900">Be Happy Nutrition</span>
+                </div>
+                <button id="close-btn" aria-label="Close Navigation Menu" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="#services" class="mobile-link text-base font-semibold text-slate-800 hover:text-[#0D5C3B] py-2 border-b border-slate-50 flex items-center justify-between">Programs <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+                <a href="#about" class="mobile-link text-base font-semibold text-slate-800 hover:text-[#0D5C3B] py-2 border-b border-slate-50 flex items-center justify-between">Why Us <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+                <a href="#gallery" class="mobile-link text-base font-semibold text-slate-800 hover:text-[#0D5C3B] py-2 border-b border-slate-50 flex items-center justify-between">Gallery <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+                <a href="#reviews" class="mobile-link text-base font-semibold text-slate-800 hover:text-[#0D5C3B] py-2 border-b border-slate-50 flex items-center justify-between">Reviews <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+                <a href="#faq" class="mobile-link text-base font-semibold text-slate-800 hover:text-[#0D5C3B] py-2 border-b border-slate-50 flex items-center justify-between">FAQ <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+                <a href="#contact" class="mobile-link text-base font-semibold text-slate-800 hover:text-[#0D5C3B] py-2 border-b border-slate-50 flex items-center justify-between">Location & Contact <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-slate-100 mt-6">
+            <a href="https://wa.me/916204535205?text=Hi,%20I%20want%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener noreferrer" class="w-full bg-[#0D5C3B] text-white py-3.5 rounded-xl font-semibold text-center block shadow-lg flex items-center justify-center gap-2">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                WhatsApp Consultation
+            </a>
+            <p class="text-xs text-center text-slate-400 mt-4">Kankarbagh, Patna, Bihar 800020</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 bg-gradient-to-b from-white to-[#F8FAFC] overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50 -z-10 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-4 py-2 rounded-full mb-6 shadow-sm">
+                        <div class="flex text-gold-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-slate-800">5.0 ★ <span class="text-slate-500 font-normal">(136+ Verified Google Reviews)</span></span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-slate-900 leading-[1.15] mb-6 break-words">
+                        Transform Your Health with Patna's Most Trusted <span class="text-[#0D5C3B]">Wellness & Fitness Experts</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl">
+                        Achieve sustainable weight loss, muscle gain, and elite sports nutrition through 100% medicine-free customized programs in Kankarbagh, Patna.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="#contact" class="bg-[#0D5C3B] hover:bg-emerald-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-center flex items-center justify-center gap-3">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            Book Free Consultation
+                        </a>
+                        <a href="https://wa.me/916204535205?text=Hi,%20I%20want%20to%20know%20more%20about%20your%20fitness%20programs." target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-slate-50 text-slate-900 border-2 border-slate-200 font-bold text-base px-8 py-4 rounded-xl transition-all text-center flex items-center justify-center gap-3 shadow-sm">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="mt-8 flex items-center gap-6 text-xs sm:text-sm text-slate-500 font-medium">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                            <span>100% Medicine-Free</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Expert Coaching</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Personalized Diet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-emerald-600 to-gold-500 rounded-3xl blur-lg opacity-25"></div>
+                        <div class="relative aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Be Happy Nutrition & Fitness Center Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 max-w-xs">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-[#0D5C3B] shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Top Rated in Patna</h4>
+                                <p class="text-xs text-slate-500">136+ Happy clients transformed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-[#0D5C3B] text-white py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="border-r border-emerald-600/50 last:border-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-gold-500 mb-1">5.0 ★</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-medium">Google Rating Score</div>
+                </div>
+                <div class="border-r border-emerald-600/50 last:border-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">136+</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-medium">Verified Customer Reviews</div>
+                </div>
+                <div class="border-r border-emerald-600/50 last:border-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-gold-500 mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-medium">Medicine-Free Programs</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">7 Days</div>
+                    <div class="text-xs sm:text-sm text-emerald-100 font-medium">Open Every Week (6am-9pm)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs / Services Grid -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#0D5C3B] bg-emerald-100 px-3 py-1 rounded-full mb-3 inline-block">Our Expertise</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-slate-900 mb-4">Tailored Nutrition & Fitness Programs</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Designed specifically for your body type, lifestyle, and health goals without harsh pills or extreme starving.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center text-[#0D5C3B] mb-6 group-hover:bg-[#0D5C3B] group-hover:text-white transition-colors">
+                            <i data-lucide="trending-down" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-3">Weight Loss Program</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Lose stubborn fat safely with customized meal plans, metabolism boosting routines, and continuous expert monitoring.</p>
+                    </div>
+                    <a href="https://wa.me/916204535205?text=Hi,%20I%20am%20interested%20in%20the%20Weight%20Loss%20Program." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-100 hover:bg-[#0D5C3B] hover:text-white text-slate-800 font-semibold text-sm py-3 rounded-xl transition-colors text-center block">
+                        Inquire Now
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center text-[#0D5C3B] mb-6 group-hover:bg-[#0D5C3B] group-hover:text-white transition-colors">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-3">Weight Gain & Muscle</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Build lean muscle mass effectively with high-protein nutrition guidance, strength training advice, and healthy bulking plans.</p>
+                    </div>
+                    <a href="https://wa.me/916204535205?text=Hi,%20I%20am%20interested%20in%20the%20Weight%20Gain%20Program." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-100 hover:bg-[#0D5C3B] hover:text-white text-slate-800 font-semibold text-sm py-3 rounded-xl transition-colors text-center block">
+                        Inquire Now
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center text-[#0D5C3B] mb-6 group-hover:bg-[#0D5C3B] group-hover:text-white transition-colors">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-3">Sports Nutrition Shop</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Authentic nutritional supplements, energy boosters, and recovery essentials recommended by certified professionals.</p>
+                    </div>
+                    <a href="https://wa.me/916204535205?text=Hi,%20I%20want%20to%20know%20about%20Sports%20Nutrition%20supplements." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-100 hover:bg-[#0D5C3B] hover:text-white text-slate-800 font-semibold text-sm py-3 rounded-xl transition-colors text-center block">
+                        Inquire Now
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center text-[#0D5C3B] mb-6 group-hover:bg-[#0D5C3B] group-hover:text-white transition-colors">
+                            <i data-lucide="heart-pulse" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-3">Yoga & Family Wellness</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">Holistic wellness coaching for the entire family, promoting vitality, mental peace, and immunity through lifestyle habits.</p>
+                    </div>
+                    <a href="https://wa.me/916204535205?text=Hi,%20I%20am%20interested%20in%20Family%20Wellness%20programs." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-100 hover:bg-[#0D5C3B] hover:text-white text-slate-800 font-semibold text-sm py-3 rounded-xl transition-colors text-center block">
+                        Inquire Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#0D5C3B] bg-emerald-100 px-3 py-1 rounded-full mb-3 inline-block">Our Philosophy</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-slate-900 mb-6">Why Patna Chooses Be Happy Nutrition</h2>
+                    <p class="text-slate-600 text-base leading-relaxed mb-6">
+                        We believe true fitness isn't about crash dieting or harmful chemical fat burners. Founded by fitness expert <strong class="text-slate-900">Pankaj Raj</strong>, our center focuses on sustainable lifestyle modifications that yield lifelong results.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-[#0D5C3B] flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">100% Medicine-Free Approach</h4>
+                                <p class="text-slate-xs text-slate-600 text-sm">Natural foods and scientifically backed diet plans without pharmaceutical shortcuts.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-[#0D5C3B] flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="user-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Personalized Expert Coaching</h4>
+                                <p class="text-slate-600 text-sm">One-on-one attention with regular progress tracking and customized adjustments.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-[#0D5C3B] flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Supportive Community</h4>
+                                <p class="text-slate-600 text-sm">Join a vibrant community of health enthusiasts in Kankarbagh who motivate each other daily.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Fitness Training" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-lg bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Healthy Nutrition" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-lg bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Wellness Coaching" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-slate-100">
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym Center Patna" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-slate-50">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#0D5C3B] bg-emerald-100 px-3 py-1 rounded-full mb-3 inline-block">Center Gallery</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-slate-900 mb-4">Glimpse Inside Be Happy Nutrition</h2>
+                <p class="text-slate-600 text-sm sm:text-base">State-of-the-art facilities and energetic ambiance located at Pani Tanki, Kankarbagh, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-md group bg-white">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym facility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-md group bg-white">
+                    <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=600&q=80" alt="Nutrition Supplements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-md group bg-white">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Fitness workout session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-md group bg-white">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Center interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-md group bg-white">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Weight training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-video sm:aspect-square rounded-2xl overflow-hidden shadow-md group bg-white">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Personal coaching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#0D5C3B] bg-emerald-100 px-3 py-1 rounded-full mb-3 inline-block">Verified Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-slate-900 mb-4">Loved by 136+ Patna Residents</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Read authentic experiences from our clients who transformed their health and lifestyle with us.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">"Best nutrition center in Kankarbagh! Pankaj Raj sir provides amazing guidance for weight loss without any medicines. I lost 8 kgs in 2 months naturally. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm">
+                            SK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Subhadra Kumari</h4>
+                            <span class="text-xs text-slate-500">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">"Amazing atmosphere and genuine sports nutrition products. The diet plans are practical and easy to follow even with a busy work schedule in Patna. 5 stars!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-gold-600 text-white font-bold flex items-center justify-center text-sm">
+                            VG
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Vijay Gautam Singh</h4>
+                            <span class="text-xs text-slate-500">Verified Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6">"Be Happy Nutrition is truly a game changer for fitness enthusiasts in Kankarbagh. Their personalized attention and genuine supplements make all the difference."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-emerald-900 text-white font-bold flex items-center justify-center text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Alok Kumar</h4>
+                            <span class="text-xs text-slate-500">Verified Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#0D5C3B] bg-emerald-100 px-3 py-1 rounded-full mb-3 inline-block">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Everything you need to know about our programs, location, and nutrition philosophy.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold font-syne text-slate-900 text-base sm:text-lg focus:outline-none">
+                        <span>Are your weight loss programs 100% medicine-free?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Yes! Absolutely. We strictly follow a 100% medicine-free approach relying entirely on natural foods, proper dietary adjustments, metabolism correction, and guided lifestyle habits.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold font-syne text-slate-900 text-base sm:text-lg focus:outline-none">
+                        <span>Where exactly is Be Happy Nutrition located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        We are conveniently located at Road No. 1, near Pani Tanki, Kailashpuri, Kankarbagh, Hanuman Nagar, Patna, Bihar 800020. Easily accessible from all parts of Patna.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold font-syne text-slate-900 text-base sm:text-lg focus:outline-none">
+                        <span>What are your center operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        We are open 7 days a week from 6:00 AM to 9:00 PM to accommodate both early morning workout enthusiasts and evening schedules.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold font-syne text-slate-900 text-base sm:text-lg focus:outline-none">
+                        <span>How can I book a consultation with Pankaj Raj?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        You can instantly book a free consultation by clicking our WhatsApp chat button (+91 6204535205), filling out our quick contact form below, or visiting our center directly in Kankarbagh.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#0D5C3B] bg-emerald-100 px-3 py-1 rounded-full mb-3 inline-block">Get In Touch</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-slate-900 mb-4">Visit Our Center or Send a Message</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Start your fitness journey today. We are here to help you achieve your goals.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info & Hours -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-6">Center Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-[#0D5C3B] flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Address</h4>
+                                    <p class="text-slate-600 text-sm">Road no, pani tanki, Kailashpuri, Road No. 1, Kankarbagh, Hanuman Nagar, Patna, Bihar 800020</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-[#0D5C3B] flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Phone / WhatsApp</h4>
+                                    <a href="tel:+916204535205" class="text-[#0D5C3B] font-semibold text-sm hover:underline">+91 6204535205</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-[#0D5C3B] flex items-center justify-center shrink-0">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Working Hours</h4>
+                                    <p class="text-slate-600 text-sm">Monday – Sunday: 6:00 AM – 9:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-200">
+                            <a href="https://www.google.com/maps/search/?api=1&query=BE+HAPPY+NUTRITION+%26+FITNESS+CENTER+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="w-full bg-[#0D5C3B] hover:bg-emerald-700 text-white font-semibold text-sm py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                Get Directions on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-6">Book Your Free Consultation</h3>
+                        <form id="consultation-form" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Your Full Name *</label>
+                                    <input type="text" id="form-name" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0D5C3B]" placeholder="e.g. Rohit Kumar">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Phone / WhatsApp *</label>
+                                    <input type="tel" id="form-phone" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0D5C3B]" placeholder="e.g. +91 9876543210">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Select Program *</label>
+                                <select id="form-service" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0D5C3B]">
+                                    <option value="Weight Loss">Weight Loss Program</option>
+                                    <option value="Weight Gain">Weight Gain & Muscle Building</option>
+                                    <option value="Sports Nutrition">Sports Nutrition Supplements</option>
+                                    <option value="Family Wellness">Yoga & Family Wellness</option>
+                                    <option value="General Consultation">General Fitness Consultation</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Your Health Goals / Message</label>
+                                <textarea id="form-message" rows="4" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0D5C3B]" placeholder="Tell us about your current weight, health goals, or any specific requirements..."></textarea>
+                            </div>
+                            <button type="submit" id="form-submit-btn" class="w-full bg-[#0D5C3B] hover:bg-emerald-700 text-white font-bold text-base py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+                                <span id="btn-text">Submit Consultation Request</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="mt-12 w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                <iframe title="Be Happy Nutrition & Fitness Center Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778841444155!2d85.155!3d25.594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed588a456789ab%3A0x123456789abcdef!2sKankarbagh%2C%20Patna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 bg-emerald-100 text-[#0D5C3B] rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-syne text-slate-900 mb-2">Request Received!</h3>
+            <p class="text-slate-600 text-sm mb-6">Thank you for reaching out to Be Happy Nutrition & Fitness Center. Our expert will contact you via phone or WhatsApp shortly.</p>
+            <button id="close-modal-btn" class="w-full bg-[#0D5C3B] text-white py-3.5 rounded-xl font-bold text-sm shadow-md hover:bg-emerald-700 transition-colors">
+                Okay, Thank You
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+916204535205" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm py-3 rounded-xl flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400"></i>
+            Call Now
+        </a>
+        <a href="https://wa.me/916204535205?text=Hi,%20I%20want%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            WhatsApp
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16 border-t border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-[#0D5C3B] flex items-center justify-center text-white font-syne font-bold text-lg">BH</div>
+                        <span class="font-syne font-bold text-lg tracking-tight">BE HAPPY</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Patna's premier wellness center & sports nutrition shop. 100% medicine-free weight loss, weight gain, and expert fitness coaching.
+                    </p>
+                    <div class="flex items-center gap-3 text-gold-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-gold-500"></i>
+                        <span class="text-white text-xs font-bold">5.0 (136+ Reviews)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-base mb-6 text-emerald-400">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li><a href="#services" class="hover:text-white transition-colors">Programs & Services</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Center Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-base mb-6 text-emerald-400">Programs</h4>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li><a href="#services" class="hover:text-white transition-colors">Weight Loss Program</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Weight Gain & Muscle</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Sports Nutrition Shop</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Yoga & Family Wellness</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-base mb-6 text-emerald-400">Visit Us</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                        Road no, pani tanki, Kailashpuri, Road No. 1, Kankarbagh, Hanuman Nagar, Patna, Bihar 800020
+                    </p>
+                    <p class="text-sm text-slate-300 mb-2"><strong>Hours:</strong> Mon-Sun: 6:00 AM - 9:00 PM</p>
+                    <p class="text-sm text-slate-300"><strong>Phone:</strong> <a href="tel:+916204535205" class="underline">+91 6204535205</a></p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2025 Be Happy Nutrition & Fitness Center. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="https://www.google.com/maps/search/?api=1&query=BE+HAPPY+NUTRITION+%26+FITNESS+CENTER+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-slate-400 transition-colors">Google Maps Listing</a>
+                    <a href="https://wa.me/916204535205" target="_blank" rel="noopener noreferrer" class="hover:text-slate-400 transition-colors">WhatsApp Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Handling & Success Modal
+        const contactForm = document.getElementById('consultation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('form-submit-btn');
+            const btnText = document.getElementById('btn-text');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending Request...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Consultation Request';
+                contactForm.reset();
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+            }, 1000);
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
