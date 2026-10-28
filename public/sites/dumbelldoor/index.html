@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumbelldoor Fitness | Best Gym in Boring Road, Patna</title>
+    <meta name="description" content="Transform your body at Dumbelldoor Fitness, Patna's premier gym on Boring Road. Expert trainers, state-of-the-art equipment, and personalized training. Book your free trial today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#F59E0B',
+                        'primary-hover': '#D97706',
+                        secondary: '#10B981',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and utilities */
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom Ambient Glow */
+        .ambient-glow {
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(9, 9, 11, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-background text-text-primary pb-28 md:pb-0 overflow-x-hidden">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-primary text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
+        <span>Special Offer: Join today & get a 7-Day FREE Trial + Free Diet Plan!</span>
+        <a href="#contact" class="underline ml-2 hover:text-white transition-colors font-bold">Claim Now</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-[#09090b] border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="dumbbell" class="w-6 h-6 text-black"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne tracking-tight text-white leading-none">DUMBELLDOOR</span>
+                    <span class="text-xs text-primary font-semibold tracking-widest uppercase mt-0.5">Fitness Center</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Programs</a>
+                <a href="#why-us" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+916123592986" class="flex items-center gap-2 text-sm font-semibold text-zinc-300 hover:text-white px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>+91 612 359 2986</span>
+                </a>
+                <a href="#contact" class="flex items-center gap-2 bg-primary hover:bg-primary-hover text-black font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-primary/20 hover:scale-105">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book Free Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer (100% Solid & Clean) -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#09090b] border-l border-zinc-800 shadow-2xl overflow-y-auto transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <i data-lucide="dumbbell" class="w-5 h-5 text-black"></i>
+                    </div>
+                    <span class="font-extrabold font-syne text-lg text-white">DUMBELLDOOR</span>
+                </div>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 pt-6">
+                <a href="#services" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">Programs</a>
+                <a href="#why-us" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">Why Us</a>
+                <a href="#about" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">About Us</a>
+                <a href="#gallery" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">Gallery</a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">Reviews</a>
+                <a href="#faq" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary transition-colors py-2 border-b border-zinc-900">FAQ</a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+916123592986" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 font-semibold text-sm">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                <span>Call +91 612 359 2986</span>
+            </a>
+            <a href="https://wa.me/916123592986" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-900/30">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <a href="#contact" class="mobile-nav-link flex items-center justify-center gap-2 py-3 rounded-xl bg-primary hover:bg-primary-hover text-black font-bold text-sm">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                <span>Book Free Trial</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] ambient-glow pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-md">
+                        <div class="flex items-center text-primary">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary opacity-50"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-zinc-300">4.1★ Rating (<span class="text-primary font-bold">171+ Google Reviews</span>)</span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        BUILD YOUR ULTIMATE PHYSIQUE AT <span class="text-primary">DUMBELLDOOR</span> FITNESS
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-text-muted mb-8 leading-relaxed max-w-2xl break-words">
+                        Patna’s top-tier fitness destination on Boring Road. Cutting-edge equipment, certified expert trainers, and a high-energy environment built for serious results.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#contact" class="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-black font-extrabold text-base px-8 py-4 rounded-xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all">
+                            <span>Claim Free Trial</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-base px-8 py-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-all">
+                            <i data-lucide="compass" class="w-5 h-5 text-primary"></i>
+                            <span>Explore Programs</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Tag -->
+                    <div class="flex items-center gap-2 mt-8 text-xs sm:text-sm text-zinc-400">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                        <span>Boring Rd, above MENA BAZAR, opposite looks salon, Sri Krishna Puri, Patna</span>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Dumbelldoor Fitness Gym Interior" class="object-cover w-full h-full hover:scale-105 transition-transform duration-700">
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Certified Trainers</h4>
+                                    <p class="text-xs text-zinc-400">1on1 Personalized Guidance</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 bg-primary/10 text-primary font-bold text-xs rounded-full border border-primary/20">Open Now</span>
+                        </div>
+                    </div>
+                    <!-- Decorative Glow -->
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <div class="border-y border-zinc-800 bg-zinc-900/50 backdrop-blur-sm py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900 border border-zinc-800/80">
+                    <div class="flex items-center text-primary mb-2">
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                        <span class="text-2xl font-extrabold font-syne text-white ml-2">4.1 / 5.0</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-zinc-400">Google Rating (171+ Reviews)</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900 border border-zinc-800/80">
+                    <div class="flex items-center text-primary mb-2">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                        <span class="text-2xl font-extrabold font-syne text-white ml-2">Expert</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-zinc-400">Certified Fitness Coaches</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900 border border-zinc-800/80">
+                    <div class="flex items-center text-primary mb-2">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                        <span class="text-2xl font-extrabold font-syne text-white ml-2">Modern</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-zinc-400">Advanced Heavy Equipment</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-zinc-900 border border-zinc-800/80">
+                    <div class="flex items-center text-primary mb-2">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        <span class="text-2xl font-extrabold font-syne text-white ml-2">Prime</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-zinc-400">Boring Road, Patna Hub</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services / Offerings Grid -->
+    <section id="services" class="py-20 md:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">WHAT WE OFFER</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">TRAINING PROGRAMS DESIGNED FOR RESULTS</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Whether your goal is muscle hypertrophy, fat loss, or overall athletic conditioning, we have the specialized equipment and expert coaches to get you there.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-surface border border-zinc-800 hover:border-primary/50 p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 shadow-lg">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Strength Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Build raw power with Olympic barbells, heavy dumbbells, squat racks, and specialized resistance machines.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-sm font-semibold text-zinc-200 group-hover:border-primary group-hover:text-primary transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface border border-zinc-800 hover:border-primary/50 p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 shadow-lg">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Personal Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Get 1-on-1 custom workout routines, diet charts, and constant accountability from Patna's finest trainers.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-sm font-semibold text-zinc-200 group-hover:border-primary group-hover:text-primary transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-surface border border-zinc-800 hover:border-primary/50 p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 shadow-lg">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors">
+                            <i data-lucide="flame" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Fat Loss & Sculpting</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">High-intensity interval training, fat-burning circuits, and targeted routines to shred stubborn body fat.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-sm font-semibold text-zinc-200 group-hover:border-primary group-hover:text-primary transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface border border-zinc-800 hover:border-primary/50 p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 shadow-lg">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors">
+                            <i data-lucide="heart-pulse" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Cardio & Endurance</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">State-of-the-art treadmills, ellipticals, and stationary bikes to boost cardiovascular health and stamina.</p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-between w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-sm font-semibold text-zinc-200 group-hover:border-primary group-hover:text-primary transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">WHY DUMBELLDOOR</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">THE PREMIER FITNESS HUB IN PATNA</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base mb-8 leading-relaxed">
+                        We aren't just a gym; we are a community of dedicated fitness enthusiasts. Located conveniently on Boring Road, we provide an unmatched workout ambiance with uncompromising hygiene and premium machinery.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-zinc-200 font-medium text-sm sm:text-base">Spacious workout floor with zero crowding during peak hours</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-zinc-200 font-medium text-sm sm:text-base">Regular equipment maintenance & pristine cleanliness</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-zinc-200 font-medium text-sm sm:text-base">Affordable membership packages with zero hidden fees</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-lg">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">High-Energy Ambiance</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Pumping motivational music and a dedicated community that pushes you past your limits every single day.</p>
+                    </div>
+
+                    <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-lg">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">Prime Location</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Conveniently situated on Boring Road above Mena Bazar, easily accessible from all parts of Patna.</p>
+                    </div>
+
+                    <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-lg">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">Expert Personal Trainers</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Certified professionals who design scientific workout plans tailored specifically to your body type.</p>
+                    </div>
+
+                    <div class="bg-surface border border-zinc-800 p-6 rounded-2xl shadow-lg">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-syne text-white mb-2">Safety & Hygiene</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Sanitized equipment stations, pristine locker rooms, and rigorous daily cleaning protocols.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 md:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Dumbelldoor Fitness Gym Floor" class="object-cover w-full h-full">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-surface border border-zinc-800 p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="text-primary font-extrabold text-3xl font-syne">171+</div>
+                            <div class="text-xs text-zinc-400 font-medium">Verified 5-Star & 4-Star Google Reviews</div>
+                        </div>
+                        <p class="text-xs text-zinc-400">Trusted by fitness enthusiasts across Patna for genuine results.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">OUR STORY</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">TRANSFORMING LIVES IN SRI KRISHNA PURI, PATNA</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-6">
+                        Dumbelldoor Fitness was founded with a singular mission: to provide world-class fitness infrastructure and expert guidance to the people of Patna. Located prominently on Boring Road, our facility bridges the gap between intense bodybuilding and accessible, healthy lifestyle transformation.
+                    </p>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        Whether you are stepping into a gym for the very first time or you are an experienced lifter preparing for a competition, our trainers provide the motivation, discipline, and scientific programming you need.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 w-full mb-8">
+                        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                            <span class="block text-2xl font-extrabold font-syne text-primary mb-1">100%</span>
+                            <span class="text-xs text-zinc-400">Dedicated Support</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                            <span class="block text-2xl font-extrabold font-syne text-primary mb-1">Top-Tier</span>
+                            <span class="text-xs text-zinc-400">Imported Equipment</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-primary/20">
+                        <span>Visit Our Gym Today</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">GYM GALLERY</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">EXPLORE OUR FACILITY</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Take a visual tour of Dumbelldoor Fitness on Boring Road. Spacious floors, premium gear, and immaculate hygiene.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym Floor Dumbelldoor Fitness" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-sm">Main Weight Training Floor</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Workout Equipment" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-sm">Cardio & Endurance Zone</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="Dumbbells rack" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-sm">Pro Dumbbell Rack</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=800&q=80" alt="Personal Training Session" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-sm">Personal Training Guidance</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Fitness Equipment" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-sm">Advanced Resistance Machines</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group shadow-lg bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80" alt="Gym Ambiance" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-sm">Energetic Workout Environment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 md:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">TESTIMONIALS</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">WHAT OUR MEMBERS SAY</h2>
+                <div class="flex items-center justify-center gap-2 text-primary mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-primary opacity-50"></i>
+                </div>
+                <p class="text-zinc-400 text-sm sm:text-base">Rated 4.1 Stars across 171+ authentic Google Reviews in Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-primary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"One of the best gyms on Boring Road! Excellent equipment and very knowledgeable trainers who guide you through every workout. Highly recommended if you want genuine results."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">AK</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Abhishek Kumar</h4>
+                            <p class="text-xs text-zinc-400">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-primary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Great ambiance and super motivating crowd. The trainers are polite and professional. Location is very convenient above Mena Bazar on Boring Road. Love working out here!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">PS</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Priya Singh</h4>
+                            <p class="text-xs text-zinc-400">Regular Member</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-primary mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-primary opacity-50"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Good gym with top-notch heavy weights and machines. Cleanliness is well maintained. The personal training program helped me lose 8 kgs in 3 months!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">RM</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Rahul Mishra</h4>
+                            <p class="text-xs text-zinc-400">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">GOT QUESTIONS?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know about joining Dumbelldoor Fitness.</p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold font-syne text-white text-base sm:text-lg focus:outline-none">
+                        <span>How can I book a free trial session at Dumbelldoor Fitness?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        You can easily book your free trial by filling out our online inquiry form on this website, calling us directly at +91 612 359 2986, or messaging us instantly on WhatsApp. We will schedule your visit right away!
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold font-syne text-white text-base sm:text-lg focus:outline-none">
+                        <span>What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        We are open Monday through Saturday from 6:00 AM to 10:00 PM, and Sunday from 7:00 AM to 12:00 PM. Come workout at a time that fits your busy schedule!
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold font-syne text-white text-base sm:text-lg focus:outline-none">
+                        <span>Are certified personal trainers available?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        Yes! We have experienced and certified personal trainers who create customized workout routines and customized diet plans based on your specific fitness goals.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold font-syne text-white text-base sm:text-lg focus:outline-none">
+                        <span>Where exactly is the gym located on Boring Road?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        Dumbelldoor Fitness is located on Boring Rd, right above MENA BAZAR and opposite Looks Salon, in Sri Krishna Puri, Patna, Bihar 800001.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 md:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">GET IN TOUCH</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">VISIT OR SEND US A MESSAGE</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Ready to start your fitness journey? Drop us a message or walk right into our Boring Road facility.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-6 bg-surface border border-zinc-800 p-8 rounded-3xl shadow-2xl">
+                    <h3 class="text-2xl font-bold font-syne text-white mb-2">Book Your Free Trial</h3>
+                    <p class="text-zinc-400 text-sm mb-8">Fill out the form below and our team will get in touch instantly.</p>
+
+                    <form id="inquiry-form" class="flex flex-col gap-6">
+                        <div>
+                            <label for="name" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Full Name</label>
+                            <input type="text" id="name" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm" placeholder="e.g. Aman Kumar">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                            <input type="tel" id="phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm" placeholder="e.g. +91 98765 43210">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Interested Program</label>
+                            <select id="service" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-primary transition-colors text-sm">
+                                <option value="Strength Training">Strength Training</option>
+                                <option value="Personal Training">Personal Training</option>
+                                <option value="Weight Loss">Weight Loss & Sculpting</option>
+                                <option value="Cardio & Endurance">Cardio & Endurance</option>
+                                <option value="General Trial">Free Trial Session</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Message or Fitness Goal (Optional)</label>
+                            <textarea id="message" rows="3" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3.5 text-white placeholder-zinc-650 focus:outline-none focus:border-primary transition-colors text-sm" placeholder="Tell us your goals..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-primary hover:bg-primary-hover text-black font-extrabold py-4 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                            <span id="btn-text">Submit Inquiry & Book Trial</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Location & Hours Column -->
+                <div class="lg:col-span-6 flex flex-col justify-between gap-8">
+                    <div class="bg-surface border border-zinc-800 p-8 rounded-3xl shadow-2xl flex flex-col gap-6">
+                        <h3 class="text-2xl font-bold font-syne text-white">Gym Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Address</h4>
+                                <p class="text-zinc-400 text-sm leading-relaxed">Dumbelldoor Fitness, Boring Rd, above MENA BAZAR, opposite looks salon, Sri Krishna Puri, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Phone / WhatsApp</h4>
+                                <a href="tel:+916123592986" class="text-primary hover:underline text-sm font-semibold">+91 612 359 2986</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Operating Hours</h4>
+                                <p class="text-zinc-400 text-sm">Mon - Sat: 6:00 AM – 10:00 PM</p>
+                                <p class="text-zinc-400 text-sm">Sun: 7:00 AM – 12:00 PM</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Dumbelldoor+Fitness+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center justify-center gap-2 w-full py-3.5 bg-zinc-900 border border-zinc-800 hover:border-primary text-white font-bold rounded-xl transition-colors">
+                            <i data-lucide="navigation" class="w-4 h-4 text-primary"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="w-full h-[250px] sm:h-[300px] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
+                        <iframe title="Dumbelldoor Fitness Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788484126!2d85.125!3d25.612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQzLjIiTiA4NcKwMDcnMzAuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Brand Info -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-lg">
+                            <i data-lucide="dumbbell" class="w-5 h-5 text-black"></i>
+                        </div>
+                        <span class="text-xl font-extrabold font-syne tracking-tight text-white">DUMBELLDOOR</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Patna’s ultimate fitness center located on Boring Road. Expert training, premium equipment, and life-changing results.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://wa.me/916123592986" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+916123592986" aria-label="Phone" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Dumbelldoor+Fitness+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold font-syne text-base mb-4">Quick Links</h4>
+                    <ul class="flex flex-col gap-2.5 text-sm">
+                        <li><a href="#services" class="text-zinc-400 hover:text-primary transition-colors">Programs & Services</a></li>
+                        <li><a href="#why-us" class="text-zinc-400 hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="text-zinc-400 hover:text-primary transition-colors">About Our Gym</a></li>
+                        <li><a href="#gallery" class="text-zinc-400 hover:text-primary transition-colors">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="text-zinc-400 hover:text-primary transition-colors">Google Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div>
+                    <h4 class="text-white font-bold font-syne text-base mb-4">Training Programs</h4>
+                    <ul class="flex flex-col gap-2.5 text-sm">
+                        <li><a href="#services" class="text-zinc-400 hover:text-primary transition-colors">Strength Training</a></li>
+                        <li><a href="#services" class="text-zinc-400 hover:text-primary transition-colors">Personal Training</a></li>
+                        <li><a href="#services" class="text-zinc-400 hover:text-primary transition-colors">Fat Loss & Sculpting</a></li>
+                        <li><a href="#services" class="text-zinc-400 hover:text-primary transition-colors">Cardio & Endurance</a></li>
+                        <li><a href="#contact" class="text-zinc-400 hover:text-primary transition-colors">Free Trial Session</a></li>
+                    </ul>
+                </div>
+
+                <!-- Hours & Contact -->
+                <div>
+                    <h4 class="text-white font-bold font-syne text-base mb-4">Opening Hours</h4>
+                    <p class="text-zinc-400 text-sm mb-2">Mon - Sat: 6:00 AM – 10:00 PM</p>
+                    <p class="text-zinc-400 text-sm mb-4">Sun: 7:00 AM – 12:00 PM</p>
+                    <h4 class="text-white font-bold font-syne text-base mb-2">Location</h4>
+                    <p class="text-zinc-400 text-sm">Boring Rd, Sri Krishna Puri, Patna, Bihar 800001</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> Dumbelldoor Fitness Center. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                    <a href="#contact" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Dumbelldoor+Fitness+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-400 transition-colors">Google Maps Listing</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar (Mobile Only) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+916123592986" class="flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-700 text-white py-3 rounded-xl font-bold text-sm shadow-md">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/916123592986" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl font-bold text-sm shadow-md shadow-emerald-900/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 p-8 rounded-3xl max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-syne text-white mb-2">Trial Booked Successfully!</h3>
+            <p class="text-zinc-400 text-sm mb-6">Thank you for reaching out to Dumbelldoor Fitness. Our team on Boring Road will call/WhatsApp you shortly to confirm your free trial session.</p>
+            <button id="close-modal" class="w-full bg-primary hover:bg-primary-hover text-black font-bold py-3.5 rounded-xl transition-all">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Initialization & Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic with Scroll Lock
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeDrawerButton = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeDrawerButton.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion Logic
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('lucide, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle svg').forEach(s => s.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    const chevron = toggle.querySelector('[data-lucide="chevron-down"]');
+                    if (chevron) chevron.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Handling with Validation and Modal Success
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            
+            // Loading State
+            submitBtn.disabled = true;
+            btnText.textContent = 'Processing...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Inquiry & Book Trial';
+                inquiryForm.reset();
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+            }, 1000);
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>

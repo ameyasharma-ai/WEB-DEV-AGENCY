@@ -4,22 +4,31 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrossFit Gym & Fitness Center | Bazar Samiti, Patna</title>
-    <meta name="description" content="Patna's premier CrossFit gym and fitness center located in Bazar Samiti, RK Colony. Expert trainers, intense CrossFit, HIIT, Strength & Conditioning. Book a free trial today!">
+    <title>CROSSFIT GYM | Elite Fitness Training Center in Rukanpura, Patna</title>
+    <meta name="description" content="Push your limits at Patna's elite CrossFit box. Located at Rukanpura, Patna. Certified coaches, high-energy workouts, strength & conditioning. Claim your free trial today!">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
                         primary: '#EF4444',
-                        primaryHover: '#DC2626',
-                        surface: '#121214',
-                        surfaceLight: '#18181B',
-                        darkBg: '#000000',
-                        headerBg: '#09090b',
+                        secondary: '#F87171',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A1A1AA',
                     },
                     fontFamily: {
                         syne: ['Syne', 'sans-serif'],
@@ -30,19 +39,11 @@
         }
     </script>
 
-    <!-- Google Fonts: Syne & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000;
-            color: #FFFFFF;
+            background-color: #09090B;
+            color: #FAFAFA;
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Syne', sans-serif;
@@ -52,10 +53,10 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #09090b;
+            background: #09090B;
         }
         ::-webkit-scrollbar-thumb {
-            background: #27272a;
+            background: #27272A;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
@@ -63,865 +64,876 @@
         }
     </style>
 </head>
-<body class="bg-black text-white overflow-x-hidden pb-28 md:pb-0">
+<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 lg:pb-0">
 
-    <!-- ANNOUNCEMENT BAR -->
-    <div class="bg-primary text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
-        <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
-        <span>🔥 Limited Time Offer: Get 1 Week Free CrossFit Trial! Call / WhatsApp Now</span>
-        <a href="tel:+919065862010" class="underline font-bold ml-1 hover:text-white transition-colors">Claim Now</a>
+    <!-- 1. Top Announcement Bar -->
+    <div class="bg-primary text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-current animate-pulse"><span>🔥 New Batch Open! Claim Your Free Trial Session Today.</span></i>
+        <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20book%20my%20free%20trial%20at%20Crossfit%20Gym%20Rukanpura." target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-100 ml-1 hidden sm:inline">Book via WhatsApp &rarr;</a>
     </div>
 
-    <!-- 100% SOLID OPAQUE STICKY HEADER -->
+    <!-- Backdrop Overlay for Mobile Menu -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- 1. 100% Solid Opaque Sticky Header -->
     <header class="sticky top-0 z-40 w-full bg-[#09090b] border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-black font-syne font-extrabold text-xl shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-syne font-extrabold text-xl shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
                     CF
                 </div>
                 <div>
-                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white block leading-none">CROSSFIT</span>
-                    <span class="text-xs text-primary font-semibold tracking-widest uppercase">Bazar Samiti Patna</span>
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne tracking-wider text-white">CROSSFIT<span class="text-primary">GYM</span></span>
+                    <span class="block text-[10px] uppercase tracking-widest text-textMuted font-medium">Rukanpura, Patna</span>
                 </div>
             </a>
 
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex items-center gap-8">
-                <a href="#services" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Services</a>
-                <a href="#schedule" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Schedule</a>
-                <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">About Us</a>
-                <a href="#gallery" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Gallery</a>
-                <a href="#reviews" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Reviews</a>
-                <a href="#faq" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">FAQ</a>
-                <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Location</a>
+                <a href="#services" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Programs</a>
+                <a href="#about" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Why Us</a>
+                <a href="#schedule" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Batches</a>
+                <a href="#gallery" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="text-sm font-medium text-textMuted hover:text-primary transition-colors">Location</a>
             </nav>
 
-            <!-- Header Action CTAs -->
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="tel:+919065862010" class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-zinc-300 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 px-4 py-2.5 rounded-xl transition-all">
+            <!-- Desktop CTAs -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="tel:+919431074040" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface border border-zinc-800 hover:border-zinc-700 text-white text-sm font-medium transition-all">
                     <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
-                    <span>+91 90658 62010</span>
+                    <span>+91 94310 74040</span>
                 </a>
-                <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20book%20a%20free%20CrossFit%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs sm:text-sm font-bold text-black bg-primary hover:bg-primaryHover px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-primary/20">
-                    <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-                    <span>WhatsApp Trial</span>
+                <a href="https://wa.me/919431074040?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20Crossfit%20Gym%20Rukanpura." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-red-600 text-white text-sm font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Free Trial</span>
                 </a>
             </div>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 rounded-xl focus:outline-none">
+            <!-- Mobile Hamburger Toggle -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-surface border border-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-primary">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
     </header>
 
-    <!-- MOBILE BACKDROP OVERLAY -->
-    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
-
-    <!-- FLAWLESS MOBILE DRAWER -->
-    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#09090b] border-l border-zinc-800 shadow-2xl overflow-y-auto transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
         <div>
             <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-black font-syne font-extrabold text-sm">
-                        CF
-                    </div>
-                    <span class="font-syne font-bold text-white text-base">CrossFit Patna</span>
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-syne font-bold text-lg">CF</div>
+                    <span class="text-lg font-extrabold font-syne text-white">CROSSFIT<span class="text-primary">GYM</span></span>
                 </div>
-                <button id="close-btn" aria-label="Close Menu" class="p-2 text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 rounded-lg">
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-lg bg-surface text-textMuted hover:text-white">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
-            <nav class="flex flex-col gap-4 pt-6">
-                <a href="#services" class="mobile-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900">Services</a>
-                <a href="#schedule" class="mobile-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900">Schedule</a>
-                <a href="#about" class="mobile-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900">About Us</a>
-                <a href="#gallery" class="mobile-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900">Gallery</a>
-                <a href="#reviews" class="mobile-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900">Reviews</a>
-                <a href="#faq" class="mobile-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900">FAQ</a>
-                <a href="#contact" class="mobile-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900">Location & Contact</a>
+            
+            <nav class="flex flex-col gap-4 mt-6">
+                <a href="#services" class="mobile-nav-link text-base font-medium text-textMuted hover:text-primary transition-colors py-2 border-b border-zinc-900">Programs</a>
+                <a href="#about" class="mobile-nav-link text-base font-medium text-textMuted hover:text-primary transition-colors py-2 border-b border-zinc-900">Why Us</a>
+                <a href="#schedule" class="mobile-nav-link text-base font-medium text-textMuted hover:text-primary transition-colors py-2 border-b border-zinc-900">Batches</a>
+                <a href="#gallery" class="mobile-nav-link text-base font-medium text-textMuted hover:text-primary transition-colors py-2 border-b border-zinc-900">Gallery</a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-textMuted hover:text-primary transition-colors py-2 border-b border-zinc-900">Reviews</a>
+                <a href="#faq" class="mobile-nav-link text-base font-medium text-textMuted hover:text-primary transition-colors py-2 border-b border-zinc-900">FAQ</a>
+                <a href="#contact" class="mobile-nav-link text-base font-medium text-textMuted hover:text-primary transition-colors py-2 border-b border-zinc-900">Location & Contact</a>
             </nav>
         </div>
-        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
-            <a href="tel:+919065862010" class="flex items-center justify-center gap-2 w-full py-3 bg-zinc-900 border border-zinc-800 text-white font-semibold rounded-xl">
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3 mt-6">
+            <a href="tel:+919431074040" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-surface border border-zinc-800 text-white font-semibold text-sm">
                 <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
-                <span>Call +91 90658 62010</span>
+                <span>Call +91 94310 74040</span>
             </a>
-            <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20book%20a%20free%20CrossFit%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-primary hover:bg-primaryHover text-black font-bold rounded-xl shadow-lg shadow-primary/30">
-                <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-                <span>WhatsApp Trial Booking</span>
+            <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20claim%20my%20free%20trial%20at%20Crossfit%20Gym%20Rukanpura." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-white font-bold text-sm shadow-lg shadow-primary/30">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Claim Free Trial on WhatsApp</span>
             </a>
         </div>
     </div>
 
-    <!-- HERO SECTION -->
-    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 sm:py-24">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80" alt="CrossFit Gym Workout in Patna" class="w-full h-full object-cover object-center opacity-35 scale-105 animate-pulse duration-[10000ms]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
-        </div>
+    <!-- 2. Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-[#09090B]">
+        <!-- Radial Gradient Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <!-- Trust Badge -->
-            <div class="inline-flex items-center gap-2 bg-zinc-900/90 border border-zinc-800 px-4 py-2 rounded-full mb-6 shadow-xl backdrop-blur-md">
-                <div class="flex items-center text-amber-400 gap-0.5">
-                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current text-amber-400/50"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-white">4.3 ★ Rating</span>
+                        <span class="text-zinc-500">•</span>
+                        <span class="text-xs sm:text-sm text-textMuted font-medium">186+ Google Reviews</span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Push Your Limits at Patna's Elite <span class="text-primary underline decoration-primary/50 underline-offset-8">CrossFit Box</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-textMuted mb-8 max-w-2xl leading-relaxed break-words">
+                        Transform your body and mind with professional coaching, high-intensity functional training, and a powerhouse community right in the heart of Rukanpura, Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919431074040?text=Hi,%20I%20would%20like%20to%20claim%20my%20Free%20Trial%20at%20Crossfit%20Gym%20Rukanpura." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary hover:bg-red-600 text-white font-bold text-base shadow-xl shadow-primary/30 hover:shadow-primary/50 transition-all transform hover:-translate-y-0.5">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            <span>Claim Free Trial</span>
+                        </a>
+                        <a href="#services" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-surface border border-zinc-800 hover:border-zinc-700 text-white font-semibold text-base transition-all">
+                            <span>Explore Programs</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-12 pt-8 border-t border-zinc-800/80 w-full">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold font-syne text-white">4.3★</span>
+                            <span class="text-xs sm:text-sm text-textMuted font-medium">Verified Rating</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold font-syne text-white">186+</span>
+                            <span class="text-xs sm:text-sm text-textMuted font-medium">Happy Athletes</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold font-syne text-white">100%</span>
+                            <span class="text-xs sm:text-sm text-textMuted font-medium">Results Driven</span>
+                        </div>
+                    </div>
+
                 </div>
-                <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.3★ Rating (337+ Google Reviews)</span>
-                <span class="text-zinc-600">|</span>
-                <span class="text-xs sm:text-sm text-primary font-medium">Bazar Samiti, Patna</span>
-            </div>
 
-            <!-- Main Heading -->
-            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-white leading-[1.1] mb-6 max-w-4xl mx-auto break-words">
-                FORGE YOUR STRENGTH AT PATNA'S ELITE <span class="text-primary underline decoration-primary/50 underline-offset-8">CROSSFIT GYM</span>
-            </h1>
+                <!-- Right Visual Hero Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-surface shadow-2xl aspect-[4/3] sm:aspect-square">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="CrossFit Gym Rukanpura Patna Workout" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge Card inside image -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md p-4 rounded-xl border border-zinc-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-semibold uppercase tracking-wider text-textMuted">Location</h4>
+                                    <p class="text-sm font-bold text-white">Rukanpura, Patna</p>
+                                </div>
+                            </div>
+                            <a href="https://maps.google.com/?q=CROSSFIT+GYM+Rukanpura+Patna" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-red-600 transition-colors">
+                                Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Subtitle -->
-            <p class="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-                Push your limits with high-intensity CrossFit, expert coaching, state-of-the-art functional equipment, and a community dedicated to unstoppable transformation in Bazar Samiti, Patna.
-            </p>
-
-            <!-- CTAs -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20book%20a%20free%20CrossFit%20trial!" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-primary hover:bg-primaryHover text-black font-extrabold px-8 py-4 rounded-xl text-base shadow-xl shadow-primary/30 transition-all hover:scale-105 min-h-[48px]">
-                    <i data-lucide="zap" class="w-5 h-5 fill-black"></i>
-                    <span>Book Free Trial Now</span>
-                </a>
-                <a href="#schedule" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-800 font-bold px-8 py-4 rounded-xl text-base transition-all min-h-[48px]">
-                    <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
-                    <span>View Timings</span>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- TRUST & SOCIAL PROOF BAR -->
-    <section class="border-y border-zinc-800 bg-[#09090b] py-8 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 3. Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-surface/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/60">
-                    <div class="flex items-center justify-center gap-1 text-amber-400 mb-1">
-                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                        <span class="font-syne font-bold text-xl sm:text-2xl text-white">4.3 / 5.0</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-zinc-400">337+ Verified Reviews</p>
-                </div>
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/60">
-                    <div class="flex items-center justify-center gap-1 text-primary mb-1">
-                        <i data-lucide="award" class="w-5 h-5"></i>
-                        <span class="font-syne font-bold text-xl sm:text-2xl text-white">Certified</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-zinc-400">Expert CrossFit Coaches</p>
-                </div>
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/60">
-                    <div class="flex items-center justify-center gap-1 text-emerald-400 mb-1">
-                        <i data-lucide="map-pin" class="w-5 h-5"></i>
-                        <span class="font-syne font-bold text-xl sm:text-2xl text-white">Bazar Samiti</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-zinc-400">Prime Location, Patna</p>
-                </div>
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/60">
-                    <div class="flex items-center justify-center gap-1 text-cyan-400 mb-1">
-                        <i data-lucide="shield-check" class="w-5 h-5"></i>
-                        <span class="font-syne font-bold text-xl sm:text-2xl text-white">Pro Gear</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-zinc-400">Olympic & Functional Setup</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES / OFFERINGS GRID -->
-    <section id="services" class="py-20 bg-black relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">High-Performance Training</span>
-                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
-                    BUILT FOR RESULTS. DESIGNED FOR WARRIORS.
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Whether you are starting your fitness journey or an experienced athlete, our specialized programs deliver extreme results.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Service 1 -->
-                <div class="bg-surface border border-zinc-800 hover:border-primary/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group hover:shadow-xl hover:shadow-primary/5">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-black transition-all">
-                            <i data-lucide="zap" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold font-syne text-white mb-3">CrossFit WOD</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            Constant varied functional movements performed at high intensity. Build strength, endurance, agility and raw power.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20join%20CrossFit%20WOD%20batches." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full py-3 px-4 bg-zinc-900 group-hover:bg-primary group-hover:text-black text-white font-semibold rounded-xl text-sm transition-colors">
-                        <span>Book This Batch</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-surface border border-zinc-800 hover:border-primary/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group hover:shadow-xl hover:shadow-primary/5">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-black transition-all">
-                            <i data-lucide="flame" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold font-syne text-white mb-3">HIIT & Fat Burn</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            High-Intensity Interval Training designed to shred fat, boost metabolism, and torch calories long after you leave the gym.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20join%20HIIT%20Fat%20Burn%20classes." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full py-3 px-4 bg-zinc-900 group-hover:bg-primary group-hover:text-black text-white font-semibold rounded-xl text-sm transition-colors">
-                        <span>Book This Batch</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-surface border border-zinc-800 hover:border-primary/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group hover:shadow-xl hover:shadow-primary/5">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-black transition-all">
-                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold font-syne text-white mb-3">Strength & Conditioning</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            Olympic lifting, powerlifting, and structured muscle building protocols to maximize raw power and physical resilience.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20join%20Strength%20%26%20Conditioning." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full py-3 px-4 bg-zinc-900 group-hover:bg-primary group-hover:text-black text-white font-semibold rounded-xl text-sm transition-colors">
-                        <span>Book This Batch</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-surface border border-zinc-800 hover:border-primary/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group hover:shadow-xl hover:shadow-primary/5">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-black transition-all">
-                            <i data-lucide="user-check" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold font-syne text-white mb-3">Personal Training</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            1-on-1 customized coaching tailored to your exact fitness goals, injury rehabilitation, nutrition planning, and rapid progress.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20inquire%20about%20Personal%20Training." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full py-3 px-4 bg-zinc-900 group-hover:bg-primary group-hover:text-black text-white font-semibold rounded-xl text-sm transition-colors">
-                        <span>Book This Batch</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BATCH TIMINGS & SCHEDULE SECTION -->
-    <section id="schedule" class="py-20 bg-surface border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Workout Schedule</span>
-                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
-                    MORNING & EVENING BATCH TIMINGS
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Join any batch that fits your daily routine. Expert trainers present in all batches.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Morning Batches -->
-                <div class="bg-black border border-zinc-800 rounded-3xl p-8 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
-                            <i data-lucide="sun" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold font-syne text-white">Morning Batches</h3>
-                            <p class="text-xs text-zinc-400">Start your day with high energy</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between p-4 bg-zinc-900 rounded-xl border border-zinc-800">
-                            <span class="font-medium text-white">Batch 1: Early Bird WOD</span>
-                            <span class="text-primary font-bold">06:00 AM - 07:00 AM</span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 bg-zinc-900 rounded-xl border border-zinc-800">
-                            <span class="font-medium text-white">Batch 2: Strength & Core</span>
-                            <span class="text-primary font-bold">07:00 AM - 08:00 AM</span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 bg-zinc-900 rounded-xl border border-zinc-800">
-                            <span class="font-medium text-white">Batch 3: HIIT Cardio Surge</span>
-                            <span class="text-primary font-bold">08:00 AM - 09:00 AM</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Evening Batches -->
-                <div class="bg-black border border-zinc-800 rounded-3xl p-8 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold">
-                            <i data-lucide="moon" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold font-syne text-white">Evening Batches</h3>
-                            <p class="text-xs text-zinc-400">De-stress and power up after work/study</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between p-4 bg-zinc-900 rounded-xl border border-zinc-800">
-                            <span class="font-medium text-white">Batch 4: Power CrossFit</span>
-                            <span class="text-primary font-bold">05:00 PM - 06:00 PM</span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 bg-zinc-900 rounded-xl border border-zinc-800">
-                            <span class="font-medium text-white">Batch 5: Endurance & WOD</span>
-                            <span class="text-primary font-bold">06:00 PM - 07:00 PM</span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 bg-zinc-900 rounded-xl border border-zinc-800">
-                            <span class="font-medium text-white">Batch 6: Night Warrior Training</span>
-                            <span class="text-primary font-bold">07:00 PM - 08:30 PM</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20reserve%20my%20slot%20in%20a%20batch." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary hover:bg-primaryHover text-black font-extrabold px-8 py-4 rounded-xl shadow-lg shadow-primary/20 transition-all">
-                    <i data-lucide="check-circle" class="w-5 h-5 fill-black text-primary"></i>
-                    <span>Reserve Your Batch Slot via WhatsApp</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY CHOOSE US SECTION -->
-    <section class="py-20 bg-black relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">The Competitive Edge</span>
-                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
-                    WHY CHOOSE OUR CROSSFIT GYM?
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    We aren't just a regular gym with machines. We are a community of relentless fitness enthusiasts.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
-                        <i data-lucide="users" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-lg font-bold font-syne text-white mb-2">Community Driven</h3>
-                    <p class="text-zinc-400 text-sm">Work out alongside driven individuals who push you to break your personal records every single day.</p>
-                </div>
-
-                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
                         <i data-lucide="award" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold font-syne text-white mb-2">Expert Certified Coaches</h3>
-                    <p class="text-zinc-400 text-sm">Get personalized form correction and injury-free progressive overloading from certified trainers.</p>
+                    <h3 class="text-lg font-bold font-syne text-white">Certified Coaches</h3>
+                    <p class="text-xs text-textMuted mt-1">Expert guidance tailored to you</p>
                 </div>
-
-                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
-                        <i data-lucide="shield" class="w-6 h-6"></i>
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <i data-lucide="dumbbell" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold font-syne text-white mb-2">Top-Tier Equipment</h3>
-                    <p class="text-zinc-400 text-sm">Full Olympic weightlifting rigs, kettlebells, rowers, assault bikes, slam balls, and turf flooring.</p>
+                    <h3 class="text-lg font-bold font-syne text-white">Elite Equipment</h3>
+                    <p class="text-xs text-textMuted mt-1">Professional grade gear & rigs</p>
                 </div>
-
-                <div class="bg-surface border border-zinc-800 p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
-                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold font-syne text-white mb-2">Prime Bazar Samiti Location</h3>
-                    <p class="text-zinc-400 text-sm">Easily accessible in RK Colony, Bazar Samiti, Sandalpur, Patna with ample parking and secure facility.</p>
+                    <h3 class="text-lg font-bold font-syne text-white">Power Community</h3>
+                    <p class="text-xs text-textMuted mt-1">Motivating workout partners</p>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <i data-lucide="star" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white">4.3★ Rating</h3>
+                    <p class="text-xs text-textMuted mt-1">Over 186+ verified reviews</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT / STORY SECTION -->
-    <section id="about" class="py-20 bg-surface border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">About Our Box</span>
-                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-6">
-                        TRANSFORMING PATNA'S FITNESS CULTURE ONE WOD AT A TIME.
-                    </h2>
-                    <p class="text-zinc-300 text-base leading-relaxed mb-6">
-                        Located in the heart of Bazar Samiti, Patna (RK Colony), our CrossFit box is dedicated to building functional fitness that translates into real life. We believe fitness is not a luxury; it's a necessity for longevity, strength, and mental toughness.
-                    </p>
-                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
-                        Our facility features industrial-grade Olympic equipment, spacious workout turf, professional ventilation, and coaches who care deeply about your personal transformation. Join 337+ highly satisfied members who call our gym their second home.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div class="p-4 bg-black rounded-xl border border-zinc-800">
-                            <span class="text-3xl font-extrabold font-syne text-primary block mb-1">337+</span>
-                            <span class="text-xs text-zinc-400 uppercase tracking-wider">5-Star Google Reviews</span>
-                        </div>
-                        <div class="p-4 bg-black rounded-xl border border-zinc-800">
-                            <span class="text-3xl font-extrabold font-syne text-primary block mb-1">100%</span>
-                            <span class="text-xs text-zinc-400 uppercase tracking-wider">Functional Results</span>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20visit%20the%20gym%20for%20a%20tour." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary hover:bg-primaryHover text-black font-extrabold px-8 py-4 rounded-xl shadow-lg shadow-primary/20 transition-all">
-                        <i data-lucide="map-pin" class="w-5 h-5 fill-black text-primary"></i>
-                        <span>Schedule Gym Visit</span>
-                    </a>
-                </div>
-                <div class="relative">
-                    <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl relative">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80" alt="CrossFit Gym Interior Patna" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6">
-                            <span class="bg-primary text-black text-xs font-bold px-3 py-1.5 rounded-lg inline-block mb-2">Bazar Samiti Patna</span>
-                            <p class="text-white font-syne font-bold text-lg">State-of-the-Art Training Floor & Equipment</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INTERACTIVE SHOWCASE / GALLERY -->
-    <section id="gallery" class="py-20 bg-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 4. Services / Offerings Grid -->
+    <section id="services" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Gym Gallery</span>
-                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
-                    INSIDE OUR TRAINING GROUNDS
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Elite Programs</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Engineered for Maximum Results
                 </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Take a visual tour of our heavy-duty equipment, intense training sessions, and high-energy atmosphere.
+                <p class="text-textMuted text-sm sm:text-base">
+                    Whether you are a beginner or an experienced athlete, our specialized training programs push your boundaries safely and effectively.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
-                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80" alt="CrossFit Workout" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-white font-syne font-bold text-base">Olympic Weightlifting Sessions</span>
-                    </div>
-                </div>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="HIIT Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-white font-syne font-bold text-base">High Intensity Cardio & Conditioning</span>
-                    </div>
-                </div>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
-                    <img src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=800&q=80" alt="Gym Equipment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-white font-syne font-bold text-base">Professional Rigs & Kettlebells</span>
-                    </div>
-                </div>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
-                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Strength Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-white font-syne font-bold text-base">Strength & Power Development</span>
-                    </div>
-                </div>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
-                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Group CrossFit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-white font-syne font-bold text-base">High Energy Group Batches</span>
-                    </div>
-                </div>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-zinc-800 group relative">
-                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Personal Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <span class="text-white font-syne font-bold text-base">Dedicated Personal Coaching</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CUSTOMER REVIEWS SECTION -->
-    <section id="reviews" class="py-20 bg-surface border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Google Reviews</span>
-                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
-                    WHAT OUR MEMBERS SAY (4.3★ / 337+ REVIEWS)
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Real feedback from fitness enthusiasts training with us in Bazar Samiti, Patna.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="bg-black border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
                     <div>
-                        <div class="flex items-center text-amber-400 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
-                            "Best CrossFit box in Bazar Samiti! The trainers are extremely knowledgeable, motivating, and focus heavily on proper form. Lost 8 kgs in 3 months and gained immense strength."
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">CrossFit Conditioning</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            High-intensity functional movements combining cardio, gymnastics, and weightlifting for ultimate fat burn and endurance.
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
+                    <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20join%20CrossFit%20Conditioning." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:text-red-400">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Strength & Power</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            Build raw muscle power with Olympic weightlifting, deadlifts, squats, and targeted strength training regimens.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20join%20Strength%20%26%20Power%20training." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:text-red-400">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Personal Coaching</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            One-on-one customized training sessions, personalized nutrition guidance, and continuous progress tracking.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20know%20more%20about%20Personal%20Coaching." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:text-red-400">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Weight Management</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            Structured programs focused on sustainable weight loss, toning, core stability, and metabolic conditioning.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20join%20Weight%20Management%20program." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-primary group-hover:text-red-400">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us Section -->
+    <section id="about" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Why Crossfit Gym Rukanpura</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Built for People Who Demand Real Results
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base mb-8 leading-relaxed">
+                        Located in the Central Bank of India building in Rukanpura, Patna, we provide an unmatched training atmosphere. Our coaches ensure safe form while pushing you to surpass your personal bests every single day.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold font-syne text-white">Expert Certified Trainers</h3>
+                                <p class="text-xs text-textMuted mt-1">Experienced fitness professionals who guide every rep and movement.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold font-syne text-white">Top-Tier Equipment & Floor Space</h3>
+                                <p class="text-xs text-textMuted mt-1">Spacious workout floor equipped with professional barbells, kettlebells, and rigs.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold font-syne text-white">High-Energy Community</h3>
+                                <p class="text-xs text-textMuted mt-1">Train alongside driven individuals who motivate you to never give up.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://wa.me/919431074040?text=Hi,%20I%20have%20a%20few%20questions%20about%20your%20gym." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-red-600 text-white font-bold text-sm shadow-lg shadow-primary/25 transition-all">
+                            <span>Chat with Trainer</span>
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Grid Image Cards -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-surface aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym Workout" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-surface aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80" alt="Crossfit Training" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Schedule & Batches Section -->
+    <section id="schedule" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Batch Timings</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Morning & Evening Training Batches
+                </h2>
+                <p class="text-textMuted text-sm sm:text-base">
+                    Choose a schedule that fits your daily routine. Flexible timings designed for professionals, students, and fitness enthusiasts.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Morning Batch Card -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                                <i data-lucide="sun" class="w-6 h-6"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider">Morning Slots</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-syne text-white mb-2">Morning Session</h3>
+                        <p class="text-textMuted text-sm mb-6">Start your day with high energy and metabolism boost.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center justify-between text-sm py-2 border-b border-zinc-800">
+                                <span class="text-textMuted">Batch 1</span>
+                                <span class="font-bold text-white">06:00 AM – 07:00 AM</span>
+                            </li>
+                            <li class="flex items-center justify-between text-sm py-2 border-b border-zinc-800">
+                                <span class="text-textMuted">Batch 2</span>
+                                <span class="font-bold text-white">07:00 AM – 08:00 AM</span>
+                            </li>
+                            <li class="flex items-center justify-between text-sm py-2 border-b border-zinc-800">
+                                <span class="text-textMuted">Batch 3</span>
+                                <span class="font-bold text-white">08:00 AM – 09:00 AM</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20book%20a%20Morning%20Batch%20slot." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-primary hover:bg-red-600 text-white font-bold text-sm text-center transition-colors">
+                        Book Morning Slot
+                    </a>
+                </div>
+
+                <!-- Evening Batch Card -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
+                                <i data-lucide="moon" class="w-6 h-6"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider">Evening Slots</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-syne text-white mb-2">Evening Session</h3>
+                        <p class="text-textMuted text-sm mb-6">Unwind and crush your stress after work or college.</p>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center justify-between text-sm py-2 border-b border-zinc-800">
+                                <span class="text-textMuted">Batch 1</span>
+                                <span class="font-bold text-white">05:00 PM – 06:00 PM</span>
+                            </li>
+                            <li class="flex items-center justify-between text-sm py-2 border-b border-zinc-800">
+                                <span class="text-textMuted">Batch 2</span>
+                                <span class="font-bold text-white">06:00 PM – 07:00 PM</span>
+                            </li>
+                            <li class="flex items-center justify-between text-sm py-2 border-b border-zinc-800">
+                                <span class="text-textMuted">Batch 3</span>
+                                <span class="font-bold text-white">07:00 PM – 08:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20book%20an%20Evening%20Batch%20slot." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-primary hover:bg-red-600 text-white font-bold text-sm text-center transition-colors">
+                        Book Evening Slot
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Gym Atmosphere</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Inside CrossFit Gym Patna
+                </h2>
+                <p class="text-textMuted text-sm sm:text-base">
+                    Take a glimpse into our high-energy training floor in Rukanpura.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="rounded-xl overflow-hidden border border-zinc-800 bg-surface aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=600&q=80" alt="Crossfit Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden border border-zinc-800 bg-surface aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Weights Workout" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden border border-zinc-800 bg-surface aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Gym Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-xl overflow-hidden border border-zinc-800 bg-surface aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Athlete training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface border border-zinc-800 mb-4">
+                    <div class="flex items-center text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current text-amber-400/50"></i>
+                    </div>
+                    <span class="text-xs font-bold text-white">4.3 Rating on Google</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Trusted by 186+ Athletes & Members
+                </h2>
+                <p class="text-textMuted text-sm sm:text-base">
+                    Read genuine feedback from our members who transformed their fitness journey with us.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            "Best CrossFit box in Patna! Trainers are extremely knowledgeable, motivating, and focus heavily on correct form. The atmosphere in Rukanpura branch is electrifying."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
                         <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
                             AK
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-sm">Abhishek Kumar</h4>
-                            <span class="text-xs text-zinc-400">Google Verified Reviewer</span>
+                            <h4 class="text-sm font-bold text-white">Abhishek Kumar</h4>
+                            <span class="text-xs text-textMuted">Verified Google Reviewer</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="bg-black border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between">
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center text-amber-400 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
-                            "Amazing atmosphere and top-class equipment. The morning batches give me the kickstart I need for the entire day. Highly recommend to anyone serious about fitness in Patna."
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            "Great equipment and spacious workout area. I joined 3 months ago and have seen remarkable improvement in my strength and stamina. Highly recommended!"
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
                         <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
                             PS
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-sm">Priya Singh</h4>
-                            <span class="text-xs text-zinc-400">Google Verified Reviewer</span>
+                            <h4 class="text-sm font-bold text-white">Pooja Sharma</h4>
+                            <span class="text-xs text-textMuted">Verified Google Reviewer</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="bg-black border border-zinc-800 p-8 rounded-3xl flex flex-col justify-between">
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center text-amber-400 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current text-amber-400/50"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
-                            "Clean facility, professional trainers, and great community energy. If you want real strength and conditioning in Bazar Samiti, this is the definitive place to be."
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            "Very professional trainers and well-maintained facility at Central Bank building, Rukanpura. Perfect place if you are serious about fitness."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
                         <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
                             RM
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-sm">Rahul Mishra</h4>
-                            <span class="text-xs text-zinc-400">Google Verified Reviewer</span>
+                            <h4 class="text-sm font-bold text-white">Rahul Mishra</h4>
+                            <span class="text-xs text-textMuted">Verified Google Reviewer</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- FAQ ACCORDION -->
-    <section id="faq" class="py-20 bg-black">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Got Questions?</span>
-                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
-                    FREQUENTLY ASKED QUESTIONS
+    <!-- 9. FAQ Accordion -->
+    <section id="faq" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Frequently Asked Questions
                 </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Everything you need to know about joining our CrossFit gym in Bazar Samiti.
+                <p class="text-textMuted text-sm sm:text-base">
+                    Everything you need to know before joining CrossFit Gym Rukanpura.
                 </p>
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
-                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-base sm:text-lg text-white focus:outline-none">
-                        <span>Is CrossFit suitable for complete beginners?</span>
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white">
+                        <span>Is CrossFit suitable for absolute beginners?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        Yes, absolutely! Every CrossFit workout can be scaled according to your current fitness level. Whether you can lift heavy or are touching a barbell for the first time, our certified coaches will guide you step-by-step.
+                    <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed">
+                        Yes, absolutely! All our workouts can be scaled according to your current fitness level. Our expert trainers guide you through every movement to ensure safety and gradual progress.
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
-                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
-                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-base sm:text-lg text-white focus:outline-none">
-                        <span>How can I book my free trial session?</span>
+                <!-- FAQ Item 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white">
+                        <span>How can I book a free trial session?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        You can easily book your free trial by clicking any of the WhatsApp buttons on our website or by calling us directly at +91 90658 62010. We will schedule your slot instantly!
+                    <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed">
+                        You can easily book your free trial by clicking any of the "Free Trial" or "WhatsApp" buttons on this website, or by calling us directly at +91 94310 74040.
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
-                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
-                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-base sm:text-lg text-white focus:outline-none">
-                        <span>What are the gym operating hours and batch timings?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        We offer multiple batches in the morning (starting from 6:00 AM) and evening (up to 8:30 PM). Check our Schedule section above for exact batch timing slots.
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
-                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-base sm:text-lg text-white focus:outline-none">
+                <!-- FAQ Item 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white">
                         <span>Where is the gym located in Patna?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        We are conveniently located at J54H+H3G, Bazar Samiti Rd, RK Colony, Bazar Samiti, Sandalpur, Patna, Bihar 800006. Easily accessible from all major parts of Patna.
+                    <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed">
+                        We are conveniently located at the Central Bank of India building, Rukanpura, Patna, Bihar 800014. Easy to access with ample parking space.
                     </div>
                 </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white">
+                        <span>What should I bring to my first workout?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed">
+                        Just bring comfortable athletic wear, sports shoes, a water bottle, and a sweat towel. We take care of the rest!
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE LOCATION & CONTACT SECTION -->
-    <section id="contact" class="py-20 bg-surface border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- 10. Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Visit Or Connect</span>
-                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
-                    LOCATION & INQUIRY
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Visit & Connect</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Get In Touch With Us
                 </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Drop by our box in Bazar Samiti or send us a message for instant trial booking.
+                <p class="text-textMuted text-sm sm:text-base">
+                    Drop by our gym in Rukanpura or send us a message to start your fitness transformation.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Info & Hours -->
-                <div class="space-y-8">
-                    <div class="bg-black border border-zinc-800 p-8 rounded-3xl">
-                        <h3 class="text-2xl font-bold font-syne text-white mb-6">Contact Details</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1">Address</h4>
-                                    <p class="text-zinc-400 text-sm leading-relaxed">
-                                        J54H+H3G, Bazar Samiti Rd, RK Colony, Bazar Samiti, Sandalpur, Patna, Bihar 800006
-                                    </p>
-                                    <a href="https://maps.google.com/?cid=12111003450974860000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mt-3 hover:underline">
-                                        <span>Get Directions on Google Maps</span>
-                                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                                    </a>
-                                </div>
-                            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left Contact Form -->
+                <div class="lg:col-span-6 bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                    <h3 class="text-xl font-bold font-syne text-white mb-6">Send an Inquiry / Book Trial</h3>
+                    
+                    <form id="inquiry-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="e.g. Aman Verma">
+                        </div>
 
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                    <i data-lucide="phone-call" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-white mb-1">Phone & WhatsApp</h4>
-                                    <p class="text-zinc-400 text-sm mb-2">+91 90658 62010</p>
-                                    <div class="flex gap-3">
-                                        <a href="tel:+919065862010" class="text-xs bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-lg text-white font-medium hover:border-zinc-700">Call Now</a>
-                                        <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20inquire%20about%20memberships." target="_blank" rel="noopener noreferrer" class="text-xs bg-primary text-black px-3 py-1.5 rounded-lg font-bold">WhatsApp Chat</a>
-                                    </div>
-                                </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Phone Number</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="e.g. +91 98765 43210">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Select Program</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                <option value="CrossFit Conditioning">CrossFit Conditioning</option>
+                                <option value="Strength & Power">Strength & Power</option>
+                                <option value="Personal Coaching">Personal Coaching</option>
+                                <option value="Weight Management">Weight Management</option>
+                                <option value="Free Trial Session">Free Trial Session</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Message (Optional)</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Any specific questions?"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-primary hover:bg-red-600 text-white font-bold text-sm shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                            <span>Submit Inquiry</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Map & Details -->
+                <div class="lg:col-span-6 space-y-6">
+                    
+                    <!-- Details Card -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold uppercase tracking-wider text-textMuted">Address</h4>
+                                <p class="text-base font-bold text-white mt-1">central bank of india building, Rukanpura, Patna, Bihar 800014</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold uppercase tracking-wider text-textMuted">Phone / WhatsApp</h4>
+                                <a href="tel:+919431074040" class="text-base font-bold text-white mt-1 hover:text-primary transition-colors block">+91 94310 74040</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold uppercase tracking-wider text-textMuted">Operating Hours</h4>
+                                <p class="text-sm font-bold text-white mt-1">Mon – Sat: 6:00 AM – 9:00 PM</p>
+                                <p class="text-xs text-textMuted">Sunday: Morning Batch Only</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Working Hours Table -->
-                    <div class="bg-black border border-zinc-800 p-8 rounded-3xl">
-                        <h3 class="text-2xl font-bold font-syne text-white mb-6">Gym Operating Hours</h3>
-                        <div class="space-y-3 text-sm">
-                            <div class="flex justify-between py-2 border-b border-zinc-900">
-                                <span class="text-zinc-300 font-medium">Monday - Saturday</span>
-                                <span class="text-primary font-bold">06:00 AM - 08:30 PM</span>
-                            </div>
-                            <div class="flex justify-between py-2">
-                                <span class="text-zinc-300 font-medium">Sunday</span>
-                                <span class="text-amber-400 font-bold">Special WOD / Recovery</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Inquiry Form & Map -->
-                <div class="space-y-8">
-                    <div class="bg-black border border-zinc-800 p-8 rounded-3xl">
-                        <h3 class="text-2xl font-bold font-syne text-white mb-6">Book Free Trial or Inquiry</h3>
-                        <form id="inquiry-form" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Full Name</label>
-                                <input type="text" id="name" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter your name">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Phone Number</label>
-                                <input type="tel" id="phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter 10-digit mobile number">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Select Service</label>
-                                <select id="service" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors">
-                                    <option value="CrossFit WOD">CrossFit WOD</option>
-                                    <option value="HIIT & Fat Burn">HIIT & Fat Burn</option>
-                                    <option value="Strength & Conditioning">Strength & Conditioning</option>
-                                    <option value="Personal Training">Personal Training</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Message (Optional)</label>
-                                <textarea id="message" rows="3" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Any specific questions?"></textarea>
-                            </div>
-                            <button type="submit" id="submit-btn" class="w-full py-4 bg-primary hover:bg-primaryHover text-black font-extrabold rounded-xl text-base shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
-                                <span id="btn-text">Submit Trial Inquiry</span>
-                                <i data-lucide="send" class="w-4 h-4 fill-black"></i>
-                            </button>
-                        </form>
+                    <!-- Google Map Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-surface h-[250px] relative">
+                        <iframe 
+                            src="https://maps.google.com/?q=CROSSFIT+GYM+Rukanpura+Patna&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="CrossFit Gym Rukanpura Patna Map">
+                        ></iframe>
                     </div>
 
-                    <!-- Google Maps Embed -->
-                    <div class="rounded-3xl overflow-hidden border border-zinc-800 h-64">
-                        <iframe title="CrossFit Gym Location Patna" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.777!2d85.15!3d25.60!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzAwLjAiTiA4NcKwMDknMDAuMCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-black border-t border-zinc-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-                <div class="space-y-4">
-                    <div class="flex items-center gap-2">
-                        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-black font-syne font-extrabold text-xl">
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-syne font-extrabold text-xl">
                             CF
                         </div>
-                        <div>
-                            <span class="font-syne font-extrabold text-lg text-white block leading-none">CROSSFIT</span>
-                            <span class="text-xs text-primary font-semibold tracking-widest uppercase">Bazar Samiti Patna</span>
-                        </div>
+                        <span class="text-2xl font-extrabold font-syne tracking-wider text-white">CROSSFIT<span class="text-primary">GYM</span></span>
                     </div>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        Patna's premier functional fitness box and CrossFit center in Bazar Samiti, RK Colony. Forge unyielding strength and endurance.
+                    <p class="text-textMuted text-sm max-w-sm mb-6 leading-relaxed">
+                        Patna's premier CrossFit box dedicated to building stronger bodies, unbeatable endurance, and a relentless mindset. Located in Rukanpura.
                     </p>
-                </div>
-
-                <div>
-                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="#services" class="text-zinc-400 hover:text-primary transition-colors">Services</a></li>
-                        <li><a href="#schedule" class="text-zinc-400 hover:text-primary transition-colors">Schedule & Batches</a></li>
-                        <li><a href="#about" class="text-zinc-400 hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="#gallery" class="text-zinc-400 hover:text-primary transition-colors">Gallery</a></li>
-                        <li><a href="#reviews" class="text-zinc-400 hover:text-primary transition-colors">Google Reviews</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact</h4>
-                    <ul class="space-y-2.5 text-sm text-zinc-400">
-                        <li>Bazar Samiti Rd, RK Colony</li>
-                        <li>Bazar Samiti, Sandalpur, Patna</li>
-                        <li>Bihar 800006</li>
-                        <li>Phone: <a href="tel:+919065862010" class="text-primary font-semibold hover:underline">+91 90658 62010</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-syne font-bold text-white text-base mb-4">Google Rating</h4>
-                    <div class="bg-surface border border-zinc-800 p-4 rounded-2xl">
-                        <div class="flex items-center gap-1 text-amber-400 mb-2">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        </div>
-                        <p class="text-white font-bold text-sm mb-1">4.3 / 5.0 Rating</p>
-                        <p class="text-zinc-400 text-xs mb-3">Based on 337+ authentic reviews</p>
-                        <a href="https://maps.google.com/?cid=12111003450974860000" target="_blank" rel="noopener noreferrer" class="text-xs text-primary font-semibold hover:underline inline-flex items-center gap-1">
-                            <span>View on Google Maps</span>
-                            <i data-lucide="external-link" class="w-3 h-3"></i>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919431074040" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-white hover:border-primary hover:text-primary transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+919431074040" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-white hover:border-primary hover:text-primary transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://maps.google.com/?q=CROSSFIT+GYM+Rukanpura+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-white hover:border-primary hover:text-primary transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
+
+                <div>
+                    <h4 class="text-white font-syne font-bold text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#services" class="text-textMuted hover:text-primary transition-colors">Programs</a></li>
+                        <li><a href="#about" class="text-textMuted hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#schedule" class="text-textMuted hover:text-primary transition-colors">Batch Timings</a></li>
+                        <li><a href="#gallery" class="text-textMuted hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#reviews" class="text-textMuted hover:text-primary transition-colors">Google Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-syne font-bold text-base mb-4">Contact Info</h4>
+                    <ul class="space-y-2.5 text-sm text-textMuted">
+                        <li>Central Bank of India Building, Rukanpura, Patna, Bihar 800014</li>
+                        <li>Phone: +91 94310 74040</li>
+                        <li>Rating: 4.3 ★ (186+ Reviews)</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2025 CrossFit Gym Bazar Samiti Patna. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a href="#" class="hover:text-zinc-400">Privacy Policy</a>
-                    <a href="#" class="hover:text-zinc-400">Terms of Service</a>
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-textMuted">
+                <p>&copy; <span id="current-year"></span> CrossFit Gym Rukanpura Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- STICKY MOBILE BOTTOM BAR -->
+    <!-- Sticky Mobile Action Bar -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3">
-        <a href="tel:+919065862010" class="flex-1 flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-800 text-white font-bold py-3 rounded-xl text-sm">
+        <a href="tel:+919431074040" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-surface border border-zinc-800 text-white font-bold text-xs">
             <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
             <span>Call Now</span>
         </a>
-        <a href="https://wa.me/919065862010?text=Hi,%20I%20want%20to%20book%20a%20free%20CrossFit%20trial!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-primary text-black font-bold py-3 rounded-xl text-sm shadow-lg shadow-primary/20">
-            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+        <a href="https://wa.me/919431074040?text=Hi,%20I%20want%20to%20claim%20my%20Free%20Trial%20at%20Crossfit%20Gym%20Rukanpura." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-primary text-white font-bold text-xs shadow-lg shadow-primary/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
             <span>WhatsApp Trial</span>
         </a>
     </div>
 
-    <!-- SUCCESS POPUP MODAL -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
-        <div class="bg-surface border border-zinc-800 max-w-md w-full p-8 rounded-3xl text-center relative shadow-2xl">
-            <div class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <i data-lucide="check-circle" class="w-8 h-8"></i>
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
             </div>
-            <h3 class="text-2xl font-bold font-syne text-white mb-2">Trial Booked Successfully!</h3>
-            <p class="text-zinc-400 text-sm mb-6">
-                Thank you for your interest. Our fitness expert will contact you shortly via phone/WhatsApp to confirm your batch timing.
+            <h3 class="text-2xl font-bold font-syne text-white mb-2">Inquiry Submitted!</h3>
+            <p class="text-textMuted text-sm mb-6">
+                Thank you for reaching out to CrossFit Gym Rukanpura. Our coach will contact you shortly on WhatsApp/Phone.
             </p>
-            <button id="close-modal" class="w-full py-3.5 bg-primary hover:bg-primaryHover text-black font-extrabold rounded-xl text-sm transition-all">
-                Got It, Thanks!
+            <button id="close-modal" class="w-full py-3 rounded-xl bg-primary text-white font-bold text-sm">
+                Got It
             </button>
         </div>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- JavaScript Interactions -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
         const mobileDrawer = document.getElementById('mobile-drawer');
         const menuBackdrop = document.getElementById('menu-backdrop');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
         function openMenu() {
             mobileDrawer.classList.remove('translate-x-full');
@@ -935,60 +947,82 @@
             document.body.classList.remove('overflow-hidden');
         }
 
-        menuBtn.addEventListener('click', openMenu);
-        closeBtn.addEventListener('click', closeMenu);
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
         menuBackdrop.addEventListener('click', closeMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
 
         // FAQ Accordion
-        const faqToggles = document.querySelectorAll('.faq-toggle');
-        faqToggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                const content = toggle.nextElementSibling;
-                const icon = toggle.querySelector('i');
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
                 
                 // Toggle current
-                content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
 
-                // Close others
-                faqToggles.forEach(other => {
-                    if (other !== toggle) {
-                        other.nextElementSibling.classList.add('hidden');
-                        other.querySelector('i').classList.remove('rotate-180');
-                    }
-                });
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
             });
         });
 
-        // Form Submission Handler
+        // Contact Form Submission & WhatsApp redirection
         const inquiryForm = document.getElementById('inquiry-form');
         const successModal = document.getElementById('success-modal');
         const closeModal = document.getElementById('close-modal');
-        const submitBtn = document.getElementById('submit-btn');
-        const btnText = document.getElementById('btn-text');
 
         inquiryForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Basic sanitization & loading state
-            submitBtn.disabled = true;
-            btnText.textContent = 'Processing...';
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
 
+            if (!name || !phone) {
+                alert('Please fill in your name and phone number.');
+                return;
+            }
+
+            // Construct WhatsApp URL
+            const waText = encodeURIComponent(`Hi, my name is ${name}. Phone: ${phone}. Interested in: ${service}. Message: ${message}`);
+            const waUrl = `https://wa.me/919431074040?text=${waText}`;
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Open WhatsApp after modal view or keep ready
             setTimeout(() => {
-                submitBtn.disabled = false;
-                btnText.textContent = 'Submit Trial Inquiry';
-                inquiryForm.reset();
-                successModal.classList.remove('hidden');
-                successModal.classList.add('flex');
-                document.body.classList.add('overflow-hidden');
+                window.open(waUrl, '_blank');
             }, 1000);
+
+            inquiryForm.reset();
         });
 
         closeModal.addEventListener('click', () => {
             successModal.classList.add('hidden');
             successModal.classList.remove('flex');
             document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
         });
     </script>
 </body>
