@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARX FITNESS (BASE) | Personal Training & Certifications Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        accent: '#CCFF00',
+                        secondary: '#00E5FF',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #CCFF00;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- 1. ANNOUNCEMENT BAR -->
+    <div class="bg-accent text-[#09090B] font-semibold text-xs sm:text-sm py-2 px-4 text-center relative z-50 flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-current"></i>
+        <span>Special Offer: Get 20% OFF on all Academy Certification Courses this month!</span>
+        <a href="#academy" class="underline font-bold ml-1 hover:text-black">Claim Now</a>
+    </div>
+
+    <!-- 2. SOLID OPAQUE STICKY HEADER -->
+    <header class="sticky top-0 z-40 bg-[#09090B] border-b border-zinc-800 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-black font-syne font-extrabold text-xl">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white">MARX FITNESS</span>
+                    <span class="text-[10px] tracking-widest text-accent font-semibold uppercase -mt-1">( BASE )</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-textMuted">
+                <a href="#aura" class="hover:text-accent transition-colors">AURA</a>
+                <a href="#armour" class="hover:text-accent transition-colors">ARMOUR</a>
+                <a href="#academy" class="hover:text-accent transition-colors">ACADEMY</a>
+                <a href="#pricing" class="hover:text-accent transition-colors">Pricing</a>
+                <a href="#success-stories" class="hover:text-accent transition-colors">Success Stories</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop CTAs -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+918987948401" class="flex items-center gap-2 text-sm text-white hover:text-accent transition-colors px-3 py-2 border border-zinc-800 rounded-lg bg-surface">
+                    <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+                    <span>+91 89879 48401</span>
+                </a>
+                <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I'm%20interested%20in%20your%20training%20programs." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-bold text-black bg-accent hover:bg-[#d4ff33] px-4 py-2.5 rounded-lg transition-all duration-300 shadow-lg shadow-accent/10">
+                    <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+                    <span>WhatsApp Us</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 text-white hover:text-accent focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE BACKDROP & DRAWER -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090B] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-accent flex items-center justify-center text-black font-syne font-extrabold text-base">
+                        M
+                    </div>
+                    <span class="font-syne font-extrabold text-lg text-white">MARX FITNESS</span>
+                </div>
+                <button id="close-menu-btn" aria-label="Close Menu" class="p-2 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-5 pt-6 text-base font-medium">
+                <a href="#aura" class="mobile-nav-link text-zinc-300 hover:text-accent flex items-center justify-between"><span>Aura Transformation</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#armour" class="mobile-nav-link text-zinc-300 hover:text-accent flex items-center justify-between"><span>Armour Gym Network</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#academy" class="mobile-nav-link text-zinc-300 hover:text-accent flex items-center justify-between"><span>Academy Certifications</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#pricing" class="mobile-nav-link text-zinc-300 hover:text-accent flex items-center justify-between"><span>Pricing & Plans</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#success-stories" class="mobile-nav-link text-zinc-300 hover:text-accent flex items-center justify-between"><span>Success Stories</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-accent flex items-center justify-between"><span>Location & Map</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+918987948401" class="flex items-center justify-center gap-2 w-full py-3 bg-surface border border-zinc-800 rounded-xl text-white font-medium hover:border-accent">
+                <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+                <span>Call +91 89879 48401</span>
+            </a>
+            <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I'm%20interested%20in%20your%20training%20programs." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-accent text-black rounded-xl font-bold hover:bg-[#d4ff33]">
+                <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="w-full">
+
+        <!-- 2. HERO SECTION -->
+        <section class="relative pt-12 pb-20 md:py-28 overflow-hidden bg-[#09090B]">
+            <!-- Ambient Glow Effect -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Left Content -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left">
+                        <!-- Rating Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-zinc-800 mb-6 shadow-inner">
+                            <div class="flex items-center text-amber-400">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-white">4.8★ Rating <span class="text-textMuted font-normal">(500+ Verified Reviews)</span></span>
+                        </div>
+
+                        <!-- H1 Heading -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                            Transform Your Body. <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary">Build Your Setup.</span> Master Your Career.
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-lg text-textMuted mb-8 leading-relaxed max-w-2xl break-words">
+                            Patna’s premier fitness ecosystem located near Purana Bazar, Kankarbagh. Elevate your physique with elite personal training, premium gym setups, and professional fitness certifications.
+                        </p>
+
+                        <!-- CTA Group -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                            <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I%20want%20to%20Start%20My%20Journey%20Today!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-accent hover:bg-[#d4ff33] text-black font-syne font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-accent/15 text-center min-h-[48px]">
+                                <span>Start Your Journey Today</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#aura" class="flex items-center justify-center gap-2 bg-surface hover:bg-zinc-800 text-white font-syne font-bold px-8 py-4 rounded-xl border border-zinc-800 transition-all duration-300 text-center min-h-[48px]">
+                                <span>Explore Ecosystem</span>
+                                <i data-lucide="compass" class="w-5 h-5 text-accent"></i>
+                            </a>
+                        </div>
+
+                        <!-- Location Tag -->
+                        <div class="flex items-center gap-2 mt-8 text-xs sm:text-sm text-textMuted">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent shrink-0"></i>
+                            <span>Doctors Colony, Sachiwalay Colony, Kankarbagh, Patna, Bihar 800020</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Right Visual Card -->
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-surface shadow-2xl group">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent z-10 opacity-60"></div>
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Marx Fitness Gym Ecosystem" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700">
+                            
+                            <!-- Floating Badge Card inside Hero Image -->
+                            <div class="absolute bottom-6 left-6 right-6 z-20 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-zinc-800 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
+                                        <i data-lucide="award" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Certified Academy</div>
+                                        <div class="text-xs text-textMuted">Pro Trainer Programs</div>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-accent/20 text-accent font-bold text-xs rounded-full">Active</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TRUST & SOCIAL PROOF BAR -->
+        <section class="border-y border-zinc-800 bg-surface/50 py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                    <div class="flex flex-col items-center justify-center pt-4 md:pt-0">
+                        <div class="text-3xl sm:text-4xl font-extrabold font-syne text-accent mb-1">96%</div>
+                        <div class="text-sm text-textMuted font-medium uppercase tracking-wider">Success Rate</div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center pt-4 md:pt-0">
+                        <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">5,000+</div>
+                        <div class="text-sm text-textMuted font-medium uppercase tracking-wider">Clients Trained</div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center pt-4 md:pt-0">
+                        <div class="text-3xl sm:text-4xl font-extrabold font-syne text-secondary mb-1">89%</div>
+                        <div class="text-sm text-textMuted font-medium uppercase tracking-wider">Retention Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ECOSYSTEM PILLARS (AURA, ARMOUR, ACADEMY) -->
+        <section id="aura" class="py-20 sm:py-28 bg-[#09090B] relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">The Ecosystem</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                        Engineered for Peak Performance
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed break-words">
+                        Marx Fitness is built on three unbreakable pillars designed to take you from beginner to master fitness authority.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pillar 1: AURA -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-accent/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="zap" class="w-7 h-7"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-accent">Pillar 01</span>
+                            <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mt-1 mb-3">AURA Transformation</h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-6 break-words">
+                                Customized body transformation programs focused on fat loss, muscle building, metabolic conditioning, and complete lifestyle overhauls.
+                            </p>
+                        </div>
+                        <ul class="space-y-2.5 pt-6 border-t border-zinc-800/80 text-sm text-zinc-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Customized Diet & Macro Plan</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> 1-on-1 Virtual & Offline Coaching</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Weekly Body Composition Tracking</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 2: ARMOUR -->
+                    <div id="armour" class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-secondary/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="shield" class="w-7 h-7"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-secondary">Pillar 02</span>
+                            <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mt-1 mb-3">ARMOUR Gym Network</h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-6 break-words">
+                                High-performance workout facility in Kankarbagh Patna equipped with state-of-the-art strength machines, free weights, and functional turf.
+                            </p>
+                        </div>
+                        <ul class="space-y-2.5 pt-6 border-t border-zinc-800/80 text-sm text-zinc-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary shrink-0"></i> Premium Olympic Free Weights</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary shrink-0"></i> Advanced Cardio & Air Dyne Bikes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 3: ACADEMY -->
+                    <div id="academy" class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-accent/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-accent">Pillar 03</span>
+                            <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mt-1 mb-3">ACADEMY Certifications</h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-6 break-words">
+                                Professional fitness coaching education and accredited certification courses for aspiring personal trainers and nutrition specialists.
+                            </p>
+                        </div>
+                        <ul class="space-y-2.5 pt-6 border-t border-zinc-800/80 text-sm text-zinc-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Internationally Valid Certifications</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Practical Anatomy & Biomechanics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. COACHING & MEMBERSHIP PRICING TIERS -->
+        <section id="pricing" class="py-20 sm:py-28 bg-surface/30 border-y border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">Investment</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                        Coaching & Membership Tiers
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed break-words">
+                        Transparent pricing plans tailored to your fitness goals, whether you train online, offline, or at our Kankarbagh facility.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Tier 1: Online Coaching -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Virtual</span>
+                                <span class="text-xs text-textMuted font-medium">Most Popular</span>
+                            </div>
+                            <h3 class="text-2xl font-bold font-syne text-white mb-2">Online Coaching</h3>
+                            <p class="text-textMuted text-sm mb-6">Expert guidance wherever you are in India.</p>
+                            <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-6">₹4,999 <span class="text-sm font-normal text-textMuted">/ month</span></div>
+                            <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Custom Workout Plan</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Tailored Nutrition & Macros</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Weekly WhatsApp Check-ins</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Form Correction Video Reviews</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I%20want%20to%20enroll%20in%20the%20Online%20Coaching%20plan." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-surface hover:bg-zinc-800 border border-zinc-700 text-white font-syne font-bold rounded-xl text-center transition-colors">
+                            Select Online Plan
+                        </a>
+                    </div>
+
+                    <!-- Tier 2: Personal Training (Featured) -->
+                    <div class="bg-surface border-2 border-accent rounded-2xl p-6 sm:p-8 flex flex-col justify-between relative shadow-2xl shadow-accent/10">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-black font-syne font-bold text-xs uppercase tracking-wider px-4 py-1 rounded-full">
+                            Most Results
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-black bg-accent px-3 py-1 rounded-full">Offline / Patna</span>
+                                <span class="text-xs text-accent font-medium">Kankarbagh Base</span>
+                            </div>
+                            <h3 class="text-2xl font-bold font-syne text-white mb-2">Personal Training</h3>
+                            <p class="text-textMuted text-sm mb-6">1-on-1 dedicated coaching at our flagship facility.</p>
+                            <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-6">₹8,999 <span class="text-sm font-normal text-textMuted">/ month</span></div>
+                            <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Dedicated 1-on-1 Trainer</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Armour Gym Full Access Included</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Advanced Biomechanics & Form Work</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Priority Support & Diet Adjustments</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I%20want%20to%20enroll%20in%20Personal%20Training%20at%20Kankarbagh." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-accent hover:bg-[#d4ff33] text-black font-syne font-bold rounded-xl text-center transition-colors shadow-lg">
+                            Book Personal Trainer
+                        </a>
+                    </div>
+
+                    <!-- Tier 3: Armour Gym Membership -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-secondary bg-secondary/10 px-3 py-1 rounded-full">Facility</span>
+                                <span class="text-xs text-textMuted font-medium">Gym Access</span>
+                            </div>
+                            <h3 class="text-2xl font-bold font-syne text-white mb-2">Armour Membership</h3>
+                            <p class="text-textMuted text-sm mb-6">Full access to Kankarbagh training floor.</p>
+                            <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-6">₹2,499 <span class="text-sm font-normal text-textMuted">/ month</span></div>
+                            <ul class="space-y-3 text-sm text-zinc-300 mb-8">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Full Gym Floor Access</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Locker & Shower Facilities</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Free Initial Assessment</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Access to Fitness Community</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I'm%20interested%20in%20Armour%20Gym%20Membership." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-surface hover:bg-zinc-800 border border-zinc-700 text-white font-syne font-bold rounded-xl text-center transition-colors">
+                            Get Gym Membership
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ACADEMY CERTIFICATION SHOWCASE -->
+        <section class="py-20 sm:py-28 bg-[#09090B]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">Marx Academy</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                        Professional Certifications & Courses
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed break-words">
+                        Build a lucrative career in fitness with our accredited certification programs designed by industry experts.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Course 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Foundation</span>
+                                <span class="text-xs text-secondary font-bold">20% OFF Active</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mb-2">Certified Fitness Trainer (CFT)</h3>
+                            <p class="text-textMuted text-sm mb-6">Comprehensive training covering anatomy, resistance training, exercise science, and client assessment.</p>
+                            <div class="flex items-baseline gap-3 mb-6">
+                                <span class="text-3xl font-extrabold font-syne text-white">₹19,999</span>
+                                <span class="text-sm text-textMuted line-through">₹24,999</span>
+                            </div>
+                            <ul class="space-y-2.5 text-sm text-zinc-300 mb-8">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> 3 Months Practical & Theory Classes</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Internationally Recognized Certificate</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> Placement Assistance Included</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I%20want%20to%20enroll%20in%20the%20Certified%20Fitness%20Trainer%20course." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-accent hover:bg-[#d4ff33] text-black font-syne font-bold rounded-xl text-center transition-colors">
+                            Enroll in CFT Course
+                        </a>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-secondary bg-secondary/10 px-3 py-1 rounded-full">Advanced</span>
+                                <span class="text-xs text-secondary font-bold">20% OFF Active</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mb-2">Advanced Sports Nutritionist</h3>
+                            <p class="text-textMuted text-sm mb-6">Master macro-nutrients, sports supplementation, fat loss protocols, and clinical nutrition science.</p>
+                            <div class="flex items-baseline gap-3 mb-6">
+                                <span class="text-3xl font-extrabold font-syne text-white">₹15,999</span>
+                                <span class="text-sm text-textMuted line-through">₹19,999</span>
+                            </div>
+                            <ul class="space-y-2.5 text-sm text-zinc-300 mb-8">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> 2 Months Intensive Curriculum</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> Real Case Study Analysis</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-secondary"></i> 100% Job Assistance</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I%20want%20to%20enroll%20in%20the%20Advanced%20Sports%20Nutritionist%20course." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-secondary hover:bg-[#00c8e0] text-black font-syne font-bold rounded-xl text-center transition-colors">
+                            Enroll in Nutrition Course
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. WHY CHOOSE US SECTION -->
+        <section class="py-20 sm:py-28 bg-surface/30 border-y border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">Why Marx Fitness</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                        The Marx Advantage
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed break-words">
+                        We don't just provide workouts; we build lifelong transformations and successful fitness careers.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Pillar 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-syne font-bold text-white text-lg mb-2">Elite Personal Training</h4>
+                        <p class="text-textMuted text-xs sm:text-sm leading-relaxed">Dedicated certified trainers focused entirely on your biomechanics and form.</p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-4">
+                            <i data-lucide="smartphone" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-syne font-bold text-white text-lg mb-2">24/7 Virtual Support</h4>
+                        <p class="text-textMuted text-xs sm:text-sm leading-relaxed">Continuous WhatsApp guidance, diet tweaks, and motivation when you need it.</p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-syne font-bold text-white text-lg mb-2">Aura Programs</h4>
+                        <p class="text-textMuted text-xs sm:text-sm leading-relaxed">Holistic transformation models engineered for rapid fat loss and muscle gain.</p>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-4">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-syne font-bold text-white text-lg mb-2">Armour Gym Network</h4>
+                        <p class="text-textMuted text-xs sm:text-sm leading-relaxed">State-of-the-art training floor in Kankarbagh with top-tier equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. HOW IT WORKS -->
+        <section class="py-20 sm:py-28 bg-[#09090B]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">Process</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                        How Your Journey Begins
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed break-words">
+                        Three simple steps to start your transformation or fitness certification.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-8 relative">
+                        <span class="absolute top-6 right-6 font-syne font-extrabold text-3xl text-zinc-800">01</span>
+                        <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="message-square" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-white text-xl mb-3">Start Training</h3>
+                        <p class="text-textMuted text-sm leading-relaxed">Reach out via WhatsApp or phone to discuss your fitness goals with our lead trainers in Patna.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-8 relative">
+                        <span class="absolute top-6 right-6 font-syne font-extrabold text-3xl text-zinc-800">02</span>
+                        <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-6">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-white text-xl mb-3">Network Access</h3>
+                        <p class="text-textMuted text-sm leading-relaxed">Step into Armour gym in Kankarbagh or get instantly set up with your customized online program.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-8 relative">
+                        <span class="absolute top-6 right-6 font-syne font-extrabold text-3xl text-zinc-800">03</span>
+                        <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-white text-xl mb-3">Virtual & In-Person Coaching</h3>
+                        <p class="text-textMuted text-sm leading-relaxed">Execute your custom plan with ongoing tracking, progress updates, and professional mentorship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CLIENT SUCCESS STORIES -->
+        <section id="success-stories" class="py-20 sm:py-28 bg-surface/30 border-y border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">Testimonials</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                        Client Success Stories
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed break-words">
+                        Hear from our clients who transformed their physiques and careers across Delhi, Mumbai, Bengaluru, and Patna.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                                "Marx Fitness online coaching changed my life. I lost 12 kgs while sitting in Bengaluru with their precise macro coaching and weekly WhatsApp reviews!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-6 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 text-accent font-bold font-syne flex items-center justify-center">AR</div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Aditya Ranjan</h4>
+                                <span class="text-xs text-textMuted">Bengaluru (Online Client)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                                "The Academy certification course at Kankarbagh Patna gave me complete confidence in biomechanics. Now working as a senior trainer in Mumbai!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-6 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-secondary/20 text-secondary font-bold font-syne flex items-center justify-center">PK</div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Pooja Kumari</h4>
+                                <span class="text-xs text-textMuted">Mumbai (Academy Graduate)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                                "Armour gym in Kankarbagh has the best equipment and trainers in Patna. Personal training here yielded results I never saw in commercial gyms."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-6 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 text-accent font-bold font-syne flex items-center justify-center">MS</div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Manish Singh</h4>
+                                <span class="text-xs text-textMuted">Patna (Kankarbagh Member)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. INTERACTIVE FAQ ACCORDION -->
+        <section class="py-20 sm:py-28 bg-[#09090B]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">FAQ</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed">
+                        Got questions about our training programs or academy certifications? Find answers here.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-syne font-bold text-white text-base hover:text-accent transition-colors">
+                            <span>Where is Marx Fitness located in Patna?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed border-t border-zinc-800 pt-3">
+                            We are conveniently located near Purana Bazar, Doctors Colony, Sachiwalay Colony, Kankarbagh, Patna, Bihar 800020.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-syne font-bold text-white text-base hover:text-accent transition-colors">
+                            <span>How do online coaching programs work?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed border-t border-zinc-800 pt-3">
+                            Our online coaching includes a customized workout plan, tailored nutrition macro targets, weekly WhatsApp progress check-ins, and direct coach support regardless of your city.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-syne font-bold text-white text-base hover:text-accent transition-colors">
+                            <span>Are Academy fitness certifications recognized?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed border-t border-zinc-800 pt-3">
+                            Yes! Marx Academy certifications are industry-recognized, complete with comprehensive practical and theoretical exams, plus 100% placement assistance.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-surface border border-zinc-800 rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between font-syne font-bold text-white text-base hover:text-accent transition-colors">
+                            <span>How can I join or book a consultation?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-textMuted text-sm leading-relaxed border-t border-zinc-800 pt-3">
+                            You can directly message us on WhatsApp at +91 89879 48401 or fill out our quick program enrollment form on this page.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. INTERACTIVE LOCATION & CONTACT SECTION -->
+        <section id="contact" class="py-20 sm:py-28 bg-surface/30 border-y border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Info & Map Details -->
+                    <div class="lg:col-span-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-accent/10 border border-accent/20">Location</span>
+                            <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                                Visit Our Base in Patna
+                            </h2>
+                            <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-8 break-words">
+                                Drop by Armour gym in Kankarbagh or reach out via phone and WhatsApp for instant enrollment.
+                            </p>
+
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-syne font-bold text-white text-base">Address</h4>
+                                        <p class="text-textMuted text-sm">near purana bazar, Doctors Colony, Sachiwalay Colony, Kankarbagh, Patna, Bihar 800020</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-syne font-bold text-white text-base">Phone & WhatsApp</h4>
+                                        <a href="tel:+918987948401" class="text-accent hover:underline text-sm">+91 89879 48401</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="clock" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-syne font-bold text-white text-base">Working Hours</h4>
+                                        <p class="text-textMuted text-sm">Monday – Saturday: 5:00 AM – 10:00 PM<br>Sunday: 6:00 AM – 12:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Google Maps Embed & Directions Button -->
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 bg-surface">
+                            <div class="w-full h-64">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.873236712345!2d85.1523!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM1JzM4LjgiTiA4NcKwMDknMDguOCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Marx Fitness Location Map">
+                                </iframe>
+                            </div>
+                            <div class="p-4 bg-surface flex items-center justify-between border-t border-zinc-800">
+                                <span class="text-xs text-textMuted">Kankarbagh, Patna, Bihar</span>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Kankarbagh+Patna+Bihar+800020" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-4 py-2 bg-accent hover:bg-[#d4ff33] text-black font-syne font-bold text-xs rounded-lg transition-colors">
+                                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                                    <span>Get Directions</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enrollment & Contact Form -->
+                    <div class="lg:col-span-6 bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-white text-xl sm:text-2xl mb-2">Program Enrollment Form</h3>
+                            <p class="text-textMuted text-sm mb-6">Fill out your details below and our team will connect with you instantly on WhatsApp.</p>
+
+                            <form id="enrollment-form" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Full Name</label>
+                                    <input type="text" id="form-name" required placeholder="Enter your full name" class="w-full px-4 py-3 bg-[#09090B] border border-zinc-800 rounded-xl text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                                    <input type="tel" id="form-phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 bg-[#09090B] border border-zinc-800 rounded-xl text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Select Program / Interest</label>
+                                    <select id="form-program" class="w-full px-4 py-3 bg-[#09090B] border border-zinc-800 rounded-xl text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                                        <option value="Online Coaching">Online Coaching (Aura)</option>
+                                        <option value="Personal Training">Personal Training (Kankarbagh Patna)</option>
+                                        <option value="Armour Gym Membership">Armour Gym Membership</option>
+                                        <option value="Academy CFT Certification">Academy CFT Certification</option>
+                                        <option value="Sports Nutrition Course">Sports Nutrition Course</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Goals / Message</label>
+                                    <textarea id="form-message" rows="3" placeholder="Tell us about your fitness goals..." class="w-full px-4 py-3 bg-[#09090B] border border-zinc-800 rounded-xl text-white text-sm focus:outline-none focus:border-accent transition-colors"></textarea>
+                                </div>
+
+                                <button type="submit" id="form-submit-btn" class="w-full py-4 bg-accent hover:bg-[#d4ff33] text-black font-syne font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-accent/10">
+                                    <span>Submit & Connect on WhatsApp</span>
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SUCCESS MODAL -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl max-w-md w-full p-6 sm:p-8 text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-accent/20 text-accent flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-white text-2xl mb-2">Application Received!</h3>
+            <p class="text-textMuted text-sm mb-6">Thank you, <span id="modal-name-display" class="font-bold text-white"></span>. We have received your request for <span id="modal-program-display" class="font-bold text-accent"></span>. Redirecting you to WhatsApp...</p>
+            <button id="close-modal-btn" class="w-full py-3.5 bg-accent text-black font-syne font-bold rounded-xl hover:bg-[#d4ff33] transition-colors">
+                Continue to WhatsApp Now
+            </button>
+        </div>
+    </div>
+
+    <!-- 12. STICKY MOBILE ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+918987948401" class="flex-1 flex items-center justify-center gap-2 py-3 bg-surface border border-zinc-800 rounded-xl text-white font-syne font-bold text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918987948401?text=Hi%20Marx%20Fitness,%20I%20want%20to%20inquire%20about%20your%20programs." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 bg-accent text-black font-syne font-bold text-sm rounded-xl shadow-lg shadow-accent/20">
+            <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 13. FOOTER -->
+    <footer class="bg-[#09090B] border-t border-zinc-800 pt-16 pb-24 lg:pb-16 text-textMuted text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+                
+                <!-- Col 1: Brand -->
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-accent flex items-center justify-center text-black font-syne font-extrabold text-base">
+                            M
+                        </div>
+                        <span class="font-syne font-extrabold text-lg tracking-wider text-white">MARX FITNESS ( BASE )</span>
+                    </a>
+                    <p class="text-xs sm:text-sm leading-relaxed mb-6 max-w-sm">
+                        Patna’s ultimate fitness ecosystem. Empowering physiques through AURA transformations, ARMOUR gym training floor, and ACADEMY pro certifications.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/918987948401" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-lg bg-surface border border-zinc-800 flex items-center justify-center text-accent hover:border-accent transition-colors">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+918987948401" aria-label="Phone" class="w-10 h-10 rounded-lg bg-surface border border-zinc-800 flex items-center justify-center text-accent hover:border-accent transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kankarbagh+Patna+Bihar+800020" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-10 h-10 rounded-lg bg-surface border border-zinc-800 flex items-center justify-center text-secondary hover:border-secondary transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Ecosystem -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Ecosystem</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><a href="#aura" class="hover:text-accent transition-colors">Aura Transformation</a></li>
+                        <li><a href="#armour" class="hover:text-accent transition-colors">Armour Gym Network</a></li>
+                        <li><a href="#academy" class="hover:text-accent transition-colors">Academy Certifications</a></li>
+                        <li><a href="#pricing" class="hover:text-accent transition-colors">Pricing Tiers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Programs -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Programs</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><a href="#pricing" class="hover:text-accent transition-colors">Online Coaching</a></li>
+                        <li><a href="#pricing" class="hover:text-accent transition-colors">Personal Training</a></li>
+                        <li><a href="#academy" class="hover:text-accent transition-colors">Fitness Trainer CFT</a></li>
+                        <li><a href="#academy" class="hover:text-accent transition-colors">Sports Nutrition</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Location -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Patna Location</h4>
+                    <p class="text-xs sm:text-sm leading-relaxed mb-2">
+                        near purana bazar, Doctors Colony, Sachiwalay Colony, Kankarbagh, Patna, Bihar 800020
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Kankarbagh+Patna+Bihar+800020" target="_blank" rel="noopener noreferrer" class="text-xs text-accent hover:underline font-semibold flex items-center gap-1 mt-2">
+                        <span>View on Google Maps</span>
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-zinc-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> MARX FITNESS ( BASE ). All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for Peak Performance & Professional Growth</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTERACTIONS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+            const isOpen = !mobileDrawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMobileMenu);
+        closeMenuBtn.addEventListener('click', toggleMobileMenu);
+        menuBackdrop.addEventListener('click', toggleMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                
+                // Close others
+                faqToggles.forEach(other => {
+                    if (other !== toggle) {
+                        other.nextElementSibling.classList.add('hidden');
+                        other.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Form Submission & Success Modal
+        const enrollmentForm = document.getElementById('enrollment-form');
+        const successModal = document.getElementById('success-modal');
+        const modalNameDisplay = document.getElementById('modal-name-display');
+        const modalProgramDisplay = document.getElementById('modal-program-display');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        let pendingWhatsAppUrl = '';
+
+        enrollmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('form-name').value.trim();
+            const phoneInput = document.getElementById('form-phone').value.trim();
+            const programInput = document.getElementById('form-program').value;
+            const messageInput = document.getElementById('form-message').value.trim();
+
+            if (!nameInput || !phoneInput) return;
+
+            // Sanitize and construct WhatsApp message
+            const waMessage = `Hi Marx Fitness, my name is ${encodeURIComponent(nameInput)}. Phone: ${encodeURIComponent(phoneInput)}. I am interested in ${encodeURIComponent(programInput)}. Message: ${encodeURIComponent(messageInput)}`;
+            pendingWhatsAppUrl = `https://wa.me/918987948401?text=${waMessage}`;
+
+            // Populate Modal
+            modalNameDisplay.textContent = nameInput;
+            modalProgramDisplay.textContent = programInput;
+            
+            // Show Modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            if (pendingWhatsAppUrl) {
+                window.open(pendingWhatsAppUrl, '_blank', 'noopener noreferrer');
+            }
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            enrollmentForm.reset();
+        });
+    </script>
+</body>
+</html>
