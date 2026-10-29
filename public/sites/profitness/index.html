@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Fitness Gym | Patna | Best Gym & Fitness Centre</title>
-    <meta name="description" content="Transform your body at Pro Fitness Gym in Patna, Bihar. Expert trainers, state-of-the-art equipment, strength training & fat loss programs. Book a free trial today!">
+    <title>PRO FITNESS - KANKARBAGH | Best Gym & Fitness Center in Patna</title>
+    <meta name="description" content="Transform your body at Pro Fitness Kankarbagh, Patna. Offering Strength Training, Personal Training, CrossFit, Cardio & Zumba. Book a free trial today!">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,19 +14,20 @@
             theme: {
                 extend: {
                     colors: {
-                        background: '#0A0A0C',
-                        surface: '#141418',
-                        primary: '#FF334B',
-                        secondary: '#FF7A00',
-                        accentHover: '#FF4D63',
-                        textMuted: '#9BA1A6'
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#F59E0B',
+                        'primary-hover': '#D97706',
+                        secondary: '#EF4444',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
                     },
                     fontFamily: {
                         syne: ['Syne', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif']
-                    }
-                }
-            }
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
         }
     </script>
 
@@ -37,917 +38,1209 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0A0A0C;
-            color: #FFFFFF;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Syne', sans-serif;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0A0A0C;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #FF334B;
-        }
-    </style>
 </head>
-<body class="bg-[#0A0A0C] text-white overflow-x-hidden pb-28 md:pb-0">
+<body class="bg-[#09090B] text-[#FAFAFA] font-inter antialiased overflow-x-hidden pb-28 md:pb-0 selection:bg-amber-500 selection:text-black">
 
-    <!-- 1. ANNOUNCEMENT BAR -->
-    <div class="bg-[#FF334B] text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
-        <i data-lucide="zap" class="w-4 h-4 fill-white shrink-0"></i>
-        <span>Special Offer: Free Trial Session + 20% Off Annual Membership! <a href="#trial-form" class="underline font-bold hover:text-zinc-100 ml-1">Claim Now &rarr;</a></span>
+    <!-- MOBILE BACKDROP OVERLAY -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
+        <span>Special Offer: Join today & get 1 Month Personal Training Free!</span>
+        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20claim%20the%20special%20offer%20at%20Pro%20Fitness%20Kankarbagh." target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors ml-1 font-bold">Claim Now</a>
     </div>
 
     <!-- 100% SOLID OPAQUE STICKY HEADER -->
-    <header class="sticky top-0 z-40 bg-[#0A0A0C] border-b border-zinc-800 w-full transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
+    <header class="sticky top-0 z-40 bg-[#09090B] border-b border-zinc-800 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- BRAND LOGO -->
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF334B] to-[#FF7A00] flex items-center justify-center shadow-lg shadow-[#FF334B]/20 group-hover:scale-105 transition-transform">
-                    <i data-lucide="dumbbell" class="w-5 h-5 text-white"></i>
+                <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center font-syne font-extrabold text-black text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+                    PF
                 </div>
                 <div>
-                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white block leading-tight">PRO FITNESS</span>
-                    <span class="text-[10px] text-[#9BA1A6] font-semibold tracking-widest uppercase block">GYM • PATNA</span>
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white block leading-none">PRO FITNESS</span>
+                    <span class="text-[10px] sm:text-xs text-amber-500 font-semibold tracking-widest uppercase block mt-1">Kankarbagh, Patna</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
-                <a href="#services" class="hover:text-[#FF334B] transition-colors">Services</a>
-                <a href="#about" class="hover:text-[#FF334B] transition-colors">About Us</a>
-                <a href="#gallery" class="hover:text-[#FF334B] transition-colors">Gallery</a>
-                <a href="#reviews" class="hover:text-[#FF334B] transition-colors">Reviews</a>
-                <a href="#faq" class="hover:text-[#FF334B] transition-colors">FAQ</a>
-                <a href="#contact" class="hover:text-[#FF334B] transition-colors">Location</a>
+            <!-- DESKTOP NAVIGATION -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium text-zinc-300 hover:text-amber-500 transition-colors">Services</a>
+                <a href="#packages" class="text-sm font-medium text-zinc-300 hover:text-amber-500 transition-colors">Packages</a>
+                <a href="#trainers" class="text-sm font-medium text-zinc-300 hover:text-amber-500 transition-colors">Trainers</a>
+                <a href="#schedule" class="text-sm font-medium text-zinc-300 hover:text-amber-500 transition-colors">Schedule</a>
+                <a href="#reviews" class="text-sm font-medium text-zinc-300 hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-amber-500 transition-colors">Contact</a>
             </nav>
 
-            <!-- Header Action Buttons -->
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="tel:+918340560122" class="px-4 py-2.5 rounded-xl border border-zinc-700 hover:border-[#FF334B] text-zinc-200 text-sm font-semibold flex items-center gap-2 transition-all">
-                    <i data-lucide="phone" class="w-4 h-4 text-[#FF334B]"></i>
-                    <span>Call Now</span>
+            <!-- DESKTOP ACTION BUTTONS -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+919523968137" class="flex items-center gap-2 text-sm font-semibold text-zinc-300 hover:text-amber-500 transition-colors px-3 py-2">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>+91 95239 68137</span>
                 </a>
-                <a href="#trial-form" class="px-5 py-2.5 rounded-xl bg-[#FF334B] hover:bg-[#FF4D63] text-white text-sm font-semibold flex items-center gap-2 shadow-lg shadow-[#FF334B]/25 transition-all">
-                    <i data-lucide="calendar" class="w-4 h-4"></i>
-                    <span>Book Trial</span>
+                <a href="https://wa.me/919523968137?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20trial%20at%20Pro%20Fitness%20Kankarbagh." target="_blank" rel="noopener noreferrer" class="bg-amber-500 hover:bg-amber-600 text-black font-semibold text-sm px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-500/20 flex items-center gap-2 transform hover:-translate-y-0.5">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                    <span>Free Trial</span>
                 </a>
             </div>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none">
+            <!-- MOBILE HAMBURGER BUTTON -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-amber-500 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Backdrop Overlay -->
-    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
-
-    <!-- Flawless Mobile Drawer -->
-    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#0A0A0C] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-menu" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-t border-zinc-800 text-white p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto rounded-tl-2xl">
         <div>
-            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800 mb-6">
                 <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-[#FF334B] flex items-center justify-center">
-                        <i data-lucide="dumbbell" class="w-4 h-4 text-white"></i>
+                    <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center font-syne font-extrabold text-black text-lg">
+                        PF
                     </div>
-                    <span class="font-syne font-bold text-lg text-white">Pro Fitness Gym</span>
+                    <div>
+                        <span class="font-syne font-bold text-white text-base">PRO FITNESS</span>
+                        <span class="text-[10px] text-amber-500 block">Kankarbagh, Patna</span>
+                    </div>
                 </div>
-                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+                <button id="close-menu-btn" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
-            
-            <nav class="flex flex-col gap-4 mt-6 text-base font-medium">
-                <a href="#services" class="mobile-nav-link text-zinc-300 hover:text-[#FF334B] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Services</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#about" class="mobile-nav-link text-zinc-300 hover:text-[#FF334B] py-2 border-b border-zinc-900 flex items-center justify-between"><span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#gallery" class="mobile-nav-link text-zinc-300 hover:text-[#FF334B] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Gallery</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#reviews" class="mobile-nav-link text-zinc-300 hover:text-[#FF334B] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#faq" class="mobile-nav-link text-zinc-300 hover:text-[#FF334B] py-2 border-b border-zinc-900 flex items-center justify-between"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-[#FF334B] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Location & Hours</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+
+            <nav class="flex flex-col gap-4">
+                <a href="#services" class="mobile-nav-link text-zinc-300 hover:text-amber-500 font-medium py-2 px-3 rounded-lg hover:bg-zinc-900 transition-colors flex items-center gap-3">
+                    <i data-lucide="dumbbell" class="w-5 h-5 text-amber-500"></i> Services & Classes
+                </a>
+                <a href="#packages" class="mobile-nav-link text-zinc-300 hover:text-amber-500 font-medium py-2 px-3 rounded-lg hover:bg-zinc-900 transition-colors flex items-center gap-3">
+                    <i data-lucide="tag" class="w-5 h-5 text-amber-500"></i> Membership Packages
+                </a>
+                <a href="#trainers" class="mobile-nav-link text-zinc-300 hover:text-amber-500 font-medium py-2 px-3 rounded-lg hover:bg-zinc-900 transition-colors flex items-center gap-3">
+                    <i data-lucide="users" class="w-5 h-5 text-amber-500"></i> Expert Trainers
+                </a>
+                <a href="#schedule" class="mobile-nav-link text-zinc-300 hover:text-amber-500 font-medium py-2 px-3 rounded-lg hover:bg-zinc-900 transition-colors flex items-center gap-3">
+                    <i data-lucide="calendar" class="w-5 h-5 text-amber-500"></i> Workout Schedule
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-zinc-300 hover:text-amber-500 font-medium py-2 px-3 rounded-lg hover:bg-zinc-900 transition-colors flex items-center gap-3">
+                    <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> Customer Reviews
+                </a>
+                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-amber-500 font-medium py-2 px-3 rounded-lg hover:bg-zinc-900 transition-colors flex items-center gap-3">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i> Location & Contact
+                </a>
             </nav>
         </div>
 
         <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
-            <a href="tel:+918340560122" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold flex items-center justify-center gap-2 hover:border-[#FF334B]">
-                <i data-lucide="phone" class="w-4 h-4 text-[#FF334B]"></i>
-                <span>Call +91 83405 60122</span>
+            <a href="https://wa.me/919523968137?text=Hi,%2520I%2520would%2520like%2520to%2520book%2520a%2520free%2520trial%2520at%2520Pro%2520Fitness%2520Kankarbagh." target="_blank" rel="noopener noreferrer" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3.5 px-4 rounded-xl text-center shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i> Book Free Trial on WhatsApp
             </a>
-            <a href="https://wa.me/918340560122" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                <span>WhatsApp Enquiry</span>
-            </a>
-            <a href="#trial-form" class="mobile-nav-link w-full py-3 rounded-xl bg-[#FF334B] text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-[#FF334B]/30">
-                <i data-lucide="calendar" class="w-4 h-4"></i>
-                <span>Book Free Trial</span>
+            <a href="tel:+919523968137" class="w-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white font-semibold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i> Call +91 95239 68137
             </a>
         </div>
     </div>
 
-    <!-- MAIN CONTENT CONTAINER -->
-    <main class="w-full overflow-x-hidden">
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <!-- 2. HERO SECTION -->
-        <section class="relative min-h-[90vh] flex items-center justify-center py-16 lg:py-24 bg-[#0A0A0C]">
-            <!-- Ambient Glow Background -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FF334B]/15 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute bottom-10 right-10 w-80 h-80 bg-[#FF7A00]/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                    
-                    <!-- Hero Content -->
-                    <div class="lg:col-span-7 text-left">
-                        <!-- Rating Badge -->
-                        <div class="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-md">
-                            <div class="flex items-center gap-1 text-amber-400">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <span class="font-bold text-sm text-white">4.5</span>
-                            </div>
-                            <span class="text-zinc-600">|</span>
-                            <span class="text-xs sm:text-sm text-zinc-300 font-medium">156+ Verified Google Reviews</span>
-                        </div>
-
-                        <!-- Main Headline -->
-                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
-                            TRANSFORM YOUR BODY AT <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF334B] to-[#FF7A00]">PATNA'S PREMIER</span> FITNESS HUB
-                        </h1>
-
-                        <!-- Subheadline -->
-                        <p class="text-base sm:text-lg text-[#9BA1A6] mb-8 max-w-2xl leading-relaxed">
-                            State-of-the-art equipment, certified expert trainers, and a high-energy environment built for serious results. Whether it's muscle gain or weight loss, your transformation starts here.
-                        </p>
-
-                        <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                            <a href="#trial-form" class="px-8 py-4 rounded-xl bg-[#FF334B] hover:bg-[#FF4D63] text-white font-bold text-center flex items-center justify-center gap-3 shadow-xl shadow-[#FF334B]/30 transition-all hover:scale-[1.02]">
-                                <i data-lucide="zap" class="w-5 h-5 fill-white"></i>
-                                <span>Book Free Trial</span>
-                            </a>
-                            <a href="tel:+918340560122" class="px-8 py-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white font-bold text-center flex items-center justify-center gap-3 transition-all">
-                                <i data-lucide="phone-call" class="w-5 h-5 text-[#FF334B]"></i>
-                                <span>Call: +91 83405 60122</span>
-                            </a>
-                        </div>
-
-                        <!-- Quick Location Tag -->
-                        <div class="mt-8 flex items-center gap-2 text-xs sm:text-sm text-zinc-400">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-[#FF334B] shrink-0"></i>
-                            <span>Mahatma Gandhi Nagar, Chitragupta Nagar, Patna, Bihar 800026</span>
-                        </div>
-                    </div>
-
-                    <!-- Hero Visual Card -->
-                    <div class="lg:col-span-5">
-                        <div class="relative rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl group">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Pro Fitness Gym Interior" class="w-full h-[380px] sm:h-[450px] object-cover group-hover:scale-105 transition-transform duration-700">
-                            
-                            <!-- Floating Badge -->
-                            <div class="absolute bottom-6 left-6 right-6 z-20 bg-zinc-950/90 backdrop-blur-md p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-12 h-12 rounded-xl bg-[#FF334B]/20 flex items-center justify-center text-[#FF334B]">
-                                        <i data-lucide="award" class="w-6 h-6"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-sm sm:text-base text-white">Certified Trainers</h4>
-                                        <p class="text-xs text-[#9BA1A6]">Personalized workout guidance</p>
-                                    </div>
-                                </div>
-                                <span class="px-3 py-1.5 rounded-lg bg-[#FF334B] text-white text-xs font-bold">Open Daily</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. TRUST & SOCIAL PROOF BAR -->
-        <section class="border-y border-zinc-800 bg-zinc-950 py-8">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div class="p-4 rounded-2xl bg-[#141418] border border-zinc-800">
-                        <div class="flex items-center justify-center gap-1 text-amber-400 mb-1">
-                            <span class="font-syne font-extrabold text-2xl sm:text-3xl text-white">4.5</span>
-                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                        </div>
-                        <p class="text-xs sm:text-sm text-[#9BA1A6]">Google Rating</p>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-[#141418] border border-zinc-800">
-                        <div class="font-syne font-extrabold text-2xl sm:text-3xl text-[#FF334B] mb-1">156+</div>
-                        <p class="text-xs sm:text-sm text-[#9BA1A6]">Verified Reviews</p>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-[#141418] border border-zinc-800">
-                        <div class="font-syne font-extrabold text-2xl sm:text-3xl text-white mb-1">100%</div>
-                        <p class="text-xs sm:text-sm text-[#9BA1A6]">Pro Equipment</p>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-[#141418] border border-zinc-800">
-                        <div class="font-syne font-extrabold text-2xl sm:text-3xl text-[#FF7A00] mb-1">Patna</div>
-                        <p class="text-xs sm:text-sm text-[#9BA1A6]">Prime Location</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. SERVICES / OFFERINGS GRID -->
-        <section id="services" class="py-20 lg:py-28 bg-[#0A0A0C]">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">Our Core Programs</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-4">TRAIN WITH PURPOSE, ACHIEVE RESULTS</h2>
-                    <p class="text-[#9BA1A6] text-sm sm:text-base">Designed for all fitness levels, our specialized programs cater to strength builders, weight loss seekers, and fitness enthusiasts.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    
-                    <!-- Service Card 1 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#FF334B] transition-all duration-300 group hover:-translate-y-1">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl bg-[#FF334B]/10 text-[#FF334B] flex items-center justify-center mb-6 group-hover:bg-[#FF334B] group-hover:text-white transition-colors">
-                                <i data-lucide="dumbbell" class="w-7 h-7"></i>
-                            </div>
-                            <h3 class="font-syne font-bold text-xl mb-3 text-white">Strength Training</h3>
-                            <p class="text-[#9BA1A6] text-sm leading-relaxed mb-6">Build raw power and muscle mass with our extensive collection of heavy dumbbells, barbells, and plate-loaded machines.</p>
-                        </div>
-                        <a href="#trial-form" class="inline-flex items-center gap-2 text-sm font-semibold text-[#FF334B] hover:text-[#FF4D63]">
-                            <span>Inquire Now</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 2 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#FF334B] transition-all duration-300 group hover:-translate-y-1">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl bg-[#FF7A00]/10 text-[#FF7A00] flex items-center justify-center mb-6 group-hover:bg-[#FF7A00] group-hover:text-white transition-colors">
-                                <i data-lucide="flame" class="w-7 h-7"></i>
-                            </div>
-                            <h3 class="font-syne font-bold text-xl mb-3 text-white">Fat Loss & HIIT</h3>
-                            <p class="text-[#9BA1A6] text-sm leading-relaxed mb-6">Melt stubborn fat and boost cardiovascular endurance with high-intensity interval training and fat-burning routines.</p>
-                        </div>
-                        <a href="#trial-form" class="inline-flex items-center gap-2 text-sm font-semibold text-[#FF334B] hover:text-[#FF4D63]">
-                            <span>Inquire Now</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 3 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#FF334B] transition-all duration-300 group hover:-translate-y-1">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                                <i data-lucide="user-check" class="w-7 h-7"></i>
-                            </div>
-                            <h3 class="font-syne font-bold text-xl mb-3 text-white">Personal Training</h3>
-                            <p class="text-[#9BA1A6] text-sm leading-relaxed mb-6">Get 1-on-1 attention from certified fitness coaches who curate bespoke workout plans and nutritional guidelines.</p>
-                        </div>
-                        <a href="#trial-form" class="inline-flex items-center gap-2 text-sm font-semibold text-[#FF334B] hover:text-[#FF4D63]">
-                            <span>Inquire Now</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 4 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-[#FF334B] transition-all duration-300 group hover:-translate-y-1">
-                        <div>
-                            <div class="w-14 h-14 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-                                <i data-lucide="heart-pulse" class="w-7 h-7"></i>
-                            </div>
-                            <h3 class="font-syne font-bold text-xl mb-3 text-white">Cardio Conditioning</h3>
-                            <p class="text-[#9BA1A6] text-sm leading-relaxed mb-6">Improve stamina and heart health with premium treadmills, exercise bikes, and elliptical cross-trainers.</p>
-                        </div>
-                        <a href="#trial-form" class="inline-flex items-center gap-2 text-sm font-semibold text-[#FF334B] hover:text-[#FF4D63]">
-                            <span>Inquire Now</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. WHY CHOOSE US SECTION -->
-        <section class="py-20 bg-zinc-950 border-y border-zinc-800">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">Why Pro Fitness Gym</span>
-                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-6">WHAT MAKES US PATNA'S #1 FITNESS CHOICE</h2>
-                        <p class="text-[#9BA1A6] text-sm sm:text-base mb-8 leading-relaxed">
-                            We aren't just a gym; we are a community dedicated to pushing your limits. Here is why hundreds of members trust us with their fitness journey every single day.
-                        </p>
-
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#141418] border border-zinc-800">
-                                <div class="w-10 h-10 rounded-xl bg-[#FF334B] flex items-center justify-center text-white shrink-0 mt-0.5">
-                                    <i data-lucide="check" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-base text-white mb-1">Top-Tier Imported Equipment</h4>
-                                    <p class="text-xs sm:text-sm text-[#9BA1A6]">Biomechanically optimized machines ensuring maximum muscle engagement and safety.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#141418] border border-zinc-800">
-                                <div class="w-10 h-10 rounded-xl bg-[#FF334B] flex items-center justify-center text-white shrink-0 mt-0.5">
-                                    <i data-lucide="check" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-base text-white mb-1">Hygienic & Sanitized Workout Floor</h4>
-                                    <p class="text-xs sm:text-sm text-[#9BA1A6]">Regularly cleaned equipment, pristine locker rooms, and immaculate workout environment.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#141418] border border-zinc-800">
-                                <div class="w-10 h-10 rounded-xl bg-[#FF334B] flex items-center justify-center text-white shrink-0 mt-0.5">
-                                    <i data-lucide="check" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-base text-white mb-1">Affordable Membership Plans</h4>
-                                    <p class="text-xs sm:text-sm text-[#9BA1A6]">Flexible monthly, quarterly, and annual packages tailored to suit every budget.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Visual Grid -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="space-y-4">
-                            <div class="rounded-2xl overflow-hidden border border-zinc-800 h-48 sm:h-60">
-                                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Gym Equipment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="rounded-2xl overflow-hidden border border-zinc-800 h-36 sm:h-44 bg-gradient-to-br from-[#FF334B] to-[#FF7A00] p-6 flex flex-col justify-center text-white">
-                                <span class="font-syne font-extrabold text-3xl sm:text-4xl">4.5 ★</span>
-                                <p class="text-xs sm:text-sm font-medium opacity-90 mt-1">Rated by 156+ fitness enthusiasts in Patna</p>
-                            </div>
-                        </div>
-                        <div class="space-y-4 pt-8">
-                            <div class="rounded-2xl overflow-hidden border border-zinc-800 h-36 sm:h-44 bg-zinc-900 flex flex-col items-center justify-center p-6 text-center border border-zinc-800">
-                                <i data-lucide="shield-check" class="w-10 h-10 text-[#FF334B] mb-2"></i>
-                                <span class="font-bold text-sm">Certified Experts</span>
-                            </div>
-                            <div class="rounded-2xl overflow-hidden border border-zinc-800 h-48 sm:h-60">
-                                <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&w=600&q=80" alt="Workout Session" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. ABOUT / STORY SECTION -->
-        <section id="about" class="py-20 lg:py-28 bg-[#0A0A0C]">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-6">
-                        <div class="relative rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Pro Fitness Gym Floor" class="w-full h-[400px] sm:h-[480px] object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent opacity-80"></div>
-                            <div class="absolute bottom-6 left-6 right-6 p-6 bg-zinc-950/90 backdrop-blur-md rounded-2xl border border-zinc-800">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-xl bg-[#FF334B] flex items-center justify-center text-white shrink-0">
-                                        <i data-lucide="map-pin" class="w-6 h-6"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-base text-white">Mahatma Gandhi Nagar, Patna</h4>
-                                        <p class="text-xs text-[#9BA1A6]">Easily accessible location in Chitragupta Nagar</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-6">
-                        <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">About Pro Fitness Gym</span>
-                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-6">BUILT FOR THOSE WHO DEMAND EXCELLENCE</h2>
-                        <p class="text-[#9BA1A6] text-sm sm:text-base mb-6 leading-relaxed">
-                            Located conveniently in Mahatma Gandhi Nagar, Patna, Pro Fitness Gym was established with a singular mission: to provide world-class fitness infrastructure without compromise.
-                        </p>
-                        <p class="text-[#9BA1A6] text-sm sm:text-base mb-8 leading-relaxed">
-                            Whether you are taking your first steps into weightlifting or preparing for a bodybuilding competition, our supportive community and expert trainers ensure you stay motivated and accountable every step of the way.
-                        </p>
-
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-4 rounded-xl bg-[#141418] border border-zinc-800">
-                                <div class="font-syne font-bold text-lg text-white mb-1">Expert Coaching</div>
-                                <p class="text-xs text-[#9BA1A6]">Tailored advice on form, diet & workout regimes.</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-[#141418] border border-zinc-800">
-                                <div class="font-syne font-bold text-lg text-white mb-1">Vibrant Vibe</div>
-                                <p class="text-xs text-[#9BA1A6]">High-energy music and driven workout partners.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. INTERACTIVE SHOWCASE / GALLERY -->
-        <section id="gallery" class="py-20 bg-zinc-950 border-y border-zinc-800">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">Gym Floor Gallery</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-4">EXPLORE OUR FACILITY</h2>
-                    <p class="text-[#9BA1A6] text-sm sm:text-base">Take a visual tour of our spacious workout floor, premium weight stacks, and cardio zone in Patna.</p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 group h-64 bg-zinc-900">
-                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Dumbbell Rack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 group h-64 bg-zinc-900">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Cardio Section" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 group h-64 bg-zinc-900">
-                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Weight Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 group h-64 bg-zinc-900">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Fitness Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 group h-64 bg-zinc-900">
-                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Gym Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-zinc-800 group h-64 bg-zinc-900">
-                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Barbell Workout" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. CUSTOMER REVIEWS SECTION -->
-        <section id="reviews" class="py-20 lg:py-28 bg-[#0A0A0C]">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">Verified Google Reviews</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-4">WHAT OUR MEMBERS SAY</h2>
-                    <p class="text-[#9BA1A6] text-sm sm:text-base">Real experiences from fitness enthusiasts who train at Pro Fitness Gym, Patna.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    
-                    <!-- Review 1 -->
-                    <div class="p-6 rounded-2xl bg-[#141418] border border-zinc-800 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-1 text-amber-400 mb-4">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            </div>
-                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
-                                "Best gym in Mahatma Gandhi Nagar, Patna! The equipment is top-notch and trainers are very supportive with correct posture guidance. Highly recommended for strength training."
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                            <div class="w-10 h-10 rounded-full bg-[#FF334B] flex items-center justify-center font-bold text-white text-sm">A</div>
-                            <div>
-                                <h4 class="font-bold text-sm text-white">Abhishek Kumar</h4>
-                                <p class="text-xs text-[#9BA1A6]">Google Local Guide</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review 2 -->
-                    <div class="p-6 rounded-2xl bg-[#141418] border border-zinc-800 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-1 text-amber-400 mb-4">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            </div>
-                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
-                                "Amazing workout atmosphere and great crowd. Trainers pay personal attention to fat loss routines. Clean floors and proper ventilation. 5/5 stars!"
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                            <div class="w-10 h-10 rounded-full bg-[#FF7A00] flex items-center justify-center font-bold text-white text-sm">R</div>
-                            <div>
-                                <h4 class="font-bold text-sm text-white">Rahul Verma</h4>
-                                <p class="text-xs text-[#9BA1A6]">Verified Member</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review 3 -->
-                    <div class="p-6 rounded-2xl bg-[#141418] border border-zinc-800 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-1 text-amber-400 mb-4">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            </div>
-                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
-                                "Very spacious gym with all heavy weights and cardio equipment. Membership fees are very reasonable compared to the quality offered in Patna. Love training here!"
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-sm">P</div>
-                            <div>
-                                <h4 class="font-bold text-sm text-white">Priya Singh</h4>
-                                <p class="text-xs text-[#9BA1A6]">Verified Member</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. FAQ ACCORDION -->
-        <section id="faq" class="py-20 bg-zinc-950 border-y border-zinc-800">
-            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">Got Questions?</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-4">FREQUENTLY ASKED QUESTIONS</h2>
-                    <p class="text-[#9BA1A6] text-sm sm:text-base">Everything you need to know about memberships, trial sessions, and timings.</p>
-                </div>
-
-                <div class="space-y-4">
-                    
-                    <!-- FAQ 1 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
-                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                            <span class="font-syne font-bold text-base sm:text-lg text-white">Do you offer a free trial session?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#FF334B] transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-sm text-[#9BA1A6] leading-relaxed">
-                            Yes! We offer a free trial session so you can experience our equipment, meet our certified trainers, and check out the energetic ambiance before committing to a membership. Simply fill out the trial booking form on our website or call us directly.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 2 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
-                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                            <span class="font-syne font-bold text-base sm:text-lg text-white">What are the gym operating hours?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#FF334B] transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-sm text-[#9BA1A6] leading-relaxed">
-                            Pro Fitness Gym is open daily from early morning (5:00 AM) till late evening (10:00 PM), giving you ample flexibility to fit your workout around your busy work or college schedule.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
-                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                            <span class="font-syne font-bold text-base sm:text-lg text-white">Are personal trainers available for beginners?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#FF334B] transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-sm text-[#9BA1A6] leading-relaxed">
-                            Absolutely! Our certified personal trainers specialize in working with beginners. They will guide you through proper form, design a customized workout regime, and help you reach your goals safely and efficiently.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="bg-[#141418] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
-                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                            <span class="font-syne font-bold text-base sm:text-lg text-white">Where is Pro Fitness Gym located in Patna?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#FF334B] transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-sm text-[#9BA1A6] leading-relaxed">
-                            We are conveniently located at H5RF+M8M, Mahatma Gandhi Nagar, Chitragupta Nagar, Patna, Bihar 800026. You can easily find us on Google Maps or call us for directions.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
-        <section id="contact" class="py-20 lg:py-28 bg-[#0A0A0C]">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- Left: Contact Info & Hours & Map -->
-                    <div class="lg:col-span-6 space-y-8">
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">Visit & Connect</span>
-                            <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-4">GET IN TOUCH WITH US</h2>
-                            <p class="text-[#9BA1A6] text-sm sm:text-base">Drop by our facility in Patna or reach out via phone or WhatsApp for instant inquiries.</p>
-                        </div>
-
-                        <!-- Contact Details Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="p-5 rounded-2xl bg-[#141418] border border-zinc-800">
-                                <div class="w-10 h-10 rounded-xl bg-[#FF334B]/10 text-[#FF334B] flex items-center justify-center mb-3">
-                                    <i data-lucide="phone" class="w-5 h-5"></i>
-                                </div>
-                                <h4 class="font-bold text-sm text-white mb-1">Phone / WhatsApp</h4>
-                                <a href="tel:+918340560122" class="text-xs sm:text-sm text-[#9BA1A6] hover:text-[#FF334B] block">+91 83405 60122</a>
-                            </div>
-
-                            <div class="p-5 rounded-2xl bg-[#141418] border border-zinc-800">
-                                <div class="w-10 h-10 rounded-xl bg-[#FF7A00]/10 text-[#FF7A00] flex items-center justify-center mb-3">
-                                    <i data-lucide="clock" class="w-5 h-5"></i>
-                                </div>
-                                <h4 class="font-bold text-sm text-white mb-1">Operating Hours</h4>
-                                <p class="text-xs sm:text-sm text-[#9BA1A6]">Mon - Sun: 5:00 AM – 10:00 PM</p>
-                            </div>
-                        </div>
-
-                        <!-- Address Card & Directions Button -->
-                        <div class="p-6 rounded-2xl bg-[#141418] border border-zinc-800">
-                            <div class="flex items-start gap-4 mb-6">
-                                <div class="w-12 h-12 rounded-xl bg-[#FF334B] flex items-center justify-center text-white shrink-0 mt-1">
-                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-base text-white mb-1">Pro Fitness Gym Patna</h4>
-                                    <p class="text-xs sm:text-sm text-[#9BA1A6]">H5RF+M8M, Mahatma Gandhi Nagar, Chitragupta Nagar, Patna, Bihar 800026</p>
-                                </div>
-                            </div>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Pro+Fitness+Gym+Patna+Bihar+800026" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-[#FF334B] text-white font-semibold text-center flex items-center justify-center gap-2 transition-all">
-                                <i data-lucide="navigation" class="w-4 h-4 text-[#FF334B]"></i>
-                                <span>Get Directions on Google Maps</span>
-                            </a>
-                        </div>
-
-                        <!-- Google Maps Embed -->
-                        <div class="rounded-2xl overflow-hidden border border-zinc-800 h-64 shadow-xl">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848419612!2d85.1580!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzMzLjUiTiA4NcKwMDknMjguOCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"
-                                title="Pro Fitness Gym Location Map">
-                            </iframe>
-                        </div>
-
-                    </div>
-
-                    <!-- Right: Trial Booking Form -->
-                    <div id="trial-form" class="lg:col-span-6 bg-[#141418] border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
-                        <div class="mb-6">
-                            <span class="text-xs font-bold uppercase tracking-widest text-[#FF334B] bg-[#FF334B]/10 px-3 py-1.5 rounded-full inline-block mb-3">Instant Booking</span>
-                            <h3 class="font-syne font-bold text-2xl text-white mb-2">BOOK YOUR FREE TRIAL</h3>
-                            <p class="text-[#9BA1A6] text-sm">Fill out the form below to reserve your complimentary session at Pro Fitness Gym.</p>
-                        </div>
-
-                        <form id="booking-form" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Full Name *</label>
-                                <input type="text" id="name" required placeholder="e.g. Aman Kumar" class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF334B] transition-colors text-sm">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Phone / WhatsApp Number *</label>
-                                <input type="tel" id="phone" required placeholder="e.g. +91 98765 43210" class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF334B] transition-colors text-sm">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Select Preferred Program *</label>
-                                <select id="service" required class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none focus:border-[#FF334B] transition-colors text-sm">
-                                    <option value="" disabled selected>Choose your fitness goal</option>
-                                    <option value="Strength Training">Strength Training & Muscle Building</option>
-                                    <option value="Fat Loss & HIIT">Fat Loss & HIIT</option>
-                                    <option value="Personal Training">Personal Training</option>
-                                    <option value="Cardio Conditioning">Cardio Conditioning</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Message or Preferred Time (Optional)</label>
-                                <textarea id="message" rows="3" placeholder="e.g. Prefer morning slots around 7 AM" class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF334B] transition-colors text-sm resize-none"></textarea>
-                            </div>
-
-                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-[#FF334B] hover:bg-[#FF4D63] text-white font-bold text-base flex items-center justify-center gap-2 shadow-xl shadow-[#FF334B]/30 transition-all hover:scale-[1.01]">
-                                <i data-lucide="zap" class="w-5 h-5 fill-white"></i>
-                                <span>Confirm Free Trial Booking</span>
-                            </button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- SUCCESS MODAL POPUP -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[110] hidden flex items-center justify-center p-4">
-        <div class="bg-[#141418] border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center relative shadow-2xl animate-in fade-in zoom-in duration-300">
-            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-6">
-                <i data-lucide="check-circle" class="w-8 h-8"></i>
-            </div>
-            <h3 class="font-syne font-bold text-2xl text-white mb-3">Trial Booking Confirmed!</h3>
-            <p id="modal-desc" class="text-sm text-[#9BA1A6] mb-6 leading-relaxed">
-                Thank you! We have received your request. Our team at Pro Fitness Gym Patna will call you shortly to confirm your slot.
-            </p>
-            <button id="modal-close" class="w-full py-3.5 rounded-xl bg-[#FF334B] text-white font-bold text-sm hover:bg-[#FF4D63] transition-all">
-                Got It, Thanks!
-            </button>
-        </div>
-    </div>
-
-    <!-- 11. STICKY MOBILE BOTTOM BAR -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0A0A0C] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
-        <a href="tel:+918340560122" class="flex-1 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-sm flex items-center justify-center gap-2">
-            <i data-lucide="phone" class="w-4 h-4 text-[#FF334B]"></i>
-            <span>Call Now</span>
-        </a>
-        <a href="https://wa.me/918340560122" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>WhatsApp</span>
-        </a>
-    </div>
-
-    <!-- 12. FOOTER -->
-    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Col 1: Brand -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF334B] to-[#FF7A00] flex items-center justify-center">
-                            <i data-lucide="dumbbell" class="w-5 h-5 text-white"></i>
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    
+                    <!-- Trust Rating Badge -->
+                    <div class="inline-flex items-center gap-2 bg-zinc-900/90 border border-zinc-800 px-4 py-2 rounded-full mb-6 shadow-inner">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.5★ Rating <span class="text-zinc-500 font-normal">(42+ Google Reviews)</span></span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: lg: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Transform Your Body, <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">Elevate Your Lifestyle</span> in Kankarbagh
+                    </h1>
+
+                    <p class="text-zinc-400 text-base sm:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed break-words">
+                        Patna's premier fitness destination featuring cutting-edge equipment, certified elite trainers, customized strength & conditioning programs, and a high-energy workout community.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20would%20like%20to%20book%20a%20free%20trial%20at%20Pro%20Fitness%20Kankarbagh." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-black font-bold text-base px-8 py-4 rounded-xl transition-all shadow-xl shadow-amber-500/25 flex items-center justify-center gap-3 transform hover:-translate-y-0.5 min-h-[52px]">
+                            <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
+                            <span>Book Free Trial Now</span>
+                        </a>
+                        <a href="#packages" class="w-full sm:w-auto bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 font-semibold text-base px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 min-h-[52px]">
+                            <span>View Memberships</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 text-amber-500"></i>
+                        </a>
+                    </div>
+
+                    <!-- Highlights List -->
+                    <div class="grid grid-cols-3 gap-4 pt-10 mt-10 border-t border-zinc-800/80 text-left">
+                        <div>
+                            <span class="block font-syne font-extrabold text-2xl sm:text-3xl text-amber-500">100%</span>
+                            <span class="text-xs sm:text-sm text-zinc-400">Certified Trainers</span>
                         </div>
                         <div>
-                            <span class="font-syne font-extrabold text-lg text-white block leading-tight">PRO FITNESS</span>
-                            <span class="text-[10px] text-[#9BA1A6] font-semibold tracking-widest uppercase block">GYM • PATNA</span>
+                            <span class="block font-syne font-extrabold text-2xl sm:text-3xl text-amber-500">5,000</span>
+                            <span class="text-xs sm:text-sm text-zinc-400">Sq. Ft. Gym Floor</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne font-extrabold text-2xl sm:text-3xl text-amber-500">6 AM</span>
+                            <span class="text-xs sm:text-sm text-zinc-400">Opening Daily</span>
                         </div>
                     </div>
-                    <p class="text-xs sm:text-sm text-[#9BA1A6] leading-relaxed">
-                        Patna's premier fitness destination equipped with state-of-the-art machines, expert personal trainers, and a high-energy training environment.
-                    </p>
-                    <div class="flex items-center gap-3 text-amber-400 text-xs font-bold">
-                        <div class="flex items-center gap-1">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <span>4.5 Rating (156+ Reviews)</span>
+
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Border Frame -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-amber-500 to-amber-600 rounded-3xl opacity-30 blur-lg"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-[4/5] shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Pro Fitness Gym Interior Kankarbagh Patna" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                            
+                            <!-- Floating Card Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl flex items-center gap-4 shadow-xl">
+                                <div class="w-12 h-12 rounded-lg bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-500 flex-shrink-0">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Best Gym in PC Colony</h4>
+                                    <p class="text-xs text-zinc-400">PC Colony Rd, Kankarbagh, Patna</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Col 2: Quick Links -->
-                <div>
-                    <h4 class="font-syne font-bold text-base text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2.5 text-sm text-[#9BA1A6]">
-                        <li><a href="#services" class="hover:text-[#FF334B] transition-colors">Core Programs</a></li>
-                        <li><a href="#about" class="hover:text-[#FF334B] transition-colors">About Our Gym</a></li>
-                        <li><a href="#gallery" class="hover:text-[#FF334B] transition-colors">Facility Gallery</a></li>
-                        <li><a href="#reviews" class="hover:text-[#FF334B] transition-colors">Google Reviews</a></li>
-                        <li><a href="#faq" class="hover:text-[#FF334B] transition-colors">Frequently Asked Questions</a></li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST & SOCIAL PROOF BAR -->
+    <section class="py-10 bg-zinc-900/50 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-500 font-syne font-extrabold text-3xl mb-1">4.5★</div>
+                    <div class="text-xs sm:text-sm text-zinc-400">Google Verified Rating</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-500 font-syne font-extrabold text-3xl mb-1">42+</div>
+                    <div class="text-xs sm:text-sm text-zinc-400">5-Star Reviews</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-500 font-syne font-extrabold text-3xl mb-1">5+</div>
+                    <div class="text-xs sm:text-sm text-zinc-400">Expert Master Trainers</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-500 font-syne font-extrabold text-3xl mb-1">12 Hrs</div>
+                    <div class="text-xs sm:text-sm text-zinc-400">Daily Access (6AM - 9PM)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & CLASSES GRID -->
+    <section id="services" class="py-20 md:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Elite Training Programs</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                    Designed for Maximum Results
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Whether your goal is muscle hypertrophy, fat loss, athletic conditioning, or flexibility, our comprehensive training routines cater to all fitness levels.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Strength Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-amber-500 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Core Focus</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2 group-hover:text-amber-500 transition-colors">Strength Training</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Build raw power and lean muscle with Olympic barbells, heavy dumbbells, squat racks, and specialized resistance machines.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20more%20about%20Strength%20Training%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400 transition-colors">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Col 3: Hours & Location -->
-                <div>
-                    <h4 class="font-syne font-bold text-base text-white mb-4">Timings & Location</h4>
-                    <p class="text-xs text-[#9BA1A6] mb-2 font-semibold text-white">Open Daily:</p>
-                    <p class="text-xs text-[#9BA1A6] mb-4">5:00 AM – 10:00 PM</p>
-                    <p class="text-xs text-[#9BA1A6] mb-2 font-semibold text-white">Address:</p>
-                    <p class="text-xs text-[#9BA1A6] leading-relaxed">H5RF+M8M, Mahatma Gandhi Nagar, Chitragupta Nagar, Patna, Bihar 800026</p>
+                <!-- Service 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Personal Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-amber-500 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">1-on-1 Coaching</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2 group-hover:text-amber-500 transition-colors">Personal Training</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Get customized workout regimens, macro-calculated diet plans, and undivided attention from our certified master coaches.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20more%20about%20Personal%20Training%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400 transition-colors">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Col 4: Contact & Direct Map -->
-                <div>
-                    <h4 class="font-syne font-bold text-base text-white mb-4">Instant Contact</h4>
-                    <p class="text-xs text-[#9BA1A6] mb-2">Phone / WhatsApp:</p>
-                    <a href="tel:+918340560122" class="text-sm font-bold text-white hover:text-[#FF334B] block mb-4">+91 83405 60122</a>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Pro+Fitness+Gym+Patna+Bihar+800026" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 hover:text-white hover:border-[#FF334B] transition-all">
-                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#FF334B]"></i>
-                        <span>View on Google Maps</span>
+                <!-- Service 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Cardio & HIIT" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-amber-500 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Fat Burn</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2 group-hover:text-amber-500 transition-colors">Cardio & HIIT</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                State-of-the-art treadmills, ellipticals, stationary bikes, and high-intensity interval training zones to skyrocket your stamina.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20more%20about%20Cardio%20and%20HIIT%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400 transition-colors">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Yoga & Flexibility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-amber-500 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Mind & Body</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2 group-hover:text-amber-500 transition-colors">Yoga & Flexibility</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Enhance joint mobility, core stability, and mental clarity with guided yoga flows and deep stretching sessions.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20more%20about%20Yoga%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400 transition-colors">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80" alt="Zumba & Aerobics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-amber-500 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Dance Fitness</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2 group-hover:text-amber-500 transition-colors">Zumba & Aerobics</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                High-energy dance fitness workouts set to chart-topping beats that make losing weight feel like an absolute party.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20more%20about%20Zumba%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400 transition-colors">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between shadow-lg">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=600&q=80" alt="Hot Water & Ice Bath" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-amber-500 text-xs font-semibold px-3 py-1 rounded-full border border-zinc-800">Recovery</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2 group-hover:text-amber-500 transition-colors">Hot Water & Ice Bath</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Accelerate muscle recovery, reduce inflammation, and rejuvenate your nervous system with contrast therapy recovery zones.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20more%20about%20Recovery%20Therapy%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400 transition-colors">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP PACKAGES PRICING TABLE -->
+    <section id="packages" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Transparent Investment</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                    Membership Packages
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Choose the ideal membership tier tailored to your fitness journey. No hidden fees, instant activation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Silver Package -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between shadow-xl relative">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-zinc-400 font-semibold uppercase text-xs tracking-wider">Starter Tier</span>
+                            <span class="bg-zinc-800 text-zinc-300 text-xs font-medium px-3 py-1 rounded-full">Standard</span>
+                        </div>
+                        <h3 class="text-2xl font-syne font-bold text-white mb-2">Silver Membership</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Essential gym access for dedicated daily workouts.</p>
+                        
+                        <div class="mb-8">
+                            <span class="text-4xl sm:text-5xl font-extrabold font-syne text-white">₹14,000</span>
+                            <span class="text-zinc-400 text-sm"> / year</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Full Gym Floor Access (Cardio & Weights)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Locker & Shower Facility</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Initial Fitness Assessment</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-500">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-zinc-600 flex-shrink-0"></i>
+                                <span>Personal Trainer Support</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919523968137?text=Hi,%20I%20am%20interested%20in%20the%20Silver%20Membership%20(%E2%82%B914,000/yr)%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-colors text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i> Inquire Silver Plan
+                    </a>
+                </div>
+
+                <!-- Basic Silver Package (Featured) -->
+                <div class="bg-gradient-to-b from-zinc-900 to-zinc-950 border-2 border-amber-500 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative transform lg:-translate-y-4">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-500 text-black font-bold text-xs uppercase tracking-wider py-1.5 px-4 rounded-full shadow-lg">
+                        Most Popular
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-4 mt-2">
+                            <span class="text-amber-500 font-semibold uppercase text-xs tracking-wider">Advanced Tier</span>
+                            <span class="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/30">Value</span>
+                        </div>
+                        <h3 class="text-2xl font-syne font-bold text-white mb-2">Basic Silver</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Extended access with group classes and guidance.</p>
+                        
+                        <div class="mb-8">
+                            <span class="text-4xl sm:text-5xl font-extrabold font-syne text-white">₹25,000</span>
+                            <span class="text-zinc-400 text-sm"> / year</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Complete Gym & Equipment Access</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Unlimited Group Classes (Zumba, Yoga, HIIT)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Monthly Diet & Nutrition Guidance</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Locker, Steam & Recovery Access</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919523968137?text=Hi,%20I%20am%20interested%20in%20the%20Basic%20Silver%20Membership%20(%E2%82%B925,000/yr)%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-amber-500/20 text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i> Inquire Basic Silver
+                    </a>
+                </div>
+
+                <!-- Platinum Package -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between shadow-xl relative">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-amber-400 font-semibold uppercase text-xs tracking-wider">VIP All-Inclusive</span>
+                            <span class="bg-zinc-800 text-zinc-300 text-xs font-medium px-3 py-1 rounded-full">Ultimate</span>
+                        </div>
+                        <h3 class="text-2xl font-syne font-bold text-white mb-2">Platinum Membership</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Complete VIP transformation package with personal coach.</p>
+                        
+                        <div class="mb-8">
+                            <span class="text-4xl sm:text-5xl font-extrabold font-syne text-white">₹35,000</span>
+                            <span class="text-zinc-400 text-sm"> / year</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>All Platinum Gym & Class Privileges</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Dedicated Personal Trainer Assigned</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>Hot Water & Ice Bath Recovery Sessions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <span>VIP Locker & Complimentary Guest Passes</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919523968137?text=Hi,%20I%20am%20interested%20in%20the%20Platinum%20Membership%20(%E2%82%B935,000/yr)%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-colors text-center flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i> Inquire Platinum Plan
                     </a>
                 </div>
 
             </div>
 
-            <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#9BA1A6]">
-                <p>&copy; <span id="current-year"></span> Pro Fitness Gym Patna. All rights reserved.</p>
-                <p class="mt-2 sm:mt-0">Designed for High Performance & Fitness Excellence</p>
+        </div>
+    </section>
+
+    <!-- MEET OUR EXPERT TRAINERS -->
+    <section id="trainers" class="py-20 md:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Elite Leadership</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                    Meet Our Expert Trainers
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Train under the direct mentorship of Patna's most accomplished fitness experts, certified bodybuilding coaches, and yoga masters.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Trainer 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col shadow-lg">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=500&q=80" alt="Saurav Kumar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-amber-500 text-xs font-semibold block mb-1">Head Strength Coach</span>
+                            <h3 class="font-syne font-bold text-lg text-white">Saurav Kumar</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 flex flex-col justify-between flex-grow">
+                        <p class="text-xs text-zinc-400 mb-4">Specialist in powerlifting, hypertrophy, and biomechanics with 8+ years coaching experience.</p>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20train%20with%20Saurav%20Kumar%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 text-xs font-semibold py-2.5 rounded-lg transition-colors text-center flex items-center justify-center gap-1.5">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Train with Saurav
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col shadow-lg">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Anish Singh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-amber-500 text-xs font-semibold block mb-1">CrossFit & HIIT Expert</span>
+                            <h3 class="font-syne font-bold text-lg text-white">Anish Singh</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 flex flex-col justify-between flex-grow">
+                        <p class="text-xs text-zinc-400 mb-4">Expert in functional endurance, agility training, and high-intensity metabolic conditioning.</p>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20train%20with%20Anish%20Singh%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 text-xs font-semibold py-2.5 rounded-lg transition-colors text-center flex items-center justify-center gap-1.5">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Train with Anish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col shadow-lg">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Gopal Kumar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-amber-500 text-xs font-semibold block mb-1">Personal Transformation</span>
+                            <h3 class="font-syne font-bold text-lg text-white">Gopal Kumar</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 flex flex-col justify-between flex-grow">
+                        <p class="text-xs text-zinc-400 mb-4">Specialized in extreme fat loss transformations, toning, and structured diet meal planning.</p>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20train%20with%20Gopal%20Kumar%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 text-xs font-semibold py-2.5 rounded-lg transition-colors text-center flex items-center justify-center gap-1.5">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Train with Gopal
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trainer 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col shadow-lg">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Isha Dubey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-amber-500 text-xs font-semibold block mb-1">Yoga & Mobility Coach</span>
+                            <h3 class="font-syne font-bold text-lg text-white">Isha Dubey</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 flex flex-col justify-between flex-grow">
+                        <p class="text-xs text-zinc-400 mb-4">Expert in Hatha yoga, core flexibility, injury rehabilitation, and mental stress relief.</p>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20train%20with%20Isha%20Dubey%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 text-xs font-semibold py-2.5 rounded-lg transition-colors text-center flex items-center justify-center gap-1.5">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Train with Isha
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trainer 5 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-all duration-300 flex flex-col shadow-lg sm:col-span-2 lg:col-span-1">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Kashish Kedia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-amber-500 text-xs font-semibold block mb-1">Zumba & Aerobics Lead</span>
+                            <h3 class="font-syne font-bold text-lg text-white">Kashish Kedia</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 flex flex-col justify-between flex-grow">
+                        <p class="text-xs text-zinc-400 mb-4">Energetic dance fitness instructor making cardiovascular routines extremely fun and engaging.</p>
+                        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20train%20with%20Kashish%20Kedia%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 text-xs font-semibold py-2.5 rounded-lg transition-colors text-center flex items-center justify-center gap-1.5">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Train with Kashish
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Real Success Stories</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                    What Our Members Say
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Rated 4.5★ with over 42+ verified Google reviews from fitness enthusiasts across Kankarbagh and Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Pro Fitness in Kankarbagh is hands down the best gym in PC Colony! The equipment is top-notch, environment is very motivating, and Saurav Kumar is an exceptional trainer who helped me gain 6kg solid muscle."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold font-syne">
+                            RS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Rahul Singh</h4>
+                            <span class="text-xs text-zinc-500">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "I joined for the Zumba and Yoga classes, and I absolutely love it! Kashish and Isha make every session so energetic. The gym is clean, spacious, and very safe for women."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold font-syne">
+                            NK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Neha Kumari</h4>
+                            <span class="text-xs text-zinc-500">Verified Member</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Great facilities in Bankman Colony area. The ice bath and hot water recovery feature is a game changer after heavy leg workouts. Highly recommend the Platinum package!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold font-syne">
+                            AR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Amit Raj</h4>
+                            <span class="text-xs text-zinc-500">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Gopal Kumar is an amazing trainer. Lost 8 kgs in 3 months with his personalized diet guidance and workout routines. Very supportive staff and energetic atmosphere."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold font-syne">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Pooja Singh</h4>
+                            <span class="text-xs text-zinc-500">Verified Member</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Best gym in Patna! Premium machines, professional trainers, and spacious workout floors. Anish Singh's CrossFit sessions are extremely power-packed."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold font-syne">
+                            AM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Arjun Mohit</h4>
+                            <span class="text-xs text-zinc-500">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Very well maintained gym in PC Colony Kankarbagh. Affordable membership rates with world-class facilities. Highly satisfied!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold font-syne">
+                            SY
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Simran Yadav</h4>
+                            <span class="text-xs text-zinc-500">Verified Member</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORKOUT TIMINGS SCHEDULE TABLE -->
+    <section id="schedule" class="py-20 md:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Weekly Timetable</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                    Workout & Class Schedule
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Open Monday to Saturday from 06:00 AM to 09:00 PM. Plan your sessions around our structured daily class slots.
+                </p>
+            </div>
+
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-zinc-950/80 border-b border-zinc-800 text-zinc-400 text-xs sm:text-sm uppercase tracking-wider">
+                                <th class="py-4 px-6 font-semibold">Time Slot</th>
+                                <th class="py-4 px-6 font-semibold">Monday - Friday</th>
+                                <th class="py-4 px-6 font-semibold">Saturday</th>
+                                <th class="py-4 px-6 font-semibold">Focus Area</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-zinc-800/80 text-sm text-zinc-300">
+                            <tr class="hover:bg-zinc-800/40 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-amber-500">06:00 AM - 08:00 AM</td>
+                                <td class="py-4 px-6">Morning Cardio & Yoga Flow</td>
+                                <td class="py-4 px-6">Cardio & Mobility Stretch</td>
+                                <td class="py-4 px-6"><span class="bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium border border-amber-500/20">Endurance</span></td>
+                            </tr>
+                            <tr class="hover:bg-zinc-800/40 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-amber-500">08:00 AM - 11:00 AM</td>
+                                <td class="py-4 px-6">Open Gym & Strength Training</td>
+                                <td class="py-4 px-6">Open Gym & Powerlifting</td>
+                                <td class="py-4 px-6"><span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-xs font-medium">Hypertrophy</span></td>
+                            </tr>
+                            <tr class="hover:bg-zinc-800/40 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-amber-500">04:00 PM - 06:00 PM</td>
+                                <td class="py-4 px-6">CrossFit & HIIT Session</td>
+                                <td class="py-4 px-6">CrossFit Challenge</td>
+                                <td class="py-4 px-6"><span class="bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-xs font-medium border border-red-500/20">Fat Burn</span></td>
+                            </tr>
+                            <tr class="hover:bg-zinc-800/40 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-amber-500">06:00 PM - 07:00 PM</td>
+                                <td class="py-4 px-6">Zumba & Aerobics Dance Fitness</td>
+                                <td class="py-4 px-6">Zumba Party Workout</td>
+                                <td class="py-4 px-6"><span class="bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full text-xs font-medium border border-amber-500/20">Cardio Dance</span></td>
+                            </tr>
+                            <tr class="hover:bg-zinc-800/40 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-amber-500">07:00 PM - 09:00 PM</td>
+                                <td class="py-4 px-6">Evening Strength & Recovery</td>
+                                <td class="py-4 px-6">Ice Bath & Contrast Therapy</td>
+                                <td class="py-4 px-6"><span class="bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full text-xs font-medium">Recovery</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-zinc-950 p-4 sm:p-6 text-center border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span class="text-xs sm:text-sm text-zinc-400">Sunday Closed for Deep Sanitization & Maintenance.</span>
+                    <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20the%20exact%20batch%20timings%20for%20classes%20at%20Pro%20Fitness." target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm text-amber-500 font-semibold hover:underline flex items-center gap-1.5">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> Confirm Batch Availability on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 md:py-28 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Visit Pro Fitness</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                    Location & Contact Us
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Drop by our facility in Kankarbagh or send us an instant message to kickstart your fitness journey.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contact Information & Form -->
+                <div class="lg:col-span-6 space-y-8">
+                    
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+                        <h3 class="font-syne font-bold text-xl text-white mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm mb-1">Gym Address</h4>
+                                    <p class="text-zinc-400 text-sm leading-relaxed">F11, P C Colony Rd, PC Colony, RBI Flats Colony, Bankman Colony, Patna, Bihar 800020</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 flex-shrink-0">
+                                    <i data-lucide="phone-call" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm mb-1">Phone & WhatsApp</h4>
+                                    <a href="tel:+919523968137" class="text-amber-500 hover:underline text-sm font-semibold block">+91 95239 68137</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 flex-shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm mb-1">Operating Hours</h4>
+                                    <p class="text-zinc-400 text-sm">Monday – Saturday: 06:00 AM – 09:00 PM</p>
+                                    <p class="text-zinc-500 text-xs mt-0.5">Sunday: Closed for Maintenance</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-zinc-800 flex flex-col sm:flex-row gap-4">
+                            <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Pro%20Fitness%20Kankarbagh." target="_blank" rel="noopener noreferrer" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-3.5 px-4 rounded-xl text-center shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i> WhatsApp Trial Booking
+                            </a>
+                            <a href="https://maps.google.com/?q=Pro+Fitness+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2">
+                                <i data-lucide="navigation" class="w-4 h-4 text-amber-500"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Inquiry Form -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+                        <h3 class="font-syne font-bold text-xl text-white mb-2">Instant Membership Inquiry</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Fill out this quick form and our manager will call you back within 15 minutes.</p>
+
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-medium text-zinc-300 mb-1">Your Full Name</label>
+                                <input type="text" id="name" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="e.g. Aman Kumar">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-xs font-medium text-zinc-300 mb-1">Phone / WhatsApp Number</label>
+                                <input type="tel" id="phone" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="e.g. +91 98765 43210">
+                            </div>
+
+                            <div>
+                                <label for="service" class="block text-xs font-medium text-zinc-300 mb-1">Interested Program</label>
+                                <select id="service" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                    <option value="Free Trial">Free Gym Trial</option>
+                                    <option value="Strength Training">Strength Training</option>
+                                    <option value="Personal Training">Personal Training</option>
+                                    <option value="Zumba & Aerobics">Zumba & Aerobics</option>
+                                    <option value="Silver Membership">Silver Membership (₹14,000/yr)</option>
+                                    <option value="Basic Silver Membership">Basic Silver Membership (₹25,000/yr)</option>
+                                    <option value="Platinum Membership">Platinum Membership (₹35,000/yr)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-medium text-zinc-300 mb-1">Message (Optional)</label>
+                                <textarea id="message" rows="3" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="Any specific goals or queries?"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-4 px-6 rounded-xl transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 min-h-[48px]">
+                                <span id="btn-text">Submit Inquiry</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-6 h-full min-h-[500px] lg:min-h-[750px] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl relative flex flex-col">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.9048386153725!2d85.1612!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f28b28f117%3A0x7d6f51f49626e2e5!2sPro%20Fitness%20Kankarbagh%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                        class="w-full h-full flex-grow border-0 min-h-[450px] lg:min-h-[700px]" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Pro Fitness Kankarbagh Google Map Location">
+                    </iframe>
+                    <div class="bg-zinc-900 p-4 border-t border-zinc-800 flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-xs text-zinc-300">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i>
+                            <span>PC Colony Rd, Kankarbagh, Patna</span>
+                        </div>
+                        <a href="https://maps.google.com/?q=Pro+Fitness+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="bg-amber-500 hover:bg-amber-600 text-black text-xs font-bold py-2 px-4 rounded-lg transition-colors flex items-center gap-1.5">
+                            <span>Open in Google Maps</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-zinc-800 text-zinc-400 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center font-syne font-extrabold text-black text-lg">
+                            PF
+                        </div>
+                        <div>
+                            <span class="font-syne font-extrabold text-white text-lg block leading-none">PRO FITNESS</span>
+                            <span class="text-[10px] text-amber-500 font-semibold tracking-widest uppercase block mt-1">Kankarbagh, Patna</span>
+                        </div>
+                    </a>
+                    <p class="text-xs sm:text-sm leading-relaxed text-zinc-400 mb-6">
+                        Patna's premier fitness center in PC Colony Kankarbagh. Elevating lifestyles through state-of-the-art strength training, cardio, and elite certified coaching.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919523968137" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-amber-500 hover:border-amber-500 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919523968137" aria-label="Phone" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-amber-500 hover:border-amber-500 transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://maps.google.com/?q=Pro+Fitness+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" aria-label="Location" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-amber-500 hover:border-amber-500 transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#services" class="hover:text-amber-500 transition-colors">Services & Classes</a></li>
+                        <li><a href="#packages" class="hover:text-amber-500 transition-colors">Membership Packages</a></li>
+                        <li><a href="#trainers" class="hover:text-amber-500 transition-colors">Expert Trainers</a></li>
+                        <li><a href="#schedule" class="hover:text-amber-500 transition-colors">Workout Timings</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-amber-500 transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Operating Hours -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white font-medium">06:00 AM - 09:00 PM</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white font-medium">06:00 AM - 09:00 PM</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white font-medium">06:00 AM - 09:00 PM</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white font-medium">06:00 AM - 09:00 PM</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white font-medium">06:00 AM - 09:00 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-medium">06:00 AM - 09:00 PM</span></li>
+                        <li class="flex justify-between text-amber-500 font-semibold"><span>Sunday:</span> <span>Closed (Sanitization)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Location & Map</h4>
+                    <p class="text-xs sm:text-sm text-zinc-400 mb-4 leading-relaxed">
+                        F11, P C Colony Rd, PC Colony, RBI Flats Colony, Bankman Colony, Patna, Bihar 800020
+                    </p>
+                    <a href="https://maps.google.com/?q=Pro+Fitness+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 text-sm font-semibold">
+                        <i data-lucide="navigation" class="w-4 h-4"></i>
+                        <span>Get Directions on Google Maps</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> PRO FITNESS - KANKARBAGH, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="https://wa.me/919523968137?text=Hi,%20I%20have%20a%20privacy%20or%20membership%20query." target="_blank" rel="noopener noreferrer" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                    <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20know%20gym%20terms%20and%20conditions." target="_blank" rel="noopener noreferrer" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- STICKY MOBILE BOTTOM ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919523968137" class="flex-1 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm min-h-[48px]">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919523968137?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20at%20Pro%20Fitness%20Kankarbagh." target="_blank" rel="noopener noreferrer" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm shadow-lg shadow-amber-500/20 min-h-[48px]">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+            <span>WhatsApp Trial</span>
+        </a>
+    </div>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center relative shadow-2xl animate-in fade-in zoom-in duration-200">
+            <div class="w-16 h-16 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-500 flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                Thank you for reaching out to <span class="text-white font-semibold">Pro Fitness Kankarbagh</span>. Our fitness consultant will call you within 15 minutes.
+            </p>
+            <button id="close-modal-btn" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3.5 px-6 rounded-xl transition-colors text-sm min-h-[48px]">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT INTERACTION & LOGIC -->
     <script>
         // Initialize Lucide Icons
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
 
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close');
-        const mobileDrawer = document.getElementById('mobile-drawer');
-        const menuBackdrop = document.getElementById('menu-backdrop');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-        function openMobileMenu() {
-            mobileDrawer.classList.remove('translate-x-full');
-            menuBackdrop.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
-        }
-
-        function closeMobileMenu() {
-            mobileDrawer.classList.add('translate-x-full');
-            menuBackdrop.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        menuToggle.addEventListener('click', openMobileMenu);
-        menuClose.addEventListener('click', closeMobileMenu);
-        menuBackdrop.addEventListener('click', closeMobileMenu);
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-
-        // FAQ Accordion
-        const faqBtns = document.querySelectorAll('.faq-btn');
-        faqBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('lucide-icon, svg');
-                
-                // Toggle current
-                const isOpen = !content.classList.contains('hidden');
-                
-                // Close all other accordions
-                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
-                document.querySelectorAll('.faq-btn svg').forEach(i => i.style.transform = 'rotate(0deg)');
-
-                if (!isOpen) {
-                    content.classList.remove('hidden');
-                    const chev = btn.querySelector('i');
-                    if (chev) chev.style.transform = 'rotate(180deg)';
-                }
-            });
-        });
-
-        // Trial Booking Form Handling & Success Modal
-        const bookingForm = document.getElementById('booking-form');
-        const successModal = document.getElementById('success-modal');
-        const modalClose = document.getElementById('modal-close');
-        const modalDesc = document.getElementById('modal-desc');
-
-        bookingForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const service = document.getElementById('service').value;
-
-            // Basic client-side sanitization check
-            if(!name || !phone || !service) {
-                alert('Please fill out all required fields.');
-                return;
+            // Set Current Year in Footer
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
             }
 
-            // Simulate loading state
+            // Mobile Menu Toggle Logic
+            const menuBtn = document.getElementById('menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBackdrop = document.getElementById('menu-backdrop');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function openMobileMenu() {
+                if (mobileMenu && menuBackdrop) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuBackdrop.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden');
+                }
+            }
+
+            function closeMobileMenu() {
+                if (mobileMenu && menuBackdrop) {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuBackdrop.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                }
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', openMobileMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileMenu);
+            if (menuBackdrop) menuBackdrop.addEventListener('click', closeMobileMenu);
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Inquiry Form Submission Logic with Validation & Modal
+            const inquiryForm = document.getElementById('inquiry-form');
+            const successModal = document.getElementById('success-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
             const submitBtn = document.getElementById('submit-btn');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="inline-block animate-spin mr-2">⏳</span> Processing...';
+            const btnText = document.getElementById('btn-text');
 
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-                
-                // Update modal message with user's name
-                modalDesc.textContent = `Thank you, ${name}! Your free trial for ${service} has been successfully requested. Our Patna team will call ${phone} shortly.`;
-                
-                // Show success modal
-                successModal.classList.remove('hidden');
-                document.body.classList.add('overflow-hidden');
-                
-                // Reset form
-                bookingForm.reset();
-            }, 800);
-        });
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const service = document.getElementById('service').value;
 
-        modalClose.addEventListener('click', () => {
-            successModal.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        });
+                    if (!name || !phone) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
 
-        successModal.addEventListener('click', (e) => {
-            if(e.target === successModal) {
-                successModal.classList.add('hidden');
-                document.body.classList.remove('overflow-hidden');
+                    // Show loading state
+                    if (submitBtn && btnText) {
+                        submitBtn.disabled = true;
+                        btnText.textContent = 'Sending Inquiry...';
+                    }
+
+                    setTimeout(() => {
+                        // Reset form
+                        inquiryForm.reset();
+                        if (submitBtn && btnText) {
+                            submitBtn.disabled = false;
+                            btnText.textContent = 'Submit Inquiry';
+                        }
+
+                        // Show Success Modal
+                        if (successModal) {
+                            successModal.classList.remove('hidden');
+                            successModal.classList.add('flex');
+                            document.body.classList.add('overflow-hidden');
+                        }
+                    }, 1000);
+                });
+            }
+
+            if (closeModalBtn && successModal) {
+                closeModalBtn.addEventListener('click', () => {
+                    successModal.classList.remove('flex');
+                    successModal.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                });
             }
         });
     </script>
