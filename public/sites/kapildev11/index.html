@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Kapil Dev's Elevens | Patna's Ultimate Restaurant & Sports Lounge</title>
+    <meta name="description" content="Experience fine dining and championship sports lounge vibes at Kapil Dev's Elevens in Fraser Road Area, Patna. Book your table today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0A0A0C',
+                        surface: '#1A1A1E',
+                        accent: '#D4AF37',
+                        'accent-hover': '#E5C158',
+                        secondary: '#1E1E24',
+                        muted: '#A1A1AA'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0C;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0C] text-[#FAFAFA] overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#D4AF37] text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span>🏆 Patna's Highest Rated Sports Lounge & Fine Dining</span>
+            <span class="hidden sm:inline">•</span>
+            <a href="#reservation" class="underline hover:text-zinc-900 transition-colors">Reserve Your Table for Tonight &rarr;</a>
+        </div>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#0A0A0C] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-black font-syne font-bold text-xl shadow-lg shadow-accent/20 group-hover:scale-105 transition-transform">
+                    11
+                </div>
+                <div>
+                    <span class="font-syne font-bold text-lg sm:text-xl tracking-wide text-white block leading-tight">Kapil Dev's Elevens</span>
+                    <span class="text-xs text-muted tracking-widest uppercase font-medium">Patna Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#menu" class="hover:text-accent transition-colors">Menu</a>
+                <a href="#why-us" class="hover:text-accent transition-colors">Experience</a>
+                <a href="#story" class="hover:text-accent transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-accent transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-accent transition-colors">Reviews</a>
+                <a href="#location" class="hover:text-accent transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Actions -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+919876543210" class="flex items-center gap-2 text-zinc-300 hover:text-accent transition-colors text-sm font-medium">
+                    <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="#reservation" class="bg-accent hover:bg-accent-hover text-black font-syne font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-accent/20 hover:scale-[1.02] text-sm flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#0A0A0C] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-accent flex items-center justify-center text-black font-syne font-bold text-lg">
+                        11
+                    </div>
+                    <span class="font-syne font-bold text-base text-white">Kapil Dev's Elevens</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-zinc-300">
+                <a href="#menu" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-900 hover:text-accent transition-colors">
+                    <i data-lucide="utensils" class="w-5 h-5 text-accent"></i> Menu & Specialties
+                </a>
+                <a href="#why-us" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-900 hover:text-accent transition-colors">
+                    <i data-lucide="trophy" class="w-5 h-5 text-accent"></i> Why Choose Us
+                </a>
+                <a href="#story" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-900 hover:text-accent transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5 text-accent"></i> Our Story
+                </a>
+                <a href="#gallery" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-900 hover:text-accent transition-colors">
+                    <i data-lucide="image" class="w-5 h-5 text-accent"></i> Gallery
+                </a>
+                <a href="#reviews" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-900 hover:text-accent transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-accent"></i> Customer Reviews
+                </a>
+                <a href="#location" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-900 hover:text-accent transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-accent"></i> Location & Contact
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919876543210" class="w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-center font-semibold text-white flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-accent"></i> Call +91 98765 43210
+            </a>
+            <a href="#reservation" class="mobile-link w-full py-3 px-4 rounded-xl bg-accent text-black font-syne font-bold text-center flex items-center justify-center gap-2 shadow-lg shadow-accent/20">
+                <i data-lucide="calendar" class="w-4 h-4"></i> Reserve a Table
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80" alt="Restaurant Interior" class="w-full h-full object-cover opacity-30 scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/70 to-[#0A0A0C]/40"></div>
+            </div>
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <!-- Trust Rating Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-zinc-800 mb-6 shadow-xl">
+                    <div class="flex items-center text-amber-400 gap-0.5">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm font-medium text-zinc-300">4.2★ from <strong class="text-white">2,352+</strong> Google Reviews</span>
+                </div>
+
+                <!-- Hero H1 -->
+                <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 max-w-4xl mx-auto break-words">
+                    Patna's Ultimate Destination for <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-amber-200 to-accent">Legendary Food & Sports</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-muted max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+                    Immerse yourself in world-class multi-cuisine dining, legendary sports lounge energy, and exquisite hospitality right at Fraser Road, Patna.
+                </p>
+
+                <!-- Hero CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                    <a href="#reservation" class="w-full sm:w-auto bg-accent hover:bg-accent-hover text-black font-syne font-bold px-8 py-4 rounded-xl transition-all shadow-xl shadow-accent/20 hover:scale-105 flex items-center justify-center gap-3 text-base">
+                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                        <span>Reserve a Table</span>
+                    </a>
+                    <a href="#menu" class="w-full sm:w-auto bg-surface hover:bg-zinc-800 text-white border border-zinc-800 font-syne font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-3 text-base">
+                        <i data-lucide="utensils" class="w-5 h-5 text-accent"></i>
+                        <span>Explore Menu</span>
+                    </a>
+                </div>
+
+                <!-- Location Quick Pill -->
+                <div class="mt-12 inline-flex items-center gap-2 text-xs sm:text-sm text-zinc-400 bg-surface/50 border border-zinc-800/80 px-4 py-2 rounded-xl backdrop-blur-sm">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-accent flex-shrink-0"></i>
+                    <span>Ankit Chandradeep Complex, Sri Niwas Path, Bander Bagicha, Fraser Road Area, Patna</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="border-y border-zinc-800 bg-surface/40 py-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                        <div class="font-syne font-bold text-2xl sm:text-3xl text-accent mb-1">2,352+</div>
+                        <div class="text-xs sm:text-sm text-muted font-medium">Verified Google Reviews</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                        <div class="font-syne font-bold text-2xl sm:text-3xl text-accent mb-1">4.2★</div>
+                        <div class="text-xs sm:text-sm text-muted font-medium">Overall Rating Score</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                        <div class="font-syne font-bold text-2xl sm:text-3xl text-accent mb-1">Fraser Rd</div>
+                        <div class="text-xs sm:text-sm text-muted font-medium">Prime Heart of Patna</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                        <div class="font-syne font-bold text-2xl sm:text-3xl text-accent mb-1">Multi-Cuisine</div>
+                        <div class="text-xs sm:text-sm text-muted font-medium">Chef's Special Delicacies</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Categories & Specialties Grid -->
+        <section id="menu" class="py-20 lg:py-28">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold text-sm uppercase tracking-widest block mb-3">Culinary Excellence</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Menu Categories & Specialties</h2>
+                    <p class="text-muted text-base">From mouth-watering appetizers to signature mains and artisanal cocktails, explore dishes crafted to perfection.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Appetizers -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-accent/50 transition-all duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Appetizers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-syne font-bold text-xl text-white mb-2">Appetizers & Starters</h3>
+                                <p class="text-muted text-sm leading-relaxed mb-6">Crispy tandoori delights, succulent kebabs, and globally inspired small plates that ignite your palate.</p>
+                            </div>
+                            <a href="#reservation" class="w-full py-3 rounded-xl bg-secondary hover:bg-accent hover:text-black font-syne font-semibold text-sm text-center text-white transition-colors flex items-center justify-center gap-2">
+                                <span>Order & Taste</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mains -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-accent/50 transition-all duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Main Course" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-syne font-bold text-xl text-white mb-2">Signature Mains</h3>
+                                <p class="text-muted text-sm leading-relaxed mb-6">Rich gravies, aromatic biryanis, continental steaks, and chef's special gourmet creations.</p>
+                            </div>
+                            <a href="#reservation" class="w-full py-3 rounded-xl bg-secondary hover:bg-accent hover:text-black font-syne font-semibold text-sm text-center text-white transition-colors flex items-center justify-center gap-2">
+                                <span>Explore Mains</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Beverages -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-accent/50 transition-all duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Beverages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-syne font-bold text-xl text-white mb-2">Mocktails & Beverages</h3>
+                                <p class="text-muted text-sm leading-relaxed mb-6">Handcrafted artisanal mocktails, refreshing tropical blends, and premium hot & cold brews.</p>
+                            </div>
+                            <a href="#reservation" class="w-full py-3 rounded-xl bg-secondary hover:bg-accent hover:text-black font-syne font-semibold text-sm text-center text-white transition-colors flex items-center justify-center gap-2">
+                                <span>View Drinks</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Desserts -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-accent/50 transition-all duration-300">
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Desserts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-syne font-bold text-xl text-white mb-2">Decadent Desserts</h3>
+                                <p class="text-muted text-sm leading-relaxed mb-6">Indulgent chocolate cakes, rich traditional sweets, and artisanal gelatos to end on a high note.</p>
+                            </div>
+                            <a href="#reservation" class="w-full py-3 rounded-xl bg-secondary hover:bg-accent hover:text-black font-syne font-semibold text-sm text-center text-white transition-colors flex items-center justify-center gap-2">
+                                <span>Savor Sweets</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 lg:py-28 bg-surface/30 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold text-sm uppercase tracking-widest block mb-3">The Elevens Difference</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Why Patna Chooses Kapil Dev's Elevens</h2>
+                    <p class="text-muted text-base">We combine legendary sports heritage with state-of-the-art dining ambiance and immaculate service.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-accent/40 transition-all duration-300 flex flex-col items-start">
+                        <div class="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6">
+                            <i data-lucide="award" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Celebrity Legacy</h3>
+                        <p class="text-muted text-sm leading-relaxed">Inspired by cricketing royalty, our lounge exudes champion spirit, sports memorabilia, and elite prestige.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-accent/40 transition-all duration-300 flex flex-col items-start">
+                        <div class="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6">
+                            <i data-lucide="tv" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Live Sports Atmosphere</h3>
+                        <p class="text-muted text-sm leading-relaxed">Massive screens, high-definition sound systems, and an electrifying crowd make every match night unforgettable.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-accent/40 transition-all duration-300 flex flex-col items-start">
+                        <div class="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6">
+                            <i data-lucide="map-pin" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Prime Fraser Road Location</h3>
+                        <p class="text-muted text-sm leading-relaxed">Centrally located at Ankit Chandradeep Complex, easily accessible with ample parking and valet service.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-accent/40 transition-all duration-300 flex flex-col items-start">
+                        <div class="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-6">
+                            <i data-lucide="users" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Exceptional Hospitality</h3>
+                        <p class="text-muted text-sm leading-relaxed">Attentive staff dedicated to personalized service, ensuring every guest feels like a true MVP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Story Section -->
+        <section id="story" class="py-20 lg:py-28">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="relative">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative">
+                            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1000&q=80" alt="Restaurant Bar" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent opacity-60"></div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-surface border border-zinc-800 p-6 rounded-2xl hidden sm:block shadow-2xl max-w-xs">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i data-lucide="quote" class="w-8 h-8 text-accent"></i>
+                                <span class="font-syne font-bold text-white text-base">A Winning Vision</span>
+                            </div>
+                            <p class="text-xs text-muted leading-relaxed">"Where culinary mastery meets the adrenaline of championship sports."</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="text-accent font-semibold text-sm uppercase tracking-widest block mb-3">Our Heritage & Story</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">Redefining Fine Dining & Lounging in Patna</h2>
+                        <p class="text-muted text-base leading-relaxed mb-6">
+                            Kapil Dev's Elevens was born out of a passion for excellence, phenomenal food, and unforgettable sports moments. Situated in the bustling Fraser Road area of Patna, our establishment has quickly become the benchmark for premium hospitality.
+                        </p>
+                        <p class="text-muted text-base leading-relaxed mb-8">
+                            Whether you're gathering with family for a celebratory dinner, catching an India match with friends, or hosting a corporate evening, our meticulously designed spaces and world-class menu deliver perfection every single time.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 pt-4 border-t border-zinc-800">
+                            <div>
+                                <div class="font-syne font-bold text-3xl text-white mb-1">100%</div>
+                                <div class="text-xs text-muted">Fresh & Authentic Ingredients</div>
+                            </div>
+                            <div>
+                                <div class="font-syne font-bold text-3xl text-white mb-1">5★</div>
+                                <div class="text-xs text-muted">Ambiance & Entertainment</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gallery -->
+        <section id="gallery" class="py-20 lg:py-28 bg-surface/30 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold text-sm uppercase tracking-widest block mb-3">Visual Showcase</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Inside Kapil Dev's Elevens</h2>
+                    <p class="text-muted text-base">Take a visual tour of our luxurious interiors, vibrant sports lounge, and signature culinary creations.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80" alt="Lounge Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-accent text-black font-syne font-bold px-4 py-2 rounded-xl text-sm">Lounge Ambiance</span>
+                        </div>
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Gourmet Dish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-accent text-black font-syne font-bold px-4 py-2 rounded-xl text-sm">Chef's Special</span>
+                        </div>
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" alt="Bar Counter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-accent text-black font-syne font-bold px-4 py-2 rounded-xl text-sm">Bar & Cocktails</span>
+                        </div>
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                        <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=800&q=80" alt="Dining Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-accent text-black font-syne font-bold px-4 py-2 rounded-xl text-sm">Dining Area</span>
+                        </div>
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80" alt="Pizza Special" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-accent text-black font-syne font-bold px-4 py-2 rounded-xl text-sm">Woodfire Specials</span>
+                        </div>
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80" alt="Cocktail Glass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="bg-accent text-black font-syne font-bold px-4 py-2 rounded-xl text-sm">Artisanal Drinks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="py-20 lg:py-28">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold text-sm uppercase tracking-widest block mb-3">Guest Experiences</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">What Patna is Saying</h2>
+                    <p class="text-muted text-base">Read authentic reviews from our cherished patrons who have experienced our food, ambiance, and service.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Review 1 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 gap-1 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-muted text-sm leading-relaxed mb-6">"Absolute top-notch lounge in Patna! The sports theme is incredible, and the food quality is unmatched. Perfect spot for match screenings with friends."</p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 text-accent font-syne font-bold flex items-center justify-center">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-semibold text-white text-sm">Rahul Kumar</h4>
+                                <span class="text-xs text-muted">Google Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 gap-1 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-muted text-sm leading-relaxed mb-6">"Celebrated our anniversary here. The ambiance on Fraser Road is stunning, service is lightning fast, and their starters are phenomenal. Highly recommended!"</p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 text-accent font-syne font-bold flex items-center justify-center">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-semibold text-white text-sm">Priya Singh</h4>
+                                <span class="text-xs text-muted">Verified Diner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 gap-1 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-muted text-sm leading-relaxed mb-6">"2,352 reviews for a reason! Kapil Dev's Elevens delivers a premium sports bar experience that Patna desperately needed. Great mocktails and superb vibe."</p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 text-accent font-syne font-bold flex items-center justify-center">
+                                AM
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-semibold text-white text-sm">Aman Mishra</h4>
+                                <span class="text-xs text-muted">Google Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion -->
+        <section class="py-20 lg:py-28 bg-surface/30 border-y border-zinc-800">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold text-sm uppercase tracking-widest block mb-3">Got Questions?</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Frequently Asked Questions</h2>
+                    <p class="text-muted text-base">Everything you need to know before visiting Kapil Dev's Elevens.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-zinc-800 overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                            <span class="font-syne font-semibold text-white text-base sm:text-lg">Do I need a reservation or can I walk in?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-accent transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                            <p class="text-muted text-sm pb-6 leading-relaxed">While walk-ins are always welcome, we highly recommend making a table reservation—especially on weekends and during live match screenings—to guarantee your spot and avoid waiting.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-zinc-800 overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                            <span class="font-syne font-semibold text-white text-base sm:text-lg">What are your operating hours?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-accent transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                            <p class="text-muted text-sm pb-6 leading-relaxed">We are open every day from 12:00 PM to 11:30 PM, serving delicious lunch, evening snacks, dinner, and late-night drinks.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-zinc-800 overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                            <span class="font-syne font-semibold text-white text-base sm:text-lg">Is parking available at Fraser Road?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-accent transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                            <p class="text-muted text-sm pb-6 leading-relaxed">Yes, ample parking space is available at Ankit Chandradeep Complex along with dedicated valet assistance for your convenience.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item rounded-2xl bg-surface border border-zinc-800 overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                            <span class="font-syne font-semibold text-white text-base sm:text-lg">Do you host private parties and corporate events?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-accent transition-transform duration-300 flex-shrink-0"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                            <p class="text-muted text-sm pb-6 leading-relaxed">Absolutely! We host birthday parties, anniversaries, corporate dinners, and private gatherings with customized menus and dedicated setups. Contact us directly for event packages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Location & Contact Section -->
+        <section id="location" class="py-20 lg:py-28">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold text-sm uppercase tracking-widest block mb-3">Visit & Reserve</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Location & Table Reservation</h2>
+                    <p class="text-muted text-base">Plan your visit or secure your table instantly using our online reservation form.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Left: Info & Map -->
+                    <div class="space-y-8">
+                        <!-- Contact Info Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                                <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-4">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Address</h4>
+                                <p class="text-xs text-muted leading-relaxed">Ankit Chandradeep Complex, Sri Niwas Path, Bander Bagicha, Fraser Road Area, Patna, Bihar 800001</p>
+                            </div>
+
+                            <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                                <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-4">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Hours</h4>
+                                <p class="text-xs text-muted leading-relaxed">Mon - Sun: 12:00 PM – 11:30 PM<br><span class="text-accent font-medium">Open All Days</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Google Maps Embed -->
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 h-[350px] relative shadow-2xl">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778553258832!2d85.1375624!3d25.6111456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58fce4107141%3A0x7d605c3c0b0b0b0!2sFraser%20Rd%2C%20Patna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full">
+                            </iframe>
+                            <div class="absolute bottom-4 left-4 right-4 sm:right-auto">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Kapil+Dev%27s+Elevens+Patna" target="_blank" rel="noopener noreferrer" class="bg-surface hover:bg-zinc-800 text-white border border-zinc-700 font-syne font-semibold px-5 py-3 rounded-xl shadow-xl flex items-center gap-2 text-xs sm:text-sm">
+                                    <i data-lucide="navigation" class="w-4 h-4 text-accent"></i>
+                                    <span>Get Directions on Google Maps</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Reservation Form -->
+                    <div id="reservation" class="bg-surface border border-zinc-800 p-8 rounded-2xl shadow-2xl relative">
+                        <h3 class="font-syne font-bold text-2xl text-white mb-2">Book Your Table</h3>
+                        <p class="text-muted text-sm mb-6">Fill out the details below to instantly reserve your spot at Kapil Dev's Elevens.</p>
+
+                        <form id="reservation-form" class="space-y-4" onsubmit="handleReservation(event)">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Full Name *</label>
+                                <input type="text" id="res-name" required placeholder="Enter your name" class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Phone Number *</label>
+                                    <input type="tel" id="res-phone" required placeholder="+91 98765 43210" class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Guests *</label>
+                                    <select id="res-guests" required class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                                        <option value="1">1 Person</option>
+                                        <option value="2" selected>2 People</option>
+                                        <option value="4">4 People</option>
+                                        <option value="6">6 People</option>
+                                        <option value="8">8+ People (Large Group)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Date *</label>
+                                    <input type="date" id="res-date" required class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Time *</label>
+                                    <input type="time" id="res-time" required class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-accent transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Special Requests (Optional)</label>
+                                <textarea id="res-notes" rows="3" placeholder="Anniversary celebration, window seating, match screening preference..." class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-accent transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" id="res-submit-btn" class="w-full py-4 rounded-xl bg-accent hover:bg-accent-hover text-black font-syne font-bold text-base transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span>Confirm Table Reservation</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 pb-12 border-b border-zinc-800">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-accent flex items-center justify-center text-black font-syne font-bold text-lg">
+                            11
+                        </div>
+                        <span class="font-syne font-bold text-lg text-white">Kapil Dev's Elevens</span>
+                    </div>
+                    <p class="text-xs text-muted leading-relaxed mb-6">
+                        Patna's finest restaurant and sports lounge offering legendary multi-cuisine dining, exquisite drinks, and championship sports ambiance.
+                    </p>
+                    <div class="flex items-center gap-3 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span class="text-xs font-semibold text-white">4.2★ Rating (2,352+ Google Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-muted">
+                        <li><a href="#menu" class="hover:text-accent transition-colors">Menu Categories</a></li>
+                        <li><a href="#why-us" class="hover:text-accent transition-colors">Why Choose Us</a></li>
+                        <li><a href="#story" class="hover:text-accent transition-colors">Our Story & Heritage</a></li>
+                        <li><a href="#gallery" class="hover:text-accent transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-accent transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact & Location</h4>
+                    <ul class="space-y-3 text-xs sm:text-sm text-muted">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent flex-shrink-0 mt-0.5"></i>
+                            <span>Ankit Chandradeep Complex, Fraser Road Area, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent flex-shrink-0"></i>
+                            <a href="tel:+919876543210" class="hover:text-white transition-colors">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="navigation" class="w-4 h-4 text-accent flex-shrink-0"></i>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kapil+Dev%27s+Elevens+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline">View on Google Maps</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-muted">
+                        <li class="flex justify-between py-1 border-b border-zinc-800/60">
+                            <span>Monday - Sunday</span>
+                            <span class="text-white font-medium">12 PM - 11:30 PM</span>
+                        </li>
+                        <li class="pt-2 text-accent text-xs font-semibold">
+                            ✓ Open all days of the week including holidays.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+                <p>&copy; <span id="current-year"></span> Kapil Dev's Elevens, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Kapil+Dev%27s+Elevens+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0A0A0C] border-t border-zinc-800 p-3 flex items-center justify-between gap-3 shadow-2xl">
+        <a href="tel:+919876543210" class="flex-1 py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-syne font-semibold text-xs sm:text-sm text-center flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="#reservation" class="flex-1 py-3 px-4 rounded-xl bg-accent text-black font-syne font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 shadow-lg shadow-accent/20">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Table</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div class="w-16 h-16 rounded-full bg-accent/20 border border-accent/30 text-accent flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Table Reserved Successfully!</h3>
+            <p id="success-message" class="text-muted text-sm mb-8 leading-relaxed">
+                Thank you! Your table reservation request has been received. We look forward to welcoming you at Kapil Dev's Elevens, Patna.
+            </p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 rounded-xl bg-accent hover:bg-accent-hover text-black font-syne font-bold text-sm transition-all shadow-lg shadow-accent/20">
+                Done / Back to Home
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Implementation -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openDrawer() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openDrawer);
+        menuClose.addEventListener('click', closeDrawer);
+        menuBackdrop.addEventListener('click', closeDrawer);
+        mobileLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-btn');
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                
+                // Close all others
+                faqItems.forEach(other => {
+                    const otherContent = other.querySelector('.faq-content');
+                    const otherIcon = other.querySelector('i');
+                    otherContent.style.maxHeight = '0px';
+                    otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Set default date to today for reservation form
+        const dateInput = document.getElementById('res-date');
+        if(dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.value = today;
+            dateInput.min = today;
+        }
+
+        // Reservation Form Handler with XSS & Sanitization Protection
+        function handleReservation(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById('res-name').value.trim();
+            const phoneInput = document.getElementById('res-phone').value.trim();
+            const guestsInput = document.getElementById('res-guests').value;
+            const dateInputVal = document.getElementById('res-date').value;
+            const timeInputVal = document.getElementById('res-time').value;
+
+            // Basic Sanitization check
+            if(!nameInput || !phoneInput || !dateInputVal || !timeInputVal) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Show success modal safely using textContent to prevent XSS
+            const successMsg = document.getElementById('success-message');
+            successMsg.textContent = `Thank you, ${nameInput}! Your table for ${guestsInput} guest(s) on ${dateInputVal} at ${timeInputVal} is successfully requested. We will confirm via phone shortly.`;
+
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            document.getElementById('reservation-form').reset();
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>
