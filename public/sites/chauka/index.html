@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chauka - Dil se Desi Restaurant | Authentic North Indian Dining in Patna</title>
+    <meta name="description" content="Experience authentic North Indian flavors crafted Dil se on Boring Road, Patna. Reserve your table for legendary handis, tandoori kebabs, and rich desi delicacies.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        surface: '#1E1E1E',
+                        primary: '#C85A32',
+                        'primary-hover': '#D35400',
+                        secondary: '#D4AF37',
+                        'text-primary': '#F9F9F9',
+                        'text-muted': '#A0A0A0',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #F9F9F9;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2D2D2D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C85A32;
+        }
+    </style>
+</head>
+<body class="bg-background text-text-primary overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% SOLID OPAQUE HEADER -->
+    <div class="bg-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center relative z-40 flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 shrink-0 animate-pulse text-secondary"></i>
+        <span>Special Patna Special Thali Available This Weekend! Reserve Early.</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-[#121212] border-b border-zinc-800 shadow-xl">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-md">
+                    <i data-lucide="utensils" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-bold font-serif tracking-wide text-white block leading-none">Chauka</span>
+                    <span class="text-xs text-secondary font-medium tracking-widest uppercase mt-0.5 block">Dil se Desi Restaurant</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-text-muted">
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+                <a href="#about" class="hover:text-primary transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+917491888000" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 bg-surface hover:border-primary text-text-primary text-sm font-medium transition-all duration-300">
+                    <i data-lucide="phone-call" class="w-4 h-4 text-primary"></i>
+                    <span>+91 74918 88000</span>
+                </a>
+                <a href="https://wa.me/917491888000?text=Hi%20Chauka%20Team,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-all duration-300 shadow-lg shadow-primary/20">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-3 rounded-xl bg-surface border border-zinc-800 text-text-primary hover:text-primary transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#121212] border-l border-zinc-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+                        <i data-lucide="utensils" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold font-serif text-white block">Chauka</span>
+                        <span class="text-[10px] text-secondary font-medium tracking-widest uppercase">Dil se Desi</span>
+                    </div>
+                </div>
+                <button id="menu-close" aria-label="Close Navigation Menu" class="p-2.5 rounded-xl bg-surface border border-zinc-800 text-text-muted hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Links -->
+            <nav class="flex flex-col gap-4 py-6 text-base font-medium">
+                <a href="#menu" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 border border-zinc-800/60 hover:border-primary/50 text-text-primary transition-all">
+                    <span>Explore Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#about" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 border border-zinc-800/60 hover:border-primary/50 text-text-primary transition-all">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#gallery" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 border border-zinc-800/60 hover:border-primary/50 text-text-primary transition-all">
+                    <span>Photo Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#reviews" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 border border-zinc-800/60 hover:border-primary/50 text-text-primary transition-all">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#contact" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 border border-zinc-800/60 hover:border-primary/50 text-text-primary transition-all">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Drawer Footer Actions -->
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+917491888000" class="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl border border-zinc-700 bg-surface text-white text-sm font-medium">
+                <i data-lucide="phone-call" class="w-4 h-4 text-primary"></i>
+                <span>Call +91 74918 88000</span>
+            </a>
+            <a href="https://wa.me/917491888000?text=Hi%20Chauka%20Team,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-semibold shadow-lg shadow-primary/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Table Booking</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:py-28 overflow-hidden bg-[#121212]">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-zinc-800 mb-6 shadow-md">
+                        <div class="flex items-center text-amber-400 gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400/50"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-text-primary">4.2★ <span class="text-text-muted">(1,118+ Verified Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-serif text-white leading-[1.15] mb-6 break-words">
+                        Authentic North Indian Flavors Crafted <span class="text-primary italic">Dil Se</span> in Patna
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-text-muted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Welcome to <strong class="text-text-primary font-semibold">Chauka - Dil se Desi Restaurant</strong> on Boring Road. Savor time-honored slow-cooked handis, succulent tandoori kebabs, and rich culinary traditions prepared with pure passion and authentic spices.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/917491888000?text=Hi%20Chauka%20Team,%20I%20want%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-h-[48px] px-8 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-base font-semibold shadow-xl shadow-primary/25 flex items-center justify-center gap-3 transition-all transform hover:scale-[1.02]">
+                            <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                            <span>Book a Table Now</span>
+                        </a>
+                        <a href="#menu" class="w-full sm:w-auto min-h-[48px] px-8 py-3.5 rounded-xl bg-surface border border-zinc-700 hover:border-primary text-text-primary text-base font-semibold flex items-center justify-center gap-3 transition-all">
+                            <span>Explore Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-primary"></i>
+                        </a>
+                    </div>
+
+                    <!-- Location Quick Tag -->
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm text-text-muted">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                        <span>Boring Rd, near Blue Moon / Karlo Automobile, Sri Krishna Puri, Patna</span>
+                    </div>
+
+                </div>
+
+                <!-- Right Hero Image Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-surface">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Delicious North Indian Desi Spread at Chauka Patna" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge Card -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-surface/90 backdrop-blur-md border border-zinc-700/80 flex items-center gap-3 shadow-lg">
+                            <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold font-serif text-white">Patna's Favorite Desi Feast</h3>
+                                <p class="text-xs text-text-muted">Master chefs crafting traditional heritage recipes daily.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="py-8 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                
+                <!-- Proof Item 1 -->
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-6 first:md:pl-0">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+                        <i data-lucide="star" class="w-6 h-6 fill-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold font-serif text-white">1,118+ Reviews</h4>
+                        <p class="text-xs text-text-muted">4.2 Star Rating on Google Places</p>
+                    </div>
+                </div>
+
+                <!-- Proof Item 2 -->
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-6">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold font-serif text-white">Boring Road Landmark</h4>
+                        <p class="text-xs text-text-muted">Near Blue Moon / Karlo Automobile, Patna</p>
+                    </div>
+                </div>
+
+                <!-- Proof Item 3 -->
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-6 last:md:pr-0">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold font-serif text-white">100% Desi Spices</h4>
+                        <p class="text-xs text-text-muted">Traditional Handis & Tandoori Masterpieces</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SIGNATURE MENU GRID -->
+    <section id="menu" class="py-20 bg-[#121212]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold text-secondary tracking-widest uppercase mb-3 block">Culinary Excellence</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Our Signature Desi Menu</h2>
+                <p class="text-text-muted text-sm sm:text-base">Prepared fresh to order using premium spices and authentic North Indian culinary techniques.</p>
+            </div>
+
+            <!-- Menu Categories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Category 1 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 p-6 flex flex-col justify-between hover:border-primary/60 transition-all duration-300 group">
+                    <div>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-5 bg-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1599487488170-ded1ec91e52f?auto=format&fit=crop&w=600&q=80" alt="Tandoori & Kebabs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-secondary text-xs font-semibold">Bestseller</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-white mb-2">Tandoori & Kebabs</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed">Smoky, charcoal-grilled tikkas, seekh kebabs, and marinated paneer cooked to absolute perfection.</p>
+                    </div>
+                    <a href="https://wa.me/917491888000?text=Hi%20Chauka,%20I%20want%20to%20order%20from%20Tandoori%20%26%20Kebabs." target="_blank" rel="noopener noreferrer" class="min-h-[48px] w-full rounded-xl bg-zinc-800 hover:bg-primary text-text-primary hover:text-white text-sm font-semibold flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 p-6 flex flex-col justify-between hover:border-primary/60 transition-all duration-300 group">
+                    <div>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-5 bg-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80" alt="Desi Handis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-secondary text-xs font-semibold">Chef's Pride</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-white mb-2">Desi Handis</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed">Slow-cooked mutton handi, butter chicken, and rich paneer gravies sealed with dough for unmatched aroma.</p>
+                    </div>
+                    <a href="https://wa.me/917491888000?text=Hi%20Chauka,%20I%20want%20to%20order%20from%20Desi%20Handis." target="_blank" rel="noopener noreferrer" class="min-h-[48px] w-full rounded-xl bg-zinc-800 hover:bg-primary text-text-primary hover:text-white text-sm font-semibold flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 p-6 flex flex-col justify-between hover:border-primary/60 transition-all duration-300 group">
+                    <div>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-5 bg-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Breads & Gravies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-secondary text-xs font-semibold">Freshly Baked</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-white mb-2">Breads & Gravies</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed>Butter Naan, Lachha Paratha, and Tandoori Roti served piping hot alongside rich dal makhani.</p>
+                    </div>
+                    <a href="https://wa.me/917491888000?text=Hi%20Chauka,%20I%20want%20to%20order%20Breads%20%26%20Gravies." target="_blank" rel="noopener noreferrer" class="min-h-[48px] w-full rounded-xl bg-zinc-800 hover:bg-primary text-text-primary hover:text-white text-sm font-semibold flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 p-6 flex flex-col justify-between hover:border-primary/60 transition-all duration-300 group">
+                    <div>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden mb-5 bg-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Desserts & Beverages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-secondary text-xs font-semibold">Sweet Endings</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-white mb-2">Desserts & Beverages</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed>Warm gulab jamuns, rabri, and refreshing masala chhaas or lassi to complete your desi meal.</p>
+                    </div>
+                    <a href="https://wa.me/917491888000?text=Hi%20Chauka,%20I%20want%20to%20order%20Desserts." target="_blank" rel="noopener noreferrer" class="min-h-[48px] w-full rounded-xl bg-zinc-800 hover:bg-primary text-text-primary hover:text-white text-sm font-semibold flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section class="py-20 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold text-secondary tracking-widest uppercase mb-3 block">The Chauka Difference</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Why Patna Foodies Choose Us</h2>
+                <p class="text-text-muted text-sm sm:text-base">We take pride in preserving the authentic soul of North Indian cuisine in every single dish we serve.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-[#121212] border border-zinc-800 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary mb-6 shadow-md">
+                        <i data-lucide="flame" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Authentic Desi Spices</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Hand-ground spices sourced from traditional markets, slow-roasted to release robust aromas and unforgettable depth of flavor.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-[#121212] border border-zinc-800 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-secondary/20 border border-secondary/40 flex items-center justify-center text-secondary mb-6 shadow-md">
+                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Warm Family Ambiance</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">A welcoming, cozy dining space designed for family gatherings, romantic dinners, and memorable celebrations in Patna.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-[#121212] border border-zinc-800 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary mb-6 shadow-md">
+                        <i data-lucide="navigation" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Prime Boring Road Access</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Located centrally on Boring Road, near Blue Moon & Karlo Automobile in Sri Krishna Puri with easy parking and transit.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. ABOUT / STORY SECTION -->
+    <section id="about" class="py-20 bg-[#121212]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-surface">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Chauka Restaurant Interior Patna" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <span class="text-xs font-semibold text-secondary tracking-widest uppercase mb-3 block">Our Heritage</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-6 leading-tight">Crafted <span class="text-primary italic">Dil Se</span> For True Food Lovers</h2>
+                    <p class="text-text-muted text-sm sm:text-base mb-6 leading-relaxed">
+                        At <strong class="text-text-primary font-semibold">Chauka</strong>, cooking is more than just preparation—it is an emotion. Founded with the mission to bring genuine North Indian culinary heritage to the heart of Patna, every dish tells a story of tradition, patience, and love.
+                    </p>
+                    <p class="text-text-muted text-sm sm:text-base mb-8 leading-relaxed">
+                        Whether you are gathering with family for a weekend celebration or craving the smoky char of authentic tandoori kebabs after a long workday, our doors on Boring Road are always open to serve you with warmth and unmatched hospitality.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-zinc-800">
+                        <div>
+                            <span class="text-3xl sm:text-4xl font-bold font-serif text-primary block mb-1">1,118+</span>
+                            <span class="text-xs sm:text-sm text-text-muted">Happy Google Reviewers</span>
+                        </div>
+                        <div>
+                            <span class="text-3xl sm:text-4xl font-bold font-serif text-secondary block mb-1">100%</span>
+                            <span class="text-xs sm:text-sm text-text-muted">Authentic Desi Flavors</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE PHOTO GALLERY -->
+    <section id="gallery" class="py-20 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold text-secondary tracking-widest uppercase mb-3 block">Visual Feast</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Glimpse Inside Chauka</h2>
+                <p class="text-text-muted text-sm sm:text-base">Take a visual tour of our culinary creations and warm dining ambiance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group relative">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Biryani Platter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-serif">Royal Dum Biryani</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group relative">
+                    <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-serif">Tandoori Paneer Tikka</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group relative">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="North Indian Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-serif">Special Desi Thali</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group relative">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-serif">Rich Butter Chicken Handi</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group relative">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-serif">Cozy Dining Ambiance</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group relative">
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Dessert Special" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-serif">Traditional Sweets & Desserts</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-[#121212]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold text-secondary tracking-widest uppercase mb-3 block">Wall of Love</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">What Patna Foodies Are Saying</h2>
+                <p class="text-text-muted text-sm sm:text-base">Read authentic experiences from guests who dined with us on Boring Road.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 p-8 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6">"Chauka has easily become my go-to restaurant on Boring Road. The mutton handi and butter naan are simply out of this world. Authentic desi taste and great ambiance!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center text-sm">AS</div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Abhinav Sinha</h3>
+                            <span class="text-xs text-text-muted">Local Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 p-8 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6">"Visited with family last Sunday. The service was prompt, and the tandoori starters were cooked to perfection. Highly recommend Chauka for anyone craving true North Indian flavors in Patna."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 text-secondary font-bold flex items-center justify-center text-sm">PK</div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Pooja Kumari</h3>
+                            <span class="text-xs text-text-muted">Verified Diner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 p-8 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400/50"></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6">"Great location near Blue Moon on Boring Road. The aroma of spices hits you right as you walk in. Excellent portions and very polite staff. Will definitely visit again!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center text-sm">RM</div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Rahul Mishra</h3>
+                            <span class="text-xs text-text-muted">Local Food Blogger</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section class="py-20 bg-surface border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold text-secondary tracking-widest uppercase mb-3 block">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Frequently Asked Questions</h2>
+                <p class="text-text-muted text-sm sm:text-base">Everything you need to know about dining, reservations, and events at Chauka.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-[#121212] border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-serif text-white">Do I need to reserve a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        While walk-ins are always welcomed, we strongly recommend reserving a table in advance—especially on weekends and holidays—to avoid waiting times. You can instantly book via WhatsApp or call us at +917491888000.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-[#121212] border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-serif text-white">Where is Chauka located on Boring Road?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        Chauka is conveniently located on Boring Road, near Blue Moon / Karlo Automobile in Sri Krishna Puri, Patna (PIN 800001). Easily accessible from all major parts of the city.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-[#121212] border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-serif text-white">Is parking available at the restaurant?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        Yes, convenient vehicle parking space is available near our location on Boring Road. Our valet / staff will guide you upon arrival.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-[#121212] border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-serif text-white">Do you host private parties or corporate events?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        Yes! We specialize in hosting family get-togethers, birthday celebrations, anniversaries, and corporate dinners with customized desi menus. Get in touch with us via phone or WhatsApp for event bookings.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-[#121212]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold text-secondary tracking-widest uppercase mb-3 block">Visit & Reserve</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Location & Table Reservation</h2>
+                <p class="text-text-muted text-sm sm:text-base">Drop by our Boring Road location or send us your reservation inquiry instantly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Contact Details & Map -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    
+                    <!-- Contact Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-1">Direct Call</h3>
+                            <a href="tel:+917491888000" class="text-sm text-text-muted hover:text-primary transition-colors">+91 74918 88000</a>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center mb-4">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-1">WhatsApp Chat</h3>
+                            <a href="https://wa.me/917491888000" target="_blank" rel="noopener noreferrer" class="text-sm text-text-muted hover:text-primary transition-colors">Instant Booking</a>
+                        </div>
+                    </div>
+
+                    <!-- Address & Hours -->
+                    <div class="p-6 rounded-2xl bg-surface border border-zinc-800 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-white mb-1">Address</h3>
+                                <p class="text-sm text-text-muted">Boring Rd, near Blue Moon / Karlo Automobile, Sri Krishna Puri, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-white mb-1">Opening Hours</h3>
+                                <p class="text-sm text-text-muted">Monday – Sunday: 11:00 AM – 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Map Embed & Directions -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-xl bg-surface">
+                        <div class="w-full h-[250px]">
+                            <iframe title="Chauka Restaurant Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.779770189912!2d85.1221!3d25.6105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzM3LjgiTiA4NcKwMDcnMTkuNiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="p-4 bg-surface flex items-center justify-between">
+                            <span class="text-xs text-text-muted">Boring Rd, Patna</span>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Chauka+Dil+se+Desi+Restaurant+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-semibold flex items-center gap-2 transition-all">
+                                <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Table Reservation Form -->
+                <div class="lg:col-span-6">
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 shadow-2xl relative">
+                        <h3 class="text-2xl font-bold font-serif text-white mb-2">Book Your Table</h3>
+                        <p class="text-text-muted text-sm mb-8">Fill out the quick form below to request a table reservation. We will confirm your booking instantly.</p>
+
+                        <form id="reservation-form" class="space-y-6">
+                            <div>
+                                <label for="guest-name" class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Your Name</label>
+                                <input type="text" id="guest-name" required placeholder="Enter your full name" class="w-full px-4 py-3.5 rounded-xl bg-[#121212] border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary transition-colors">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="guest-phone" class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Phone Number</label>
+                                    <input type="tel" id="guest-phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3.5 rounded-xl bg-[#121212] border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                                <div>
+                                    <label for="guest-count" class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Number of Guests</label>
+                                    <select id="guest-count" class="w-full px-4 py-3.5 rounded-xl bg-[#121212] border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary transition-colors">
+                                        <option value="1-2 People">1 - 2 People (Couple)</option>
+                                        <option value="3-4 People">3 - 4 People (Family)</option>
+                                        <option value="5-8 People">5 - 8 People (Group)</option>
+                                        <option value="8+ People">8+ People (Party / Event)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="guest-date" class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Dining Date</label>
+                                    <input type="date" id="guest-date" required class="w-full px-4 py-3.5 rounded-xl bg-[#121212] border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                                <div>
+                                    <label for="guest-time" class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Dining Time</label>
+                                    <input type="time" id="guest-time" required class="w-full px-4 py-3.5 rounded-xl bg-[#121212] border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="guest-note" class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Special Requests (Optional)</label>
+                                <textarea id="guest-note" rows="3" placeholder="Any dietary preferences or seating requests..." class="w-full px-4 py-3.5 rounded-xl bg-[#121212] border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="min-h-[48px] w-full rounded-xl bg-primary hover:bg-primary-hover text-white text-base font-semibold shadow-xl shadow-primary/25 flex items-center justify-center gap-2 transition-all">
+                                <span id="btn-text">Confirm Table Reservation</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center px-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-2">Reservation Received!</h3>
+            <p id="modal-msg" class="text-text-muted text-sm mb-8 leading-relaxed">Thank you! Your table booking inquiry has been recorded. Our team will contact you shortly to confirm.</p>
+            <button id="modal-close" class="min-h-[48px] w-full rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-all">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- 11. STICKY MOBILE BOTTOM ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+917491888000" class="flex-1 min-h-[48px] py-3 rounded-xl bg-surface border border-zinc-700 text-text-primary text-xs font-bold flex items-center justify-center gap-2">
+            <i data-lucide="phone-call" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917491888000?text=Hi%20Chauka%20Team,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[48px] py-3 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Booking</span>
+        </a>
+    </div>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-surface border-t border-zinc-800 py-16 text-text-muted text-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+                            <i data-lucide="utensils" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold font-serif text-white block leading-none">Chauka</span>
+                            <span class="text-[10px] text-secondary font-medium tracking-widest uppercase mt-0.5 block">Dil se Desi Restaurant</span>
+                        </div>
+                    </div>
+                    <p class="text-xs leading-relaxed mb-6">Experience authentic North Indian flavors, slow-cooked handis, and tandoori kebabs crafted Dil se on Boring Road, Patna.</p>
+                    <div class="flex items-center gap-3 text-text-primary">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Chauka+Dil+se+Desi+Restaurant+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-[#121212] border border-zinc-700 flex items-center justify-center hover:text-primary transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+917491888000" class="w-9 h-9 rounded-lg bg-[#121212] border border-zinc-700 flex items-center justify-center hover:text-primary transition-colors">
+                            <i data-lucide="phone-call" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/917491888000" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-[#121212] border border-zinc-700 flex items-center justify-center hover:text-primary transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h3 class="text-white font-bold font-serif text-base mb-4">Quick Navigation</h3>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Signature Menu</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">Our Dil Se Story</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Table Reservation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h3 class="text-white font-bold font-serif text-base mb-4">Specialties</h3>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><span class="hover:text-primary transition-colors">Tandoori & Kebabs</span></li>
+                        <li><span class="hover:text-primary transition-colors">Desi Handis & Gravies</span></li>
+                        <li><span class="hover:text-primary transition-colors">Fresh Breads & Naan</span></li>
+                        <li><span class="hover:text-primary transition-colors">Royal Dum Biryani</span></li>
+                        <li><span class="hover:text-primary transition-colors">Traditional Desserts</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h3 class="text-white font-bold font-serif text-base mb-4">Location & Hours</h3>
+                    <p class="text-xs leading-relaxed mb-3">Boring Rd, near Blue Moon / Karlo Automobile, Sri Krishna Puri, Patna, Bihar 800001</p>
+                    <p class="text-xs text-secondary font-medium mb-1">Open Everyday:</p>
+                    <p class="text-xs">11:00 AM – 11:00 PM</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>&copy; <span id="current-year"></span> Chauka - Dil se Desi Restaurant. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <span class="text-text-muted">Google Rating: 4.2★ (1,118+ Reviews)</span>
+                    <a href="#contact" class="hover:text-primary transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion Logic
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(s => s.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    const svgIcon = button.querySelector('svg');
+                    if (svgIcon) svgIcon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Reservation Form Submission & Success Modal Logic
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const modalMsg = document.getElementById('modal-msg');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('guest-name').value.trim();
+            const phone = document.getElementById('guest-phone').value.trim();
+            const count = document.getElementById('guest-count').value;
+            const date = document.getElementById('guest-date').value;
+            const time = document.getElementById('guest-time').value;
+
+            // Basic sanitization & safety check
+            if (!name || !phone) return;
+
+            // Update Modal Message securely using textContent
+            modalMsg.textContent = `Thank you, ${name}! Your table for ${count} on ${date} at ${time} has been requested. Our Patna team will verify and call you at ${phone} shortly.`;
+            
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        modalClose.addEventListener('click', () => {
+            successModal.classList.remove('flex');
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            reservationForm.reset();
+        });
+    </script>
+</body>
+</html>

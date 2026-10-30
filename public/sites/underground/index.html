@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>The Underground Restaurant | Boring Road, Patna | Fine Dining & Lounge</title>
+    <meta name="description" content="Experience Patna's finest dining and lounge at The Underground Restaurant, Boring Road. Delicious food, cozy ambient lighting, and top-rated hospitality. Book your table via WhatsApp today!">
+    
+    <!-- Security & Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#F59E0B',
+                        'primary-hover': '#D97706',
+                        secondary: '#27272A',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar & base safety */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #09090B; }
+        ::-webkit-scrollbar-thumb { background: #27272A; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
+        body { font-family: 'Inter', sans-serif; background-color: #09090B; color: #FAFAFA; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Syne', sans-serif; }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-[#09090B] text-[#FAFAFA] pb-24 md:pb-0 antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% OPAQUE STICKY HEADER -->
+    <div id="announcement-bar" class="bg-amber-500 text-black text-xs font-semibold py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2 relative z-50">
+        <i data-lucide="sparkles" class="w-4 h-4 shrink-0"></i>
+        <span>Special Offer: Get 10% OFF on table reservations booked directly via WhatsApp today!</span>
+        <button onclick="document.getElementById('announcement-bar').style.display='none'" class="ml-4 hover:opacity-75 p-0.5" aria-label="Close announcement">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        </button>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-[#09090B] border-b border-zinc-800 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-black transition-all duration-300">
+                    <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-base sm:text-lg tracking-wider text-white group-hover:text-amber-500 transition-colors">THE UNDERGROUND</span>
+                    <span class="text-[10px] tracking-widest text-zinc-400 uppercase">Restaurant & Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">About Us</a>
+                <a href="#gallery" class="hover:text-amber-500 transition-colors">Ambiance</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location</a>
+            </nav>
+
+            <!-- Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919065942242" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 bg-zinc-900 text-sm font-medium text-zinc-200 hover:border-amber-500 hover:text-amber-500 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/919065942242?text=Hi,%20I%20would%20like%20to%20book%20a%20table%20at%20The%20Underground%20Restaurant." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 text-black font-semibold text-sm hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                    <span>WhatsApp Book</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-amber-500 transition-colors focus:outline-none" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop & Drawer -->
+    <div id="menu-backdrop" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <div id="mobile-drawer" class="fixed top-12 sm:top-14 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#09090b] border-l border-zinc-800 shadow-2xl overflow-y-auto transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500">
+                        <i data-lucide="utensils-crossed" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-syne font-bold text-white tracking-wide">Navigation</span>
+                </div>
+                <button onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white" aria-label="Close menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 pt-6 text-base font-medium text-zinc-300">
+                <a href="#menu" onclick="toggleMobileMenu()" class="flex items-center justify-between py-2 hover:text-amber-500 transition-colors"><span>Explore Menu</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#about" onclick="toggleMobileMenu()" class="flex items-center justify-between py-2 hover:text-amber-500 transition-colors"><span>About Story</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="flex items-center justify-between py-2 hover:text-amber-500 transition-colors"><span>Ambiance Gallery</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#reviews" onclick="toggleMobileMenu()" class="flex items-center justify-between py-2 hover:text-amber-500 transition-colors"><span>Customer Reviews</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#faq" onclick="toggleMobileMenu()" class="flex items-center justify-between py-2 hover:text-amber-500 transition-colors"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center justify-between py-2 hover:text-amber-500 transition-colors"><span>Location & Map</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919065942242" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-zinc-700 bg-zinc-900 font-medium text-zinc-200">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                <span>Call +91 90659 42242</span>
+            </a>
+            <a href="https://wa.me/919065942242?text=Hi,%20I%20would%20like%20to%20book%20a%20table%20at%20The%20Underground%20Restaurant." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-amber-500 text-black font-semibold shadow-lg shadow-amber-500/20">
+                <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+                <span>Book on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden py-12 lg:py-20">
+        <!-- Ambient background lighting -->
+        <div class="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(circle_at_30%_30%,#F59E0B_0%,transparent_50%),radial-gradient(circle_at_70%_70%,#27272A_0%,transparent_60%)] pointer-events-none"></div>
+        <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#18181B_1px,transparent_1px),linear-gradient(to_bottom,#18181B_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs sm:text-sm font-medium mb-6 shadow-md">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <span class="ml-1.5 font-bold text-white">4.3</span>
+                        </div>
+                        <span class="text-zinc-600">|</span>
+                        <span class="text-zinc-400">515+ Google Reviews</span>
+                        <span class="text-zinc-600">|</span>
+                        <span class="text-amber-400 font-semibold">Boring Rd, Patna</span>
+                    </div>
+
+                    <!-- Hero H1 -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Escape into <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Patna’s Finest</span> Dining & Lounge Experience
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                        Immerse yourself in cozy ambient lighting, mouthwatering multi-cuisine delicacies, and unmatched hospitality at <strong class="text-white font-semibold">The Underground Restaurant</strong>, located right at Boring Road, Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919065942242?text=Hi,%20I%20want%20to%20book%20a%20table%20at%20The%20Underground%20Restaurant." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-amber-500 text-black font-bold text-base hover:bg-amber-400 transition-all shadow-xl shadow-amber-500/20 transform hover:-translate-y-0.5">
+                            <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
+                            <span>Book Table on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-base hover:border-amber-500 hover:text-amber-500 transition-all">
+                            <span>Explore Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Hero Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="The Underground Restaurant Interior" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge Card -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-500">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white font-syne">Tapasya & Chandra Kumud Complex</h4>
+                                    <p class="text-xs text-zinc-400">Opp. Boring Road, Patna</p>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/30">Open Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="star" class="w-6 h-6 fill-amber-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-syne text-white">4.3 ★ Rating</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400">Over 515+ Verified Google Reviews</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="utensils" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-syne text-white">Multi-Cuisine</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400">Starters, Mains, Fast Food & Beverages</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-syne text-white">Prime Location</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400">Boring Road, Patna, Bihar 800001</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MENU CATEGORIES GRID -->
+    <section id="menu" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Culinary Excellence</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Our Popular Menu Categories</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Explore our meticulously crafted menu featuring local favorites and gourmet creations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Starters Card -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Starters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-amber-400 text-xs font-bold border border-amber-500/30">From ₹199</div>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-2 group-hover:text-amber-500 transition-colors">Starters & Appetizers</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Crispy tandoori kebabs, paneer tikka, crunchy spring rolls, and spicy wings to kickstart your feast.</p>
+                    </div>
+                    <a href="https://wa.me/919065942242?text=Hi,%20I%20want%20to%20order%20from%20the%20Starters%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-black hover:border-amber-500 transition-all flex items-center justify-center gap-2">
+                        <span>Order Starters</span>
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Main Course Card -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80" alt="Main Course" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-amber-400 text-xs font-bold border border-amber-500/30">From ₹249</div>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-2 group-hover:text-amber-500 transition-colors">Rich Main Course</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Authentic Indian curries, butter chicken, aromatic biryanis, and exotic gravy dishes prepared by master chefs.</p>
+                    </div>
+                    <a href="https://wa.me/919065942242?text=Hi,%20I%20want%20to%20order%20from%20the%20Main%20Course%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-black hover:border-amber-500 transition-all flex items-center justify-center gap-2">
+                        <span>Order Main Course</span>
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Fast Food & Sizzlers Card -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Fast Food" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-amber-400 text-xs font-bold border border-amber-500/30">From ₹149</div>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-2 group-hover:text-amber-500 transition-colors">Fast Food & Sizzlers</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Juicy burgers, loaded pizzas, cheesy pasta, and sizzling platters that satisfy your evening cravings.</p>
+                    </div>
+                    <a href="https://wa.me/919065942242?text=Hi,%20I%20want%20to%20order%20Fast%20Food." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-black hover:border-amber-500 transition-all flex items-center justify-center gap-2">
+                        <span>Order Fast Food</span>
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Beverages & Mocktails Card -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Beverages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-amber-400 text-xs font-bold border border-amber-500/30">From ₹99</div>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-2 group-hover:text-amber-500 transition-colors">Mocktails & Beverages</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Refreshing mojitos, creamy milkshakes, iced teas, and signature mocktails crafted to perfection.</p>
+                    </div>
+                    <a href="https://wa.me/919065942242?text=Hi,%20I%20want%20to%20order%20Beverages." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-black hover:border-amber-500 transition-all flex items-center justify-center gap-2">
+                        <span>Order Drinks</span>
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section class="py-16 sm:py-24 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">The Underground Difference</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Why Patna Loves Dining With Us</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">We combine exceptional taste, immersive ambiance, and impeccable hygiene to give you an unforgettable experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-5">
+                        <i data-lucide="moon" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Ambient Lounge Lighting</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Warm, cozy underground aesthetic designed for intimate conversations and relaxed gatherings.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-5">
+                        <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Exquisite Taste & Quality</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Fresh ingredients, secret spice blends, and expert master chefs ensuring top-tier flavor in every bite.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-5">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Pristine Hygiene & Safety</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Rigorous kitchen sanitation, spotless seating areas, and well-trained courteous staff.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-5">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Prime Boring Road Hub</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Conveniently located at Tapasya & Chandra Kumud Complex with easy accessibility in Patna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT / STORY SECTION -->
+    <section id="about" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Restaurant Ambiance" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 hidden sm:flex items-center gap-4 p-5 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl max-w-xs">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500 text-black flex items-center justify-center font-bold text-lg shrink-0">
+                            515+
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm font-syne">Happy Foodies</h4>
+                            <p class="text-xs text-zinc-400">Rating 4.3 stars across Google & social reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Our Story & Philosophy</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 leading-tight">
+                        Redefining Patna’s Dining Culture One Plate at a Time
+                    </h2>
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                        Founded with a passion for exceptional food and captivating atmosphere, <strong class="text-white">The Underground Restaurant</strong> was born out of a desire to offer Patna a sanctuary away from the city hustle. Located in the heart of Boring Road at Tapasya & Chandra Kumud Complex, we blend gourmet culinary mastery with a cozy, clandestine vibe.
+                    </p>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        Whether it’s a celebratory family dinner, a romantic evening date, or a lively hangout with friends over sizzling starters and refreshing mocktails, our doors are always open to craft memorable dining moments for you.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full pt-4 border-t border-zinc-800">
+                        <div>
+                            <h3 class="text-2xl font-bold font-syne text-amber-500 mb-1">100%</h3>
+                            <p class="text-zinc-400 text-xs sm:text-sm">Quality Ingredients & Spices</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold font-syne text-amber-500 mb-1">4.3 ★</h3>
+                            <p class="text-zinc-400 text-xs sm:text-sm">Verified Customer Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE GALLERY / AMBIANCE SHOWCASE -->
+    <section id="gallery" class="py-16 sm:py-24 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Visual Experience</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Ambiance & Culinary Gallery</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Take a sneak peek into our cozy interiors, refreshing drinks, and delicious signature dishes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-syne">Cozy Lounge Seating Area</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Gourmet Dish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-syne">Delicious Masterpiece Platters</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Appetizers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-syne">Crispy Starters & Kebabs</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Table Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-syne">Warm Ambient Lighting</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Mocktails" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-syne">Signature Mocktails & Drinks</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Main Course" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white text-sm font-semibold font-syne">Rich Curries & Gravies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">What Patrons Say on Google</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Real reviews from our valued guests who enjoyed our food and ambiance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Amazing ambiance and great food! The underground theme gives it such a unique vibe on Boring Road. Starters were delicious and service was super fast."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-bold flex items-center justify-center font-syne text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Abhishek Kumar</h4>
+                            <p class="text-xs text-zinc-400">Google Local Guide • 515+ Reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "One of the best lounges in Patna! Perfect lighting for cozy evenings. Tried their mocktails and main course—everything was top notch. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-bold flex items-center justify-center font-syne text-sm">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Priya Singh</h4>
+                            <p class="text-xs text-zinc-400">Verified Diner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Great location at Boring Road. Easy to reach and parking available nearby. Staff is very polite and the food portions are generous for the price."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-bold flex items-center justify-center font-syne text-sm">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Rahul Mishra</h4>
+                            <p class="text-xs text-zinc-400">Verified Diner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section id="faq" class="py-16 sm:py-24 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know about dining or reserving a table at The Underground Restaurant.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">How can I book a table at The Underground Restaurant?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-300 text-sm sm:text-base leading-relaxed">
+                        You can instantly reserve your table by clicking our "Book Table on WhatsApp" button, filling out the quick reservation form below, or calling us directly at +91 9065942242.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">Where is The Underground Restaurant located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-300 text-sm sm:text-base leading-relaxed">
+                        We are conveniently located at Tapasya Complex, Ground Floor, Chandra Kumud Complex, opposite Boring Road, Patna, Bihar 800001.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">Do you offer home delivery or parcel services?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-300 text-sm sm:text-base leading-relaxed">
+                        Yes! You can order your favorite food for takeaway or home delivery by messaging us on WhatsApp or visiting us directly.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-300 text-sm sm:text-base leading-relaxed">
+                        We are open every day from 11:00 AM to 11:00 PM, serving delicious lunch, evening snacks, and cozy dinner experiences.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Visit & Reserve</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Location & Table Reservation</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Drop by our Boring Road outlet or secure your table in advance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left: Contact Details & Map -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    <!-- Info Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-3">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-syne font-bold text-white text-sm mb-1">Address</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed">Tapasya Complex, Ground floor, Chandra Kumud complex, opp. Boring Rd, Patna, Bihar 800001</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-3">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <h4 class="font-syne font-bold text-white text-sm mb-1">Hours</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed">Open Daily: 11:00 AM – 11:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="w-full aspect-[16/10] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778846743912!2d85.125!3d25.609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f1a0000001%3A0x7d00000000000000!2sThe%20Underground%20Restaurant!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="The Underground Restaurant Location Map">
+                        </iframe>
+                        <div class="absolute bottom-4 left-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+Underground+Restaurant+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-700 text-white text-xs font-semibold hover:border-amber-500 transition-all shadow-lg flex items-center gap-2">
+                                <i data-lucide="navigation" class="w-3.5 h-3.5 text-amber-500"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Reservation Form -->
+                <div class="lg:col-span-6 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-2">Book Your Table Instantly</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Fill out the form below and we will confirm your reservation instantly via WhatsApp.</p>
+                        
+                        <form id="reservation-form" onsubmit="handleReservation(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Full Name</label>
+                                <input type="text" id="res-name" required placeholder="e.g. Aman Verma" class="w-full px-4 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone / WhatsApp</label>
+                                    <input type="tel" id="res-phone" required placeholder="e.g. +91 9876543210" class="w-full px-4 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Number of Guests</label>
+                                    <select id="res-guests" class="w-full px-4 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                        <option value="2 Guests">2 Guests (Couple Table)</option>
+                                        <option value="4 Guests">4 Guests (Standard)</option>
+                                        <option value="6 Guests">6 Guests (Family)</option>
+                                        <option value="8+ Guests">8+ Guests (Party/Group)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Date</label>
+                                    <input type="date" id="res-date" required class="w-full px-4 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Time Slot</label>
+                                    <input type="time" id="res-time" required class="w-full px-4 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Special Requests (Optional)</label>
+                                <textarea id="res-note" rows="3" placeholder="Any occasion, seating preference, or dietary note..." class="w-full px-4 py-3 rounded-xl bg-zinc-800 border border-zinc-700 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-amber-500 text-black font-bold text-base hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
+                                <span>Confirm Reservation on WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. STICKY MOBILE BOTTOM ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919065942242" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919065942242?text=Hi,%20I%20would%20like%20to%20book%20a%20table%20at%20The%20Underground%20Restaurant." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-amber-500 text-black font-bold text-sm shadow-lg shadow-amber-500/20">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="flex flex-col items-start">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500">
+                            <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-syne font-extrabold text-white text-lg tracking-wider">THE UNDERGROUND</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Patna’s ultimate dining and lounge destination at Boring Road. Delivering exquisite taste, cozy ambiance, and 4.3★ star hospitality.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919065942242" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-amber-500 hover:border-amber-500 transition-all" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919065942242" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-amber-500 hover:border-amber-500 transition-all" aria-label="Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=The+Underground+Restaurant+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-amber-500 hover:border-amber-500 transition-all" aria-label="Google Maps">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Menu Categories</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">About Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-500 transition-colors">Ambiance Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Google Reviews (515+)</a></li>
+                        <li><a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Operating Hours -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact & Location</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
+                            <span>Tapasya Complex, Ground floor, Chandra Kumud complex, opp. Boring Rd, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                            <a href="tel:+919065942242" class="hover:text-amber-500 transition-colors">+91 90659 42242</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                            <a href="https://wa.me/919065942242" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition-colors">Chat on WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> The Underground Restaurant, Patna. All rights reserved.</p>
+                <p>Designed with ❤️ for fine dining enthusiasts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-md w-full p-6 text-center relative shadow-2xl animate-in fade-in zoom-in duration-200">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-white text-xl mb-2">Reservation Prepared!</h3>
+            <p class="text-zinc-300 text-sm mb-6" id="success-modal-text">
+                We are redirecting you to WhatsApp with your reservation details. See you soon at The Underground Restaurant!
+            </p>
+            <button onclick="closeSuccessModal()" class="w-full py-3 rounded-xl bg-amber-500 text-black font-bold text-sm hover:bg-amber-400 transition-all">
+                Got it, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Execution -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-drawer');
+            const backdrop = document.getElementById('menu-backdrop');
+            const isHidden = drawer.classList.contains('translate-x-full');
+            
+            if (isHidden) {
+                drawer.classList.remove('translate-x-full');
+                backdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                drawer.classList.add('translate-x-full');
+                backdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            const isOpen = !content.classList.contains('hidden');
+
+            // Close all other accordions
+            document.querySelectorAll('.faq-content').forEach(item => {
+                item.classList.add('hidden');
+            });
+            document.querySelectorAll('#faq button i').forEach(i => {
+                i.style.transform = 'rotate(0deg)';
+            });
+
+            if (isOpen) {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Table Reservation Form Handler
+        function handleReservation(event) {
+            event.preventDefault();
+            
+            // Sanitize & get values
+            const name = document.getElementById('res-name').value.trim();
+            const phone = document.getElementById('res-phone').value.trim();
+            const guests = document.getElementById('res-guests').value;
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+            const note = document.getElementById('res-note').value.trim();
+
+            if (!name || !phone || !date || !time) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Format WhatsApp Message securely
+            const whatsappMessage = `Hi, I would like to book a table at The Underground Restaurant.%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Guests:* ${encodeURIComponent(guests)}%0A*Date:* ${encodeURIComponent(date)}%0A*Time:* ${encodeURIComponent(time)}%0A*Note:* ${encodeURIComponent(note || 'None')}`;
+
+            // Show success modal
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+
+            // Open WhatsApp after brief pause
+            setTimeout(() => {
+                window.open(`https://wa.me/919065942242?text=${whatsappMessage}`, '_blank', 'noopener,noreferrer');
+            }, 1500);
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            document.getElementById('reservation-form').reset();
+        }
+
+        // Set default date to today in reservation form
+        const todayStr = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('res-date');
+        if (dateInput) {
+            dateInput.value = todayStr;
+            dateInput.min = todayStr;
+        }
+    </script>
+</body>
+</html>
