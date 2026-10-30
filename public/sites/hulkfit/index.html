@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Hulk Fitness Gym | Patna's Highest Rated Gym in Mithapur</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#10B981',
+                        secondary: '#334155',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090B;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10B981;
+        }
+    </style>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 animate-bounce shrink-0"></i>
+        <span>Limited Time Offer: Get 7-Day FREE Trial + Free Personal Trainer Assessment!</span>
+        <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20claim%20my%207-day%20free%20trial!" target="_blank" rel="noopener noreferrer" class="underline font-bold ml-1 hover:text-white transition-colors">Claim Now</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-[#09090B] border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary flex items-center justify-center text-black font-syne font-extrabold text-xl sm:text-2xl shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    H
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wide text-white leading-tight">HULK FITNESS</span>
+                    <span class="text-[10px] sm:text-xs text-primary font-semibold tracking-widest uppercase">Gym & Sports Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop CTA Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+917903208915" class="h-11 px-4 rounded-xl border border-zinc-700 hover:border-primary bg-zinc-900 text-zinc-200 hover:text-primary font-medium text-sm flex items-center gap-2 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20book%20a%20free%20gym%20trial." target="_blank" rel="noopener noreferrer" class="h-11 px-5 rounded-xl bg-primary hover:bg-emerald-600 text-black font-bold text-sm flex items-center gap-2 shadow-lg shadow-primary/20 transition-all hover:scale-[1.02]">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>WhatsApp Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-primary focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 sm:top-14 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl bg-[#09090B] border-l border-zinc-800 shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-black font-syne font-bold text-lg">H</div>
+                    <span class="font-syne font-bold text-lg text-white">Menu</span>
+                </div>
+                <button id="close-drawer" class="p-2 text-zinc-400 hover:text-white rounded-lg bg-zinc-900 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4 text-base font-medium text-zinc-200">
+                <a href="#services" class="mobile-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary"><i data-lucide="dumbbell" class="w-5 h-5 text-primary"></i> Services</a>
+                <a href="#why-us" class="mobile-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary"><i data-lucide="shield-check" class="w-5 h-5 text-primary"></i> Why Choose Us</a>
+                <a href="#about" class="mobile-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary"><i data-lucide="info" class="w-5 h-5 text-primary"></i> About Us</a>
+                <a href="#gallery" class="mobile-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary"><i data-lucide="image" class="w-5 h-5 text-primary"></i> Gallery</a>
+                <a href="#reviews" class="mobile-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary"><i data-lucide="star" class="w-5 h-5 text-primary"></i> Reviews</a>
+                <a href="#faq" class="mobile-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary"><i data-lucide="help-circle" class="w-5 h-5 text-primary"></i> FAQ</a>
+                <a href="#contact" class="mobile-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary"><i data-lucide="map-pin" class="w-5 h-5 text-primary"></i> Contact & Location</a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 space-y-3">
+            <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20book%20a%20free%20gym%20trial." target="_blank" rel="noopener noreferrer" class="w-full h-12 bg-primary text-black font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                <i data-lucide="message-square" class="w-5 h-5"></i> WhatsApp Trial Booking
+            </a>
+            <a href="tel:+917903208915" class="w-full h-12 bg-zinc-900 border border-zinc-700 text-white font-medium rounded-xl flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i> Call +91 79032 08915
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-8 sm:pt-16 pb-16 sm:pb-24 overflow-hidden">
+        <!-- Radial Gradient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-left space-y-6">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-3.5 py-2 rounded-full text-xs sm:text-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-white font-bold">4.9★</span>
+                        <span class="text-zinc-400">| 1,442+ Verified Google Reviews</span>
+                    </div>
+
+                    <!-- Main H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] break-words">
+                        Build Ultimate Strength at <span class="text-primary underline decoration-primary/40 underline-offset-8">Patna's Highest-Rated</span> Gym
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-zinc-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl break-words">
+                        Transform your physique with state-of-the-art equipment, elite expert trainers, and a high-energy atmosphere at Mithapur, Patna. Start your fitness journey today.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20book%20my%20Free%20Trial%20session." target="_blank" rel="noopener noreferrer" class="h-14 px-8 rounded-xl bg-primary hover:bg-emerald-600 text-black font-extrabold text-base flex items-center justify-center gap-3 shadow-xl shadow-primary/20 transition-all hover:scale-[1.02]">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                            <span>Book Free Trial on WhatsApp</span>
+                        </a>
+                        <a href="tel:+917903208915" class="h-14 px-8 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-primary text-white font-bold text-base flex items-center justify-center gap-3 transition-all">
+                            <i data-lucide="phone-call" class="w-5 h-5 text-primary"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Tag -->
+                    <div class="flex items-center gap-2 text-zinc-400 text-sm pt-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                        <span>Mithilesh Market, near Ramvilas Chowk, Indra Nagar, Mithapur, Patna</span>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image / Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl aspect-[4/3] sm:aspect-square">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Hulk Fitness Gym Floor Patna" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-900/90 backdrop-blur-md border border-zinc-700 p-4 rounded-xl flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                    <i data-lucide="flame" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-bold text-sm">Patna's #1 Fitness Hub</div>
+                                    <div class="text-zinc-400 text-xs">Open Daily: 5:00 AM - 10:00 PM</div>
+                                </div>
+                            </div>
+                            <span class="bg-primary/20 text-primary text-xs font-bold px-2.5 py-1 rounded-full border border-primary/30">1,442+ Reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-primary mb-1">4.9 ★</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Google Rating</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">1,442+</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Verified Reviews</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-primary mb-1">100%</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Certified Trainers</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">Mithapur</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Prime Patna Location</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Offerings Grid -->
+    <section id="services" class="py-16 sm:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Our Core Programs</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">Engineered for Maximum Results</h2>
+                <p class="text-zinc-400 text-base sm:text-lg">Choose from our specialized training programs designed for all fitness levels.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Strength Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Build raw power with heavy-duty power racks, Olympic barbells, plate-loaded machines, and dumbbells up to 50kg+.</p>
+                    </div>
+                    <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20know%20more%20about%20Strength%20Training." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-black font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Enquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Fat Loss & Cardio</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Torch calories with top-tier treadmills, cross trainers, exercise bikes, and high-intensity interval training (HIIT) zones.</p>
+                    </div>
+                    <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20know%20more%20about%20Fat%20Loss%20%26%20Cardio." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-black font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Enquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Personal Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Get 1-on-1 custom workout programming, strict posture correction, and tailored nutrition plans from certified coaches.</p>
+                    </div>
+                    <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20know%20more%20about%20Personal%20Training." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-black font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Enquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-primary transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="award" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Muscle Building</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Hypertrophy-focused training regimens, isolation machines, and progressive overload tracking to maximize muscle growth.</p>
+                    </div>
+                    <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20know%20more%20about%20Muscle%20Building." target="_blank" rel="noopener noreferrer" class="w-full h-11 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-black font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                        <span>Enquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 sm:py-24 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">The Hulk Advantage</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">Why Patna Chooses Hulk Fitness</h2>
+                <p class="text-zinc-400 text-base sm:text-lg">We combine world-class equipment with an unmatched community spirit.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4">
+                        <i data-lucide="star" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">1,400+ 5-Star Reviews</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Backed by thousands of satisfied members across Patna who achieved their fitness dreams with us.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Elite Equipment</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Commercial-grade resistance machines, sturdy racks, and premium free weights maintained in pristine condition.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Expert Trainers</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Experienced trainers dedicated to guiding your form, ensuring safety, and pushing your limits.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Hygienic Environment</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Regularly sanitized workout floors, clean locker rooms, and proper ventilation for a comfortable session.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-16 sm:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Image Grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Gym Workout" class="w-full h-48 sm:h-64 object-cover rounded-2xl border border-zinc-800">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Weightlifting" class="w-full h-32 sm:h-44 object-cover rounded-2xl border border-zinc-800">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80" alt="Fitness Equipment" class="w-full h-32 sm:h-44 object-cover rounded-2xl border border-zinc-800">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Hulk Fitness Interior" class="w-full h-48 sm:h-64 object-cover rounded-2xl border border-zinc-800">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">About Hulk Fitness</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white leading-tight break-words">
+                        Patna’s Premier Destination for Serious Fitness & Transformation
+                    </h2>
+                    <p class="text-zinc-300 text-base sm:text-lg leading-relaxed break-words">
+                        Located in the heart of Mithapur at Mithilesh Market near Ramvilas Chowk, <strong class="text-white">Hulk Fitness Gym</strong> has established itself as the gold standard of physical fitness in Patna. Whether you are stepping into a gym for the first time or are an experienced athlete looking to break personal records, our facility provides the right ambiance, heavy-duty gear, and expert motivation.
+                    </p>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed break-words">
+                        We believe fitness is not just a hobby, but a lifestyle. With over 1,442 verified 5-star ratings, our community thrives on discipline, hard work, and mutual encouragement. Come experience Patna's most energetic fitness culture.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-white font-medium text-sm">Certified Trainers</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                <i data-lucide="check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-white font-medium text-sm">Modern Machines</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-16 sm:py-24 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Gym Showcase</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">Explore Our Training Facility</h2>
+                <p class="text-zinc-400 text-base sm:text-lg">Take a virtual tour of our well-equipped workout floors in Mithapur, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="relative group rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Free Weights Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Heavy Dumbbells & Free Weights Zone</span>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Cardio Section" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Advanced Cardio & Treadmill Deck</span>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Resistance Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Resistance & Pin-Loaded Machines</span>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Strength Rack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Squat Racks & Olympic Platforms</span>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Gym Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Spacious & Clean Workout Floor</span>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Fitness Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Professional Training Atmosphere</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-16 sm:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">Loved by 1,442+ Fitness Enthusiasts</h2>
+                <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                </div>
+                <p class="text-zinc-400 text-sm">4.9 Star Average Rating on Google Reviews</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                            "Best gym in Mithapur Patna! Excellent equipment, very motivating trainers, and superb crowd. Highly recommended for anyone serious about bodybuilding or weight loss."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">R</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Rahul Kumar</div>
+                            <div class="text-zinc-400 text-xs">Google Local Guide</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                            "Very spacious gym with all modern machines. Trainers are extremely helpful and polite. Location near Ramvilas Chowk is very convenient. 5 stars!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">A</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Abhishek Singh</div>
+                            <div class="text-zinc-400 text-xs">Verified Gym Member</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 italic">
+                            "Hulk Fitness is truly the ultimate gym in Patna. Great vibe, proper hygiene, and top-tier dumbbells and power racks. Love working out here!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">P</div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Priya Sharma</div>
+                            <div class="text-zinc-400 text-xs">Google Reviewer</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-16 sm:py-24 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">Frequently Asked Questions</h2>
+                <p class="text-zinc-400 text-base">Everything you need to know about joining Hulk Fitness Gym.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        Hulk Fitness Gym is open daily from 5:00 AM to 10:00 PM. You can visit anytime during these hours for workouts or trial sessions.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">How can I book a free trial session?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        You can instantly book your 7-day free trial by clicking any of the "WhatsApp Trial" buttons on our website or calling us directly at +917903208915.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Are personal trainers available for guidance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        Yes! We have certified and experienced personal trainers on the floor to assist with proper posture, customized workout routines, and diet consultation.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Where is Hulk Fitness Gym located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        We are conveniently located at Mithilesh Market, near Ramvilas Chowk, Indra Nagar, Mithapur, Patna, Bihar 800001. Easy to reach from all parts of the city.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-16 sm:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full border border-primary/20">Get In Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">Visit or Contact Us Today</h2>
+                <p class="text-zinc-400 text-base">We are ready to welcome you to Patna's best fitness community.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Contact Info & Opening Hours -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl space-y-6">
+                        <h3 class="text-xl font-bold font-syne text-white">Contact Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Address</div>
+                                <div class="text-zinc-400 text-sm mt-1">Mithilesh Market, near Ramvilas Chowk, Indra Nagar, Mithapur, Patna, Bihar 800001</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Phone / WhatsApp</div>
+                                <a href="tel:+917903208915" class="text-primary text-sm font-semibold hover:underline mt-1 block">+91 79032 08915</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Operating Hours</div>
+                                <div class="text-zinc-400 text-sm mt-1">Monday – Sunday: 5:00 AM – 10:00 PM</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800 flex gap-3">
+                            <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="flex-1 h-12 bg-primary hover:bg-emerald-600 text-black font-bold rounded-xl flex items-center justify-center gap-2 text-sm transition-colors">
+                                <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Us
+                            </a>
+                            <a href="https://www.google.com/maps/place/Hulk+Fitness+Gym/@25.5941,85.1376,17z" target="_blank" rel="noopener noreferrer" class="flex-1 h-12 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 text-sm transition-colors">
+                                <i data-lucide="navigation" class="w-4 h-4 text-primary"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form & Map -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold font-syne text-white mb-6">Send an Inquiry or Book Trial</h3>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Full Name</label>
+                                <input type="text" id="name" required class="w-full h-12 bg-zinc-950 border border-zinc-800 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Phone / WhatsApp Number</label>
+                                <input type="tel" id="phone" required class="w-full h-12 bg-zinc-950 border border-zinc-800 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Interested Program</label>
+                                <select id="service" class="w-full h-12 bg-zinc-950 border border-zinc-800 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                    <option value="General Workout">General Workout / Gym Access</option>
+                                    <option value="Strength Training">Strength Training</option>
+                                    <option value="Fat Loss & Cardio">Fat Loss & Cardio</option>
+                                    <option value="Personal Training">Personal Training</option>
+                                    <option value="Free Trial">7-Day Free Trial</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase mb-2">Message (Optional)</label>
+                                <textarea id="message" rows="3" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Any specific questions?"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full h-12 bg-primary hover:bg-emerald-600 text-black font-extrabold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all hover:scale-[1.01]">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Submit Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 h-64 sm:h-80 shadow-2xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7785!2d85.1376!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM1JzM4LjgiTiA4NcKwMDguMjciRQ!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Hulk Fitness Gym Location Map"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-black font-syne font-extrabold text-xl">H</div>
+                        <span class="font-syne font-extrabold text-xl text-white">HULK FITNESS</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Patna's highest-rated fitness gym located in Mithapur. Dedicated to helping you build ultimate strength, confidence, and health.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-400 text-sm font-bold">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span>4.9★ Rating (1,442+ Google Reviews)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-syne font-bold text-white text-base mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Services & Programs</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Hulk Fitness</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-syne font-bold text-white text-base mb-4">Core Programs</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Strength Training</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Fat Loss & Cardio</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Personal Training</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Muscle Building</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">7-Day Free Trial</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-syne font-bold text-white text-base mb-4">Visit Location</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        Mithilesh Market, near Ramvilas Chowk, Indra Nagar, Mithapur, Patna, Bihar 800001
+                    </p>
+                    <a href="tel:+917903208915" class="text-primary font-bold text-sm hover:underline block mb-1">Phone: +91 79032 08915</a>
+                    <p class="text-zinc-400 text-xs">Open Daily: 5:00 AM - 10:00 PM</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <div>&copy; <span id="current-year"></span> Hulk Fitness Gym, Patna. All rights reserved.</div>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="https://www.google.com/maps/place/Hulk+Fitness+Gym/@25.5941,85.1376,17z" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+917903208915" class="flex-1 h-12 bg-zinc-900 border border-zinc-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 text-sm shadow-lg">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917903208915?text=Hi%20Hulk%20Fitness,%20I%20want%20to%20book%20my%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex-1 h-12 bg-primary text-black font-extrabold rounded-xl flex items-center justify-center gap-2 text-sm shadow-lg shadow-primary/20">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>WhatsApp Trial</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl">
+            <div class="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-syne text-white">Inquiry Received!</h3>
+            <p id="success-modal-text" class="text-zinc-400 text-sm leading-relaxed">
+                Thank you! Our trainer at Hulk Fitness Gym will contact you via WhatsApp shortly to confirm your trial.
+            </p>
+            <button id="close-modal" class="w-full h-12 bg-primary hover:bg-emerald-600 text-black font-bold rounded-xl text-sm transition-colors">
+                Okay, Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeDrawerBtn.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion Logic
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('lucide-icon, svg');
+                
+                // Toggle active state
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all other accordions
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle svg').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Submission & Sanitization
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        const successModalText = document.getElementById('success-modal-text');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Sanitize inputs
+            const rawName = document.getElementById('name').value;
+            const rawPhone = document.getElementById('phone').value;
+            const rawService = document.getElementById('service').value;
+            const rawMessage = document.getElementById('message').value;
+
+            const name = DOMPurify ? DOMPurify.sanitize(rawName) : rawName.replace(/<[^>]*>?/gm, '');
+            const phone = DOMPurify ? DOMPurify.sanitize(rawPhone) : rawPhone.replace(/<[^>]*>?/gm, '');
+            const service = DOMPurify ? DOMPurify.sanitize(rawService) : rawService.replace(/<[^>]*>?/gm, '');
+
+            // Update modal text securely
+            successModalText.textContent = `Thank you ${name}! We have received your inquiry for ${service}. Our team at Hulk Fitness Mithapur will reach out to you on ${phone} shortly.`;
+
+            // Show modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            contactForm.reset();
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+    
+    <!-- DOMPurify for secure sanitization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.8/purify.min.js"></script>
+</body>
+</html>
