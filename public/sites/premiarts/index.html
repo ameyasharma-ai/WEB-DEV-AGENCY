@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>The Premier School of Arts | Jagdeo Path, Patna</title>
+    <meta name="description" content="Patna's highest-rated 5.0★ art school. Expert training in Sketching, Canvas Painting, Watercolor & Kids Art Classes at Jagdeo Path, Patna. Book a free trial class today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        canvas: '#FFFFFF',
+                        surface: '#F4F1EA',
+                        primary: '#FF6B4A',
+                        primaryHover: '#E55536',
+                        secondary: '#1E1E24',
+                        textMuted: '#686872'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Zero Horizontal Overflow & Smooth Rendering */
+        html, body {
+            overflow-x: hidden;
+            background-color: #FFFFFF;
+            color: #1E1E24;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-canvas text-secondary pb-24 md:pb-0">
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% SOLID STICKY HEADER -->
+    <div class="bg-secondary text-white text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 text-primary animate-pulse"></i>
+        <span>Admissions Open for New Batches! Free Trial Class Available at Jagdeo Path, Patna.</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-white border-b border-zinc-200 shadow-sm w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center text-white font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    P
+                </div>
+                <div>
+                    <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-secondary block leading-tight">The Premier School</span>
+                    <span class="text-xs tracking-wider uppercase text-textMuted font-semibold block">of Arts • Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-secondary">
+                <a href="#courses" class="hover:text-primary transition-colors">Courses</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Header Action CTAs -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+919599406914" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-200 text-secondary hover:border-primary hover:text-primary font-medium text-sm transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>+91 95994 06914</span>
+                </a>
+                <a href="https://wa.me/919599406914?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20class%20at%20The%20Premier%20School%20of%20Arts%20Patna." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white hover:bg-primaryHover font-medium text-sm shadow-md shadow-primary/20 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Book Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl text-secondary hover:bg-surface transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-white border-l border-zinc-200 rounded-tl-3xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-100">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-serif font-bold text-lg">
+                        P
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-base text-secondary">Premier School of Arts</span>
+                        <span class="text-[10px] tracking-wider uppercase text-textMuted block font-medium">Jagdeo Path, Patna</span>
+                    </div>
+                </div>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-xl text-secondary hover:bg-surface transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 pt-6 font-medium text-secondary">
+                <a href="#courses" class="mobile-link flex items-center justify-between py-2 text-lg hover:text-primary transition-colors">
+                    <span>Courses & Batches</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i>
+                </a>
+                <a href="#why-us" class="mobile-link flex items-center justify-between py-2 text-lg hover:text-primary transition-colors">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i>
+                </a>
+                <a href="#about" class="mobile-link flex items-center justify-between py-2 text-lg hover:text-primary transition-colors">
+                    <span>About Studio</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i>
+                </a>
+                <a href="#gallery" class="mobile-link flex items-center justify-between py-2 text-lg hover:text-primary transition-colors">
+                    <span>Student Gallery</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i>
+                </a>
+                <a href="#reviews" class="mobile-link flex items-center justify-between py-2 text-lg hover:text-primary transition-colors">
+                    <span>Parent Reviews (5★)</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i>
+                </a>
+                <a href="#faq" class="mobile-link flex items-center justify-between py-2 text-lg hover:text-primary transition-colors">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i>
+                </a>
+                <a href="#contact" class="mobile-link flex items-center justify-between py-2 text-lg hover:text-primary transition-colors">
+                    <span>Location & Map</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-100 flex flex-col gap-3">
+            <a href="https://wa.me/919599406914?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20class." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-primary text-white rounded-xl font-medium text-center flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Book Free Trial on WhatsApp</span>
+            </a>
+            <a href="tel:+919599406914" rel="noopener noreferrer" class="w-full py-3.5 bg-surface text-secondary border border-zinc-200 rounded-xl font-medium text-center flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <span>Call +91 95994 06914</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-8 pb-16 md:py-24 bg-surface overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FF6B4A_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-zinc-200 shadow-sm mb-6">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-secondary">5.0 ★ Rated (147+ Google Reviews)</span>
+                    </div>
+
+                    <!-- Main H1 (Strict responsive formatting) -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: font-extrabold font-serif text-secondary leading-[1.15] mb-6 break-words">
+                        Unleash Your Inner Artist at Patna's Premier Art School
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-textMuted leading-relaxed mb-8 max-w-2xl break-words">
+                        Professional instruction in Sketching, Canvas Painting, Watercolor Art & Kids Hobby Batches. Personalized guidance for beginners to advanced creators right at Jagdeo Path, Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919599406914?text=Hi,%2520I%2520would%2520like%2520to%2520book%2520a%2520free%2520trial%2520art%2520class." target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primaryHover transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-3 text-center">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            <span>Book Free Trial Class</span>
+                        </a>
+                        <a href="#courses" class="px-8 py-4 bg-white text-secondary border border-zinc-300 font-semibold rounded-xl hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-3 text-center">
+                            <span>Explore Courses</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-primary"></i>
+                        </a>
+                    </div>
+
+                    <!-- Location Micro-tag -->
+                    <div class="flex items-center gap-2 mt-8 text-xs text-textMuted font-medium">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                        <span>Satya Residency, Beside Manokamana Mandir, Jagdeo Path, Patna</span>
+                    </div>
+                </div>
+
+                <!-- Right Image Showcase Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-square bg-zinc-200">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80" alt="Art students painting in studio" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Floating Badge Card -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-zinc-100 hidden sm:flex items-center gap-3 max-w-xs">
+                        <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-500 shrink-0">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif font-bold text-sm block text-secondary">Expert Mentorship</span>
+                            <span class="text-xs text-textMuted">Individual attention for every single student</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="bg-secondary text-white py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-primary mb-1">5.0 ★</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Google Rating</div>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-white mb-1">147+</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Verified Reviews</div>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-primary mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Personalized Care</div>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-white mb-1">All Ages</div>
+                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Kids to Adults Batches</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICES / COURSES GRID -->
+    <section id="courses" class="py-20 bg-canvas">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs tracking-widest uppercase block mb-3">Our Art Programs</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-secondary mb-4 break-words">
+                    Master Every Medium with Expert Guidance
+                </h2>
+                <p class="text-textMuted text-base sm:text-lg">
+                    Tailored curricula designed to nurture fundamental techniques, color theory, and advanced artistic expression.
+                </p>
+            </div>
+
+            <!-- Course Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Course 1 -->
+                <div class="bg-surface rounded-3xl p-6 border border-zinc-200/80 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 hover:shadow-xl group">
+                    <div>
+                        <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-zinc-200">
+                            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80" alt="Sketching and Charcoal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <span class="text-xs font-semibold text-primary uppercase tracking-wider block mb-2">Foundation</span>
+                        <h3 class="font-serif font-bold text-xl text-secondary mb-3">Sketching & Charcoal</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            Master pencil shading, portraits, perspective, anatomy, and charcoal techniques from scratch.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919599406914?text=Hi,%20I%20want%20to%20inquire%20about%20Sketching%20and%20Charcoal%20classes." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-white border border-zinc-200 text-secondary hover:bg-primary hover:text-white hover:border-primary font-medium rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
+                        <span>Inquire Course</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-surface rounded-3xl p-6 border border-zinc-200/80 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 hover:shadow-xl group">
+                    <div>
+                        <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-zinc-200">
+                            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=600&q=80" alt="Canvas Painting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <span class="text-xs font-semibold text-primary uppercase tracking-wider block mb-2">Masterclass</span>
+                        <h3 class="font-serif font-bold text-xl text-secondary mb-3">Canvas Painting</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            Explore acrylic and oil painting on canvas. Learn palette knife work, layering, and texture creation.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919599406914?text=Hi,%20I%20want%20to%20inquire%20about%20Canvas%20Painting%20classes." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-white border border-zinc-200 text-secondary hover:bg-primary hover:text-white hover:border-primary font-medium rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
+                        <span>Inquire Course</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-surface rounded-3xl p-6 border border-zinc-200/80 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 hover:shadow-xl group">
+                    <div>
+                        <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-zinc-200">
+                            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=600&q=80" alt="Watercolor Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <span class="text-xs font-semibold text-primary uppercase tracking-wider block mb-2">Expressive</span>
+                        <h3 class="font-serif font-bold text-xl text-secondary mb-3">Watercolor Art</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            Master fluid washes, wet-on-wet techniques, botanical illustration, and vibrant landscapes.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919599406914?text=Hi,%20I%20want%20to%20inquire%20about%20Watercolor%20Art%20classes." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-white border border-zinc-200 text-secondary hover:bg-primary hover:text-white hover:border-primary font-medium rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
+                        <span>Inquire Course</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="bg-surface rounded-3xl p-6 border border-zinc-200/80 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 hover:shadow-xl group">
+                    <div>
+                        <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-zinc-200">
+                            <img src="https://images.unsplash.com/photo-1502691876148-a84978e59af8?auto=format&fit=crop&w=600&q=80" alt="Kids Hobby Batches" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <span class="text-xs font-semibold text-primary uppercase tracking-wider block mb-2">Children Special</span>
+                        <h3 class="font-serif font-bold text-xl text-secondary mb-3">Kids Hobby Batches</h3>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">
+                            Fun, interactive crafting, coloring, and foundational drawing tailored for creative child development.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919599406914?text=Hi,%20I%20want%20to%20inquire%20about%20Kids%20Hobby%20Art%20batches." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-white border border-zinc-200 text-secondary hover:bg-primary hover:text-white hover:border-primary font-medium rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
+                        <span>Inquire Course</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-20 bg-surface">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs tracking-widest uppercase block mb-3">The Premier Advantage</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-secondary mb-4 break-words">
+                    Why Parents & Students Choose Our Patna Studio
+                </h2>
+                <p class="text-textMuted text-base sm:text-lg">
+                    We combine professional technical training with a warm, inspiring studio atmosphere.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="user-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-secondary mb-3">Personalized Attention</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">
+                        Small batch sizes ensure every student receives one-on-one mentorship tailored to their unique pace and artistic style.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6">
+                        <i data-lucide="star" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-secondary mb-3">5.0-Star Proven Excellence</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">
+                        Backed by 147+ glowing parent reviews and student successes across Patna for consistent instructional quality.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-secondary mb-3">Holistic Skill Development</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">
+                        Beyond just copying art, we build confidence, observational accuracy, and creative problem-solving in every learner.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. ABOUT / STORY SECTION -->
+    <section id="about" class="py-20 bg-canvas">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-zinc-200 border-4 border-surface">
+                        <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80" alt="Art studio interior" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-primary font-semibold text-xs tracking-widest uppercase block mb-3">Our Philosophy & Story</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-secondary mb-6 break-words">
+                        Nurturing Creativity in the Heart of Patna
+                    </h2>
+                    <p class="text-textMuted text-base leading-relaxed mb-6">
+                        Located conveniently at Jagdeo Path, beside Manokamana Mandir in Anand Vihar Colony, The Premier School of Arts was founded with a singular vision: to provide world-class art education in an environment that is welcoming, encouraging, and deeply inspiring.
+                    </p>
+                    <p class="text-textMuted text-base leading-relaxed mb-8">
+                        Whether your child is picking up a paintbrush for the very first time, or you are an adult looking to master advanced canvas painting, our experienced instructors provide structured, patient guidance every stroke of the way.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full py-6 border-y border-zinc-200 mb-8">
+                        <div>
+                            <span class="font-serif font-bold text-2xl text-secondary block mb-1">100%</span>
+                            <span class="text-xs text-textMuted font-medium">Safe & Inspiring Studio Space</span>
+                        </div>
+                        <div>
+                            <span class="font-serif font-bold text-2xl text-secondary block mb-1">Flexible</span>
+                            <span class="text-xs text-textMuted font-medium">Weekend & Weekday Batches</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919599406914?text=Hi,%20I%20would%20like%20to%20visit%20The%20Premier%20School%20of%20Arts%20at%20Jagdeo%20Path." target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-secondary text-white font-semibold rounded-xl hover:bg-primary transition-all flex items-center gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                        <span>Plan Studio Visit</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. STUDENT ART GALLERY -->
+    <section id="gallery" class="py-20 bg-surface">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs tracking-widest uppercase block mb-3">Student Showcase</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-secondary mb-4 break-words">
+                    Masterpieces Created by Our Students
+                </h2>
+                <p class="text-textMuted text-base sm:text-lg">
+                    A glimpse of brilliant artwork produced by kids, teens, and adults in our Patna art studio.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-200 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" alt="Student artwork portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-medium">Portrait Sketching</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-200 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=600&q=80" alt="Student canvas painting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-medium">Acrylic Canvas Art</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-200 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Watercolor artwork" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-medium">Watercolor Landscape</span>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-200 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1582561304007-0f089fc12d87?auto=format&fit=crop&w=600&q=80" alt="Kids art creation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-medium">Kids Hobby Batch Work</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-canvas">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs tracking-widest uppercase block mb-3">Parent Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-secondary mb-4 break-words">
+                    Loved by Parents and Students Across Patna
+                </h2>
+                <div class="flex items-center justify-center gap-1 text-amber-500 mt-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <span class="font-bold text-secondary ml-2">5.0 / 5.0 (147 Verified Reviews)</span>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface p-8 rounded-3xl border border-zinc-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-secondary text-sm leading-relaxed mb-6 italic">
+                            "The best art school in Patna! My daughter has been attending the canvas painting classes near Jagdeo Path for 6 months, and her improvement is phenomenal. Highly recommended."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-200/60">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-serif">
+                            P
+                        </div>
+                        <div>
+                            <span class="font-serif font-bold text-sm block text-secondary">Pooja Sinha</span>
+                            <span class="text-xs text-textMuted">Parent, Patna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface p-8 rounded-3xl border border-zinc-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-secondary text-sm leading-relaxed mb-6 italic">
+                            "Incredible mentoring! The teachers give individual attention to every student. The studio ambiance near Manokamana Mandir is extremely peaceful and creative."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-200/60">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-serif">
+                            R
+                        </div>
+                        <div>
+                            <span class="font-serif font-bold text-sm block text-secondary">Rajesh Kumar</span>
+                            <span class="text-xs text-textMuted">Parent, Jagdeo Path</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface p-8 rounded-3xl border border-zinc-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-secondary text-sm leading-relaxed mb-6 italic">
+                            "My sketching skills have completely transformed. The instructor's technique explanation is crystal clear. Truly Patna's premier school of arts!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-200/60">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-serif">
+                            A
+                        </div>
+                        <div>
+                            <span class="font-serif font-bold text-sm block text-secondary">Ananya Verma</span>
+                            <span class="text-xs text-textMuted">Art Student</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section id="faq" class="py-20 bg-surface">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-xs tracking-widest uppercase block mb-3">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-secondary mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-textMuted text-base">
+                    Everything you need to know about joining our art classes in Patna.
+                </p>
+            </div>
+
+            <!-- FAQ Accordion Container -->
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-serif font-bold text-lg text-secondary flex items-center justify-between gap-4 focus:outline-none">
+                        <span>What is the minimum age to join art classes?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <div class="pb-5">
+                            We welcome children starting from 5 years of age into our specialized Kids Hobby Batches. We also have dedicated batches for teenagers and adults of all skill levels.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-serif font-bold text-lg text-secondary flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Are art materials provided during classes?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <div class="pb-5">
+                            For trial classes and initial sessions, all basic materials are provided at the studio. Once enrolled, our instructors will guide you on the specific professional sketchbooks and paints to acquire.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-serif font-bold text-lg text-secondary flex items-center justify-between gap-4 focus:outline-none">
+                        <span>How can I book a free trial class?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <div class="pb-5">
+                            You can easily book a free trial class by clicking any of the "Book Trial" or WhatsApp buttons on this website, or by calling us directly at +91 9599406914.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-serif font-bold text-lg text-secondary flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Where exactly is the institute located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <div class="pb-5">
+                            We are conveniently located at Satya Residency, Beside Manokamana Mandir, Anand Vihar Colony, Jagdeo Path, Patna, Bihar 800014. Easily accessible from all parts of Patna.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-canvas">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-xs tracking-widest uppercase block mb-3">Visit Or Connect</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-secondary mb-4 break-words">
+                    Get in Touch with Our Patna Studio
+                </h2>
+                <p class="text-textMuted text-base">
+                    Reach out for admissions, batch timings, or to drop by for a studio tour.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Info & Form Column -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    
+                    <div class="bg-surface p-8 rounded-3xl border border-zinc-200 mb-8">
+                        <h3 class="font-serif font-bold text-2xl text-secondary mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 text-primary flex items-center justify-center shrink-0 shadow-sm">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="font-serif font-bold text-secondary block mb-1">Studio Address</span>
+                                    <p class="text-textMuted text-sm leading-relaxed">
+                                        SATYA RESIDENCY, BESIDE MANOKAMANA MANDIR, ANAND VIHAR COLONY, Jagdeo Path, Patna, Bihar 800014
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 text-primary flex items-center justify-center shrink-0 shadow-sm">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="font-serif font-bold text-secondary block mb-1">Phone / WhatsApp</span>
+                                    <a href="tel:+919599406914" class="text-textMuted text-sm hover:text-primary transition-colors block">+91 95994 06914</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 text-primary flex items-center justify-center shrink-0 shadow-sm">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="font-serif font-bold text-secondary block mb-1">Operating Hours</span>
+                                    <p class="text-textMuted text-sm leading-relaxed">
+                                        Monday – Sunday: 8:00 AM – 7:00 PM (Batch timings vary)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-surface p-8 rounded-3xl border border-zinc-200">
+                        <h3 class="font-serif font-bold text-2xl text-secondary mb-2">Quick Inquiry Form</h3>
+                        <p class="text-textMuted text-sm mb-6">Fill out this quick form and our team will call you back shortly.</p>
+
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-secondary focus:outline-none focus:border-primary text-sm" placeholder="e.g. Rahul Kumar">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-secondary focus:outline-none focus:border-primary text-sm" placeholder="e.g. +91 98765 43210">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-secondary uppercase tracking-wider mb-2">Interested Program</label>
+                                <select id="service" class="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-secondary focus:outline-none focus:border-primary text-sm">
+                                    <option value="Sketching">Sketching & Charcoal</option>
+                                    <option value="Canvas Painting">Canvas Painting</option>
+                                    <option value="Watercolor Art">Watercolor Art</option>
+                                    <option value="Kids Batch">Kids Hobby Batches</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primaryHover transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                                <span id="form-btn-text">Submit Inquiry</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Right Map Column -->
+                <div class="lg:col-span-6 flex flex-col">
+                    <div class="bg-surface p-3 rounded-3xl border border-zinc-200 h-full min-h-[450px] flex flex-col">
+                        <div class="w-full h-full rounded-2xl overflow-hidden flex-1 relative bg-zinc-200">
+                            <iframe 
+                                title="The Premier School of Arts Location Map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788461750237!2d85.1056!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzMzLjUiTiA4NcKwMDYnMjAuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                class="w-full h-full object-cover">
+                            </iframe>
+                        </div>
+                        <div class="p-4 flex items-center justify-between">
+                            <div>
+                                <span class="font-serif font-bold text-secondary text-sm block">Jagdeo Path Studio, Patna</span>
+                                <span class="text-xs text-textMuted">Beside Manokamana Mandir</span>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+Premier+School+of+Arts+Jagdeo+Path+Patna" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-primary text-white text-xs font-semibold rounded-xl hover:bg-primaryHover transition-all flex items-center gap-2 shadow-md">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center relative shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-secondary mb-2">Inquiry Received!</h3>
+            <p id="success-modal-msg" class="text-textMuted text-sm mb-8 leading-relaxed">
+                Thank you! Our art counselor at Jagdeo Path, Patna will call you back within 24 hours to schedule your free trial class.
+            </p>
+            <button id="close-modal-btn" class="w-full py-3.5 bg-secondary text-white font-semibold rounded-xl hover:bg-primary transition-all">
+                Got It, Thank You
+            </button>
+        </div>
+    </div>
+
+    <!-- 11. STICKY MOBILE BOTTOM ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-zinc-200 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+919599406914" rel="noopener noreferrer" class="flex-1 py-3 bg-surface border border-zinc-200 text-secondary rounded-xl font-semibold text-xs flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919599406914?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20class%20at%20The%20Premier%20School%20of%20Arts." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 bg-primary text-white rounded-xl font-semibold text-xs flex items-center justify-center gap-2 shadow-md shadow-primary/25">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Trial</span>
+        </a>
+    </div>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-secondary text-white pt-16 pb-24 md:pb-16 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-serif font-bold text-lg">
+                            P
+                        </div>
+                        <span class="font-serif font-bold text-lg text-white">Premier School of Arts</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Patna's highest rated art school providing expert guidance in sketching, canvas painting, watercolor, and kids hobby batches.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <span class="text-xs text-white font-semibold ml-1">5.0 Star Rating (147 Reviews)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-serif font-bold text-base text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a href="#courses" class="hover:text-primary transition-colors">Courses & Batches</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Studio</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Student Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Parent Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-serif font-bold text-base text-white mb-4">Art Programs</h3>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a href="#courses" class="hover:text-primary transition-colors">Sketching & Charcoal</a></li>
+                        <li><a href="#courses" class="hover:text-primary transition-colors">Canvas Painting</a></li>
+                        <li><a href="#courses" class="hover:text-primary transition-colors">Watercolor Art</a></li>
+                        <li><a href="#courses" class="hover:text-primary transition-colors">Kids Hobby Batches</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Free Trial Booking</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-serif font-bold text-base text-white mb-4">Studio Location</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        Satya Residency, Beside Manokamana Mandir, Anand Vihar Colony, Jagdeo Path, Patna, Bihar 800014
+                    </p>
+                    <p class="text-zinc-400 text-sm mb-2">Phone: +91 95994 06914</p>
+                    <p class="text-zinc-400 text-sm">Hours: Mon-Sun (8 AM - 7 PM)</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800 text-center text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2025 The Premier School of Arts, Patna. All rights reserved.</p>
+                <p>Designed with passion for creative excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTION SCRIPTS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeDrawerBtn.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // FAQ Accordion Functionality
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('lucide, svg');
+                
+                // Toggle active state
+                const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                
+                // Close all others
+                faqToggles.forEach(otherToggle => {
+                    const otherContent = otherToggle.nextElementSibling;
+                    const otherIcon = otherToggle.querySelector('lucide, svg');
+                    otherContent.style.maxHeight = null;
+                    if(otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if(icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.maxHeight = null;
+                    if(icon) icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Contact Form Validation & Success Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const successModalMsg = document.getElementById('success-modal-msg');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameInput = document.getElementById('name').value.trim();
+            const serviceSelect = document.getElementById('service').value;
+            
+            if(!nameInput) return;
+
+            // Sanitize or escape for safe display
+            const sanitizedName = nameInput.replace(/[<>]/g, '');
+
+            successModalMsg.textContent = `Thank you, ${sanitizedName}! Our art counselor at Jagdeo Path, Patna will call you back within 24 hours to confirm your trial for ${serviceSelect}.`;
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            inquiryForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if(e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
