@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRATOSPHERE | Premium Venue & Hospitality in Patna</title>
+    <meta name="description" content="Experience Patna's finest venue on the 8th floor of SKU Center, Boring Road. Luxury dining, breathtaking views, and 4.7★ rated hospitality.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#09090B',
+                        slateCard: '#18181B',
+                        champagne: '#D4AF37',
+                        warmAmber: '#F59E0B',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090B;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-zinc-100 overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-champagne via-warmAmber to-champagne text-obsidian text-xs sm:text-sm font-semibold py-2 px-4 text-center z-50 relative">
+        <span>✨ Welcome to Patna's Ultimate Skyline Destination | Open Daily: 12:00 PM – 12:00 AM</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#09090b] border-b border-zinc-800 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-2xl sm:text-3xl font-extrabold tracking-wider font-syne text-white">STRATO<span class="text-champagne">SPHERE</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#experience" class="hover:text-champagne transition-colors">Experience</a>
+                <a href="#offerings" class="hover:text-champagne transition-colors">Offerings</a>
+                <a href="#about" class="hover:text-champagne transition-colors">About Us</a>
+                <a href="#gallery" class="hover:text-champagne transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-champagne transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-champagne transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+917209888334" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 hover:border-champagne text-sm font-semibold text-white transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-champagne"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/917209888334?text=Hi%20Stratosphere,%20I%20would%20like%20to%20inquire%20about%20a%20reservation." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-champagne hover:bg-yellow-500 text-obsidian text-sm font-bold transition-all shadow-lg shadow-champagne/20">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburger-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6 text-champagne"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-zinc-800">
+                <span class="text-xl font-bold font-syne text-white">STRATO<span class="text-champagne">SPHERE</span></span>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-5 text-lg font-medium text-zinc-200">
+                <a href="#experience" class="mobile-nav-link hover:text-champagne transition-colors flex items-center justify-between">Experience <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#offerings" class="mobile-nav-link hover:text-champagne transition-colors flex items-center justify-between">Offerings <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-nav-link hover:text-champagne transition-colors flex items-center justify-between">About Us <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#gallery" class="mobile-nav-link hover:text-champagne transition-colors flex items-center justify-between">Gallery <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-nav-link hover:text-champagne transition-colors flex items-center justify-between">Reviews <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-nav-link hover:text-champagne transition-colors flex items-center justify-between">Contact <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+        <div class="mt-8 pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+917209888334" class="w-full py-3 px-4 rounded-xl border border-zinc-700 text-center font-semibold text-white flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-champagne"></i> Call +91 72098 88334
+            </a>
+            <a href="https://wa.me/917209888334?text=Hi%20Stratosphere,%20I%20would%20like%20to%20inquire%20about%20a%20reservation." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-champagne text-obsidian font-bold text-center flex items-center justify-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="experience" class="relative pt-12 pb-20 md:py-28 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80" alt="Stratosphere Ambiance" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <!-- Trust Rating Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 mb-6 backdrop-blur-md">
+                    <div class="flex items-center text-warmAmber">
+                        <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.7★ (907+ Google Reviews)</span>
+                </div>
+
+                <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                    Elevate Your Experience at Patna’s Finest Address
+                </h1>
+
+                <p class="text-base sm:text-lg text-zinc-300 mb-8 leading-relaxed">
+                    Perched on the 8th floor of SKU Center above Tasva Showroom, Boring Road, Stratosphere delivers unmatched panoramic views, exquisite culinary creations, and sophisticated nightlife in the heart of Anandpuri.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-champagne hover:bg-yellow-500 text-obsidian font-bold text-base transition-all shadow-xl shadow-champagne/20">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                        <span>Book Your Experience</span>
+                    </a>
+                    <a href="https://wa.me/917209888334?text=Hi%20Stratosphere,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-champagne text-white font-semibold text-base transition-all">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-champagne"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0">
+                    <div class="w-12 h-12 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center shrink-0">
+                        <i data-lucide="award" class="w-6 h-6 text-champagne"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold font-syne text-white">4.7 / 5.0</div>
+                        <div class="text-sm text-zinc-400">Trusted by 907+ Food & Nightlife Lovers</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-champagne"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold font-syne text-white">8th Floor Skyline</div>
+                        <div class="text-sm text-zinc-400">SKU Center, Boring Road, Anandpuri</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center shrink-0">
+                        <i data-lucide="clock" class="w-6 h-6 text-champagne"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold font-syne text-white">Open Till Midnight</div>
+                        <div class="text-sm text-zinc-400">12:00 PM – 12:00 AM Every Day</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Offerings Grid -->
+    <section id="offerings" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-champagne font-bold mb-3 block">Exquisite Offerings</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Curated for Memorable Moments</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Indulge in an elevated atmosphere designed for sophisticated palettes and unforgettable celebrations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-champagne/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center mb-6 group-hover:bg-champagne group-hover:text-obsidian transition-colors">
+                            <i data-lucide="utensils" class="w-7 h-7 text-champagne group-hover:text-obsidian"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Fine Dining & Cuisines</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">A symphony of global flavors, masterfully prepared by expert chefs using the finest ingredients and authentic spices.</p>
+                    </div>
+                    <a href="https://wa.me/917209888334?text=Hi%20Stratosphere,%20I%20would%20like%20to%20view%20the%20dining%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-champagne font-semibold text-sm hover:underline">
+                        <span>Explore Menu</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-champagne/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center mb-6 group-hover:bg-champagne group-hover:text-obsidian transition-colors">
+                            <i data-lucide="wine" class="w-7 h-7 text-champagne group-hover:text-obsidian"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Signature Cocktails</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Handcrafted mixology and premium beverages served in an electric atmosphere with mesmerizing skyline views.</p>
+                    </div>
+                    <a href="https://wa.me/917209888334?text=Hi%20Stratosphere,%20I%20would%20like%20to%20inquire%20about%20bar%20reservations." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-champagne font-semibold text-sm hover:underline">
+                        <span>Book Bar Table</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-champagne/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center mb-6 group-hover:bg-champagne group-hover:text-obsidian transition-colors">
+                            <i data-lucide="party-popper" class="w-7 h-7 text-champagne group-hover:text-obsidian"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Private & Corporate Events</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Host your birthdays, anniversaries, corporate galas, and private gatherings with dedicated hospitality support.</p>
+                    </div>
+                    <a href="https://wa.me/917209888334?text=Hi%20Stratosphere,%20I%20want%20to%20book%20an%20event%20space." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-champagne font-semibold text-sm hover:underline">
+                        <span>Plan Event</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-champagne font-bold mb-3 block">Why Stratosphere</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Patna’s Undisputed Hospitality Leader</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Discover what sets us apart as the premier destination for discerning guests.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-champagne/10 border border-champagne/30 flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8 text-champagne"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-syne text-white mb-3">Market Leadership</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Consistently rated 4.7★ by over 907 patrons, recognized as Patna's absolute gold standard in hospitality.</p>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-champagne/10 border border-champagne/30 flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="eye" class="w-8 h-8 text-champagne"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-syne text-white mb-3">8th Floor Skyline Views</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Perched above Tasva Showroom on Boring Road, offering majestic rooftop vistas and sparkling night cityscapes.</p>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-champagne/10 border border-champagne/30 flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="heart-handshake" class="w-8 h-8 text-champagne"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-syne text-white mb-3">Seamless Service</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Impeccable attention to detail, lightning-fast instant WhatsApp booking, and personalized guest care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story / About Section -->
+    <section id="about" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-champagne font-bold mb-3 block">Our Story</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">Redefining Luxury & Nightlife in Patna</h2>
+                    <p class="text-zinc-300 text-base leading-relaxed mb-4">
+                        Located at the prestigious SKU Center on Boring Road, Anandpuri, Stratosphere was born out of a vision to bring world-class venue experiences to Patna. We merge sophisticated architecture, ambient lighting, and top-tier gastronomy into a singular skyline retreat.
+                    </p>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-8">
+                        Whether you are seeking a quiet romantic dinner overlooking the twinkling city lights, a vibrant weekend celebration with friends, or a grand private event, our dedicated team ensures every second spent with us is nothing short of legendary.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="border-l-2 border-champagne pl-4">
+                            <div class="text-2xl font-bold font-syne text-white">907+</div>
+                            <div class="text-xs text-zinc-400">Happy Reviews</div>
+                        </div>
+                        <div class="border-l-2 border-champagne pl-4">
+                            <div class="text-2xl font-bold font-syne text-white">4.7★</div>
+                            <div class="text-xs text-zinc-400">Google Rating</div>
+                        </div>
+                        <div class="border-l-2 border-champagne pl-4">
+                            <div class="text-2xl font-bold font-syne text-white">8th Flr</div>
+                            <div class="text-xs text-zinc-400">SKU Center</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="Stratosphere Interior Ambiance" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-800 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-champagne"></i>
+                            <span class="font-bold text-white text-sm">Prime Location</span>
+                        </div>
+                        <p class="text-xs text-zinc-400">Boring Rd, above Tasva Showroom, Anandpuri, Patna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section id="gallery" class="py-20 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-champagne font-bold mb-3 block">Visual Experience</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Glimpse Inside Stratosphere</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Explore our stunning interiors, ambient mood lighting, and breathtaking skyline views.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Dining Space" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Luxurious Dining Hall</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" alt="Bar & Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Sophisticated Bar & Lounge</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Rooftop View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">8th Floor Skyline Ambiance</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Culinary Delights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Exquisite Culinary Delights</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=800&q=80" alt="Private Gathering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Private Party Setup</span>
+                    </div>
+                </div>
+
+                <div class="aspect-[4/3] rounded-xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80" alt="Cocktail Glass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Signature Mixology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-champagne font-bold mb-3 block">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Loved by 907+ Patrons</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Read genuine experiences from guests who chose Stratosphere for their special moments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-warmAmber mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6 italic">"Absolute best rooftop venue in Patna! The 8th floor view of Boring Road at night is stunning, and the food quality is top-notch. Highly recommended for celebrations."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-champagne/20 border border-champagne/40 flex items-center justify-center font-bold text-champagne text-sm">AK</div>
+                        <div>
+                            <div class="font-bold text-white text-sm">Aditya Kumar</div>
+                            <div class="text-xs text-zinc-400">Google Local Guide</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-warmAmber mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6 italic">"We celebrated our anniversary here. The ambiance is luxurious, staff is extremely courteous, and the mocktails were phenomenal. Easily the finest place in Anandpuri."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-champagne/20 border border-champagne/40 flex items-center justify-center font-bold text-champagne text-sm">PS</div>
+                        <div>
+                            <div class="font-bold text-white text-sm">Priya Singh</div>
+                            <div class="text-xs text-zinc-400">Google Reviewer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-warmAmber mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-warmAmber"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6 italic">"Great music, elegant crowd, and prompt service. Located right above Tasva on Boring Road so it's super easy to find. Will definitely be visiting again!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-champagne/20 border border-champagne/40 flex items-center justify-center font-bold text-champagne text-sm">RJ</div>
+                        <div>
+                            <div class="font-bold text-white text-sm">Rahul Jha</div>
+                            <div class="text-xs text-zinc-400">Google Reviewer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-20 bg-zinc-900/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-widest text-champagne font-bold mb-3 block">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know before visiting Stratosphere.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between focus:outline-none">
+                        <span>How can I reserve a table at Stratosphere?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-champagne transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-zinc-400 text-sm leading-relaxed">
+                        You can instantly book a table by calling us at +91 72098 88334 or by clicking the WhatsApp chat button on our website for instant confirmation.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between focus:outline-none">
+                        <span>What are your opening hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-champagne transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-zinc-400 text-sm leading-relaxed">
+                        We are open every day of the week from 12:00 PM (noon) to 12:00 AM (midnight).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between focus:outline-none">
+                        <span>Where exactly is Stratosphere located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-champagne transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-zinc-400 text-sm leading-relaxed">
+                        We are located on the 8th Floor, SKU Center, Boring Rd, directly above Tasva Showroom, Anandpuri, Patna, Bihar 800001.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-semibold text-white flex items-center justify-between focus:outline-none">
+                        <span>Do you host private parties and corporate events?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-champagne transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-zinc-400 text-sm leading-relaxed">
+                        Yes! Stratosphere offers bespoke event hosting for birthdays, anniversaries, corporate dinners, and private get-togethers with customized menus and dedicated event support.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-champagne font-bold mb-3 block">Reach Out</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Visit Us or Send an Inquiry</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">We look forward to welcoming you to the sky.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Info & Google Map -->
+                <div class="space-y-8">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-champagne"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg mb-1">Address</h3>
+                                <p class="text-zinc-400 text-sm leading-relaxed">8th Floor, SKU Center, Boring Rd, above Tasva Showroom, Anandpuri, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-champagne"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg mb-1">Phone & WhatsApp</h3>
+                                <a href="tel:+917209888334" class="text-champagne font-semibold text-sm hover:underline">+91 72098 88334</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-champagne/10 border border-champagne/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-champagne"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-lg mb-1">Hours</h3>
+                                <p class="text-zinc-400 text-sm">Monday – Sunday: 12:00 PM – 12:00 AM</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=STRATOSPHERE+SKU+Center+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-6 rounded-xl bg-champagne hover:bg-yellow-500 text-obsidian font-bold text-sm text-center flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="navigation" class="w-4 h-4"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+
+                    <!-- Embedded Google Map -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 h-64 sm:h-80 shadow-xl">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778536838382!2d85.1245!3d25.6115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQxLjQiTiA4NcKwMDcnMjguMiJF!5e0!3m2!1sen!2sin!4f1600!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact / Reservation Form -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                    <h3 class="text-xl font-bold font-syne text-white mb-2">Book a Table / Send Inquiry</h3>
+                    <p class="text-zinc-400 text-sm mb-6">Fill out the form below and our team will get in touch instantly.</p>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-zinc-300 mb-2">Your Name</label>
+                            <input type="text" id="form-name" required placeholder="Enter your full name" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-champagne text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-zinc-300 mb-2">Phone Number</label>
+                            <input type="tel" id="form-phone" required placeholder="+91 XXXXX XXXXX" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-champagne text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-zinc-300 mb-2">Service / Occasion</label>
+                            <select id="form-service" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-champagne text-sm">
+                                <option>Fine Dining Reservation</option>
+                                <option>Bar & Cocktail Lounge</option>
+                                <option>Private Party / Birthday</option>
+                                <option>Corporate Event</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-zinc-300 mb-2">Message / Special Request</label>
+                            <textarea id="form-message" rows="4" placeholder="Date, time, number of guests..." class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-champagne text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" id="form-submit-btn" class="w-full py-4 rounded-xl bg-champagne hover:bg-yellow-500 text-obsidian font-bold text-sm transition-all shadow-xl shadow-champagne/20 flex items-center justify-center gap-2">
+                            <span>Submit Inquiry</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 bg-champagne/20 border border-champagne/40 rounded-full flex items-center justify-center mx-auto mb-6 text-champagne">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-syne text-white mb-2">Inquiry Received!</h3>
+            <p id="success-message" class="text-zinc-300 text-sm mb-6">Thank you for reaching out to Stratosphere. Our team will contact you shortly to confirm your booking.</p>
+            <button id="close-modal-btn" class="w-full py-3 bg-champagne hover:bg-yellow-500 text-obsidian font-bold rounded-xl text-sm transition-all">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex gap-3">
+        <a href="tel:+917209888334" class="flex-1 py-3 px-4 rounded-xl border border-zinc-700 bg-zinc-900 text-white font-semibold text-xs flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-champagne"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917209888334?text=Hi%20Stratosphere,%20I%20would%20like%20to%20inquire%20about%20a%20reservation." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-champagne text-obsidian font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-champagne/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 bg-[#09090B] py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <a href="#" class="inline-block mb-4">
+                        <span class="text-2xl font-extrabold tracking-wider font-syne text-white">STRATO<span class="text-champagne">SPHERE</span></span>
+                    </a>
+                    <p class="text-zinc-400 text-sm max-w-sm mb-6 leading-relaxed">
+                        Patna’s premier skyline venue and hospitality destination located on the 8th floor of SKU Center, Boring Road, Anandpuri.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=STRATOSPHERE+SKU+Center+Boring+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-champagne hover:border-champagne transition-all">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+917209888334" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-champagne hover:border-champagne transition-all">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/917209888334?text=Hi%20Stratosphere" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-champagne hover:border-champagne transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold font-syne text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a href="#experience" class="hover:text-champagne transition-colors">Experience</a></li>
+                        <li><a href="#offerings" class="hover:text-champagne transition-colors">Offerings</a></li>
+                        <li><a href="#about" class="hover:text-champagne transition-colors">About Us</a></li>
+                        <li><a href="#gallery" class="hover:text-champagne transition-colors">Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-champagne transition-colors">Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-champagne transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold font-syne text-white text-base mb-4">Operating Hours</h4>
+                    <p class="text-sm text-zinc-400 mb-2">Monday – Sunday</p>
+                    <p class="text-sm font-semibold text-white mb-4">12:00 PM – 12:00 AM</p>
+                    <p class="text-xs text-zinc-500">Open all 365 days for lunch, dinner, and late-night celebrations.</p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> STRATOSPHERE Venue & Hospitality. All rights reserved.</p>
+                <p>Designed with luxury & precision for Patna.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        hamburgerBtn.addEventListener('click', openMenu);
+        closeDrawerBtn.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle svg').forEach(s => s.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Handling & Success Modal
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const service = document.getElementById('form-service').value;
+
+            // Basic Sanitize check
+            if (!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate loading state
+            const submitBtn = document.getElementById('form-submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = `<span>Submitting...</span>`;
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                successMessage.textContent = `Thank you, ${name}! We have received your inquiry for ${service}. Our team will contact you at ${phone} shortly.`;
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+                contactForm.reset();
+            }, 800);
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
