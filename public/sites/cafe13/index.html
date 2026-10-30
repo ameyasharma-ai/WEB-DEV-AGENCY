@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <title>Cafe 13 | Best Café & Restaurant in Boring Road, Patna</title>
+    <meta name="description" content="Experience Patna's favorite cozy café at Surya Crystal, Boring Road. Delicious Continental food, artisan coffee, shakes, and pizzas. Reserve a table via WhatsApp!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafeBg: '#121214',
+                        cafeSurface: '#1A1A1E',
+                        cafeAmber: '#D97706',
+                        cafeAmberHover: '#B45309',
+                        cafeTerracotta: '#C2410C',
+                        cafeTextPrimary: '#F4F4F5',
+                        cafeTextMuted: '#A1A1AA'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Zero horizontal overflow safeguard */
+        html, body {
+            overflow-x: hidden;
+            background-color: #121214;
+            color: #F4F4F5;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121214;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-cafeBg text-cafeTextPrimary antialiased pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300" aria-hidden="true"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-cafeTerracotta via-cafeAmber to-cafeTerracotta text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Today: 11:00 AM – 11:00 PM • Surya Crystal, Boring Road, Patna</span>
+    </div>
+
+    <!-- 100% Solid Opaque Header -->
+    <header class="sticky top-0 z-40 bg-cafeBg border-b border-zinc-800 w-full transition-all">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-cafeAmber flex items-center justify-center text-cafeBg font-syne font-extrabold text-xl shadow-lg shadow-cafeAmber/20 group-hover:scale-105 transition-transform">
+                    13
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-bold text-xl sm:text-2xl tracking-tight text-white leading-none">CAFE 13</span>
+                    <span class="text-[10px] uppercase tracking-widest text-cafeAmber font-semibold mt-1">Boring Road, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-cafeTextMuted">
+                <a href="#menu" class="hover:text-cafeAmber transition-colors">Menu Highlights</a>
+                <a href="#about" class="hover:text-cafeAmber transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-cafeAmber transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-cafeAmber transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-cafeAmber transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-cafeAmber transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+919525566665" class="flex items-center gap-2 text-xs font-semibold text-cafeTextPrimary bg-zinc-900 border border-zinc-700 hover:border-cafeAmber px-3.5 py-2.5 rounded-xl transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-cafeAmber"></i>
+                    <span>+91 95255 66665</span>
+                </a>
+                <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-bold text-cafeBg bg-cafeAmber hover:bg-cafeAmberHover px-4 py-2.5 rounded-xl transition-all shadow-md shadow-cafeAmber/20">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp Order</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-cafeTextPrimary hover:text-cafeAmber focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-cafeBg border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-cafeAmber flex items-center justify-center text-cafeBg font-syne font-extrabold text-lg">
+                        13
+                    </div>
+                    <span class="font-syne font-bold text-xl text-white">CAFE 13</span>
+                </div>
+                <button id="mobile-menu-close" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 mt-6 text-base font-medium">
+                <a href="#menu" class="mobile-nav-link text-cafeTextMuted hover:text-cafeAmber py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Menu Highlights</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link text-cafeTextMuted hover:text-cafeAmber py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-cafeTextMuted hover:text-cafeAmber py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-cafeTextMuted hover:text-cafeAmber py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#faq" class="mobile-nav-link text-cafeTextMuted hover:text-cafeAmber py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-cafeTextMuted hover:text-cafeAmber py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cafeAmber text-cafeBg font-bold text-center flex items-center justify-center gap-2 shadow-lg shadow-cafeAmber/20">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>WhatsApp Reservation</span>
+            </a>
+            <a href="tel:+919525566665" class="w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-cafeTextPrimary font-semibold text-center flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-cafeAmber"></i>
+                <span>Call +91 95255 66665</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 sm:py-24 lg:py-32 overflow-hidden">
+        <!-- Ambient Background Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-cafeAmber/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cafeTerracotta/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-left flex flex-col items-start">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs sm:text-sm font-medium mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 opacity-80"></i>
+                        </div>
+                        <span class="text-white font-bold">4.2 ★</span>
+                        <span class="text-cafeTextMuted">(4,326+ Google Reviews)</span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Patna’s Favorite Spot for <span class="text-transparent bg-clip-text bg-gradient-to-r from-cafeAmber to-amber-200">Great Vibes & Delicious Food</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-cafeTextMuted font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                        Nestled at Surya Crystal, Boring Road, Cafe 13 offers an aesthetic ambiance paired with mouth-watering continental delights, artisanal coffee, and wood-fired pizzas. Your ultimate hangout destination in Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="min-h-[48px] px-8 py-4 rounded-xl bg-cafeAmber hover:bg-cafeAmberHover text-cafeBg font-syne font-bold text-base text-center flex items-center justify-center gap-2 shadow-xl shadow-cafeAmber/20 transition-all hover:scale-[1.02]">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Reserve a Table</span>
+                        </a>
+                        <a href="#menu" class="min-h-[48px] px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-cafeAmber text-cafeTextPrimary font-syne font-semibold text-base text-center flex items-center justify-center gap-2 transition-all">
+                            <span>Explore Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-cafeAmber"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafe 13 Ambiance and Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cafeBg via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-zinc-950/80 backdrop-blur-md border border-zinc-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-cafeAmber/20 flex items-center justify-center text-cafeAmber">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-sm">Surya Crystal, Boring Road</h4>
+                                    <p class="text-xs text-cafeTextMuted">Opp. Karlo Automobiles, Patna</p>
+                                </div>
+                            </div>
+                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                Open Now
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-cafeSurface/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-zinc-800">
+                <div class="flex flex-col items-center justify-center pt-4 sm:pt-0">
+                    <div class="flex items-center gap-2 text-amber-400 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <span class="text-2xl font-extrabold font-syne text-white">4.2 / 5.0</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-cafeTextMuted">Trusted by 4,300+ Happy Foodies</p>
+                </div>
+                <div class="flex flex-col items-center justify-center pt-4 sm:pt-0">
+                    <div class="flex items-center gap-2 text-cafeAmber mb-1">
+                        <i data-lucide="coffee" class="w-5 h-5"></i>
+                        <span class="text-2xl font-extrabold font-syne text-white">Best Café Ambience</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-cafeTextMuted">Cozy Interior & Aesthetic Vibes</p>
+                </div>
+                <div class="flex flex-col items-center justify-center pt-4 sm:pt-0">
+                    <div class="flex items-center gap-2 text-emerald-400 mb-1">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        <span class="text-2xl font-extrabold font-syne text-white">Prime Location</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-cafeTextMuted">Surya Crystal, Boring Road, Patna</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights Section -->
+    <section id="menu" class="py-20 sm:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cafeAmber font-semibold text-xs sm:text-sm uppercase tracking-widest block mb-2">CULINARY EXCELLENCE</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Our Menu Highlights
+                </h2>
+                <p class="text-cafeTextMuted text-sm sm:text-base">
+                    Handcrafted beverages, wood-fired pizzas, and delicious continental plates prepared fresh for every order.
+                </p>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between group hover:border-cafeAmber transition-all duration-300 shadow-lg">
+                    <div class="w-full aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900 relative">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Artisan Cappuccino" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-cafeAmber text-cafeBg text-xs font-bold px-2.5 py-1 rounded-lg">Coffee</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-syne font-bold text-white text-lg">Signature Cappuccino</h3>
+                            <span class="font-bold text-cafeAmber text-base">₹180</span>
+                        </div>
+                        <p class="text-cafeTextMuted text-xs sm:text-sm mb-4 leading-relaxed">
+                            Rich espresso infused with steamed milk and velvety microfoam perfection.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20order%20Signature%20Cappuccino." target="_blank" rel="noopener noreferrer" class="min-h-[44px] w-full bg-zinc-900 hover:bg-cafeAmber text-cafeTextPrimary hover:text-cafeBg font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between group hover:border-cafeAmber transition-all duration-300 shadow-lg">
+                    <div class="w-full aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900 relative">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Wood-fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-cafeTerracotta text-white text-xs font-bold px-2.5 py-1 rounded-lg">Pizza</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-syne font-bold text-white text-lg">Wood-Fired Pizza</h3>
+                            <span class="font-bold text-cafeAmber text-base">₹399</span>
+                        </div>
+                        <p class="text-cafeTextMuted text-xs sm:text-sm mb-4 leading-relaxed">
+                            Loaded with mozzarella, garden-fresh vegetables, and signature herb sauce.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20order%20Wood-Fired%20Pizza." target="_blank" rel="noopener noreferrer" class="min-h-[44px] w-full bg-zinc-900 hover:bg-cafeAmber text-cafeTextPrimary hover:text-cafeBg font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between group hover:border-cafeAmber transition-all duration-300 shadow-lg">
+                    <div class="w-full aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900 relative">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Chocolate Thick Shake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-cafeAmber text-cafeBg text-xs font-bold px-2.5 py-1 rounded-lg">Shakes</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-syne font-bold text-white text-lg">Oreo Thick Shake</h3>
+                            <span class="font-bold text-cafeAmber text-base">₹220</span>
+                        </div>
+                        <p class="text-cafeTextMuted text-xs sm:text-sm mb-4 leading-relaxed">
+                            Blended with premium chocolate ice cream, crushed Oreos, and whipped cream.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20order%20Oreo%20Thick%20Shake." target="_blank" rel="noopener noreferrer" class="min-h-[44px] w-full bg-zinc-900 hover:bg-cafeAmber text-cafeTextPrimary hover:text-cafeBg font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl p-5 flex flex-col justify-between group hover:border-cafeAmber transition-all duration-300 shadow-lg">
+                    <div class="w-full aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900 relative">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Juicy Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-cafeTerracotta text-white text-xs font-bold px-2.5 py-1 rounded-lg">Continental</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-syne font-bold text-white text-lg">Crispy Veg Burger</h3>
+                            <span class="font-bold text-cafeAmber text-base">₹210</span>
+                        </div>
+                        <p class="text-cafeTextMuted text-xs sm:text-sm mb-4 leading-relaxed">
+                            Crunchy patty with melted cheese, lettuce, and secret house sauce in a toasted bun.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20order%20Crispy%20Veg%20Burger." target="_blank" rel="noopener noreferrer" class="min-h-[44px] w-full bg-zinc-900 hover:bg-cafeAmber text-cafeTextPrimary hover:text-cafeBg font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-cafeSurface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cafeAmber font-semibold text-xs sm:text-sm uppercase tracking-widest block mb-2">THE CAFE 13 EXPERIENCE</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Why Patna Chooses Us
+                </h2>
+                <p class="text-cafeTextMuted text-sm sm:text-base">
+                    We combine great taste, warm hospitality, and a cozy aesthetic atmosphere to make every visit memorable.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-cafeSurface border border-zinc-800 p-8 rounded-2xl flex flex-col items-start relative group hover:border-cafeAmber transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-cafeAmber/10 text-cafeAmber flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-white text-xl mb-3">Cozy Ambiance</h3>
+                    <p class="text-cafeTextMuted text-sm leading-relaxed">
+                        Thoughtfully designed interiors with warm lighting, perfect for romantic dates, friend hangouts, and relaxed conversations.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-cafeSurface border border-zinc-800 p-8 rounded-2xl flex flex-col items-start relative group hover:border-cafeAmber transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-cafeAmber/10 text-cafeAmber flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="utensils" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-white text-xl mb-3">Freshly Prepared Food</h3>
+                    <p class="text-cafeTextMuted text-sm leading-relaxed">
+                        Every dish is crafted using premium ingredients, hygienic preparation standards, and authentic recipes that satisfy your cravings.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-cafeSurface border border-zinc-800 p-8 rounded-2xl flex flex-col items-start relative group hover:border-cafeAmber transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-cafeAmber/10 text-cafeAmber flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="smile" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-white text-xl mb-3">Exceptional Hospitality</h3>
+                    <p class="text-cafeTextMuted text-sm leading-relaxed">
+                        Friendly and attentive staff dedicated to providing swift service and ensuring you have a wonderful time at Cafe 13.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Images Collage -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Cafe Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Coffee Brewing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Story Content -->
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-cafeAmber font-semibold text-xs sm:text-sm uppercase tracking-widest block mb-2">OUR STORY</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Where Great Food Meets Unforgettable Conversations
+                    </h2>
+                    <p class="text-cafeTextMuted text-base leading-relaxed mb-6">
+                        Located conveniently on the 1st Floor of Surya Crystal, Boring Road (opp. Karlo automobiles), Cafe 13 was born out of a passion for creating a welcoming sanctuary in the bustling heart of Patna.
+                    </p>
+                    <p class="text-cafeTextMuted text-base leading-relaxed mb-8">
+                        Whether you're looking to catch up with old friends, work remotely with a cup of artisanal coffee, or celebrate special moments over delicious pizzas and continental treats, Cafe 13 is your home away from home.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full mb-8 border-y border-zinc-800 py-6">
+                        <div>
+                            <h4 class="font-syne font-extrabold text-3xl text-cafeAmber mb-1">4,300+</h4>
+                            <p class="text-xs text-cafeTextMuted font-medium">Satisfied Customer Reviews</p>
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-extrabold text-3xl text-white mb-1">100%</h4>
+                        <p class="text-xs text-cafeTextMuted font-medium">Fresh Ingredients & Quality</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20know%20more%20about%20your%20cafe." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-cafeAmber text-cafeTextPrimary font-semibold text-sm flex items-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-cafeAmber"></i>
+                        <span>Chat with Us on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section id="gallery" class="py-20 bg-cafeSurface/30 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cafeAmber font-semibold text-xs sm:text-sm uppercase tracking-widest block mb-2">VISUAL TOUR</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Glimpse of Cafe 13
+                </h2>
+                <p class="text-cafeTextMuted text-sm sm:text-base">
+                    Take a peek inside our vibrant space and mouth-watering creations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=500&q=80" alt="Cafe Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=500&q=80" alt="Coffee Cup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Delicious Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80" alt="Thick Shake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cafeAmber font-semibold text-xs sm:text-sm uppercase tracking-widest block mb-2">TESTIMONIALS</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Loved by 4,300+ Patnaites
+                </h2>
+                <p class="text-cafeTextMuted text-sm sm:text-base">
+                    Read what our valued customers have to say about their experience at Cafe 13.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-cafeSurface border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-cafeTextMuted text-sm leading-relaxed mb-6">
+                            "One of the best cafes on Boring Road! The ambience is extremely cozy and aesthetic. Their wood-fired pizza and cappuccino are absolute must-tries."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-cafeAmber/20 text-cafeAmber font-bold font-syne flex items-center justify-center">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Aditya Kumar</h4>
+                            <p class="text-xs text-cafeTextMuted">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-cafeSurface border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-cafeTextMuted text-sm leading-relaxed mb-6">
+                            "Great vibe for spending quality time with friends. The staff is polite, service is quick, and the Oreo thick shakes are simply top-notch!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-cafeTerracotta/20 text-cafeTerracotta font-bold font-syne flex items-center justify-center">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Priya Singh</h4>
+                            <p class="text-xs text-cafeTextMuted">Verified Diner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-cafeSurface border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400 opacity-60"></i>
+                        </div>
+                        <p class="text-cafeTextMuted text-sm leading-relaxed mb-6">
+                            "Prime location at Surya Crystal on Boring Road. Very easy to find and parking is manageable. Perfect spot in Patna for evening coffee."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-cafeAmber/20 text-cafeAmber font-bold font-syne flex items-center justify-center">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Rahul Mishra</h4>
+                            <p class="text-xs text-cafeTextMuted">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-20 bg-cafeSurface/30 border-t border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cafeAmber font-semibold text-xs sm:text-sm uppercase tracking-widest block mb-2">GOT QUESTIONS?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-cafeTextMuted text-sm sm:text-base">
+                    Everything you need to know about visiting or ordering from Cafe 13.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>How can I reserve a table at Cafe 13?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeAmber shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-cafeTextMuted text-sm leading-relaxed">
+                        You can easily reserve a table instantly via WhatsApp by clicking any of the "Reserve a Table" buttons on our website, or by calling us directly at +91 95255 66665.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Where is Cafe 13 located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeAmber shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-cafeTextMuted text-sm leading-relaxed">
+                        We are conveniently located at 1st Floor, Surya Crystal, Boring Road, opposite Karlo Automobiles, Anandpuri, Patna, Bihar 800001.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>What are your opening hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeAmber shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-cafeTextMuted text-sm leading-relaxed">
+                        Cafe 13 is open every day from 11:00 AM to 11:00 PM, serving fresh beverages, snacks, and continental meals.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-cafeSurface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Do you offer home delivery or takeaway?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeAmber shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-cafeTextMuted text-sm leading-relaxed">
+                        Yes! You can place direct takeaway or delivery orders by connecting with us via WhatsApp at +91 95255 66665.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cafeAmber font-semibold text-xs sm:text-sm uppercase tracking-widest block mb-2">VISIT OR CONNECT</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Location & Table Reservation
+                </h2>
+                <p class="text-cafeTextMuted text-sm sm:text-base">
+                    Drop by for a cup of coffee or reserve your table in advance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left Column: Info & Map -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    <!-- Info Card -->
+                    <div class="bg-cafeSurface border border-zinc-800 p-6 sm:p-8 rounded-2xl shadow-lg space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cafeAmber/10 text-cafeAmber flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-white text-base mb-1">Address</h3>
+                                <p class="text-cafeTextMuted text-sm leading-relaxed">
+                                    1st Floor, Surya Crystal, Boring Rd, opp. Karlo automobiles, Anandpuri, Patna, Bihar 800001
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cafeAmber/10 text-cafeAmber flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-white text-base mb-1">Phone / WhatsApp</h3>
+                                <a href="tel:+919525566665" class="text-cafeAmber hover:underline text-sm font-semibold">+91 95255 66665</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cafeAmber/10 text-cafeAmber flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-white text-base mb-1">Opening Hours</h3>
+                                <p class="text-cafeTextMuted text-sm">Monday – Sunday: 11:00 AM – 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Google Map -->
+                    <div class="w-full h-[300px] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-lg relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778521538363!2d85.1221!3d25.6125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f700000001%3A0x0!2sCafe%2013%20Boring%20Road%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Cafe 13 Google Maps Location">
+                        </iframe>
+                        <div class="absolute bottom-4 right-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Cafe+13+Boring+Road+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-cafeBg text-white text-xs font-bold border border-zinc-700 shadow-xl flex items-center gap-2 hover:bg-cafeAmber hover:text-cafeBg transition-all">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Working Table Reservation Form -->
+                <div class="lg:col-span-6">
+                    <div class="bg-cafeSurface border border-zinc-800 p-6 sm:p-8 rounded-2xl shadow-lg">
+                        <h3 class="font-syne font-bold text-white text-xl mb-2">Book a Table</h3>
+                        <p class="text-cafeTextMuted text-xs sm:text-sm mb-6">
+                            Fill out the form below or instantly reserve via WhatsApp for quick confirmation.
+                        </p>
+
+                        <form id="reservation-form" class="space-y-4">
+                            <div>
+                                <label for="res-name" class="block text-xs font-semibold text-cafeTextMuted uppercase tracking-wider mb-2">Your Name *</label>
+                                <input type="text" id="res-name" required class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cafeAmber transition-colors" placeholder="e.g. Aman Sharma">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="res-phone" class="block text-xs font-semibold text-cafeTextMuted uppercase tracking-wider mb-2">Phone Number *</label>
+                                    <input type="tel" id="res-phone" required class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cafeAmber transition-colors" placeholder="e.g. +91 98765 43210">
+                                </div>
+                                <div>
+                                    <label for="res-guests" class="block text-xs font-semibold text-cafeTextMuted uppercase tracking-wider mb-2">Number of Guests *</label>
+                                    <select id="res-guests" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cafeAmber transition-colors">
+                                        <option value="1-2 Persons">1 - 2 Persons</option>
+                                        <option value="3-4 Persons">3 - 4 Persons</option>
+                                        <option value="5-8 Persons">5 - 8 Persons</option>
+                                        <option value="8+ Large Group">8+ Large Group</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="res-date" class="block text-xs font-semibold text-cafeTextMuted uppercase tracking-wider mb-2">Date *</label>
+                                    <input type="date" id="res-date" required class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cafeAmber transition-colors">
+                                </div>
+                                <div>
+                                    <label for="res-time" class="block text-xs font-semibold text-cafeTextMuted uppercase tracking-wider mb-2">Time *</label>
+                                    <input type="time" id="res-time" required class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cafeAmber transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="res-notes" class="block text-xs font-semibold text-cafeTextMuted uppercase tracking-wider mb-2">Special Requests (Optional)</label>
+                                <textarea id="res-notes" rows="3" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cafeAmber transition-colors" placeholder="Birthday celebration, window seat preference, etc."></textarea>
+                            </div>
+
+                            <button type="submit" id="res-submit-btn" class="min-h-[48px] w-full bg-cafeAmber hover:bg-cafeAmberHover text-cafeBg font-syne font-bold text-base rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-cafeAmber/20 transition-all">
+                                <span id="btn-text">Confirm Reservation</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-cafeSurface border border-zinc-800 p-8 rounded-2xl max-w-md w-full text-center relative shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Reservation Received!</h3>
+            <p id="success-message" class="text-cafeTextMuted text-sm mb-6 leading-relaxed">
+                Thank you! Your table booking request has been successfully submitted. We will contact you shortly to confirm.
+            </p>
+            <button id="modal-close-btn" class="min-h-[48px] w-full bg-cafeAmber hover:bg-cafeAmberHover text-cafeBg font-syne font-bold rounded-xl transition-all">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-cafeBg border-t border-zinc-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+919525566665" class="min-h-[48px] bg-zinc-900 border border-zinc-700 text-cafeTextPrimary font-semibold text-xs rounded-xl flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-cafeAmber"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919525566665?text=Hi%20Cafe%2013,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="min-h-[48px] bg-cafeAmber text-cafeBg font-bold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-cafeAmber/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-xl bg-cafeAmber flex items-center justify-center text-cafeBg font-syne font-extrabold text-lg">
+                            13
+                        </div>
+                        <span class="font-syne font-bold text-xl text-white">CAFE 13</span>
+                    </div>
+                    <p class="text-cafeTextMuted text-xs sm:text-sm leading-relaxed">
+                        Patna’s ultimate cozy destination for artisan coffee, wood-fired pizzas, continental food, and unforgettable memories.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-400 text-xs font-bold pt-1">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span>4.2 ★ Rating across 4,300+ Google Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-cafeTextMuted">
+                        <li><a href="#menu" class="hover:text-cafeAmber transition-colors">Menu Highlights</a></li>
+                        <li><a href="#about" class="hover:text-cafeAmber transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-cafeAmber transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-cafeAmber transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-cafeAmber transition-colors">Table Reservation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Details -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-cafeTextMuted">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-cafeAmber shrink-0 mt-1"></i>
+                            <span>1st Floor, Surya Crystal, Boring Rd, opp. Karlo automobiles, Anandpuri, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-cafeAmber shrink-0"></i>
+                            <a href="tel:+919525566665" class="hover:text-cafeAmber transition-colors">+91 95255 66665</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Opening Hours -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Opening Hours</h4>
+                    <ul class="space-y-2 text-sm text-cafeTextMuted">
+                        <li class="flex justify-between border-b border-zinc-900 pb-2">
+                            <span>Monday - Sunday</span>
+                            <span class="text-white font-medium">11:00 AM – 11:00 PM</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Cafe+13+Boring+Road+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 bg-zinc-900 border border-zinc-800 hover:border-cafeAmber text-cafeTextPrimary text-xs font-semibold rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="map" class="w-4 h-4 text-cafeAmber"></i>
+                            <span>View on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-cafeTextMuted gap-4 text-center sm:text-left">
+                <p>&copy; <span id="current-year"></span> Cafe 13, Patna. All rights reserved.</p>
+                <p>Designed with warmth & aesthetic flair for Patna food lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    const svg = btn.querySelector('svg');
+                    if (svg) svg.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Reservation Form Handling & Success Modal
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Sanitize and extract values safely
+            const name = document.getElementById('res-name').value.trim();
+            const phone = document.getElementById('res-phone').value.trim();
+            const guests = document.getElementById('res-guests').value;
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+
+            if (!name || !phone || !date || !time) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            reservationForm.reset();
+        });
+
+        modalCloseBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
