@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELL FOOD | Restaurant & Food Delivery in Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0F172A',
+                        surface: '#1E293B',
+                        primary: '#D97706',
+                        'primary-hover': '#F59E0B',
+                        secondary: '#C2410C',
+                        'text-primary': '#F8FAFC',
+                        'text-muted': '#94A3B8',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and overflow fixes */
+        body {
+            background-color: #0F172A;
+            color: #F8FAFC;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F172A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-background text-text-primary antialiased selection:bg-primary selection:text-white pb-28 lg:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- 1. ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-primary to-secondary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Today! Fast Delivery near Patliputra Sports Complex, Patna</span>
+        <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="underline font-bold ml-1 hover:text-slate-100">Order Now →</a>
+    </div>
+
+    <!-- 100% SOLID OPAQUE STICKY HEADER -->
+    <header class="sticky top-0 z-40 bg-[#0F172A] border-b border-slate-800 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="utensils" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                    <span class="font-outfit font-extrabold text-xl sm:text-2xl tracking-tight text-white block leading-none">WELL FOOD</span>
+                    <span class="text-xs text-primary font-medium tracking-wider uppercase">Restaurant & Delivery</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#menu" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Menu</a>
+                <a href="#about" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Our Story</a>
+                <a href="#why-us" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Why Us</a>
+                <a href="#reviews" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919097777788" class="h-11 px-4 rounded-xl border border-slate-700 hover:border-primary text-text-primary text-sm font-semibold flex items-center gap-2 transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="h-11 px-5 rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-semibold flex items-center gap-2 shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp Order</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden w-11 h-11 rounded-xl bg-surface border border-slate-700 flex items-center justify-center text-text-primary hover:text-primary focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#0F172A] border-l border-slate-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                        <i data-lucide="utensils" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="font-outfit font-extrabold text-lg text-white block leading-none">WELL FOOD</span>
+                        <span class="text-[10px] text-primary font-medium tracking-wider uppercase">Patna</span>
+                    </div>
+                </div>
+                <button id="menu-close" aria-label="Close Navigation Menu" class="w-10 h-10 rounded-xl bg-surface border border-slate-700 flex items-center justify-center text-text-muted hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 pt-6">
+                <a href="#menu" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary flex items-center justify-between py-2 border-b border-slate-800/50">
+                    <span>Popular Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary flex items-center justify-between py-2 border-b border-slate-800/50">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#why-us" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary flex items-center justify-between py-2 border-b border-slate-800/50">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary flex items-center justify-between py-2 border-b border-slate-800/50">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary flex items-center justify-between py-2 border-b border-slate-800/50">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-text-muted"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+            <a href="tel:+919097777788" class="w-full h-12 rounded-xl bg-surface border border-slate-700 text-text-primary font-semibold flex items-center justify-center gap-2 hover:border-primary transition-colors">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                <span>Call +91 90977 77788</span>
+            </a>
+            <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Order on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-slate-700 mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-text-primary">3.7 ★ <span class="text-text-muted font-normal">(2,626+ Google Reviews)</span></span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words font-outfit sm: md: font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+                        Delicious Food, <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Delivered Fresh</span> in Patna!
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-text-muted max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed font-normal">
+                        Craving something mouth-watering? Order directly from <strong class="text-text-primary">WELL FOOD</strong> near Patliputra Sports Complex. Prepared with hygiene, served with love, and delivered straight to your doorstep.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20want%20to%20order%20delicious%20food!" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto h-14 px-8 rounded-2xl bg-primary hover:bg-primary-hover text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-primary/25 transition-all transform hover:-translate-y-0.5">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="tel:+919097777788" class="w-full sm:w-auto h-14 px-8 rounded-2xl bg-surface border border-slate-700 hover:border-primary text-text-primary font-semibold text-base flex items-center justify-center gap-3 transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                            <span>Call +91 90977 77788</span>
+                        </a>
+                    </div>
+
+                    <!-- Location Tag -->
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                        <span>Tempo Stand, near SBI Bank, Patliputra Sports Complex, Patna</span>
+                    </div>
+                </div>
+
+                <!-- Hero Image Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-square max-w-md mx-auto rounded-3xl overflow-hidden border border-slate-700 shadow-2xl bg-surface">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Delicious Food from Well Food Patna" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-surface/90 backdrop-blur-md border border-slate-700/80 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="flame" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-outfit font-bold text-white text-sm">Hot & Freshly Prepared</h4>
+                                <p class="text-xs text-text-muted">Ready for instant takeaway or delivery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-slate-800 bg-surface/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-slate-800">
+                
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0">
+                    <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+                        <i data-lucide="star" class="w-6 h-6 fill-primary"></i>
+                    </div>
+                    <div>
+                        <div class="font-outfit font-extrabold text-2xl text-white">3.7 ★ Rating</div>
+                        <div class="text-sm text-text-muted">Trusted by 2,626+ foodies in Patna</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="font-outfit font-extrabold text-2xl text-white">Prime Location</div>
+                        <div class="text-sm text-text-muted">Near Patliputra Sports Complex</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="font-outfit font-extrabold text-2xl text-white">Instant WhatsApp</div>
+                        <div class="text-sm text-text-muted">Quick replies & fast dispatch</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. POPULAR DISHES GRID -->
+    <section id="menu" class="py-20 md:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">Our Specialties</span>
+                <h2 class="break-words font-outfit text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+                    Popular Dishes You'll Love
+                </h2>
+                <p class="text-text-muted text-base sm:text-lg">
+                    Handcrafted with authentic spices, fresh ingredients, and authentic culinary passion. Order directly on WhatsApp for instant service!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Dish Card 1 -->
+                <div class="bg-surface rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Special Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-primary font-bold text-xs border border-slate-700">
+                                Bestseller
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-outfit font-bold text-xl text-white">Signature Dum Biryani</h3>
+                                <span class="font-outfit font-extrabold text-primary text-lg">₹249</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4">
+                                Fragrant basmati rice layered with tender meat or veggies, slow-cooked in traditional dum style with aromatic spices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20want%20to%20order%20Signature%20Dum%20Biryani%20(₹249)" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 border border-primary/30 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dish Card 2 -->
+                <div class="bg-surface rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="North Indian Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-amber-400 font-bold text-xs border border-slate-700">
+                                Chef Choice
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-outfit font-bold text-xl text-white">Well Food Special Thali</h3>
+                                <span class="font-outfit font-extrabold text-primary text-lg">₹199</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4">
+                                Complete wholesome meal featuring dal makhani, paneer/chicken gravy, fresh tandoori rotis, rice, raita, and sweet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20want%20to%20order%20Well%20Food%20Special%20Thali%20(₹199)" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 border border-primary/30 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dish Card 3 -->
+                <div class="bg-surface rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Crispy Snacks & Fast Food" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-primary font-bold text-xs border border-slate-700">
+                                Popular Snack
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-outfit font-bold text-xl text-white">Crispy Starters Platter</h3>
+                                <span class="font-outfit font-extrabold text-primary text-lg">₹179</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4">
+                                Perfectly spiced, crispy starters tossed with secret house sauces. Ideal for evening cravings and gatherings.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20want%20to%20order%20Crispy%20Starters%20Platter%20(₹179)" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 border border-primary/30 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Full Menu Callout -->
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20Please%20send%20me%20your%20complete%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-hover text-base">
+                    <span>View Complete Menu & Daily Specials on WhatsApp</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-20 md:py-28 bg-surface/30 border-y border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">The Well Food Difference</span>
+                <h2 class="break-words font-outfit text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+                    Why Food Lovers Choose Us
+                </h2>
+                <p class="text-text-muted text-base sm:text-lg">
+                    We take pride in serving delicious, hygienic, and authentic food to every customer in Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-surface p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-outfit font-bold text-xl text-white mb-3">100% Hygienic</h3>
+                        <p class="text-text-muted text-sm leading-relaxed">
+                            Prepared in a sanitized kitchen adhering to the highest standards of cleanliness and food safety.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-surface p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="clock" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-outfit font-bold text-xl text-white mb-3">Fast Delivery</h3>
+                        <p class="text-text-muted text-sm leading-relaxed">
+                            Swift packaging and quick dispatch ensure your food arrives piping hot and fresh at your door.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-surface p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="heart" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-outfit font-bold text-xl text-white mb-3">Authentic Taste</h3>
+                        <p class="text-text-muted text-sm leading-relaxed">
+                            Traditional recipes blended with premium quality spices to satisfy your authentic Indian food cravings.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-surface p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="smile" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-outfit font-bold text-xl text-white mb-3">Trusted locally</h3>
+                        <p class="text-text-muted text-sm leading-relaxed">
+                            Over 2,600+ satisfied customers on Google rate us for consistent quality and friendly service.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. ABOUT / STORY SECTION -->
+    <section id="about" class="py-20 md:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Image side -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative aspect-[4/3] rounded-3xl overflow-hidden border border-slate-700 shadow-2xl bg-surface">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Well Food Restaurant Interior" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 hidden sm:flex items-center gap-4 bg-surface border border-slate-700 p-4 rounded-2xl shadow-2xl">
+                        <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="font-outfit font-bold text-white text-base">Patna's Favorite</div>
+                            <div class="text-xs text-text-muted">Near Patliputra Sports Complex</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text side -->
+                <div class="lg:col-span-6">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">Our Story</span>
+                    <h2 class="break-words font-outfit text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-6">
+                        Serving Happiness Near Patliputra Sports Complex
+                    </h2>
+                    <p class="text-text-muted text-base sm:text-lg leading-relaxed mb-6">
+                        Located conveniently near the tempo stand and SBI Bank at Patliputra Sports Complex, Patna, <strong class="text-text-primary">WELL FOOD</strong> was founded with a singular mission: to serve delicious, high-quality, and affordable meals to every resident, sports enthusiast, and visitor in Patna.
+                    </p>
+                    <p class="text-text-muted text-base sm:text-lg leading-relaxed mb-8">
+                        Whether you are grabbing a quick bite after your sports practice or ordering a wholesome dinner for your family via WhatsApp, we ensure every dish is prepared with utmost care, authentic spices, and pristine hygiene.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-800">
+                        <div>
+                            <div class="font-outfit font-extrabold text-3xl text-primary mb-1">2,626+</div>
+                            <div class="text-sm text-text-muted">Google Reviews & Happy Diners</div>
+                        </div>
+                        <div>
+                            <div class="font-outfit font-extrabold text-3xl text-primary mb-1">3.7 ★</div>
+                            <div class="text-sm text-text-muted">Verified Customer Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 md:py-28 bg-surface/30 border-y border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">Testimonials</span>
+                <h2 class="break-words font-outfit text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-text-muted text-base sm:text-lg">
+                    Real feedback from real food lovers who order from Well Food in Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review Card 1 -->
+                <div class="bg-surface p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-text-primary text-sm sm:text-base leading-relaxed mb-6 italic">
+                            "Amazing food quality! Ordered via WhatsApp and the delivery was super fast. The taste is authentic and portions are very generous. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-outfit">
+                            AK
+                        </div>
+                        <div>
+                            <div class="font-outfit font-bold text-white text-sm">Amit Kumar</div>
+                            <div class="text-xs text-text-muted">Patna Local Guide</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-surface p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-text-primary text-sm sm:text-base leading-relaxed mb-6 italic">
+                            "Very convenient location near Patliputra Sports Complex. Great place to grab fresh food after sports. Their biryani is top-notch!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-outfit">
+                            RS
+                        </div>
+                        <div>
+                            <div class="font-outfit font-bold text-white text-sm">Rahul Singh</div>
+                            <div class="text-xs text-text-muted">Google Reviewer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="bg-surface p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-text-primary text-sm sm:text-base leading-relaxed mb-6 italic">
+                            "Clean kitchen, polite staff, and delicious food at very reasonable prices. Ordering through WhatsApp makes it so hassle-free."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-outfit">
+                            PK
+                        </div>
+                        <div>
+                            <div class="font-outfit font-bold text-white text-sm">Priya Kumari</div>
+                            <div class="text-xs text-text-muted">Verified Customer</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 md:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">Visit or Order</span>
+                <h2 class="break-words font-outfit text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+                    Location & Contact Details
+                </h2>
+                <p class="text-text-muted text-base sm:text-lg">
+                    Drop by our restaurant or contact us instantly for quick food delivery in Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Info & Form -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    
+                    <!-- Contact Cards -->
+                    <div class="bg-surface p-8 rounded-3xl border border-slate-800">
+                        <h3 class="font-outfit font-bold text-2xl text-white mb-6">Get in Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-outfit font-bold text-white text-base">Address</h4>
+                                    <p class="text-text-muted text-sm mt-1 leading-relaxed">
+                                        Tempo Stand, near SBI Bank, near Patliputra Sports Complex, Patna, Bihar 800020
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-outfit font-bold text-white text-base">Phone & WhatsApp</h4>
+                                    <p class="text-text-muted text-sm mt-1">
+                                        <a href="tel:+919097777788" class="text-primary hover:underline font-semibold">+91 90977 77788</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-outfit font-bold text-white text-base">Operating Hours</h4>
+                                    <p class="text-text-muted text-sm mt-1">
+                                        Monday – Sunday: 10:00 AM – 11:00 PM (Open All Days)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row gap-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=WELL+FOOD+Patliputra+Sports+Complex+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 h-12 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Directions</span>
+                            </a>
+                            <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="flex-1 h-12 rounded-xl bg-surface border border-slate-700 hover:border-primary text-text-primary font-semibold flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-primary"></i>
+                                <span>WhatsApp Us</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Inquiry Form -->
+                    <div class="bg-surface p-8 rounded-3xl border border-slate-800">
+                        <h3 class="font-outfit font-bold text-xl text-white mb-4">Send an Inquiry or Bulk Order</h3>
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-text-muted uppercase mb-1">Your Name</label>
+                                <input type="text" id="name" required class="w-full h-12 px-4 rounded-xl bg-background border border-slate-700 text-text-primary focus:outline-none focus:border-primary text-sm" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-text-muted uppercase mb-1">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full h-12 px-4 rounded-xl bg-background border border-slate-700 text-text-primary focus:outline-none focus:border-primary text-sm" placeholder="Enter 10-digit mobile number">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-text-muted uppercase mb-1">Message / Order details</label>
+                                <textarea id="message" rows="3" required class="w-full p-4 rounded-xl bg-background border border-slate-700 text-text-primary focus:outline-none focus:border-primary text-sm resize-none" placeholder="What would you like to order?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full h-12 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Right: Google Maps Embed -->
+                <div class="lg:col-span-6 flex flex-col">
+                    <div class="w-full h-full min-h-[450px] lg:min-h-full rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-surface relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778536848135!2d85.1145!3d25.6125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ1LjAiTiA4NcKwMDYnNTIuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 480px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Well Food Location Map">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer class="bg-surface border-t border-slate-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-slate-800">
+                
+                <!-- Col 1 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20">
+                            <i data-lucide="utensils" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-outfit font-extrabold text-xl text-white">WELL FOOD</span>
+                    </div>
+                    <p class="text-text-muted text-sm leading-relaxed">
+                        Serving fresh, hygienic, and delicious meals near Patliputra Sports Complex, Patna. Order on WhatsApp for instant home delivery.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-outfit font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#menu" class="text-text-muted hover:text-primary transition-colors">Popular Menu</a></li>
+                        <li><a href="#about" class="text-text-muted hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#why-us" class="text-text-muted hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#reviews" class="text-text-muted hover:text-primary transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="text-text-muted hover:text-primary transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-outfit font-bold text-white text-base mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-text-muted">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                            <span>Patliputra Sports Complex, Patna, Bihar 800020</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="tel:+919097777788" class="hover:text-primary transition-colors">+91 90977 77788</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="https://wa.me/919097777788" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">WhatsApp Order</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-outfit font-bold text-white text-base mb-4">Hours</h4>
+                    <p class="text-text-muted text-sm leading-relaxed mb-4">
+                        Monday to Sunday<br>
+                        10:00 AM – 11:00 PM<br>
+                        <span class="text-primary font-semibold">Open All Days</span>
+                    </p>
+                    <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20want%20to%20order!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-colors">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Order Now</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-text-muted gap-4">
+                <p>&copy; <span id="current-year"></span> WELL FOOD, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <span>Google Rating: 3.7 ★ (2,626+ Reviews)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 9. STICKY MOBILE ACTION BAR (Mobile Only) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0F172A] border-t border-slate-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919097777788" class="flex-1 h-12 rounded-xl bg-surface border border-slate-700 text-text-primary text-sm font-semibold flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919097777788?text=Hello%20Well%20Food,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="flex-1 h-12 rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Order</span>
+        </a>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-surface border border-slate-700 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-outfit font-extrabold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p id="success-message" class="text-text-muted text-sm mb-6 leading-relaxed">
+                Thank you for reaching out to Well Food. We have received your message and will contact you shortly.
+            </p>
+            <button id="close-modal" class="w-full h-12 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-sm transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Elements
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Inquiry Form Handling with Safe Sanitization & Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        const successMessage = document.getElementById('success-message');
+
+        inquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Sanitize inputs
+            const rawName = document.getElementById('name').value;
+            const rawPhone = document.getElementById('phone').value;
+            const rawMsg = document.getElementById('message').value;
+
+            const name = DOMPurify ? DOMPurify.sanitize(rawName) : rawName.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            const phone = DOMPurify ? DOMPurify.sanitize(rawPhone) : rawPhone.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            const message = DOMPurify ? DOMPurify.sanitize(rawMsg) : rawMsg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+            successMessage.textContent = `Thank you ${name}! We have received your inquiry and will call you at ${phone} or respond via WhatsApp shortly.`;
+            successModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            inquiryForm.reset();
+        });
+
+        closeModal.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
