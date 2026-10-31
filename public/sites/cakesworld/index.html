@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cake's World | Best Custom Cakes & Bakery in Kankarbagh, Patna</title>
+    <meta name="description" content="Order fresh, eggless, custom birthday and anniversary cakes from Cake's World in Kankarbagh, Patna. 4.9★ rated local bakery. Instant WhatsApp ordering!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bakery: {
+                            bg: '#FFFFFF',
+                            surface: '#FFF1F2',
+                            primary: '#E05A68',
+                            primaryHover: '#C74855',
+                            secondary: '#FFF9F5',
+                            textDark: '#2D1F1D',
+                            textMuted: '#7A6B69',
+                            border: '#FFE4E6'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar & overflow protection */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+            background-color: #FFFFFF;
+            color: #2D1F1D;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom smooth transitions */
+        .transition-all-300 {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-bakery-bg text-bakery-textDark antialiased pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-bakery-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center relative z-40">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span>🎂 Fresh Custom Cakes Baked Daily in Kankarbagh, Patna!</span>
+            <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20order%20a%20cake!" target="_blank" rel="noopener noreferrer" class="underline font-semibold hover:text-bakery-secondary transition-colors">Order on WhatsApp →</a>
+        </div>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-white border-b border-bakery-border shadow-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-bakery-surface flex items-center justify-center text-bakery-primary border border-bakery-border group-hover:scale-105 transition-transform">
+                    <i data-lucide="cake" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-bakery-textDark block leading-none">Cake's World</span>
+                    <span class="text-[10px] sm:text-xs font-medium text-bakery-textMuted tracking-wider uppercase block mt-1">Kankarbagh, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-bakery-textDark">
+                <a href="#services" class="hover:text-bakery-primary transition-colors">Menu & Cakes</a>
+                <a href="#why-us" class="hover:text-bakery-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-bakery-primary transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-bakery-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-bakery-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-bakery-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-bakery-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Header CTA Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919122777765" class="flex items-center gap-2 px-4 py-2.5 rounded-full border border-bakery-border text-bakery-textDark hover:border-bakery-primary text-sm font-semibold transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-bakery-primary"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20have%20an%20inquiry%20about%20cakes." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-bakery-primary hover:bg-bakery-primaryHover text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl text-bakery-textDark hover:bg-bakery-surface transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-white border-l border-bakery-border rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-bakery-border">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-bakery-surface flex items-center justify-center text-bakery-primary">
+                        <i data-lucide="cake" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-serif font-bold text-lg text-bakery-textDark">Cake's World</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-lg text-bakery-textMuted hover:bg-bakery-surface">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 py-6 font-medium text-bakery-textDark">
+                <a href="#services" class="mobile-nav-link flex items-center justify-between py-2 border-b border-bakery-surface"><span>Menu & Cakes</span> <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i></a>
+                <a href="#why-us" class="mobile-nav-link flex items-center justify-between py-2 border-b border-bakery-surface"><span>Why Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i></a>
+                <a href="#about" class="mobile-nav-link flex items-center justify-between py-2 border-b border-bakery-surface"><span>Our Story</span> <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i></a>
+                <a href="#gallery" class="mobile-nav-link flex items-center justify-between py-2 border-b border-bakery-surface"><span>Gallery</span> <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i></a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between py-2 border-b border-bakery-surface"><span>Reviews</span> <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i></a>
+                <a href="#faq" class="mobile-nav-link flex items-center justify-between py-2 border-b border-bakery-surface"><span>FAQ</span> <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i></a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between py-2"><span>Location & Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-bakery-border flex flex-col gap-3">
+            <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20order%20a%20cake." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-bakery-primary text-white font-semibold shadow-md">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Order on WhatsApp</span>
+            </a>
+            <a href="tel:+919122777765" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-bakery-border text-bakery-textDark font-semibold">
+                <i data-lucide="phone" class="w-5 h-5 text-bakery-primary"></i>
+                <span>Call +91 91227 77765</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-bakery-secondary to-bakery-bg py-16 sm:py-24 overflow-hidden">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-bakery-border shadow-sm mb-6">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-bakery-textDark">4.9★ Rated on Google (70+ Reviews)</span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: lg: font-extrabold font-serif text-bakery-textDark leading-[1.15] mb-6 break-words">
+                        Handcrafted Custom Cakes for Your <span class="text-bakery-primary italic">Sweetest Moments</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-bakery-textMuted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Welcome to Cake's World in Kankarbagh, Patna! We bake fresh, delicious, 100% eggless custom birthday cakes, anniversary treats, and pastries tailored to perfection.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20would%20like%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-bakery-primary hover:bg-bakery-primaryHover text-white font-semibold shadow-lg hover:shadow-xl transition-all text-base">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white border-2 border-bakery-border hover:border-bakery-primary text-bakery-textDark font-semibold transition-all text-base">
+                            <span>View Cake Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image / Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-bakery-surface">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Delicious Custom Birthday Cake by Cake's World Patna" class="w-full h-full object-cover">
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-bakery-border shadow-lg flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-bakery-surface flex items-center justify-center text-bakery-primary flex-shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm sm:text-base text-bakery-textDark">Patna's Favorite Bakery</h4>
+                                <p class="text-xs text-bakery-textMuted">Freshly baked with premium quality ingredients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-bakery-surface border-y border-bakery-border py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-2xl sm:text-4xl font-extrabold font-serif text-bakery-primary mb-1">4.9★</div>
+                    <div class="text-xs sm:text-sm font-medium text-bakery-textMuted">Google Rating (70+ Reviews)</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-4xl font-extrabold font-serif text-bakery-primary mb-1">100%</div>
+                    <div class="text-xs sm:text-sm font-medium text-bakery-textMuted">Eggless Options Available</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-4xl font-extrabold font-serif text-bakery-primary mb-1">Fresh</div>
+                    <div class="text-xs sm:text-sm font-medium text-bakery-textMuted">Baked Daily in Kankarbagh</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-4xl font-extrabold font-serif text-bakery-primary mb-1">Quick</div>
+                    <div class="text-xs sm:text-sm font-medium text-bakery-textMuted">WhatsApp Orders & Delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Cake Offerings Grid -->
+    <section id="services" class="py-20 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-bakery-primary block mb-2">Our Specialties</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-bakery-textDark mb-4">Delicious Cakes for Every Celebration</h2>
+                <p class="text-bakery-textMuted text-base">From grand multi-tier wedding cakes to delightful birthday surprises, explore our freshly baked collection.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-bakery-secondary rounded-2xl overflow-hidden border border-bakery-border flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" alt="Custom Birthday Cakes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-2">Custom Birthday Cakes</h3>
+                            <p class="text-bakery-textMuted text-sm mb-6 leading-relaxed">Personalized theme cakes for kids and adults with custom flavors, names, and designs.</p>
+                        </div>
+                        <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20inquire%20about%20Custom%20Birthday%20Cakes." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-bakery-primary hover:bg-bakery-primaryHover text-white text-sm font-semibold text-center transition-colors">
+                            Inquire on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-bakery-secondary rounded-2xl overflow-hidden border border-bakery-border flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542826438-bd32f26d6444?auto=format&fit=crop&w=600&q=80" alt="Anniversary Specials" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-2">Anniversary Specials</h3>
+                            <p class="text-bakery-textMuted text-sm mb-6 leading-relaxed">Romantic heart-shaped and multi-tier elegance cakes crafted to celebrate your love milestones.</p>
+                        </div>
+                        <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20inquire%20about%20Anniversary%20Cakes." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-bakery-primary hover:bg-bakery-primaryHover text-white text-sm font-semibold text-center transition-colors">
+                            Inquire on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-bakery-secondary rounded-2xl overflow-hidden border border-bakery-border flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Gourmet Cupcakes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-2">Gourmet Cupcakes</h3>
+                            <p class="text-bakery-textMuted text-sm mb-6 leading-relaxed">Fluffy, cream-topped cupcakes in chocolate, red velvet, vanilla, and butterscotch flavors.</p>
+                        </div>
+                        <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20inquire%20about%20Cupcakes." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-bakery-primary hover:bg-bakery-primaryHover text-white text-sm font-semibold text-center transition-colors">
+                            Inquire on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-bakery-secondary rounded-2xl overflow-hidden border border-bakery-border flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-square w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Pastries & Desserts" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-2">Pastries & Desserts</h3>
+                            <p class="text-bakery-textMuted text-sm mb-6 leading-relaxed">Daily fresh slices, chocolate truffles, and jar cakes for your sudden sweet cravings.</p>
+                        </div>
+                        <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20inquire%20about%20Pastries." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-bakery-primary hover:bg-bakery-primaryHover text-white text-sm font-semibold text-center transition-colors">
+                            Inquire on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-bakery-surface">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-bakery-primary block mb-2">The Cake's World Difference</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-bakery-textDark mb-4">Why Patna Loves Ordering From Us</h2>
+                <p class="text-bakery-textMuted text-base">We combine passion, hygiene, and top-grade ingredients to create unforgettable dessert experiences.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-bakery-border shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-2xl bg-bakery-surface flex items-center justify-center text-bakery-primary mb-6">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-3">100% Fresh Ingredients</h3>
+                    <p class="text-bakery-textMuted text-sm leading-relaxed">Every cake is baked on demand using premium butter, rich cocoa, and farm-fresh dairy.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-bakery-border shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-2xl bg-bakery-surface flex items-center justify-center text-bakery-primary mb-6">
+                        <i data-lucide="palette" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-3">Custom Design Expertise</h3>
+                    <p class="text-bakery-textMuted text-sm leading-relaxed">Send us any photo or theme concept on WhatsApp, and our expert bakers will bring it to life.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-bakery-border shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-2xl bg-bakery-surface flex items-center justify-center text-bakery-primary mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-3">Eggless Options</h3>
+                    <p class="text-bakery-textMuted text-sm leading-relaxed">Enjoy light, fluffy, and 100% vegetarian eggless cakes without compromising on texture or taste.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-bakery-border shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-2xl bg-bakery-surface flex items-center justify-center text-bakery-primary mb-6">
+                        <i data-lucide="star" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-bakery-textDark mb-3">Top Local Rating</h3>
+                    <p class="text-bakery-textMuted text-sm leading-relaxed">Rated 4.9 stars by over 70 happy dessert lovers across Kankarbagh and greater Patna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-bakery-surface">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Bakery Kitchen in Kankarbagh Patna" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-bakery-primary block mb-2">Our Sweet Journey</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-bakery-textDark mb-6">Baking Happiness in the Heart of Kankarbagh</h2>
+                    <p class="text-bakery-textMuted text-base mb-4 leading-relaxed">
+                        Located near Jaleshwar Mandir Road in Jogipur, Kankarbagh, <strong class="text-bakery-textDark">Cake's World</strong> has quickly become Patna's trusted destination for celebrations of all sizes. 
+                    </p>
+                    <p class="text-bakery-textMuted text-base mb-8 leading-relaxed">
+                        Whether it's a midnight birthday surprise, a milestone anniversary, or just a weekend craving for rich chocolate truffle, our bakers pour love into every single box. We take pride in hygiene, prompt service, and unforgettable taste.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20discuss%20a%20custom%20order." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-bakery-primary hover:bg-bakery-primaryHover text-white font-semibold shadow-md transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Chat with Baker</span>
+                        </a>
+                        <div class="text-bakery-textDark">
+                            <span class="block font-bold text-lg">4.9 / 5.0</span>
+                            <span class="text-xs text-bakery-textMuted">Trusted by 70+ Google reviewers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-bakery-surface">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-bakery-primary block mb-2">Photo Gallery</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-bakery-textDark mb-4">A Glimpse of Our Creations</h2>
+                <p class="text-bakery-textMuted text-base">Real cakes baked with love for real celebrations in Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" alt="Cake 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Cake 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1542826438-bd32f26d6444?auto=format&fit=crop&w=600&q=80" alt="Cake 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Cake 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Cake 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Cake 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-bakery-primary block mb-2">Customer Reviews</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-bakery-textDark mb-4">Loved by Cake Enthusiasts</h2>
+                <div class="flex items-center justify-center gap-1 text-amber-500 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                </div>
+                <p class="text-bakery-textMuted text-sm">4.9 ★ Average Rating across 70+ Google Reviews</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-bakery-secondary p-8 rounded-2xl border border-bakery-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-bakery-textDark text-sm sm:text-base mb-6 leading-relaxed">
+                            "Ordered a custom birthday cake for my daughter's 5th birthday. The design was exactly as I sent on WhatsApp, and the taste was super fresh and creamy! Best bakery in Kankarbagh."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bakery-border">
+                        <div class="w-10 h-10 rounded-full bg-bakery-primary/20 text-bakery-primary font-bold flex items-center justify-center">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-bakery-textDark">Ananya Sinha</h4>
+                            <span class="text-xs text-bakery-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-bakery-secondary p-8 rounded-2xl border border-bakery-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-bakery-textDark text-sm sm:text-base mb-6 leading-relaxed">
+                            "Superb taste and amazing eggless options! Their chocolate truffle cake melts in your mouth. Very polite staff and quick delivery around Jogipur and Kankarbagh."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bakery-border">
+                        <div class="w-10 h-10 rounded-full bg-bakery-primary/20 text-bakery-primary font-bold flex items-center justify-center">
+                            R
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-bakery-textDark">Rohit Kumar</h4>
+                            <span class="text-xs text-bakery-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-bakery-secondary p-8 rounded-2xl border border-bakery-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-bakery-textDark text-sm sm:text-base mb-6 leading-relaxed">
+                            "Ordered on WhatsApp for an anniversary surprise. They prepared it in just 3 hours and delivered on time. Highly recommended for anyone in Patna looking for quality cakes!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bakery-border">
+                        <div class="w-10 h-10 rounded-full bg-bakery-primary/20 text-bakery-primary font-bold flex items-center justify-center">
+                            P
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-bakery-textDark">Pooja Sharma</h4>
+                            <span class="text-xs text-bakery-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-bakery-surface">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-bakery-primary block mb-2">Got Questions?</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-bakery-textDark mb-4">Frequently Asked Questions</h2>
+                <p class="text-bakery-textMuted text-base">Everything you need to know about ordering cakes from Cake's World.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-bakery-border overflow-hidden transition-all">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left font-serif font-bold text-lg text-bakery-textDark focus:outline-none">
+                        <span>Are all your cakes eggless?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-bakery-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-bakery-textMuted text-sm sm:text-base leading-relaxed">
+                        Yes! We offer 100% eggless options across all our birthday cakes, anniversary cakes, pastries, and cupcakes without compromising on softness or delicious taste.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-bakery-border overflow-hidden transition-all">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left font-serif font-bold text-lg text-bakery-textDark focus:outline-none">
+                        <span>How early should I order a custom cake?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-bakery-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-bakery-textMuted text-sm sm:text-base leading-relaxed">
+                        For standard cakes, 2 to 3 hours notice is usually sufficient. For elaborate custom theme cakes or multi-tier designs, we recommend booking 12-24 hours in advance via WhatsApp.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-bakery-border overflow-hidden transition-all">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left font-serif font-bold text-lg text-bakery-textDark focus:outline-none">
+                        <span>Do you provide home delivery in Kankarbagh, Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-bakery-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-bakery-textMuted text-sm sm:text-base leading-relaxed">
+                        Yes, we provide safe doorstep delivery across Kankarbagh and nearby areas in Patna. You can also choose store pickup if you prefer.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-bakery-border overflow-hidden transition-all">
+                    <button class="faq-btn w-full flex items-center justify-between p-6 text-left font-serif font-bold text-lg text-bakery-textDark focus:outline-none">
+                        <span>How can I share a custom cake design?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-bakery-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-bakery-textMuted text-sm sm:text-base leading-relaxed">
+                        You can simply click the WhatsApp button anywhere on our website, send us a photo of the design you like, and discuss your preferred flavor and weight with our baker!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-bakery-primary block mb-2">Visit Or Connect</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif text-bakery-textDark mb-4">We'd Love to Hear From You</h2>
+                <p class="text-bakery-textMuted text-base">Drop by our outlet in Kankarbagh or send us a quick inquiry.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left Info & Form -->
+                <div class="lg:col-span-6 bg-bakery-secondary p-8 rounded-3xl border border-bakery-border">
+                    <h3 class="font-serif font-bold text-2xl text-bakery-textDark mb-6">Send an Inquiry</h3>
+                    
+                    <form id="inquiry-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-bakery-textDark mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-white text-bakery-textDark focus:outline-none focus:border-bakery-primary" placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-bakery-textDark mb-2">Phone Number</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-white text-bakery-textDark focus:outline-none focus:border-bakery-primary" placeholder="Enter your phone number">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-bakery-textDark mb-2">Select Occasion / Service</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-white text-bakery-textDark focus:outline-none focus:border-bakery-primary">
+                                <option>Custom Birthday Cake</option>
+                                <option>Anniversary Special Cake</option>
+                                <option>Cupcakes & Pastries</option>
+                                <option>Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-bakery-textDark mb-2">Your Message / Requirements</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-white text-bakery-textDark focus:outline-none focus:border-bakery-primary" placeholder="Mention flavor, weight, date..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-bakery-primary hover:bg-bakery-primaryHover text-white font-semibold shadow-md transition-all flex items-center justify-center gap-2">
+                            <span>Send Inquiry via WhatsApp</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Address & Google Map -->
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    <div class="bg-bakery-surface p-8 rounded-3xl border border-bakery-border space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-bakery-primary flex-shrink-0 shadow-sm">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-bakery-textDark mb-1">Bakery Address</h4>
+                                <p class="text-sm text-bakery-textMuted leading-relaxed">
+                                    Yogipur Rd, near Jaleshwar Mandir Road, LIC Colony, Jogipur, Kankarbagh, Bankman Colony, Patna, Bihar 800020
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-bakery-primary flex-shrink-0 shadow-sm">
+                                <i data-lucide="phone-call" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-bakery-textDark mb-1">Phone & WhatsApp</h4>
+                                <a href="tel:+919122777765" class="text-sm text-bakery-primary font-semibold hover:underline block">+91 91227 77765</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-bakery-primary flex-shrink-0 shadow-sm">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-bakery-textDark mb-1">Opening Hours</h4>
+                                <p class="text-sm text-bakery-textMuted">Monday – Sunday: 9:00 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="w-full h-72 rounded-3xl overflow-hidden border border-bakery-border shadow-md">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.876!2d85.155!3d25.594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed586!2sCake&#39;s+world+Kankarbagh+Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Cake's World Google Map Location">
+                        </iframe>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Cake's+world+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl border border-bakery-border bg-white text-bakery-textDark hover:border-bakery-primary font-semibold text-center text-sm transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="navigation" class="w-4 h-4 text-bakery-primary"></i>
+                        <span>Get Directions on Google Maps</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl border border-bakery-border transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 rounded-full bg-bakery-surface text-bakery-primary flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-bakery-textDark mb-2">Inquiry Ready!</h3>
+            <p class="text-bakery-textMuted text-sm mb-6">Redirecting you to WhatsApp with your customized order details...</p>
+            <button id="close-modal" class="w-full py-3 rounded-xl bg-bakery-primary text-white font-semibold">Close</button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-bakery-border p-3 shadow-2xl flex items-center gap-3">
+        <a href="tel:+919122777765" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-bakery-border text-bakery-textDark font-bold text-sm bg-bakery-secondary">
+            <i data-lucide="phone" class="w-4 h-4 text-bakery-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919122777765?text=Hi%20Cake's%20World,%20I%20want%20to%20order%20a%20cake!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-bakery-primary text-white font-bold text-sm shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-bakery-textDark text-white py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-bakery-primary flex items-center justify-center text-white">
+                            <i data-lucide="cake" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold">Cake's World</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Patna's favorite custom cake confectionery. Freshly baked with love, premium ingredients, and 100% eggless options in Kankarbagh.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-400 text-sm font-semibold">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span>4.9★ Rating from 70+ Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">Cake Menu</a></li>
+                        <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-4 text-white">Our Specialties</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><span>Custom Birthday Cakes</span></li>
+                        <li><span>Anniversary Special Cakes</span></li>
+                        <li><span>Gourmet Cupcakes</span></li>
+                        <li><span>Fresh Pastries & Jar Cakes</span></li>
+                        <li><span>100% Eggless Options</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-4 text-white">Contact & Location</h4>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                        Yogipur Rd, near Jaleshwar Mandir Road, LIC Colony, Jogipur, Kankarbagh, Patna, Bihar 800020
+                    </p>
+                    <p class="text-sm text-zinc-400 mb-2">Phone: <a href="tel:+919122777765" class="text-white font-semibold hover:underline">+91 91227 77765</a></p>
+                    <p class="text-sm text-zinc-400">Hours: 9:00 AM – 10:00 PM (All Days)</p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Cake's World, Kankarbagh, Patna. All rights reserved.</p>
+                <p>Designed with ❤️ for sweet celebrations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion Logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Interactive Inquiry Form Logic
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Sanitize and format WhatsApp message
+            const text = `Hi Cake's World,\n\nMy Name: ${name}\nPhone: ${phone}\nInterested In: ${service}\nDetails: ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/919122777765?text=${encodedText}`;
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+
+            // Redirect after brief delay
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank', 'noopener noreferrer');
+            }, 1500);
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            inquiryForm.reset();
+        });
+    </script>
+</body>
+</html>
