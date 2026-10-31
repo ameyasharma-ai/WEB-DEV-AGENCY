@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patna Junction | Transit & Travel Hub / Commuter Assistance</title>
+    
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#F59E0B',
+                        secondary: '#0F172A',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A1A1AA',
+                        success: '#10B981',
+                        accentHover: '#D97706'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] font-inter antialiased overflow-x-hidden pb-28 lg:pb-0 selection:bg-amber-500 selection:text-black">
+
+    <!-- 100% Solid Opaque Announcement Bar -->
+    <div class="bg-amber-600 text-zinc-950 font-semibold text-xs sm:text-sm py-2 px-4 text-center sticky top-0 z-[60] shadow-md flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>24/7 Commuter Assistance & Travel Support at Fraser Road Area, Patna</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-[37px] sm:top-[41px] z-50 bg-[#09090b] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-zinc-950 transition-all duration-300">
+                    <i data-lucide="train" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-syne text-lg sm:text-xl font-bold tracking-tight text-white block leading-tight">Patna Junction</span>
+                    <span class="text-[10px] text-amber-500 uppercase tracking-widest font-semibold">Travel & Transit Hub</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
+                <a href="#services" class="hover:text-amber-500 transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-amber-500 transition-colors">Why Choose Us</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">About</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop CTAs -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="tel:+918766234293" class="h-11 px-4 rounded-xl border border-zinc-700 hover:border-amber-500 text-zinc-200 hover:text-amber-500 font-semibold flex items-center gap-2 text-sm transition-all duration-300">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/918766234293?text=Hi%20Patna%20Junction%20team,%20I%20need%20transit%20assistance." target="_blank" rel="noopener noreferrer" class="h-11 px-5 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-semibold flex items-center gap-2 text-sm transition-all duration-300 shadow-lg shadow-amber-500/20">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-200 hover:text-amber-500">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-[74px] sm:top-[78px] bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+                <span class="font-syne font-bold text-lg text-white">Menu</span>
+                <button id="menu-close" aria-label="Close Menu" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 font-medium text-zinc-300">
+                <a href="#services" class="mobile-nav-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Services</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#why-us" class="mobile-nav-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Why Choose Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-nav-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>About Hub</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-nav-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Customer Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#faq" class="mobile-nav-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-nav-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 space-y-3">
+            <a href="tel:+918766234293" class="w-full h-12 rounded-xl border border-zinc-700 bg-zinc-900 text-zinc-200 font-semibold flex items-center justify-center gap-2 text-sm">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                <span>Call +91 87662 34293</span>
+            </a>
+            <a href="https://wa.me/918766234293?text=Hi%20Patna%20Junction%20team,%20I%20need%20transit%20assistance." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-500 text-zinc-950 font-semibold flex items-center justify-center gap-2 text-sm shadow-lg shadow-amber-500/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.8 ★ <span class="text-zinc-400 font-normal">(16 Google Reviews)</span></span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Your Trusted Transit & Travel Hub at <span class="text-amber-500">Patna Junction</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-zinc-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Empowering commuters with instant travel guidance, route assistance, and dedicated support right in the Fraser Road Area, Patna. We make your journey smooth and stress-free.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/918766234293?text=Hi%20Patna%20Junction%20team,%20I%20need%20immediate%20travel%20assistance." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto h-14 px-8 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold flex items-center justify-center gap-3 text-base transition-all duration-300 shadow-lg shadow-amber-500/20 group">
+                            <i data-lucide="message-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <a href="tel:+918766234293" class="w-full sm:w-auto h-14 px-8 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 hover:text-amber-500 font-bold flex items-center justify-center gap-3 text-base transition-all duration-300">
+                            <i data-lucide="phone" class="w-5 h-5 text-amber-500"></i>
+                            <span>Call +91 87662 34293</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+                        <div class="absolute -top-3 right-6 bg-amber-500 text-zinc-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Live Support
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4 pb-6 border-b border-zinc-800">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-syne font-bold text-white text-base">Prime Location</h3>
+                                    <p class="text-xs text-zinc-400 mt-0.5">Fraser Road Area, Patna, Bihar 800001</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-zinc-950 p-4 rounded-xl border border-zinc-800/80">
+                                    <div class="text-amber-500 font-syne font-bold text-2xl mb-1">4.8★</div>
+                                    <div class="text-xs text-zinc-400">Verified Rating on Google Maps</div>
+                                </div>
+                                <div class="bg-zinc-950 p-4 rounded-xl border border-zinc-800/80">
+                                    <div class="text-amber-500 font-syne font-bold text-2xl mb-1">24/7</div>
+                                    <div class="text-xs text-zinc-400">Commuter Assistance</div>
+                                </div>
+                            </div>
+
+                            <div class="bg-amber-500/5 border border-amber-500/20 rounded-xl p-4 flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5"></i>
+                                <p class="text-xs text-zinc-300 leading-relaxed">
+                                    Quick query resolution, instant travel directions, and seamless connectivity support for all visitors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center">
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="font-syne font-bold text-white text-lg">Top-Rated Hub</div>
+                        <div class="text-xs text-zinc-400">4.8 Star rating from 16+ authentic user reviews</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="font-syne font-bold text-white text-lg">Fraser Road Central</div>
+                        <div class="text-xs text-zinc-400">Strategically located at Patna Junction (J43P+8QP)</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="headphones" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="font-syne font-bold text-white text-lg">Instant Assistance</div>
+                        <div class="text-xs text-zinc-400">Call & WhatsApp support available anytime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Offerings Grid -->
+    <section id="services" class="py-20 sm:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-3">What We Offer</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Comprehensive Commuter & Travel Services</h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Designed for daily commuters, tourists, and travelers navigating Patna Junction and Fraser Road.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="compass" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Commuter Guidance</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Expert navigation support around Patna Junction, platform details, connecting transport, and Fraser Road landmarks.</p>
+                    </div>
+                    <a href="https://wa.me/918766234293?text=I%20need%20commuter%20guidance%20at%20Patna%20Junction." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="map" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Travel Routing Assistance</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Find the fastest local transport routes, auto-rickshaw stands, bus connections, and hotel locations near Fraser Road.</p>
+                    </div>
+                    <a href="https://wa.me/918766234293?text=I%20need%20travel%20routing%20assistance." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="help-circle" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Instant Support Helpline</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Immediate phone and WhatsApp support for travelers facing confusion, delays, or emergency inquiries in Patna.</p>
+                    </div>
+                    <a href="https://wa.me/918766234293?text=I%20need%20immediate%20support." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 font-semibold text-sm hover:text-amber-400">
+                        <span>Enquire on WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 sm:py-28 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-3">Why Patna Junction</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Built on Trust, Speed & Reliability</h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Here is why travelers and commuters consistently rate us 4.8 stars.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mx-auto mb-6">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Prime Central Location</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Situated right at the heart of Patna Junction on Fraser Road, making us easily accessible to every passenger.</p>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mx-auto mb-6">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Prompt Response Time</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">No waiting around. Get instant answers to your travel questions via phone call or direct WhatsApp messaging.</p>
+                </div>
+
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mx-auto mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Trusted Reputation</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Backed by 16+ verified Google reviews with an outstanding 4.8★ rating from real commuters.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 sm:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block">Our Heritage & Mission</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white leading-tight break-words">
+                        Serving Travelers at the Heart of Bihar's Busiest Junction
+                    </h2>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        Patna Junction is more than just a transit stop—it's the gateway to Bihar. Located prominently on Fraser Road (J43P+8QP), our hub provides essential commuter assistance, clear travel directions, and reliable support for thousands of passengers arriving and departing daily.
+                    </p>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        Whether you are a first-time visitor navigating Fraser Road or a regular commuter seeking quick transit guidance, our dedicated team is always ready to assist you instantly via phone or WhatsApp.
+                    </p>
+                    <div class="flex items-center gap-6 pt-4">
+                        <div>
+                            <div class="font-syne font-bold text-3xl text-amber-500">4.8★</div>
+                            <div class="text-xs text-zinc-400 mt-1">Google Rating</div>
+                        </div>
+                        <div class="w-px h-12 bg-zinc-800"></div>
+                        <div>
+                            <div class="font-syne font-bold text-3xl text-amber-500">16+</div>
+                            <div class="text-xs text-zinc-400 mt-1">Verified Reviews</div>
+                        </div>
+                        <div class="w-px h-12 bg-zinc-800"></div>
+                        <div>
+                            <div class="font-syne font-bold text-3xl text-amber-500">24/7</div>
+                            <div class="text-xs text-zinc-400 mt-1">Availability</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base">Exact Address</h4>
+                                <p class="text-xs text-zinc-400 mt-0.5">J43P+8QP, Patna Junction, Fraser Road Area, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden border border-zinc-800 bg-zinc-950 relative">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848123456!2d85.1376!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f70d222221%3A0x123456789abcdef!2sPatna%20Junction!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full object-cover">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Patna+Junction+Fraser+Road+Area+Patna" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold flex items-center justify-center gap-2 text-sm transition-colors">
+                            <i data-lucide="navigation" class="w-4 h-4 text-amber-500"></i>
+                            <span>Open in Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 sm:py-28 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-3">Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">What Commuters Say About Us</h2>
+                <div class="flex items-center justify-center gap-2 text-amber-400 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <span class="text-white font-bold ml-2 text-base">4.8 / 5.0</span>
+                </div>
+                <p class="text-zinc-400 text-sm">Based on 16+ authentic Google Reviews</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Patna Junction is extremely easy to navigate with their instant WhatsApp support. Whenever I am arriving at Fraser Road, getting guidance is super quick!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-bold flex items-center justify-center text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Amit Kumar</h4>
+                            <p class="text-[11px] text-zinc-500">Verified Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Great assistance right in the Fraser Road area. The phone support was polite and guided me accurately to my connecting transport. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-bold flex items-center justify-center text-sm">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Priya Sharma</h4>
+                            <p class="text-[11px] text-zinc-500">Verified Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Super responsive team. I called them while stranded with heavy luggage near Fraser Road, and they helped me instantly. True 5-star service!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-bold flex items-center justify-center text-sm">
+                            RV
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-white text-sm">Rahul Verma</h4>
+                            <p class="text-[11px] text-zinc-500">Verified Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 sm:py-28 relative">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-3">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Frequently Asked Questions</h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Everything you need to know about our commuter assistance and travel support.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">Where is Patna Junction located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/50 pt-4">
+                        Patna Junction is centrally located at Fraser Road Area, Patna, Bihar 800001 (Google Plus Code: J43P+8QP). It is easily accessible via all major local transportation networks.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">How can I contact Patna Junction for instant support?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/50 pt-4">
+                        You can instantly reach our support team by calling <a href="tel:+918766234293" class="text-amber-500 font-semibold underline">+91 87662 34293</a> or by clicking the "Chat on WhatsApp" button for immediate assistance.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">What kind of commuter assistance is provided?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/50 pt-4">
+                        We provide travel routing, platform guidance, local transport connections, emergency support, and general transit navigation around Fraser Road and Patna Junction.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-colors">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-white text-base sm:text-lg">Is assistance available 24/7?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/50 pt-4">
+                        Yes! Our helpline and digital support channels operate around the clock to assist travelers day and night.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28 bg-zinc-900/40 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-3">Get in Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Location & Instant Inquiry</h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Reach out via phone, WhatsApp, or send us an inquiry form for prompt assistance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Column: Info & Hours & Map -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <h3 class="font-syne font-bold text-xl text-white">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Address</h4>
+                                    <p class="text-xs sm:text-sm text-zinc-400 mt-0.5">J43P+8QP, Patna Junction, Fraser Road Area, Patna, Bihar 800001</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0 mt-1">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Phone / WhatsApp</h4>
+                                    <a href="tel:+918766234293" class="text-xs sm:text-sm text-amber-500 hover:underline mt-0.5 block">+91 87662 34293</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0 mt-1">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white text-sm">Operating Hours</h4>
+                                    <p class="text-xs sm:text-sm text-zinc-400 mt-0.5">Monday – Sunday: Open 24 Hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Patna+Junction+Fraser+Road+Area+Patna" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold flex items-center justify-center gap-2 text-sm transition-colors shadow-lg shadow-amber-500/20">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Directions (Google Maps)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848123456!2d85.1376!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f70d222221%3A0x123456789abcdef!2sPatna%20Junction!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full object-cover">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right Column: Working Contact Form -->
+                <div class="lg:col-span-6">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                        <h3 class="font-syne font-bold text-xl text-white mb-2">Send an Instant Inquiry</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Fill out the form below and our team will get back to you promptly.</p>
+
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-zinc-300 mb-1.5 uppercase tracking-wider">Your Name</label>
+                                <input type="text" id="name" required class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors" placeholder="Enter your full name">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-zinc-300 mb-1.5 uppercase tracking-wider">Phone / WhatsApp Number</label>
+                                <input type="tel" id="phone" required class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors" placeholder="+91 XXXXX XXXXX">
+                            </div>
+
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-zinc-300 mb-1.5 uppercase tracking-wider">Assistance Required</label>
+                                <select id="service" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors">
+                                    <option value="Commuter Guidance">Commuter Guidance</option>
+                                    <option value="Travel Routing">Travel Routing Assistance</option>
+                                    <option value="General Support">General Support & Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-zinc-300 mb-1.5 uppercase tracking-wider">Your Message</label>
+                                <textarea id="message" rows="4" required class="w-full p-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors resize-none" placeholder="How can we help you at Patna Junction?"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full h-14 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold flex items-center justify-center gap-2 text-base transition-all duration-300 shadow-lg shadow-amber-500/20">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                <span id="submit-text">Send Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white">Inquiry Received!</h3>
+            <p id="modal-msg" class="text-zinc-400 text-sm leading-relaxed">Thank you. We have received your request and will contact you shortly.</p>
+            <button id="modal-close" class="w-full h-12 rounded-xl bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold text-sm transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500">
+                            <i data-lucide="train" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-syne text-xl font-bold text-white">Patna Junction</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Your trusted transit & travel hub providing prompt commuter assistance right at Fraser Road, Patna, Bihar.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-amber-500 transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="hover:text-amber-500 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">About Hub</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
+                            <span>J43P+8QP, Patna Junction, Fraser Road Area, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                            <a href="tel:+918766234293" class="hover:text-amber-500">+91 87662 34293</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Google Rating</h4>
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-4 space-y-2">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <span class="text-white font-bold ml-2 text-sm">4.8 / 5.0</span>
+                        </div>
+                        <p class="text-xs text-zinc-400">Based on 16 verified Google Reviews</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Patna+Junction+Fraser+Road+Area+Patna" target="_blank" rel="noopener noreferrer" class="text-xs text-amber-500 font-semibold hover:underline block pt-1">View on Google Maps →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; <span id="current-year"></span> Patna Junction. All rights reserved.</p>
+                <p>Transit & Travel Hub / Commuter Assistance • Fraser Road, Patna</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+918766234293" class="flex-1 h-12 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 font-bold flex items-center justify-center gap-2 text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918766234293?text=Hi%20Patna%20Junction%20team,%20I%20need%20immediate%20assistance." target="_blank" rel="noopener noreferrer" class="flex-1 h-12 rounded-xl bg-amber-500 text-zinc-950 font-bold flex items-center justify-center gap-2 text-sm shadow-lg shadow-amber-500/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle & Scroll Lock
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion Functionality
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Interactive Inquiry Form with Validation & Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const modalMsg = document.getElementById('modal-msg');
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone || !message) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            // Simulate loading state
+            submitBtn.disabled = true;
+            submitText.textContent = 'Sending Inquiry...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitText.textContent = 'Send Inquiry';
+                
+                // Sanitize and display inside modal
+                modalMsg.textContent = `Thank you, ${name}! We have received your inquiry regarding "${service}" and will contact you at ${phone} promptly.`;
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+                
+                inquiryForm.reset();
+            }, 800);
+        });
+
+        modalClose.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>

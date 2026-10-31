@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Coffee & Cravings | Best Café in Mithapur, Patna</title>
+    <meta name="description" content="Experience Patna's coziest café opposite Aryabhatta Knowledge University. Premium coffee, gourmet snacks, and desserts. 4.9★ rated. Reserve a table on WhatsApp!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF7F2',
+                        espresso: '#2C1D11',
+                        caramel: '#C88A58',
+                        charcoal: '#1C1917',
+                        taupe: '#78716C',
+                        surface: '#FFFFFF',
+                        bordercolor: '#E7E2DA'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #1C1917;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C88A58;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2C1D11;
+        }
+    </style>
+</head>
+<body class="bg-cream text-charcoal antialiased pb-28 md:pb-0 overflow-x-hidden">
+
+    <!-- Backdrop Overlay for Mobile Menu -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- 1. ANNOUNCEMENT & HEADER BAR -->
+    <div class="bg-espresso text-cream text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 z-50 relative">
+        <i data-lucide="clock" class="w-4 h-4 text-caramel shrink-0"></i>
+        <span>Open Today: 9:00 AM – 10:00 PM | Opposite Aryabhatta Knowledge University, Patna</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-[#FAF7F2] border-b border-stone-200 transition-all duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-espresso text-cream flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                    <i data-lucide="coffee" class="w-5 h-5 sm:w-6 sm:h-6 text-caramel"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-extrabold text-lg sm:text-2xl text-espresso tracking-tight leading-none">Coffee & Cravings</span>
+                    <span class="text-[10px] sm:text-xs text-taupe uppercase tracking-widest font-semibold mt-1">Café & Roastery</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-charcoal">
+                <a href="#menu" class="hover:text-caramel transition-colors">Menu</a>
+                <a href="#about" class="hover:text-caramel transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-caramel transition-colors">Atmosphere</a>
+                <a href="#reviews" class="hover:text-caramel transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-caramel transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-caramel transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop CTA Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+916205677925" class="flex items-center gap-2 px-4 py-2.5 rounded-full border border-espresso text-espresso hover:bg-espresso hover:text-cream text-sm font-semibold transition-all">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>Call</span>
+                </a>
+                <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20reserve%20a%20table!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-espresso text-cream hover:bg-caramel text-sm font-semibold shadow-md transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-caramel group-hover:text-espresso"></i>
+                    <span>Reserve Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Hamburger Button -->
+            <button id="menu-btn" class="lg:hidden p-2 rounded-xl text-espresso hover:bg-stone-200 focus:outline-none transition-colors" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-3xl p-6 bg-[#FAF7F2] border-l border-stone-300 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-stone-200">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-espresso text-cream flex items-center justify-center">
+                        <i data-lucide="coffee" class="w-5 h-5 text-caramel"></i>
+                    </div>
+                    <span class="font-serif font-bold text-lg text-espresso">Coffee & Cravings</span>
+                </div>
+                <button id="close-drawer-btn" class="p-2 rounded-full hover:bg-stone-200 text-espresso transition-colors" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 pt-6 font-medium text-base text-charcoal">
+                <a href="#menu" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200 transition-colors"><i data-lucide="utensils" class="w-5 h-5 text-caramel"></i> Menu</a>
+                <a href="#about" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200 transition-colors"><i data-lucide="book-open" class="w-5 h-5 text-caramel"></i> Our Story</a>
+                <a href="#gallery" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200 transition-colors"><i data-lucide="image" class="w-5 h-5 text-caramel"></i> Atmosphere</a>
+                <a href="#reviews" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200 transition-colors"><i data-lucide="star" class="w-5 h-5 text-caramel"></i> Reviews</a>
+                <a href="#faq" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200 transition-colors"><i data-lucide="help-circle" class="w-5 h-5 text-caramel"></i> FAQ</a>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-stone-200 transition-colors"><i data-lucide="map-pin" class="w-5 h-5 text-caramel"></i> Location & Contact</a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-stone-200 flex flex-col gap-3">
+            <a href="tel:+916205677925" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-espresso text-espresso font-semibold text-sm hover:bg-espresso hover:text-cream transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+            </a>
+            <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20reserve%20a%20table!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-espresso text-cream font-semibold text-sm hover:bg-caramel transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i> WhatsApp Reservation
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:py-28 overflow-hidden bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-stone-200 shadow-sm mb-6">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-espresso">4.9 ★ Rating</span>
+                        <span class="text-xs text-taupe">(205+ Reviews)</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-[#2C1D11] leading-[1.15] mb-6 break-words">
+                        Patna’s Ultimate <span class="text-caramel italic">Coffee & Cravings</span> Haven.
+                    </h1>
+
+                    <!-- Value Proposition -->
+                    <p class="text-base sm:text-lg text-taupe mb-8 max-w-xl leading-relaxed break-words">
+                        Nestled right opposite Aryabhatta Knowledge University in Mithapur. Unwind with artisanal brews, gourmet bites, and cozy vibes crafted for students, professionals, and coffee connoisseurs.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20book%20a%20table!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-espresso text-cream font-semibold text-base shadow-xl hover:bg-caramel hover:shadow-2xl transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-caramel group-hover:text-espresso"></i>
+                            <span>Reserve on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-surface border border-stone-300 text-espresso font-semibold text-base hover:border-espresso transition-all min-h-[48px]">
+                            <span>Explore Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-caramel"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-caramel/10 rounded-full filter blur-3xl -z-10"></div>
+                        <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-espresso/10 rounded-full filter blur-3xl -z-10"></div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-4">
+                                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-surface">
+                                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Artisanal Latte at Coffee and Cravings" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-surface">
+                                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Café interior cozy seating" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                            <div class="space-y-4 pt-8">
+                                <div class="aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-surface">
+                                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Gourmet snacks" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-surface">
+                                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Freshly brewed coffee cup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="bg-espresso text-cream py-8 border-y border-stone-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center p-4">
+                    <div class="flex items-center gap-1 text-amber-400 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <span class="font-serif font-bold text-2xl">4.9/5</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-stone-300">Google Rating</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="flex items-center gap-1 text-caramel mb-1">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                        <span class="font-serif font-bold text-2xl">205+</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-stone-300">Verified Reviews</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="flex items-center gap-1 text-caramel mb-1">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span class="font-serif font-bold text-2xl">Mithapur</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-stone-300">Opp. AKU University</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="flex items-center gap-1 text-caramel mb-1">
+                        <i data-lucide="coffee" class="w-5 h-5"></i>
+                        <span class="font-serif font-bold text-2xl">100%</span>
+                    </div>
+                    <span class="text-xs sm:text-sm text-stone-300">Arabica Beans</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INTERACTIVE MENU CATEGORIES -->
+    <section id="menu" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-caramel mb-2 block">Our Signature Offerings</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1D11] break-words">Explore Our Curated Menu</h2>
+                <p class="text-taupe mt-3 text-sm sm:text-base">Handcrafted coffees, refreshing coolers, and mouthwatering snacks prepared fresh for every craving.</p>
+            </div>
+
+            <!-- Menu Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12">
+                <button onclick="filterMenu('all')" class="menu-tab px-6 py-2.5 rounded-full text-sm font-semibold bg-espresso text-cream shadow-md transition-all active-tab">All Items</button>
+                <button onclick="filterMenu('coffee')" class="menu-tab px-6 py-2.5 rounded-full text-sm font-semibold bg-surface text-espresso border border-stone-300 hover:border-espresso transition-all">Coffee & Brews</button>
+                <button onclick="filterMenu('coolers')" class="menu-tab px-6 py-2.5 rounded-full text-sm font-semibold bg-surface text-espresso border border-stone-300 hover:border-espresso transition-all">Refreshing Coolers</button>
+                <button onclick="filterMenu('snacks')" class="menu-tab px-6 py-2.5 rounded-full text-sm font-semibold bg-surface text-espresso border border-stone-300 hover:border-espresso transition-all">Gourmet Snacks</button>
+                <button onclick="filterMenu('desserts')" class="menu-tab px-6 py-2.5 rounded-full text-sm font-semibold bg-surface text-espresso border border-stone-300 hover:border-espresso transition-all">Desserts</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1 -->
+                <div class="menu-card bg-surface rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="coffee">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Signature Cappuccino" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-espresso text-cream text-xs px-3 py-1 rounded-full font-bold shadow-md">₹180</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-espresso mb-2">Signature Cappuccino</h3>
+                            <p class="text-taupe text-sm leading-relaxed mb-4">Rich espresso balanced with steamed milk and a velvety micro-foam layer. Our crowd favorite.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20order%20Signature%20Cappuccino%20(₹180)" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-espresso/5 hover:bg-espresso text-espresso hover:text-cream text-sm font-semibold transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-surface rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="coffee">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80" alt="Cold Caramel Macchiato" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-espresso text-cream text-xs px-3 py-1 rounded-full font-bold shadow-md">₹220</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-espresso mb-2">Iced Caramel Macchiato</h3>
+                            <p class="text-taupe text-sm leading-relaxed mb-4">Freshly pulled espresso poured over vanilla-infused milk and ice, drizzled with buttery caramel.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20order%20Iced%20Caramel%20Macchiato%20(₹220)" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-espresso/5 hover:bg-espresso text-espresso hover:text-cream text-sm font-semibold transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-surface rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="snacks">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Peri Peri Cheese Burger" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-espresso text-cream text-xs px-3 py-1 rounded-full font-bold shadow-md">₹240</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-espresso mb-2">Peri Peri Crunch Burger</h3>
+                            <p class="text-taupe text-sm leading-relaxed mb-4">Crispy golden patty layered with spicy peri-peri mayo, melted cheese, and fresh lettuce in toasted brioche buns.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20order%20Peri%20Peri%20Crunch%20Burger%20(₹240)" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-espresso/5 hover:bg-espresso text-espresso hover:text-cream text-sm font-semibold transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card bg-surface rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="snacks">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Woodfire Pizza" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-espresso text-cream text-xs px-3 py-1 rounded-full font-bold shadow-md">₹320</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-espresso mb-2">Margherita Blast Pizza</h3>
+                            <p class="text-taupe text-sm leading-relaxed mb-4">Hand-tossed crust topped with rich San Marzano tomato sauce, fresh mozzarella balls, and aromatic basil leaves.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20order%20Margherita%20Blast%20Pizza%20(₹320)" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-espresso/5 hover:bg-espresso text-espresso hover:text-cream text-sm font-semibold transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card bg-surface rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="coolers">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80" alt="Mint Mojito" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-espresso text-cream text-xs px-3 py-1 rounded-full font-bold shadow-md">₹160</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-espresso mb-2">Virgin Mint Mojito</h3>
+                            <p class="text-taupe text-sm leading-relaxed mb-4">Refreshing blend of fresh mint leaves, zesty lime, crushed ice, and sparkling soda for a crisp finish.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20order%20Virgin%20Mint%20Mojito%20(₹160)" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-espresso/5 hover:bg-espresso text-espresso hover:text-cream text-sm font-semibold transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card bg-surface rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="desserts">
+                    <div>
+                        <div class="aspect-[16/10] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Chocolate Brownie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-espresso text-cream text-xs px-3 py-1 rounded-full font-bold shadow-md">₹190</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif font-bold text-xl text-espresso mb-2">Sizzling Brownie with Vanilla</h3>
+                            <p class="text-taupe text-sm leading-relaxed mb-4">Fudgy dark chocolate brownie served warm on a sizzling plate with a scoop of vanilla ice cream & hot chocolate fudge.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20order%20Sizzling%20Brownie%20with%20Vanilla%20(₹190)" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-espresso/5 hover:bg-espresso text-espresso hover:text-cream text-sm font-semibold transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section class="py-20 bg-surface border-y border-stone-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-caramel mb-2 block">The Experience</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1D11] break-words">Why Patna Loves Coffee & Cravings</h2>
+                <p class="text-taupe mt-3 text-sm sm:text-base">We go beyond just serving coffee—we curate spaces for unforgettable conversations and moments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-cream border border-stone-200 hover:border-caramel transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-espresso text-caramel flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-espresso mb-3">Cozy Ambiance</h3>
+                    <p class="text-taupe text-sm leading-relaxed">Warm lighting, aesthetic interiors, and cozy seating designed for long study sessions or relaxed hangouts.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-cream border border-stone-200 hover:border-caramel transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-espresso text-caramel flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-espresso mb-3">Student-Friendly</h3>
+                    <p class="text-taupe text-sm leading-relaxed">Located right opposite AKU University with high-speed Wi-Fi, pocket-friendly pricing, and productive spaces.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-cream border border-stone-200 hover:border-caramel transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-espresso text-caramel flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-espresso mb-3">Lightning Fast</h3>
+                    <p class="text-taupe text-sm leading-relaxed">Prompt service and hygienic preparation ensuring your favorite cravings reach your table in no time.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-8 rounded-2xl bg-cream border border-stone-200 hover:border-caramel transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-espresso text-caramel flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-espresso mb-3">Top-Rated 4.9★</h3>
+                    <p class="text-taupe text-sm leading-relaxed">Loved by over 205+ passionate reviewers on Google for our exceptional taste and warm hospitality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT / STORY SECTION -->
+    <section id="about" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-surface">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=80" alt="Barista brewing coffee" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-espresso text-cream p-6 rounded-2xl shadow-2xl max-w-xs hidden sm:block border border-stone-800">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-caramel shrink-0"></i>
+                            <span class="font-serif font-bold text-base">Prime Landmark</span>
+                        </div>
+                        <p class="text-xs text-stone-300 leading-relaxed">Directly opposite Aryabhatta Knowledge University, Mithapur, Patna.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-xs font-bold uppercase tracking-widest text-caramel mb-2">Our Journey</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1D11] mb-6 break-words">Where Great Coffee Meets Warm Conversations</h2>
+                    <p class="text-taupe text-sm sm:text-base leading-relaxed mb-6">
+                        Founded with a simple vision: to bring a world-class café culture to Mithapur, Patna. Coffee & Cravings started as a cozy sanctuary for students seeking a productive study nook and coffee lovers looking for an authentic brew.
+                    </p>
+                    <p class="text-taupe text-sm sm:text-base leading-relaxed mb-8">
+                        Today, located right opposite Aryabhatta Knowledge University, we take immense pride in our 4.9★ rating. Every cup of coffee we pour and every snack we plate is crafted with uncompromised quality, fresh ingredients, and genuine love.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 w-full pt-4 border-t border-stone-200">
+                        <div>
+                            <span class="font-serif font-bold text-3xl text-espresso block mb-1">205+</span>
+                            <span class="text-xs text-taupe uppercase tracking-wider font-semibold">5-Star Google Reviews</span>
+                        </div>
+                        <div>
+                            <span class="font-serif font-bold text-3xl text-espresso block mb-1">50+</span>
+                            <span class="text-xs text-taupe uppercase tracking-wider font-semibold">Gourmet Menu Items</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE GALLERY / ATMOSPHERE SHOWCASE -->
+    <section id="gallery" class="py-20 bg-surface border-t border-stone-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-caramel mb-2 block">Atmosphere Showcase</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1D11] break-words">Step Inside Coffee & Cravings</h2>
+                <p class="text-taupe mt-3 text-sm sm:text-base">A glimpse into our aesthetic interiors, fresh preparations, and vibrant energy.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1507133750043-495f5ceeaf50?auto=format&fit=crop&w=800&q=80" alt="Café interior aesthetic" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Coffee brewing process" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Delicious gourmet pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" alt="Cozy seating area" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold mb-3">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+                    <span>4.9 Star Rating on Google (205+ Reviews)</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1D11] break-words">Loved by Our Patrons</h2>
+                <p class="text-taupe mt-3 text-sm sm:text-base">Read authentic experiences from students, professionals, and food lovers who visit us.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-surface p-8 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-taupe text-sm leading-relaxed italic mb-6">"Absolute gem in Mithapur! Being right opposite AKU makes it the best hangout spot for students. Their Cappuccino and Peri Peri burgers are out of this world. Super cozy ambiance."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-10 h-10 rounded-full bg-caramel/20 text-espresso font-bold flex items-center justify-center font-serif">A</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-sm text-espresso">Aditya Narayan</h4>
+                            <span class="text-xs text-taupe">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface p-8 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-taupe text-sm leading-relaxed italic mb-6">"The best coffee in Patna hands down. The staff is extremely polite, and the place is impeccably clean. Great Wi-Fi and peaceful vibe for working on my laptop."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-10 h-10 rounded-full bg-caramel/20 text-espresso font-bold flex items-center justify-center font-serif">P</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-sm text-espresso">Priya Kumari</h4>
+                            <span class="text-xs text-taupe">Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface p-8 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-taupe text-sm leading-relaxed italic mb-6">"Tried their Sizzling Brownie and Iced Caramel Macchiato. Wow! The presentation and taste were top-notch. Highly recommend visiting this café if you are around Mithapur."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-10 h-10 rounded-full bg-caramel/20 text-espresso font-bold flex items-center justify-center font-serif">R</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-sm text-espresso">Rahul Sinha</h4>
+                            <span class="text-xs text-taupe">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section id="faq" class="py-20 bg-surface border-y border-stone-200">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-caramel mb-2 block">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1D11] break-words">Frequently Asked Questions</h2>
+                <p class="text-taupe mt-3 text-sm sm:text-base">Everything you need to know about visiting Coffee & Cravings.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-cream border border-stone-200 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-serif font-bold text-lg text-espresso focus:outline-none">
+                        <span>Do you offer table reservations?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-caramel transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        Yes! You can instantly reserve a table by clicking our WhatsApp reservation buttons or calling us directly at +91 62056 77925. We ensure your table is ready upon arrival.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-cream border border-stone-200 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-serif font-bold text-lg text-espresso focus:outline-none">
+                        <span>Is high-speed Wi-Fi available for students and professionals?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-caramel transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        Absolutely! We provide complimentary high-speed Wi-Fi to all our guests. It's an ideal environment for students from Aryabhatta Knowledge University and remote professionals looking for a peaceful workspace.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-cream border border-stone-200 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-serif font-bold text-lg text-espresso focus:outline-none">
+                        <span>Where is Coffee & Cravings located exactly?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-caramel transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        We are conveniently located on Mithapur Rd, directly opposite Aryabhatta Knowledge University, Mithapur, Patna, Bihar 800001. You can easily find us via Google Maps.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-cream border border-stone-200 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-serif font-bold text-lg text-espresso focus:outline-none">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-caramel transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        We are open every single day from 9:00 AM to 10:00 PM, serving fresh brews, breakfast, lunch, evening snacks, and late desserts.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-caramel mb-2 block">Visit Us</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1D11] break-words">Location & Inquiry</h2>
+                <p class="text-taupe mt-3 text-sm sm:text-base">Drop by our café or send us a message for special bookings and queries.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left: Info & Map -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="bg-surface p-8 rounded-3xl border border-stone-200 shadow-sm space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-espresso text-caramel flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-espresso mb-1">Our Address</h3>
+                                <p class="text-taupe text-sm leading-relaxed">Mithapur Rd, opposite ARYABHATTA KNOWLEDGE UNIVERSITY, Mithapur, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-espresso text-caramel flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-espresso mb-1">Phone & WhatsApp</h3>
+                                <a href="tel:+916205677925" class="text-taupe text-sm hover:text-espresso transition-colors">+91 62056 77925</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-espresso text-caramel flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-espresso mb-1">Operating Hours</h3>
+                                <p class="text-taupe text-sm">Monday – Sunday: 9:00 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Coffee+%26+Cravings+Mithapur+Patna" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-espresso text-cream font-semibold text-sm hover:bg-caramel transition-all shadow-md">
+                                <i data-lucide="navigation" class="w-4 h-4 text-caramel"></i> Get Directions on Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Map Embed -->
+                    <div class="rounded-3xl overflow-hidden border border-stone-200 shadow-md h-72">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778847614!2d85.1376!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM1JzM4LjgiTiA4NcKwMDgnMTUuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Coffee and Cravings Location Map"></iframe>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="lg:col-span-6 bg-surface p-8 sm:p-10 rounded-3xl border border-stone-200 shadow-sm">
+                    <h3 class="font-serif font-bold text-2xl text-espresso mb-2">Send Us a Message</h3>
+                    <p class="text-taupe text-sm mb-6">Have a question or planning a large group gathering? Drop us a note.</p>
+
+                    <form id="contact-form" class="space-y-5" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label for="name" class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3.5 rounded-xl bg-cream border border-stone-300 text-espresso text-sm focus:outline-none focus:border-espresso transition-colors" placeholder="e.g. Aman Sharma">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Phone Number</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3.5 rounded-xl bg-cream border border-stone-300 text-espresso text-sm focus:outline-none focus:border-espresso transition-colors" placeholder="e.g. +91 98765 43210">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Inquiry Type</label>
+                            <select id="service" class="w-full px-4 py-3.5 rounded-xl bg-cream border border-stone-300 text-espresso text-sm focus:outline-none focus:border-espresso transition-colors">
+                                <option value="table">Table Reservation</option>
+                                <option value="party">Birthday / Party Booking</option>
+                                <option value="feedback">Feedback / General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Your Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3.5 rounded-xl bg-cream border border-stone-300 text-espresso text-sm focus:outline-none focus:border-espresso transition-colors" placeholder="Tell us your requirements..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-espresso text-cream font-semibold text-base hover:bg-caramel transition-all shadow-md flex items-center justify-center gap-2 min-h-[48px]">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="w-4 h-4 text-caramel"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface max-w-md w-full p-8 rounded-3xl text-center shadow-2xl border border-stone-200 transform scale-95 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-espresso mb-2">Message Received!</h3>
+            <p id="modal-text" class="text-taupe text-sm leading-relaxed mb-6">Thank you for reaching out to Coffee & Cravings. We will get back to you shortly!</p>
+            <button onclick="closeModal()" class="w-full py-3.5 rounded-xl bg-espresso text-cream font-semibold text-sm hover:bg-caramel transition-all">Close Window</button>
+        </div>
+    </div>
+
+    <!-- 11. STICKY MOBILE ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface border-t border-stone-200 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+916205677925" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-espresso text-espresso font-semibold text-sm bg-cream hover:bg-espresso hover:text-cream transition-colors">
+            <i data-lucide="phone" class="w-4 h-4 text-caramel"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/916205677925?text=Hi%20Coffee%20%26%20Cravings,%20I%20would%20like%20to%20reserve%20a%20table!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-espresso text-cream font-semibold text-sm hover:bg-caramel transition-colors shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4 text-caramel"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-espresso text-cream pt-16 pb-24 md:pb-16 border-t border-stone-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-stone-800">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-caramel text-espresso flex items-center justify-center">
+                            <i data-lucide="coffee" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif font-extrabold text-xl text-cream">Coffee & Cravings</span>
+                    </div>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        Patna’s coziest café offering artisanal coffee, refreshing coolers, and gourmet bites right opposite Aryabhatta Knowledge University.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Coffee+%26+Cravings+Mithapur+Patna" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-caramel text-cream flex items-center justify-center transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/916205677925" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-caramel text-cream flex items-center justify-center transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+916205677925" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-caramel text-cream flex items-center justify-center transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h3 class="font-serif font-bold text-lg text-cream mb-4">Quick Links</h3>
+                    <ul class="space-y-2.5 text-sm text-stone-300">
+                        <li><a href="#menu" class="hover:text-caramel transition-colors">Our Menu</a></li>
+                        <li><a href="#about" class="hover:text-caramel transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-caramel transition-colors">Atmosphere</a></li>
+                        <li><a href="#reviews" class="hover:text-caramel transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-caramel transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Opening Hours -->
+                <div>
+                    <h3 class="font-serif font-bold text-lg text-cream mb-4">Hours</h3>
+                    <ul class="space-y-2.5 text-sm text-stone-300">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-caramel font-semibold">9AM - 10PM</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-caramel font-semibold">9AM - 10PM</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-caramel font-semibold">9AM - 10PM</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-caramel font-semibold">9AM - 10PM</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-caramel font-semibold">9AM - 10PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-caramel font-semibold">9AM - 10PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-caramel font-semibold">9AM - 10PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact info -->
+                <div>
+                    <h3 class="font-serif font-bold text-lg text-cream mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-sm text-stone-300">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-caramel shrink-0 mt-0.5"></i>
+                            <span>Mithapur Rd, opposite ARYABHATTA KNOWLEDGE UNIVERSITY, Mithapur, Patna 800001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-caramel shrink-0"></i>
+                            <a href="tel:+916205677925" class="hover:text-caramel transition-colors">+91 62056 77925</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+                <p>&copy; <span id="current-year"></span> Coffee & Cravings. All rights reserved.</p>
+                <p class="flex items-center gap-1">Crafted with <i data-lucide="heart" class="w-3.5 h-3.5 text-caramel fill-caramel"></i> for Patna Coffee Lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle & Backdrop
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        closeDrawerBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // Menu Filtering Logic
+        function filterMenu(category) {
+            const cards = document.querySelectorAll('.menu-card');
+            const tabs = document.querySelectorAll('.menu-tab');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-espresso', 'text-cream', 'shadow-md');
+                tab.classList.add('bg-surface', 'text-espresso', 'border', 'border-stone-300');
+            });
+            event.target.classList.remove('bg-surface', 'text-espresso', 'border', 'border-stone-300');
+            event.target.classList.add('bg-espresso', 'text-cream', 'shadow-md');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion Logic
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                const isOpen = !content.classList.contains('hidden');
+
+                // Close all other accordions
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Submission & Success Modal
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span class="inline-block animate-spin rounded-full h-4 w-4 border-2 border-cream border-t-transparent"></span> Processing...`;
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+
+                const name = document.getElementById('name').value;
+                const service = document.getElementById('service').value;
+                const modalText = document.getElementById('modal-text');
+                
+                // Sanitize user input before insertion
+                const sanitizedName = name.replace(/[<>]/g, '');
+                modalText.textContent = `Thank you, ${sanitizedName}! Your inquiry for ${service} has been successfully sent. We look forward to welcoming you at Coffee & Cravings!`;
+
+                // Show Success Modal
+                const modal = document.getElementById('success-modal');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+
+                // Reset form
+                document.getElementById('contact-form').reset();
+            }, 1000);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
