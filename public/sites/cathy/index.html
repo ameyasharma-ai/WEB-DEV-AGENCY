@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Cathy Confectioners | Artisanal Bakery & Custom Cakes in Kankarbagh, Patna</title>
+    <meta name="description" content="Discover Patna's finest custom celebration cakes, artisanal pastries, and freshly baked snacks at Cathy Confectioners, Kankarbagh. Order instantly on WhatsApp!">
+    
+    <!-- Security & Performance Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bakery: {
+                            bg: '#FFFDF9',
+                            surface: '#FFFFFF',
+                            primary: '#3D2314',
+                            secondary: '#FDF8F2',
+                            accent: '#D97757',
+                            accentHover: '#C05C3D',
+                            textPrimary: '#231710',
+                            textMuted: '#7A6A60',
+                            border: '#F0E6D9'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Base Resets & Overflow Protection */
+        html, body {
+            overflow-x: hidden;
+            background-color: #FFFDF9;
+            color: #231710;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-bakery-bg text-bakery-textPrimary antialiased pb-28 md:pb-0">
+
+    <!-- 1. Announcement Bar & 100% Solid Opaque Sticky Header -->
+    <div id="announcement-bar" class="bg-bakery-primary text-bakery-secondary text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 relative z-50">
+        <i data-lucide="sparkles" class="w-4 h-4 text-bakery-accent animate-pulse"></i>
+        <span>Fresh bakes daily in Kankarbagh! Free delivery on bulk party orders.</span>
+        <button onclick="closeAnnouncement()" class="absolute right-3 hover:text-bakery-accent transition-colors" aria-label="Close announcement">
+            <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+    </div>
+
+    <header class="bg-bakery-bg border-b border-bakery-border sticky top-0 z-40 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-bakery-primary flex items-center justify-center text-bakery-secondary shadow-md group-hover:scale-105 transition-transform">
+                    <i data-lucide="cake" class="w-6 h-6 text-bakery-accent"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-bakery-primary block leading-tight">Cathy</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-bakery-textMuted font-semibold">Confectioners</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-bakery-textPrimary">
+                <a href="#menu" class="hover:text-bakery-accent transition-colors">Cakes & Menu</a>
+                <a href="#about" class="hover:text-bakery-accent transition-colors">Our Story</a>
+                <a href="#reviews" class="hover:text-bakery-accent transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-bakery-accent transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-bakery-accent transition-colors">Visit Us</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919142170131" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-bakery-primary/20 text-bakery-primary hover:bg-bakery-secondary font-semibold text-sm transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-bakery-accent"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/919142170131?text=Hi%20Cathy%20Confectioners,%20I%20want%20to%20order%20a%20cake!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-bakery-accent hover:bg-bakery-accentHover text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-bakery-secondary text-bakery-primary hover:bg-bakery-border transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle mobile menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Backdrop -->
+    <div id="menu-backdrop" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-bakery-bg border-l border-bakery-border rounded-tl-3xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-bakery-border">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-bakery-primary flex items-center justify-center text-bakery-secondary">
+                        <i data-lucide="cake" class="w-5 h-5 text-bakery-accent"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-lg font-bold text-bakery-primary block leading-none">Cathy</span>
+                        <span class="text-[10px] uppercase tracking-widest text-bakery-textMuted">Confectioners</span>
+                    </div>
+                </div>
+                <button onclick="toggleMobileMenu()" class="p-2 rounded-xl bg-bakery-secondary text-bakery-primary min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 pt-6 text-base font-semibold text-bakery-textPrimary">
+                <a href="#menu" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl hover:bg-bakery-secondary transition-colors">
+                    <span>Cakes & Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i>
+                </a>
+                <a href="#about" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl hover:bg-bakery-secondary transition-colors">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i>
+                </a>
+                <a href="#reviews" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl hover:bg-bakery-secondary transition-colors">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i>
+                </a>
+                <a href="#faq" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl hover:bg-bakery-secondary transition-colors">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i>
+                </a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl hover:bg-bakery-secondary transition-colors">
+                    <span>Visit Us / Map</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-bakery-textMuted"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-bakery-border flex flex-col gap-3">
+            <a href="tel:+919142170131" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border border-bakery-primary/20 text-bakery-primary font-semibold text-sm min-h-[48px]">
+                <i data-lucide="phone" class="w-4 h-4 text-bakery-accent"></i>
+                <span>Call +91 91421 70131</span>
+            </a>
+            <a href="https://wa.me/919142170131?text=Hi%20Cathy%20Confectioners,%20I%20want%20to%20order%20a%20cake!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-bakery-accent text-white font-semibold text-sm shadow-md min-h-[48px]">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Order on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. Hero Section -->
+    <section class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-bakery-accent/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-bakery-primary/5 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-left space-y-6">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-bakery-secondary border border-bakery-border shadow-sm">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-bakery-primary">3.9 ★ (90+ Google Reviews)</span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words font-serif sm: lg: font-bold text-bakery-primary leading-tight tracking-tight">
+                        Artisanal Cakes & Sweet Moments in <span class="text-bakery-accent italic">Kankarbagh, Patna</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-bakery-textMuted max-w-2xl leading-relaxed">
+                        From custom birthday celebration cakes to freshly baked pastries and party snacks, Cathy Confectioners brings sweetness to every occasion. Handcrafted with premium ingredients near MIG Rd, Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="https://wa.me/919142170131?text=Hi%20Cathy%20Confectioners,%20I%20would%20like%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-bakery-accent hover:bg-bakery-accentHover text-white font-bold text-base shadow-lg hover:shadow-xl transition-all min-h-[52px]">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-bakery-surface border-2 border-bakery-primary/20 text-bakery-primary hover:bg-bakery-secondary font-bold text-base transition-all min-h-[52px]">
+                            <i data-lucide="cake" class="w-5 h-5 text-bakery-accent"></i>
+                            <span>View Cake Menu</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Tag -->
+                    <div class="flex items-center gap-2 text-xs sm:text-sm text-bakery-textMuted pt-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-bakery-accent shrink-0"></i>
+                        <span>10, MIG Rd, Kankarbagh Colony More, Patna, Bihar 800020</span>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Grid -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-bakery-secondary">
+                            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80" alt="Delicious custom celebration cake at Cathy Confectioners Patna" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <!-- Floating Badge Card -->
+                        <div class="absolute -bottom-6 -left-4 sm:-left-6 bg-bakery-surface p-4 rounded-2xl shadow-xl border border-bakery-border flex items-center gap-3 max-w-[220px]">
+                            <div class="w-12 h-12 rounded-xl bg-bakery-secondary flex items-center justify-center text-bakery-accent shrink-0">
+                                <i data-lucide="heart" class="w-6 h-6 fill-bakery-accent"></i>
+                            </div>
+                            <div>
+                                <span class="font-serif font-bold text-sm text-bakery-primary block">100% Fresh Bakes</span>
+                                <span class="text-xs text-bakery-textMuted">Baked daily with love</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Trust & Social Proof Bar -->
+    <section class="bg-bakery-primary text-bakery-secondary py-10">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <div class="font-serif text-3xl sm:text-4xl font-bold text-bakery-accent">3.9 ★</div>
+                    <div class="text-xs sm:text-sm text-bakery-secondary/80 font-medium">90+ Verified Google Reviews</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="font-serif text-3xl sm:text-4xl font-bold text-bakery-accent">100%</div>
+                    <div class="text-xs sm:text-sm text-bakery-secondary/80 font-medium">Fresh Daily Ingredients</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="font-serif text-3xl sm:text-4xl font-bold text-bakery-accent">Custom</div>
+                    <div class="text-xs sm:text-sm text-bakery-secondary/80 font-medium">Birthday & Party Cakes</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="font-serif text-3xl sm:text-4xl font-bold text-bakery-accent">Kankarbagh</div>
+                    <div class="text-xs sm:text-sm text-bakery-secondary/80 font-medium">Landmark Bakery Patna</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Bestseller Products Grid -->
+    <section id="menu" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-bakery-accent bg-bakery-accent/10 px-3.5 py-1.5 rounded-full">Our Menu</span>
+                <h2 class="break-words font-serif text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-bakery-primary">Bestselling Delights</h2>
+                <p class="text-bakery-textMuted text-base">Explore our most loved cakes, pastries, and snacks. Tap any item to order instantly via WhatsApp.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-bakery-surface rounded-2xl border border-bakery-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video w-full overflow-hidden bg-bakery-secondary">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Chocolate Truffle Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-bakery-accent uppercase tracking-wider">Signature Cake</span>
+                                <span class="font-serif font-bold text-bakery-primary text-lg">₹550 / lb</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-bakery-primary">Rich Chocolate Truffle</h3>
+                            <p class="text-sm text-bakery-textMuted leading-relaxed">Layers of moist chocolate sponge drenched in silky Belgian chocolate ganache.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919142170131?text=Hi%20Cathy%20Confectioners,%20I%20would%20like%20to%20order%20the%20Rich%20Chocolate%20Truffle%20Cake." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-bakery-secondary hover:bg-bakery-accent hover:text-white text-bakery-primary rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-colors min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-bakery-surface rounded-2xl border border-bakery-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video w-full overflow-hidden bg-bakery-secondary">
+                            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" alt="Custom Birthday Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-bakery-accent uppercase tracking-wider">Custom Design</span>
+                                <span class="font-serif font-bold text-bakery-primary text-lg">Custom Quote</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-bakery-primary">Custom Birthday Cakes</h3>
+                            <p class="text-sm text-bakery-textMuted leading-relaxed">Personalized photo cakes, theme cakes for kids, and elegant anniversary designs.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919142170131?text=Hi%20Cathy%20Confectioners,%20I%20want%20to%20customize%20a%20birthday%20cake." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-bakery-secondary hover:bg-bakery-accent hover:text-white text-bakery-primary rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-colors min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Customize on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-bakery-surface rounded-2xl border border-bakery-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video w-full overflow-hidden bg-bakery-secondary">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Artisanal Pastries & Snacks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-bakery-accent uppercase tracking-wider">Bakery Snacks</span>
+                                <span class="font-serif font-bold text-bakery-primary text-lg">From ₹60</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-bakery-primary">Pastries & Patties</h3>
+                            <p class="text-sm text-bakery-textMuted leading-relaxed">Crispy veg patties, creamy pastries, puffs, and evening snacks freshly baked.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919142170131?text=Hi%20Cathy%20Confectioners,%20I%20would%20like%20to%20order%20snacks%20and%20pastries." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-bakery-secondary hover:bg-bakery-accent hover:text-white text-bakery-primary rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-colors min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us Section -->
+    <section class="py-20 bg-bakery-secondary/50 border-y border-bakery-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-bakery-accent bg-bakery-accent/10 px-3.5 py-1.5 rounded-full">Why Cathy Confectioners</span>
+                <h2 class="break-words font-serif text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-bakery-primary">Baked with Passion & Pride</h2>
+                <p class="text-bakery-textMuted text-base">What makes us Kankarbagh's favorite destination for sweet celebrations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-bakery-surface p-8 rounded-2xl border border-bakery-border shadow-sm space-y-4 text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-bakery-secondary flex items-center justify-center text-bakery-accent mx-auto">
+                        <i data-lucide="wheat" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-bakery-primary">Premium Ingredients</h3>
+                    <p class="text-sm text-bakery-textMuted leading-relaxed">We use only high-grade flour, real butter, fresh cream, and finest chocolates for unmatched taste.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-bakery-surface p-8 rounded-2xl border border-bakery-border shadow-sm space-y-4 text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-bakery-secondary flex items-center justify-center text-bakery-accent mx-auto">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-bakery-primary">Custom Cake Artistry</h3>
+                    <p class="text-sm text-bakery-textMuted leading-relaxed">Got a specific design in mind? Share reference photos on WhatsApp and we bring your vision to life.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-bakery-surface p-8 rounded-2xl border border-bakery-border shadow-sm space-y-4 text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-bakery-secondary flex items-center justify-center text-bakery-accent mx-auto">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-bakery-primary">Trusted Local Landmark</h3>
+                    <p class="text-sm text-bakery-textMuted leading-relaxed">Conveniently located at MIG Rd, Kankarbagh Colony More, Patna with quick pickup and reliable service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About / Story Section -->
+    <section id="about" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-widest font-bold text-bakery-accent bg-bakery-accent/10 px-3.5 py-1.5 rounded-full">Our Bakery Story</span>
+                    <h2 class="break-words font-serif text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-bakery-primary leading-tight">Spreading Joy, One Slice at a Time in Patna</h2>
+                    <p class="text-bakery-textMuted text-base leading-relaxed">
+                        Cathy Confectioners has been a beloved neighborhood bakery nestled in Kankarbagh, Patna. We believe that every birthday, anniversary, or spontaneous sweet craving deserves an extraordinary treat.
+                    </p>
+                    <p class="text-bakery-textMuted text-base leading-relaxed">
+                        Our master bakers combine traditional baking techniques with modern confectionery artistry, ensuring every bite is moist, flavorful, and memorable. Visit our store at MIG Rd or order directly to your doorstep.
+                    </p>
+                    <div class="pt-4 flex items-center gap-6">
+                        <div>
+                            <span class="font-serif text-3xl font-bold text-bakery-primary block">90+</span>
+                            <span class="text-xs text-bakery-textMuted font-medium uppercase tracking-wider">Google Reviews</span>
+                        </div>
+                        <div class="w-px h-12 bg-bakery-border"></div>
+                        <div>
+                            <span class="font-serif text-3xl font-bold text-bakery-primary block">3.9★</span>
+                            <span class="text-xs text-bakery-textMuted font-medium uppercase tracking-wider">Customer Rating</span>
+                        </div>
+                        <div class="w-px h-12 bg-bakery-border"></div>
+                        <div>
+                            <span class="font-serif text-3xl font-bold text-bakery-primary block">Daily</span>
+                            <span class="text-xs text-bakery-textMuted font-medium uppercase tracking-wider">Fresh Bakes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-bakery-secondary">
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Bakery display at Cathy Confectioners" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-bakery-secondary mt-8">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Fresh pastries and sweets" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Interactive Gallery -->
+    <section class="py-20 bg-bakery-secondary/40 border-y border-bakery-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-bakery-accent bg-bakery-accent/10 px-3.5 py-1.5 rounded-full">Gallery</span>
+                <h2 class="break-words font-serif text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-bakery-primary">Celebration Creations</h2>
+                <p class="text-bakery-textMuted text-base">A glimpse into our custom cakes and bakery display.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm bg-bakery-surface group">
+                    <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=500&q=80" alt="Cake 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm bg-bakery-surface group">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Cake 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm bg-bakery-surface group">
+                    <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=500&q=80" alt="Cake 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm bg-bakery-surface group">
+                    <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=500&q=80" alt="Cake 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Customer Reviews Section -->
+    <section id="reviews" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-bakery-accent bg-bakery-accent/10 px-3.5 py-1.5 rounded-full">Testimonials</span>
+                <h2 class="break-words font-serif text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-bakery-primary">What Our Patrons Say</h2>
+                <p class="text-bakery-textMuted text-base">Read authentic feedback from our valued customers across Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-bakery-surface p-8 rounded-2xl border border-bakery-border shadow-sm flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-bakery-textPrimary text-sm leading-relaxed italic">"Ordered a birthday cake for my daughter from Cathy Confectioners. The taste was exceptionally fresh and rich, and the design was spot on! Highly recommended in Kankarbagh."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bakery-border">
+                        <div class="w-10 h-10 rounded-full bg-bakery-secondary flex items-center justify-center font-bold text-bakery-primary">A</div>
+                        <div>
+                            <span class="font-serif font-bold text-bakery-primary text-sm block">Amit Kumar</span>
+                            <span class="text-xs text-bakery-textMuted">Patna Resident</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-bakery-surface p-8 rounded-2xl border border-bakery-border shadow-sm flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-bakery-textPrimary text-sm leading-relaxed italic">"Great place for evening snacks and pastries near MIG Road. Their chocolate truffle cake is legendary. Very polite staff and prompt WhatsApp ordering!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bakery-border">
+                        <div class="w-10 h-10 rounded-full bg-bakery-secondary flex items-center justify-center font-bold text-bakery-primary">P</div>
+                        <div>
+                            <span class="font-serif font-bold text-bakery-primary text-sm block">Priya Singh</span>
+                            <span class="text-xs text-bakery-textMuted">Local Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-bakery-surface p-8 rounded-2xl border border-bakery-border shadow-sm flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-bakery-textPrimary text-sm leading-relaxed italic">"Best confectionary shop in Kankarbagh Colony More. Ordered customized anniversary cake at short notice and they delivered perfectly on time."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bakery-border">
+                        <div class="w-10 h-10 rounded-full bg-bakery-secondary flex items-center justify-center font-bold text-bakery-primary">R</div>
+                        <div>
+                            <span class="font-serif font-bold text-bakery-primary text-sm block">Rohit Verma</span>
+                            <span class="text-xs text-bakery-textMuted">Patna Patron</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ Accordion -->
+    <section id="faq" class="py-20 bg-bakery-secondary/50 border-y border-bakery-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-bakery-accent bg-bakery-accent/10 px-3.5 py-1.5 rounded-full">Got Questions?</span>
+                <h2 class="break-words font-serif text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-bakery-primary">Frequently Asked Questions</h2>
+                <p class="text-bakery-textMuted text-base">Everything you need to know about ordering from Cathy Confectioners.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-bakery-surface rounded-2xl border border-bakery-border overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-serif font-bold text-base sm:text-lg text-bakery-primary">How can I place an order for a custom birthday cake?</span>
+                        <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-bakery-accent transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-6 text-sm text-bakery-textMuted leading-relaxed">
+                        You can easily place your order by clicking the "Order on WhatsApp" button on our website or messaging us directly at +919142170131. Send us your design reference, flavor choice, weight, and delivery time!
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-bakery-surface rounded-2xl border border-bakery-border overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-serif font-bold text-base sm:text-lg text-bakery-primary">Do you offer home delivery in Patna?</span>
+                        <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-bakery-accent transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-6 text-sm text-bakery-textMuted leading-relaxed">
+                        Yes! We offer doorstep delivery across Kankarbagh and nearby areas in Patna. You can also pick up your order directly from our store at MIG Rd, Kankarbagh Colony More.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-bakery-surface rounded-2xl border border-bakery-border overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-serif font-bold text-base sm:text-lg text-bakery-primary">What are your store timings?</span>
+                        <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-bakery-accent transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-6 text-sm text-bakery-textMuted leading-relaxed">
+                        We are open every day from 9:00 AM to 10:00 PM, ready to serve you fresh cakes, pastries, and snacks.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-bakery-surface rounded-2xl border border-bakery-border overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(4)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                        <span class="font-serif font-bold text-base sm:text-lg text-bakery-primary">What payment methods do you accept?</span>
+                        <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-bakery-accent transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-6 text-sm text-bakery-textMuted leading-relaxed">
+                        We accept UPI (Google Pay, PhonePe, Paytm), cash on pickup/delivery, and online bank transfers for confirmed orders.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-bakery-accent bg-bakery-accent/10 px-3.5 py-1.5 rounded-full">Visit Us</span>
+                <h2 class="break-words font-serif text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold text-bakery-primary">Come By Or Get in Touch</h2>
+                <p class="text-bakery-textMuted text-base">We would love to welcome you to our bakery in Kankarbagh.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info & Form -->
+                <div class="lg:col-span-6 space-y-8">
+                    <!-- Contact Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-bakery-surface p-6 rounded-2xl border border-bakery-border shadow-sm space-y-2">
+                            <div class="w-10 h-10 rounded-xl bg-bakery-secondary flex items-center justify-center text-bakery-accent">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-bakery-primary text-base">Address</h3>
+                            <p class="text-xs text-bakery-textMuted leading-relaxed">10, MIG Rd, Kankarbagh Colony More, Kankarbagh, Mithapur, Patna, Bihar 800020</p>
+                        </div>
+
+                        <div class="bg-bakery-surface p-6 rounded-2xl border border-bakery-border shadow-sm space-y-2">
+                            <div class="w-10 h-10 rounded-xl bg-bakery-secondary flex items-center justify-center text-bakery-accent">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-bakery-primary text-base">Phone / WhatsApp</h3>
+                            <p class="text-xs text-bakery-textMuted leading-relaxed">+91 91421 70131<br>Available 9 AM - 10 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Hours Table -->
+                    <div class="bg-bakery-surface p-6 rounded-2xl border border-bakery-border shadow-sm space-y-3">
+                        <div class="flex items-center gap-2 text-bakery-primary font-serif font-bold text-lg pb-2 border-b border-bakery-border">
+                            <i data-lucide="clock" class="w-5 h-5 text-bakery-accent"></i>
+                            <span>Store Timings</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-bakery-textMuted">
+                            <span>Monday - Sunday</span>
+                            <span class="font-semibold text-bakery-primary">9:00 AM – 10:00 PM</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-bakery-textMuted">
+                            <span>Home Delivery</span>
+                            <span class="font-semibold text-bakery-primary">Available Across Patna</span>
+                        </div>
+                    </div>
+
+                    <!-- Inquiry Form -->
+                    <div class="bg-bakery-surface p-8 rounded-2xl border border-bakery-border shadow-sm space-y-6">
+                        <h3 class="font-serif text-xl font-bold text-bakery-primary">Send Us a Quick Inquiry</h3>
+                        <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-bakery-primary uppercase mb-1">Your Name</label>
+                                <input type="text" id="form-name" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-bakery-bg text-bakery-primary text-sm focus:outline-none focus:border-bakery-accent">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-bakery-primary uppercase mb-1">Phone Number</label>
+                                <input type="tel" id="form-phone" required placeholder="Enter 10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-bakery-bg text-bakery-primary text-sm focus:outline-none focus:border-bakery-accent">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-bakery-primary uppercase mb-1">Select Service</label>
+                                <select id="form-service" class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-bakery-bg text-bakery-primary text-sm focus:outline-none focus:border-bakery-accent">
+                                    <option value="Custom Birthday Cake">Custom Birthday Cake</option>
+                                    <option value="Anniversary Cake">Anniversary Cake</option>
+                                    <option value="Pastries & Snacks">Pastries & Snacks</option>
+                                    <option value="Party Bulk Order">Party Bulk Order</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-bakery-primary uppercase mb-1">Message / Details</label>
+                                <textarea id="form-message" rows="3" placeholder="Tell us your requirements..." class="w-full px-4 py-3 rounded-xl border border-bakery-border bg-bakery-bg text-bakery-primary text-sm focus:outline-none focus:border-bakery-accent"></textarea>
+                            </div>
+                            <button type="submit" id="form-submit-btn" class="w-full py-4 bg-bakery-accent hover:bg-bakery-accentHover text-white font-bold rounded-xl shadow-md transition-all text-sm min-h-[48px] flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Send Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-6 flex flex-col space-y-6">
+                    <div class="w-full h-[450px] lg:h-full min-h-[450px] rounded-3xl overflow-hidden shadow-lg border-2 border-bakery-border bg-bakery-secondary">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778857416393!2d85.155!3d25.594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM1JzM4LjQiTiA4NcKwMDknMTguMCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cathy Confectioners Google Map Location"></iframe>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Cathy+Confectioners+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-bakery-primary text-bakery-secondary hover:bg-bakery-primary/90 font-bold rounded-2xl shadow-md transition-all text-center flex items-center justify-center gap-3 min-h-[48px]">
+                        <i data-lucide="navigation" class="w-5 h-5 text-bakery-accent"></i>
+                        <span>Get Directions on Google Maps</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-bakery-surface p-8 rounded-3xl max-w-md w-full border border-bakery-border shadow-2xl text-center space-y-4">
+            <div class="w-16 h-16 bg-bakery-secondary text-bakery-accent rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-bakery-primary">Inquiry Sent Successfully!</h3>
+            <p id="success-modal-msg" class="text-sm text-bakery-textMuted leading-relaxed">Thank you! We have received your inquiry. Our team at Cathy Confectioners will contact you shortly.</p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 bg-bakery-accent hover:bg-bakery-accentHover text-white font-bold rounded-xl shadow-md transition-all text-sm min-h-[48px]">
+                Got it, Thank You!
+            </button>
+        </div>
+    </div>
+
+    <!-- 11. Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFFDF9] border-t border-bakery-border p-3 shadow-2xl flex items-center gap-3">
+        <a href="tel:+919142170131" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-bakery-primary/20 text-bakery-primary bg-bakery-surface font-bold text-sm min-h-[48px]">
+            <i data-lucide="phone" class="w-4 h-4 text-bakery-accent"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919142170131?text=Hi%20Cathy%20Confectioners,%20I%20want%20to%20order%20a%20cake!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-bakery-accent text-white font-bold text-sm shadow-md min-h-[48px]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. Footer -->
+    <footer class="bg-bakery-primary text-bakery-secondary pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-bakery-secondary/10">
+                <!-- Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-bakery-accent flex items-center justify-center text-white">
+                            <i data-lucide="cake" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif text-xl font-bold block leading-none text-white">Cathy</span>
+                            <span class="text-[10px] uppercase tracking-widest text-bakery-secondary/70">Confectioners</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-bakery-secondary/80 leading-relaxed">
+                        Patna's premier bakery & confectionery in Kankarbagh. Crafting exquisite custom celebration cakes and delicious daily bakes.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-bakery-secondary/90 font-medium">
+                        <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                        <span>3.9 ★ rating from 90+ Google reviews</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="font-serif font-bold text-base text-white">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-bakery-secondary/80">
+                        <li><a href="#menu" class="hover:text-bakery-accent transition-colors">Cakes & Menu</a></li>
+                        <li><a href="#about" class="hover:text-bakery-accent transition-colors">Our Story</a></li>
+                        <li><a href="#reviews" class="hover:text-bakery-accent transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-bakery-accent transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-bakery-accent transition-colors">Location & Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- Specialties -->
+                <div class="space-y-4">
+                    <h4 class="font-serif font-bold text-base text-white">Our Specialties</h4>
+                    <ul class="space-y-2.5 text-xs text-bakery-secondary/80">
+                        <li>Custom Birthday Cakes</li>
+                        <li>Anniversary & Theme Cakes</li>
+                        <li>Rich Chocolate Truffle</li>
+                        <li>Fresh Pastries & Patties</li>
+                        <li>Party Snacks & Bulk Orders</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="space-y-4">
+                    <h4 class="font-serif font-bold text-base text-white">Contact & Location</h4>
+                    <ul class="space-y-3 text-xs text-bakery-secondary/80">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-bakery-accent shrink-0 mt-0.5"></i>
+                            <span>10, MIG Rd, Kankarbagh Colony More, Kankarbagh, Mithapur, Patna, Bihar 800020</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-bakery-accent shrink-0"></i>
+                            <a href="tel:+919142170131" class="hover:underline">+91 91421 70131</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-bakery-accent shrink-0"></i>
+                            <span>Open Daily: 9:00 AM – 10:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-bakery-secondary/60 gap-4">
+                <p>&copy; <span id="current-year"></span> Cathy Confectioners. All rights reserved.</p>
+                <p>Designed with artisanal passion for Patna, Bihar.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Close Announcement Bar
+        function closeAnnouncement() {
+            const bar = document.getElementById('announcement-bar');
+            if (bar) {
+                bar.style.display = 'none';
+            }
+        }
+
+        // Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-drawer');
+            const backdrop = document.getElementById('menu-backdrop');
+            
+            if (drawer && backdrop) {
+                const isOpen = !drawer.classList.contains('translate-x-full');
+                if (isOpen) {
+                    drawer.classList.add('translate-x-full');
+                    backdrop.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                } else {
+                    drawer.classList.remove('translate-x-full');
+                    backdrop.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden');
+                }
+            }
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (content && icon) {
+                const isHidden = content.classList.contains('hidden');
+                // Close all first
+                for (let i = 1; i <= 4; i++) {
+                    const c = document.getElementById(`faq-content-${i}`);
+                    const ic = document.getElementById(`faq-icon-${i}`);
+                    if (c) c.classList.add('hidden');
+                    if (ic) ic.style.transform = 'rotate(0deg)';
+                }
+                
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            }
+        }
+
+        // Inquiry Form Handler with Sanitization & Success Modal
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById('form-name');
+            const phoneInput = document.getElementById('form-phone');
+            const serviceInput = document.getElementById('form-service');
+            const messageInput = document.getElementById('form-message');
+            const submitBtn = document.getElementById('form-submit-btn');
+
+            // Sanitize values
+            const name = sanitizeInput(nameInput.value);
+            const phone = sanitizeInput(phoneInput.value);
+            const service = sanitizeInput(serviceInput.value);
+            const message = sanitizeInput(messageInput.value);
+
+            if (!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i><span>Sending...</span>';
+            lucide.createIcons();
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i data-lucide="send" class="w-4 h-4"></i><span>Send Inquiry</span>';
+                lucide.createIcons();
+
+                // Show Success Modal with personalized text
+                const modalMsg = document.getElementById('success-modal-msg');
+                modalMsg.textContent = `Thank you ${name}! We have received your inquiry for ${service}. Our team will call or WhatsApp you at ${phone} shortly.`;
+                
+                document.getElementById('success-modal').classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+
+                // Reset form
+                document.getElementById('inquiry-form').reset();
+            }, 800);
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Basic XSS Sanitization Helper
+        function sanitizeInput(str) {
+            const temp = document.createElement('div');
+            temp.textContent = str;
+            return temp.innerHTML;
+        }
+    </script>
+</body>
+</html>
