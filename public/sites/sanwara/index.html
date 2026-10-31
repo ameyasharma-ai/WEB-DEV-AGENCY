@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Sanwara Restaurant | Authentic Dining & Takeaway in Patna</title>
+    <meta name="description" content="Experience authentic taste in the heart of Patna at Sanwara Restaurant, SP Verma Road. Reserve tables or order takeaway via WhatsApp!">
+    
+    <!-- Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        surface: '#1E1E1E',
+                        primary: '#E65100',
+                        secondary: '#D84315',
+                        textPrimary: '#F5F5F5',
+                        textMuted: '#B0B0B0',
+                        accentHover: '#FF6F00'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-textPrimary font-sans antialiased overflow-x-hidden pb-28 lg:pb-0 selection:bg-primary selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR (100% Solid) -->
+    <div class="bg-primary text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center z-50 relative">
+        <span class="inline-flex items-center gap-1.5 flex-wrap justify-center">
+            <i data-lucide="clock" class="w-3.5 h-3.5 shrink-0"></i> Open Daily: 11:00 AM – 11:00 PM | SP Verma Road, Patna
+            <a href="tel:+919304116049" class="underline hover:text-zinc-100 ml-1 font-bold">+91 93041 16049</a>
+        </span>
+    </div>
+
+    <!-- 100% SOLID OPAQUE STICKY HEADER -->
+    <header class="sticky top-0 z-40 bg-background border-b border-zinc-800 w-full transition-all">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary font-syne font-bold text-xl group-hover:scale-105 transition-transform">
+                    S
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-white block leading-none">SANWARA</span>
+                    <span class="text-xs text-textMuted tracking-widest uppercase font-medium">Restaurant & Dining</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="#menu" class="text-textMuted hover:text-primary transition-colors">Menu</a>
+                <a href="#why-us" class="text-textMuted hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="text-textMuted hover:text-primary transition-colors">Our Story</a>
+                <a href="#gallery" class="text-textMuted hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="text-textMuted hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="text-textMuted hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Header Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:border-primary transition-all">
+                    <i data-lucide="message-square" class="w-4 h-4 text-emerald-500"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#contact" class="inline-flex items-center gap-2 bg-primary hover:bg-accentHover text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-primary/20 transition-all">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE BACKDROP -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-background border-l border-zinc-800 rounded-tl-2xl p-6 pt-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary font-syne font-bold text-lg">
+                        S
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Sanwara</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 pt-6 text-base font-semibold">
+                <a href="#menu" class="mobile-nav-link text-zinc-300 hover:text-primary flex items-center justify-between py-2 border-b border-zinc-900"><span>Menu</span> <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#why-us" class="mobile-nav-link text-zinc-300 hover:text-primary flex items-center justify-between py-2 border-b border-zinc-900"><span>Why Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-nav-link text-zinc-300 hover:text-primary flex items-center justify-between py-2 border-b border-zinc-900"><span>Our Story</span> <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#gallery" class="mobile-nav-link text-zinc-300 hover:text-primary flex items-center justify-between py-2 border-b border-zinc-900"><span>Gallery</span> <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-nav-link text-zinc-300 hover:text-primary flex items-center justify-between py-2 border-b border-zinc-900"><span>Reviews</span> <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-primary flex items-center justify-between py-2"><span>Contact & Location</span> <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 border border-zinc-800 rounded-xl font-semibold flex items-center justify-center gap-2 text-white">
+                <i data-lucide="message-square" class="w-4 h-4 text-emerald-500"></i> WhatsApp Order
+            </a>
+            <a href="tel:+919304116049" class="w-full py-3 bg-primary hover:bg-accentHover rounded-xl font-semibold flex items-center justify-center gap-2 text-white shadow-lg shadow-primary/20">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call +91 93041 16049
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#E65100_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-zinc-800 mb-6 shadow-inner">
+                        <div class="flex items-center text-amber-400 gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400/50"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-white">3.9 ★</span>
+                        <span class="text-xs text-textMuted">(677+ Google Reviews)</span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Experience Authentic Taste in the Heart of <span class="text-primary underline decoration-primary/40 underline-offset-8">Patna</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-textMuted mb-8 leading-relaxed max-w-xl break-words">
+                        Welcome to Sanwara Restaurant on SP Verma Road. Savor mouth-watering North Indian delicacies, sizzling Chinese treats, and aromatic beverages crafted with passion and pristine hygiene.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-accentHover text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl shadow-primary/25 transition-all transform hover:-translate-y-0.5">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            <span>Reserve Your Table</span>
+                        </a>
+                        <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface hover:bg-zinc-800 border border-zinc-800 text-white px-8 py-4 rounded-xl font-bold text-base transition-all">
+                            <i data-lucide="utensils" class="w-5 h-5 text-primary"></i>
+                            <span>Explore Menu</span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-zinc-800/80 max-w-lg">
+                        <div>
+                            <div class="font-syne font-extrabold text-2xl text-white">677+</div>
+                            <div class="text-xs text-textMuted mt-1">Google Reviews</div>
+                        </div>
+                        <div>
+                            <div class="font-syne font-extrabold text-2xl text-white">100%</div>
+                            <div class="text-xs text-textMuted mt-1">Fresh & Hygienic</div>
+                        </div>
+                        <div>
+                            <div class="font-syne font-extrabold text-2xl text-white">Central</div>
+                            <div class="text-xs text-textMuted mt-1">SP Verma Rd</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Image Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-lg opacity-30 animate-pulse"></div>
+                        <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-surface aspect-[4/3] shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Sanwara Restaurant Interior and Food" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex items-end p-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-lg">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Om Complex, SP Verma Road</div>
+                                        <div class="text-xs text-textMuted">Old Jakkanpur, Patna, Bihar</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-surface/50 py-6">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-2">
+                        <i data-lucide="star" class="w-5 h-5 fill-primary"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">3.9 / 5.0 Rating</span>
+                    <span class="text-xs text-textMuted">Trusted by 677+ Foodies</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-2">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Prime Location</span>
+                    <span class="text-xs text-textMuted">SP Verma Road, Patna</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-2">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Hygienic Kitchen</span>
+                    <span class="text-xs text-textMuted">Fresh Ingredients Daily</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-2">
+                        <i data-lucide="utensils" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Dine-in & Takeaway</span>
+                    <span class="text-xs text-textMuted">Fast WhatsApp Orders</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE MENU GRID -->
+    <section id="menu" class="py-20 bg-background">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">Our Specialties</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-3 break-words">Signature Menu Highlights</h2>
+                <p class="text-textMuted text-sm sm:text-base">Explore our most loved dishes prepared by master chefs with authentic spices and fresh local produce.</p>
+            </div>
+
+            <!-- Menu Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                <button onclick="filterMenu('all')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-primary text-white shadow-lg shadow-primary/20" data-category="all">All Dishes</button>
+                <button onclick="filterMenu('starter')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-surface border border-zinc-800 text-textMuted hover:text-white" data-category="starter">Starters</button>
+                <button onclick="filterMenu('north-indian')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-surface border border-zinc-800 text-textMuted hover:text-white" data-category="north-indian">North Indian</button>
+                <button onclick="filterMenu('chinese')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-surface border border-zinc-800 text-textMuted hover:text-white" data-category="chinese">Chinese</button>
+                <button onclick="filterMenu('beverages')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-surface border border-zinc-800 text-textMuted hover:text-white" data-category="beverages">Beverages</button>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Item 1 -->
+                <div class="menu-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="north-indian">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Paneer Butter Masala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-background/90 backdrop-blur-md px-3 py-1 rounded-lg text-primary font-bold text-xs border border-zinc-800">₹260</span>
+                            <span class="absolute top-3 left-3 bg-primary/90 text-white px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider">North Indian</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-syne font-bold text-lg text-white mb-2 flex items-center justify-between">
+                                Paneer Butter Masala
+                            </h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-4">Soft paneer cubes simmered in a rich, buttery, velvety tomato gravy with aromatic Indian spices.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20Paneer%20Butter%20Masala." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 hover:bg-primary border border-zinc-800 hover:border-primary rounded-xl text-sm font-bold flex items-center justify-center gap-2 text-white transition-all shadow-md">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500 group-hover:text-white"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="starter">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Crispy Veg Spring Rolls" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-background/90 backdrop-blur-md px-3 py-1 rounded-lg text-primary font-bold text-xs border border-zinc-800">₹180</span>
+                            <span class="absolute top-3 left-3 bg-primary/90 text-white px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider">Starter</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-syne font-bold text-lg text-white mb-2 flex items-center justify-between">
+                                Crispy Veg Spring Rolls
+                            </h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-4">Golden, crispy rolls stuffed with finely chopped fresh vegetables and aromatic Asian herbs, served with dip.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20Crispy%20Veg%20Spring%20Rolls." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 hover:bg-primary border border-zinc-800 hover:border-primary rounded-xl text-sm font-bold flex items-center justify-center gap-2 text-white transition-all shadow-md">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500 group-hover:text-white"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="chinese">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=600&q=80" alt="Hakka Noodles & Manchurian" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-background/90 backdrop-blur-md px-3 py-1 rounded-lg text-primary font-bold text-xs border border-zinc-800">₹220</span>
+                            <span class="absolute top-3 left-3 bg-primary/90 text-white px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider">Chinese</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-syne font-bold text-lg text-white mb-2 flex items-center justify-between">
+                                Veg Hakka Noodles
+                            </h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-4">Wok-tossed noodles with crisp seasonal vegetables, soy sauce, and traditional Chinese spices.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20Veg%20Hakka%20Noodles." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 hover:bg-primary border border-zinc-800 hover:border-primary rounded-xl text-sm font-bold flex items-center justify-center gap-2 text-white transition-all shadow-md">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500 group-hover:text-white"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="north-indian">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80" alt="Dal Makhani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-background/90 backdrop-blur-md px-3 py-1 rounded-lg text-primary font-bold text-xs border border-zinc-800">₹210</span>
+                            <span class="absolute top-3 left-3 bg-primary/90 text-white px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider">North Indian</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-syne font-bold text-lg text-white mb-2 flex items-center justify-between">
+                                Signature Dal Makhani
+                            </h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-4">Whole black lentils simmered overnight on slow charcoal fire, enriched with butter and fresh cream.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20Signature%20Dal%20Makhani." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 hover:bg-primary border border-zinc-800 hover:border-primary rounded-xl text-sm font-bold flex items-center justify-center gap-2 text-white transition-all shadow-md">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500 group-hover:text-white"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="starter">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-background/90 backdrop-blur-md px-3 py-1 rounded-lg text-primary font-bold text-xs border border-zinc-800">₹290</span>
+                            <span class="absolute top-3 left-3 bg-primary/90 text-white px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider">Starter</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-syne font-bold text-lg text-white mb-2 flex items-center justify-between">
+                                Tandoori Paneer Tikka
+                            </h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-4">Cottage cheese chunks marinated in spiced yogurt, charred to smoky perfection in our clay tandoor.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20Tandoori%20Paneer%20Tikka." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 hover:bg-primary border border-zinc-800 hover:border-primary rounded-xl text-sm font-bold flex items-center justify-center gap-2 text-white transition-all shadow-md">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500 group-hover:text-white"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="beverages">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" alt="Refreshing Beverages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-background/90 backdrop-blur-md px-3 py-1 rounded-lg text-primary font-bold text-xs border border-zinc-800">₹110</span>
+                            <span class="absolute top-3 left-3 bg-primary/90 text-white px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider">Beverages</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-syne font-bold text-lg text-white mb-2 flex items-center justify-between">
+                                Special Rose Lassi / Mojito
+                            </h3>
+                            <p class="text-textMuted text-sm leading-relaxed mb-4">Refresh your palate with our chilled creamy traditional lassi or cooling mint mojito.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20Special%20Beverages." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-900 hover:bg-primary border border-zinc-800 hover:border-primary rounded-xl text-sm font-bold flex items-center justify-center gap-2 text-white transition-all shadow-md">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500 group-hover:text-white"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-us" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">The Sanwara Difference</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-3 break-words">Why Patna Food Lovers Choose Us</h2>
+                <p class="text-textMuted text-sm sm:text-base">We take pride in delivering exceptional dining experiences through dedication, quality, and warmth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 flex flex-col items-start hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Immaculate Hygiene</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Our kitchen follows rigorous sanitation standards with freshly sourced ingredients inspected daily for absolute safety and purity.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 flex flex-col items-start hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Central SP Verma Road</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Conveniently located at Om Complex in Old Jakkanpur, Patna—easily accessible for dine-in gatherings and quick pickups.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 flex flex-col items-start hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Warm Hospitality</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Experience traditional Bihari warmth and polite service that makes every family dinner or celebration feel like home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / STORY SECTION -->
+    <section id="about" class="py-20 bg-background">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Images -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5] shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Sanwara Restaurant Ambience" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5] shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Delicious Food Spread" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Narrative -->
+                <div class="lg:col-span-6">
+                    <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">Our Story</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-6 break-words">A Culinary Landmark on SP Verma Road</h2>
+                    <p class="text-textMuted text-base leading-relaxed mb-6">
+                        Sanwara Restaurant has grown to become a beloved destination for food enthusiasts across Patna. Located centrally at Om Complex, SP Verma Road, we combine traditional recipes with modern culinary techniques to create unforgettable dining experiences.
+                    </p>
+                    <p class="text-textMuted text-base leading-relaxed mb-8">
+                        Whether you are looking for a cozy family dinner, a celebratory lunch, or convenient takeaway packaged with care, Sanwara Restaurant guarantees exceptional flavor, pristine hygiene, and warm hospitality every single time.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-zinc-800">
+                        <div>
+                            <div class="font-syne font-bold text-xl text-white mb-1">Authentic Recipes</div>
+                            <p class="text-xs text-textMuted">Crafted with hand-ground spices and expert chefs.</p>
+                        </div>
+                        <div>
+                            <div class="font-syne font-bold text-xl text-white mb-1">Family Friendly</div>
+                            <p class="text-xs text-textMuted">Spacious seating and welcoming ambiance for all ages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE GALLERY -->
+    <section id="gallery" class="py-20 bg-surface/20 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">Visual Feast</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-3 break-words">Restaurant Ambience & Dishes</h2>
+                <p class="text-textMuted text-sm sm:text-base">Take a sneak peek into our vibrant dining atmosphere and delectable culinary creations.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Food Dish 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Food Dish 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Restaurant Dining Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Delicious Pizza/Starter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-background">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-3 break-words">Loved by 677+ Google Reviewers</h2>
+                <p class="text-textMuted text-sm sm:text-base">Read authentic experiences shared by our valued patrons who dine with us in Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Fantastic food quality and wonderful service! Located right in the center on SP Verma Road. Their paneer dishes and breads are exceptionally delicious. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center font-bold text-primary">
+                            AK
+                        </div>
+                        <div>
+                            <div class="font-syne font-bold text-sm text-white">Amit Kumar</div>
+                            <div class="text-xs text-textMuted">Local Google Reviewer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Great ambience for family dinners. The staff is polite and attentive. We ordered Chinese starters and North Indian mains—everything was piping hot and fresh."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center font-bold text-primary">
+                            PS
+                        </div>
+                        <div>
+                            <div class="font-syne font-bold text-sm text-white">Pooja Sharma</div>
+                            <div class="text-xs text-textMuted">Google Reviewer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center text-amber-400 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400/50"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Very convenient location near Old Jakkanpur. Quick takeaway service and excellent packaging. Sanwara is my go-to restaurant in Patna for good food."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center font-bold text-primary">
+                            RV
+                        </div>
+                        <div>
+                            <div class="font-syne font-bold text-sm text-white">Rahul Verma</div>
+                            <div class="text-xs text-textMuted">Local Guide</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-3 break-words">Frequently Asked Questions</h2>
+                <p class="text-textMuted text-sm sm:text-base">Everything you need to know about dining, reservations, and takeaway at Sanwara Restaurant.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Do you take advance table reservations?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Yes! You can easily reserve your table in advance by filling out our reservation form below or calling us directly at +91 93041 16049 to ensure your table is ready upon arrival.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">How can I place a takeaway order via WhatsApp?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        Simply click any "Order on WhatsApp" button on our menu or header, send us your desired dishes, and our team will confirm your order and preparation time instantly.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Where exactly is Sanwara Restaurant located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        We are centrally located at Om Complex, SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001. Easily accessible from all major landmarks in Patna.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted text-sm leading-relaxed">
+                        We are open every day of the week from 11:00 AM to 11:00 PM for dine-in and takeaway orders.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-background">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">Reach Us</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-3 break-words">Visit Or Reserve A Table</h2>
+                <p class="text-textMuted text-sm sm:text-base">We look forward to serving you the finest meals in Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Column: Contact info & Hours -->
+                <div class="lg:col-span-5 space-y-8">
+                    <!-- Info Card -->
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-8 shadow-xl space-y-6">
+                        <h3 class="font-syne font-bold text-xl text-white">Contact Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-white text-sm">Address</div>
+                                <div class="text-textMuted text-sm mt-0.5">Om Complex, SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-white text-sm">Phone / WhatsApp</div>
+                                <a href="tel:+919304116049" class="text-primary font-bold text-sm mt-0.5 block hover:underline">+91 93041 16049</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-white text-sm">Operating Hours</div>
+                                <div class="text-textMuted text-sm mt-0.5">Monday – Sunday: 11:00 AM – 11:00 PM</div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sanwara+Restaurant+SP+Verma+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-primary hover:bg-accentHover rounded-xl font-bold text-sm flex items-center justify-center gap-2 text-white shadow-lg shadow-primary/20 transition-all">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Reservation / Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-surface border border-zinc-800 rounded-2xl p-8 sm:p-10 shadow-xl">
+                        <h3 class="font-syne font-bold text-2xl text-white mb-2">Book a Table or Send Inquiry</h3>
+                        <p class="text-textMuted text-sm mb-8">Fill out the quick form below and we will confirm your reservation instantly.</p>
+
+                        <form id="reservation-form" class="space-y-6" onsubmit="handleReservation(event)">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Your Name *</label>
+                                    <input type="text" id="name" required class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Rahul Sharma">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Phone Number *</label>
+                                    <input type="tel" id="phone" required class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="+91 98765 43210">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Number of Guests *</label>
+                                    <select id="guests" class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                        <option value="1-2 Persons">1 - 2 Persons (Couple Table)</option>
+                                        <option value="3-4 Persons">3 - 4 Persons (Family Table)</option>
+                                        <option value="5-8 Persons">5 - 8 Persons (Group Gathering)</option>
+                                        <option value="8+ Persons">8+ Persons (Party / Celebration)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Preferred Time *</label>
+                                    <input type="text" id="time" required class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Today at 8:00 PM">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Special Requests (Optional)</label>
+                                <textarea id="message" rows="3" class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Any dietary requirements or anniversary setup..."></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full py-4 bg-primary hover:bg-accentHover rounded-xl font-bold text-base flex items-center justify-center gap-2 text-white shadow-xl shadow-primary/25 transition-all">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span>Confirm Table Reservation</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="mt-16 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl h-[400px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788484128!2d85.1322!3d25.6067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f000000001%3A0x0!2sSanwara%20Restaurant!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sanwara Restaurant Location Map"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 bg-primary/20 border border-primary/40 rounded-full flex items-center justify-center text-primary mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Reservation Received!</h3>
+            <p id="modal-desc" class="text-textMuted text-sm mb-8">Thank you! Your table reservation request has been successfully recorded. We will call you shortly to confirm.</p>
+            <button onclick="closeModal()" class="w-full py-3.5 bg-primary hover:bg-accentHover rounded-xl font-bold text-sm text-white transition-all shadow-lg shadow-primary/20">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-background border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary font-syne font-bold text-xl">
+                            S
+                        </div>
+                        <div>
+                            <span class="font-syne font-extrabold text-lg text-white block leading-none">SANWARA</span>
+                            <span class="text-xs text-textMuted tracking-widest uppercase">Restaurant</span>
+                        </div>
+                    </div>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6">
+                        Authentic culinary delights in the heart of Patna. Experience unmatched taste, pristine hygiene, and warm hospitality.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919304116049" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-primary hover:border-primary transition-colors">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919304116049" aria-label="Phone" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-primary hover:border-primary transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sanwara+Restaurant+SP+Verma+Rd+Patna" target="_blank" rel="noopener noreferrer" aria-label="Location" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-primary hover:border-primary transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#menu" class="text-textMuted hover:text-primary transition-colors">Signature Menu</a></li>
+                        <li><a href="#why-us" class="text-textMuted hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="text-textMuted hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="text-textMuted hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#reviews" class="text-textMuted hover:text-primary transition-colors">Google Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Opening Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-textMuted">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-white font-medium">11 AM - 11 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Location</h4>
+                    <p class="text-textMuted text-sm leading-relaxed mb-4">
+                        Om Complex, SP Verma Rd, Old Jakkanpur, Lodipur, Patna, Bihar 800001
+                    </p>
+                    <a href="tel:+919304116049" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+                        <i data-lucide="phone" class="w-4 h-4"></i> +91 93041 16049
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-textMuted gap-4">
+                <div>&copy; <span id="current-year"></span> Sanwara Restaurant, Patna. All rights reserved.</div>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-background border-t border-zinc-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+919304116049" class="py-3 bg-zinc-900 border border-zinc-800 hover:border-primary rounded-xl font-bold text-sm flex items-center justify-center gap-2 text-white">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i> Call Now
+        </a>
+        <a href="https://wa.me/919304116049?text=Hello%20Sanwara%20Restaurant,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="py-3 bg-primary hover:bg-accentHover rounded-xl font-bold text-sm flex items-center justify-center gap-2 text-white shadow-lg shadow-primary/20">
+            <i data-lucide="message-square" class="w-4 h-4 text-white"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & INTERACTIONS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu(open) {
+            if (open) {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        menuToggle.addEventListener('click', () => toggleMobileMenu(true));
+        menuClose.addEventListener('click', () => toggleMobileMenu(false));
+        menuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
+        });
+
+        // Menu Filtering Logic
+        function filterMenu(category) {
+            const buttons = document.querySelectorAll('.menu-tab-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = 'menu-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-primary text-white shadow-lg shadow-primary/20';
+                } else {
+                    btn.className = 'menu-tab-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-surface border border-zinc-800 text-textMuted hover:text-white';
+                }
+            });
+
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion Logic
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Form Handling & Success Modal
+        function handleReservation(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const guests = document.getElementById('guests').value;
+            const time = document.getElementById('time').value.trim();
+
+            // Sanitize inputs before displaying
+            const sanitizedName = name.replace(/[<>]/g, '');
+            const sanitizedTime = time.replace(/[<>]/g, '');
+
+            document.getElementById('modal-desc').textContent = `Thank you, ${sanitizedName}! Your table for ${guests} at ${sanitizedTime} has been successfully requested. We will call you shortly to confirm.`;
+            
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            document.getElementById('reservation-form').reset();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>

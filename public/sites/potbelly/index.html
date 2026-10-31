@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>The Potbelly – Patna | Specialty Cafe & Restaurant at Bihar Museum</title>
+    <meta name="description" content="Experience art, culture, and artisanal fusion dining at The Potbelly, located inside the Bihar Museum, Patna. Reserve a table or explore our menu today.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF7F2',
+                        terracotta: '#C85A32',
+                        'terracotta-hover': '#A84722',
+                        espresso: '#3B2219',
+                        charcoal: '#222222',
+                        taupe: '#776B62',
+                        surface: '#FFFFFF',
+                        bordercolor: '#E5E0D8'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #222222;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Backdrop Overlay for Mobile Drawer -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-espresso text-cream text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 z-50 relative">
+        <i data-lucide="sparkles" class="w-4 h-4 text-terracotta shrink-0"></i>
+        <span>Open Today at Bihar Museum: 11:00 AM – 10:00 PM • Call/WhatsApp: +91 70919 10283</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-cream border-b border-bordercolor shadow-sm w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-terracotta flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                    <i data-lucide="coffee" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-espresso block leading-tight">The Potbelly</span>
+                    <span class="text-xs uppercase tracking-widest text-taupe font-semibold">Patna • Bihar Museum</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-charcoal">
+                <a href="#menu" class="hover:text-terracotta transition-colors">Menu</a>
+                <a href="#about" class="hover:text-terracotta transition-colors">Our Story</a>
+                <a href="#why-us" class="hover:text-terracotta transition-colors">Experience</a>
+                <a href="#gallery" class="hover:text-terracotta transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-terracotta transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-terracotta transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop CTA Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+917091910283" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-terracotta text-terracotta text-sm font-semibold hover:bg-terracotta hover:text-white transition-all">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-terracotta text-white text-sm font-semibold hover:bg-terracotta-hover shadow-md hover:shadow-lg transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Reserve on WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl text-espresso hover:bg-bordercolor/50 focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-cream border-l border-bordercolor rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-bordercolor mb-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-full bg-terracotta flex items-center justify-center text-white">
+                        <i data-lucide="coffee" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-serif text-lg font-bold text-espresso">The Potbelly</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-lg text-charcoal hover:bg-bordercolor">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 text-base font-medium text-charcoal">
+                <a href="#menu" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-bordercolor/50 transition-colors"><span>Menu</span> <i data-lucide="chevron-right" class="w-4 h-4 text-taupe"></i></a>
+                <a href="#about" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-bordercolor/50 transition-colors"><span>Our Story</span> <i data-lucide="chevron-right" class="w-4 h-4 text-taupe"></i></a>
+                <a href="#why-us" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-bordercolor/50 transition-colors"><span>Experience</span> <i data-lucide="chevron-right" class="w-4 h-4 text-taupe"></i></a>
+                <a href="#gallery" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-bordercolor/50 transition-colors"><span>Gallery</span> <i data-lucide="chevron-right" class="w-4 h-4 text-taupe"></i></a>
+                <a href="#reviews" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-bordercolor/50 transition-colors"><span>Reviews</span> <i data-lucide="chevron-right" class="w-4 h-4 text-taupe"></i></a>
+                <a href="#contact" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-bordercolor/50 transition-colors"><span>Location & Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-taupe"></i></a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-bordercolor flex flex-col gap-3">
+            <a href="tel:+917091910283" class="w-full py-3 px-4 rounded-xl border border-terracotta text-terracotta text-center font-semibold flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i> Call +91 70919 10283
+            </a>
+            <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-terracotta text-white text-center font-semibold flex items-center justify-center gap-2 shadow-md">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Reserve via WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#C85A32_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none"></div>
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-terracotta/10 border border-terracotta/20 text-terracotta text-xs sm:text-sm font-semibold mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-terracotta animate-pulse"></span>
+                        <span>Located Inside Bihar Museum, Bailey Road</span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-espresso leading-[1.15] mb-6 break-words">
+                        Art, Culture & Artisanal Flavors in the Heart of Patna
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-taupe mb-8 leading-relaxed max-w-2xl break-words">
+                        Welcome to Patna's most celebrated specialty cafe. Savor authentic Bihari fusion delicacies, freshly brewed coffees, and artisanal desserts in an inspiring museum sanctuary.
+                    </p>
+
+                    <!-- Trust Rating Badge -->
+                    <div class="flex flex-wrap items-center gap-4 mb-8 bg-surface p-4 rounded-2xl border border-bordercolor shadow-sm inline-flex">
+                        <div class="flex items-center gap-1 text-amber-500">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-5 h-5 fill-amber-500"></i>
+                        </div>
+                        <div class="text-sm">
+                            <span class="font-bold text-espresso">4.1★ Rating</span>
+                            <span class="text-taupe block sm:inline"> from 255+ Google Reviews</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-terracotta text-white font-semibold text-base hover:bg-terracotta-hover shadow-lg hover:shadow-xl transition-all">
+                            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                            <span>Reserve a Table Now</span>
+                        </a>
+                        <a href="#menu" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-surface border border-bordercolor text-espresso font-semibold text-base hover:bg-bordercolor/50 transition-all shadow-sm">
+                            <i data-lucide="utensils" class="w-5 h-5 text-terracotta"></i>
+                            <span>Explore Menu</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-surface">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" alt="The Potbelly Cafe Interior Patna" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Floating Badge Card -->
+                        <div class="absolute -bottom-6 -left-6 bg-surface p-4 sm:p-5 rounded-2xl border border-bordercolor shadow-xl max-w-[220px]">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-10 h-10 rounded-xl bg-terracotta/10 text-terracotta flex items-center justify-center font-bold">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif font-bold text-espresso text-sm">Museum Ambiance</h4>
+                                    <p class="text-xs text-taupe">Cultural Landmark</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-taupe leading-snug">Quiet retreat amidst art galleries and lush gardens.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-espresso text-cream py-10 border-y border-bordercolor/20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                <div class="flex flex-col items-center pt-4 md:pt-0">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="star" class="w-6 h-6 text-amber-400 fill-amber-400"></i>
+                        <span class="text-3xl font-serif font-bold text-white">4.1 / 5.0</span>
+                    </div>
+                    <p class="text-sm text-zinc-300">Over 255+ Verified Google Reviews</p>
+                </div>
+                <div class="flex flex-col items-center pt-4 md:pt-0">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-terracotta"></i>
+                        <span class="text-2xl font-serif font-bold text-white">Bihar Museum</span>
+                    </div>
+                    <p class="text-sm text-zinc-300">Bailey Road, Officers Flat, Patna</p>
+                </div>
+                <div class="flex flex-col items-center pt-4 md:pt-0">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="coffee" class="w-6 h-6 text-amber-400"></i>
+                        <span class="text-2xl font-serif font-bold text-white">Specialty Cafe</span>
+                    </div>
+                    <p class="text-sm text-zinc-300">Bihari Fusion & Artisanal Brews</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Menu Grid -->
+    <section id="menu" class="py-20 md:py-28 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-sm uppercase tracking-widest block mb-3">Culinary Masterpieces</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-espresso mb-4 break-words">Our Signature Menu</h2>
+                <p class="text-taupe text-base sm:text-lg">Discover a fusion of traditional Bihari flavors and contemporary cafe classics prepared with farm-fresh ingredients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Card 1 -->
+                <div class="bg-surface rounded-2xl overflow-hidden border border-bordercolor shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80" alt="Litti Chokha Artisanal Platter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-espresso text-cream text-xs font-semibold px-3 py-1 rounded-full">Bestseller</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif text-xl font-bold text-espresso">Bihari Litti Chokha Platter</h3>
+                                <span class="font-bold text-terracotta text-lg">₹345</span>
+                            </div>
+                            <p class="text-taupe text-sm leading-relaxed">Traditional roasted whole wheat dough balls stuffed with spiced sattu, served with smoked eggplant chokha and ghee.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20order%20Bihari%20Litti%20Chokha%20Platter." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cream border border-terracotta text-terracotta font-semibold text-center flex items-center justify-center gap-2 hover:bg-terracotta hover:text-white transition-all">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Card 2 -->
+                <div class="bg-surface rounded-2xl overflow-hidden border border-bordercolor shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt="Artisanal Woodfired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-terracotta text-white text-xs font-semibold px-3 py-1 rounded-full">Chef's Special</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif text-xl font-bold text-espresso">Potbelly Special Woodfired Pizza</h3>
+                                <span class="font-bold text-terracotta text-lg">₹495</span>
+                            </div>
+                            <p class="text-taupe text-sm leading-relaxed">Hand-tossed crust topped with artisanal cheese, sun-dried tomatoes, fresh basil, and local herb-infused oils.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20order%20Potbelly%20Special%20Woodfired%20Pizza." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cream border border-terracotta text-terracotta font-semibold text-center flex items-center justify-center gap-2 hover:bg-terracotta hover:text-white transition-all">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Card 3 -->
+                <div class="bg-surface rounded-2xl overflow-hidden border border-bordercolor shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Specialty Cappuccino & Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-espresso text-cream text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif text-xl font-bold text-espresso">Artisanal Espresso & Cappuccino</h3>
+                                <span class="font-bold text-terracotta text-lg">₹210</span>
+                            </div>
+                            <p class="text-taupe text-sm leading-relaxed">Freshly roasted single-origin coffee beans brewed to perfection with velvety microfoam.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20order%20Artisanal%20Espresso%20&%20Cappuccino." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cream border border-terracotta text-terracotta font-semibold text-center flex items-center justify-center gap-2 hover:bg-terracotta hover:text-white transition-all">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Card 4 -->
+                <div class="bg-surface rounded-2xl overflow-hidden border border-bordercolor shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80" alt="Chocolate Lava Cake Dessert" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-terracotta text-white text-xs font-semibold px-3 py-1 rounded-full">Sweet Treat</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif text-xl font-bold text-espresso">Belgian Chocolate Lava Cake</h3>
+                                <span class="font-bold text-terracotta text-lg">₹285</span>
+                            </div>
+                            <p class="text-taupe text-sm leading-relaxed">Warm molten chocolate cake served with a scoop of vanilla bean ice cream and berry compote.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20order%20Belgian%20Chocolate%20Lava%20Cake." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cream border border-terracotta text-terracotta font-semibold text-center flex items-center justify-center gap-2 hover:bg-terracotta hover:text-white transition-all">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Card 5 -->
+                <div class="bg-surface rounded-2xl overflow-hidden border border-bordercolor shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Delectable Bihari Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-espresso text-cream text-xs font-semibold px-3 py-1 rounded-full">Authentic</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif text-xl font-bold text-espresso">Royal Bihari Sampler Thali</h3>
+                                <span class="font-bold text-terracotta text-lg">₹550</span>
+                            </div>
+                            <p class="text-taupe text-sm leading-relaxed">A wholesome feast featuring traditional Bihari mutton/veg curries, seasonal saag, crisp puris, and traditional sweets.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20order%20Royal%20Bihari%20Sampler%20Thali." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cream border border-terracotta text-terracotta font-semibold text-center flex items-center justify-center gap-2 hover:bg-terracotta hover:text-white transition-all">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Card 6 -->
+                <div class="bg-surface rounded-2xl overflow-hidden border border-bordercolor shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=80" alt="Refreshing Iced Teas and Mocktails" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-terracotta text-white text-xs font-semibold px-3 py-1 rounded-full">Refreshing</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-serif text-xl font-bold text-espresso">Botanical Iced Mojitos & Teas</h3>
+                                <span class="font-bold text-terracotta text-lg">₹240</span>
+                            </div>
+                            <p class="text-taupe text-sm leading-relaxed">Hand-crafted coolers infused with fresh garden mint, kaffir lime, berries, and botanical syrups.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20order%20Botanical%20Iced%20Mojitos%20&%20Teas." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cream border border-terracotta text-terracotta font-semibold text-center flex items-center justify-center gap-2 hover:bg-terracotta hover:text-white transition-all">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20please%20send%20me%20your%20full%20digital%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-espresso text-cream font-semibold hover:bg-espresso/90 shadow-md transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                    <span>View Complete Menu PDF on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 md:py-28 bg-surface border-y border-bordercolor">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-sm uppercase tracking-widest block mb-3">The Potbelly Experience</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-espresso mb-4 break-words">Why Food Lovers Choose Us</h2>
+                <p class="text-taupe text-base sm:text-lg">We combine world-class museum architecture with soulful culinary traditions to create unforgettable dining memories.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-cream p-8 rounded-3xl border border-bordercolor shadow-sm hover:shadow-md transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-terracotta text-white flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso mb-3">Unmatched Location</h3>
+                    <p class="text-taupe text-sm leading-relaxed">Nestled inside the iconic Bihar Museum on Bailey Road. Enjoy a peaceful cultural escape right in the center of Patna.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-cream p-8 rounded-3xl border border-bordercolor shadow-sm hover:shadow-md transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-espresso text-cream flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="utensils" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso mb-3">Unique Bihari Fusion</h3>
+                    <p class="text-taupe text-sm leading-relaxed">Celebrating authentic Bihari heritage dishes reimagined with modern culinary artistry and gourmet presentation.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-cream p-8 rounded-3xl border border-bordercolor shadow-sm hover:shadow-md transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-terracotta text-white flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso mb-3">Cozy Ambiance</h3>
+                    <p class="text-taupe text-sm leading-relaxed">Warm artisanal decor, gentle lighting, and soothing music make it Patna's favorite spot for dates and family gatherings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 md:py-28 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border-2 border-surface">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Cafe Interior Atmosphere" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border-2 border-surface">
+                                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Artisanal Coffee Preparation" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <span class="text-terracotta font-semibold text-sm uppercase tracking-widest block mb-3">Our Culinary Heritage</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-espresso mb-6 break-words">Where Art Meets Gastronomy in Patna</h2>
+                    <p class="text-taupe text-base leading-relaxed mb-6">
+                        The Potbelly was born out of a deep passion for bringing authentic Bihari flavors to the global culinary map. Located within the serene and prestigious Bihar Museum complex on Bailey Road, our cafe offers a peaceful sanctuary where art enthusiasts and food lovers converge.
+                    </p>
+                    <p class="text-taupe text-base leading-relaxed mb-8">
+                        Every dish we serve tells a story of tradition, refined by contemporary techniques. Whether you are visiting the museum galleries or looking for a tranquil spot to work or unwind over specialty coffee, The Potbelly promises an unmatched experience.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-bordercolor">
+                        <div>
+                            <span class="font-serif text-3xl font-bold text-espresso block mb-1">255+</span>
+                            <span class="text-sm text-taupe">Google Reviews with 4.1★ Rating</span>
+                        </div>
+                        <div>
+                            <span class="font-serif text-3xl font-bold text-espresso block mb-1">100%</span>
+                            <span class="text-sm text-taupe">Fresh Ingredients & Artisanal Care</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section id="gallery" class="py-20 md:py-28 bg-surface border-t border-bordercolor">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-sm uppercase tracking-widest block mb-3">Visual Journey</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-espresso mb-4 break-words">Gallery of Moments</h2>
+                <p class="text-taupe text-base sm:text-lg">Take a peek into our warm interiors, exquisite dishes, and vibrant cafe atmosphere.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Cafe Seating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Woodfired Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Bihari Dish" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Coffee Brewing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 md:py-28 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-1 text-amber-500 mb-3">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star-half" class="w-5 h-5 fill-amber-500"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-espresso mb-4 break-words">Loved by 255+ Patnaites & Travelers</h2>
+                <p class="text-taupe text-base sm:text-lg">Read real Google Reviews from guests who experienced our hospitality and food.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-surface p-8 rounded-3xl border border-bordercolor shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-taupe text-sm leading-relaxed mb-6 italic">"An absolute gem inside the Bihar Museum! The litti chokha and coffee are simply world-class. The ambiance is peaceful and artistic. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bordercolor">
+                        <div class="w-10 h-10 rounded-full bg-terracotta text-white flex items-center justify-center font-bold">AS</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-espresso text-sm">Abhishek Sinha</h4>
+                            <span class="text-xs text-tauk">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface p-8 rounded-3xl border border-bordercolor shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-taupe text-sm leading-relaxed mb-6 italic">"Such a cozy place to relax after exploring the museum galleries. Excellent service, delicious woodfired pizzas, and wonderful staff. Will definitely visit again."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bordercolor">
+                        <div class="w-10 h-10 rounded-full bg-espresso text-cream flex items-center justify-center font-bold">PR</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-espresso text-sm">Priya Ranjan</h4>
+                            <span class="text-xs text-tauk">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface p-8 rounded-3xl border border-bordercolor shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-taupe text-sm leading-relaxed mb-6 italic">"The best cafe in Patna hands down. Unique location inside Bihar Museum, great coffee aromas, and authentic Bihari snacks. A must-visit for tourists and locals."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-bordercolor">
+                        <div class="w-10 h-10 rounded-full bg-terracotta text-white flex items-center justify-center font-bold">MK</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-espresso text-sm">Manish Kumar</h4>
+                            <span class="text-xs text-tauk">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-20 md:py-28 bg-surface border-t border-bordercolor">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-terracotta font-semibold text-sm uppercase tracking-widest block mb-3">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-espresso mb-4 break-words">Frequently Asked Questions</h2>
+                <p class="text-taupe text-base">Everything you need to know about visiting The Potbelly at Bihar Museum, Patna.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-bordercolor rounded-2xl bg-cream overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-espresso flex justify-between items-center gap-4 focus:outline-none">
+                        <span>Do I need a Bihar Museum ticket to visit the cafe?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        The Potbelly is located inside the Bihar Museum complex. While museum entry tickets give you access to the galleries, you can easily visit the cafe and enjoy our culinary delights. Check museum guidelines at entrance for cafe-only access passes if applicable.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-bordercolor rounded-2xl bg-cream overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-espresso flex justify-between items-center gap-4 focus:outline-none">
+                        <span>How can I reserve a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        You can instantly reserve a table by clicking our "Reserve on WhatsApp" button or by calling us directly at +91 70919 10283. We recommend advance reservations for weekends and evenings.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-bordercolor rounded-2xl bg-cream overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-espresso flex justify-between items-center gap-4 focus:outline-none">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        We are open every day from 11:00 AM to 10:00 PM, serving artisanal coffee, snacks, lunch, and dinner.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-bordercolor rounded-2xl bg-cream overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-espresso flex justify-between items-center gap-4 focus:outline-none">
+                        <span>Do you offer home delivery or takeout?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-terracotta transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-taupe text-sm leading-relaxed">
+                        Yes! You can place takeout orders directly via WhatsApp (+91 70919 10283) for quick pickup at the cafe.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-cream">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-sm uppercase tracking-widest block mb-3">Find & Visit Us</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-espresso mb-4 break-words">Location & Reservations</h2>
+                <p class="text-taupe text-base sm:text-lg">Drop by our cafe at Bihar Museum or send us an inquiry for table bookings and private events.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Hours & Form -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="bg-surface p-8 rounded-3xl border border-bordercolor shadow-sm space-y-6">
+                        <h3 class="font-serif text-2xl font-bold text-espresso">Contact Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-espresso text-sm">Address</h4>
+                                <p class="text-taupe text-sm">3, Bailey Rd, inside to Bihar Museum, Officers Flat, Market, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-espresso text-sm">Phone / WhatsApp</h4>
+                                <a href="tel:+917091910283" class="text-taupe text-sm hover:text-terracotta">+91 70919 10283</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-espresso text-sm">Operating Hours</h4>
+                                <p class="text-taupe text-sm">Monday – Sunday: 11:00 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table Reservation / Inquiry Form -->
+                    <div class="bg-surface p-8 rounded-3xl border border-bordercolor shadow-sm">
+                        <h3 class="font-serif text-2xl font-bold text-espresso mb-6">Table Reservation Form</h3>
+                        <form id="reservation-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-taupe mb-1">Your Name</label>
+                                <input type="text" id="res-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-bordercolor bg-cream text-espresso text-sm focus:outline-none focus:border-terracotta">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-taupe mb-1">Phone / WhatsApp Number</label>
+                                <input type="tel" id="res-phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-bordercolor bg-cream text-espresso text-sm focus:outline-none focus:border-terracotta">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-taupe mb-1">Date</label>
+                                    <input type="date" id="res-date" required class="w-full px-4 py-3 rounded-xl border border-bordercolor bg-cream text-espresso text-sm focus:outline-none focus:border-terracotta">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-taupe mb-1">Guests</label>
+                                    <select id="res-guests" class="w-full px-4 py-3 rounded-xl border border-bordercolor bg-cream text-espresso text-sm focus:outline-none focus:border-terracotta">
+                                        <option value="1-2 People">1-2 Guests</option>
+                                        <option value="3-4 People">3-4 Guests</option>
+                                        <option value="5-8 People">5-8 Guests</option>
+                                        <option value="8+ People">Large Group (8+)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-taupe mb-1">Special Requests (Optional)</label>
+                                <textarea id="res-message" rows="3" placeholder="Any dietary preferences or occasion notes..." class="w-full px-4 py-3 rounded-xl border border-bordercolor bg-cream text-espresso text-sm focus:outline-none focus:border-terracotta"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-terracotta text-white font-semibold hover:bg-terracotta-hover shadow-md transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Confirm Table Booking</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-6 flex flex-col h-full">
+                    <div class="bg-surface p-4 rounded-3xl border border-bordercolor shadow-sm flex-1 flex flex-col min-h-[450px]">
+                        <div class="w-full h-full min-h-[450px] rounded-2xl overflow-hidden relative flex-1">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7785897288597!2d85.12051937692055!3d25.612712914757657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef445b2bb%3A0xc3b8417c800c14da!2sThe%20Potbelly%20-%20Patna!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full absolute inset-0">
+                            </iframe>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-bordercolor flex items-center justify-between">
+                            <span class="text-xs font-semibold text-taupe uppercase tracking-wider">Bihar Museum Complex, Bailey Road</span>
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+Potbelly+Patna+Bihar+Museum+Bailey+Road" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-terracotta text-white text-xs font-semibold hover:bg-terracotta-hover transition-all">
+                                <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface rounded-3xl p-8 max-w-md w-full border border-bordercolor shadow-2xl text-center space-y-4">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-espresso">Reservation Request Received!</h3>
+            <p id="success-modal-text" class="text-taupe text-sm leading-relaxed">
+                Thank you! We have received your table reservation request. Our team will contact you on WhatsApp shortly to confirm your booking.
+            </p>
+            <button id="close-modal" class="w-full py-3.5 rounded-xl bg-terracotta text-white font-semibold hover:bg-terracotta-hover transition-all">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-espresso text-cream pt-16 pb-24 md:pb-16 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-terracotta flex items-center justify-center text-white">
+                            <i data-lucide="coffee" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white">The Potbelly</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Patna's premier specialty cafe and restaurant located inside the Bihar Museum, bringing art, culture, and artisanal flavors together.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/917091910283" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-zinc-800 text-zinc-300 hover:bg-terracotta hover:text-white flex items-center justify-center transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+917091910283" class="w-9 h-9 rounded-full bg-zinc-800 text-zinc-300 hover:bg-terracotta hover:text-white flex items-center justify-center transition-all">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#menu" class="hover:text-terracotta transition-colors">Our Signature Menu</a></li>
+                        <li><a href="#about" class="hover:text-terracotta transition-colors">Our Story & Heritage</a></li>
+                        <li><a href="#why-us" class="hover:text-terracotta transition-colors">Why Choose Us</a></li>
+                        <li><a href="#gallery" class="hover:text-terracotta transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-terracotta transition-colors">Google Reviews (4.1★)</a></li>
+                        <li><a href="#contact" class="hover:text-terracotta transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white">11 AM – 10 PM</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white">11 AM – 10 PM</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white">11 AM – 10 PM</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white">11 AM – 10 PM</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white">11 AM – 10 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white">11 AM – 10 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-white">11 AM – 10 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Visit Location</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                        3, Bailey Rd, inside to Bihar Museum, Officers Flat, Market, Patna, Bihar 800001
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=The+Potbelly+Patna+Bihar+Museum+Bailey+Road" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-terracotta font-semibold text-sm hover:underline">
+                        <span>Open in Google Maps</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800 text-center text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> The Potbelly – Patna. All rights reserved. Located inside Bihar Museum.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+917091910283" class="flex-1 py-3 px-4 rounded-xl border border-zinc-700 bg-zinc-900 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-terracotta"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917091910283?text=Hi%20The%20Potbelly,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-terracotta text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('lucide, svg');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                button.classList.toggle('text-terracotta');
+                if (icon) {
+                    icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Form Handling & Success Modal
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        const successModalText = document.getElementById('success-modal-text');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('res-name').value.trim();
+            const phone = document.getElementById('res-phone').value.trim();
+            const date = document.getElementById('res-date').value;
+            const guests = document.getElementById('res-guests').value;
+
+            // XSS / Sanitization check
+            const sanitizedName = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            
+            successModalText.textContent = `Thank you, ${sanitizedName}! Your table reservation request for ${guests} on ${date} has been registered. We will confirm via WhatsApp at ${phone} shortly.`;
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            reservationForm.reset();
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+                reservationForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>
