@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galangal Grill | Fine Dining Restaurant in Patna</title>
+    
+    <!-- Security & Performance Meta -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0A0A0C',
+                            surface: '#1A1A1E',
+                            surfaceHover: '#24242B',
+                            primary: '#D4AF37',
+                            secondary: '#E5C158',
+                            text: '#F4F4F5',
+                            muted: '#A1A1AA',
+                            border: '#27272A'
+                        }
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0C;
+            color: #F4F4F5;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3D068 0%, #D4AF37 50%, #AA8220 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #E5C158 0%, #D4AF37 100%);
+        }
+        .gold-border {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        .gold-border:hover {
+            border-color: rgba(212, 175, 55, 0.8);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0C] text-[#F4F4F5] overflow-x-hidden pb-28 md:pb-0 antialiased selection:bg-[#D4AF37] selection:text-[#0A0A0C]">
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% OPAQUE STICKY HEADER -->
+    <div class="bg-[#121215] text-[#D4AF37] text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-zinc-800 flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 flex-shrink-0"></i>
+        <span>Open Today: 12:00 PM – 11:30 PM • Hotel Gargee Grand, Patna</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-[#0A0A0C] border-b border-zinc-800 transition-all duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl gold-gradient-bg flex items-center justify-center shadow-lg shadow-[#D4AF37]/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="utensils-crossed" class="w-5 h-5 text-[#0A0A0C]"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne tracking-wider text-[#F4F4F5]">GALANGAL <span class="text-[#D4AF37]">GRILL</span></span>
+                    <span class="text-[10px] tracking-widest text-[#A1A1AA] uppercase">Fine Dining & Grills</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="#menu" class="text-[#A1A1AA] hover:text-[#D4AF37] transition-colors">Menu</a>
+                <a href="#ambiance" class="text-[#A1A1AA] hover:text-[#D4AF37] transition-colors">Ambiance</a>
+                <a href="#gallery" class="text-[#A1A1AA] hover:text-[#D4AF37] transition-colors">Gallery</a>
+                <a href="#reviews" class="text-[#A1A1AA] hover:text-[#D4AF37] transition-colors">Reviews</a>
+                <a href="#faq" class="text-[#A1A1AA] hover:text-[#D4AF37] transition-colors">FAQ</a>
+                <a href="#contact" class="text-[#A1A1AA] hover:text-[#D4AF37] transition-colors">Location</a>
+            </nav>
+
+            <!-- Action CTAs -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+919771497912" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-800 bg-[#1A1A1E] hover:border-[#D4AF37] text-[#F4F4F5] text-sm font-semibold transition-all shadow-sm">
+                    <i data-lucide="phone" class="w-4 h-4 text-[#D4AF37]"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/919771497912?text=Hello%20Galangal%20Grill,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl gold-gradient-bg text-[#0A0A0C] text-sm font-bold shadow-lg shadow-[#D4AF37]/20 hover:opacity-95 transition-all">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-[#1A1A1E] border border-zinc-800 text-[#F4F4F5] hover:text-[#D4AF37] focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop & Drawer -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#0A0A0C] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg gold-gradient-bg flex items-center justify-center">
+                        <i data-lucide="utensils-crossed" class="w-4 h-4 text-[#0A0A0C]"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-[#F4F4F5]">Galangal Grill</span>
+                </div>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-lg bg-[#1A1A1E] text-[#A1A1AA] hover:text-[#F4F4F5]">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 pt-6 font-medium text-base">
+                <a href="#menu" class="mobile-link text-[#A1A1AA] hover:text-[#D4AF37] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Menu</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#ambiance" class="mobile-link text-[#A1A1AA] hover:text-[#D4AF37] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Ambiance</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#gallery" class="mobile-link text-[#A1A1AA] hover:text-[#D4AF37] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Gallery</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#reviews" class="mobile-link text-[#A1A1AA] hover:text-[#D4AF37] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#faq" class="mobile-link text-[#A1A1AA] hover:text-[#D4AF37] py-2 border-b border-zinc-900 flex items-center justify-between"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                <a href="#contact" class="mobile-link text-[#A1A1AA] hover:text-[#D4AF37] py-2 border-b border-zinc-900 flex items-center justify-between"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919771497912" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-zinc-800 bg-[#1A1A1E] text-[#F4F4F5] font-semibold">
+                <i data-lucide="phone" class="w-4 h-4 text-[#D4AF37]"></i> Call +91 97714-97912
+            </a>
+            <a href="https://wa.me/919771497912?text=Hello%20Galangal%20Grill,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl gold-gradient-bg text-[#0A0A0C] font-bold">
+                <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Reservation
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 md:py-24">
+        <!-- Background Ambient Glow & Image -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80" alt="Fine Dining Ambiance" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/80 to-[#0A0A0C]/60"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Google Rating Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1A1A1E]/90 border border-zinc-800 mb-6 shadow-md backdrop-blur-md">
+                <div class="flex items-center text-[#D4AF37]">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                </div>
+                <span class="text-xs sm:text-sm font-semibold text-[#F4F4F5]">3.0 ★ Google Rating (12 Reviews)</span>
+            </div>
+
+            <!-- Main Hero Headline -->
+            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-[#F4F4F5] leading-[1.15] mb-6 break-words max-w-4xl mx-auto">
+                Exquisite Flavors & Fine Dining at <span class="gold-gradient-text">Gandhi Maidan</span>
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-[#A1A1AA] max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                Indulge in Patna's premier culinary destination located inside Hotel Gargee Grand. Specializing in masterfully prepared grills, authentic spices, and sophisticated hospitality.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+                <a href="#contact" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl gold-gradient-bg text-[#0A0A0C] font-bold text-base shadow-xl shadow-[#D4AF37]/20 hover:opacity-95 transition-all transform hover:-translate-y-0.5 min-h-[48px]">
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                    <span>Reserve a Table</span>
+                </a>
+                <a href="#menu" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#1A1A1E] border border-zinc-800 hover:border-[#D4AF37] text-[#F4F4F5] font-semibold text-base transition-all min-h-[48px]">
+                    <i data-lucide="book-open" class="w-5 h-5 text-[#D4AF37]"></i>
+                    <span>Explore Menu</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-[#121215] py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-4 p-4 rounded-xl bg-[#1A1A1E] border border-zinc-800/80">
+                    <div class="w-12 h-12 rounded-xl bg-[#0A0A0C] border border-zinc-800 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-syne font-bold text-[#F4F4F5] text-sm">Prime Location</h3>
+                        <p class="text-xs text-[#A1A1AA]">Hotel Gargee Grand, Gandhi Maidan</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4 p-4 rounded-xl bg-[#1A1A1E] border border-zinc-800/80">
+                    <div class="w-12 h-12 rounded-xl bg-[#0A0A0C] border border-zinc-800 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-syne font-bold text-[#F4F4F5] text-sm">Authentic Grills</h3>
+                        <p class="text-xs text-[#A1A1AA]">Masterfully seared & seasoned delicacies</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4 p-4 rounded-xl bg-[#1A1A1E] border border-zinc-800/80">
+                    <div class="w-12 h-12 rounded-xl bg-[#0A0A0C] border border-zinc-800 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-syne font-bold text-[#F4F4F5] text-sm">Fine Hospitality</h3>
+                        <p class="text-xs text-[#A1A1AA]">Professional service for memorable dining</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SIGNATURE MENU / OFFERINGS GRID -->
+    <section id="menu" class="py-20 md:py-28 bg-[#0A0A0C]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-widest uppercase bg-[#1A1A1E] px-3 py-1.5 rounded-full border border-zinc-800 inline-block mb-3">Culinary Excellence</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-[#F4F4F5] mb-4">Our Signature Menu</h2>
+                <p class="text-[#A1A1AA] text-sm sm:text-base">Handcrafted appetizers, succulent charcoal grills, sumptuous mains, and decadent desserts curated by our master chefs.</p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12">
+                <button onclick="filterMenu('all')" class="menu-tab active px-5 py-2.5 rounded-xl text-sm font-semibold transition-all gold-gradient-bg text-[#0A0A0C]">All Items</button>
+                <button onclick="filterMenu('starters')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-[#1A1A1E] text-[#A1A1AA] hover:text-[#F4F4F5] border border-zinc-800">Starters</button>
+                <button onclick="filterMenu('grills')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-[#1A1A1E] text-[#A1A1AA] hover:text-[#F4F4F5] border border-zinc-800">Grills</button>
+                <button onclick="filterMenu('mains')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-[#1A1A1E] text-[#A1A1AA] hover:text-[#F4F4F5] border border-zinc-800">Mains</button>
+                <button onclick="filterMenu('desserts')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-[#1A1A1E] text-[#A1A1AA] hover:text-[#F4F4F5] border border-zinc-800">Desserts</button>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="menu-item group bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#D4AF37] transition-all duration-300" data-category="grills">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Galangal Signature Galouti Kebab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#0A0A0C]/80 backdrop-blur-md px-3 py-1 rounded-full border border-zinc-800 text-[#D4AF37] font-bold text-xs">₹650</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-[#F4F4F5]">Galangal Signature Galouti Kebab</h3>
+                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-amber-500/10 text-[#D4AF37]">Chef's Special</span>
+                            </div>
+                            <p class="text-[#A1A1AA] text-sm leading-relaxed mb-4">Melt-in-mouth lamb kebabs infused with secret royal spices, served with crisp Ulte Tawa ka Paratha.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-zinc-900/50 mt-auto pt-4">
+                        <span class="text-xs text-[#A1A1AA] flex items-center gap-1"><i data-lucide="flame" class="w-3.5 h-3.5 text-[#D4AF37]"></i> Charcoal Grilled</span>
+                        <a href="https://wa.me/919771497912?text=I%20would%20like%20to%20order%20Galangal%20Signature%20Galouti%20Kebab" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#D4AF37] hover:underline flex items-center gap-1">Order via WA <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item group bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#D4AF37] transition-all duration-300" data-category="grills">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Tandoori Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#0A0A0C]/80 backdrop-blur-md px-3 py-1 rounded-full border border-zinc-800 text-[#D4AF37] font-bold text-xs">₹480</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-[#F4F4F5]">Paneer Tikka Azizi</h3>
+                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">Vegetarian</span>
+                            </div>
+                            <p class="text-[#A1A1AA] text-sm leading-relaxed mb-4">Cottage cheese stuffed with mint chutney, marinated in robust hung curd and smoked in clay oven.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-zinc-900/50 mt-auto pt-4">
+                        <span class="text-xs text-[#A1A1AA] flex items-center gap-1"><i data-lucide="leaf" class="w-3.5 h-3.5 text-emerald-400"></i> Fresh Paneer</span>
+                        <a href="https://wa.me/919771497912?text=I%20would%20like%20to%20order%20Paneer%20Tikka%20Azizi" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#D4AF37] hover:underline flex items-center gap-1">Order via WA <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item group bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#D4AF37] transition-all duration-300" data-category="starters">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Crispy Lotus Stem" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#0A0A0C]/80 backdrop-blur-md px-3 py-1 rounded-full border border-zinc-800 text-[#D4AF37] font-bold text-xs">₹420</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-[#F4F4F5]">Honey Chili Lotus Stem</h3>
+                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-amber-500/10 text-[#D4AF37]">Bestseller</span>
+                            </div>
+                            <p class="text-[#A1A1AA] text-sm leading-relaxed mb-4">Crispy fried lotus stem tossed in a sweet and spicy honey chili glaze garnished with toasted sesame seeds.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-zinc-900/50 mt-auto pt-4">
+                        <span class="text-xs text-[#A1A1AA] flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#D4AF37]"></i> Crispy & Tangy</span>
+                        <a href="https://wa.me/919771497912?text=I%20would%20like%20to%20order%20Honey%20Chili%20Lotus%20Stem" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#D4AF37] hover:underline flex items-center gap-1">Order via WA <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item group bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#D4AF37] transition-all duration-300" data-category="mains">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Butter Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#0A0A0C]/80 backdrop-blur-md px-3 py-1 rounded-full border border-zinc-800 text-[#D4AF37] font-bold text-xs">₹580</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-[#F4F4F5]">Murgh Makhani Royale</h3>
+                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-amber-500/10 text-[#D4AF37]">Classic</span>
+                            </div>
+                            <p class="text-[#A1A1AA] text-sm leading-relaxed mb-4">Tender tandoori chicken simmered in a velvety, buttery tomato gravy infused with sun-dried fenugreek.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-zinc-900/50 mt-auto pt-4">
+                        <span class="text-xs text-[#A1A1AA] flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-[#D4AF37]"></i> Crowd Favorite</span>
+                        <a href="https://wa.me/919771497912?text=I%20would%20like%20to%20order%20Murgh%20Makhani%20Royale" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#D4AF37] hover:underline flex items-center gap-1">Order via WA <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item group bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#D4AF37] transition-all duration-300" data-category="mains">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#0A0A0C]/80 backdrop-blur-md px-3 py-1 rounded-full border border-zinc-800 text-[#D4AF37] font-bold text-xs">₹420</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-[#F4F4F5]">Dal Galangal Black Gold</h3>
+                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-amber-500/10 text-[#D4AF37]">Slow Cooked</span>
+                            </div>
+                            <p class="text-[#A1A1AA] text-sm leading-relaxed mb-4">Whole black lentils simmered overnight for 24 hours over slow charcoal embers with rich butter and cream.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-zinc-900/50 mt-auto pt-4">
+                        <span class="text-xs text-[#A1A1AA] flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#D4AF37]"></i> 24h Simmered</span>
+                        <a href="https://wa.me/919771497912?text=I%20would%20like%20to%20order%20Dal%20Galangal%20Black%20Gold" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#D4AF37] hover:underline flex items-center gap-1">Order via WA <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item group bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#D4AF37] transition-all duration-300" data-category="desserts">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Sizzling Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#0A0A0C]/80 backdrop-blur-md px-3 py-1 rounded-full border border-zinc-800 text-[#D4AF37] font-bold text-xs">₹350</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-[#F4F4F5]">Sizzling Chocolate Brownie</h3>
+                                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-amber-500/10 text-[#D4AF37]">Sweet End</span>
+                            </div>
+                            <p class="text-[#A1A1AA] text-sm leading-relaxed mb-4">Rich walnut brownie served sizzling on a hot iron plate with vanilla bean ice cream and hot fudge.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-zinc-900/50 mt-auto pt-4">
+                        <span class="text-xs text-[#A1A1AA] flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#D4AF37]"></i> Sizzling Treat</span>
+                        <a href="https://wa.me/919771497912?text=I%20would%20like%20to%20order%20Sizzling%20Chocolate%20Brownie" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#D4AF37] hover:underline flex items-center gap-1">Order via WA <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. AMBIANCE & EXPERIENCE SECTION -->
+    <section id="ambiance" class="py-20 md:py-28 bg-[#121215] border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-[#D4AF37] text-xs font-bold tracking-widest uppercase bg-[#1A1A1E] px-3 py-1.5 rounded-full border border-zinc-800 inline-block">Fine Dining Atmosphere</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-[#F4F4F5] leading-tight">Where Elegance Meets Culinary Mastery</h2>
+                    <p class="text-[#A1A1AA] text-sm sm:text-base leading-relaxed">
+                        Situated in the heart of Patna at Hotel Gargee Grand, Galangal Grill offers a sophisticated retreat from the bustling city. Our dining hall features warm ambient lighting, plush seating, and an intimate atmosphere designed for romantic dinners, family celebrations, and corporate gatherings.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-[#1A1A1E] border border-zinc-800">
+                            <span class="block font-syne font-bold text-2xl text-[#D4AF37] mb-1">50+</span>
+                            <span class="text-xs text-[#A1A1AA]">Curated Dishes & Grills</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-[#1A1A1E] border border-zinc-800">
+                            <span class="block font-syne font-bold text-2xl text-[#D4AF37] mb-1">Private</span>
+                            <span class="text-xs text-[#A1A1AA]">Event & Party Hosting</span>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <a href="https://wa.me/919771497912?text=Hello,%20I%20want%20to%20inquire%20about%20private%20dining%20at%20Galangal%20Grill." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl gold-gradient-bg text-[#0A0A0C] font-bold text-sm shadow-lg shadow-[#D4AF37]/20 hover:opacity-95 transition-all">
+                            <i data-lucide="message-square" class="w-4 h-4"></i> Inquire Private Event
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=600&q=80" alt="Cocktail & Bar" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=600&q=80" alt="Table Setting" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Chef Preparing Dish" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. INTERACTIVE GALLERY -->
+    <section id="gallery" class="py-20 md:py-28 bg-[#0A0A0C]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-widest uppercase bg-[#1A1A1E] px-3 py-1.5 rounded-full border border-zinc-800 inline-block mb-3">Visual Journey</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-[#F4F4F5] mb-4">Restaurant Gallery</h2>
+                <p class="text-[#A1A1AA] text-sm sm:text-base">Take a visual tour of our luxurious interiors, exquisite table settings, and mouth-watering culinary presentations.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-6 h-6 text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-6 h-6 text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-6 h-6 text-white"></i>
+                    </div>
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-6 h-6 text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 md:py-28 bg-[#121215] border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-widest uppercase bg-[#1A1A1E] px-3 py-1.5 rounded-full border border-zinc-800 inline-block mb-3">Testimonials</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-[#F4F4F5] mb-4">Guest Experiences</h2>
+                <div class="flex items-center justify-center gap-2 text-[#D4AF37] mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-zinc-600"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-zinc-600"></i>
+                    <span class="text-sm font-bold text-[#F4F4F5] ml-2">3.0 ★ Average Rating</span>
+                </div>
+                <p class="text-[#A1A1AA] text-sm">Read authentic feedback from patrons who have dined with us at Hotel Gargee Grand, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[#D4AF37] mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-[#A1A1AA] text-sm leading-relaxed mb-6">"An absolute gem in Patna! The Galouti kebabs literally melt in your mouth, and the ambience inside Hotel Gargee Grand is top-notch for family dinners."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
+                        <div class="w-10 h-10 rounded-full gold-gradient-bg text-[#0A0A0C] font-bold flex items-center justify-center text-sm">RA</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#F4F4F5]">Rahul Anand</h4>
+                            <span class="text-xs text-[#A1A1AA]">Local Diner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[#D4AF37] mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                        </div>
+                        <p class="text-[#A1A1AA] text-sm leading-relaxed mb-6">"Great hospitality and delicious food. The Paneer Tikka and Butter Chicken were exceptional. Service was attentive and polite."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
+                        <div class="w-10 h-10 rounded-full gold-gradient-bg text-[#0A0A0C] font-bold flex items-center justify-center text-sm">PS</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#F4F4F5]">Priya Sharma</h4>
+                            <span class="text-xs text-[#A1A1AA]">Food Blogger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-[#D4AF37] mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-[#A1A1AA] text-sm leading-relaxed mb-6">"Visited for a business dinner near Gandhi Maidan. The location is very convenient and the sizzling brownie at the end was unforgettable!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-900">
+                        <div class="w-10 h-10 rounded-full gold-gradient-bg text-[#0A0A0C] font-bold flex items-center justify-center text-sm">MK</div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#F4F4F5]">Manish Kumar</h4>
+                            <span class="text-xs text-[#A1A1AA]">Corporate Guest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ ACCORDION -->
+    <section id="faq" class="py-20 md:py-28 bg-[#0A0A0C]">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-widest uppercase bg-[#1A1A1E] px-3 py-1.5 rounded-full border border-zinc-800 inline-block mb-3">Got Questions?</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-[#F4F4F5] mb-4">Frequently Asked Questions</h2>
+                <p class="text-[#A1A1AA] text-sm">Find answers regarding reservations, parking, private dining, and operating hours.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base text-[#F4F4F5] hover:text-[#D4AF37]">
+                        <span>How can I reserve a table at Galangal Grill?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-[#D4AF37] flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed">
+                        You can instantly reserve a table by calling us at +91 97714-97912 or clicking our WhatsApp reservation buttons across the website. Walk-ins are also welcome subject to table availability.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base text-[#F4F4F5] hover:text-[#D4AF37]">
+                        <span>Is valet parking available at Hotel Gargee Grand?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-[#D4AF37] flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed">
+                        Yes! Secure parking and professional valet services are available for all dining guests visiting Hotel Gargee Grand near Gandhi Maidan.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base text-[#F4F4F5] hover:text-[#D4AF37]">
+                        <span>Do you host private parties and corporate events?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-[#D4AF37] flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed">
+                        Absolutely. We specialize in private dining, birthday celebrations, anniversary dinners, and corporate events with customized buffet and grill menus. Contact our manager on WhatsApp for tailored packages.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base text-[#F4F4F5] hover:text-[#D4AF37]">
+                        <span>What are the restaurant operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-[#D4AF37] flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed">
+                        Galangal Grill is open every day from 12:00 PM to 11:30 PM, serving lunch, evening snacks, and dinner.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 md:py-28 bg-[#121215] border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-[#D4AF37] text-xs font-bold tracking-widest uppercase bg-[#1A1A1E] px-3 py-1.5 rounded-full border border-zinc-800 inline-block mb-3">Visit Us</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-[#F4F4F5] mb-4">Location & Table Reservation</h2>
+                <p class="text-[#A1A1AA] text-sm sm:text-base">Experience fine dining at Hotel Gargee Grand, Gandhi Maidan Road, Patna. Book your table in advance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Location Info & Google Map -->
+                <div class="space-y-6 flex flex-col justify-between">
+                    <div class="bg-[#1A1A1E] border border-zinc-800 p-6 rounded-2xl space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-[#0A0A0C] border border-zinc-800 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-[#F4F4F5] text-base mb-1">Address</h3>
+                                <p class="text-sm text-[#A1A1AA] leading-relaxed">Hotel Gargee Grand, Gandhi Maidan Road, 825, Brajkishore Path, near Gandhi Maidan Road, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 pt-4 border-t border-zinc-900">
+                            <div class="w-10 h-10 rounded-xl bg-[#0A0A0C] border border-zinc-800 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-[#F4F4F5] text-base mb-1">Phone & WhatsApp</h3>
+                                <a href="tel:+919771497912" class="text-sm text-[#D4AF37] hover:underline">+91 97714-97912</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 pt-4 border-t border-zinc-900">
+                            <div class="w-10 h-10 rounded-xl bg-[#0A0A0C] border border-zinc-800 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-[#F4F4F5] text-base mb-1">Operating Hours</h3>
+                                <p class="text-sm text-[#A1A1AA]">Monday – Sunday: 12:00 PM – 11:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Google Maps iframe -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-xl h-[280px] relative">
+                        <iframe title="Galangal Grill Google Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.77894567!2d85.1376!3d25.6116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58ce491d9ef7%3A0x6b71887e1481b0f5!2sHotel%20Gargee%20Grand%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="absolute bottom-4 right-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Galangal+Grill+Hotel+Gargee+Grand+Patna" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl gold-gradient-bg text-[#0A0A0C] font-bold text-xs shadow-lg">
+                                <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Reservation Inquiry Form -->
+                <div class="bg-[#1A1A1E] border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-syne font-bold text-xl text-[#F4F4F5] mb-2">Book a Table Online</h3>
+                        <p class="text-sm text-[#A1A1AA] mb-6">Fill out your details below and we will instantly confirm your reservation via WhatsApp and phone call.</p>
+                        
+                        <form id="reservation-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-[#A1A1AA] mb-2">Your Name</label>
+                                <input type="text" id="res-name" required placeholder="Enter full name" class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-[#F4F4F5] focus:outline-none focus:border-[#D4AF37] transition-colors">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-[#A1A1AA] mb-2">Phone / WhatsApp</label>
+                                    <input type="tel" id="res-phone" required placeholder="+91 98765 43210" class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-[#F4F4F5] focus:outline-none focus:border-[#D4AF37] transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-[#A1A1AA] mb-2">Number of Guests</label>
+                                    <select id="res-guests" class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-[#F4F4F5] focus:outline-none focus:border-[#D4AF37] transition-colors">
+                                        <option value="2 Guests">2 Guests (Couple)</option>
+                                        <option value="4 Guests">4 Guests (Family)</option>
+                                        <option value="6 Guests">6 Guests</option>
+                                        <option value="8+ Guests">8+ Guests (Party)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-[#A1A1AA] mb-2">Date</label>
+                                    <input type="date" id="res-date" required class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-[#F4F4F5] focus:outline-none focus:border-[#D4AF37] transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-[#A1A1AA] mb-2">Time Slot</label>
+                                    <select id="res-time" class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-[#F4F4F5] focus:outline-none focus:border-[#D4AF37] transition-colors">
+                                        <option value="1:00 PM">1:00 PM (Lunch)</option>
+                                        <option value="2:00 PM">2:00 PM (Lunch)</option>
+                                        <option value="7:30 PM">7:30 PM (Dinner)</option>
+                                        <option value="8:30 PM">8:30 PM (Dinner)</option>
+                                        <option value="9:30 PM">9:30 PM (Dinner)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-[#A1A1AA] mb-2">Special Request (Optional)</label>
+                                <textarea id="res-notes" rows="2" placeholder="Anniversary celebration, window table, etc." class="w-full bg-[#0A0A0C] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-[#F4F4F5] focus:outline-none focus:border-[#D4AF37] transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full flex items-center justify-center gap-2 py-4 rounded-xl gold-gradient-bg text-[#0A0A0C] font-bold text-base shadow-lg shadow-[#D4AF37]/20 hover:opacity-95 transition-all mt-2">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span>Confirm Table Booking</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-[#1A1A1E] border border-zinc-800 p-8 rounded-2xl max-w-md w-full text-center space-y-4 shadow-2xl">
+            <div class="w-16 h-16 rounded-full gold-gradient-bg mx-auto flex items-center justify-center text-[#0A0A0C]">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-[#F4F4F5]">Reservation Received!</h3>
+            <p id="success-msg" class="text-sm text-[#A1A1AA] leading-relaxed">Thank you! Your table booking inquiry has been prepared. We are redirecting you to WhatsApp to confirm with our front desk instantly.</p>
+            <button id="close-modal" class="w-full py-3 rounded-xl gold-gradient-bg text-[#0A0A0C] font-bold text-sm">Close Window</button>
+        </div>
+    </div>
+
+    <!-- 10. STICKY MOBILE BOTTOM BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0A0A0C] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+919771497912" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-zinc-800 bg-[#1A1A1E] text-[#F4F4F5] font-semibold text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-[#D4AF37]"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919771497912?text=Hello%20Galangal%20Grill,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl gold-gradient-bg text-[#0A0A0C] font-bold text-sm shadow-md">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>WhatsApp Reserve</span>
+        </a>
+    </div>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-[#0A0A0C] border-t border-zinc-800 py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl gold-gradient-bg flex items-center justify-center">
+                            <i data-lucide="utensils-crossed" class="w-4 h-4 text-[#0A0A0C]"></i>
+                        </div>
+                        <span class="font-syne font-bold text-lg text-[#F4F4F5]">Galangal Grill</span>
+                    </div>
+                    <p class="text-xs text-[#A1A1AA] leading-relaxed">
+                        Patna's finest dining destination located inside Hotel Gargee Grand near Gandhi Maidan, offering exquisite grills and authentic hospitality.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-[#F4F4F5] uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-[#A1A1AA]">
+                        <li><a href="#menu" class="hover:text-[#D4AF37] transition-colors">Signature Menu</a></li>
+                        <li><a href="#ambiance" class="hover:text-[#D4AF37] transition-colors">Ambiance & Experience</a></li>
+                        <li><a href="#gallery" class="hover:text-[#D4AF37] transition-colors">Restaurant Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-[#D4AF37] transition-colors">Guest Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-[#F4F4F5] uppercase tracking-wider mb-4">Support & FAQ</h4>
+                    <ul class="space-y-2 text-xs text-[#A1A1AA]">
+                        <li><a href="#faq" class="hover:text-[#D4AF37] transition-colors">Table Reservations</a></li>
+                        <li><a href="#faq" class="hover:text-[#D4AF37] transition-colors">Valet Parking Info</a></li>
+                        <li><a href="#faq" class="hover:text-[#D4AF37] transition-colors">Private Dining & Events</a></li>
+                        <li><a href="#contact" class="hover:text-[#D4AF37] transition-colors">Location & Map</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-[#F4F4F5] uppercase tracking-wider mb-4">Contact Details</h4>
+                    <ul class="space-y-2 text-xs text-[#A1A1AA]">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5"></i>
+                            <span>Hotel Gargee Grand, Gandhi Maidan Road, Patna 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-[#D4AF37] flex-shrink-0"></i>
+                            <a href="tel:+919771497912" class="hover:text-[#D4AF37]">+91 97714-97912</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-[#D4AF37] flex-shrink-0"></i>
+                            <span>Open Daily: 12 PM - 11:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A1A1AA]">
+                <p>&copy; <span id="current-year"></span> Galangal Grill, Hotel Gargee Grand, Patna. All rights reserved.</p>
+                <p>Designed with excellence for fine dining hospitality.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions & Security -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic with Scroll Lock
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawer = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileMenu(open) {
+            if (open) {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        closeDrawer.addEventListener('click', () => toggleMobileMenu(false));
+        menuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
+        });
+
+        // Menu Category Filtering
+        function filterMenu(category) {
+            const buttons = document.querySelectorAll('.menu-tab');
+            buttons.forEach(btn => {
+                btn.classList.remove('gold-gradient-bg', 'text-[#0A0A0C]');
+                btn.classList.add('bg-[#1A1A1E]', 'text-[#A1A1AA]');
+            });
+            event.target.classList.remove('bg-[#1A1A1E]', 'text-[#A1A1AA]');
+            event.target.classList.add('gold-gradient-bg', 'text-[#0A0A0C]');
+
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+
+        // Interactive Reservation Form Submission with Sanitization & WhatsApp Redirect
+        const resForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        resForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Sanitize inputs
+            const name = encodeURIComponent(document.getElementById('res-name').value.trim());
+            const phone = encodeURIComponent(document.getElementById('res-phone').value.trim());
+            const guests = encodeURIComponent(document.getElementById('res-guests').value);
+            const date = encodeURIComponent(document.getElementById('res-date').value);
+            const time = encodeURIComponent(document.getElementById('res-time').value);
+            const notes = encodeURIComponent(document.getElementById('res-notes').value.trim());
+
+            const whatsappMessage = `Hello Galangal Grill,%0AI would like to confirm a table reservation:%0A- Name: ${name}%0A- Phone: ${phone}%0A- Guests: ${guests}%0A- Date: ${date}%0A- Time: ${time}%0A- Notes: ${notes}`;
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Automatically open WhatsApp after brief delay
+            setTimeout(() => {
+                window.open(`https://wa.me/919771497912?text=${whatsappMessage}`, '_noopener', 'noreferrer');
+            }, 1500);
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            resForm.reset();
+        });
+    </script>
+</body>
+</html>
