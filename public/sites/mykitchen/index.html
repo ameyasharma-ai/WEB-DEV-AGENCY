@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Kitchen | Authentic Restaurant & Food Service in Kidwaipuri, Patna</title>
+    <meta name="description" content="Experience delicious, hygienic, and fresh meals at My Kitchen, Kidwaipuri, Patna. Order directly via WhatsApp or call us now for quick food delivery.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        surface: '#1E1E1E',
+                        primary: '#D97706',
+                        secondary: '#C2410C',
+                        accent: '#F59E0B',
+                        muted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #121212;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#121212] text-[#FAFAFA] font-inter overflow-x-hidden pb-24 md:pb-0">
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-primary via-secondary to-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Today! Fresh meals served daily from 11:00 AM to 10:30 PM. Order now!</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#121212] border-b border-zinc-800 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="utensils" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-syne text-xl sm:text-2xl font-extrabold tracking-tight text-white block">My Kitchen</span>
+                    <span class="text-[10px] text-zinc-400 tracking-wider uppercase font-semibold block -mt-1">Kidwaipuri, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#menu" class="hover:text-primary transition-colors">Our Menu</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">Our Story</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Action Buttons (Desktop) -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919110036503" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm font-semibold hover:border-primary transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20place%20an%20order!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white text-sm font-semibold shadow-lg shadow-emerald-900/30 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" aria-label="Toggle Mobile Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#121212] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
+                        <i data-lucide="utensils" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-syne text-lg font-bold text-white">My Kitchen</span>
+                </div>
+                <button id="close-menu-btn" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-zinc-300">
+                <a href="#menu" class="mobile-link hover:text-primary transition-colors py-2 border-b border-zinc-900 flex items-center justify-between"><span>Our Menu</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#why-us" class="mobile-link hover:text-primary transition-colors py-2 border-b border-zinc-900 flex items-center justify-between"><span>Why Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-link hover:text-primary transition-colors py-2 border-b border-zinc-900 flex items-center justify-between"><span>Our Story</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-link hover:text-primary transition-colors py-2 border-b border-zinc-900 flex items-center justify-between"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-link hover:text-primary transition-colors py-2 border-b border-zinc-900 flex items-center justify-between"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919110036503" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                <span>Call +91 91100 36503</span>
+            </a>
+            <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20place%20an%20order!" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 text-white font-semibold shadow-lg">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Order via WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:py-28 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-[#121212]/50 to-[#121212] pointer-events-none"></div>
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.5 ★ <span class="text-zinc-400 font-normal">(46 Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Hero Main Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Authentic, Hygienic & Delicious Meals at <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-400">My Kitchen</span>
+                    </h1>
+
+                    <!-- Value Proposition -->
+                    <p class="text-base sm:text-lg text-zinc-400 mb-8 max-w-2xl leading-relaxed">
+                        Craving home-cooked warmth or restaurant-quality flavors? Located right at Munnar Bhawan, Kidwaipuri, Patna, we serve freshly prepared dishes crafted with premium ingredients and immense love.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold text-base shadow-xl shadow-emerald-900/30 transition-all transform hover:scale-[1.02]">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-white font-semibold text-base transition-colors">
+                            <i data-lucide="utensils" class="w-5 h-5 text-primary"></i>
+                            <span>View Full Menu</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlights Under CTAs -->
+                    <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-zinc-800/80 max-w-lg">
+                        <div>
+                            <span class="block font-syne text-xl sm:text-2xl font-bold text-white">4.5★</span>
+                            <span class="text-xs text-zinc-400">Google Rating</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne text-xl sm:text-2xl font-bold text-white">46+</span>
+                            <span class="text-xs text-zinc-400">Happy Foodies</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne text-xl sm:text-2xl font-bold text-white">Fast</span>
+                            <span class="text-xs text-zinc-400">Home Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 group">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Delicious Food from My Kitchen Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-900/90 backdrop-blur-md p-4 rounded-xl border border-zinc-800 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                    <i data-lucide="award" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Kidwaipuri's Favorite</h4>
+                                    <p class="text-xs text-zinc-400">Fresh ingredients daily</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 bg-primary/20 text-amber-400 text-xs font-semibold rounded-full border border-primary/30">Top Rated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-zinc-900/60 border-y border-zinc-800 py-6">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="flex items-center gap-1 text-amber-400 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <span class="font-syne text-xl font-bold text-white">4.5 / 5.0</span>
+                    </div>
+                    <span class="text-xs text-zinc-400">Verified Google Rating</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 border-l border-zinc-800">
+                    <div class="flex items-center gap-2 text-white mb-1">
+                        <i data-lucide="users" class="w-5 h-5 text-primary"></i>
+                        <span class="font-syne text-xl font-bold">46+ Reviews</span>
+                    </div>
+                    <span class="text-xs text-zinc-400">Loved by local foodies</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 border-l border-zinc-800">
+                    <div class="flex items-center gap-2 text-white mb-1">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-secondary"></i>
+                        <span class="font-syne text-xl font-bold">Kidwaipuri</span>
+                    </div>
+                    <span class="text-xs text-zinc-400">Munnar Bhawan, Patna</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 border-l border-zinc-800">
+                    <div class="flex items-center gap-2 text-white mb-1">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500"></i>
+                        <span class="font-syne text-xl font-bold">100% Hygienic</span>
+                    </div>
+                    <span class="text-xs text-zinc-400">Clean kitchen standards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu / Offerings Grid -->
+    <section id="menu" class="py-20 sm:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/10 border border-primary/20">Delicious Offerings</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                    Explore Our Popular Menu
+                </h2>
+                <p class="text-zinc-400 text-base">
+                    Prepared fresh to order using authentic spices and top-quality ingredients. Click below to instantly order via WhatsApp!
+                </p>
+
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+                    <button onclick="filterMenu('all')" class="menu-tab active-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-primary text-white transition-all shadow-lg shadow-primary/20">All Dishes</button>
+                    <button onclick="filterMenu('thali')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white transition-all">Special Thali</button>
+                    <button onclick="filterMenu('snacks')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white transition-all">Snacks & Starters</button>
+                    <button onclick="filterMenu('beverages')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white transition-all">Beverages</button>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Item 1 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="thali">
+                    <div>
+                        <div class="relative aspect-video w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Special Veg Thali" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-zinc-900/80 backdrop-blur-md text-amber-400 font-syne font-bold text-sm rounded-lg border border-zinc-800">₹220</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne text-lg font-bold text-white">Special Maharaja Veg Thali</h3>
+                                <span class="text-xs px-2 py-0.5 rounded bg-primary/20 text-amber-400">Best Seller</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Complete wholesome meal with paneer curry, dal tadka, fresh roti, jeera rice, raita, salad, and sweet.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20order%20the%20Special%20Maharaja%20Veg%20Thali%20(₹220)." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm transition-colors group-hover:bg-primary">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="snacks">
+                    <div>
+                        <div class="relative aspect-video w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-zinc-900/80 backdrop-blur-md text-amber-400 font-syne font-bold text-sm rounded-lg border border-zinc-800">₹180</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne text-lg font-bold text-white">Tandoori Paneer Tikka</h3>
+                                <span class="text-xs px-2 py-0.5 rounded bg-secondary/20 text-orange-400">Chef's Special</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Succulent chunks of fresh cottage cheese marinated in rich yogurt and spices, grilled to smoky perfection.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20order%20Tandoori%20Paneer%20Tikka%20(₹180)." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm transition-colors group-hover:bg-primary">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="thali">
+                    <div>
+                        <div class="relative aspect-video w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Chicken Biryani" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-zinc-900/80 backdrop-blur-md text-amber-400 font-syne font-bold text-sm rounded-lg border border-zinc-800">₹250</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne text-lg font-bold text-white">Hyderabadi Chicken Biryani</h3>
+                                <span class="text-xs px-2 py-0.5 rounded bg-primary/20 text-amber-400">Must Try</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Aromatic basmati rice layered with tender chicken pieces, slow-cooked in dum style with exotic herbs.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20order%20Hyderabadi%20Chicken%20Biryani%20(₹250)." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm transition-colors group-hover:bg-primary">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="snacks">
+                    <div>
+                        <div class="relative aspect-video w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-zinc-900/80 backdrop-blur-md text-amber-400 font-syne font-bold text-sm rounded-lg border border-zinc-800">₹280</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne text-lg font-bold text-white">Classic Butter Chicken</h3>
+                                <span class="text-xs px-2 py-0.5 rounded bg-secondary/20 text-orange-400">Popular</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Tender roasted chicken chunks in a smooth, velvety, buttery tomato-cream sauce with rich aroma.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20order%20Classic%20Butter%20Chicken%20(₹280)." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm transition-colors group-hover:bg-primary">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="snacks">
+                    <div>
+                        <div class="relative aspect-video w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80" alt="Dal Makhani" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-zinc-900/80 backdrop-blur-md text-amber-400 font-syne font-bold text-sm rounded-lg border border-zinc-800">₹160</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne text-lg font-bold text-white">Creamy Dal Makhani</h3>
+                                <span class="text-xs px-2 py-0.5 rounded bg-primary/20 text-amber-400">Comfort Food</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Whole black lentils simmered overnight with tomatoes, butter, and cream for an authentic, rich Punjabi taste.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20order%20Creamy%20Dal%20Makhani%20(₹160)." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm transition-colors group-hover:bg-primary">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl" data-category="beverages">
+                    <div>
+                        <div class="relative aspect-video w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Masala Chai & Refreshers" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 bg-zinc-900/80 backdrop-blur-md text-amber-400 font-syne font-bold text-sm rounded-lg border border-zinc-800">₹60</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne text-lg font-bold text-white">Refreshing Cold Coffee / Lassi</h3>
+                                <span class="text-xs px-2 py-0.5 rounded bg-secondary/20 text-orange-400">Refreshing</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Chilled creamy thick lassi or frothy cold coffee to perfectly complement your delicious meal.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20order%20Cold%20Coffee%20/%20Lassi%20(₹60)." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-semibold text-sm transition-colors group-hover:bg-primary">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/10 border border-primary/20">The My Kitchen Advantage</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                    Why Food Lovers in Patna Choose Us
+                </h2>
+                <p class="text-zinc-400 text-base">
+                    We take pride in serving wholesome food crafted under strict hygiene protocols without compromising on authentic taste.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne text-lg font-bold text-white mb-2">Fresh Ingredients</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Sourced fresh daily from local markets in Patna to ensure highest nutritional value and flavor.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/20 text-orange-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne text-lg font-bold text-white mb-2">100% Hygienic Prep</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Cooked in a spotless, sanitized kitchen environment with gloves and strict quality controls.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne text-lg font-bold text-white mb-2">Authentic Recipes</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Traditional spice blends and slow-cooking techniques that bring out genuine, comforting flavors.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne text-lg font-bold text-white mb-2">Quick & Warm Delivery</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Fast packaging and prompt dispatch so your food reaches your doorstep piping hot and fresh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Inside My Kitchen Patna" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-6 left-6 right-6 bg-zinc-900/90 backdrop-blur-md p-6 rounded-xl border border-zinc-800">
+                            <span class="text-primary font-syne font-bold text-lg block mb-1">"Good food brings people together."</span>
+                            <span class="text-xs text-zinc-400">- Team My Kitchen, Kidwaipuri</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <span class="text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/10 border border-primary/20">Our Story</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-6 break-words">
+                        Serving Happiness from the Heart of Patna
+                    </h2>
+                    <p class="text-zinc-400 text-base leading-relaxed mb-6">
+                        Established with a passion for wholesome cooking, <strong class="text-white">My Kitchen</strong> at Munnar Bhawan, Kidwaipuri has quickly become a beloved spot for students, working professionals, and families in Patna looking for reliable, delicious food.
+                    </p>
+                    <p class="text-zinc-400 text-base leading-relaxed mb-8">
+                        Whether you are away from home and missing home-cooked meals, or hosting a get-together with friends, our kitchen delivers quality, flavor, and satisfaction in every single bite.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20want%20to%20know%20more%20about%20your%20daily%20meal%20subscription!" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-primary hover:bg-amber-600 text-white font-semibold text-sm shadow-lg shadow-primary/20 transition-all">
+                            Inquire Tiffin / Subs
+                        </a>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-primary font-bold">
+                                4.5★
+                            </div>
+                            <div>
+                                <span class="text-sm font-bold text-white block">Trusted Locally</span>
+                                <span class="text-xs text-zinc-400">46+ Google Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/10 border border-primary/20">Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                    What Our Customers Say
+                </h2>
+                <p class="text-zinc-400 text-base">
+                    Read genuine feedback from happy food lovers who order from My Kitchen in Kidwaipuri, Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Amazing food quality! Ordered their special thali and it tasted just like home-cooked food. Prompt delivery on WhatsApp and very polite service."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-syne font-bold flex items-center justify-center">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Amit Kumar</h4>
+                            <span class="text-xs text-zinc-400">Local Guide • Kidwaipuri</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "One of the cleanest and most hygienic food spots in Kidwaipuri. Paneer tikka and dal makhani are absolute must-tries. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 text-orange-400 font-syne font-bold flex items-center justify-center">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Priya Sinha</h4>
+                            <span class="text-xs text-zinc-400">Patna Resident</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                            "Quick ordering through WhatsApp and super fast delivery. The food was hot, packaged neatly, and delicious. Will definitely order again."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 font-syne font-bold flex items-center justify-center">
+                            RV
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Rahul Verma</h4>
+                            <span class="text-xs text-zinc-400">Working Professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/10 border border-primary/20">Find Us</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4 break-words">
+                    Location & Contact Details
+                </h2>
+                <p class="text-zinc-400 text-base">
+                    Visit us at Munnar Bhawan or drop us an inquiry for bulk orders, tiffin services, and party catering.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info & Contact Form -->
+                <div class="lg:col-span-6 space-y-8">
+                    <!-- Details Card -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
+                        <h3 class="font-syne text-xl font-bold text-white">Contact Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Address</h4>
+                                <p class="text-sm text-zinc-400 leading-relaxed mt-1">Munnar Bhawan, 2/A, IAS Colony, Kidwaipuri, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-secondary/20 text-orange-400 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Phone & WhatsApp</h4>
+                                <p class="text-sm text-zinc-400 leading-relaxed mt-1">+91 91100 36503</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Operating Hours</h4>
+                                <p class="text-sm text-zinc-400 leading-relaxed mt-1">Monday – Sunday: 11:00 AM – 10:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Inquiry Form -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <h3 class="font-syne text-xl font-bold text-white mb-4">Send Us a Quick Inquiry</h3>
+                        <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter your phone number">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Message / Order details</label>
+                                <textarea id="message" rows="3" required class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors resize-none" placeholder="What would you like to order or inquire about?"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-secondary hover:from-amber-600 hover:to-orange-700 text-white font-bold text-sm shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                                <span>Send Inquiry</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div class="relative w-full h-[450px] sm:h-[550px] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <iframe title="My Kitchen Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778931238515!2d85.1265!3d25.6105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzM3LjgiTiA4NcKwMDcnMzUuNCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-xs text-zinc-400">Munnar Bhawan, Kidwaipuri, Patna</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Munnar+Bhawan+Kidwaipuri+Patna" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-xs font-semibold hover:border-primary transition-colors">
+                            <i data-lucide="navigation" class="w-3.5 h-3.5 text-primary"></i>
+                            <span>Get Directions</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne text-xl font-bold text-white">Inquiry Sent Successfully!</h3>
+            <p id="modal-text" class="text-sm text-zinc-400">Thank you! We have received your message and will get back to you shortly.</p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-xl bg-primary text-white font-semibold text-sm">Got It</button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919110036503" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919110036503?text=Hi%20My%20Kitchen,%20I%20would%20like%20to%20place%20an%20order!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 text-white font-semibold text-sm shadow-lg shadow-emerald-900/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Order</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
+                            <i data-lucide="utensils" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-syne text-xl font-extrabold text-white">My Kitchen</span>
+                    </div>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Authentic, hygienic, and mouth-watering meals served fresh daily at Kidwaipuri, Patna. Order directly via WhatsApp or call us!
+                    </p>
+                    <div class="flex items-center gap-3 text-amber-400 pt-2">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span class="text-sm font-semibold text-white">4.5 ★ <span class="text-zinc-400 font-normal">(46+ Google Reviews)</span></span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h3 class="font-syne text-base font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Our Menu</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h3 class="font-syne text-base font-bold text-white mb-4">Popular Categories</h3>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Special Maharaja Veg Thali</a></li>
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Tandoori Paneer Tikka</a></li>
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Hyderabadi Chicken Biryani</a></li>
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Classic Butter Chicken</a></li>
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Dal Makhani</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h3 class="font-syne text-base font-bold text-white mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                            <span>Munnar Bhawan, 2/A, IAS Colony, Kidwaipuri, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span>+91 91100 36503</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span>11:00 AM – 10:30 PM (Daily)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> My Kitchen, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                    <a href="#contact" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isOpen = !mobileDrawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        menuBackdrop.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Filter Menu Functionality
+        function filterMenu(category) {
+            const tabs = document.querySelectorAll('.menu-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-primary', 'text-white', 'shadow-lg', 'shadow-primary/20');
+                tab.classList.add('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
+            });
+            event.target.classList.remove('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
+            event.target.classList.add('bg-primary', 'text-white', 'shadow-lg', 'shadow-primary/20');
+
+            const cards = document.querySelectorAll('.menu-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Contact Form Handler & Modal
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone || !message) return;
+
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="animate-pulse">Sending Inquiry...</span>';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>Send Inquiry</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>';
+                
+                document.getElementById('modal-text').textContent = `Thank you ${name}! We have received your inquiry and will contact you at ${phone} immediately.`;
+                const modal = document.getElementById('success-modal');
+                modal.classList.remove('hidden');
+                document.getElementById('inquiry-form').reset();
+            }, 800);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
