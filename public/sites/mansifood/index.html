@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi Food | Best Restaurant & Food Service Near AIIMS Patna</title>
+    <meta name="description" content="Delicious, hygienic, and fresh meals near AIIMS Patna. Special Thalis, snacks, beverages, and daily meals. Order instantly on WhatsApp!">
+    
+    <!-- Security & Referrer Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amberBg: '#FFFBEB',
+                        surfaceWhite: '#FFFFFF',
+                        primaryAccent: '#D97706',
+                        primaryHover: '#B45309',
+                        secondaryAccent: '#059669',
+                        textPrimary: '#1F2937',
+                        textMuted: '#6B7280',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and overflow fixes */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFBEB;
+            color: #1F2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+        input, select, textarea {
+            font-size: 16px !important; /* Prevents mobile zoom on focus */
+        }
+    </style>
+</head>
+<body class="bg-amberBg text-textPrimary overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-primaryAccent text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Daily: 8:00 AM – 10:00 PM | Serving Fresh Food Near AIIMS Patna</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#FFFBEB] border-b border-amber-200 shadow-sm transition-all duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primaryAccent flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <i data-lucide="utensils" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-extrabold font-outfit text-textPrimary tracking-tight">Mansi Food</span>
+                    <span class="block text-[10px] sm:text-xs text-textMuted font-medium uppercase tracking-wider">AIIMS Road, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium">
+                <a href="#menu" class="text-textPrimary hover:text-primaryAccent transition-colors">Menu</a>
+                <a href="#why-us" class="text-textPrimary hover:text-primaryAccent transition-colors">Why Us</a>
+                <a href="#about" class="text-textPrimary hover:text-primaryAccent transition-colors">Our Story</a>
+                <a href="#reviews" class="text-textPrimary hover:text-primaryAccent transition-colors">Reviews</a>
+                <a href="#faq" class="text-textPrimary hover:text-primaryAccent transition-colors">FAQ</a>
+                <a href="#contact" class="text-textPrimary hover:text-primaryAccent transition-colors">Location</a>
+            </nav>
+
+            <!-- Header Desktop CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+917209477358" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-primaryAccent text-primaryAccent hover:bg-primaryAccent hover:text-white font-semibold transition-all text-sm min-h-[44px]">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-secondaryAccent text-white hover:bg-emerald-700 font-semibold transition-all shadow-md text-sm min-h-[44px]">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl text-textPrimary hover:bg-amber-100 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#FFFBEB] border-l border-amber-200 rounded-tl-3xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-amber-200">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-primaryAccent flex items-center justify-center text-white">
+                        <i data-lucide="utensils" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xl font-bold font-outfit text-textPrimary">Mansi Food</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl text-textPrimary hover:bg-amber-200 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 pt-6 text-lg font-medium">
+                <a href="#menu" class="mobile-nav-link text-textPrimary hover:text-primaryAccent py-2 flex items-center justify-between"><span>Menu & Items</span><i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i></a>
+                <a href="#why-us" class="mobile-nav-link text-textPrimary hover:text-primaryAccent py-2 flex items-center justify-between"><span>Why Choose Us</span><i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i></a>
+                <a href="#about" class="mobile-nav-link text-textPrimary hover:text-primaryAccent py-2 flex items-center justify-between"><span>About Our Kitchen</span><i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i></a>
+                <a href="#reviews" class="mobile-nav-link text-textPrimary hover:text-primaryAccent py-2 flex items-center justify-between"><span>Customer Reviews</span><i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i></a>
+                <a href="#faq" class="mobile-nav-link text-textPrimary hover:text-primaryAccent py-2 flex items-center justify-between"><span>FAQ</span><i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i></a>
+                <a href="#contact" class="mobile-nav-link text-textPrimary hover:text-primaryAccent py-2 flex items-center justify-between"><span>Location & Map</span><i data-lucide="chevron-right" class="w-5 h-5 text-textMuted"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-amber-200 flex flex-col gap-3">
+            <a href="tel:+917209477358" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border-2 border-primaryAccent text-primaryAccent font-bold hover:bg-primaryAccent hover:text-white transition-all min-h-[48px]">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                <span>Call +91 72094 77358</span>
+            </a>
+            <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-all shadow-md min-h-[48px]">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Order on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white border border-amber-300 px-3.5 py-2 rounded-full shadow-sm mb-6">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-sm font-bold text-textPrimary">4.1★ Rating <span class="text-textMuted font-normal">(50+ Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Hero H1 -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-outfit text-gray-900 leading-[1.15] mb-6 break-words">
+                        Fresh, Hygienic & Homely Meals Right Near <span class="text-primaryAccent underline decoration-amber-300 decoration-wavy">AIIMS Patna</span>
+                    </h1>
+
+                    <!-- Hero Subheadline -->
+                    <p class="text-base sm:text-lg text-textMuted leading-relaxed mb-8 max-w-2xl break-words">
+                        Craving delicious food near AIIMS hospital? Mansi Food serves freshly prepared Thalis, wholesome snacks, and beverages with uncompromising hygiene. Order instantly on WhatsApp or visit us at Cheditola Prabha Complex!
+                    </p>
+
+                    <!-- Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-all shadow-xl hover:scale-[1.02] text-base min-h-[52px]">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white border-2 border-primaryAccent text-primaryAccent font-bold hover:bg-primaryAccent hover:text-white transition-all text-base shadow-sm min-h-[52px]">
+                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                            <span>View Full Menu</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Tag -->
+                    <div class="flex items-center gap-2 mt-6 text-sm text-textMuted">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-primaryAccent shrink-0"></i>
+                        <span>Cheditola Prabha Complex, AIIMS Rd, Patna 801505</span>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Delicious Food Thali at Mansi Food Patna" class="w-full h-full object-cover">
+                        <!-- Floating Highlight Card -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-amber-200 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-primaryAccent flex items-center justify-center">
+                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                };</div>
+                                <div>
+                                    <h4 class="font-bold text-textPrimary text-sm sm:text-base">100% Fresh & Hygienic</h4>
+                                    <p class="text-xs text-textMuted">Prepared daily with pure ingredients</p>
+                                </div>
+                            </div>
+                            <span class="bg-secondaryAccent/10 text-secondaryAccent text-xs font-bold px-2.5 py-1.5 rounded-lg">Best Quality</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-white border-y border-amber-200 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-amber-50/50">
+                    <div class="w-12 h-12 rounded-full bg-primaryAccent/10 text-primaryAccent flex items-center justify-center mb-3">
+                        <i data-lucide="star" class="w-6 h-6 fill-primaryAccent"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-extrabold font-outfit text-textPrimary">4.1★</span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Google Rating</span>
+                </div>
+
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-amber-50/50">
+                    <div class="w-12 h-12 rounded-full bg-secondaryAccent/10 text-secondaryAccent flex items-center justify-center mb-3">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-extrabold font-outfit text-textPrimary">50+</span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Verified Reviews</span>
+                </div>
+
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-amber-50/50">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center mb-3">
+                        <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-extrabold font-outfit text-textPrimary">Hygienic</span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Fresh Preparation</span>
+                </div>
+
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-amber-50/50">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/10 text-purple-600 flex items-center justify-center mb-3">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-extrabold font-outfit text-textPrimary">AIIMS Rd</span>
+                    <span class="text-xs sm:text-sm text-textMuted font-medium">Prime Location</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Categories -->
+    <section id="menu" class="py-16 sm:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-primaryAccent font-bold uppercase tracking-wider text-sm bg-primaryAccent/10 px-3 py-1 rounded-full">Our Delicious Menu</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-outfit mt-3 mb-4 text-textPrimary">Freshly Prepared Meals & Snacks</h2>
+                <p class="text-textMuted text-base sm:text-lg">Click any item to order directly via WhatsApp or enquire about availability.</p>
+            </div>
+
+            <!-- Menu Category Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+                <button onclick="filterMenu('all')" id="tab-all" class="menu-tab px-6 py-3 rounded-xl font-bold text-sm bg-primaryAccent text-white shadow-md transition-all min-h-[48px]">All Items</button>
+                <button onclick="filterMenu('thali')" id="tab-thali" class="menu-tab px-6 py-3 rounded-xl font-bold text-sm bg-white text-textPrimary border border-amber-300 hover:bg-amber-100 transition-all min-h-[48px]">Special Thalis</button>
+                <button onclick="filterMenu('snacks')" id="tab-snacks" class="menu-tab px-6 py-3 rounded-xl font-bold text-sm bg-white text-textPrimary border border-amber-300 hover:bg-amber-100 transition-all min-h-[48px]">Snacks & Fast Food</button>
+                <button onclick="filterMenu('beverages')" id="tab-beverages" class="menu-tab px-6 py-3 rounded-xl font-bold text-sm bg-white text-textPrimary border border-amber-300 hover:bg-amber-100 transition-all min-h-[48px]">Beverages</button>
+                <button onclick="filterMenu('meals')" id="tab-meals" class="menu-tab px-6 py-3 rounded-xl font-bold text-sm bg-white text-textPrimary border border-amber-300 hover:bg-amber-100 transition-all min-h-[48px]">Daily Meals</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1 -->
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-lg border border-amber-200 flex flex-col justify-between hover:shadow-xl transition-shadow" data-category="thali">
+                    <div class="relative aspect-video overflow-hidden bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Special Veg Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-secondaryAccent text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow">Special Thali</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <h3 class="text-lg sm:text-xl font-bold font-outfit text-textPrimary">Special Deluxe Veg Thali</h3>
+                                <span class="text-primaryAccent font-extrabold text-lg">₹150</span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-4 leading-relaxed">Puri/Roti, Dal Tadka, Paneer Sabzi, Jeera Rice, Raita, Pickle, and Sweet.</p>
+                        </div>
+                        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20order%20the%20Special%20Deluxe%20Veg%20Thali%20(₹150)." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-colors shadow-sm min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-lg border border-amber-200 flex flex-col justify-between hover:shadow-xl transition-shadow" data-category="thali">
+                    <div class="relative aspect-video overflow-hidden bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="Executive Thali" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-primaryAccent text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow">Popular</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <h3 class="text-lg sm:text-xl font-bold font-outfit text-textPrimary">Executive Regular Thali</h3>
+                                <span class="text-primaryAccent font-extrabold text-lg">₹110</span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-4 leading-relaxed">4 Soft Phulkas, Seasonal Sabzi, Dal, Rice, Salad & Pickle.</p>
+                        </div>
+                        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20order%20the%20Executive%20Regular%20Thali%20(₹110)." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-colors shadow-sm min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-lg border border-amber-200 flex flex-col justify-between hover:shadow-xl transition-shadow" data-category="snacks">
+                    <div class="relative aspect-video overflow-hidden bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Samosa & Snacks" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-primaryAccent text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow">Snacks</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <h3 class="text-lg sm:text-xl font-bold font-outfit text-textPrimary">Crispy Samosa & Chole</h3>
+                                <span class="text-primaryAccent font-extrabold text-lg">₹40</span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-4 leading-relaxed">2 Hot crispy samosas served with spicy chole and tangy chutneys.</p>
+                        </div>
+                        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20order%20Crispy%20Samosa%20%26%20Chole%20(₹40)." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-colors shadow-sm min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-lg border border-amber-200 flex flex-col justify-between hover:shadow-xl transition-shadow" data-category="meals">
+                    <div class="relative aspect-video overflow-hidden bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Paneer Butter Masala" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-secondaryAccent text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow">Chef Special</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <h3 class="text-lg sm:text-xl font-bold font-outfit text-textPrimary">Paneer Butter Masala</h3>
+                                <span class="text-primaryAccent font-extrabold text-lg">₹140</span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-4 leading-relaxed">Rich, creamy tomato gravy with soft cottage cheese cubes. Best with butter rotis.</p>
+                        </div>
+                        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20order%20Paneer%20Butter%20Masala%20(₹140)." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-colors shadow-sm min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-lg border border-amber-200 flex flex-col justify-between hover:shadow-xl transition-shadow" data-category="beverages">
+                    <div class="relative aspect-video overflow-hidden bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Masala Chai" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-primaryAccent text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow">Beverages</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <h3 class="text-lg sm:text-xl font-bold font-outfit text-textPrimary">Adrak & Elaichi Chai</h3>
+                                <span class="text-primaryAccent font-extrabold text-lg">₹20</span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-4 leading-relaxed">Hot steaming Indian masala tea brewed with fresh ginger, cardamom, and milk.</p>
+                        </div>
+                        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20order%20Adrak%20%26%20Elaichi%20Chai%20(₹20)." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-colors shadow-sm min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-lg border border-amber-200 flex flex-col justify-between hover:shadow-xl transition-shadow" data-category="meals">
+                    <div class="relative aspect-video overflow-hidden bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80" alt="Veg Biryani" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-secondaryAccent text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow">Best Seller</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <h3 class="text-lg sm:text-xl font-bold font-outfit text-textPrimary">Hyderabadi Veg Dum Biryani</h3>
+                                <span class="text-primaryAccent font-extrabold text-lg">₹130</span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-4 leading-relaxed">Fragrant basmati rice cooked with fresh vegetables, exotic spices, and served with raita.</p>
+                        </div>
+                        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20order%20Hyderabadi%20Veg%20Dum%20Biryani%20(₹130)." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-colors shadow-sm min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 sm:py-24 bg-white border-y border-amber-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primaryAccent font-bold uppercase tracking-wider text-sm bg-primaryAccent/10 px-3 py-1 rounded-full">Why Mansi Food</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-outfit mt-3 mb-4 text-textPrimary">Built on Quality, Trust & Care</h2>
+                <p class="text-textMuted text-base sm:text-lg">We serve patients, visitors, and locals with the warmth of home-cooked meals right near AIIMS Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-amberBg p-8 rounded-3xl border border-amber-200 flex flex-col items-start shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-2xl bg-primaryAccent text-white flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-outfit text-textPrimary mb-3">100% Hygienic Prep</h3>
+                    <p class="text-textMuted leading-relaxed">Prepared in a spotless, sanitized kitchen using fresh vegetables, pure spices, and RO drinking water. Perfect for patients and health-conscious visitors.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-amberBg p-8 rounded-3xl border border-amber-200 flex flex-col items-start shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-2xl bg-secondaryAccent text-white flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-outfit text-textPrimary mb-3">Prime AIIMS Road Location</h3>
+                    <p class="text-textMuted leading-relaxed">Conveniently situated at Cheditola Prabha Complex, right near AIIMS Hospital, Patna. Easy to drop by or get lightning-fast delivery.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-amberBg p-8 rounded-3xl border border-amber-200 flex flex-col items-start shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-600 text-white flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-outfit text-textPrimary mb-3">Lightning Fast WhatsApp Orders</h3>
+                    <p class="text-textMuted leading-relaxed">No complicated apps required. Just click our WhatsApp button, share your order, and enjoy hot food delivered swiftly.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-16 sm:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Mansi Food Restaurant Interior & Kitchen" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-primaryAccent font-bold uppercase tracking-wider text-sm bg-primaryAccent/10 px-3 py-1 rounded-full mb-3">Our Story</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-outfit mb-6 text-textPrimary">Serving Warmth & Care When You Need It Most</h2>
+                    <p class="text-textMuted text-base sm:text-lg leading-relaxed mb-6">
+                        Located near AIIMS hospital in Patna, <strong>Mansi Food</strong> was founded with a singular mission: to provide wholesome, clean, and delicious home-style meals to patients' families, medical staff, and local residents.
+                    </p>
+                    <p class="text-textMuted text-base sm:text-lg leading-relaxed mb-8">
+                        We understand that when visiting a hospital or working long shifts, finding clean and comforting food can be stressful. That's why every meal we prepare carries the warmth of home, cooked with strict hygiene standards and genuine care.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full mb-8">
+                        <div class="bg-white p-4 rounded-2xl border border-amber-200">
+                            <span class="block text-2xl sm:text-3xl font-extrabold font-outfit text-primaryAccent mb-1">500+</span>
+                            <span class="text-xs sm:text-sm text-textMuted font-medium">Daily Happy Eaters</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-amber-200">
+                            <span class="block text-2xl sm:text-3xl font-extrabold font-outfit text-secondaryAccent mb-1">100%</span>
+                            <span class="text-xs sm:text-sm text-textMuted font-medium">Pure Vegetarian Prep</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20would%20like%20to%20know%20more%20about%20your%20meal%20services." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primaryAccent text-white font-bold hover:bg-primaryHover transition-all shadow-md min-h-[48px]">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Chat With Us on WhatsApp</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-16 sm:py-24 bg-white border-y border-amber-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primaryAccent font-bold uppercase tracking-wider text-sm bg-primaryAccent/10 px-3 py-1 rounded-full">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-outfit mt-3 mb-4 text-textPrimary">Loved by AIIMS Visitors & Locals</h2>
+                <p class="text-textMuted text-base sm:text-lg">Read authentic Google reviews from our valued customers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-amberBg p-8 rounded-3xl border border-amber-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                        </div>
+                        <p class="text-textPrimary font-medium italic mb-6 leading-relaxed">
+                            "A lifesaver when visiting AIIMS Patna! The food is extremely hygienic, light on the stomach, and tastes just like home-cooked meals. Highly recommended for patients' families."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-amber-200">
+                        <div class="w-10 h-10 rounded-full bg-primaryAccent text-white font-bold flex items-center justify-center">R</div>
+                        <div>
+                            <h4 class="font-bold text-textPrimary text-sm">Rajesh Kumar</h4>
+                            <span class="text-xs text-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-amberBg p-8 rounded-3xl border border-amber-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-5 h-5 fill-amber-500"></i>
+                        </div>
+                        <p class="text-textPrimary font-medium italic mb-6 leading-relaxed">
+                            "Quick WhatsApp ordering and very prompt delivery near the hospital complex. Their Special Thali is wholesome and reasonably priced. Excellent service!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-amber-200">
+                        <div class="w-10 h-10 rounded-full bg-secondaryAccent text-white font-bold flex items-center justify-center">P</div>
+                        <div>
+                            <h4 class="font-bold text-textPrimary text-sm">Pooja Sharma</h4>
+                            <span class="text-xs text-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-amberBg p-8 rounded-3xl border border-amber-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                        </div>
+                        <p class="text-textPrimary font-medium italic mb-6 leading-relaxed">
+                            "Clean kitchen, polite staff, and delicious snacks! Their tea and samosas are my go-to evening refreshment near AIIMS road."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-amber-200">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center">A</div>
+                        <div>
+                            <h4 class="font-bold text-textPrimary text-sm">Dr. Alok Verma</h4>
+                            <span class="text-xs text-textMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-16 sm:py-24">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="text-primaryAccent font-bold uppercase tracking-wider text-sm bg-primaryAccent/10 px-3 py-1 rounded-full">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-outfit mt-3 mb-4 text-textPrimary">Frequently Asked Questions</h2>
+                <p class="text-textMuted text-base sm:text-lg">Everything you need to know about our food service and delivery.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-white border border-amber-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full p-6 text-left font-bold font-outfit text-lg sm:text-xl text-textPrimary flex items-center justify-between gap-4 min-h-[56px]" onclick="toggleFaq(this)">
+                        <span>How can I place an order at Mansi Food?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primaryAccent shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted leading-relaxed border-t border-amber-100 pt-4">
+                        You can easily place your order by clicking any "Order on WhatsApp" button on our website or messaging us directly at +91 7209477358. We confirm and process orders instantly!
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white border border-amber-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full p-6 text-left font-bold font-outfit text-lg sm:text-xl text-textPrimary flex items-center justify-between gap-4 min-h-[56px]" onclick="toggleFaq(this)">
+                        <span>Do you provide food delivery to AIIMS Patna hospital?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primaryAccent shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted leading-relaxed border-t border-amber-100 pt-4">
+                        Yes! We are conveniently located right near AIIMS hospital at Cheditola Prabha Complex. We provide fast delivery to hospital wards, nearby hostels, and residential areas on AIIMS Road.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white border border-amber-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full p-6 text-left font-bold font-outfit text-lg sm:text-xl text-textPrimary flex items-center justify-between gap-4 min-h-[56px]" onclick="toggleFaq(this)">
+                        <span>Is the food suitable for patients?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primaryAccent shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted leading-relaxed border-t border-amber-100 pt-4">
+                        Absolutely. We maintain rigorous hygiene standards, use pure ingredients, and prepare food with minimal oil and spices upon request, making it gentle and wholesome for patients and visitors.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white border border-amber-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full p-6 text-left font-bold font-outfit text-lg sm:text-xl text-textPrimary flex items-center justify-between gap-4 min-h-[56px]" onclick="toggleFaq(this)">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primaryAccent shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-textMuted leading-relaxed border-t border-amber-100 pt-4">
+                        We are open every day from 8:00 AM to 10:00 PM, serving breakfast, lunch, evening snacks, and dinner.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 bg-white border-y border-amber-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primaryAccent font-bold uppercase tracking-wider text-sm bg-primaryAccent/10 px-3 py-1 rounded-full">Visit Or Contact Us</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-outfit mt-3 mb-4 text-textPrimary">We Are Right Near AIIMS Patna</h2>
+                <p class="text-textMuted text-base sm:text-lg">Drop by our restaurant or send us an inquiry anytime.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Hours -->
+                <div class="lg:col-span-5 flex flex-col justify-between gap-8">
+                    
+                    <div class="bg-amberBg p-8 rounded-3xl border border-amber-200 space-y-6 shadow-sm">
+                        <h3 class="text-xl font-bold font-outfit text-textPrimary border-b border-amber-200 pb-4">Contact Details</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primaryAccent/10 text-primaryAccent flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-textPrimary text-sm">Address</h4>
+                                <p class="text-textMuted text-sm leading-relaxed">H28R+3W2, Cheditola Prabha complex, AIIMS Rd, near Aiims hospital, Patna, Bihar 801505</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-secondaryAccent/10 text-secondaryAccent flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-textPrimary text-sm">Phone / WhatsApp</h4>
+                                <a href="tel:+917209477358" class="text-primaryAccent font-bold text-sm hover:underline">+91 72094 77358</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-textPrimary text-sm">Operating Hours</h4>
+                                <p class="text-textMuted text-sm">Monday – Sunday: 8:00 AM – 10:00 PM</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mansi+Food+AIIMS+Rd+Patna" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-primaryAccent text-white font-bold hover:bg-primaryHover transition-all shadow-md min-h-[48px]">
+                            <i data-lucide="navigation" class="w-5 h-5"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="lg:col-span-7 bg-amberBg p-8 sm:p-10 rounded-3xl border border-amber-200 shadow-sm">
+                    <h3 class="text-xl sm:text-2xl font-bold font-outfit text-textPrimary mb-2">Send Us an Inquiry</h3>
+                    <p class="text-textMuted text-sm mb-6">Have bulk order requests or special dietary requirements? Let us know!</p>
+
+                    <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-bold text-textPrimary mb-1">Your Name</label>
+                            <input type="text" id="form-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-amber-300 bg-white focus:outline-none focus:ring-2 focus:ring-primaryAccent text-textPrimary min-h-[48px]">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-textPrimary mb-1">Phone Number</label>
+                                <input type="tel" id="form-phone" required placeholder="Enter 10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-amber-300 bg-white focus:outline-none focus:ring-2 focus:ring-primaryAccent text-textPrimary min-h-[48px]">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-textPrimary mb-1">Service / Requirement</label>
+                                <select id="form-service" class="w-full px-4 py-3 rounded-xl border border-amber-300 bg-white focus:outline-none focus:ring-2 focus:ring-primaryAccent text-textPrimary min-h-[48px]">
+                                    <option value="Food Order">Instant Food Order</option>
+                                    <option value="Hospital Delivery">AIIMS Hospital Delivery</option>
+                                    <option value="Bulk Order">Bulk / Party Order</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-textPrimary mb-1">Your Message</label>
+                            <textarea id="form-message" rows="4" required placeholder="Type your order details or message here..." class="w-full px-4 py-3 rounded-xl border border-amber-300 bg-white focus:outline-none focus:ring-2 focus:ring-primaryAccent text-textPrimary"></textarea>
+                        </div>
+
+                        <button type="submit" id="form-submit-btn" class="w-full py-4 rounded-xl bg-secondaryAccent text-white font-bold hover:bg-emerald-700 transition-all shadow-lg flex items-center justify-center gap-2 min-h-[52px]">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <span>Send Inquiry Message</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="mt-12 w-full rounded-3xl overflow-hidden shadow-xl border-4 border-amber-200 h-[400px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.6346914563!2d85.045!3d25.571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM0JzEzLjYiTiA4NcKwMDInNDguMCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mansi Food Google Map Location"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl border border-amber-300 transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 bg-secondaryAccent/10 text-secondaryAccent rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-outfit text-textPrimary mb-2">Inquiry Sent Successfully!</h3>
+            <p id="success-modal-desc" class="text-textMuted mb-6">Thank you for reaching out to Mansi Food. We will contact you shortly.</p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 rounded-xl bg-primaryAccent text-white font-bold hover:bg-primaryHover transition-all shadow-md min-h-[48px]">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFFBEB] border-t border-amber-200 p-3 shadow-2xl flex items-center gap-3">
+        <a href="tel:+917209477358" class="flex-1 flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl border-2 border-primaryAccent text-primaryAccent font-bold bg-white text-sm shadow-sm min-h-[48px]">
+            <i data-lucide="phone" class="w-5 h-5 shrink-0"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917209477358?text=Hi%20Mansi%20Food,%20I%20want%20to%20place%20an%20order!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-secondaryAccent text-white font-bold text-sm shadow-md hover:bg-emerald-700 min-h-[48px]">
+            <i data-lucide="message-circle" class="w-5 h-5 shrink-0"></i>
+            <span>WhatsApp Order</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-textPrimary text-white pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-zinc-800">
+                
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primaryAccent flex items-center justify-center text-white">
+                            <i data-lucide="utensils" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-extrabold font-outfit text-white">Mansi Food</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Fresh, hygienic, and comforting food service located near AIIMS Patna. Serving healthy thalis, snacks, and daily meals with care.
+                    </p>
+                    <div class="flex items-center gap-3 text-zinc-400">
+                        <span class="inline-flex items-center gap-1.5 text-xs bg-zinc-800 px-3 py-1.5 rounded-lg text-amber-400 font-semibold">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> 4.1★ (50+ Reviews)
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold font-outfit text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a href="#menu" class="hover:text-primaryAccent transition-colors">Menu Categories</a></li>
+                        <li><a href="#why-us" class="hover:text-primaryAccent transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primaryAccent transition-colors">Our Kitchen Story</a></li>
+                        <li><a href="#reviews" class="hover:text-primaryAccent transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-primaryAccent transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-primaryAccent transition-colors">Location & Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold font-outfit text-lg mb-4">Popular Items</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><span class="hover:text-white">Special Deluxe Veg Thali</span></li>
+                        <li><span class="hover:text-white">Executive Regular Thali</span></li>
+                        <li><span class="hover:text-white">Paneer Butter Masala</span></li>
+                        <li><span class="hover:text-white">Crispy Samosa & Chole</span></li>
+                        <li><span class="hover:text-white">Adrak & Elaichi Chai</span></li>
+                        <li><span class="hover:text-white">Hyderabadi Veg Biryani</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold font-outfit text-lg mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primaryAccent shrink-0 mt-1"></i>
+                            <span>Cheditola Prabha complex, AIIMS Rd, near Aiims hospital, Patna, Bihar 801505</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primaryAccent shrink-0"></i>
+                            <a href="tel:+917209477358" class="hover:text-white">+91 72094 77358</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-primaryAccent shrink-0"></i>
+                            <span>Open Daily: 8 AM - 10 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 text-center sm:text-left">
+                <p>&copy; <span id="current-year"></span> Mansi Food, Patna. All rights reserved.</p>
+                <p>Designed with care for AIIMS Patna visitors and local food lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Menu Filtering Logic
+        function filterMenu(category) {
+            const buttons = document.querySelectorAll('.menu-tab');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-primaryAccent', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-textPrimary', 'border', 'border-amber-300');
+            });
+
+            const activeBtn = document.getElementById(`tab-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-textPrimary', 'border', 'border-amber-300');
+                activeBtn.classList.add('bg-primaryAccent', 'text-white', 'shadow-md');
+            }
+
+            const cards = document.querySelectorAll('.menu-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion Logic
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            const isOpen = !content.classList.contains('hidden');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-content').forEach(item => {
+                item.classList.add('hidden');
+            });
+            document.querySelectorAll('.faq-btn i').forEach(i => {
+                i.style.transform = 'rotate(0deg)';
+            });
+
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Form Handling & Success Modal
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('form-submit-btn');
+            const name = document.getElementById('form-name').value.trim();
+            const service = document.getElementById('form-service').value;
+            
+            // Validate & sanitize inputs
+            if (!name) return;
+
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i><span>Sending Inquiry...</span>`;
+            lucide.createIcons();
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="send" class="w-5 h-5"></i><span>Send Inquiry Message</span>`;
+                lucide.createIcons();
+
+                document.getElementById('inquiry-form').reset();
+                
+                // Show success modal
+                const modal = document.getElementById('success-modal');
+                const modalDesc = document.getElementById('success-modal-desc');
+                modalDesc.textContent = `Thank you ${escapeHtml(name)}! Your inquiry regarding "${escapeHtml(service)}" has been received. We will contact you soon.`;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }, 1000);
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // XSS Sanitization helper
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
