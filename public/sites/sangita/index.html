@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Sangita - Premier Retail Destination opposite Patna Museum, Buddh Marg, Patna. Explore curated collections, luxury retail, and exceptional service.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <title>Sangita | Premier Retail Store in Patna | Opp. Patna Museum</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmWhite: '#FDFBF7',
+                        crimsonAccent: '#800020',
+                        crimsonDark: '#600018',
+                        terracotta: '#C05621',
+                        charcoal: '#1A202C',
+                        slateGray: '#4A5568',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Zero Horizontal Overflow & Smooth Rendering */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            background-color: #FDFBF7;
+            color: #1A202C;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C05621;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #800020;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 md:pb-0 bg-warmWhite text-charcoal">
+
+    <!-- ==========================================
+         1. ANNOUNCEMENT BAR & 100% OPAQUE HEADER
+         ========================================== -->
+    <div class="bg-crimsonAccent text-white text-xs sm:text-sm font-medium py-2 px-4 text-center tracking-wide">
+        📍 Visit our flagship store opposite Patna Museum, Buddh Marg | Open Today till 8:30 PM
+    </div>
+
+    <header class="sticky top-0 z-40 bg-warmWhite border-b border-zinc-200 shadow-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-full bg-crimsonAccent text-white flex items-center justify-center font-serif font-bold text-xl shadow-md group-hover:bg-crimsonDark transition-colors">
+                    S
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-2xl tracking-tight text-charcoal">Sangita</span>
+                    <span class="text-[10px] uppercase tracking-widest text-terracotta font-semibold">Retail & Lifestyle</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#collections" class="text-sm font-medium text-slateGray hover:text-crimsonAccent transition-colors">Collections</a>
+                <a href="#about" class="text-sm font-medium text-slateGray hover:text-crimsonAccent transition-colors">Our Story</a>
+                <a href="#reviews" class="text-sm font-medium text-slateGray hover:text-crimsonAccent transition-colors">Reviews (1,146+)</a>
+                <a href="#contact" class="text-sm font-medium text-slateGray hover:text-crimsonAccent transition-colors">Visit Store</a>
+            </nav>
+
+            <!-- Header Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+918877888889" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-zinc-300 text-charcoal hover:border-crimstanAccent hover:text-crimsonAccent transition-all text-sm font-medium">
+                    <i data-lucide="phone" class="w-4 h-4 text-terracotta"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20would%20like%20to%20inquire%20about%20your%20store%20products." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-crimsonAccent text-white hover:bg-crimsonDark shadow-md transition-all text-sm font-medium">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl text-charcoal hover:bg-zinc-200 transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         MOBILE BACKDROP & DRAWER (Z-INDEX 90 & 100)
+         ========================================== -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-warmWhite border-l border-zinc-200 rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-200">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-crimsonAccent text-white flex items-center justify-center font-serif font-bold text-lg">S</div>
+                    <span class="font-serif font-bold text-xl text-charcoal">Sangita</span>
+                </div>
+                <button id="menu-close" aria-label="Close Mobile Menu" class="p-2 rounded-lg text-slateGray hover:bg-zinc-200">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-5 pt-6 text-base font-medium text-charcoal">
+                <a href="#collections" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-crimsonAccent">
+                    <span>Collections & Categories</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slateGray"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-crimsonAccent">
+                    <span>Our Legacy & Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slateGray"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-crimsonAccent">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slateGray"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between py-2 border-b border-zinc-100 hover:text-crimsonAccent">
+                    <span>Store Directions & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slateGray"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-200 flex flex-col gap-3">
+            <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20want%20to%20inquire%20about%20products." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 text-white rounded-xl font-medium shadow">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <a href="tel:+918877888889" class="flex items-center justify-center gap-2 w-full py-3 bg-crimsonAccent text-white rounded-xl font-medium shadow">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                <span>Call +91 88778 88889</span>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- ==========================================
+             2. HERO SECTION
+             ========================================== -->
+        <section class="relative pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-warmWhite via-white to-warmWhite">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Content -->
+                    <div class="lg:col-span-7 flex flex-col items-start">
+                        <!-- Rating Badge -->
+                        <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-full mb-6 shadow-sm">
+                            <div class="flex items-center text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-300"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-charcoal">4.2 ★ (1,146+ Verified Google Reviews)</span>
+                        </div>
+
+                        <!-- Main Hero Headline -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-charcoal leading-[1.15] mb-6 break-words">
+                            Patna’s Trusted Retail Destination for Elegance & Quality
+                        </h1>
+
+                        <!-- Value Proposition Subheadline -->
+                        <p class="text-base sm:text-lg text-slateGray leading-relaxed mb-8 max-w-2xl break-words">
+                            Conveniently located at Buddh Marg, opposite the iconic Patna Museum. Discover an exquisite curation of retail collections backed by decades of customer trust and unmatched service in the heart of Bihar.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                            <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20am%20visiting%20your%20store%20soon." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-crimsonAccent hover:bg-crimsonDark text-white font-semibold text-base shadow-lg hover:shadow-xl transition-all min-h-[48px]">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                <span>Chat on WhatsApp</span>
+                            </a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sangita+Buddh+Marg+Patna+Museum" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white border-2 border-zinc-300 hover:border-terracotta text-charcoal font-semibold text-base shadow-sm hover:shadow transition-all min-h-[48px]">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-terracotta"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+
+                        <!-- Landmark Tag -->
+                        <div class="mt-8 flex items-center gap-3 text-xs sm:text-sm text-slateGray bg-zinc-100 px-4 py-2.5 rounded-lg border border-zinc-200">
+                            <i data-lucide="compass" class="w-4 h-4 text-terracotta flex-shrink-0"></i>
+                            <span>Opposite Patna Museum, Central Revenue Colony, Lodipur, Patna - 800001</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Image Showcase -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-zinc-200">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Sangita Retail Store Front & Interior" class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                                <div class="text-white">
+                                    <p class="font-serif text-xl font-bold">Flagship Retail Store</p>
+                                    <p class="text-xs text-zinc-200 mt-1">Open 7 Days a Week • 10:00 AM – 8:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Review Badge Card -->
+                        <div class="absolute -bottom-6 -left-6 sm:bottom-6 sm:-left-8 bg-white p-4 rounded-2xl shadow-xl border border-zinc-100 max-w-[220px] hidden sm:block">
+                            <div class="flex items-center gap-2 mb-1">
+                                <div class="text-amber-500 font-bold text-lg">4.2★</div>
+                                <div class="text-xs text-slateGray font-medium">Google Rating</div>
+                            </div>
+                            <p class="text-xs text-slateGray leading-snug">Trusted by over 1,146+ happy shoppers across Bihar.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             3. TRUST & SOCIAL PROOF BAR
+             ========================================== -->
+        <section class="bg-charcoal text-white py-10">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                    
+                    <div class="flex flex-col items-center justify-center p-4">
+                        <span class="font-serif text-3xl sm:text-4xl font-bold text-amber-400 mb-1">4.2 ★</span>
+                        <span class="text-xs sm:text-sm text-zinc-300 font-medium">Verified Google Rating</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-4">
+                        <span class="font-serif text-3xl sm:text-4xl font-bold text-amber-400 mb-1">1,146+</span>
+                        <span class="text-xs sm:text-sm text-zinc-300 font-medium">Customer Reviews</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-4">
+                        <span class="font-serif text-3xl sm:text-4xl font-bold text-amber-400 mb-1">Prime</span>
+                        <span class="text-xs sm:text-sm text-zinc-300 font-medium">Opp. Patna Museum, Buddh Marg</span>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center p-4">
+                        <span class="font-serif text-3xl sm:text-4xl font-bold text-amber-400 mb-1">100%</span>
+                        <span class="text-xs sm:text-sm text-zinc-300 font-medium">Authentic & Quality Assured</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             4. SERVICES / COLLECTIONS GRID
+             ========================================== -->
+        <section id="collections" class="py-20 bg-warmWhite">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">Curated Curation</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                        Explore Our Store Collections & Offerings
+                    </h2>
+                    <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
+                        From traditional ethnic elegance to contemporary daily lifestyle essentials, find everything you need under one roof at Buddh Marg.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Collection Card 1 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-crimsonAccent flex items-center justify-center mb-6 group-hover:bg-crimsonAccent group-hover:text-white transition-colors">
+                                <i data-lucide="sparkles" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-charcoal mb-3">Designer Apparels & Wear</h3>
+                            <p class="text-slateGray text-sm leading-relaxed mb-6">
+                                Handpicked selection of ethnic wear, festive collections, and premium fashion statements crafted for every occasion.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20am%20interested%20in%20Designer%20Apparels." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-zinc-100 hover:bg-crimsonAccent hover:text-white text-charcoal font-medium text-sm transition-all min-h-[48px]">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Collection Card 2 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-crimsonAccent flex items-center justify-center mb-6 group-hover:bg-crimsonAccent group-hover:text-white transition-colors">
+                                <i data-lucide="gift" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-charcoal mb-3">Lifestyle & Special Gifts</h3>
+                            <p class="text-slateGray text-sm leading-relaxed mb-6">
+                                Elegant gifting items, seasonal novelties, and lifestyle accessories designed to delight your loved ones.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20am%20interested%20in%20Lifestyle%20and%20Gifts." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-zinc-100 hover:bg-crimsonAccent hover:text-white text-charcoal font-medium text-sm transition-all min-h-[48px]">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Collection Card 3 -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+                        <div>
+                            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-crimsonAccent flex items-center justify-center mb-6 group-hover:bg-crimsonAccent group-hover:text-white transition-colors">
+                                <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-charcoal mb-3">Everyday Retail Essentials</h3>
+                            <p class="text-slateGray text-sm leading-relaxed mb-6">
+                                Premium quality daily necessities and retail goods chosen for exceptional durability, comfort, and value.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20am%20interested%20in%20Retail%20Essentials." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-zinc-100 hover:bg-crimsonAccent hover:text-white text-charcoal font-medium text-sm transition-all min-h-[48px]">
+                            <span>Inquire on WhatsApp</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             5. WHY CHOOSE US SECTION
+             ========================================== -->
+        <section class="py-20 bg-white border-y border-zinc-200">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">The Sangita Advantage</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                        Why Families in Patna Choose Us
+                    </h2>
+                    <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
+                        We pride ourselves on honesty, quality merchandise, and providing a welcoming shopping experience for every customer.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-warmWhite p-8 rounded-2xl border border-zinc-200">
+                        <div class="w-12 h-12 rounded-xl bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center mb-6">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-charcoal mb-3">Trusted Legacy</h3>
+                        <p class="text-slateGray text-sm leading-relaxed">
+                            With over 1,146+ verified 5-star and positive reviews, our commitment to genuine pricing and quality is unmatched in Patna.
+                        </p>
+                    </div>
+
+                    <div class="bg-warmWhite p-8 rounded-2xl border border-zinc-200">
+                        <div class="w-12 h-12 rounded-xl bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center mb-6">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-charcoal mb-3">Prime Landmark Location</h3>
+                        <p class="text-slateGray text-sm leading-relaxed">
+                            Centrally situated on Buddh Marg, directly opposite the famous Patna Museum with easy parking and convenient accessibility.
+                        </p>
+                    </div>
+
+                    <div class="bg-warmWhite p-8 rounded-2xl border border-zinc-200">
+                        <div class="w-12 h-12 rounded-xl bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center mb-6">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-charcoal mb-3">Personalized Customer Care</h3>
+                        <p class="text-slateGray text-sm leading-relaxed">
+                            Our friendly, expert store assistants are always ready to help you find precisely what you are looking for with a smile.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             6. ABOUT / STORY SECTION
+             ========================================== -->
+        <section id="about" class="py-20 bg-warmWhite">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-zinc-200">
+                            <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&w=1000&q=80" alt="Sangita Store Interior Shopping Experience" class="object-cover w-full h-full">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 flex flex-col items-start">
+                        <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">Our Story on Buddh Marg</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-6 break-words">
+                            Rooted in Patna’s Heritage, Dedicated to Modern Shoppers
+                        </h2>
+                        <p class="text-slateGray text-base leading-relaxed mb-4 break-words">
+                            Situated right across from the historic Patna Museum on Buddh Marg, Lodipur, <strong class="text-charcoal">Sangita</strong> has grown to become a household name for retail shoppers across Bihar. 
+                        </p>
+                        <p class="text-slateGray text-base leading-relaxed mb-8 break-words">
+                            Whether you are browsing for festival shopping, gifting, or daily retail essentials, our shelves feature handpicked goods selected with uncompromising standards of quality and customer satisfaction.
+                        </p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sangita+Buddh+Marg+Patna+Museum" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-charcoal text-white hover:bg-crimsonAccent font-medium text-sm transition-all shadow">
+                            <i data-lucide="navigation" class="w-4 h-4"></i>
+                            <span>Plan Your Store Visit</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             7. CUSTOMER REVIEWS SECTION
+             ========================================== -->
+        <section id="reviews" class="py-20 bg-white border-t border-zinc-200">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-full mb-4">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs font-bold text-charcoal">4.2 Star Google Rating (1,146+ Reviews)</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                        What Our Customers Say About Us
+                    </h2>
+                    <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
+                        Real experiences shared by shoppers who visit our Buddh Marg store in Patna.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Review 1 -->
+                    <div class="bg-warmWhite p-6 sm:p-8 rounded-2xl border border-zinc-200 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-slateGray text-sm leading-relaxed mb-6 italic">
+                                "Very easy to locate right opposite Patna Museum on Buddh Marg. Great collection and courteous staff members who help you choose the best items."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-200">
+                            <div class="w-10 h-10 rounded-full bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center font-bold text-sm">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-charcoal">Rajesh Kumar</h4>
+                                <span class="text-xs text-slateGray">Local Google Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-warmWhite p-6 sm:p-8 rounded-2xl border border-zinc-200 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-slateGray text-sm leading-relaxed mb-6 italic">
+                                "Sangita has been our family’s go-to retail store in Patna for years. Excellent variety and very fair pricing. Highly recommended!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-200">
+                            <div class="w-10 h-10 rounded-full bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center font-bold text-sm">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-charcoal">Pooja Sinha</h4>
+                                <span class="text-xs text-slateGray">Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-warmWhite p-6 sm:p-8 rounded-2xl border border-zinc-200 flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-300"></i>
+                            </div>
+                            <p class="text-slateGray text-sm leading-relaxed mb-6 italic">
+                                "Prime landmark location opposite Patna Museum. Clean shop, wide range of collections, and quick assistance over WhatsApp too."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-200">
+                            <div class="w-10 h-10 rounded-full bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center font-bold text-sm">
+                                AM
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-charcoal">Amit Mishra</h4>
+                                <span class="text-xs text-slateGray">Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             8. INTERACTIVE LOCATION & CONTACT SECTION
+             ========================================== -->
+        <section id="contact" class="py-20 bg-warmWhite">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">Visit or Reach Out</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                        Store Location & Contact Information
+                    </h2>
+                    <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
+                        We are open every day. Drop by our store in Lodipur, Patna, or send us an inquiry online.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left: Contact Details & Inquiry Form -->
+                    <div class="lg:col-span-6 flex flex-col gap-8">
+                        
+                        <!-- Contact Cards Info -->
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-zinc-200 shadow-sm space-y-6">
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-bold text-base text-charcoal mb-1">Store Address</h3>
+                                    <p class="text-slateGray text-sm leading-relaxed">
+                                        Gaya Road, Buddh Marg, opp. Patna Museum, Central Revenue Colony, Lodipur, Patna, Bihar 800001
+                                    </p>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Sangita+Buddh+Marg+Patna+Museum" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-crimsonAccent font-semibold text-xs mt-2 hover:underline">
+                                        <span>Open in Google Maps</span>
+                                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 pt-4 border-t border-zinc-100">
+                                <div class="w-12 h-12 rounded-xl bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone-call" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-bold text-base text-charcoal mb-1">Phone & WhatsApp</h3>
+                                    <p class="text-slateGray text-sm mb-1">+91 88778 88889</p>
+                                    <div class="flex items-center gap-3 mt-2">
+                                        <a href="tel:+918877888889" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-zinc-100 hover:bg-crimsonAccent hover:text-white transition-colors text-charcoal">Call Now</a>
+                                        <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors">WhatsApp Chat</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 pt-4 border-t border-zinc-100">
+                                <div class="w-12 h-12 rounded-xl bg-crimsonAccent/10 text-crimsonAccent flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-bold text-base text-charcoal mb-1">Store Timings</h3>
+                                    <p class="text-slateGray text-sm">Monday – Sunday: 10:00 AM – 8:30 PM</p>
+                                    <span class="inline-block text-[11px] bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded mt-1">Open All Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Inquiry Form -->
+                        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-zinc-200 shadow-sm">
+                            <h3 class="font-serif font-bold text-xl text-charcoal mb-2">Send an Online Inquiry</h3>
+                            <p class="text-slateGray text-xs sm:text-sm mb-6">Fill out this quick form and our team will get back to you promptly.</p>
+                            
+                            <form id="inquiry-form" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold text-charcoal uppercase tracking-wider mb-1">Your Name</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:border-crimsonAccent text-sm text-charcoal bg-warmWhite" placeholder="Enter your full name">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-xs font-semibold text-charcoal uppercase tracking-wider mb-1">Phone Number / WhatsApp</label>
+                                    <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:border-crimsonAccent text-sm text-charcoal bg-warmWhite" placeholder="Enter your mobile number">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-xs font-semibold text-charcoal uppercase tracking-wider mb-1">Your Inquiry / Message</label>
+                                    <textarea id="message" rows="3" required class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:outline-none focus:border-crimsonAccent text-sm text-charcoal bg-warmWhite" placeholder="What are you looking for?"></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-4 rounded-xl bg-crimsonAccent hover:bg-crimsonDark text-white font-semibold text-sm shadow transition-all min-h-[48px]">
+                                    Submit Inquiry
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Google Map Embed -->
+                    <div class="lg:col-span-6 flex flex-col">
+                        <div class="bg-white p-4 rounded-2xl border border-zinc-200 shadow-sm h-full flex flex-col">
+                            <div class="flex items-center justify-between mb-4 px-2">
+                                <h3 class="font-serif font-bold text-lg text-charcoal">Store Location Map</h3>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Sangita+Buddh+Marg+Patna+Museum" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-crimsonAccent text-white text-xs font-semibold hover:bg-crimsonDark transition-colors">
+                                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                                    <span>Get Directions</span>
+                                </a>
+                            </div>
+                            <div class="relative w-full flex-grow min-h-[400px] rounded-xl overflow-hidden border border-zinc-200 bg-zinc-100">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778589094038!2d85.127814!3d25.611111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQwLjAiTiA4NcKwMDcnNDQuMiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Sangita Store Location Map Patna Museum Buddh Marg">
+                                </iframe>
+                            </div>
+                            <div class="mt-4 px-2 text-xs text-slateGray flex items-center justify-between">
+                                <span>Opp. Patna Museum, Buddh Marg, Lodipur, Patna</span>
+                                <span class="font-semibold text-charcoal">Bihar 800001</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         9. STICKY MOBILE ACTION BAR
+         ========================================== -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-zinc-200 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+918877888889" class="flex-1 flex items-center justify-center gap-2 py-3 bg-charcoal text-white rounded-xl font-medium text-sm shadow">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-400"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918877888889?text=Hello%20Sangita,%20I%20am%20visiting%20the%20store%20soon." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 bg-emerald-600 text-white rounded-xl font-medium text-sm shadow">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- ==========================================
+         10. FOOTER
+         ========================================== -->
+    <footer class="bg-charcoal text-zinc-300 pt-16 pb-20 md:pb-16 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-zinc-800">
+                
+                <!-- Brand Info -->
+                <div class="flex flex-col items-start">
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-crimsonAccent text-white flex items-center justify-center font-serif font-bold text-xl">
+                            S
+                        </div>
+                        <span class="font-serif font-bold text-2xl text-white tracking-tight">Sangita</span>
+                    </div>
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                        Patna’s trusted retail destination offering curated fashion, gifts, and lifestyle essentials opposite Patna Museum on Buddh Marg.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-400 text-xs font-semibold">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span>4.2★ Rating from 1,146+ Google Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#collections" class="hover:text-amber-400 transition-colors">Store Collections</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">Our Legacy & Story</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-400 transition-colors">Customer Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-amber-400 transition-colors">Store Directions & Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- Operating Hours -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Store Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white">10:00 AM – 8:30 PM</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white">10:00 AM – 8:30 PM</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white">10:00 AM – 8:30 PM</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white">10:00 AM – 8:30 PM</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white">10:00 AM – 8:30 PM</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white">10:00 AM – 8:30 PM</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-white">10:00 AM – 8:30 PM</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Contact Store</h4>
+                    <div class="space-y-3 text-sm text-zinc-400">
+                        <p class="leading-relaxed">
+                            Gaya Road, Buddh Marg, opp. Patna Museum, Lodipur, Patna, Bihar 800001
+                        </p>
+                        <p class="flex items-center gap-2 text-white font-medium">
+                            <i data-lucide="phone" class="w-4 h-4 text-amber-400"></i>
+                            <a href="tel:+918877888889" class="hover:underline">+91 88778 88889</a>
+                        </p>
+                        <a href="https://wa.me/918877888889?text=Hello%20Sangita," target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-emerald-600 text-white rounded-lg text-xs font-semibold hover:bg-emerald-700 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Sangita Retail Store, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:underline">Privacy Policy</a>
+                    <a href="#contact" class="hover:underline">Terms of Service</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Sangita+Buddh+Marg+Patna+Museum" target="_blank" rel="noopener noreferrer" class="hover:underline">Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         SUCCESS MODAL POPUP FOR FORM
+         ========================================== -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl animate-in fade-in zoom-in duration-200">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-charcoal mb-2">Inquiry Received!</h3>
+            <p id="success-message" class="text-slateGray text-sm mb-6">
+                Thank you for contacting Sangita. Our team has received your message and will connect with you shortly.
+            </p>
+            <button id="close-modal" class="w-full py-3 bg-crimsonAccent text-white font-semibold rounded-xl hover:bg-crimsonDark transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT INTERACTIVITY
+         ========================================== -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Inquiry Form Handling & Success Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        const successMessage = document.getElementById('success-message');
+
+        inquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('name').value.trim();
+            const phoneInput = document.getElementById('phone').value.trim();
+            const msgInput = document.getElementById('message').value.trim();
+
+            // Client-side sanitization check & feedback
+            if(nameInput && phoneInput) {
+                successMessage.textContent = `Thank you ${nameInput}! We have received your inquiry regarding "${msgInput.substring(0, 40)}...". Our store team at Buddh Marg, Patna will contact you shortly.`;
+                successModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                inquiryForm.reset();
+            }
+        });
+
+        closeModal.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', function(e) {
+            if(e.target === successModal) {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
