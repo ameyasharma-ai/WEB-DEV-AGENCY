@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="The Food Dude - Patna's finest dining & food delivery spot at Kaushlya Estate, Fraser Road. Order delicious food via WhatsApp or visit us!">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <title>The Food Dude | Best Restaurant & Food Delivery in Fraser Road, Patna</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0F172A',
+                        surface: '#1E293B',
+                        primary: '#D97706',
+                        'primary-hover': '#B45309',
+                        secondary: '#C2410C',
+                        'text-primary': '#F8FAFC',
+                        'text-muted': '#94A3B8'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 md:pb-0 bg-background text-text-primary antialiased">
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-secondary to-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse"><span></span></i>
+        <span>Craving something delicious? Order now on WhatsApp for instant doorstep delivery in Patna!</span>
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse hidden sm:inline-block"><span></span></i>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#0F172A] border-b border-slate-800 shadow-xl">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-lg shadow-primary/10">
+                    <i data-lucide="utensils" class="w-6 h-6"><span></span></i>
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-xl sm:text-2xl tracking-tight text-white block">THE FOOD DUDE</span>
+                    <span class="text-xs text-primary font-medium tracking-wider uppercase block -mt-1">Fraser Road, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-text-muted">
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">Our Story</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Header Action Buttons (Desktop) -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+916206021778" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-700 bg-surface hover:border-primary text-sm font-medium transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"><span></span></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-semibold shadow-lg shadow-primary/20 transition-all transform hover:scale-105">
+                    <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+                    <span>Order on WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl bg-surface border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-primary min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"><span></span></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#0F172A] border-l border-slate-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                        <i data-lucide="utensils" class="w-5 h-5"><span></span></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">THE FOOD DUDE</span>
+                </div>
+                <button id="menu-close" aria-label="Close Navigation Menu" class="p-2 rounded-lg bg-surface text-text-muted hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"><span></span></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 mt-6 text-base font-medium">
+                <a href="#menu" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 hover:bg-surface text-white">
+                    <span>Explore Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-primary"><span></span></i>
+                </a>
+                <a href="#why-us" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 hover:bg-surface text-white">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-primary"><span></span></i>
+                </a>
+                <a href="#about" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 hover:bg-surface text-white">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-primary"><span></span></i>
+                </a>
+                <a href="#reviews" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 hover:bg-surface text-white">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-primary"><span></span></i>
+                </a>
+                <a href="#faq" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 hover:bg-surface text-white">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-primary"><span></span></i>
+                </a>
+                <a href="#contact" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-surface/50 hover:bg-surface text-white">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-primary"><span></span></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+            <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-primary hover:bg-primary-hover text-white text-center font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 min-h-[48px]">
+                <i data-lucide="message-circle" class="w-5 h-5"><span></span></i>
+                <span>Order on WhatsApp</span>
+            </a>
+            <a href="tel:+916206021778" class="w-full py-3.5 px-4 rounded-xl bg-surface border border-slate-700 text-white text-center font-medium flex items-center justify-center gap-2 min-h-[48px]">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"><span></span></i>
+                <span>Call +91 62060 21778</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Ambient Background Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <!-- Trust Rating Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface border border-slate-700/80 mb-6 shadow-inner">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                        </div>
+                        <span class="text-sm font-semibold text-white">4.8★ <span class="text-text-muted font-normal">(136+ Google Reviews)</span></span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Patna's Most <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Appetizing</span> Culinary Destination
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-text-muted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed break-words">
+                        Experience mouth-watering dishes crafted with passion at Fraser Road, Patna. From sizzling starters to hearty meals, satisfy your cravings instantly with lightning-fast WhatsApp ordering.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-primary/25 transition-all transform hover:scale-105 min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-5 h-5"><span></span></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface border border-slate-700 hover:border-primary text-white font-semibold text-base flex items-center justify-center gap-2 transition-colors min-h-[48px]">
+                            <span>Explore Full Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-primary"><span></span></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-xl opacity-30 animate-pulse"></div>
+                        <div class="relative rounded-2xl overflow-hidden border border-slate-700 bg-surface aspect-[4/3] shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Delicious gourmet dish from The Food Dude Patna" class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700">
+                            <!-- Overlay Badge -->
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-950/80 backdrop-blur-md border border-slate-800 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                        <i data-lucide="map-pin" class="w-5 h-5"><span></span></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-text-muted">Visit Us At</p>
+                                        <p class="text-sm font-bold text-white">Fraser Road, Patna</p>
+                                    </div>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Kaushlya+Estate+Bander+Bagicha+Fraser+Road+Patna" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-semibold hover:bg-primary-hover transition-colors">
+                                    Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-slate-800 bg-surface/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-surface border border-slate-800">
+                    <div class="flex items-center justify-center gap-1 text-amber-400 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"><span></span></i>
+                        <span class="text-2xl font-bold font-syne text-white">4.8</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-text-muted">Google Rating</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-slate-800">
+                    <div class="flex items-center justify-center gap-1 text-primary mb-1">
+                        <i data-lucide="users" class="w-5 h-5"><span></span></i>
+                        <span class="text-2xl font-bold font-syne text-white">136+</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-text-muted">Verified Reviews</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-slate-800">
+                    <div class="flex items-center justify-center gap-1 text-emerald-400 mb-1">
+                        <i data-lucide="clock" class="w-5 h-5"><span></span></i>
+                        <span class="text-2xl font-bold font-syne text-white">Fast</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-text-muted">Kitchen Prep & Delivery</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-slate-800">
+                    <div class="flex items-center justify-center gap-1 text-secondary mb-1">
+                        <i data-lucide="map-pin" class="w-5 h-5"><span></span></i>
+                        <span class="text-2xl font-bold font-syne text-white">Prime</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-text-muted">Fraser Road, Patna</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section id="menu" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Our Culinary Creations</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Explore Our Irresistible Menu
+                </h2>
+                <p class="text-text-muted text-base">
+                    Hand-crafted dishes made with authentic spices and freshest ingredients. Click below to order directly via WhatsApp!
+                </p>
+
+                <!-- Menu Category Filter Tabs -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+                    <button class="menu-tab px-5 py-2.5 rounded-xl bg-primary text-white font-semibold text-sm transition-all" data-category="all">All Items</button>
+                    <button class="menu-tab px-5 py-2.5 rounded-xl bg-surface border border-slate-700 text-text-muted hover:text-white font-medium text-sm transition-all" data-category="starters">Starters & Snacks</button>
+                    <button class="menu-tab px-5 py-2.5 rounded-xl bg-surface border border-slate-700 text-text-muted hover:text-white font-medium text-sm transition-all" data-category="mains">Main Course</button>
+                    <button class="menu-tab px-5 py-2.5 rounded-xl bg-surface border border-slate-700 text-text-muted hover:text-white font-medium text-sm transition-all" data-category="beverages">Beverages & Desserts</button>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-card bg-surface border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300" data-category="starters">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Cheesy Loaded Pizza" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-primary font-bold text-sm border border-slate-800">
+                                ₹299
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white group-hover:text-primary transition-colors">Signature Cheesy Pizza</h3>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-primary/10 text-primary font-medium">Bestseller</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4 break-words">
+                                Loaded with gooey mozzarella cheese, fresh garden vegetables, and our secret herb-infused tomato sauce.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20Signature%20Cheesy%20Pizza%20(₹299)" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-surface border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300" data-category="starters">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Crispy Burger" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-primary font-bold text-sm border border-slate-800">
+                                ₹189
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white group-hover:text-primary transition-colors">The Dude's Special Burger</h3>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-secondary/10 text-secondary font-medium">Spicy</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4 break-words">
+                                Crispy golden patty, fresh lettuce, melted cheese, and our signature tangy chipotle sauce in a toasted bun.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20The%20Dude's%20Special%20Burger%20(₹189)" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-surface border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300" data-category="mains">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Biryani" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-primary font-bold text-sm border border-slate-800">
+                                ₹349
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white group-hover:text-primary transition-colors">Royal Dum Biryani</h3>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-medium">Chef Choice</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4 break-words">
+                                Long-grain Basmati rice slow-cooked with tender marinated pieces and aromatic royal spices. Served with raita.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20Royal%20Dum%20Biryani%20(₹349)" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card bg-surface border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300" data-category="starters">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Pasta" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-primary font-bold text-sm border border-slate-800">
+                                ₹249
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white group-hover:text-primary transition-colors">Creamy White Sauce Pasta</h3>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 font-medium">Veg</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4 break-words">
+                                Penne pasta tossed in rich, velvety garlic cream sauce with bell peppers, sweet corn, and grated parmesan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20Creamy%20White%20Sauce%20Pasta%20(₹249)" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card bg-surface border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300" data-category="mains">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Momos" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-primary font-bold text-sm border border-slate-800">
+                                ₹149
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white group-hover:text-primary transition-colors">Steamed & Fried Momos</h3>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-primary/10 text-primary font-medium">Popular</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4 break-words">
+                                Juicy vegetable or chicken dumplings served steaming hot with our fiery signature red chilli garlic dip.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20Steamed%20&%20Fried%20Momos%20(₹149)" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card bg-surface border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300" data-category="beverages">
+                    <div>
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" alt="Mocktail Shake" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-primary font-bold text-sm border border-slate-800">
+                                ₹159
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white group-hover:text-primary transition-colors">Chocolate Thick Shake</h3>
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 font-medium">Refreshing</span>
+                            </div>
+                            <p class="text-text-muted text-sm leading-relaxed mb-4 break-words">
+                                Rich, creamy chocolate milkshake topped with whipped cream, chocolate drizzle, and choco-chips.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20Chocolate%20Thick%20Shake%20(₹159)" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-surface/30 border-y border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">The Food Dude Difference</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Why Patnaites Choose Us
+                </h2>
+                <p class="text-text-muted text-base">
+                    We take pride in our uncompromising standards of food preparation, hygiene, and rapid service.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-surface border border-slate-800 text-center hover:border-primary/50 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i data-lucide="leaf" class="w-8 h-8"><span></span></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Fresh Ingredients</h3>
+                    <p class="text-text-muted text-sm leading-relaxed break-words">
+                        We source farm-fresh vegetables and premium spices daily to guarantee unmatched flavor and nutritional goodness in every bite.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-surface border border-slate-800 text-center hover:border-primary/50 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i data-lucide="zap" class="w-8 h-8"><span></span></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Lightning Fast Service</h3>
+                    <p class="text-text-muted text-sm leading-relaxed break-words">
+                        Whether dining in near Bander Bagicha or ordering home delivery across Patna, our team ensures your food arrives piping hot.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-surface border border-slate-800 text-center hover:border-primary/50 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8"><span></span></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Unmatched Taste</h3>
+                    <p class="text-text-muted text-sm leading-relaxed break-words">
+                        Backed by 136+ glowing 5-star Google reviews, our recipes are perfected to delight food lovers across the city.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- About Images -->
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden border border-slate-800 aspect-[4/5] bg-surface">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="object-cover w-full h-full">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="rounded-2xl overflow-hidden border border-slate-800 aspect-[4/5] bg-surface">
+                                <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=600&q=80" alt="Chef preparing food" class="object-cover w-full h-full">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative Badge -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-center shadow-2xl">
+                        <span class="font-syne font-extrabold text-3xl text-primary block">4.8★</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-white block mt-1">Trusted in Patna</span>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="lg:col-span-6">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Our Culinary Story</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Passionate About Serving Happiness on Every Plate
+                    </h2>
+                    <p class="text-text-muted text-base leading-relaxed mb-6 break-words">
+                        Located centrally at Kaushlya Estate, near Hari Narayan Complex in Bander Bagicha, Fraser Road Area, Patna, <strong class="text-white">The Food Dude</strong> was born out of a simple vision: to create a cozy culinary haven where exceptional quality meets vibrant flavours.
+                    </p>
+                    <p class="text-text-muted text-base leading-relaxed mb-8 break-words">
+                        From students catching up over shakes to families celebrating weekend dinners, we treat every guest like family. Come visit us or order directly via WhatsApp for a memorable dining experience right at your doorstep.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pb-6 border-b border-slate-800 mb-8">
+                        <div>
+                            <span class="font-syne font-bold text-3xl text-white block mb-1">136+</span>
+                            <span class="text-xs text-text-muted uppercase tracking-wider">Happy Reviews</span>
+                        </div>
+                        <div>
+                            <span class="font-syne font-bold text-3xl text-white block mb-1">100%</span>
+                            <span class="text-xs text-text-muted uppercase tracking-wider">Hygiene Guaranteed</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Kaushlya+Estate+Bander+Bagicha+Fraser+Road+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-surface border border-slate-700 hover:border-primary text-white font-semibold text-sm transition-colors">
+                        <i data-lucide="navigation" class="w-4 h-4 text-primary"><span></span></i>
+                        <span>Get Directions to Fraser Road</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-surface/30 border-y border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Social Proof</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Loved By Patnaites (4.8★ Rating)
+                </h2>
+                <p class="text-text-muted text-base">
+                    Read what our valued customers have to say about our food quality and prompt service.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="p-8 rounded-2xl bg-surface border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6 italic break-words">
+                            "Absolute hidden gem on Fraser Road! Ordered their special burger and momos via WhatsApp and delivery was lightning fast. The taste is authentic and mouth-watering."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
+                            AK
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Abhishek Kumar</p>
+                            <p class="text-xs text-text-muted">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-8 rounded-2xl bg-surface border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6 italic break-words">
+                            "Great ambiance near Bander Bagicha! We visited with friends and had their cheesy pizza and shakes. Amazing food quality and very polite staff. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 text-secondary font-bold flex items-center justify-center font-syne">
+                            PS
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Priya Singh</p>
+                            <p class="text-xs text-text-muted">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-8 rounded-2xl bg-surface border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"><span></span></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6 italic break-words">
+                            "The Royal Dum Biryani here is simply out of this world! Packed with flavors and delivered piping hot. The Food Dude is my go-to restaurant in Patna now."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center font-syne">
+                            RM
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Rahul Mishra</p>
+                            <p class="text-xs text-text-muted">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-20">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-text-muted text-base">
+                    Everything you need to know about our restaurant, orders, and delivery in Patna.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item rounded-2xl bg-surface border border-slate-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white focus:outline-none min-h-[48px]">
+                        <span>How can I place an order at The Food Dude?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"><span></span></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-text-muted text-sm pb-6 leading-relaxed break-words">
+                            You can easily order by clicking any of our "Order on WhatsApp" buttons on the website. This opens a direct chat with our team where you can share your items and delivery address in Patna!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item rounded-2xl bg-surface border border-slate-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white focus:outline-none min-h-[48px]">
+                        <span>Where is The Food Dude located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"><span></span></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-text-muted text-sm pb-6 leading-relaxed break-words">
+                            We are conveniently located at Kaushlya Estate, near Hari Narayan Complex, Bander Bagicha, Fraser Road Area, Patna, Bihar 800001. You can easily find us on Google Maps!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item rounded-2xl bg-surface border border-slate-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white focus:outline-none min-h-[48px]">
+                        <span>Do you offer home delivery across Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"><span></span></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-text-muted text-sm pb-6 leading-relaxed break-words">
+                            Yes! We provide rapid home delivery across major localities in Patna. Contact us on WhatsApp to confirm delivery to your exact pin code.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item rounded-2xl bg-surface border border-slate-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white focus:outline-none min-h-[48px]">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"><span></span></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-text-muted text-sm pb-6 leading-relaxed break-words">
+                            We are open every day from 11:00 AM to 11:00 PM to serve you fresh lunches, evening snacks, and hearty dinners.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-surface/30 border-t border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Visit Or Reach Out</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Location & Contact Information
+                </h2>
+                <p class="text-text-muted text-base">
+                    Drop by our restaurant on Fraser Road or drop us an inquiry below.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info & Form -->
+                <div class="lg:col-span-6 space-y-8">
+                    <!-- Contact Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-6 rounded-2xl bg-surface border border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                <i data-lucide="map-pin" class="w-6 h-6"><span></span></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-base text-white mb-1">Address</h3>
+                            <p class="text-text-muted text-xs leading-relaxed">Kaushlya Estate, near Hari Narayan Complex, Bander Bagicha, Fraser Road Area, Patna, Bihar 800001</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-surface border border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                <i data-lucide="phone-call" class="w-6 h-6"><span></span></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-base text-white mb-1">Phone / WhatsApp</h3>
+                            <p class="text-text-muted text-xs leading-relaxed mb-2">+91 62060 21778</p>
+                            <a href="tel:+916206021778" class="text-primary text-xs font-semibold hover:underline block">Call Us Now &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours Table -->
+                    <div class="p-6 rounded-2xl bg-surface border border-slate-800">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                <i data-lucide="clock" class="w-5 h-5"><span></span></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-lg text-white">Opening Hours</h3>
+                        </div>
+                        <div class="space-y-2.5 text-sm">
+                            <div class="flex justify-between py-1.5 border-b border-slate-800">
+                                <span class="text-text-muted">Monday - Sunday</span>
+                                <span class="text-white font-semibold">11:00 AM – 11:00 PM</span>
+                            </div>
+                            <div class="flex justify-between py-1.5">
+                                <span class="text-text-muted">Home Delivery Status</span>
+                                <span class="text-emerald-400 font-semibold flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    Active Now
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Working Inquiry Form -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-surface border border-slate-800">
+                        <h3 class="font-syne font-bold text-xl text-white mb-2">Send Us a Quick Message</h3>
+                        <p class="text-text-muted text-xs mb-6">Have a party booking or custom food query? Fill out this form!</p>
+                        
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="visitor-name" class="block text-xs font-semibold text-text-muted uppercase mb-1">Your Name</label>
+                                <input type="text" id="visitor-name" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-primary transition-colors min-h-[48px]" placeholder="e.g. Aman Verma">
+                            </div>
+                            <div>
+                                <label for="visitor-phone" class="block text-xs font-semibold text-text-muted uppercase mb-1">Phone Number</label>
+                                <input type="tel" id="visitor-phone" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-primary transition-colors min-h-[48px]" placeholder="e.g. +91 98765 43210">
+                            </div>
+                            <div>
+                                <label for="visitor-message" class="block text-xs font-semibold text-text-muted uppercase mb-1">Message / Order Details</label>
+                                <textarea id="visitor-message" rows="3" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Type your query here..."></textarea>
+                            </div>
+                            <button type="submit" id="form-submit-btn" class="w-full py-3.5 px-6 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold text-sm transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 min-h-[48px]">
+                                <i data-lucide="send" class="w-4 h-4"><span></span></i>
+                                <span>Send Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="lg:col-span-6 flex flex-col">
+                    <div class="rounded-2xl overflow-hidden border border-slate-800 bg-surface flex-1 min-h-[400px] lg:min-h-full relative shadow-2xl">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778845239123!2d85.1375!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef0b8b8b9%3A0x123456789abcdef!2sKaushlya%20Estate%20Bander%20Bagicha%20Fraser%20Road%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 450px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="The Food Dude Location Map">
+                        </iframe>
+                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs text-text-muted">Need precise directions?</p>
+                                <p class="text-sm font-bold text-white">Open in Google Maps</p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kaushlya+Estate+Bander+Bagicha+Fraser+Road+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-primary text-white text-xs font-semibold hover:bg-primary-hover transition-colors flex items-center gap-2">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"><span></span></i>
+                                <span>Directions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+                            <i data-lucide="utensils" class="w-5 h-5"><span></span></i>
+                        </div>
+                        <span class="font-syne font-extrabold text-xl text-white">THE FOOD DUDE</span>
+                    </div>
+                    <p class="text-text-muted text-xs leading-relaxed mb-6 break-words">
+                        Patna's premier culinary destination offering delicious meals, snacks, and instant WhatsApp delivery right to your doorstep.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/916206021778" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-surface border border-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"><span></span></i>
+                        </a>
+                        <a href="tel:+916206021778" aria-label="Phone" class="w-10 h-10 rounded-xl bg-surface border border-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"><span></span></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kaushlya+Estate+Bander+Bagicha+Fraser+Road+Patna" target="_blank" rel="noopener noreferrer" aria-label="Location" class="w-10 h-10 rounded-xl bg-surface border border-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"><span></span></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-text-muted">
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Explore Menu</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Operating Hours -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Opening Hours</h4>
+                    <p class="text-text-muted text-xs leading-relaxed mb-3">
+                        Monday to Sunday:<br>
+                        <strong class="text-white">11:00 AM – 11:00 PM</strong>
+                    </p>
+                    <p class="text-text-muted text-xs leading-relaxed">
+                        Home Delivery:<br>
+                        <strong class="text-emerald-400">Available across Patna</strong>
+                    </p>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Contact Info</h4>
+                    <p class="text-text-muted text-xs leading-relaxed mb-3">
+                        Kaushlya Estate, near Hari Narayan Complex, Bander Bagicha, Fraser Road Area, Patna, Bihar 800001
+                    </p>
+                    <p class="text-text-muted text-xs leading-relaxed">
+                        Phone: <a href="tel:+916206021778" class="text-primary hover:underline">+91 62060 21778</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-muted">
+                <p>&copy; <span id="current-year"></span> The Food Dude, Patna. All rights reserved.</p>
+                <p class="flex items-center gap-1">
+                    Crafted with <i data-lucide="heart" class="w-3.5 h-3.5 text-secondary fill-secondary"><span></span></i> for food lovers in Patna
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0F172A] border-t border-slate-800 p-3 flex items-center justify-between gap-3 shadow-2xl">
+        <a href="tel:+916206021778" class="flex-1 py-3 px-4 rounded-xl bg-surface border border-slate-700 text-white text-xs font-bold flex items-center justify-center gap-2 min-h-[48px]">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"><span></span></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/916206021778?text=Hi%20The%20Food%20Dude,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-primary text-white text-xs font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 min-h-[48px]">
+            <i data-lucide="message-circle" class="w-4 h-4"><span></span></i>
+            <span>WhatsApp Order</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-surface border border-slate-700 rounded-2xl max-w-md w-full p-6 sm:p-8 text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle-2" class="w-8 h-8"><span></span></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl text-white mb-2">Inquiry Sent Successfully!</h3>
+            <p id="modal-msg-text" class="text-text-muted text-sm mb-6 leading-relaxed">
+                Thank you! We have received your message and will get back to you shortly.
+            </p>
+            <button id="modal-close-btn" class="w-full py-3 px-4 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-primary-hover transition-colors min-h-[48px]">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Execution -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            // Set Current Year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuClose = document.getElementById('menu-close');
+            const mobileDrawer = document.getElementById('mobile-drawer');
+            const menuBackdrop = document.getElementById('menu-backdrop');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function openMobileMenu() {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeMobileMenu() {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            menuToggle.addEventListener('click', openMobileMenu);
+            menuClose.addEventListener('click', closeMobileMenu);
+            menuBackdrop.addEventListener('click', closeMobileMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Menu Filter Tabs
+            const menuTabs = document.querySelectorAll('.menu-tab');
+            const menuCards = document.querySelectorAll('.menu-card');
+
+            menuTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const category = tab.getAttribute('data-category');
+
+                    // Update active tab styles
+                    menuTabs.forEach(t => {
+                        t.classList.remove('bg-primary', 'text-white', 'font-semibold');
+                        t.classList.add('bg-surface', 'border', 'border-slate-700', 'text-text-muted', 'font-medium');
+                    });
+                    tab.classList.remove('bg-surface', 'border', 'border-slate-700', 'text-text-muted', 'font-medium');
+                    tab.classList.add('bg-primary', 'text-white', 'font-semibold');
+
+                    // Filter cards
+                    menuCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'all' || cardCategory === category) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // FAQ Accordions
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-btn');
+                const content = item.querySelector('.faq-content');
+                const chevron = item.querySelector('i[data-lucide="chevron-down"]');
+
+                btn.addEventListener('click', () => {
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                    // Close all others
+                    faqItems.forEach(other => {
+                        other.querySelector('.faq-content').style.maxHeight = '0px';
+                        const otherChevron = other.querySelector('i[data-lucide="chevron-down"]');
+                        if (otherChevron) otherChevron.style.transform = 'rotate(0deg)';
+                    });
+
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        if (chevron) chevron.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Inquiry Form Submission & Modal
+            const inquiryForm = document.getElementById('inquiry-form');
+            const successModal = document.getElementById('success-modal');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const modalMsgText = document.getElementById('modal-msg-text');
+
+            inquiryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const nameInput = document.getElementById('visitor-name').value.trim();
+                const phoneInput = document.getElementById('visitor-phone').value.trim();
+                const msgInput = document.getElementById('visitor-message').value.trim();
+
+                // Simple sanitization & validation check
+                if (!nameInput || !phoneInput || !msgInput) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                // Sanitize output for modal text
+                const safeName = nameInput.replace(/[<>]/g, '');
+                modalMsgText.textContent = `Thank you, ${safeName}! We have received your inquiry and will contact you at ${phoneInput} shortly.`;
+
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+
+                inquiryForm.reset();
+            });
+
+            function closeModal() {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            modalCloseBtn.addEventListener('click', closeModal);
+            successModal.addEventListener('click', (e) => {
+                if (e.target === successModal) closeModal();
+            });
+        });
+    </script>
+</body>
+</html>
