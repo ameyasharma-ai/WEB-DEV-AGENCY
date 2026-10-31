@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
+<html lang="en" class="overflow-x-hidden scroll-smooth">
 <head>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patna Dental Hospital | Exhibition Road Patna | Expert Dental Care</title>
-    <meta name="description" content="Patna Dental Hospital at Exhibition Road Chowk, Patna offers painless root canals, dental implants, orthodontics, and advanced dental care. 4.7★ Rated. Book consultation today!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Patna Dental Clinic | Best Dentist in Sipara, Patna</title>
+    <meta name="description" content="Patna Dental Clinic at Indrapuri Sipara, Patna offers painless root canal, teeth cleaning, cosmetic dentistry & orthodontics. 4.8★ rated by 60+ patients. Book appointment now!">
     
-    <!-- Security Headers / CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: http: data:; font-src 'self' https: data:;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- Security & CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,19 +18,20 @@
             theme: {
                 extend: {
                     colors: {
-                        medical: {
-                            bg: '#F8F9FA',
-                            surface: '#FFFFFF',
-                            primary: '#0077B6',
-                            secondary: '#90E0EF',
-                            dark: '#03045E',
-                            textPrimary: '#1E293B',
-                            textMuted: '#64748B'
-                        }
+                        primary: {
+                            DEFAULT: '#0284C7',
+                            hover: '#0369A1',
+                            light: '#E0F2FE'
+                        },
+                        secondary: '#0D9488',
+                        slateDark: '#0F172A',
+                        slateMuted: '#64748B',
+                        surface: '#FFFFFF',
+                        background: '#F8FAFC'
                     },
                     fontFamily: {
-                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        body: ['"Inter"', 'sans-serif']
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
@@ -48,8 +49,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8F9FA;
-            color: #1E293B;
+            background-color: #F8FAFC;
+            color: #0F172A;
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -58,178 +59,156 @@
 </head>
 <body class="overflow-x-hidden pb-28 md:pb-0">
 
-    <!-- ==========================================
-         1. ANNOUNCEMENT BAR & 100% OPAQUE STICKY HEADER
-         ================================---------- -->
-    <div class="bg-[#03045E] text-white text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-6">
-            <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#90E0EF]"></i> Exhibition Road Chowk, Patna, Bihar</span>
-            <span class="hidden md:inline text-[#90E0EF]">|</span>
-            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#90E0EF]"></i> Mon - Sat: 9:00 AM - 8:00 PM</span>
-            <span class="hidden lg:inline text-[#90E0EF]">|</span>
-            <a href="tel:+918102859369" class="hover:underline flex items-center gap-1 text-[#90E0EF] font-semibold"><i data-lucide="phone-call" class="w-3.5 h-3.5">+91 81028 59369</i></a>
-        </div>
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-slate-800">
+        <span class="inline-flex items-center gap-1.5">
+            <i data-lucide="clock" class="w-4 h-4 text-primary"></i> 
+            Open Today: 9:00 AM – 8:00 PM | Emergency Dental Care Available
+        </span>
     </div>
 
-    <!-- Sticky Header (100% Opaque White) -->
-    <header class="sticky top-0 z-40 bg-white border-b border-zinc-200 shadow-sm">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Sticky Solid Header -->
+    <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#0077B6] to-[#03045E] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                     <i data-lucide="activity" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <span class="text-xl sm:text-2xl font-extrabold font-heading text-[#1E293B] tracking-tight block leading-tight">Patna Dental</span>
-                    <span class="text-xs font-semibold text-[#0077B6] uppercase tracking-wider block">Hospital • Exhibition Rd</span>
+                    <span class="text-lg sm:text-xl font-extrabold font-heading text-slateDark tracking-tight block">Patna Dental Clinic</span>
+                    <span class="text-xs text-slateMuted font-medium block">Advanced Dental Care & Implant Center</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-[#1E293B]">
-                <a href="#services" class="hover:text-[#0077B6] transition-colors">Services</a>
-                <a href="#why-us" class="hover:text-[#0077B6] transition-colors">Why Choose Us</a>
-                <a href="#about" class="hover:text-[#0077B6] transition-colors">About Us</a>
-                <a href="#gallery" class="hover:text-[#0077B6] transition-colors">Gallery</a>
-                <a href="#reviews" class="hover:text-[#0077B6] transition-colors">Reviews</a>
-                <a href="#faq" class="hover:text-[#0077B6] transition-colors">FAQ</a>
-                <a href="#contact" class="hover:text-[#0077B6] transition-colors">Contact</a>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
             </nav>
 
-            <!-- Desktop CTAs -->
-            <div class="hidden md:flex items-center gap-3">
-                <a href="https://wa.me/918102859369?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20consultation." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 border-[#0077B6] text-[#0077B6] font-semibold text-sm hover:bg-[#0077B6] hover:text-white transition-all">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            <!-- Desktop Actions -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="tel:+917280010733" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 text-slate-800 font-semibold hover:border-primary hover:text-primary transition-all text-sm">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"><span>+91 72800 10733</span></i>
                 </a>
-                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0077B6] text-white font-semibold text-sm shadow-md hover:bg-[#03045E] transition-all">
-                    <i data-lucide="calendar" class="w-4 h-4"></i> Book Visit
+                <a href="https://wa.me/917280010733" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-all shadow-sm text-sm">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
                 </a>
             </div>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl text-[#1E293B] hover:bg-zinc-100 focus:outline-none">
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors">
                 <i data-lucide="menu" class="w-7 h-7"></i>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Drawer Backdrop -->
-    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
-
-    <!-- Mobile Navigation Drawer (100% Solid White) -->
-    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-white border-l border-zinc-200 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-white border-l border-slate-200 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
         <div>
-            <div class="flex items-center justify-between pb-6 border-b border-zinc-100">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-[#0077B6] text-white flex items-center justify-center">
+            <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                         <i data-lucide="activity" class="w-5 h-5"></i>
                     </div>
-                    <span class="font-bold text-lg font-heading text-[#1E293B]">Patna Dental</span>
+                    <span class="font-bold text-slateDark font-heading text-lg">Patna Dental</span>
                 </div>
-                <button id="close-btn" aria-label="Close Menu" class="p-2 rounded-xl text-zinc-500 hover:bg-zinc-100">
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl text-slate-500 hover:bg-slate-100">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
-            <nav class="flex flex-col gap-4 mt-6 font-medium text-base text-[#1E293B]">
-                <a href="#services" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-50">Services <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i></a>
-                <a href="#why-us" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-50">Why Choose Us <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i></a>
-                <a href="#about" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-50">About Clinic <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i></a>
-                <a href="#gallery" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-50">Smile Gallery <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i></a>
-                <a href="#reviews" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-50">Reviews <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i></a>
-                <a href="#faq" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-50">FAQ <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i></a>
-                <a href="#contact" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-50">Location & Contact <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i></a>
+            <nav class="flex flex-col gap-4 mt-6 text-base font-semibold text-slate-700">
+                <a href="#services" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-slate-50">Services</a>
+                <a href="#why-us" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-slate-50">Why Us</a>
+                <a href="#about" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-slate-50">About</a>
+                <a href="#reviews" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-slate-50">Reviews</a>
+                <a href="#contact" class="mobile-nav-link hover:text-primary transition-colors py-2">Contact Us</a>
             </nav>
         </div>
-        <div class="pt-6 border-t border-zinc-100 flex flex-col gap-3">
-            <a href="https://wa.me/918102859369?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20consultation." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#25D366] text-white font-semibold shadow-md">
-                <i data-lucide="message-circle" class="w-5 h-5"></i> Chat on WhatsApp
+        <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+            <a href="tel:+917280010733" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl border border-slate-300 text-slate-800 font-semibold text-sm">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i> +91 72800 10733
             </a>
-            <a href="tel:+918102859369" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#0077B6] text-white font-semibold shadow-md">
-                <i data-lucide="phone-call" class="w-5 h-5"></i> Call +91 81028 59369
+            <a href="https://wa.me/917280010733" target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-emerald-600 text-white font-semibold text-sm">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp
             </a>
         </div>
     </div>
 
-
-    <!-- ==========================================
-         2. HERO SECTION
-         ================================---------- -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-[#F0F9FF] to-[#F8F9FA] pt-10 pb-16 lg:py-24">
-        <!-- Ambient Background Glow -->
-        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#90E0EF]/20 blur-[120px] rounded-full pointer-events-none"></div>
-
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Left Content -->
+                <!-- Left Text Content -->
                 <div class="lg:col-span-7 text-center lg:text-left">
-                    <!-- Trust Badge -->
-                    <div class="inline-flex items-center gap-2 bg-white border border-zinc-200 px-3.5 py-1.5 rounded-full shadow-sm mb-6">
-                        <div class="flex items-center text-amber-500">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                        <div class="flex items-center gap-0.5 text-amber-500">
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                         </div>
-                        <span class="text-xs sm:text-sm font-bold text-[#1E293B]">4.7 ★ <span class="text-[#64748B] font-normal">(52+ Google Reviews)</span></span>
+                        <span>4.8 ★ Rated (60+ Google Reviews)</span>
                     </div>
 
-                    <!-- Hero Heading -->
-                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: font-extrabold text-[#1E293B] leading-[1.15] mb-6 break-words">
-                        Advanced, Painless Dental Care in <span class="text-[#0077B6]">Exhibition Road, Patna</span>
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: lg: font-extrabold font-heading text-slateDark tracking-tight leading-[1.15] mb-6 break-words">
+                        Painless Dental Care & <span class="text-primary">Advanced Dentistry</span> in Patna
                     </h1>
 
-                    <!-- Hero Subheadline -->
-                    <p class="text-base sm:text-lg text-[#64748B] leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 break-words">
-                        Restore your confident smile with state-of-the-art dental treatments, expert orthodontists, pain-free root canals, and stringent sterilization protocols at Patna Dental Hospital.
+                    <p class="text-base sm:text-lg text-slateMuted font-normal leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Experience world-class dental treatments with advanced painless technology at Punpun Road, Indrapuri Sipara. Your smile deserves the best expert care.
                     </p>
 
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#0077B6] hover:bg-[#03045E] text-white font-semibold text-base shadow-xl shadow-[#0077B6]/20 transition-all transform hover:-translate-y-0.5">
-                            <i data-lucide="calendar" class="w-5 h-5"></i> Book Consultation
+                        <a href="#contact" class="w-full sm:w-auto h-14 px-8 rounded-2xl bg-primary text-white font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="calendar" class="w-5 h-5"></i> Book Appointment
                         </a>
-                        <a href="https://wa.me/918102859369?text=Hello%2C%20I%20would%20like%20to%20consult%20regarding%20dental%20treatment." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-zinc-50 border-2 border-zinc-200 text-[#1E293B] font-semibold text-base shadow-sm transition-all">
-                            <i data-lucide="message-circle" class="w-5 h-5 text-[#25D366]"></i> WhatsApp Us
+                        <a href="https://wa.me/917280010733" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto h-14 px-8 rounded-2xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i> Chat on WhatsApp
                         </a>
                     </div>
 
-                    <!-- Highlights row -->
-                    <div class="grid grid-cols-3 gap-4 pt-10 mt-10 border-t border-zinc-200/80 text-left">
+                    <!-- Quick Highlights -->
+                    <div class="mt-12 pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
                         <div>
-                            <p class="text-xl sm:text-2xl font-bold text-[#1E293B]">10+ Yrs</p>
-                            <p class="text-xs sm:text-sm text-[#64748B]">Clinical Excellence</p>
+                            <span class="block text-2xl font-extrabold font-heading text-slateDark">100%</span>
+                            <span class="text-xs text-slateMuted font-medium">Sterile Equipment</span>
                         </div>
                         <div>
-                            <p class="text-xl sm:text-2xl font-bold text-[#1E293B]">100%</p>
-                            <p class="text-xs sm:text-sm text-[#64748B]">Sterilized Setup</p>
+                            <span class="block text-2xl font-extrabold font-heading text-slateDark">Expert</span>
+                            <span class="text-xs text-slateMuted font-medium">Dental Surgeons</span>
                         </div>
                         <div>
-                            <p class="text-xl sm:text-2xl font-bold text-[#1E293B]">Painless</p>
-                            <p class="text-xs sm:text-sm text-[#64748B]">Modern Techniques</p>
+                            <span class="block text-2xl font-extrabold font-heading text-slateDark">Affordable</span>
+                            <span class="text-xs text-slateMuted font-medium">Transparent Pricing</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Visual Card -->
                 <div class="lg:col-span-5 relative">
-                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-zinc-200">
-                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Dental Clinic Interior Patna Dental Hospital" class="object-cover w-full h-full">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                            <p class="font-bold text-lg">World-Class Equipment</p>
-                            <p class="text-xs text-zinc-200">Equipped with advanced digital X-ray & pain-free dental chair units.</p>
-                        </div>
-                    </div>
-
-                    <!-- Floating Badge -->
-                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-zinc-100 hidden sm:flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
-                            <i data-lucide="shield-check" class="w-7 h-7"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold text-[#1E293B]">Safe & Hygienic</p>
-                            <p class="text-xs text-[#64748B]">Hospital Grade Autoclave Sterilization</p>
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Patna Dental Clinic Modern Interior" class="w-full h-full object-cover">
+                        <!-- Floating Trust Card -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="shield-check" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slateDark text-sm">Advanced Sterile Clinic</h4>
+                                <p class="text-xs text-slateMuted">ISO Standard Sterilization Protocols</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -238,139 +217,141 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         3. TRUST & SOCIAL PROOF BAR
-         ================================---------- -->
-    <section class="bg-[#03045E] text-white py-12">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
-                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                        <span class="text-2xl font-bold text-white">4.7 / 5</span>
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-white border-y border-slate-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="flex items-center justify-center gap-1 text-amber-500 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                        <span class="font-extrabold text-xl text-slateDark">4.8 / 5.0</span>
                     </div>
-                    <p class="text-xs sm:text-sm text-[#90E0EF]">Google Rating across 52+ Patient Reviews</p>
+                    <p class="text-xs text-slateMuted font-medium">Google Rating (60+ Reviews)</p>
                 </div>
-                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <div class="flex items-center justify-center gap-2 text-white mb-2">
-                        <i data-lucide="users" class="w-6 h-6 text-[#90E0EF]"></i>
-                        <span class="text-2xl font-bold">5,000+</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-[#90E0EF]">Happy Smiles Restored in Patna</p>
+                <div class="p-4 border-l border-slate-100">
+                    <span class="block font-extrabold text-xl text-slateDark mb-1">Painless</span>
+                    <p class="text-xs text-slateMuted font-medium">Advanced Root Canal Therapy</p>
                 </div>
-                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <div class="flex items-center justify-center gap-2 text-white mb-2">
-                        <i data-lucide="award" class="w-6 h-6 text-[#90E0EF]"></i>
-                        <span class="text-2xl font-bold">10+ Years</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-[#90E0EF]">Dedicated Dental Expertise</p>
+                <div class="p-4 border-l border-slate-100">
+                    <span class="block font-extrabold text-xl text-slateDark mb-1">Advanced</span>
+                    <p class="text-xs text-slateMuted font-medium">Teeth Cleaning & Whitening</p>
                 </div>
-                <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <div class="flex items-center justify-center gap-2 text-white mb-2">
-                        <i data-lucide="heart-pulse" class="w-6 h-6 text-[#90E0EF]"></i>
-                        <span class="text-2xl font-bold">Painless</span>
-                    </div>
-                    <p class="text-xs sm:text-sm text-[#90E0EF]">Advanced Anesthesia Protocols</p>
+                <div class="p-4 border-l border-slate-100">
+                    <span class="block font-extrabold text-xl text-slateDark mb-1">Indrapuri</span>
+                    <p class="text-xs text-slateMuted font-medium">Sipara, Patna Location</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-         4. CORE DENTAL SERVICES GRID
-         ================================---------- -->
-    <section id="services" class="py-20 bg-[#F8F9FA]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-full">Comprehensive Treatments</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mt-4 mb-4 break-words">Advanced Dental Services in Patna</h2>
-                <p class="text-sm sm:text-base text-[#64748B]">From routine dental checkups to complex smile makeovers, our experienced specialists utilize state-of-the-art technology for precise results.</p>
+    <!-- Services Grid Section -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">Our Dental Services</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-slateDark mt-4 mb-4">
+                    Comprehensive Dental Treatments for Your Whole Family
+                </h2>
+                <p class="text-slateMuted text-base">
+                    From routine check-ups to advanced smile makeovers, our expert dental team provides gentle, high-precision care.
+                </p>
             </div>
 
-            <!-- Services Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Service 1 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="w-14 h-14 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center mb-6 group-hover:bg-[#0077B6] group-hover:text-white transition-colors">
-                            <i data-lucide="shield-alert" class="w-7 h-7"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i data-lucide="activity" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1E293B] mb-3">Root Canal Treatment (RCT)</h3>
-                        <p class="text-[#64748B] text-sm leading-relaxed mb-6">Painless single sitting or multi-sitting root canal treatment using apex locators and modern rotary instruments.</p>
+                        <h3 class="text-xl font-bold font-heading text-slateDark mb-3">Root Canal Treatment</h3>
+                        <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                            Painless single or multi-visit root canal therapy using modern rotary endodontics to save your natural teeth.
+                        </p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#0077B6] group-hover:text-[#03045E]">
-                        Book Treatment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-primary-hover">
+                        Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="w-14 h-14 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center mb-6 group-hover:bg-[#0077B6] group-hover:text-white transition-colors">
-                            <i data-lucide="smile" class="w-7 h-7"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1E293B] mb-3">Dental Implants</h3>
-                        <p class="text-[#64748B] text-sm leading-relaxed mb-6">Permanent, natural-looking tooth replacement solutions to restore full chewing function and aesthetic confidence.</p>
+                        <h3 class="text-xl font-bold font-heading text-slateDark mb-3">Teeth Cleaning & Scaling</h3>
+                        <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                            Ultrasonic scaling and polishing to remove stubborn plaque, tartar, and stains for healthier gums and bright teeth.
+                        </p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#0077B6] group-hover:text-[#03045E]">
-                        Book Treatment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-secondary font-bold text-sm hover:underline">
+                        Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="w-14 h-14 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center mb-6 group-hover:bg-[#0077B6] group-hover:text-white transition-colors">
-                            <i data-lucide="align-left" class="w-7 h-7"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i data-lucide="shield" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1E293B] mb-3">Braces & Aligners</h3>
-                        <p class="text-[#64748B] text-sm leading-relaxed mb-6">Straighten misaligned teeth effectively with traditional metal braces, ceramic braces, or clear aligner solutions.</p>
+                        <h3 class="text-xl font-bold font-heading text-slateDark mb-3">Tooth Extractions & Surgery</h3>
+                        <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                            Safe, painless tooth removal, including impacted wisdom teeth extractions performed with utmost care and sterile instruments.
+                        </p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#0077B6] group-hover:text-[#03045E]">
-                        Book Treatment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-primary-hover">
+                        Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <!-- Service 4 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="w-14 h-14 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center mb-6 group-hover:bg-[#0077B6] group-hover:text-white transition-colors">
-                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <i data-lucide="smile" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1E293B] mb-3">Teeth Whitening</h3>
-                        <p class="text-[#64748B] text-sm leading-relaxed mb-6">Advanced clinic-grade laser teeth whitening to remove stubborn stains and brighten your smile in a single session.</p>
+                        <h3 class="text-xl font-bold font-heading text-slateDark mb-3">Cosmetic Dentistry</h3>
+                        <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                            Transform your smile with tooth-colored fillings, crowns, bridges, veneers, and professional teeth whitening.
+                        </p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#0077B6] group-hover:text-[#03045E]">
-                        Book Treatment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-secondary font-bold text-sm hover:underline">
+                        Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <!-- Service 5 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="w-14 h-14 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center mb-6 group-hover:bg-[#0077B6] group-hover:text-white transition-colors">
-                            <i data-lucide="activity" class="w-7 h-7"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i data-lucide="cpu" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1E293B] mb-3">Crowns & Bridges</h3>
-                        <p class="text-[#64748B] text-sm leading-relaxed mb-6-6">High-durability Zirconia and porcelain crowns designed to protect damaged teeth and fill missing gaps seamlessly.</p>
+                        <h3 class="text-xl font-bold font-heading text-slateDark mb-3">Orthodontics (Braces)</h3>
+                        <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                            Straighten misaligned teeth and correct bite issues with traditional braces and modern orthodontic solutions.
+                        </p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#0077B6] group-hover:text-[#03045E]">
-                        Book Treatment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-primary-hover">
+                        Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <!-- Service 6 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="w-14 h-14 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center mb-6 group-hover:bg-[#0077B6] group-hover:text-white transition-colors">
-                            <i data-lucide="heart" class="w-7 h-7"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i data-lucide="heart-pulse" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1E293B] mb-3">Pediatric Dentistry</h3>
-                        <p class="text-[#64748B] text-sm leading-relaxed mb-6">Gentle, child-friendly dental checkups, cavity fillings, and preventive fluoride treatments for kids in Patna.</p>
+                        <h3 class="text-xl font-bold font-heading text-slateDark mb-3">Emergency Dental Care</h3>
+                        <p class="text-slateMuted text-sm leading-relaxed mb-6">
+                            Immediate relief for severe toothache, broken teeth, gum swelling, and dental trauma with prompt professional attention.
+                        </p>
                     </div>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#0077B6] group-hover:text-[#03045E]">
-                        Book Treatment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="tel:+917280010733" class="inline-flex items-center gap-2 text-emerald-600 font-bold text-sm hover:underline">
+                        Call Emergency <i data-lucide="phone-call" class="w-4 h-4"></i>
                     </a>
                 </div>
 
@@ -378,176 +359,144 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         5. WHY CHOOSE US SECTION
-         ================================---------- -->
+    <!-- Why Choose Us Section -->
     <section id="why-us" class="py-20 bg-white">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-full">The Patna Dental Advantage</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mt-4 mb-6 break-words">Why Patna Families Trust Us for Their Dental Health</h2>
-                    <p class="text-sm sm:text-base text-[#64748B] mb-8 leading-relaxed">
-                        We combine clinical precision with compassionate patient care. Every visit is designed to be stress-free, hygienic, and affordable.
+                    <span class="text-primary font-bold text-sm tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">Why Choose Patna Dental Clinic</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-slateDark mt-4 mb-6">
+                        Committed to Gentle, Patient-First Dental Excellence
+                    </h2>
+                    <p class="text-slateMuted text-base mb-8 leading-relaxed">
+                        We combine years of clinical expertise with advanced equipment to ensure your dental visit is comfortable, stress-free, and effective.
                     </p>
 
                     <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center shrink-0">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slateDark text-base mb-1">100% Painless Procedures</h3>
+                                <p class="text-slateMuted text-sm">Advanced local anesthesia techniques and gentle handling for completely stress-free treatments.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
                                 <i data-lucide="shield-check" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-[#1E293B] mb-1">Strict Sterilization Protocol</h3>
-                                <p class="text-sm text-[#64748B]">Multi-stage autoclave sterilization and disposable instruments for 100% infection control.</p>
+                                <h3 class="font-bold text-slateDark text-base mb-1">Strict Sterilization Protocol</h3>
+                                <p class="text-slateMuted text-sm">Autoclaved instruments and hospital-grade disinfection for absolute patient safety and hygiene.</p>
                             </div>
                         </div>
 
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center shrink-0">
-                                <i data-lucide="zap" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-[#1E293B] mb-1">Painless Treatment Technology</h3>
-                                <p class="text-sm text-[#64748B]">Advanced local anesthesia techniques ensuring virtually zero discomfort during procedures.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center shrink-0">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                                 <i data-lucide="user-check" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-[#1E293B] mb-1">Experienced Specialists</h3>
-                                <p class="text-sm text-[#64748B]">Dedicated dental surgeons and orthodontists with years of successful case histories.</p>
+                                <h3 class="font-bold text-slateDark text-base mb-1">Experienced & Caring Dentists</h3>
+                                <p class="text-slateMuted text-sm">Dedicated dental surgeons with extensive experience in restorative and cosmetic dentistry.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Right Image / Card Grid -->
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
-                        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-zinc-100">
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dental Patient Consultation" class="w-full h-full object-cover">
+                        <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dental consultation" class="w-full h-full object-cover">
                         </div>
-                        <div class="aspect-square rounded-2xl overflow-hidden shadow-lg bg-[#0077B6] text-white p-6 flex flex-col justify-between">
-                            <i data-lucide="award" class="w-8 h-8 text-[#90E0EF]"></i>
-                            <div>
-                                <p class="text-2xl font-bold">4.7 ★</p>
-                                <p class="text-xs text-[#90E0EF] mt-1">Top rated dental clinic on Exhibition Road Patna.</p>
-                            </div>
+                        <div class="bg-primary p-6 rounded-3xl text-white shadow-lg">
+                            <span class="block text-3xl font-extrabold font-heading mb-1">4.8 ★</span>
+                            <span class="text-sm text-primary-light font-medium">Trusted by 60+ Google Reviewers in Patna</span>
                         </div>
                     </div>
-                    <div class="space-y-4 pt-8">
-                        <div class="aspect-square rounded-2xl overflow-hidden shadow-lg bg-[#03045E] text-white p-6 flex flex-col justify-between">
-                            <i data-lucide="heart-handshake" class="w-8 h-8 text-[#90E0EF]"></i>
-                            <div>
-                                <p class="text-2xl font-bold">Transparent</p>
-                                <p class="text-xs text-[#90E0EF] mt-1">Honest pricing with no hidden charges.</p>
-                            </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="bg-slate-900 p-6 rounded-3xl text-white shadow-lg">
+                            <span class="block text-3xl font-extrabold font-heading mb-1">Safe</span>
+                            <span class="text-sm text-slate-300 font-medium">Child & Senior Friendly Care</span>
                         </div>
-                        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-zinc-100">
-                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce6395?auto=format&fit=crop&w=600&q=80" alt="Advanced Dental Treatment" class="w-full h-full object-cover">
+                        <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Dental equipment" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-         6. ABOUT / STORY SECTION
-         ================================---------- -->
-    <section id="about" class="py-20 bg-[#F8F9FA]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-zinc-200/80 shadow-sm">
-                <div class="grid lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-5">
-                        <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-zinc-100">
-                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Patna Dental Hospital Doctor team" class="w-full h-full object-cover">
-                        </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=80" alt="Patna Dental Clinic Exterior and Setup" class="w-full h-full object-cover">
                     </div>
-                    <div class="lg:col-span-7">
-                        <span class="text-xs font-bold uppercase tracking-wider text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-full">About Patna Dental Hospital</span>
-                        <h2 class="break-words text-2xl sm:text-3xl font-bold text-[#1E293B] mt-4 mb-6">Committed to Excellence in Dental Healthcare Since Years</h2>
-                        <p class="text-sm sm:text-base text-[#64748B] leading-relaxed mb-6">
-                            Located centrally at <strong>Exhibition Road Chowk, Patna</strong>, Patna Dental Hospital has grown to become a trusted landmark for comprehensive dental solutions. Our mission is simple: deliver elite-level dental treatments in an environment that is clean, comforting, and welcoming for every member of the family.
-                        </p>
-                        <p class="text-sm sm:text-base text-[#64748B] leading-relaxed mb-8">
-                            We believe that dental health is integral to overall well-being. From preventive advice to intricate surgical interventions, our dedicated dental professionals ensure you leave our clinic with a healthy, radiant smile.
-                        </p>
+                </div>
 
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-zinc-100">
-                            <div>
-                                <p class="text-2xl font-bold text-[#0077B6]">Central</p>
-                                <p class="text-xs text-[#64748B] mt-1">Exhibition Road Location</p>
+                <div class="lg:col-span-6">
+                    <span class="text-primary font-bold text-sm tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">About Our Clinic</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-slateDark mt-4 mb-6">
+                        Dedicated to Creating Healthy, Confident Smiles in Patna
+                    </h2>
+                    <p class="text-slateMuted text-base mb-6 leading-relaxed">
+                        Located conveniently at Punpun Road, above Aditi Vision, Indrapuri Sipara, Patna, <strong class="text-slateDark">Patna Dental Clinic</strong> is recognized as a premier destination for reliable dental healthcare.
+                    </p>
+                    <p class="text-slateMuted text-base mb-8 leading-relaxed">
+                        We believe that visiting the dentist should be a comfortable experience. Our clinic is equipped with modern dental chairs, advanced diagnostic tools, and strict adherence to sterilization norms to protect every patient.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center font-bold">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <p class="text-2xl font-bold text-[#0077B6]">Advanced</p>
-                                <p class="text-xs text-[#64748B] mt-1">Diagnostic Equipment</p>
+                                <span class="text-xs text-slateMuted block font-medium">Location</span>
+                                <span class="text-sm font-bold text-slateDark">Indrapuri Sipara, Patna</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <p class="text-2xl font-bold text-[#0077B6]">Patient First</p>
-                                <p class="text-xs text-[#64748B] mt-1">Compassionate Care</p>
+                                <span class="text-xs text-slateMuted block font-medium">Direct Line</span>
+                                <a href="tel:+917280010733" class="text-sm font-bold text-slateDark hover:text-primary">+91 72800 10733</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-         7. PATIENT SMILE GALLERY
-         ================================---------- -->
-    <section id="gallery" class="py-20 bg-white">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-full">Clinic & Smile Gallery</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mt-4 mb-4 break-words">Glimpse Inside Patna Dental Hospital</h2>
-                <p class="text-sm sm:text-base text-[#64748B]">State-of-the-art clinic infrastructure, modern sterilization units, and comforting ambiance.</p>
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">Patient Testimonials</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-slateDark mt-4 mb-4">
+                    What Our Patients Say About Us
+                </h2>
+                <p class="text-slateMuted text-base">
+                    Read authentic Google reviews from patients who experienced our gentle dental treatments.
+                </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
-                    <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80" alt="Dental Operatory Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Patient Consultation Patna Dental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
-                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Dental Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group">
-                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce6395?auto=format&fit=crop&w=600&q=80" alt="Dental Clinic Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-         8. CUSTOMER REVIEWS SECTION
-         ================================---------- -->
-    <section id="reviews" class="py-20 bg-[#F8F9FA]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-full">Patient Testimonials</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mt-4 mb-4 break-words">What Patients Say About Us</h2>
-                <div class="flex items-center justify-center gap-1 text-amber-500 mb-2">
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
-                    <span class="font-bold text-[#1E293B] ml-2 text-lg">4.7 / 5.0</span>
-                </div>
-                <p class="text-xs sm:text-sm text-[#64748B]">Based on verified Google Reviews from patients across Patna.</p>
-            </div>
-
-            <!-- Reviews Grid -->
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Review 1 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm flex flex-col justify-between">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-1 text-amber-500 mb-4">
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
@@ -556,21 +505,23 @@
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                         </div>
-                        <p class="text-[#1E293B] text-sm sm:text-base leading-relaxed mb-6">
-                            "Had a very smooth root canal treatment here. Dr. and staff are extremely polite and professional. Highly recommend Patna Dental Hospital on Exhibition Road."
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6 italic">
+                            "Best dental clinic in Sipara Patna! I had severe tooth pain and underwent a painless root canal treatment. The doctor is very polite and professional."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
-                        <div class="w-10 h-10 rounded-full bg-[#0077B6]/10 text-[#0077B6] font-bold flex items-center justify-center">R</div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center text-sm">
+                            R
+                        </div>
                         <div>
-                            <p class="font-bold text-sm text-[#1E293B]">Rajesh Kumar</p>
-                            <p class="text-xs text-[#64748B]">Google Review</p>
+                            <h4 class="font-bold text-slateDark text-sm">Rajesh Kumar</h4>
+                            <span class="text-xs text-slateMuted">Google Reviewer</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm flex flex-col justify-between">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-1 text-amber-500 mb-4">
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
@@ -579,21 +530,23 @@
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                         </div>
-                        <p class="text-[#1E293B] text-sm sm:text-base leading-relaxed mb-6">
-                            "Very clean clinic with modern equipment. I got my dental implant done here and the procedure was completely painless. Thank you for the wonderful care!"
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6 italic">
+                            "Very clean and well-maintained clinic at Indrapuri Sipara. Got teeth cleaning done and the results are amazing. Highly recommended for families."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
-                        <div class="w-10 h-10 rounded-full bg-[#0077B6]/10 text-[#0077B6] font-bold flex items-center justify-center">P</div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-bold flex items-center justify-center text-sm">
+                            P
+                        </div>
                         <div>
-                            <p class="font-bold text-sm text-[#1E293B]">Priya Sinha</p>
-                            <p class="text-xs text-[#64748B]">Google Review</p>
+                            <h4 class="font-bold text-slateDark text-sm">Pooja Kumari</h4>
+                            <span class="text-xs text-slateMuted">Google Reviewer</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="bg-white rounded-2xl p-8 border border-zinc-200/80 shadow-sm flex flex-col justify-between">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-1 text-amber-500 mb-4">
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
@@ -602,15 +555,17 @@
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                             <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
                         </div>
-                        <p class="text-[#1E293B] text-sm sm:text-base leading-relaxed mb-6">
-                            "Best dental clinic in Patna. Convenient location at Exhibition Road Chowk, polite staff, and very reasonable pricing. Will definitely visit for routine checks."
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6 italic">
+                            "Quick appointment booking and very affordable treatment charges. The staff is courteous and explain every procedure clearly before starting."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
-                        <div class="w-10 h-10 rounded-full bg-[#0077B6]/10 text-[#0077B6] font-bold flex items-center justify-center">A</div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center text-sm">
+                            A
+                        </div>
                         <div>
-                            <p class="font-bold text-sm text-[#1E293B]">Amitabh Verma</p>
-                            <p class="text-xs text-[#64748B]">Google Review</p>
+                            <h4 class="font-bold text-slateDark text-sm">Amitabh Sinha</h4>
+                            <span class="text-xs text-slateMuted">Google Reviewer</span>
                         </div>
                     </div>
                 </div>
@@ -619,61 +574,62 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         9. FAQ ACCORDION
-         ================================---------- -->
-    <section id="faq" class="py-20 bg-white">
-        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-full">Got Questions?</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mt-4 mb-4 break-words">Frequently Asked Questions</h2>
-                <p class="text-sm sm:text-base text-[#64748B]">Find clear answers about appointments, treatments, and dental care at Patna Dental Hospital.</p>
+    <!-- FAQ Accordion Section -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">Got Questions?</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-slateDark mt-4 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slateMuted text-base">
+                    Find clear answers regarding our dental treatments, appointments, and clinic visits.
+                </p>
             </div>
 
-            <!-- FAQ List -->
             <div class="space-y-4">
                 
                 <!-- FAQ Item 1 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-[#1E293B] text-base sm:text-lg focus:outline-none">
-                        <span>How can I book an appointment at Patna Dental Hospital?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#0077B6] transition-transform duration-300"></i>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slateDark flex items-center justify-between gap-4">
+                        <span>Is root canal treatment painful at Patna Dental Clinic?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-[#64748B] leading-relaxed">
-                        You can easily book an appointment by calling us directly at <a href="tel:+918102859369" class="text-[#0077B6] font-semibold">+91 81028 59369</a>, messaging us on WhatsApp, or by filling out the appointment booking form on this page.
+                    <div class="faq-content hidden px-6 pb-5 text-slateMuted text-sm leading-relaxed">
+                        No! With advanced local anesthesia and modern rotary endodontic equipment, root canal treatments are virtually painless. Our patients often remark how comfortable the procedure was.
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-[#1E293B] text-base sm:text-lg focus:outline-none">
-                        <span>Where is the clinic located?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#0077B6] transition-transform duration-300"></i>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slateDark flex items-center justify-between gap-4">
+                        <span>How can I book an appointment?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-[#64748B] leading-relaxed">
-                        Patna Dental Hospital is conveniently located at Exhibition Road Chowk, Patna, Bihar 800001, making it easily accessible from all parts of the city.
+                    <div class="faq-content hidden px-6 pb-5 text-slateMuted text-sm leading-relaxed">
+                        You can book an appointment easily by calling us directly at +91 72800 10733, chatting on WhatsApp, or filling out the appointment booking form on this website.
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-[#1E293B] text-base sm:text-lg focus:outline-none">
-                        <span>Are root canal treatments painful?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#0077B6] transition-transform duration-300"></i>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slateDark flex items-center justify-between gap-4">
+                        <span>Where is Patna Dental Clinic located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-[#64748B] leading-relaxed">
-                        No! With modern local anesthesia and rotary endodontics, root canal treatments at Patna Dental Hospital are virtually painless and completed with maximum patient comfort.
+                    <div class="faq-content hidden px-6 pb-5 text-slateMuted text-sm leading-relaxed">
+                        We are located at Punpun Road, above Aditi Vision, Indrapuri Sipara, Dasratha, Sipara, Patna, Bihar 800030. Easily accessible from all parts of Sipara and surrounding areas.
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left font-bold text-[#1E293B] text-base sm:text-lg focus:outline-none">
-                        <span>What are your clinic opening hours?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#0077B6] transition-transform duration-300"></i>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-slateDark flex items-center justify-between gap-4">
+                        <span>Are dental tools properly sterilized?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-5 pb-5 text-sm sm:text-base text-[#64748B] leading-relaxed">
-                        We are open Monday through Saturday from 9:00 AM to 8:00 PM. Emergency dental consultations are also accommodated.
+                    <div class="faq-content hidden px-6 pb-5 text-slateMuted text-sm leading-relaxed">
+                        Yes! We maintain strict hospital-grade sterilization standards. All instruments are autoclaved and packed sterile for every individual patient to ensure 100% safety.
                     </div>
                 </div>
 
@@ -681,305 +637,309 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         10. INTERACTIVE LOCATION & CONTACT SECTION
-         ================================---------- -->
-    <section id="contact" class="py-20 bg-[#F8F9FA]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-full">Get In Touch</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mt-4 mb-4 break-words">Visit Our Clinic or Book an Appointment</h2>
-                <p class="text-sm sm:text-base text-[#64748B]">Have a dental query or need to book a checkup? Reach out to us directly or drop your details below.</p>
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase bg-primary/10 px-3 py-1 rounded-full">Get In Touch</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-slateDark mt-4 mb-4">
+                    Visit Our Clinic or Book Online
+                </h2>
+                <p class="text-slateMuted text-base">
+                    We are ready to welcome you. Contact us or book your appointment today.
+                </p>
             </div>
 
-            <div class="grid lg:grid-cols-12 gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
-                <!-- Contact Form Card -->
-                <div class="lg:col-span-6 bg-white rounded-3xl p-8 sm:p-10 border border-zinc-200/80 shadow-sm">
-                    <h3 class="text-xl font-bold text-[#1E293B] mb-6">Book Your Consultation</h3>
-                    
-                    <form id="appointment-form" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-bold text-[#1E293B] uppercase mb-1.5">Full Name *</label>
-                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 text-[#1E293B] text-sm outline-none transition-all" placeholder="Enter your full name">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-[#1E293B] uppercase mb-1.5">Phone / WhatsApp Number *</label>
-                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 text-[#1E293B] text-sm outline-none transition-all" placeholder="+91 98765 43210">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-[#1E293B] uppercase mb-1.5">Select Service *</label>
-                            <select id="service" required class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 text-[#1E293B] text-sm outline-none transition-all bg-white">
-                                <option value="">Choose Dental Treatment</option>
-                                <option value="Root Canal Treatment">Root Canal Treatment (RCT)</option>
-                                <option value="Dental Implants">Dental Implants</option>
-                                <option value="Braces & Aligners">Braces & Aligners</option>
-                                <option value="Teeth Whitening">Teeth Whitening</option>
-                                <option value="Routine Checkup">Routine Checkup & Consultation</option>
-                                <option value="Other">Other Dental Service</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-[#1E293B] uppercase mb-1.5">Message / Preferred Time</label>
-                            <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-zinc-300 focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 text-[#1E293B] text-sm outline-none transition-all" placeholder="Mention any specific dental issue or preferred time..."></textarea>
-                        </div>
-
-                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-[#0077B6] hover:bg-[#03045E] text-white font-semibold text-base shadow-lg shadow-[#0077B6]/20 transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="send" class="w-5 h-5"></i> Confirm Appointment Request
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Info & Google Maps Card -->
-                <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
-                    <div class="bg-white rounded-3xl p-8 border border-zinc-200/80 shadow-sm space-y-6">
+                <!-- Left: Contact Details & Hours & Map -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-6">
+                        <h3 class="text-xl font-bold font-heading text-slateDark">Clinic Information</h3>
+                        
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center shrink-0">
+                            <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                                 <i data-lucide="map-pin" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-[#1E293B]">Clinic Location</h4>
-                                <p class="text-sm text-[#64748B] mt-1">Exhibition Road Chowk, Patna, Bihar 800001</p>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Patna+Dental+Hospital+Exhibition+Road+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0077B6] hover:underline mt-2">
-                                    Get Directions on Google Maps <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                                </a>
+                                <h4 class="font-bold text-slateDark text-sm mb-1">Address</h4>
+                                <p class="text-slateMuted text-sm">Punpun Road, above Aditi Vision, Indrapuri Sipara, Dasratha, Sipara, Patna, Bihar 800030</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center shrink-0">
-                                <i data-lucide="phone-call" class="w-6 h-6"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-600/10 text-emerald-600 flex items-center justify-center shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-[#1E293B]">Direct Phone & WhatsApp</h4>
-                                <p class="text-sm text-[#64748B] mt-1">+91 81028 59369</p>
-                                <div class="flex gap-3 mt-2">
-                                    <a href="tel:+918102859369" class="text-xs font-bold text-[#0077B6] hover:underline">Call Now</a>
-                                    <span class="text-zinc-300">|</span>
-                                    <a href="https://wa.me/918102859369" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-600 hover:underline">WhatsApp Chat</a>
-                                </div>
+                                <h4 class="font-bold text-slateDark text-sm mb-1">Phone / WhatsApp</h4>
+                                <a href="tel:+917280010733" class="text-slateMuted text-sm hover:text-primary font-semibold">+91 72800 10733</a>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#0077B6]/10 text-[#0077B6] flex items-center justify-center shrink-0">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
                                 <i data-lucide="clock" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-[#1E293B]">Clinic Hours</h4>
-                                <p class="text-sm text-[#64748B] mt-1">Monday – Saturday: 9:00 AM – 8:00 PM</p>
-                                <p class="text-xs text-amber-600 font-semibold mt-1">Sunday: By Appointment Only</p>
+                                <h4 class="font-bold text-slateDark text-sm mb-1">Opening Hours</h4>
+                                <p class="text-slateMuted text-sm">Monday – Sunday: 9:00 AM – 8:00 PM</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Google Maps Embed -->
-                    <div class="w-full h-64 rounded-3xl overflow-hidden shadow-sm border border-zinc-200/80">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.77123456789!2d85.1375!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sExhibition+Road+Patna!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            title="Patna Dental Hospital Map">
-                        </iframe>
+                    <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-sm h-[320px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.5!2d85.1!3d25.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUGF0bmEgRGVudGFsIENsaW5pYw!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Patna Dental Clinic Google Map"></iframe>
                     </div>
+                </div>
 
+                <!-- Right: Appointment Booking Form -->
+                <div class="lg:col-span-6">
+                    <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
+                        <h3 class="text-2xl font-bold font-heading text-slateDark mb-2">Book Your Appointment</h3>
+                        <p class="text-slateMuted text-sm mb-8">Fill out the form below and our team will confirm your slot instantly.</p>
+
+                        <form id="appointment-form" class="space-y-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Full Name</label>
+                                <input type="text" id="patient-name" required placeholder="Enter your full name" class="w-full h-12 px-4 rounded-xl border border-slate-300 bg-white text-slateDark focus:outline-none focus:border-primary text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Phone Number</label>
+                                <input type="tel" id="patient-phone" required placeholder="Enter 10-digit mobile number" class="w-full h-12 px-4 rounded-xl border border-slate-300 bg-white text-slateDark focus:outline-none focus:border-primary text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Select Service</label>
+                                <select id="patient-service" class="w-full h-12 px-4 rounded-xl border border-slate-300 bg-white text-slateDark focus:outline-none focus:border-primary text-sm">
+                                    <option value="Root Canal Treatment">Root Canal Treatment</option>
+                                    <option value="Teeth Cleaning & Scaling">Teeth Cleaning & Scaling</option>
+                                    <option value="Tooth Extraction">Tooth Extraction</option>
+                                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                    <option value="Orthodontics (Braces)">Orthodontics (Braces)</option>
+                                    <option value="General Consultation">General Consultation</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Date & Message</label>
+                                <textarea id="patient-message" rows="3" placeholder="Enter preferred date or any specific dental issue" class="w-full p-4 rounded-xl border border-slate-300 bg-white text-slateDark focus:outline-none focus:border-primary text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full h-14 bg-primary text-white font-bold rounded-xl hover:bg-primary-hover transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-2 text-base">
+                                <span id="btn-text">Confirm Appointment</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-
-    <!-- ==========================================
-         11. STICKY MOBILE ACTION BAR
-         ================================---------- -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#03045E] border-t border-zinc-800 p-3 shadow-2xl flex items-center gap-3">
-        <a href="tel:+918102859369" class="flex-1 flex items-center justify-center gap-2 bg-[#0077B6] text-white py-3 rounded-xl font-bold text-sm shadow-md">
-            <i data-lucide="phone-call" class="w-4 h-4"></i> Call Now
-        </a>
-        <a href="https://wa.me/918102859369?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm shadow-md">
-            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
-        </a>
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white max-w-md w-full p-8 rounded-3xl shadow-2xl text-center space-y-4">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-slateDark">Appointment Requested!</h3>
+            <p class="text-slateMuted text-sm" id="modal-desc">
+                Thank you! We have received your booking request. Our clinic team will call you shortly at <span id="confirmed-phone" class="font-bold text-slateDark"></span> to confirm your time slot.
+            </p>
+            <button id="modal-close-btn" class="w-full h-12 bg-primary text-white font-bold rounded-xl hover:bg-primary-hover transition-all">
+                Close & Return
+            </button>
+        </div>
     </div>
 
-
-    <!-- ==========================================
-         12. FOOTER
-         ================================---------- -->
-    <footer class="bg-[#03045E] text-white pt-16 pb-20 md:pb-12">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 
                 <!-- Col 1: Brand -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-[#0077B6] text-white flex items-center justify-center">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
                             <i data-lucide="activity" class="w-5 h-5"></i>
                         </div>
-                        <span class="text-xl font-extrabold font-heading">Patna Dental Hospital</span>
+                        <span class="text-lg font-extrabold font-heading text-white">Patna Dental Clinic</span>
                     </div>
-                    <p class="text-xs sm:text-sm text-[#90E0EF] leading-relaxed">
-                        Exhibition Road Chowk, Patna, Bihar 800001. Leading dental care clinic providing painless root canals, implants, and orthodontics.
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Advanced dental care & implant center providing painless root canal, cleaning, and cosmetic dentistry at Indrapuri Sipara, Patna.
                     </p>
-                    <div class="flex items-center gap-2 text-amber-400">
+                    <div class="flex items-center gap-2 text-amber-400 text-sm font-bold">
                         <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        <span class="text-xs font-bold text-white">4.7 ★ Rated on Google (52+ Reviews)</span>
+                        <span>4.8 ★ Rated on Google (60+ Reviews)</span>
                     </div>
                 </div>
 
                 <!-- Col 2: Quick Links -->
                 <div>
-                    <h4 class="text-base font-bold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2.5 text-sm text-[#90E0EF]">
-                        <li><a href="#services" class="hover:text-white transition-colors">Dental Services</a></li>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#services" class="hover:text-white transition-colors">Our Services</a></li>
                         <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
                         <li><a href="#about" class="hover:text-white transition-colors">About Clinic</a></li>
-                        <li><a href="#gallery" class="hover:text-white transition-colors">Smile Gallery</a></li>
                         <li><a href="#reviews" class="hover:text-white transition-colors">Patient Reviews</a></li>
-                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact & Map</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Book Appointment</a></li>
                     </ul>
                 </div>
 
                 <!-- Col 3: Services -->
                 <div>
-                    <h4 class="text-base font-bold text-white mb-4">Main Treatments</h4>
-                    <ul class="space-y-2.5 text-sm text-[#90E0EF]">
-                        <li><span class="hover:text-white">Root Canal Treatment (RCT)</span></li>
-                        <li><span class="hover:text-white">Dental Implants</span></li>
-                        <li><span class="hover:text-white">Braces & Aligners</span></li>
-                        <li><span class="hover:text-white">Teeth Whitening</span></li>
-                        <li><span class="hover:text-white">Crowns & Bridges</span></li>
-                        <li><span class="hover:text-white">Pediatric Dentistry</span></li>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Dental Services</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><span class="hover:text-white">Root Canal Treatment</span></li>
+                        <li><span class="hover:text-white">Teeth Cleaning & Scaling</span></li>
+                        <li><span class="hover:text-white">Tooth Extractions</span></li>
+                        <li><span class="hover:text-white">Cosmetic Dentistry</span></li>
+                        <li><span class="hover:text-white">Orthodontics (Braces)</span></li>
                     </ul>
                 </div>
 
-                <!-- Col 4: Contact info -->
-                <div class="space-y-4">
-                    <h4 class="text-base font-bold text-white mb-4">Contact Info</h4>
-                    <p class="text-xs sm:text-sm text-[#90E0EF] flex items-start gap-2">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-[#0077B6] shrink-0 mt-0.5"></i>
-                        Exhibition Road Chowk, Patna, Bihar 800001
-                    </p>
-                    <p class="text-xs sm:text-sm text-[#90E0EF] flex items-center gap-2">
-                        <i data-lucide="phone-call" class="w-4 h-4 text-[#0077B6] shrink-0"></i>
-                        +91 81028 59369
-                    </p>
-                    <p class="text-xs sm:text-sm text-[#90E0EF] flex items-center gap-2">
-                        <i data-lucide="clock" class="w-4 h-4 text-[#0077B6] shrink-0"></i>
-                        Mon - Sat: 9:00 AM - 8:00 PM
-                    </p>
+                <!-- Col 4: Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                            <span>Punpun Road, above Aditi Vision, Indrapuri Sipara, Patna 800030</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="tel:+917280010733" class="hover:text-white">+91 72800 10733</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span>9:00 AM – 8:00 PM (All Days)</span>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
 
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#90E0EF] gap-4">
-                <p>&copy; <span id="current-year"></span> Patna Dental Hospital. All rights reserved.</p>
-                <p class="flex items-center gap-1">Exhibition Road Chowk, Patna, Bihar 800001</p>
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                <p>&copy; <span id="current-year"></span> Patna Dental Clinic. All rights reserved. Designed for optimal patient care.</p>
             </div>
         </div>
     </footer>
 
-    <!-- ==========================================
-         SUCCESS MODAL POPUP
-         ================================---------- -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
-            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                <i data-lucide="check-circle" class="w-10 h-10"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-[#1E293B]">Appointment Requested!</h3>
-            <p id="success-message" class="text-sm text-[#64748B] leading-relaxed">
-                Thank you. We have received your consultation request. Our clinic receptionist will call you shortly at <span id="modal-phone" class="font-bold text-[#1E293B]"></span> to confirm your slot.
-            </p>
-            <button id="close-modal" class="w-full py-3.5 bg-[#0077B6] text-white font-semibold rounded-xl hover:bg-[#03045E] transition-all">
-                Got It
-            </button>
-        </div>
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+917280010733" class="flex-1 h-12 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 text-sm shadow-md">
+            <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+        </a>
+        <a href="https://wa.me/917280010733" target="_blank" rel="noopener noreferrer" class="flex-1 h-12 bg-emerald-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 text-sm shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        </a>
     </div>
 
-    <!-- ==========================================
-         JAVASCRIPT INTERACTIVITY
-         ================================---------- -->
+    <!-- JavaScript Interactions -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Set current year in footer
+        // Current Year for Footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
         const mobileDrawer = document.getElementById('mobile-drawer');
         const menuBackdrop = document.getElementById('menu-backdrop');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-        function openMenu() {
-            mobileDrawer.classList.remove('translate-x-full');
-            menuBackdrop.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
+        function toggleMobileMenu() {
+            const isOpen = !mobileDrawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
         }
 
-        function closeMenu() {
-            mobileDrawer.classList.add('translate-x-full');
-            menuBackdrop.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        menuBtn.addEventListener('click', openMenu);
-        closeBtn.addEventListener('click', closeMenu);
-        menuBackdrop.addEventListener('click', closeMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+        menuToggle.addEventListener('click', toggleMobileMenu);
+        menuClose.addEventListener('click', toggleMobileMenu);
+        menuBackdrop.addEventListener('click', toggleMobileMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', toggleMobileMenu));
 
         // FAQ Accordion
-        const faqToggles = document.querySelectorAll('.faq-toggle');
-        faqToggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                const content = toggle.nextElementSibling;
-                const icon = toggle.querySelector('i');
-                
-                // Toggle current
-                content.classList.toggle('hidden');
-                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const isOpen = !content.classList.contains('hidden');
+
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
             });
         });
 
-        // Contact / Appointment Form Submission with Validation & Modal
+        // Appointment Booking Form Submission & Success Modal
         const appointmentForm = document.getElementById('appointment-form');
         const successModal = document.getElementById('success-modal');
-        const closeModal = document.getElementById('close-modal');
-        const modalPhone = document.getElementById('modal-phone');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const confirmedPhone = document.getElementById('confirmed-phone');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
 
         appointmentForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            
+            const name = document.getElementById('patient-name').value.trim();
+            const phone = document.getElementById('patient-phone').value.trim();
+            const service = document.getElementById('patient-service').value;
 
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const service = document.getElementById('service').value;
-
-            if(!name || !phone || !service) {
-                alert('Please fill in all required fields.');
+            if (!name || !phone) {
+                alert('Please fill in your name and phone number.');
                 return;
             }
 
-            // Sanitize and display in modal
-            modalPhone.textContent = phone;
-            successModal.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
-            
-            appointmentForm.reset();
+            // Simulate loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Processing...';
+
+            setTimeout(() => {
+                confirmedPhone.textContent = phone;
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+
+                // Reset form & button
+                appointmentForm.reset();
+                submitBtn.disabled = false;
+                btnText.textContent = 'Confirm Appointment';
+            }, 800);
         });
 
-        closeModal.addEventListener('click', () => {
+        modalCloseBtn.addEventListener('click', () => {
             successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
             document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
         });
     </script>
 </body>
