@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Figtree Cafe | Patna's Finest Rooftop Cafe & Coffee Shop</title>
+    <meta name="description" content="Experience Patna's finest rooftop cafe at 5th Floor, Maharaja Kameshwar Complex, Fraser Road. Enjoy artisanal coffee, delicious continental bites, and stunning views of Buddha Smriti Park. Reserve your table or order via WhatsApp!">
+    
+    <!-- Security Headers / CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafe: {
+                            bg: '#FAF8F5',
+                            surface: '#FFFFFF',
+                            primary: '#3D2314',
+                            secondary: '#C86D51',
+                            hover: '#A6553B',
+                            text: '#221C18',
+                            muted: '#7A7067',
+                            border: '#E7E2DC'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F5;
+            color: #221C18;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-cafe-bg text-cafe-text antialiased pb-28 md:pb-0">
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% OPAQUE STICKY HEADER -->
+    <div class="bg-cafe-primary text-white text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50">
+        <span>✨ Rooftop dining open daily! Overlooking Buddha Smriti Park. Call <a href="tel:+918102915553" class="underline hover:text-cafe-secondary transition-colors">+91 81029 15553</a></span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-[#FAF8F5] border-b border-cafe-border shadow-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cafe-primary rounded-lg p-1">
+                <div class="w-10 h-10 rounded-full bg-cafe-primary flex items-center justify-center text-white shadow-md group-hover:bg-cafe-secondary transition-colors">
+                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-extrabold font-serif tracking-tight text-cafe-primary block">Figtree Cafe</span>
+                    <span class="text-[10px] sm:text-xs text-cafe-muted uppercase tracking-widest block font-medium">Rooftop & Coffee</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-cafe-text">
+                <a href="#about" class="hover:text-cafe-secondary transition-colors">Our Story</a>
+                <a href="#menu" class="hover:text-cafe-secondary transition-colors">Menu</a>
+                <a href="#why-us" class="hover:text-cafe-secondary transition-colors">Why Us</a>
+                <a href="#gallery" class="hover:text-cafe-secondary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-cafe-secondary transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-cafe-secondary transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop CTAs -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20inquire%20about..." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-cafe-primary text-cafe-primary hover:bg-cafe-primary hover:text-white transition-all text-sm font-semibold">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    WhatsApp
+                </a>
+                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cafe-primary text-white hover:bg-cafe-secondary transition-all text-sm font-semibold shadow-md">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Reserve Table
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle navigation menu" class="lg:hidden p-2.5 rounded-lg text-cafe-primary hover:bg-stone-200 transition-colors focus:outline-none focus:ring-2 focus:ring-cafe-primary">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Slide-in Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#FAF8F5] border-l border-cafe-border rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-cafe-border">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-cafe-primary flex items-center justify-center text-white">
+                        <i data-lucide="coffee" class="w-4 h-4"></i>
+                    </div>
+                    <span class="text-lg font-bold font-serif text-cafe-primary">Figtree Cafe</span>
+                </div>
+                <button id="menu-close" aria-label="Close menu" class="p-2 text-cafe-muted hover:text-cafe-primary rounded-lg focus:outline-none">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-cafe-text">
+                <a href="#about" class="mobile-nav-link hover:text-cafe-secondary py-2 border-b border-stone-100 flex items-center justify-between">Our Story <i data-lucide="chevron-right" class="w-4 h-4 text-cafe-muted"></i></a>
+                <a href="#menu" class="mobile-nav-link hover:text-cafe-secondary py-2 border-b border-stone-100 flex items-center justify-between">Menu Categories <i data-lucide="chevron-right" class="w-4 h-4 text-cafe-muted"></i></a>
+                <a href="#why-us" class="mobile-nav-link hover:text-cafe-secondary py-2 border-b border-stone-100 flex items-center justify-between">Why Choose Us <i data-lucide="chevron-right" class="w-4 h-4 text-cafe-muted"></i></a>
+                <a href="#gallery" class="mobile-nav-link hover:text-cafe-secondary py-2 border-b border-stone-100 flex items-center justify-between">Gallery <i data-lucide="chevron-right" class="w-4 h-4 text-cafe-muted"></i></a>
+                <a href="#reviews" class="mobile-nav-link hover:text-cafe-secondary py-2 border-b border-stone-100 flex items-center justify-between">Customer Reviews <i data-lucide="chevron-right" class="w-4 h-4 text-cafe-muted"></i></a>
+                <a href="#contact" class="mobile-nav-link hover:text-cafe-secondary py-2 border-b border-stone-100 flex items-center justify-between">Location & Hours <i data-lucide="chevron-right" class="w-4 h-4 text-cafe-muted"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-cafe-border flex flex-col gap-3 mt-8">
+            <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20inquire%20about..." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-cafe-primary text-cafe-primary hover:bg-cafe-primary hover:text-white font-semibold text-sm transition-all">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Chat
+            </a>
+            <a href="#contact" class="mobile-nav-link w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-cafe-primary text-white hover:bg-cafe-secondary font-semibold text-sm transition-all shadow">
+                <i data-lucide="calendar" class="w-4 h-4"></i> Reserve a Table
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="w-full overflow-x-hidden">
+
+        <!-- 2. HERO SECTION -->
+        <section class="relative pt-8 pb-16 md:py-24 bg-gradient-to-b from-[#FAF8F5] to-[#F3EEE6]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Column: Copy & CTAs -->
+                    <div class="lg:col-span-7 text-left">
+                        <!-- Rating Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-cafe-border shadow-sm mb-6">
+                            <div class="flex items-center text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <span class="ml-1 text-sm font-bold text-cafe-text">3.9</span>
+                            </div>
+                            <span class="text-xs text-cafe-muted border-l border-stone-300 pl-2">95+ Google Reviews</span>
+                        </div>
+
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-[#3D2314] leading-[1.15] mb-6 break-words">
+                            Patna's Finest Rooftop Cafe with a View
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-cafe-muted mb-8 max-w-2xl leading-relaxed">
+                            Perched on the 5th floor of Maharaja Kameshwar Complex opposite Buddha Smriti Park. Experience handcrafted artisanal coffee, delicious continental bites, and serene rooftop evenings in Fraser Road.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-cafe-primary text-white font-semibold hover:bg-cafe-secondary transition-all shadow-lg text-base">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Reserve a Table
+                            </a>
+                            <a href="#menu" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white border border-cafe-border text-cafe-primary font-semibold hover:bg-stone-50 transition-all shadow-sm text-base">
+                                <i data-lucide="utensils" class="w-5 h-5"></i>
+                                Explore Menu
+                            </a>
+                        </div>
+
+                        <!-- Quick Highlights below CTA -->
+                        <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-cafe-border">
+                            <div>
+                                <span class="block text-xl sm:text-2xl font-bold font-serif text-cafe-primary">5th Floor</span>
+                                <span class="text-xs text-cafe-muted">Rooftop Overlook</span>
+                            </div>
+                            <div>
+                                <span class="block text-xl sm:text-2xl font-bold font-serif text-cafe-primary">Fraser Rd</span>
+                                <span class="text-xs text-cafe-muted">Prime Location</span>
+                            </div>
+                            <div>
+                                <span class="block text-xl sm:text-2xl font-bold font-serif text-cafe-primary">Cozy</span>
+                                <span class="text-xs text-cafe-muted">Scenic Ambiance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Imagery Showcase Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-stone-200">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80" alt="Figtree Cafe Rooftop Ambiance Patna" class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold mb-1">Rooftop Experience</span>
+                                <h3 class="text-lg font-serif font-bold">Overlooking Buddha Smriti Park</h3>
+                                <p class="text-xs text-stone-200">Maharaja Kameshwar Complex, Fraser Road</p>
+                            </div>
+                        </div>
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-cafe-border hidden sm:flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-cafe-secondary/10 flex items-center justify-center text-cafe-secondary">
+                                <i data-lucide="coffee" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-cafe-muted">Specialty Coffee</span>
+                                <span class="text-sm font-bold text-cafe-primary">Freshly Brewed Daily</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TRUST & SOCIAL PROOF BAR -->
+        <section class="bg-cafe-primary text-white py-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 border-r border-white/10 last:border-none">
+                        <div class="flex items-center justify-center gap-1 text-amber-400 mb-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <span class="text-xl sm:text-2xl font-bold">3.9 / 5.0</span>
+                        </div>
+                        <p class="text-xs text-stone-300">Based on 95 Google Reviews</p>
+                    </div>
+                    <div class="p-4 border-r border-white/10 last:border-none">
+                        <div class="flex items-center justify-center gap-1 text-cafe-secondary mb-1">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            <span class="text-xl sm:text-2xl font-bold">Fraser Road</span>
+                        </div>
+                        <p class="text-xs text-stone-300">Opp. Buddha Smriti Park</p>
+                    </div>
+                    <div class="p-4 border-r border-white/10 last:border-none">
+                        <div class="flex items-center justify-center gap-1 text-cafe-secondary mb-1">
+                            <i data-lucide="building-2" class="w-5 h-5"></i>
+                            <span class="text-xl sm:text-2xl font-bold">5th Floor</span>
+                        </div>
+                        <p class="text-xs text-stone-300">Maharaja Kameshwar Complex</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center justify-center gap-1 text-cafe-secondary mb-1">
+                            <i data-lucide="heart" class="w-5 h-5"></i>
+                            <span class="text-xl sm:text-2xl font-bold">Cozy Vibes</span>
+                        </div>
+                        <p class="text-xs text-stone-300">Perfect for Dates & Friends</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SERVICES / MENU CATEGORIES GRID -->
+        <section id="menu" class="py-20 bg-cafe-bg">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold block mb-2">Our Offerings</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] break-words mb-4">
+                        Curated Menu Categories
+                    </h2>
+                    <p class="text-base text-cafe-muted">
+                        From rich artisanal coffees to mouth-watering continental snacks and delectable desserts crafted to perfection.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Menu Card 1: Beverages -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-cafe-border flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-cafe-primary/10 text-cafe-primary flex items-center justify-center mb-6 group-hover:bg-cafe-primary group-hover:text-white transition-colors">
+                                <i data-lucide="coffee" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-cafe-primary mb-3">Artisanal Coffee & Teas</h3>
+                            <p class="text-sm text-cafe-muted leading-relaxed mb-6">
+                                Rich espressos, creamy cappuccinos, cold brews, and soothing herbal teas prepared by expert baristas.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Beverages%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-cafe-secondary hover:text-cafe-primary transition-colors pt-4 border-t border-stone-100">
+                            Inquire on WhatsApp <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Menu Card 2: Continental Bites -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-cafe-border flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-cafe-primary/10 text-cafe-primary flex items-center justify-center mb-6 group-hover:bg-cafe-primary group-hover:text-white transition-colors">
+                                <i data-lucide="utensils" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-cafe-primary mb-3">Continental Bites</h3>
+                            <p class="text-sm text-cafe-muted leading-relaxed mb-6">
+                                Wood-fired style pizzas, creamy pastas, crispy fries, sizzling burgers, and wholesome sandwiches.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Continental%20Bites." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-cafe-secondary hover:text-cafe-primary transition-colors pt-4 border-t border-stone-100">
+                            Inquire on WhatsApp <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Menu Card 3: Desserts -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-cafe-border flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-cafe-primary/10 text-cafe-primary flex items-center justify-center mb-6 group-hover:bg-cafe-primary group-hover:text-white transition-colors">
+                                <i data-lucide="cake" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-cafe-primary mb-3">Sweets & Desserts</h3>
+                            <p class="text-sm text-cafe-muted leading-relaxed mb-6">
+                                Decadent chocolate brownies, cheesecakes, freshly baked waffles, and pastries to satisfy your sweet tooth.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Desserts." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-cafe-secondary hover:text-cafe-primary transition-colors pt-4 border-t border-stone-100">
+                            Inquire on WhatsApp <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Menu Card 4: Chef Specials -->
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-cafe-border flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-cafe-primary/10 text-cafe-primary flex items-center justify-center mb-6 group-hover:bg-cafe-primary group-hover:text-white transition-colors">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-cafe-primary mb-3">Chef Specials</h3>
+                            <p class="text-sm text-cafe-muted leading-relaxed mb-6">
+                                Signature mocktails, seasonal chef platters, and exclusive rooftop snacks created for memorable gatherings.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Chef%20Specials." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-cafe-secondary hover:text-cafe-primary transition-colors pt-4 border-t border-stone-100">
+                            Inquire on WhatsApp <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Center CTA to view full menu / WhatsApp -->
+                <div class="mt-12 text-center">
+                    <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20please%20send%20me%20your%20complete%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-cafe-primary text-white font-semibold hover:bg-cafe-secondary transition-all shadow-md">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i> Request Full Menu via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. WHY CHOOSE US SECTION -->
+        <section id="why-us" class="py-20 bg-white border-y border-cafe-border">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold block mb-2">The Figtree Experience</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] break-words mb-4">
+                        Why Patna Loves Figtree Cafe
+                    </h2>
+                    <p class="text-base text-cafe-muted">
+                        We blend breathtaking rooftop views with warm hospitality, making it the premier destination for coffee lovers and friends.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-cafe-bg rounded-2xl p-8 border border-cafe-border text-center flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-2xl bg-cafe-secondary/10 text-cafe-secondary flex items-center justify-center mb-6">
+                            <i data-lucide="eye" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-cafe-primary mb-3">Stunning Park Views</h3>
+                        <p class="text-sm text-cafe-muted leading-relaxed">
+                            Located on the 5th floor right opposite Buddha Smriti Park, offering serene green vistas and magical evening skylines.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-cafe-bg rounded-2xl p-8 border border-cafe-border text-center flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-2xl bg-cafe-secondary/10 text-cafe-secondary flex items-center justify-center mb-6">
+                            <i data-lucide="map-pin" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-cafe-primary mb-3">Prime Fraser Road Location</h3>
+                        <p class="text-sm text-cafe-muted leading-relaxed">
+                            Situated in Maharaja Kameshwar Complex near Dank Bunglow, easily accessible from all major hubs in Patna.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-cafe-bg rounded-2xl p-8 border border-cafe-border text-center flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-2xl bg-cafe-secondary/10 text-cafe-secondary flex items-center justify-center mb-6">
+                            <i data-lucide="heart" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-cafe-primary mb-3">Cozy Ambiance</h3>
+                        <p class="text-sm text-cafe-muted leading-relaxed">
+                            Warm lighting, aesthetic interiors, and comfortable seating designed for deep conversations and relaxed hangouts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ABOUT / STORY SECTION -->
+        <section id="about" class="py-20 bg-cafe-bg">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left: Imagery Collage -->
+                    <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md bg-stone-200">
+                                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Coffee Brewing at Figtree Cafe" class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md bg-stone-200">
+                                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Cafe Interior" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="w-full aspect-square rounded-2xl overflow-hidden shadow-md bg-stone-200">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Seating Area" class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md bg-stone-200">
+                                <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Evening Vibe" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Story Copy -->
+                    <div class="lg:col-span-6">
+                        <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold block mb-2">Our Story</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] break-words mb-6">
+                            Elevating Patna's Cafe Culture from the 5th Floor
+                        </h2>
+                        <p class="text-base text-cafe-muted leading-relaxed mb-6">
+                            Founded with a passion for great coffee and scenic hangouts, Figtree Cafe was born out of a desire to give Patna a true rooftop sanctuary. Perched on the 5th floor of Maharaja Kameshwar Complex opposite Buddha Smriti Park, our cafe provides an escape from the city's hustle and bustle.
+                        </p>
+                        <p class="text-base text-cafe-muted leading-relaxed mb-8">
+                            Whether you're looking for a quiet morning workspace with an aromatic espresso, a cheerful afternoon meetup with friends, or a romantic evening under the sky overlooking Fraser Road, Figtree Cafe is your home away from home.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 pt-6 border-t border-cafe-border">
+                            <div>
+                                <span class="text-3xl font-extrabold font-serif text-cafe-primary block mb-1">95+</span>
+                                <span class="text-sm text-cafe-muted">Verified Google Reviews</span>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold font-serif text-cafe-primary block mb-1">100%</span>
+                                <span class="text-sm text-cafe-muted">Warm Hospitality</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. INTERACTIVE SHOWCASE / GALLERY -->
+        <section id="gallery" class="py-20 bg-white border-y border-cafe-border">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold block mb-2">Visual Showcase</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] break-words mb-4">
+                        Glimpse Inside Figtree Cafe
+                    </h2>
+                    <p class="text-base text-cafe-muted">
+                        Take a visual tour of our rooftop seating, handcrafted beverages, and vibrant evening atmosphere.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md group bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80" alt="Coffee Cup and Ambiance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold">Artisanal Coffee Presentation</span>
+                        </div>
+                    </div>
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md group bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Rooftop View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold">Rooftop Seating Overlooking Park</span>
+                        </div>
+                    </div>
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md group bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80" alt="Snacks and Bites" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold">Delicious Continental Bites</span>
+                        </div>
+                    </div>
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md group bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" alt="Evening Vibe at Cafe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold">Magical Evening Ambiance</span>
+                        </div>
+                    </div>
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md group bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1507133754641-477028913917?auto=format&fit=crop&w=800&q=80" alt="Dessert Special" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold">Freshly Baked Desserts</span>
+                        </div>
+                    </div>
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md group bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Coffee Bean Roasting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span class="text-white text-sm font-semibold">Premium Roasted Coffee Beans</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CUSTOMER REVIEWS SECTION -->
+        <section id="reviews" class="py-20 bg-cafe-bg">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold block mb-2">Testimonials</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] break-words mb-4">
+                        What Our Guests Say
+                    </h2>
+                    <p class="text-base text-cafe-muted">
+                        Real experiences shared by our valued patrons on Google Reviews.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-cafe-border flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-stone-300"></i>
+                            </div>
+                            <p class="text-sm text-cafe-muted leading-relaxed mb-6">
+                                "Amazing rooftop view overlooking Buddha Smriti Park! The coffee is wonderful and the atmosphere in the evening on Fraser Road is just unbeatable."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                            <div class="w-10 h-10 rounded-full bg-cafe-primary text-white font-bold flex items-center justify-center text-sm">
+                                AR
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-cafe-primary">Aakash Ranjan</h4>
+                                <span class="text-xs text-cafe-muted">Google Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-cafe-border flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-sm text-cafe-muted leading-relaxed mb-6">
+                                "Great place to hang out with friends. Being on the 5th floor gives a nice breezy feel. Their continental bites and shakes are top-notch."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                            <div class="w-10 h-10 rounded-full bg-cafe-secondary text-white font-bold flex items-center justify-center text-sm">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-cafe-primary">Priya Singh</h4>
+                                <span class="text-xs text-cafe-muted">Verified Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-cafe-border flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-stone-300"></i>
+                            </div>
+                            <p class="text-sm text-cafe-muted leading-relaxed mb-6">
+                                "Very peaceful ambiance during evening hours. Conveniently located near Dank Bunglow in Maharaja Kameshwar Complex. Highly recommended!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                            <div class="w-10 h-10 rounded-full bg-cafe-primary text-white font-bold flex items-center justify-center text-sm">
+                                MK
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-cafe-primary">Manish Kumar</h4>
+                                <span class="text-xs text-cafe-muted">Google Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Rating Badge CTA -->
+                <div class="mt-12 text-center">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Figtree+Cafe+Patna+Maharaja+Kameshwar+Complex+Fraser+Road" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-cafe-primary hover:text-cafe-secondary transition-colors underline underline-offset-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i> Read all 95+ reviews on Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ ACCORDION -->
+        <section class="py-20 bg-white border-y border-cafe-border">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold block mb-2">Got Questions?</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] break-words mb-4">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-base text-cafe-muted">
+                        Everything you need to know about visiting Figtree Cafe.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-cafe-border rounded-2xl overflow-hidden bg-cafe-bg">
+                        <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-cafe-primary flex items-center justify-between focus:outline-none">
+                            <span>Do I need to reserve a table in advance?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-cafe-secondary"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-sm text-cafe-muted leading-relaxed">
+                            While walk-ins are always welcome, we recommend reserving a table in advance—especially during weekends and evening sunset hours—to secure the best rooftop spots overlooking Buddha Smriti Park.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-cafe-border rounded-2xl overflow-hidden bg-cafe-bg">
+                        <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-cafe-primary flex items-center justify-between focus:outline-none">
+                            <span>Where is Figtree Cafe located exactly?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-cafe-secondary"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-sm text-cafe-muted leading-relaxed">
+                            We are located on the 5th Floor of Maharaja Kameshwar Complex, opposite Buddha Smriti Park, near Dank Bunglow in the Fraser Road Area, Patna, Bihar 800001.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-cafe-border rounded-2xl overflow-hidden bg-cafe-bg">
+                        <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-cafe-primary flex items-center justify-between focus:outline-none">
+                            <span>Is parking available at Maharaja Kameshwar Complex?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-cafe-secondary"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-sm text-cafe-muted leading-relaxed">
+                            Yes, parking space is available around the complex premises. Our staff is also available to guide you upon arrival.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-cafe-border rounded-2xl overflow-hidden bg-cafe-bg">
+                        <button class="faq-toggle w-full px-6 py-4 text-left font-serif font-bold text-cafe-primary flex items-center justify-between focus:outline-none">
+                            <span>Can I order food or book events via WhatsApp?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-cafe-secondary"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4 text-sm text-cafe-muted leading-relaxed">
+                            Absolutely! You can instantly chat with our team on WhatsApp at +91 81029 15553 for table bookings, birthday parties, get-togethers, and menu inquiries.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+        <section id="contact" class="py-20 bg-cafe-bg">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-widest text-cafe-secondary font-bold block mb-2">Visit & Connect</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] break-words mb-4">
+                        Plan Your Visit to Figtree Cafe
+                    </h2>
+                    <p class="text-base text-cafe-muted">
+                        Reserve your table or drop by our rooftop lounge on Fraser Road.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left Column: Contact Details & Hours & Map -->
+                    <div class="lg:col-span-6 flex flex-col gap-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-md border border-cafe-border">
+                            <h3 class="text-xl font-bold font-serif text-cafe-primary mb-6">Contact Information</h3>
+                            
+                            <ul class="space-y-4 text-sm text-cafe-muted">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-cafe-secondary shrink-0 mt-0.5"></i>
+                                    <span>5th Floor, Maharaja Kameshwar Complex, opposite Buddha Smriti Park, near Dank Bunglow, Fraser Road Area, Patna, Bihar 800001</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="phone" class="w-5 h-5 text-cafe-secondary shrink-0"></i>
+                                    <a href="tel:+918102915553" class="hover:text-cafe-primary font-semibold">+91 81029 15553</a>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="message-circle" class="w-5 h-5 text-cafe-secondary shrink-0"></i>
+                                    <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20inquire%20about..." target="_blank" rel="noopener noreferrer" class="hover:text-cafe-primary font-semibold">WhatsApp Chat (+91 81029 15553)</a>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-cafe-secondary shrink-0"></i>
+                                    <span>Open Daily: 11:00 AM – 11:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Google Maps Embed -->
+                        <div class="w-full h-72 rounded-2xl overflow-hidden shadow-md border border-cafe-border">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.777051781283!2d85.137568!3d25.609238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58fce4d48a67%3A0x6b1dbdcf787bcfe8!2sMaharaja%20Kameshwar%20Complex%2C%20Fraser%20Road%2C%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Figtree Cafe Location Map">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Figtree+Cafe+Patna+Maharaja+Kameshwar+Complex+Fraser+Road" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white border border-cafe-border text-cafe-primary font-semibold hover:bg-stone-50 transition-all text-sm shadow-sm">
+                            <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions on Google Maps
+                        </a>
+                    </div>
+
+                    <!-- Right Column: Table Reservation Form -->
+                    <div class="lg:col-span-6">
+                        <div class="bg-white p-8 rounded-2xl shadow-md border border-cafe-border">
+                            <h3 class="text-xl font-bold font-serif text-cafe-primary mb-2">Reserve a Table</h3>
+                            <p class="text-sm text-cafe-muted mb-6">Fill out the form below or message us directly on WhatsApp for instant confirmation.</p>
+
+                            <form id="reservation-form" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-xs font-bold uppercase tracking-wider text-cafe-muted mb-1">Your Name *</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-cafe-border bg-cafe-bg text-cafe-text text-sm focus:outline-none focus:ring-2 focus:ring-cafe-primary" placeholder="Aakash Ranjan">
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-cafe-muted mb-1">Phone / WhatsApp *</label>
+                                        <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-cafe-border bg-cafe-bg text-cafe-text text-sm focus:outline-none focus:ring-2 focus:ring-cafe-primary" placeholder="+91 98765 43210">
+                                    </div>
+                                    <div>
+                                        <label for="guests" class="block text-xs font-bold uppercase tracking-wider text-cafe-muted mb-1">Number of Guests *</label>
+                                        <select id="guests" required class="w-full px-4 py-3 rounded-xl border border-cafe-border bg-cafe-bg text-cafe-text text-sm focus:outline-none focus:ring-2 focus:ring-cafe-primary">
+                                            <option value="1">1 Person</option>
+                                            <option value="2" selected>2 People (Couple)</option>
+                                            <option value="4">4 People</option>
+                                            <option value="6">6 People</option>
+                                            <option value="8+">8+ People (Group)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="date" class="block text-xs font-bold uppercase tracking-wider text-cafe-muted mb-1">Date *</label>
+                                        <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl border border-cafe-border bg-cafe-bg text-cafe-text text-sm focus:outline-none focus:ring-2 focus:ring-cafe-primary">
+                                    </div>
+                                    <div>
+                                        <label for="time" class="block text-xs font-bold uppercase tracking-wider text-cafe-muted mb-1">Time *</label>
+                                        <input type="time" id="time" required class="w-full px-4 py-3 rounded-xl border border-cafe-border bg-cafe-bg text-cafe-text text-sm focus:outline-none focus:ring-2 focus:ring-cafe-primary">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-xs font-bold uppercase tracking-wider text-cafe-muted mb-1">Special Requests (Optional)</label>
+                                    <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-cafe-border bg-cafe-bg text-cafe-text text-sm focus:outline-none focus:ring-2 focus:ring-cafe-primary" placeholder="Rooftop seating preferred, birthday decoration, etc."></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-4 rounded-xl bg-cafe-primary text-white font-bold hover:bg-cafe-secondary transition-all shadow-md text-sm flex items-center justify-center gap-2">
+                                    <i data-lucide="check-circle" class="w-5 h-5"></i> Submit Table Reservation
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl border border-cafe-border transform transition-all">
+            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-cafe-primary mb-2">Reservation Received!</h3>
+            <p id="success-message" class="text-sm text-cafe-muted mb-6">
+                Thank you! Your table reservation request has been submitted successfully. We will contact you shortly via phone/WhatsApp to confirm.
+            </p>
+            <button id="close-modal" class="w-full py-3 rounded-xl bg-cafe-primary text-white font-bold hover:bg-cafe-secondary transition-all text-sm">
+                Back to Website
+            </button>
+        </div>
+    </div>
+
+    <!-- STICKY MOBILE BOTTOM ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-cafe-border p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+918102915553" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cafe-primary text-white font-semibold text-sm shadow">
+            <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+        </a>
+        <a href="https://wa.me/918102915553?text=Hi%20Figtree%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 text-white font-semibold text-sm shadow">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-cafe-primary text-white pt-16 pb-24 md:pb-16 border-t border-stone-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1: Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-full bg-cafe-secondary flex items-center justify-center text-white">
+                            <i data-lucide="coffee" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold font-serif">Figtree Cafe</span>
+                    </div>
+                    <p class="text-sm text-stone-300 leading-relaxed mb-6">
+                        Patna's finest rooftop cafe & coffee shop on Fraser Road overlooking Buddha Smriti Park. Experience luxury coffee and continental dining.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Figtree+Cafe+Patna+Maharaja+Kameshwar+Complex+Fraser+Road" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-10 h-10 rounded-full bg-white/10 hover:bg-cafe-secondary flex items-center justify-center transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/918102915553" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-white/10 hover:bg-cafe-secondary flex items-center justify-center transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+918102915553" aria-label="Phone" class="w-10 h-10 rounded-full bg-white/10 hover:bg-cafe-secondary flex items-center justify-center transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-base font-bold font-serif mb-4 text-cafe-secondary">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-stone-300">
+                        <li><a href="#about" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="#menu" class="hover:text-white transition-colors">Menu Categories</a></li>
+                        <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Visual Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Google Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Hours -->
+                <div>
+                    <h4 class="text-base font-bold font-serif mb-4 text-cafe-secondary">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-stone-300">
+                        <li class="flex justify-between">
+                            <span>Monday – Sunday:</span>
+                            <span class="font-semibold text-white">11:00 AM – 11:00 PM</span>
+                        </li>
+                        <li class="pt-2 text-xs text-stone-400">
+                            Open all 7 days a week. Rooftop seating available daily weather permitting.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Address -->
+                <div>
+                    <h4 class="text-base font-bold font-serif mb-4 text-cafe-secondary">Location Address</h4>
+                    <p class="text-sm text-stone-300 leading-relaxed mb-4">
+                        5th Floor, Maharaja Kameshwar Complex, opposite Buddha Smriti Park, near Dank Bunglow, Fraser Road Area, Patna, Bihar 800001
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Figtree+Cafe+Patna+Maharaja+Kameshwar+Complex+Fraser+Road" target="_blank" rel="noopener noreferrer" class="text-xs text-cafe-secondary font-bold hover:underline inline-flex items-center gap-1">
+                        Get Directions <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-stone-800 text-center text-xs text-stone-400">
+                <p>&copy; <span id="current-year"></span> Figtree Cafe, Patna. All rights reserved. Designed with warmth & precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Initialize Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Set minimum date for reservation to today
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('date');
+            if (dateInput) {
+                dateInput.min = today;
+                dateInput.value = today;
+            }
+        });
+
+        // Mobile Menu Toggle & Scroll Lock
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        if (menuToggle) menuToggle.addEventListener('click', openMobileMenu);
+        if (menuClose) menuClose.addEventListener('click', closeMobileMenu);
+        if (menuBackdrop) menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('lucide-icon, [data-lucide="chevron-down"]');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle svg').forEach(s => s.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                } else {
+                    content.classList.remove('hidden');
+                    const chevron = toggle.querySelector('[data-lucide="chevron-down"]');
+                    if (chevron) chevron.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Table Reservation Form Submission & Modal
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        const successMessage = document.getElementById('success-message');
+
+        if (reservationForm) {
+            reservationForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Sanitize input values
+                const name = sanitizeInput(document.getElementById('name').value);
+                const phone = sanitizeInput(document.getElementById('phone').value);
+                const guests = sanitizeInput(document.getElementById('guests').value);
+                const date = sanitizeInput(document.getElementById('date').value);
+                const time = sanitizeInput(document.getElementById('time').value);
+
+                if (!name || !phone || !date || !time) {
+                    alert('Please fill out all required fields.');
+                    return;
+                }
+
+                successMessage.textContent = `Thank you, ${name}! Your table for ${guests} guest(s) on ${date} at ${time} has been requested successfully. We will call you at ${phone} to confirm.`;
+                successModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                reservationForm.reset();
+            });
+        }
+
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+
+        // Helper sanitization function to prevent XSS
+        function sanitizeInput(str) {
+            const temp = document.createElement('div');
+            temp.textContent = str;
+            return temp.innerHTML;
+        }
+    </script>
+</body>
+</html>

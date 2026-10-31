@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Toscano Cafe & Restro | Kidwaipuri, Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafe: {
+                            bg: '#FDFBF7',
+                            surface: '#FFFFFF',
+                            primary: '#C86D51',
+                            primaryHover: '#B3583C',
+                            secondary: '#2C1810',
+                            text: '#1A1A1A',
+                            muted: '#6B635B',
+                            border: '#EAE2D6',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FDFBF7;
+            color: #1A1A1A;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C86D51;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B3583C;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#2C1810] text-[#FDFBF7] text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2 relative z-50">
+        <i data-lucide="clock" class="w-4 h-4 text-[#C86D51] shrink-0"></i>
+        <span>Open Today: 11:00 AM – 10:30 PM &bull; A-2-F, Sri Krishna Nagar, Kidwaipuri, Patna</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#FDFBF7] border-b border-[#EAE2D6] shadow-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-full bg-[#2C1810] flex items-center justify-center text-[#FDFBF7] shadow-md group-hover:bg-[#C86D51] transition-colors duration-300">
+                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-bold font-serif text-[#2C1810] tracking-tight block leading-tight">Toscano</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-[#C86D51] font-semibold block">Cafe & Restro</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-[#6B635B]">
+                <a href="#menu" class="hover:text-[#C86D51] transition-colors">Menu</a>
+                <a href="#about" class="hover:text-[#C86D51] transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-[#C86D51] transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-[#C86D51] transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-[#C86D51] transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-[#C86D51] transition-colors">Location</a>
+            </nav>
+
+            <!-- Action Buttons Desktop -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919341658484" class="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-2.5 rounded-full border border-[#2C1810] text-[#2C1810] hover:bg-[#2C1810] hover:text-[#FDFBF7] transition-all duration-300 min-h-[44px]">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>+91 93416 58484</span>
+                </a>
+                <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-full bg-[#C86D51] text-white hover:bg-[#B3583C] transition-all duration-300 shadow-md min-h-[44px]">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Reserve Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-[#2C1810] hover:bg-[#EAE2D6]/50 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#FDFBF7] border-l border-[#EAE2D6] rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-[#EAE2D6]">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-[#2C1810] flex items-center justify-center text-[#FDFBF7]">
+                        <i data-lucide="coffee" class="w-4 h-4"></i>
+                    </div>
+                    <span class="text-lg font-bold font-serif text-[#2C1810]">Toscano Cafe</span>
+                </div>
+                <button id="menu-close" aria-label="Close Navigation Menu" class="p-2 rounded-full text-[#1A1A1A] hover:bg-[#EAE2D6] min-h-[44px] min-w-[44px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 mt-6 text-base font-semibold text-[#2C1810]">
+                <a href="#menu" class="mobile-link py-2 border-b border-[#EAE2D6]/40 hover:text-[#C86D51] flex items-center justify-between">
+                    <span>Menu Categories</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#6B635B]"></i>
+                </a>
+                <a href="#about" class="mobile-link py-2 border-b border-[#EAE2D6]/40 hover:text-[#C86D51] flex items-center justify-between">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#6B635B]"></i>
+                </a>
+                <a href="#gallery" class="mobile-link py-2 border-b border-[#EAE2D6]/40 hover:text-[#C86D51] flex items-center justify-between">
+                    <span>Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#6B635B]"></i>
+                </a>
+                <a href="#reviews" class="mobile-link py-2 border-b border-[#EAE2D6]/40 hover:text-[#C86D51] flex items-center justify-between">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#6B635B]"></i>
+                </a>
+                <a href="#faq" class="mobile-link py-2 border-b border-[#EAE2D6]/40 hover:text-[#C86D51] flex items-center justify-between">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#6B635B]"></i>
+                </a>
+                <a href="#contact" class="mobile-link py-2 border-b border-[#EAE2D6]/40 hover:text-[#C86D51] flex items-center justify-between">
+                    <span>Location & Directions</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#6B635B]"></i>
+                </a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-[#EAE2D6] flex flex-col gap-3">
+            <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 bg-[#C86D51] text-white rounded-xl font-semibold text-center flex items-center justify-center gap-2 shadow-md min-h-[48px]">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Reserve on WhatsApp</span>
+            </a>
+            <a href="tel:+919341658484" class="w-full py-3.5 px-4 bg-[#2C1810] text-[#FDFBF7] rounded-xl font-semibold text-center flex items-center justify-center gap-2 shadow-md min-h-[48px]">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                <span>Call +91 93416 58484</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-8 pb-16 md:py-24 lg:py-32 overflow-hidden bg-[#FDFBF7]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Left Column Content -->
+                <div class="lg:col-span-7 text-left">
+                    <!-- Google Rating Badge -->
+                    <div class="inline-flex items-center gap-2.5 bg-white border border-[#EAE2D6] px-4 py-2 rounded-full shadow-sm mb-6">
+                        <div class="flex items-center text-amber-500 gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-[#2C1810]">4.7 ★</span>
+                        <span class="text-xs sm:text-sm text-[#6B635B] font-medium border-l border-[#EAE2D6] pl-2.5">From 221+ Google Reviews</span>
+                    </div>
+
+                    <!-- Hero Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-serif text-[#2C1810] leading-[1.15] mb-6 break-words">
+                        Patna’s Favorite Spot for <span class="text-[#C86D51] italic">Continental Delights</span> & Cozy Ambiance
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-[#6B635B] leading-relaxed mb-8 max-w-2xl break-words font-normal">
+                        Welcome to <strong class="text-[#2C1810]">Toscano Cafe & Restro</strong> located in the heart of Kidwaipuri, Patna. Experience artisan coffee, delectable continental cuisine, and unforgettable moments in a warm organic setting.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-[#C86D51] hover:bg-[#B3583C] text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 text-base min-h-[52px]">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Reserve on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-[#EAE2D6]/40 text-[#2C1810] border border-[#EAE2D6] font-semibold py-4 px-8 rounded-xl transition-all duration-300 text-base min-h-[52px] shadow-sm">
+                            <i data-lucide="utensils" class="w-5 h-5 text-[#C86D51]"></i>
+                            <span>View Menu</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-2 bg-gradient-to-tr from-[#C86D51]/30 to-[#2C1810]/20 rounded-3xl blur-xl -z-10"></div>
+                        <div class="aspect-[4/3] sm:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Toscano Cafe Interior & Coffee" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Floating Badge Card -->
+                        <div class="absolute -bottom-6 -left-4 sm:-left-6 bg-white border border-[#EAE2D6] p-4 rounded-2xl shadow-xl flex items-center gap-3.5 max-w-[260px]">
+                            <div class="w-12 h-12 rounded-xl bg-[#C86D51]/10 flex items-center justify-center text-[#C86D51] shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-[#2C1810] uppercase tracking-wider">Prime Location</h4>
+                                <p class="text-xs text-[#6B635B] mt-0.5">Kidwaipuri, Patna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-[#2C1810] text-[#FDFBF7] py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-[#EAE2D6]/20">
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-[#C86D51] mb-1">4.7 ★</div>
+                    <div class="text-xs sm:text-sm text-[#FDFBF7]/80 font-medium">Google Rating</div>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-[#FDFBF7] mb-1">221+</div>
+                    <div class="text-xs sm:text-sm text-[#FDFBF7]/80 font-medium">Verified Customer Reviews</div>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-[#C86D51] mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-[#FDFBF7]/80 font-medium">Fresh Ingredients & Hygiene</div>
+                </div>
+                <div class="pt-4 md:pt-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-serif text-[#FDFBF7] mb-1">Kidwaipuri</div>
+                    <div class="text-xs sm:text-sm text-[#FDFBF7]/80 font-medium">Prime Patna Address</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Menu Categories Grid -->
+    <section id="menu" class="py-20 bg-[#FDFBF7]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-[#C86D51] font-bold block mb-3">Culinary Excellence</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1810] mb-4">Our Signature Menu Categories</h2>
+                <p class="text-sm sm:text-base text-[#6B635B]">Explore our expertly crafted beverages, gourmet continental plates, delightful quick bites, and decadent desserts.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Beverages -->
+                <div class="bg-white border border-[#EAE2D6] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Beverages & Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#2C1810] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full">Hot & Cold</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-[#2C1810] mb-2 flex items-center justify-between">
+                                <span>Beverages</span>
+                                <i data-lucide="coffee" class="w-5 h-5 text-[#C86D51]"></i>
+                            </h3>
+                            <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed mb-4">
+                                Artisan espresso, cappuccinos, frappes, refreshing mojitos, and artisanal iced teas brewed to perfection.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20view%20your%20Beverages%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-[#FDFBF7] hover:bg-[#C86D51] text-[#2C1810] hover:text-white border border-[#EAE2D6] hover:border-[#C86D51] rounded-xl font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-2 min-h-[44px]">
+                            <span>Explore Beverages</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Continental -->
+                <div class="bg-white border border-[#EAE2D6] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Continental Dishes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#2C1810] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full">Chef Special</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-[#2C1810] mb-2 flex items-center justify-between">
+                                <span>Continental</span>
+                                <i data-lucide="utensils" class="w-5 h-5 text-[#C86D51]"></i>
+                            </h3>
+                            <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed mb-4">
+                                Creamy pastas, wood-fired style pizzas, sizzling platters, and authentic continental delicacies crafted by expert chefs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20view%20your%20Continental%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-[#FDFBF7] hover:bg-[#C86D51] text-[#2C1810] hover:text-white border border-[#EAE2D6] hover:border-[#C86D51] rounded-xl font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-2 min-h-[44px]">
+                            <span>Explore Continental</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Quick Bites -->
+                <div class="bg-white border border-[#EAE2D6] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Quick Bites & Burgers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#2C1810] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full">Snacks</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-[#2C1810] mb-2 flex items-center justify-between">
+                                <span>Quick Bites</span>
+                                <i data-lucide="sandwich" class="w-5 h-5 text-[#C86D51]"></i>
+                            </h3>
+                            <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed mb-4">
+                                Crispy fries, loaded burgers, garlic breads, cheesy sandwiches, and savory appetizers perfect for sharing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20view%20your%20Quick%20Bites%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-[#FDFBF7] hover:bg-[#C86D51] text-[#2C1810] hover:text-white border border-[#EAE2D6] hover:border-[#C86D51] rounded-xl font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-2 min-h-[44px]">
+                            <span>Explore Quick Bites</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Desserts -->
+                <div class="bg-white border border-[#EAE2D6] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="aspect-video w-full overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Desserts & Pastries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-[#2C1810] text-white text-[11px] font-semibold px-2.5 py-1 rounded-full">Sweet Treats</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-[#2C1810] mb-2 flex items-center justify-between">
+                                <span>Desserts</span>
+                                <i data-lucide="cake" class="w-5 h-5 text-[#C86D51]"></i>
+                            </h3>
+                            <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed mb-4">
+                                Decadent chocolate brownies, cheesecakes, waffles, and warm pastries to satisfy your sweet cravings.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20view%20your%20Desserts%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-[#FDFBF7] hover:bg-[#C86D51] text-[#2C1810] hover:text-white border border-[#EAE2D6] hover:border-[#C86D51] rounded-xl font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-2 min-h-[44px]">
+                            <span>Explore Desserts</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Menu WhatsApp CTA Banner -->
+            <div class="mt-12 bg-[#2C1810] rounded-3xl p-8 sm:p-12 text-center text-[#FDFBF7] relative overflow-hidden shadow-xl">
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-[#C86D51]/20 rounded-full blur-2xl"></div>
+                <h3 class="text-2xl sm:text-3xl font-bold font-serif mb-3">Want to check our complete food & price menu?</h3>
+                <p class="text-sm sm:text-base text-[#FDFBF7]/80 mb-6 max-w-xl mx-auto">Get our instant PDF menu and pricing directly on your WhatsApp in 1 click.</p>
+                <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20please%20send%20me%20your%20complete%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-[#C86D51] hover:bg-[#B3583C] text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 text-sm sm:text-base min-h-[52px]">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Get Menu on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white border-t border-[#EAE2D6]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-[#C86D51] font-bold block mb-3">The Toscano Experience</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1810] mb-4">Why Patna Loves Dining With Us</h2>
+                <p class="text-sm sm:text-base text-[#6B635B]">We combine cozy vibes, pristine hygiene, and culinary passion to make every visit memorable.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-[#FDFBF7] border border-[#EAE2D6] p-8 rounded-2xl shadow-sm text-center">
+                    <div class="w-14 h-14 bg-[#C86D51]/10 text-[#C86D51] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif text-[#2C1810] mb-2">Cozy Ambiance</h3>
+                    <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        Warm lighting, aesthetic seating, and soothing music ideal for dates, catch-ups, and family dinners.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[#FDFBF7] border border-[#EAE2D6] p-8 rounded-2xl shadow-sm text-center">
+                    <div class="w-14 h-14 bg-[#C86D51]/10 text-[#C86D51] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="chef-hat" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif text-[#2C1810] mb-2">Chef Specials</h3>
+                    <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        Handcrafted continental recipes prepared with authentic seasonings and premium quality ingredients.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[#FDFBF7] border border-[#EAE2D6] p-8 rounded-2xl shadow-sm text-center">
+                    <div class="w-14 h-14 bg-[#C86D51]/10 text-[#C86D51] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif text-[#2C1810] mb-2">Pristine Hygiene</h3>
+                    <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        Immaculately sanitized kitchens, dining areas, and crockery ensuring absolute food safety.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-[#FDFBF7] border border-[#EAE2D6] p-8 rounded-2xl shadow-sm text-center">
+                    <div class="w-14 h-14 bg-[#C86D51]/10 text-[#C86D51] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="smile" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif text-[#2C1810] mb-2">Warm Hospitality</h3>
+                    <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        Courteous and attentive staff dedicated to providing swift service and a welcoming experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 bg-[#FDFBF7]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Images Collage -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Cafe Barista" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Cafe Seating" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=600&q=80" alt="Coffee Art" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Restaurant Ambiance" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Story Content -->
+                <div class="lg:col-span-6">
+                    <span class="text-xs uppercase tracking-widest text-[#C86D51] font-bold block mb-3">Our Story</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1810] mb-6">Brewing Passion & Serving Joy in Patna</h2>
+                    <p class="text-sm sm:text-base text-[#6B635B] leading-relaxed mb-6">
+                        Founded with a vision to bring world-class continental dining and coffee culture to Patna, <strong class="text-[#2C1810]">Toscano Cafe & Restro</strong> has quickly become Kidwaipuri’s favorite gathering spot.
+                    </p>
+                    <p class="text-sm sm:text-base text-[#6B635B] leading-relaxed mb-8">
+                        Whether you are looking for a quiet corner to work with an artisanal coffee, celebrating a birthday with friends, or enjoying a cozy candle-lit dinner, our doors and hearts are always open.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-[#EAE2D6]">
+                        <div>
+                            <span class="text-3xl font-bold font-serif text-[#C86D51] block mb-1">221+</span>
+                            <span class="text-xs sm:text-sm text-[#6B635B] font-medium">5-Star Google Reviews</span>
+                        </div>
+                        <div>
+                            <span class="text-3xl font-bold font-serif text-[#C86D51] block mb-1">50+</span>
+                            <span class="text-xs sm:text-sm text-[#6B635B] font-medium">Continental Delicacies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery Section -->
+    <section id="gallery" class="py-20 bg-white border-t border-[#EAE2D6]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-[#C86D51] font-bold block mb-3">Visual Feast</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1810] mb-4">Glimpse Inside Toscano</h2>
+                <p class="text-sm sm:text-base text-[#6B635B]">A sneak peek into our delicious plates, handcrafted beverages, and aesthetic interiors.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Delicious Food Salad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Coffee Cup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Burger & Fries" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Cake Dessert" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Steak & Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Cafe ambiance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Waffle Dessert" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-[#FDFBF7]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-[#C86D51] font-bold block mb-3">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1810] mb-4">What Our Guests Say</h2>
+                <div class="flex items-center justify-center gap-2 text-amber-500 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                    <span class="text-base font-bold text-[#2C1810] ml-2">4.7 / 5.0 (221+ Google Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white border border-[#EAE2D6] p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed italic mb-6">
+                            "One of the best cafes in Kidwaipuri! The ambiance is extremely cozy and soothing. We tried their white sauce pasta and cold coffee—absolute perfection. Highly recommended for dates and hangouts."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#EAE2D6]">
+                        <div class="w-10 h-10 rounded-full bg-[#C86D51] text-white font-bold flex items-center justify-center text-sm">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-[#2C1810]">Aniket Sinha</h4>
+                            <span class="text-[11px] text-[#6B635B]">Local Guide &bull; Google Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white border border-[#EAE2D6] p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed italic mb-6">
+                            "Superb food quality and very courteous staff. The place has a wonderful European cafe vibe right here in Patna. Their pizzas and desserts are to die for!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#EAE2D6]">
+                        <div class="w-10 h-10 rounded-full bg-[#2C1810] text-[#FDFBF7] font-bold flex items-center justify-center text-sm">
+                            P
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-[#2C1810]">Priya Kumari</h4>
+                            <span class="text-[11px] text-[#6B635B]">Verified Customer &bull; Google Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white border border-[#EAE2D6] p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-[#6B635B] leading-relaxed italic mb-6">
+                            "A hidden gem in Kidwaipuri! Peaceful environment, great music, and very prompt service. Perfect place to sit for hours with friends or laptop."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#EAE2D6]">
+                        <div class="w-10 h-10 rounded-full bg-[#C86D51] text-white font-bold flex items-center justify-center text-sm">
+                            R
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-[#2C1810]">Rahul Verma</h4>
+                            <span class="text-[11px] text-[#6B635B]">Local Guide &bull; Google Review</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-20 bg-white border-t border-[#EAE2D6]">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-widest text-[#C86D51] font-bold block mb-3">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1810] mb-4">Frequently Asked Questions</h2>
+                <p class="text-sm sm:text-base text-[#6B635B]">Find answers to common questions about reservations, parking, timing, and menu.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-[#EAE2D6] rounded-2xl bg-[#FDFBF7] overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-[#2C1810] text-base sm:text-lg flex items-center justify-between gap-4">
+                        <span>How can I reserve a table at Toscano Cafe & Restro?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C86D51] transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        You can instantly reserve a table via WhatsApp by clicking any of our "Reserve Table" buttons or calling us directly at +91 93416 58484. We also accept walk-ins based on availability.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-[#EAE2D6] rounded-2xl bg-[#FDFBF7] overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-[#2C1810] text-base sm:text-lg flex items-center justify-between gap-4">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C86D51] transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        We are open every day of the week from 11:00 AM to 10:30 PM, serving fresh food, coffee, and desserts throughout the day.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-[#EAE2D6] rounded-2xl bg-[#FDFBF7] overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-[#2C1810] text-base sm:text-lg flex items-center justify-between gap-4">
+                        <span>Is parking available at the location?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C86D51] transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        Yes, convenient street parking and vehicle parking space is available near our location at A-2-F, Sri Krishna Nagar, Kidwaipuri, Patna.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-[#EAE2D6] rounded-2xl bg-[#FDFBF7] overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left font-serif font-bold text-[#2C1810] text-base sm:text-lg flex items-center justify-between gap-4">
+                        <span>Do you offer home delivery or party bookings?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C86D51] transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#6B635B] leading-relaxed">
+                        Yes! We host private parties, birthdays, and get-togethers. For home delivery inquiries or private event bookings, please message us on WhatsApp at +91 93416 58484.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-[#FDFBF7] border-t border-[#EAE2D6]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-[#C86D51] font-bold block mb-3">Visit Us</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#2C1810] mb-4">Location & Table Reservation</h2>
+                <p class="text-sm sm:text-base text-[#6B635B]">Drop by our cafe in Kidwaipuri or book your table in advance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left Column: Info & Form -->
+                <div class="lg:col-span-6 space-y-8">
+                    <!-- Info Card -->
+                    <div class="bg-white border border-[#EAE2D6] p-8 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold font-serif text-[#2C1810] mb-6">Contact & Hours</h3>
+                        <ul class="space-y-4 text-xs sm:text-sm text-[#6B635B]">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-[#C86D51] shrink-0 mt-0.5"></i>
+                                <span><strong>Address:</strong> A-2-F, Sri Krishna Nagar, Kidwaipuri, Patna, Bihar 800001</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-[#C86D51] shrink-0"></i>
+                                <span><strong>Phone / WhatsApp:</strong> <a href="tel:+919341658484" class="text-[#2C1810] font-bold hover:text-[#C86D51]">+91 93416 58484</a></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-[#C86D51] shrink-0"></i>
+                                <span><strong>Timing:</strong> 11:00 AM – 10:30 PM (Open All Days)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Reservation Form -->
+                    <div class="bg-white border border-[#EAE2D6] p-8 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold font-serif text-[#2C1810] mb-2">Quick Table Reservation</h3>
+                        <p class="text-xs text-[#6B635B] mb-6">Fill out this quick form or reserve directly via WhatsApp.</p>
+                        
+                        <form id="reservation-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-[#2C1810] mb-1">Your Name</label>
+                                <input type="text" id="res-name" required placeholder="Enter your full name" class="w-full px-4 py-3 bg-[#FDFBF7] border border-[#EAE2D6] rounded-xl text-sm text-[#2C1810] focus:outline-none focus:border-[#C86D51]">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-[#2C1810] mb-1">Phone Number</label>
+                                    <input type="tel" id="res-phone" required placeholder="+91 XXXXX XXXXX" class="w-full px-4 py-3 bg-[#FDFBF7] border border-[#EAE2D6] rounded-xl text-sm text-[#2C1810] focus:outline-none focus:border-[#C86D51]">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-[#2C1810] mb-1">Guests</label>
+                                    <select id="res-guests" class="w-full px-4 py-3 bg-[#FDFBF7] border border-[#EAE2D6] rounded-xl text-sm text-[#2C1810] focus:outline-none focus:border-[#C86D51]">
+                                        <option value="2 Guests">2 Guests</option>
+                                        <option value="4 Guests">4 Guests</option>
+                                        <option value="6 Guests">6 Guests</option>
+                                        <option value="8+ Guests">8+ Guests (Party)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-[#2C1810] mb-1">Special Requests / Date / Time</label>
+                                <textarea id="res-msg" rows="3" placeholder="Preferred time, seating preference..." class="w-full px-4 py-3 bg-[#FDFBF7] border border-[#EAE2D6] rounded-xl text-sm text-[#2C1810] focus:outline-none focus:border-[#C86D51]"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-[#C86D51] hover:bg-[#B3583C] text-white font-semibold rounded-xl transition-all duration-300 shadow-md text-sm min-h-[48px] flex items-center justify-center gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span>Confirm Reservation Request</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Column: Google Maps & Directions -->
+                <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                    <div class="bg-white border border-[#EAE2D6] p-4 rounded-2xl shadow-sm flex-1 flex flex-col">
+                        <div class="aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-[420px] w-full rounded-xl overflow-hidden mb-4">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7785268482!2d85.1276!3d25.6112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef0000001%3A0x0!2zVHNvY2FubyBDYWZlICYgUmVzdHJv!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Toscano+Cafe+and+Restro+Kidwaipuri+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-[#2C1810] hover:bg-[#1A1A1A] text-[#FDFBF7] font-semibold rounded-xl text-center flex items-center justify-center gap-2 transition-all duration-300 text-sm shadow-md min-h-[48px]">
+                            <i data-lucide="navigation" class="w-5 h-5 text-[#C86D51]"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C1810] text-[#FDFBF7] pt-16 pb-12 border-t border-[#EAE2D6]/20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-[#FDFBF7]/10">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-10 h-10 rounded-full bg-[#C86D51] flex items-center justify-center text-white">
+                            <i data-lucide="coffee" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold font-serif text-[#FDFBF7] block leading-tight">Toscano</span>
+                            <span class="text-[10px] uppercase tracking-widest text-[#C86D51] font-semibold block">Cafe & Restro</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#FDFBF7]/80 leading-relaxed">
+                        Patna’s ultimate organic cafe experience in Kidwaipuri, offering artisan coffee, gourmet continental plates, and warm hospitality.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-sm font-bold font-serif uppercase tracking-wider text-[#C86D51] mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-[#FDFBF7]/80">
+                        <li><a href="#menu" class="hover:text-[#C86D51] transition-colors">Menu Categories</a></li>
+                        <li><a href="#about" class="hover:text-[#C86D51] transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-[#C86D51] transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-[#C86D51] transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-[#C86D51] transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-sm font-bold font-serif uppercase tracking-wider text-[#C86D51] mb-4">Operating Hours</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-[#FDFBF7]/80">
+                        <li>Monday: 11:00 AM – 10:30 PM</li>
+                        <li>Tuesday: 11:00 AM – 10:30 PM</li>
+                        <li>Wednesday: 11:00 AM – 10:30 PM</li>
+                        <li>Thursday: 11:00 AM – 10:30 PM</li>
+                        <li>Friday - Sunday: 11:00 AM – 10:30 PM</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-sm font-bold font-serif uppercase tracking-wider text-[#C86D51] mb-4">Connect With Us</h4>
+                    <p class="text-xs sm:text-sm text-[#FDFBF7]/80 mb-4">A-2-F, Sri Krishna Nagar, Kidwaipuri, Patna, Bihar 800001</p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919341658484" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-[#C86D51] text-white flex items-center justify-center hover:bg-[#B3583C] transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+919341658484" aria-label="Phone" class="w-10 h-10 rounded-full bg-[#3D261E] text-white flex items-center justify-center hover:bg-[#C86D51] transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Toscano+Cafe+and+Restro+Kidwaipuri+Patna" target="_blank" rel="noopener noreferrer" aria-label="Location" class="w-10 h-10 rounded-full bg-[#3D261E] text-white flex items-center justify-center hover:bg-[#C86D51] transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-[#FDFBF7]/60">
+                &copy; <span id="current-year"></span> Toscano Cafe & Restro, Kidwaipuri, Patna. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+919341658484" class="py-3 px-4 bg-zinc-900 border border-zinc-700 text-white rounded-xl font-semibold text-xs text-center flex items-center justify-center gap-2 min-h-[48px]">
+            <i data-lucide="phone" class="w-4 h-4 text-[#C86D51]"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919341658484?text=Hi%20Toscano%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="py-3 px-4 bg-[#C86D51] text-white rounded-xl font-semibold text-xs text-center flex items-center justify-center gap-2 shadow-lg min-h-[48px]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-white border border-[#EAE2D6] rounded-3xl p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-[#2C1810] mb-2">Reservation Request Received!</h3>
+            <p id="success-modal-text" class="text-xs sm:text-sm text-[#6B635B] mb-6">
+                Thank you! We have received your table reservation request. We will instantly contact you via phone or WhatsApp to confirm your booking.
+            </p>
+            <button id="modal-close-btn" class="w-full py-3.5 bg-[#C86D51] text-white font-semibold rounded-xl text-sm min-h-[48px]">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+
+        // Mobile Menu Drawer Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion Logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Reservation Form & Success Modal Logic
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('res-name').value;
+            const phone = document.getElementById('res-phone').value;
+            const guests = document.getElementById('res-guests').value;
+            const msg = document.getElementById('res-msg').value;
+
+            // Sanitize text for display
+            const sanitizedName = name.replace(/[<>]/g, '');
+            document.getElementById('success-modal-text').textContent = `Thank you ${sanitizedName}! Your table reservation request for ${guests} has been registered. We will confirm via WhatsApp shortly.`;
+            
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            reservationForm.reset();
+        });
+
+        modalCloseBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>

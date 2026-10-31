@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Downtown Cafe | Best Cafe & Restaurant in Kankarbagh, Patna</title>
+    <meta name="description" content="Experience Patna's favorite cozy hangout spot. Enjoy gourmet pizzas, signature coffees, burgers & shakes at The Downtown Cafe, Kankarbagh. Book a table or order on WhatsApp!">
+    
+    <!-- Security & Protocol Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0F0E0E',
+                        surface: '#1C1917',
+                        primary: '#D97706',
+                        secondary: '#C2410C',
+                        textPrimary: '#FAFAF9',
+                        textMuted: '#A8A29E',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Base scroll and selection styling */
+        body {
+            background-color: #0F0E0E;
+            color: #FAFAF9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        ::selection {
+            background-color: #D97706;
+            color: #0F0E0E;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-[#0F0E0E] text-[#FAFAF9] font-sans antialiased overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% SOLID OPAQUE STICKY HEADER -->
+    <div id="announcement-bar" class="w-full bg-[#C2410C] text-white text-xs sm:text-sm font-medium py-2 px-4 text-center flex items-center justify-center gap-2 relative z-50">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Daily: 10:00 AM - 11:00 PM • Visit Patna's Best Hangout Spot in Kankarbagh!</span>
+        <button onclick="document.getElementById('announcement-bar').style.display='none'" class="ml-4 hover:opacity-75 focus:outline-none" aria-label="Close Announcement">
+            <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+    </div>
+
+    <header class="sticky top-0 z-40 w-full bg-[#0F0E0E] border-b border-zinc-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-bold text-lg sm:text-xl tracking-wide text-white group-hover:text-primary transition-colors">The Downtown</span>
+                    <span class="text-[10px] tracking-widest text-textMuted uppercase font-semibold">Cafe & Restaurant</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-textMuted">
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+                <a href="#about" class="hover:text-primary transition-colors">About Us</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="tel:+918407078989" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:border-primary/50 transition-all text-sm font-semibold">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>+91 84070 78989</span>
+                </a>
+                <a href="#contact" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-[#B45309] text-white shadow-lg shadow-primary/25 transition-all text-sm font-semibold">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Backdrop & Menu -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <div id="mobile-drawer" class="fixed top-12 sm:top-14 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-6 bg-[#0F0E0E] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div class="flex flex-col gap-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <span class="font-syne font-bold text-lg text-white">Menu Navigation</span>
+                <button id="mobile-menu-close" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 text-textMuted hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 text-base font-medium text-textMuted">
+                <a href="#menu" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-zinc-900">Our Menu</a>
+                <a href="#about" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-zinc-900">About Our Story</a>
+                <a href="#gallery" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-zinc-900">Photo Gallery</a>
+                <a href="#reviews" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-zinc-900">Customer Reviews</a>
+                <a href="#contact" class="mobile-nav-link hover:text-primary transition-colors py-2 border-b border-zinc-900">Location & Contact</a>
+            </nav>
+        </div>
+        <div class="flex flex-col gap-3 pt-6 border-t border-zinc-800 mt-6">
+            <a href="tel:+918407078989" class="w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white flex items-center justify-center gap-2 font-semibold text-sm">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                <span>Call: +91 84070 78989</span>
+            </a>
+            <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20I%20would%20like%20to%20inquire%20about%20table%20reservation." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 font-semibold text-sm shadow-lg shadow-emerald-900/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Order</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative min-h-[85vh] flex items-center justify-center py-16 lg:py-24 overflow-hidden">
+        <!-- Background Glows & Image Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=80" alt="Cafe Ambiance" class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F0E0E] via-[#0F0E0E]/80 to-transparent"></div>
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] sm:w-[600px] h-[300px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+        </div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+            <!-- Rating Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-zinc-800 mb-6 shadow-xl">
+                <div class="flex items-center text-amber-400">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400/50"></i>
+                </div>
+                <span class="text-sm font-bold text-white">4.1 <span class="text-textMuted font-normal">(4,282+ Google Reviews)</span></span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: font-extrabold font-syne text-white leading-[1.15] mb-6 max-w-4xl break-words">
+                Patna's Favorite <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Cozy Hangout</span> & Dining Destination
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg lg:text-xl text-textMuted max-w-2xl mb-10 leading-relaxed">
+                Indulge in artisanal coffees, handcrafted gourmet pizzas, sizzling burgers, and decadent shakes right in the heart of Kankarbagh, Patna.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary hover:bg-[#B45309] text-white font-semibold flex items-center justify-center gap-3 shadow-xl shadow-primary/25 transition-all transform hover:scale-[1.02]">
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                    <span>Book a Table</span>
+                </a>
+                <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface border border-zinc-800 hover:border-zinc-700 text-white font-semibold flex items-center justify-center gap-3 transition-all">
+                    <i data-lucide="utensils" class="w-5 h-5 text-primary"></i>
+                    <span>Explore Menu</span>
+                </a>
+            </div>
+
+            <!-- Quick WhatsApp Inquiry Tag -->
+            <div class="mt-8 flex items-center gap-2 text-xs sm:text-sm text-textMuted">
+                <span>Quick WhatsApp Inquiry?</span>
+                <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20I%20want%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-semibold flex items-center gap-1">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> +91 84070 78989
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-surface/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+                        <i data-lucide="star" class="w-6 h-6 fill-primary"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-bold font-syne text-white">4.1 / 5.0</span>
+                    <span class="text-xs sm:text-sm text-textMuted mt-1">Google Rating</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-bold font-syne text-white">4,282+</span>
+                    <span class="text-xs sm:text-sm text-textMuted mt-1">Verified Reviews</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-bold font-syne text-white">Kankarbagh</span>
+                    <span class="text-xs sm:text-sm text-textMuted mt-1">Prime Patna Location</span>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+                        <i data-lucide="coffee" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-bold font-syne text-white">100% Fresh</span>
+                    <span class="text-xs sm:text-sm text-textMuted mt-1">Artisanal Quality</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MAIN MENU HIGHLIGHTS -->
+    <section id="menu" class="py-20 lg:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3 block">Culinary Excellence</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Our Signature Menu Highlights</h2>
+                <p class="text-textMuted text-sm sm:text-base">Handcrafted with passion, premium ingredients, and authentic recipes. Order directly on WhatsApp or reserve a table.</p>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Signature Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-400 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> Best Seller
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Signature Cappuccino</h3>
+                                <span class="font-bold text-primary text-base">₹180</span>
+                            </div>
+                            <p class="text-textMuted text-xs sm:text-sm leading-relaxed mb-4">Rich espresso paired with velvety micro-foamed milk, crafted to perfection.</p>
+                        </div>
+                        <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20I%20want%20to%20order%20Signature%20Cappuccino." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-emerald-600 hover:text-white border border-zinc-800 text-textMuted text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 group-hover:text-white"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Gourmet Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-400 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> Chef Special
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Wood-Fired Pizza</h3>
+                                <span class="font-bold text-primary text-base">₹399</span>
+                            </div>
+                            <p class="text-textMuted text-xs sm:text-sm leading-relaxed mb-4">Loaded with fresh mozzarella, basil, hand-crushed tomatoes & exotic veggies.</p>
+                        </div>
+                        <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20I%20want%20to%20order%20Wood-Fired%20Pizza." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-emerald-600 hover:text-white border border-zinc-800 text-textMuted text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 group-hover:text-white"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Juicy Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-400 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> Popular
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Downtown Crunch Burger</h3>
+                                <span class="font-bold text-primary text-base">₹249</span>
+                            </div>
+                            <p class="text-textMuted text-xs sm:text-sm leading-relaxed mb-4">Crispy patty, secret house sauce, melted cheese, crisp lettuce in toasted buns.</p>
+                        </div>
+                        <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20I%20want%20to%20order%20Downtown%20Crunch%20Burger." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-emerald-600 hover:text-white border border-zinc-800 text-textMuted text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 group-hover:text-white"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/3] relative overflow-hidden bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Decadent Shake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-400 flex items-center gap-1">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> Sweet Treat
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Belgian Chocolate Shake</h3>
+                                <span class="font-bold text-primary text-base">₹220</span>
+                            </div>
+                            <p class="text-textMuted text-xs sm:text-sm leading-relaxed mb-4">Thick, creamy milkshake blended with premium Belgian dark chocolate & whipped cream.</p>
+                        </div>
+                        <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20I%20want%20to%20order%20Belgian%20Chocolate%20Shake." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-zinc-900 hover:bg-emerald-600 hover:text-white border border-zinc-800 text-textMuted text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 group-hover:text-white"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Menu WhatsApp CTA -->
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20please%20send%20me%20your%20complete%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:border-primary font-semibold transition-all shadow-xl">
+                    <i data-lucide="file-text" class="w-5 h-5 text-primary"></i>
+                    <span>Get Complete Menu on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3 block">Why We Stand Out</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">The Downtown Experience</h2>
+                <p class="text-textMuted text-sm sm:text-base">Discover why thousands of patrons across Patna choose us for their everyday hangouts and special celebrations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-primary/40 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Cozy Ambiance</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Warm lighting, aesthetic rustic interiors, and soothing music designed for relaxed conversations.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-primary/40 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="badge-percent" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Pocket-Friendly</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Exceptional culinary quality and generous portions priced reasonably for students and families.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-primary/40 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="leaf" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Fresh Ingredients</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Farm-fresh produce, authentic spices, and daily-baked artisanal breads for superior taste.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-primary/40 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i data-lucide="award" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-3">Top Rated in Patna</h3>
+                    <p class="text-textMuted text-sm leading-relaxed">Backed by over 4,282+ glowing Google reviews from satisfied food lovers across Kankarbagh.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT / STORY SECTION -->
+    <section id="about" class="py-20 lg:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-surface border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Cafe Interior" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=600&q=80" alt="Coffee Brewing" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Happy Customers" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex flex-col items-start">
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3">Our Story</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 leading-tight break-words">
+                        Patna's Ultimate Sanctuary for Food, Coffee & Conversations
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-6">
+                        Located near Patliputra in the bustling neighborhood of Kankarbagh, Patna, <strong class="text-white">The Downtown Cafe</strong> was founded with a singular vision: to create a warm, welcoming space where friends can unwind over stellar coffee and delectable comfort food.
+                    </p>
+                    <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-8">
+                        Whether you are looking for a cozy corner to work on your laptop, a lively weekend hangout spot with your squad, or a romantic dinner setting, our rustic ambiance and attentive hospitality make every visit memorable.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full pt-6 border-t border-zinc-800 mb-8">
+                        <div>
+                            <span class="block font-syne font-bold text-3xl text-primary mb-1">4.2K+</span>
+                            <span class="text-xs sm:text-sm text-textMuted">Happy Foodies Served</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne font-bold text-3xl text-primary mb-1">50+</span>
+                            <span class="text-xs sm:text-sm text-textMuted">Menu Delicacies</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="px-8 py-4 rounded-xl bg-primary hover:bg-[#B45309] text-white font-semibold flex items-center gap-3 shadow-xl shadow-primary/25 transition-all">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span>Visit Us in Kankarbagh</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE SHOWCASE / GALLERY -->
+    <section id="gallery" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3 block">Visual Tour</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Glimpse Inside The Downtown</h2>
+                <p class="text-textMuted text-sm sm:text-base">Explore our cozy interiors, vibrant crowd, and mouth-watering creations.</p>
+            </div>
+
+            <!-- Gallery Category Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+                <button onclick="filterGallery('all')" class="gallery-tab px-6 py-2.5 rounded-xl bg-primary text-white font-semibold text-sm transition-all shadow-md">All Photos</button>
+                <button onclick="filterGallery('ambiance')" class="gallery-tab px-6 py-2.5 rounded-xl bg-surface border border-zinc-800 text-textMuted hover:text-white font-semibold text-sm transition-all">Ambiance</button>
+                <button onclick="filterGallery('food')" class="gallery-tab px-6 py-2.5 rounded-xl bg-surface border border-zinc-800 text-textMuted hover:text-white font-semibold text-sm transition-all">Food & Drinks</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item ambiance aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafe Ambiance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Cozy Interior & Seating</span>
+                    </div>
+                </div>
+                <div class="gallery-item food aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Delicious Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Wood-Fired Pizza Special</span>
+                    </div>
+                </div>
+                <div class="gallery-item ambiance aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Café Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Evening Vibe & Hangouts</span>
+                    </div>
+                </div>
+                <div class="gallery-item food aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Coffee Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Artisanal Cappuccino</span>
+                    </div>
+                </div>
+                <div class="gallery-item food aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Burger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Downtown Crunch Burger</span>
+                    </div>
+                </div>
+                <div class="gallery-item ambiance aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-zinc-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Cafe Light" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Warm & Rustic Aesthetics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 lg:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3 block">Testimonials</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-2 break-words">Loved by 4,282+ Patrons in Patna</h2>
+                    <p class="text-textMuted text-sm sm:text-base">Here is what our lovely customers have to say about their experience.</p>
+                </div>
+                <div class="flex items-center gap-3 bg-surface border border-zinc-800 px-6 py-4 rounded-2xl">
+                    <div class="flex items-center text-amber-400">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400/50"></i>
+                    </div>
+                    <div class="text-left">
+                        <span class="block font-bold text-white text-lg">4.1 / 5.0 Rating</span>
+                        <span class="text-xs text-textMuted">Based on Google Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"One of the absolute best cafes in Kankarbagh! The ambiance is so warm and cozy, perfect for evening hangouts. Their cappuccino and wood-fired pizza are must-try!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">AP</div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Abhishek Patnaik</span>
+                            <span class="text-xs text-textMuted">Local Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Great vibe, pocket-friendly prices, and super quick service on WhatsApp. Whenever friends gather in Patna, The Downtown Cafe is our default destination!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">SK</div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Sneha Kumari</span>
+                            <span class="text-xs text-textMuted">Verified Patron</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400/50"></i>
+                        </div>
+                        <p class="text-textMuted text-sm leading-relaxed mb-6">"Loved the interior lighting and music. The burgers and Belgian shakes are exceptionally delicious. Staff is very polite and welcoming."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">RM</div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Rahul Mishra</span>
+                            <span class="text-xs text-textMuted">Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3 block">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Frequently Asked Questions</h2>
+                <p class="text-textMuted text-sm sm:text-base">Everything you need to know about our cafe, reservations, and timings.</p>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Do I need to reserve a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <p class="pb-6">While walk-ins are always welcomed warmly, we recommend booking a table in advance over weekends or evenings to secure your preferred seating spot.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">What are the operating hours of The Downtown Cafe?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <p class="pb-6">We are open 7 days a week from 10:00 AM in the morning until 11:00 PM at night.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Can I order food for takeaway or delivery via WhatsApp?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <p class="pb-6">Yes! You can instantly place your takeaway order or food inquiries by messaging us on WhatsApp at +91 84070 78989.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-syne font-bold text-base sm:text-lg text-white">Do you host private birthday parties or celebrations?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-textMuted text-sm leading-relaxed">
+                        <p class="pb-6">Absolutely! We frequently host private birthday parties, anniversary celebrations, and corporate meetups. Call or WhatsApp us to discuss custom arrangements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 lg:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3 block">Get In Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Visit Us or Book a Table</h2>
+                <p class="text-textMuted text-sm sm:text-base">We are conveniently located in Kankarbagh, Patna. Drop by or reserve your table today.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Left: Contact Details & Map -->
+                <div class="flex flex-col gap-8">
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Our Location</h3>
+                                <p class="text-textMuted text-sm leading-relaxed">sports complexx, CC/25, near patliputra, P.C.Colony, East Indira Nagar, lohinagar, Kankarbagh, Patna, Bihar 800020</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                <i data-lucide="phone-call" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Phone & WhatsApp</h3>
+                                <a href="tel:+918407078989" class="text-textMuted hover:text-primary text-sm transition-colors block">+91 84070 78989</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-1">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Operating Hours</h3>
+                                <p class="text-textMuted text-sm">Monday – Sunday: 10:00 AM – 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 h-[300px] relative bg-zinc-900">
+                        <iframe title="The Downtown Cafe Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778546197368!2d85.1561!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58d3f1a2b3c5%3A0x123456789abcdef!2sThe%20Downtown%20Cafe%20Kankarbagh%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="absolute bottom-4 left-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+Downtown+Cafe+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-black/90 backdrop-blur-md text-white border border-zinc-700 hover:border-primary text-xs font-semibold flex items-center gap-2 shadow-xl">
+                                <i data-lucide="external-link" class="w-4 h-4 text-primary"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Table Reservation Form -->
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800">
+                    <h3 class="font-syne font-bold text-2xl text-white mb-2">Reserve a Table</h3>
+                    <p class="text-textMuted text-sm mb-8">Fill out the quick form below and we will instantly confirm your table booking.</p>
+
+                    <form id="reservation-form" onsubmit="handleReservation(event)" class="space-y-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Your Full Name</label>
+                            <input type="text" id="res-name" required placeholder="e.g. Aman Sharma" class="w-full bg-[#0F0E0E] border border-zinc-800 focus:border-primary rounded-xl px-4 py-3 text-white text-sm outline-none transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Phone / WhatsApp Number</label>
+                            <input type="tel" id="res-phone" required placeholder="e.g. +91 98765 43210" class="w-full bg-[#0F0E0E] border border-zinc-800 focus:border-primary rounded-xl px-4 py-3 text-white text-sm outline-none transition-colors">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Date</label>
+                                <input type="date" id="res-date" required class="w-full bg-[#0F0E0E] border border-zinc-800 focus:border-primary rounded-xl px-4 py-3 text-white text-sm outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Guests</label>
+                                <select id="res-guests" class="w-full bg-[#0F0E0E] border border-zinc-800 focus:border-primary rounded-xl px-4 py-3 text-white text-sm outline-none transition-colors">
+                                    <option value="1 Person">1 Person</option>
+                                    <option value="2 People" selected>2 People</option>
+                                    <option value="3-4 People">3-4 People</option>
+                                    <option value="5-8 People">5-8 People</option>
+                                    <option value="8+ Party">8+ Party</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-textMuted mb-2">Special Requests (Optional)</label>
+                            <textarea id="res-notes" rows="3" placeholder="Any special seating preference or occasion..." class="w-full bg-[#0F0E0E] border border-zinc-800 focus:border-primary rounded-xl px-4 py-3 text-white text-sm outline-none transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" id="res-submit-btn" class="w-full py-4 rounded-xl bg-primary hover:bg-[#B45309] text-white font-semibold flex items-center justify-center gap-2 shadow-xl shadow-primary/25 transition-all">
+                            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            <span>Confirm Table Reservation</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 max-w-md w-full rounded-2xl p-8 text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Reservation Confirmed!</h3>
+            <p id="success-modal-msg" class="text-textMuted text-sm mb-8 leading-relaxed">Thank you! Your table has been reserved successfully. We look forward to hosting you at The Downtown Cafe.</p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 rounded-xl bg-primary text-white font-semibold text-sm shadow-lg shadow-primary/25">Close & Return</button>
+        </div>
+    </div>
+
+    <!-- 11. STICKY MOBILE BOTTOM BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0F0E0E] border-t border-zinc-800 p-3 grid grid-cols-2 gap-3">
+        <a href="tel:+918407078989" class="py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white flex items-center justify-center gap-2 font-semibold text-xs shadow-lg">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918407078989?text=Hi%20The%20Downtown%20Cafe,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 font-semibold text-xs shadow-lg shadow-emerald-900/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. FOOTER -->
+    <footer class="border-t border-zinc-800 bg-surface/80 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20">
+                            <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-syne font-bold text-xl text-white">The Downtown</span>
+                    </div>
+                    <p class="text-textMuted text-sm leading-relaxed">Patna's finest cozy cafe and restaurant in Kankarbagh. Serving artisanal coffee, gourmet pizzas, and unforgettable moments.</p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-syne font-bold text-white text-base mb-2">Quick Links</h4>
+                    <a href="#menu" class="text-textMuted hover:text-primary text-sm transition-colors">Our Menu</a>
+                    <a href="#about" class="text-textMuted hover:text-primary text-sm transition-colors">About Story</a>
+                    <a href="#gallery" class="text-textMuted hover:text-primary text-sm transition-colors">Photo Gallery</a>
+                    <a href="#reviews" class="text-textMuted hover:text-primary text-sm transition-colors">Customer Reviews</a>
+                    <a href="#contact" class="text-textMuted hover:text-primary text-sm transition-colors">Table Reservation</a>
+                </div>
+
+                <!-- Col 3: Operating Hours -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-syne font-bold text-white text-base mb-2">Operating Hours</h4>
+                    <p class="text-textMuted text-sm">Monday – Sunday</p>
+                    <p class="text-white font-semibold text-sm">10:00 AM – 11:00 PM</p>
+                    <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-medium mt-1">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Open Daily
+                    </span>
+                </div>
+
+                <!-- Col 4: Contact & Social -->
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-syne font-bold text-white text-base mb-2">Connect With Us</h4>
+                    <p class="text-textMuted text-sm">Kankarbagh, Patna, Bihar 800020</p>
+                    <a href="tel:+918407078989" class="text-primary hover:underline text-sm font-semibold">+91 84070 78989</a>
+                    <div class="flex items-center gap-3 mt-2">
+                        <a href="https://wa.me/918407078989" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-textMuted hover:text-emerald-400 flex items-center justify-center transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=The+Downtown+Cafe+Kankarbagh+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 text-textMuted hover:text-primary flex items-center justify-center transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-zinc-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-textMuted gap-4">
+                <p>&copy; <span id="current-year"></span> The Downtown Cafe, Patna. All rights reserved.</p>
+                <p>Designed with warmth for Kankarbagh food lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions & Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // Gallery Filter
+        function filterCategory(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const tabs = document.querySelectorAll('.gallery-tab');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-primary', 'text-white', 'shadow-md');
+                tab.classList.add('bg-surface', 'border', 'border-zinc-800', 'text-textMuted');
+            });
+
+            event.target.classList.remove('bg-surface', 'border', 'border-zinc-800', 'text-textMuted');
+            event.target.classList.add('bg-primary', 'text-white', 'shadow-md');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        // Expose to window for inline onclick
+        window.filterGallery = filterCategory;
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Toggle current
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+        window.toggleFaq = toggleFaq;
+
+        // Reservation Form Handler with Sanitization & Modal
+        function handleReservation(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('res-name').value.trim();
+            const phone = document.getElementById('res-phone').value.trim();
+            const date = document.getElementById('res-date').value;
+            const guests = document.getElementById('res-guests').value;
+            const notes = document.getElementById('res-notes').value.trim();
+
+            if (!name || !phone || !date) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Sanitize values for safe display
+            const safeName = name.replace(/[<>]/g, '');
+            const safeDate = date.replace(/[<>]/g, '');
+            const safeGuests = guests.replace(/[<>]/g, '');
+
+            const modalMsg = document.getElementById('success-modal-msg');
+            modalMsg.textContent = `Thank you, ${safeName}! Your table for ${safeGuests} on ${safeDate} has been successfully reserved at The Downtown Cafe, Kankarbagh.`;
+
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            document.getElementById('reservation-form').reset();
+        }
+        window.handleReservation = handleReservation;
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+        window.closeSuccessModal = closeSuccessModal;
+    </script>
+</body>
+</html>
