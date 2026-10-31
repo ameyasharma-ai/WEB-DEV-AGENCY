@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Suto Cafe - Patna's Most Loved Cafe & Social Hub</title>
+    <meta name="description" content="Experience Patna's most loved cafe at K.P Mall, Fraser Road. Enjoy specialty coffee, continental delicacies, and stunning ambiance. Reserve your table via WhatsApp!">
+    
+    <!-- Security Header / CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafeBg: '#121212',
+                        cafeSurface: '#1E1B18',
+                        cafeGold: '#D4AF37',
+                        cafeGoldHover: '#E6C657',
+                        cafeEspresso: '#2C1D18',
+                        cafeText: '#FAFAFA',
+                        cafeMuted: '#A39B95'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Smooth Scrolling & Custom Scrollbar */
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: #121212;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121212; }
+        ::-webkit-scrollbar-thumb { background: #2C1D18; border-radius: 4px; border: 1px solid #D4AF37/20; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#121212] text-[#FAFAFA] font-sans antialiased pb-28 md:pb-0 overflow-x-hidden">
+
+    <!-- BACKDROP OVERLAY FOR MOBILE MENU -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300" aria-hidden="true"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <aside aria-label="Announcement" class="bg-[#1E1B18] border-b border-zinc-800 text-xs sm:text-sm py-2 px-4 text-center z-50 relative">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 text-cafeMuted">
+            <span class="flex items-center gap-1.5 text-cafeGold font-medium">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i> Open Daily: 11:00 AM – 11:00 PM
+            </span>
+            <span class="hidden sm:inline text-zinc-600">|</span>
+            <span class="text-zinc-300">📍 K.P Mall, Buddh Marg, Patna</span>
+            <span class="hidden sm:inline text-zinc-600">|</span>
+            <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="text-cafeGold hover:underline font-medium inline-flex items-center gap-1">
+                Instant Booking <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- 100% SOLID OPAQUE STICKY HEADER -->
+    <header class="sticky top-0 z-40 bg-[#121212] border-b border-zinc-800 shadow-xl">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cafeGold rounded-lg p-1">
+                <div class="w-10 h-10 rounded-xl bg-cafeEspresso border border-cafeGold/40 flex items-center justify-center text-cafeGold shadow-md group-hover:scale-105 transition-transform">
+                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-xl font-bold tracking-wide text-white group-hover:text-cafeGold transition-colors">SUTO CAFE</span>
+                    <span class="text-[10px] tracking-widest text-cafeGold uppercase font-semibold">Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-cafeMuted">
+                <a href="#menu" class="hover:text-cafeGold transition-colors">Menu</a>
+                <a href="#why-us" class="hover:text-cafeGold transition-colors">Why Us</a>
+                <a href="#ambiance" class="hover:text-cafeGold transition-colors">Ambiance</a>
+                <a href="#reviews" class="hover:text-cafeGold transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-cafeGold transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-cafeGold transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Header Action CTAs -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+919155104888" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 hover:border-cafeGold text-sm font-medium text-white transition-colors bg-[#1E1B18]">
+                    <i data-lucide="phone" class="w-4 h-4 text-cafeGold"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cafeGold hover:bg-cafeGoldHover text-sm font-semibold text-cafeEspresso shadow-lg hover:shadow-cafeGold/20 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Reserve Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-cafeSurface border border-zinc-800 text-white hover:text-cafeGold focus:outline-none focus:ring-2 focus:ring-cafeGold min-w-[48px] min-h-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#121212] border-l border-zinc-800 rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800 mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-cafeEspresso border border-cafeGold/40 flex items-center justify-center text-cafeGold">
+                        <i data-lucide="coffee" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-lg font-bold text-white">SUTO CAFE</span>
+                        <p class="text-[10px] text-cafeGold uppercase tracking-wider">Patna</p>
+                    </div>
+                </div>
+                <button id="close-drawer" aria-label="Close Mobile Menu" class="p-2.5 rounded-lg bg-cafeSurface text-cafeMuted hover:text-white min-w-[48px] min-h-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Nav Links -->
+            <nav class="flex flex-col gap-4 text-base font-medium text-zinc-300">
+                <a href="#menu" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-cafeSurface hover:text-cafeGold transition-colors">
+                    <span>Explore Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                </a>
+                <a href="#why-us" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-cafeSurface hover:text-cafeGold transition-colors">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                </a>
+                <a href="#ambiance" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-cafeSurface hover:text-cafeGold transition-colors">
+                    <span>Ambiance Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-cafeSurface hover:text-cafeGold transition-colors">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                </a>
+                <a href="#faq" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-cafeSurface hover:text-cafeGold transition-colors">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl hover:bg-cafeSurface hover:text-cafeGold transition-colors">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-cafeGold text-cafeEspresso font-semibold text-center flex items-center justify-center gap-2 shadow-lg min-h-[48px]">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Reserve on WhatsApp</span>
+            </a>
+            <a href="tel:+919155104888" class="w-full py-3.5 px-4 rounded-xl bg-cafeSurface border border-zinc-700 text-white font-medium text-center flex items-center justify-center gap-2 min-h-[48px]">
+                <i data-lucide="phone" class="w-5 h-5 text-cafeGold"></i>
+                <span>Call +91 91551 04888</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-cafeGold/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cafeSurface border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center gap-1 text-cafeGold">
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.8★ Rating <span class="text-cafeMuted font-normal">(109+ Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-white leading-[1.15] mb-6 break-words">
+                        Patna’s Most Loved <span class="gold-gradient-text">Cafe & Social Hub</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-cafeMuted leading-relaxed mb-8 max-w-2xl break-words">
+                        Spread across 4 stunning floors at K.P Mall, Buddh Marg. Experience handcrafted artisan coffee, decadent continental delicacies, and breathtaking rooftop city views in the heart of Patna.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20instantly%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-cafeGold hover:bg-cafeGoldHover text-cafeEspresso font-bold text-base shadow-xl hover:shadow-cafeGold/25 transition-all transform hover:-translate-y-0.5 min-h-[48px]">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Reserve on WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-cafeSurface hover:bg-zinc-800 border border-zinc-700 text-white font-semibold text-base transition-all min-h-[48px]">
+                            <span>Explore Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-cafeGold"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Tag -->
+                    <div class="mt-8 flex items-center gap-2 text-xs sm:text-sm text-cafeMuted">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-cafeGold flex-shrink-0"></i>
+                        <span>4-Floor, Suto Cafe, K.P Mall, Buddh Marg, Fraser Road Area, Patna</span>
+                    </div>
+                </div>
+
+                <!-- Hero Image Grid / Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+                        <!-- Decorative Frame -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-cafeGold/30 to-cafeEspresso rounded-2xl blur-lg opacity-75"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden bg-cafeSurface border border-zinc-800 shadow-2xl aspect-[4/3] sm:aspect-square">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Suto Cafe Interior and Coffee" class="w-full h-full object-cover">
+                            
+                            <!-- Floating Card Badge -->
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-cafeEspresso/90 backdrop-blur-md border border-cafeGold/30 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-cafeGold/20 flex items-center justify-center text-cafeGold">
+                                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-cafeMuted">Vibe Check</p>
+                                        <h4 class="text-sm font-bold text-white">4-Floor Luxury Ambiance</h4>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-cafeGold text-cafeEspresso">Open Now</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-[#1E1B18] py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+                <div class="p-4 rounded-xl bg-cafeBg/50 border border-zinc-800/80">
+                    <div class="flex items-center justify-center gap-1 text-cafeGold mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-cafeGold"></i>
+                        <span class="text-2xl sm:text-3xl font-bold font-serif text-white">4.8</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-cafeMuted">Google Rating (109+ Reviews)</p>
+                </div>
+                <div class="p-4 rounded-xl bg-cafeBg/50 border border-zinc-800/80">
+                    <div class="text-2xl sm:text-3xl font-bold font-serif text-white text-cafeGold mb-1">4 Floors</div>
+                    <p class="text-xs sm:text-sm text-cafeMuted">Massive Social Hub Space</p>
+                </div>
+                <div class="p-4 rounded-xl bg-cafeBg/50 border border-zinc-800/80">
+                    <div class="text-2xl sm:text-3xl font-bold font-serif text-white text-cafeGold mb-1">K.P Mall</div>
+                    <p class="text-xs sm:text-sm text-cafeMuted">Prime Buddh Marg Location</p>
+                </div>
+                <div class="p-4 rounded-xl bg-cafeBg/50 border border-zinc-800/80">
+                    <div class="text-2xl sm:text-3xl font-bold font-serif text-white text-cafeGold mb-1">100%</div>
+                    <p class="text-xs sm:text-sm text-cafeMuted">Handcrafted Fresh Quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED MENU CATEGORIES GRID -->
+    <section id="menu" class="py-20 md:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-cafeGold font-semibold mb-3 block">Culinary Excellence</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">
+                    Our Signature Menu Categories
+                </h2>
+                <p class="text-sm sm:text-base text-cafeMuted">
+                    From aromatic specialty coffee to mouth-watering continental treats and decadent desserts crafted by expert chefs.
+                </p>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                
+                <!-- Category 1: Specialty Coffee -->
+                <div class="bg-cafeSurface rounded-2xl border border-zinc-800 hover:border-cafeGold/50 transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-xl">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Specialty Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cafeSurface via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-cafeEspresso/90 border border-cafeGold/30 text-cafeGold">Bestseller</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Specialty Coffee</h3>
+                            <p class="text-sm text-cafeMuted mb-4 leading-relaxed">
+                                Handcrafted cappuccinos, rich lattes, cold brews, and signature mocha blends roasted to absolute perfection.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Cappuccino</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Hazelnut Latte</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Cold Brew</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Specialty%20Coffee%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cafeBg hover:bg-cafeGold hover:text-cafeEspresso text-white text-sm font-semibold text-center flex items-center justify-center gap-2 border border-zinc-800 hover:border-cafeGold transition-all min-h-[48px]">
+                            <span>Inquire / Order</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 2: Continental Delicacies -->
+                <div class="bg-cafeSurface rounded-2xl border border-zinc-800 hover:border-cafeGold/50 transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-xl">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Continental Delicacies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cafeSurface via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-cafeEspresso/90 border border-cafeGold/30 text-cafeGold">Chef Special</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Continental Fare</h3>
+                            <p class="text-sm text-cafeMuted mb-4 leading-relaxed">
+                                Wood-fired pizzas, creamy pastas, sizzling appetizers, and wholesome gourmet sandwiches.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Wood-Fired Pizza</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">White Sauce Pasta</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Bruschetta</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Continental%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cafeBg hover:bg-cafeGold hover:text-cafeEspresso text-white text-sm font-semibold text-center flex items-center justify-center gap-2 border border-zinc-800 hover:border-cafeGold transition-all min-h-[48px]">
+                            <span>Inquire / Order</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 3: Fast Food & Grills -->
+                <div class="bg-cafeSurface rounded-2xl border border-zinc-800 hover:border-cafeGold/50 transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-xl">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Fast Food & Grills" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cafeSurface via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-cafeEspresso/90 border border-cafeGold/30 text-cafeGold">Popular</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Fast Food & Grills</h3>
+                            <p class="text-sm text-cafeMuted mb-4 leading-relaxed">
+                                Juicy burgers, loaded fries, crispy nachos, and delectable quick bites for group hangouts.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Gourmet Burgers</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Loaded Fries</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Crispy Nachos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Fast%20Food%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cafeBg hover:bg-cafeGold hover:text-cafeEspresso text-white text-sm font-semibold text-center flex items-center justify-center gap-2 border border-zinc-800 hover:border-cafeGold transition-all min-h-[48px]">
+                            <span>Inquire / Order</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 4: Desserts & Shakes -->
+                <div class="bg-cafeSurface rounded-2xl border border-zinc-800 hover:border-cafeGold/50 transition-all duration-300 flex flex-col justify-between overflow-hidden group shadow-xl">
+                    <div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Desserts & Shakes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cafeSurface via-transparent to-transparent"></div>
+                            <span class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-cafeEspresso/90 border border-cafeGold/30 text-cafeGold">Sweet Tooth</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold font-serif text-white mb-2">Desserts & Shakes</h3>
+                            <p class="text-sm text-cafeMuted mb-4 leading-relaxed">
+                                Decadent chocolate brownies, velvety cheesecakes, thick milkshakes, and refreshing mocktails.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-6">
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Sizzling Brownie</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Cheesecake</span>
+                                <span class="text-xs px-2.5 py-1 rounded-lg bg-cafeBg text-zinc-300 border border-zinc-800">Oreo Shake</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20Desserts%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-cafeBg hover:bg-cafeGold hover:text-cafeEspresso text-white text-sm font-semibold text-center flex items-center justify-center gap-2 border border-zinc-800 hover:border-cafeGold transition-all min-h-[48px]">
+                            <span>Inquire / Order</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-20 md:py-28 bg-[#1E1B18] border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-cafeGold font-semibold mb-3 block">The Suto Experience</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">
+                    Why Patna Chooses Suto Cafe
+                </h2>
+                <p class="text-sm sm:text-base text-cafeMuted">
+                    We combine luxurious warm aesthetics, prime central accessibility, and unparalleled hospitality.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-cafeBg border border-zinc-800 hover:border-cafeGold/40 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center text-cafeGold mb-6 shadow-md">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Prime Location</h3>
+                    <p class="text-sm text-cafeMuted leading-relaxed">
+                        Centrally located at K.P Mall, Buddh Marg, Fraser Road Area, Patna. Easily accessible with ample parking and smooth connectivity from all parts of the city.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-cafeBg border border-zinc-800 hover:border-cafeGold/40 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center text-cafeGold mb-6 shadow-md">
+                        <i data-lucide="layout" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">4-Floor Luxury Ambiance</h3>
+                    <p class="text-sm text-cafeMuted leading-relaxed">
+                        Spread across 4 distinct levels featuring aesthetic private booths, cozy corner seating, and panoramic rooftop views perfect for dates and hangouts.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-cafeBg border border-zinc-800 hover:border-cafeGold/40 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center text-cafeGold mb-6 shadow-md">
+                        <i data-lucide="award" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Top-Rated Hospitality</h3>
+                    <p class="text-sm text-cafeMuted leading-relaxed">
+                        Backed by a stellar 4.8★ rating from over 109+ delighted Google reviewers who praise our prompt service, warm staff, and premium culinary quality.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AMBIANCE & GALLERY SECTION -->
+    <section id="ambiance" class="py-20 md:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-cafeGold font-semibold mb-3 block">Visual Journey</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">
+                    Immerse in Suto Ambiance
+                </h2>
+                <p class="text-sm sm:text-base text-cafeMuted">
+                    A glimpse into our vibrant 4-floor spaces, cozy corners, and artisanal culinary masterpieces.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cafeSurface border border-zinc-800 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Cafe Interior Seating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-sm font-semibold text-white">Cozy Indoor Seating</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cafeSurface border border-zinc-800 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Barista Coffee Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-sm font-semibold text-white">Artisan Coffee Bar</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cafeSurface border border-zinc-800 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Rooftop Dining View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-sm font-semibold text-white">Rooftop & Social Area</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cafeSurface border border-zinc-800 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Wood Fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-sm font-semibold text-white">Signature Wood-Fired Delights</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cafeSurface border border-zinc-800 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" alt="Evening Vibe at Suto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-sm font-semibold text-white">Stunning Evening Lighting</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-cafeSurface border border-zinc-800 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80" alt="Gourmet Continental Dishes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-sm font-semibold text-white">Gourmet Platters</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 md:py-28 bg-[#1E1B18] border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-cafeGold font-semibold mb-3 block">Testimonials</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-2 break-words">
+                        Loved by 100+ Patnaites
+                    </h2>
+                    <p class="text-sm sm:text-base text-cafeMuted">
+                        Authentic Google reviews from our valued patrons who visit us at K.P Mall.
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-3 bg-cafeBg px-5 py-3 rounded-2xl border border-zinc-800">
+                    <div class="flex text-cafeGold">
+                        <i data-lucide="star" class="w-5 h-5 fill-cafeGold"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-cafeGold"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-cafeGold"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-cafeGold"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-cafeGold"></i>
+                    </div>
+                    <div>
+                        <span class="text-sm font-bold text-white block">4.8 / 5.0 Rating</span>
+                        <span class="text-xs text-cafeMuted">Based on 109+ Google Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-cafeBg p-8 rounded-2xl border border-zinc-800 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-cafeGold mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6 leading-relaxed">
+                            "One of the best cafes in Patna! The 4-floor layout is extremely spacious and aesthetically pleasing. Their specialty coffee and pizzas are top-notch. Perfect place for hangouts."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center font-bold text-cafeGold text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Ankit Kumar</h4>
+                            <span class="text-xs text-cafeMuted">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-cafeBg p-8 rounded-2xl border border-zinc-800 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-cafeGold mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6 leading-relaxed">
+                            "Amazing ambiance at K.P Mall! Fraser Road area needed a premium social hub like Suto Cafe. Great service, delicious food, and very polite staff. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center font-bold text-cafeGold text-sm">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Priya Singh</h4>
+                            <span class="text-xs text-cafeMuted">Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-cafeBg p-8 rounded-2xl border border-zinc-800 flex flex-col justify-between shadow-lg">
+                    <div>
+                        <div class="flex items-center gap-1 text-cafeGold mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-cafeGold"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 italic mb-6 leading-relaxed">
+                            "Visited with friends last weekend. The rooftop view of Buddh Marg is mesmerizing. Their cold brews and cheesecakes are absolute must-try items. Will definitely visit again!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center font-bold text-cafeGold text-sm">
+                            RS
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Rahul Sinha</h4>
+                            <span class="text-xs text-cafeMuted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section id="faq" class="py-20 md:py-28 relative">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-widest text-cafeGold font-semibold mb-3 block">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-sm sm:text-base text-cafeMuted">
+                    Everything you need to know about visiting Suto Cafe at K.P Mall, Patna.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-cafeSurface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white focus:outline-none">
+                        <span>How can I reserve a table at Suto Cafe?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeGold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-cafeMuted leading-relaxed">
+                        You can instantly reserve a table by clicking our "Reserve on WhatsApp" button or calling us directly at +91 91551 04888. We recommend advance booking for weekends and evening slots.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-cafeSurface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white focus:outline-none">
+                        <span>What are the operating hours of Suto Cafe?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeGold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-cafeMuted leading-relaxed">
+                        We are open every single day from 11:00 AM to 11:00 PM, welcoming guests for lunch, evening coffee, dinner, and late-night hangouts.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-cafeSurface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white focus:outline-none">
+                        <span>Is parking available at K.P Mall?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeGold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-cafeMuted leading-relaxed">
+                        Yes! Being located at K.P Mall on Buddh Marg, Fraser Road Area, visitors enjoy secure and ample parking facilities for both cars and two-wheelers.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-cafeSurface rounded-2xl border border-zinc-800 overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white focus:outline-none">
+                        <span>Do you host private parties or birthday celebrations?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafeGold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-cafeMuted leading-relaxed">
+                        Absolutely! With our massive 4-floor layout, we frequently host birthday parties, anniversary dinners, corporate meetups, and private celebrations. Contact us on WhatsApp to discuss customized packages.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 md:py-28 bg-[#1E1B18] border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-cafeGold font-semibold mb-3 block">Visit & Connect</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">
+                    Location & Table Reservation
+                </h2>
+                <p class="text-sm sm:text-base text-cafeMuted">
+                    Drop by our 4-floor cafe at K.P Mall or drop us a message to lock in your table.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Hours -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    
+                    <div class="space-y-6">
+                        <div class="p-6 rounded-2xl bg-cafeBg border border-zinc-800">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center text-cafeGold flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-bold text-white mb-1">Address</h3>
+                                    <p class="text-sm text-cafeMuted leading-relaxed">
+                                        4-FLOOR, SUTO CAFE, K.P Mall, 505/2, Buddh Marg, Fraser Road Area, Patna, Bihar 800001
+                                    </p>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Suto+Cafe+K.P+Mall+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-cafeGold hover:underline font-semibold mt-3">
+                                        <span>Get Directions on Google Maps</span>
+                                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-cafeBg border border-zinc-800">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center text-cafeGold flex-shrink-0">
+                                    <i data-lucide="phone-call" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-bold text-white mb-1">Phone & WhatsApp</h3>
+                                    <a href="tel:+919155104888" class="text-sm text-cafeMuted hover:text-white transition-colors block mb-1">+91 91551 04888</a>
+                                    <span class="text-xs text-cafeGold font-medium">Available for instant WhatsApp reservations</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-cafeBg border border-zinc-800">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-cafeEspresso border border-cafeGold/30 flex items-center justify-center text-cafeGold flex-shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-bold text-white mb-1">Opening Hours</h3>
+                                    <p class="text-sm text-cafeMuted">Monday – Sunday: <span class="text-white font-medium">11:00 AM – 11:00 PM</span></p>
+                                    <span class="text-xs text-cafeGold font-medium">Open All 7 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick WhatsApp CTA Banner -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-br from-cafeEspresso to-cafeBg border border-cafeGold/40 text-center">
+                        <h4 class="text-lg font-bold font-serif text-white mb-2">Want Instant Confirmation?</h4>
+                        <p class="text-xs text-cafeMuted mb-4">Skip the form and chat with our frontdesk team directly on WhatsApp.</p>
+                        <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl bg-cafeGold text-cafeEspresso font-bold text-sm shadow-lg hover:bg-cafeGoldHover transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Chat on WhatsApp (+91 91551 04888)</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Google Maps Embed & Reservation Form -->
+                <div class="lg:col-span-7 flex flex-col space-y-8">
+                    
+                    <!-- Google Maps Iframe -->
+                    <div class="w-full h-[320px] sm:h-[400px] rounded-2xl overflow-hidden border border-zinc-800 shadow-xl bg-cafeBg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788481358!2d85.1312!3d25.6067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58ce2b111111%3A0x1111111111111111!2sSuto%20Cafe%20K.P%20Mall%20Patna!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Suto Cafe Patna Location Map">
+                        </iframe>
+                    </div>
+
+                    <!-- Table Reservation Form -->
+                    <div class="p-8 rounded-2xl bg-cafeBg border border-zinc-800 shadow-xl">
+                        <h3 class="text-xl font-bold font-serif text-white mb-2">Request Table Reservation</h3>
+                        <p class="text-sm text-cafeMuted mb-6">Fill in your details below and we will confirm your table instantly.</p>
+                        
+                        <form id="reservation-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-1.5">Your Name *</label>
+                                    <input type="text" id="res-name" required class="w-full bg-cafeSurface border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-cafeGold transition-colors" placeholder="e.g. Aman Sharma">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-1.5">Phone Number *</label>
+                                    <input type="tel" id="res-phone" required class="w-full bg-cafeSurface border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-cafeGold transition-colors" placeholder="e.g. +91 98765 43210">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-1.5">Number of Guests *</label>
+                                    <select id="res-guests" class="w-full bg-cafeSurface border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cafeGold transition-colors">
+                                        <option value="2 Guests">2 Guests (Couple Table)</option>
+                                        <option value="4 Guests">4 Guests (Standard)</option>
+                                        <option value="6 Guests">6 Guests (Group)</option>
+                                        <option value="8+ Guests">8+ Guests (Party/Large)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-1.5">Preferred Date & Time *</label>
+                                    <input type="text" id="res-time" required class="w-full bg-cafeSurface border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-cafeGold transition-colors" placeholder="e.g. Today at 7:30 PM">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-1.5">Special Request (Optional)</label>
+                                <textarea id="res-msg" rows="3" class="w-full bg-cafeSurface border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-cafeGold transition-colors" placeholder="e.g. Rooftop seating preference, birthday surprise..."></textarea>
+                            </div>
+                            <button type="submit" id="res-submit-btn" class="w-full py-4 px-6 rounded-xl bg-cafeGold hover:bg-cafeGoldHover text-cafeEspresso font-bold text-base shadow-lg transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span>Confirm Reservation Request</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-cafeSurface border border-cafeGold/40 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl relative transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 rounded-full bg-cafeGold/20 text-cafeGold flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-2">Reservation Received!</h3>
+            <p id="modal-desc" class="text-sm text-cafeMuted mb-8 leading-relaxed">
+                Thank you! Your table request has been registered. We are redirecting you to WhatsApp to finalize your booking instantly with our front desk.
+            </p>
+            <button id="close-modal-btn" class="w-full py-3.5 px-6 rounded-xl bg-cafeGold hover:bg-cafeGoldHover text-cafeEspresso font-bold text-sm transition-all min-h-[48px]">
+                Got It, Let's Chat
+            </button>
+        </div>
+    </div>
+
+    <!-- STICKY MOBILE BOTTOM ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 shadow-2xl flex items-center gap-3">
+        <a href="tel:+919155104888" class="flex-1 py-3 px-4 rounded-xl bg-cafeSurface border border-zinc-700 text-white font-semibold text-sm text-center flex items-center justify-center gap-2 min-h-[48px]">
+            <i data-lucide="phone" class="w-4 h-4 text-cafeGold"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20instantly%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-cafeGold text-cafeEspresso font-bold text-sm text-center flex items-center justify-center gap-2 shadow-lg min-h-[48px]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-cafeBg border-t border-zinc-800 py-16 text-cafeMuted">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-cafeEspresso border border-cafeGold/40 flex items-center justify-center text-cafeGold">
+                            <i data-lucide="coffee" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white tracking-wide">SUTO CAFE</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-cafeMuted leading-relaxed">
+                        Patna’s premier 4-floor social hub at K.P Mall, Buddh Marg. Handcrafted coffee, continental cuisine, and warm luxury ambiance.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Suto+Cafe+K.P+Mall+Patna" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-10 h-10 rounded-lg bg-cafeSurface border border-zinc-800 hover:border-cafeGold text-cafeMuted hover:text-cafeGold flex items-center justify-center transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/919155104888" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-lg bg-cafeSurface border border-zinc-800 hover:border-cafeGold text-cafeMuted hover:text-cafeGold flex items-center justify-center transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919155104888" aria-label="Phone" class="w-10 h-10 rounded-lg bg-cafeSurface border border-zinc-800 hover:border-cafeGold text-cafeMuted hover:text-cafeGold flex items-center justify-center transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#menu" class="hover:text-cafeGold transition-colors">Explore Menu</a></li>
+                        <li><a href="#why-us" class="hover:text-cafeGold transition-colors">Why Choose Us</a></li>
+                        <li><a href="#ambiance" class="hover:text-cafeGold transition-colors">Ambiance Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-cafeGold transition-colors">Google Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-cafeGold transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Operating Hours -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Opening Hours</h4>
+                    <ul class="space-y-2 text-sm text-cafeMuted">
+                        <li><strong class="text-white">Monday:</strong> 11:00 AM – 11:00 PM</li>
+                        <li><strong class="text-white">Tuesday:</strong> 11:00 AM – 11:00 PM</li>
+                        <li><strong class="text-white">Wednesday:</strong> 11:00 AM – 11:00 PM</li>
+                        <li><strong class="text-white">Thursday:</strong> 11:00 AM – 11:00 PM</li>
+                        <li><strong class="text-white">Friday:</strong> 11:00 AM – 11:00 PM</li>
+                        <li><strong class="text-white">Saturday:</strong> 11:00 AM – 11:00 PM</li>
+                        <li><strong class="text-white">Sunday:</strong> 11:00 AM – 11:00 PM</li>
+                    </ul>
+                </div>
+
+                <!-- Location & Contact -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Visit Us</h4>
+                    <p class="text-sm text-cafeMuted mb-3 leading-relaxed">
+                        4-FLOOR, SUTO CAFE, K.P Mall, 505/2, Buddh Marg, Fraser Road Area, Patna, Bihar 800001
+                    </p>
+                    <p class="text-sm text-white font-medium mb-1">+91 91551 04888</p>
+                    <p class="text-xs text-cafeGold">4.8★ Rating (109+ Google Reviews)</p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between text-xs text-cafeMuted gap-4 text-center sm:text-left">
+                <p>&copy; <span id="current-year"></span> Suto Cafe - Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:text-cafeGold transition-colors">Privacy Policy</a>
+                    <a href="#contact" class="hover:text-cafeGold transition-colors">Terms of Service</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Suto+Cafe+K.P+Mall+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-cafeGold transition-colors">Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC & INTERACTIONS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle with Backdrop & Scroll Lock
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawer = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu(open) {
+            if (open) {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        closeDrawer.addEventListener('click', () => toggleMobileMenu(false));
+        menuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-btn');
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('[data-lucide="chevron-down"]');
+
+            btn.addEventListener('click', () => {
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all FAQs
+                faqItems.forEach(otherItem => {
+                    otherItem.querySelector('.faq-content').classList.add('hidden');
+                    otherItem.querySelector('[data-lucide="chevron-down"]').style.transform = 'rotate(0deg)';
+                });
+
+                // Toggle clicked FAQ
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Interactive Reservation Form Submission & Success Modal
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        let whatsappRedirectUrl = '';
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Sanitize inputs
+            const name = encodeURIComponent(document.getElementById('res-name').value.trim());
+            const phone = encodeURIComponent(document.getElementById('res-phone').value.trim());
+            const guests = encodeURIComponent(document.getElementById('res-guests').value);
+            const time = encodeURIComponent(document.getElementById('res-time').value.trim());
+            const msg = encodeURIComponent(document.getElementById('res-msg').value.trim());
+
+            whatsappRedirectUrl = `https://wa.me/919155104888?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20confirm%20my%20table%20reservation.%0A%0AName:%20${name}%0APhone:%20${phone}%0AGuests:%20${guests}%0ATime:%20${time}%0ANotes:%20${msg}`;
+
+            // Show Success Modal
+            successModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            if (whatsappRedirectUrl) {
+                window.open(whatsappRedirectUrl, '_blank', 'noopener,noreferrer');
+            }
+        });
+
+        // Close modal on backdrop click
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+                if (whatsappRedirectUrl) {
+                    window.open(whatsappRedirectUrl, '_blank', 'noopener,noreferrer');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

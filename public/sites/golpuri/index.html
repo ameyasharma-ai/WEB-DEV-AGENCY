@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Golpuri Cafe | Best Street Cafe & Chaat in Buddha Colony, Patna</title>
+    <meta name="description" content="Experience Patna's finest street cafe at Golpuri Cafe, Chakaram More, Buddha Colony. Enjoy signature golgappe, chatpata chaats, quick bites, and refreshing beverages. Order via WhatsApp or visit us today!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#121212',
+                        surface: '#1E1E1E',
+                        primary: '#D97706',
+                        primaryHover: '#B45309',
+                        secondary: '#C2410C',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A3A3A3',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#121212] text-[#FAFAFA] font-inter overflow-x-hidden pb-28 md:pb-0 antialiased selection:bg-amber-600 selection:text-white">
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-700 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative">
+        <span>🔥 Patna's Favorite Street Cafe! Order directly on WhatsApp for instant takeaway & delivery &rarr;</span>
+        <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20place%20an%20order!" target="_blank" rel="noopener noreferrer" class="underline font-bold ml-1 hover:text-amber-200 transition-colors">Order Now</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-[#121212] border-b border-zinc-800 shadow-xl">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-syne font-extrabold text-xl sm:text-2xl shadow-md group-hover:scale-105 transition-transform">
+                    G
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-amber-500 transition-colors">Golpuri Cafe</span>
+                    <span class="text-[10px] sm:text-xs text-zinc-400 tracking-wider uppercase font-medium">Buddha Colony, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#story" class="hover:text-amber-500 transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Find Us</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919430050098" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 bg-zinc-900 text-zinc-200 text-sm font-semibold hover:bg-zinc-800 hover:border-amber-500/50 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>Call Us</span>
+                </a>
+                <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20order!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold shadow-lg shadow-amber-600/20 hover:scale-105 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp Order</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-amber-500 focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Solid Mobile Drawer Menu -->
+    <div id="mobile-menu" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-t border-zinc-800 text-white p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto rounded-tl-2xl">
+        <div class="flex flex-col gap-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-syne font-extrabold text-lg">G</div>
+                    <span class="font-syne font-bold text-lg text-white">Golpuri Cafe</span>
+                </div>
+                <button id="close-menu" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 font-medium text-base text-zinc-300">
+                <a href="#menu" class="mobile-nav-link flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <i data-lucide="utensils" class="w-5 h-5 text-amber-500"></i> Menu & Specials
+                </a>
+                <a href="#story" class="mobile-nav-link flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5 text-amber-500"></i> Our Story
+                </a>
+                <a href="#gallery" class="mobile-nav-link flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <i data-lucide="image" class="w-5 h-5 text-amber-500"></i> Food Gallery
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> Google Reviews
+                </a>
+                <a href="#faq" class="mobile-nav-link flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <i data-lucide="help-circle" class="w-5 h-5 text-amber-500"></i> FAQ
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i> Location & Hours
+                </a>
+            </nav>
+        </div>
+
+        <div class="flex flex-col gap-3 pt-6 border-t border-zinc-800">
+            <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20order!" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20 text-center">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Order on WhatsApp</span>
+            </a>
+            <a href="tel:+919430050098" class="w-full py-3.5 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-200 font-semibold flex items-center justify-center gap-2 text-center">
+                <i data-lucide="phone" class="w-5 h-5 text-amber-500"></i>
+                <span>Call +91 94300 50098</span>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-[#121212]">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left">
+                        <!-- Rating Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-sm">
+                            <div class="flex items-center text-amber-500">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500 opacity-80"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-white">4.4 ★</span>
+                            <span class="text-zinc-500 text-xs">•</span>
+                            <span class="text-xs sm:text-sm text-zinc-400">109+ Google Reviews</span>
+                        </div>
+
+                        <!-- Main H1 Heading -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                            Patna’s Ultimate <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Street Cafe & Chaat</span> Destination!
+                        </h1>
+
+                        <!-- Subtitle -->
+                        <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                            Crunchy golgappe, mouth-watering specialty chaats, quick bites, and refreshing beverages right in front of Shanti Girls Hostel, Chakaram More, Buddha Colony, Patna.
+                        </p>
+
+                        <!-- CTA Group -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                            <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20want%20to%20order%20food!" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 text-white font-bold text-base shadow-xl shadow-amber-600/30 hover:shadow-amber-600/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                            <a href="#menu" class="px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-base hover:bg-zinc-800 hover:border-amber-500/50 transition-all flex items-center justify-center gap-2">
+                                <span>Explore Menu</span>
+                                <i data-lucide="arrow-down" class="w-4 h-4 text-amber-500"></i>
+                            </a>
+                        </div>
+
+                        <!-- Highlights mini banner -->
+                        <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-zinc-800/80 w-full max-w-lg">
+                            <div>
+                                <span class="block font-syne font-bold text-xl sm:text-2xl text-amber-500">100%</span>
+                                <span class="text-xs text-zinc-400">Hygenic & Fresh</span>
+                            </div>
+                            <div>
+                                <span class="block font-syne font-bold text-xl sm:text-2xl text-amber-500">4.4★</span>
+                                <span class="text-xs text-zinc-400">Top Rated Cafe</span>
+                            </div>
+                            <div>
+                                <span class="block font-syne font-bold text-xl sm:text-2xl text-amber-500">Super</span>
+                                <span class="text-xs text-zinc-400">Pocket Friendly</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image Grid / Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Delicious Golgappe and Chaat at Golpuri Cafe Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-600/20 flex items-center justify-center text-amber-500">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Buddha Colony, Patna</h4>
+                                        <p class="text-xs text-zinc-400">Infront of Shanti Girls Hostel</p>
+                                    </div>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Golpuri+Cafe+Buddha+Colony+Patna" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 text-white text-xs font-semibold hover:bg-amber-700 transition-colors">
+                                    Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="border-y border-zinc-800 bg-zinc-900/50 py-6">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center gap-1 text-amber-500 mb-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                            <span class="font-syne font-bold text-xl text-white">4.4 / 5.0</span>
+                        </div>
+                        <span class="text-xs text-zinc-400">Google Customer Rating</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-syne font-bold text-xl text-amber-500 mb-1">109+</span>
+                        <span class="text-xs text-zinc-400">Verified Local Reviews</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-syne font-bold text-xl text-amber-500 mb-1">Chakaram More</span>
+                        <span class="text-xs text-zinc-400">Prime Buddha Colony Location</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-syne font-bold text-xl text-amber-500 mb-1">Instant</span>
+                        <span class="text-xs text-zinc-400">WhatsApp Takeaway Orders</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services / Menu Grid -->
+        <section id="menu" class="py-20 md:py-28 bg-[#121212]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-amber-500 text-sm font-semibold uppercase tracking-wider block mb-2">Our Delicious Offerings</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                        Explore Our Popular <span class="text-amber-500">Menu</span>
+                    </h2>
+                    <p class="text-zinc-400 text-base">
+                        From crispy tangy golgappe to cheesy quick bites and refreshing drinks, satisfy all your evening cravings at Golpuri Cafe.
+                    </p>
+                </div>
+
+                <!-- Menu Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Menu Item 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                        <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80" alt="Signature Golgappe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-amber-600 text-white text-xs font-bold shadow-md">Best Seller</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="font-syne font-bold text-lg text-white">Signature Golgappe</h3>
+                                    <span class="text-amber-500 font-bold font-syne">₹40 / plate</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                                    Crispy semolina & wheat puris served with chilled flavored jaljeera water, spicy aloo-chana stuffing, and sweet tamarind chutney.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20order%20Signature%20Golgappe!" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Order via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                        <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="Specialty Chaats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-orange-600 text-white text-xs font-bold shadow-md">Must Try</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="font-syne font-bold text-lg text-white">Specialty Chaats</h3>
+                                    <span class="text-amber-500 font-bold font-syne">₹60 - ₹90</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                                    Dahi Puri, Papdi Chaat, and Raj Kachori loaded with creamy curd, sev, pomegranate, and tangy chutneys.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20order%20Specialty%20Chaats!" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Order via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                        <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Quick Bites & Burgers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-800 text-amber-400 border border-amber-500/30 text-xs font-bold shadow-md">Popular</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="font-syne font-bold text-lg text-white">Quick Bites & Burgers</h3>
+                                    <span class="text-amber-500 font-bold font-syne">₹70 - ₹120</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                                    Crispy French fries, loaded cheese burgers, cheesy maggi, and delicious veg momos for your snack cravings.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20order%20Quick%20Bites!" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Order via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                        <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden bg-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" alt="Refreshing Beverages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-800 text-amber-400 border border-amber-500/30 text-xs font-bold shadow-md">Refreshing</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="font-syne font-bold text-lg text-white">Cold Drinks & Shakes</h3>
+                                    <span class="text-amber-500 font-bold font-syne">₹50 - ₹110</span>
+                                </div>
+                                <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                                    Thick chocolate shakes, refreshing virgin mojitos, cold coffee, and chilled soft drinks to wash down the spice.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20order%20Beverages!" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i> Order via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 bg-zinc-900/60 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-amber-500 text-sm font-semibold uppercase tracking-wider block mb-2">The Golpuri Experience</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                        Why Patna Loves <span class="text-amber-500">Golpuri Cafe</span>
+                    </h2>
+                    <p class="text-zinc-400 text-base">
+                        We combine street food flavor with cafe hygiene and comfort.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col items-start hover:border-amber-500/50 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-600/10 border border-amber-600/20 flex items-center justify-center text-amber-500 mb-6">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">100% Hygienic Prep</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Filtered RO water, fresh organic ingredients, and gloves used for food preparation so you can snack without worries.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col items-start hover:border-amber-500/50 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-600/10 border border-amber-600/20 flex items-center justify-center text-amber-500 mb-6">
+                            <i data-lucide="tag" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Pocket-Friendly Pricing</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Designed for college students, hostel residents, and families. Premium taste at prices that are easy on your wallet.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col items-start hover:border-amber-500/50 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-600/10 border border-amber-600/20 flex items-center justify-center text-amber-500 mb-6">
+                            <i data-lucide="map-pin" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Prime Buddha Colony Hub</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Conveniently located right in front of Shanti Girls Hostel at Chakaram More, making it the favorite hangout spot in Patna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Story Section -->
+        <section id="story" class="py-20 md:py-28 bg-[#121212]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Story Image -->
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Golpuri Cafe ambiance Patna" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Decorative badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-amber-600 text-white p-6 rounded-2xl shadow-xl hidden sm:flex flex-col items-center justify-center">
+                            <span class="font-syne font-extrabold text-2xl">4.4★</span>
+                            <span class="text-xs font-medium uppercase tracking-wider">Trusted by 100s</span>
+                        </div>
+                    </div>
+
+                    <!-- Story Content -->
+                    <div class="lg:col-span-6 flex flex-col items-start text-left">
+                        <span class="text-amber-500 text-sm font-semibold uppercase tracking-wider block mb-2">Our Story</span>
+                        <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-6">
+                            Serving Smiles & Crunch in Buddha Colony
+                        </h2>
+                        <p class="text-zinc-300 text-base leading-relaxed mb-4">
+                            Golpuri Cafe was born out of a simple passion: to elevate traditional Indian street chaats and golgappe into a clean, hygienic, and vibrant cafe experience in Patna.
+                        </p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-8">
+                            Located conveniently at Chakaram More, right in front of Shanti Girls Hostel, we have quickly become the go-to evening spot for students, professionals, and food lovers looking for authentic chatpata flavors and cozy vibes.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6 w-full mb-8 border-y border-zinc-800 py-6">
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-lg mb-1">Fresh Ingredients</h4>
+                                <p class="text-xs text-zinc-400">Sourced daily for maximum crunch and flavor.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-lg mb-1">Cozy Hangout</h4>
+                                <p class="text-xs text-zinc-400">Great music, great food, and lively atmosphere.</p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20would%20like%20to%20say%20hello!" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-sm hover:bg-zinc-800 hover:border-amber-500/50 transition-all flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-amber-500"></i>
+                            <span>Chat with Us on WhatsApp</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gallery -->
+        <section id="gallery" class="py-20 bg-zinc-900/40 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-amber-500 text-sm font-semibold uppercase tracking-wider block mb-2">Visual Feast</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                        A Glimpse of <span class="text-amber-500">Golpuri Cafe</span>
+                    </h2>
+                    <p class="text-zinc-400 text-base">
+                        Take a look at our mouth-watering street food preparations and cafe ambiance.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=80" alt="Golgappe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=500&q=80" alt="Chaat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80" alt="Burger & Fries" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 group">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80" alt="Beverages" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="py-20 md:py-28 bg-[#121212]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-4">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-white">4.4 Star Google Rating (109 Reviews)</span>
+                    </div>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                        What Our Customers <span class="text-amber-500">Say</span>
+                    </h2>
+                    <p class="text-zinc-400 text-base">
+                        Real feedback from foodies who visit us in Buddha Colony, Patna.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed italic mb-6">
+                                "Absolute best golgappe in Buddha Colony! Super clean preparation and the jaljeera water is so refreshing. Highly recommended for evening hangouts."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-500 font-bold flex items-center justify-center font-syne">
+                                AK
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white text-sm">Abhishek Kumar</h4>
+                                <span class="text-xs text-zinc-500">Local Guide • 48 Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed italic mb-6">
+                                "Being right in front of Shanti Girls Hostel, this is my everyday spot for quick snacks. Their dahi puri and cold coffee are phenomenal!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-orange-600/20 text-orange-500 font-bold flex items-center justify-center font-syne">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white text-sm">Priya Singh</h4>
+                                <span class="text-xs text-zinc-500">Student • Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-500 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-500 opacity-80"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed italic mb-6">
+                                "Great pocket-friendly prices and wonderful hygiene standards. The staff is very courteous and packing for takeaway is neat."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-500 font-bold flex items-center justify-center font-syne">
+                                RM
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white text-sm">Rahul Mishra</h4>
+                                <span class="text-xs text-zinc-500">Local Customer • 12 Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ Accordion Section -->
+        <section id="faq" class="py-20 bg-zinc-900/60 border-y border-zinc-800">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-amber-500 text-sm font-semibold uppercase tracking-wider block mb-2">Got Questions?</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                        Frequently Asked <span class="text-amber-500">Questions</span>
+                    </h2>
+                    <p class="text-zinc-400 text-base">
+                        Everything you need to know about Golpuri Cafe, Patna.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">Where is Golpuri Cafe located?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            Golpuri Cafe is located at Chakaram More, right in front of Shanti Girls Hostel, Buddha Colony, Patna, Bihar 800001. You can easily find us on Google Maps!
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">Can I order food online or on WhatsApp?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            Yes! You can instantly place takeaway and order inquiries via WhatsApp at +91 94300 50098. We ensure prompt packaging and quick service.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">What are your opening hours?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            We are open every day from 12:00 PM to 10:00 PM, perfect for your afternoon cravings and evening snack breaks!
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">Do you maintain hygiene standards for golgappe?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                            Absolute hygiene is our top priority. We use filtered RO water, clean utensils, and maintain a spotless counter so you can enjoy your favorite street food worry-free.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Location & Contact Section -->
+        <section id="contact" class="py-20 md:py-28 bg-[#121212]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-amber-500 text-sm font-semibold uppercase tracking-wider block mb-2">Visit Us Today</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-extrabold font-syne text-white mb-4">
+                        Location & <span class="text-amber-500">Contact</span>
+                    </h2>
+                    <p class="text-zinc-400 text-base">
+                        Drop by Golpuri Cafe in Buddha Colony or send us a quick inquiry.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Info & Form -->
+                    <div class="lg:col-span-6 flex flex-col gap-8">
+                        
+                        <!-- Info Card -->
+                        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-600/10 text-amber-500 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-base mb-1">Address</h4>
+                                    <p class="text-zinc-400 text-sm">INFRONT OF SHANTI GIRLS HOSTEL, CHAKARAM MORE, Buddha Colony, Patna, Bihar 800001</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-600/10 text-amber-500 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-base mb-1">Phone / WhatsApp</h4>
+                                    <a href="tel:+919430050098" class="text-amber-500 hover:underline text-sm font-semibold">+91 94300 50098</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-600/10 text-amber-500 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-base mb-1">Opening Hours</h4>
+                                    <p class="text-zinc-400 text-sm">Monday – Sunday: 12:00 PM – 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inquiry Form -->
+                        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+                            <h3 class="font-syne font-bold text-xl text-white mb-6">Send Us a Quick Message</h3>
+                            <form id="contact-form" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Your Name</label>
+                                    <input type="text" id="name" required class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" required class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="Enter your phone number">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Message or Order</label>
+                                    <textarea id="message" rows="3" required class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="What would you like to order or ask?"></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm shadow-lg shadow-amber-600/20 transition-all flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>Send Message</span>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="lg:col-span-6 flex flex-col">
+                        <div class="w-full h-full min-h-[400px] lg:min-h-[600px] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl relative bg-zinc-900">
+                            <iframe 
+                                title="Golpuri Cafe Location Map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7766!2d85.127!3d25.612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQzLjIiTiA4NcKwMDcnMzcuMiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                class="w-full h-full grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                            </iframe>
+                            
+                            <div class="absolute bottom-6 left-6 right-6 bg-zinc-950/90 backdrop-blur-md p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Golpuri Cafe, Patna</h4>
+                                    <p class="text-xs text-zinc-400">Chakaram More, Buddha Colony</p>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Golpuri+Cafe+Buddha+Colony+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-amber-600 text-white text-xs font-semibold hover:bg-amber-700 transition-colors flex items-center gap-1.5">
+                                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i> Get Directions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 text-zinc-400 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Col 1 -->
+                <div class="flex flex-col gap-4">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-syne font-extrabold text-xl shadow-md">
+                            G
+                        </div>
+                        <span class="font-syne font-extrabold text-xl text-white">Golpuri Cafe</span>
+                    </a>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                        Patna's premier street cafe destination offering mouth-watering golgappe, chaats, quick bites, and refreshing drinks in Buddha Colony.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h3 class="font-syne font-bold text-white text-base mb-4">Quick Links</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Our Menu</a></li>
+                        <li><a href="#story" class="hover:text-amber-500 transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-500 transition-colors">Food Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Google Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-amber-500 transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h3 class="font-syne font-bold text-white text-base mb-4">Opening Hours</h3>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li>Monday: 12:00 PM – 10:00 PM</li>
+                        <li>Tuesday: 12:00 PM – 10:00 PM</li>
+                        <li>Wednesday: 12:00 PM – 10:00 PM</li>
+                        <li>Thursday: 12:00 PM – 10:00 PM</li>
+                        <li>Friday: 12:00 PM – 10:00 PM</li>
+                        <li>Saturday & Sunday: 12:00 PM – 10:00 PM</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h3 class="font-syne font-bold text-white text-base mb-4">Connect With Us</h3>
+                    <p class="text-sm text-zinc-400 mb-4">Have an order or event inquiry? Reach us instantly on WhatsApp.</p>
+                    <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20have%20an%20inquiry!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm shadow-md transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>WhatsApp Chat</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year">2025</span> Golpuri Cafe, Buddha Colony, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212]/95 backdrop-blur-md border-t border-zinc-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+919430050098" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-bold text-sm hover:bg-zinc-800 transition-all">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919430050098?text=Hi%20Golpuri%20Cafe,%20I%20want%20to%20order!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm shadow-lg shadow-amber-600/20 transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-amber-600/20 text-amber-500 flex items-center justify-center mx-auto mb-2">
+                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white">Message Received!</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed" id="success-modal-text">
+                Thank you! Your message has been sent to Golpuri Cafe. We will get back to you shortly.
+            </p>
+            <button id="close-modal" class="w-full py-3.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm transition-colors mt-4">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Update year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle active state
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-content').forEach(item => item.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(item => item.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Submission & Sanitization
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const successModalText = document.getElementById('success-modal-text');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Retrieve and sanitize inputs
+            const nameInput = document.getElementById('name').value.trim();
+            const phoneInput = document.getElementById('phone').value.trim();
+            const messageInput = document.getElementById('message').value.trim();
+
+            if (!nameInput || !phoneInput || !messageInput) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Safe text insertion
+            const sanitizedName = nameInput.replace(/[<>]/g, '');
+            successModalText.textContent = `Thank you, ${sanitizedName}! Your inquiry has been logged. We will contact you or you can directly reach us on WhatsApp at +91 94300 50098.`;
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            contactForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
