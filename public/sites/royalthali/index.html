@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Royal Thali | Authentic Indian Dining & Royal Thali in Patna</title>
+    <meta name="description" content="Experience authentic royal Indian dining in Patna. Order signature thalis instantly on WhatsApp or reserve a table today. Rated 4.8★ by 1,981+ food lovers.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#121212',
+                            surface: '#1E1E24',
+                            primary: '#D97706',
+                            primaryHover: '#F59E0B',
+                            secondary: '#9A3412',
+                            text: '#FAFAFA',
+                            muted: '#A1A1AA',
+                            border: '#27272A'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and base fixes */
+        body {
+            background-color: #121212;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-[#121212] text-[#FAFAFA] font-sans antialiased pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#1E1E24] border-b border-zinc-800 text-zinc-300 text-xs sm:text-sm py-2 px-4 text-center z-50 relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="inline-flex items-center gap-1.5 text-amber-500 font-medium">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i> Open Today:
+            </span>
+            <span>11:00 AM – 11:30 PM</span>
+            <span class="hidden sm:inline text-zinc-600">|</span>
+            <span class="text-amber-400 font-medium">📍 Jagat Narayan Lal Rd, Patna</span>
+        </div>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-[#121212] border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 group-hover:bg-amber-600/20 transition-all duration-300">
+                    <i data-lucide="utensils-crossed" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white block">Royal Thali</span>
+                    <span class="text-[10px] sm:text-xs text-amber-500 tracking-widest uppercase font-medium">Authentic Indian Dining</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="tel:+917360060055" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-[#1E1E24] border border-zinc-700 hover:border-amber-500 text-white transition-all duration-300">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>+91 73600 60055</span>
+                </a>
+                <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-amber-600 hover:bg-amber-500 text-white shadow-lg shadow-amber-600/20 transition-all duration-300">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-[#1E1E24] border border-zinc-700 text-white hover:border-amber-500 transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#121212] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500">
+                        <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-lg font-bold text-white block">Royal Thali</span>
+                        <span class="text-[10px] text-amber-500 tracking-wider uppercase font-medium">Patna, Bihar</span>
+                    </div>
+                </div>
+                <button id="mobile-close-btn" aria-label="Close Menu" class="p-2 rounded-xl bg-[#1E1E24] border border-zinc-700 text-zinc-400 hover:text-white transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 py-6 text-base font-medium text-zinc-300">
+                <a href="#menu" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-800/50 hover:text-amber-500 transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5 text-amber-500"></i> Our Menu
+                </a>
+                <a href="#about" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-800/50 hover:text-amber-500 transition-colors">
+                    <i data-lucide="info" class="w-5 h-5 text-amber-500"></i> Our Story
+                </a>
+                <a href="#gallery" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-800/50 hover:text-amber-500 transition-colors">
+                    <i data-lucide="image" class="w-5 h-5 text-amber-500"></i> Gallery
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-800/50 hover:text-amber-500 transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> Customer Reviews
+                </a>
+                <a href="#faq" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-800/50 hover:text-amber-500 transition-colors">
+                    <i data-lucide="help-circle" class="w-5 h-5 text-amber-500"></i> FAQ
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-800/50 hover:text-amber-500 transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i> Location & Contact
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+917360060055" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl text-sm font-medium bg-[#1E1E24] border border-zinc-700 text-white">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i> Call +91 73600 60055
+            </a>
+            <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="w-full h-12 flex items-center justify-center gap-2 rounded-xl text-sm font-semibold bg-amber-600 text-white shadow-lg shadow-amber-600/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Order on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Ambient radial glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E1E24] border border-zinc-800 text-amber-400 text-xs sm:text-sm font-medium mb-6 shadow-inner">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span><strong>4.8 ★</strong> from 1,981+ Google Reviews</span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-serif text-white leading-[1.15] mb-6 break-words">
+                        Experience Royal Indian Flavors & Grand Thalis in <span class="text-amber-500">Patna</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-zinc-400 mb-8 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed break-words">
+                        Indulge in authentic royal recipes crafted with pure desi ghee, aromatic spices, and traditional hospitality. Order instantly via WhatsApp or reserve your table today.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto h-14 px-8 rounded-xl font-semibold bg-amber-600 hover:bg-amber-500 text-white shadow-xl shadow-amber-600/25 flex items-center justify-center gap-3 transition-all duration-300 text-base">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto h-14 px-8 rounded-xl font-semibold bg-[#1E1E24] hover:bg-zinc-800 text-white border border-zinc-700 flex items-center justify-center gap-3 transition-all duration-300 text-base">
+                            <i data-lucide="calendar" class="w-5 h-5 text-amber-500"></i>
+                            <span>Reserve Table</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights -->
+                    <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-zinc-800 text-center lg:text-left">
+                        <div>
+                            <span class="block font-serif text-xl sm:text-2xl font-bold text-white">1,981+</span>
+                            <span class="text-xs sm:text-sm text-zinc-400">Happy Foodies</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-xl sm:text-2xl font-bold text-white">100%</span>
+                            <span class="text-xs sm:text-sm text-zinc-400">Pure & Hygienic</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-xl sm:text-2xl font-bold text-white">4.8 ★</span>
+                            <span class="text-xs sm:text-sm text-zinc-400">Google Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 bg-[#1E1E24] group">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Royal Indian Thali Feast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge on Image -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#121212]/90 backdrop-blur-md border border-zinc-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/40 flex items-center justify-center text-amber-500 shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-white text-sm sm:text-base">Signature Maharaja Thali</h3>
+                                <p class="text-xs text-zinc-400">Served with 15+ authentic royal delicacies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="py-8 bg-[#1E1E24] border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm sm:text-base">Prime Patna Location</h4>
+                        <p class="text-xs sm:text-sm text-zinc-400">Near Peter England Store, Jagat Narayan Lal Rd</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm sm:text-base">Pure Desi Ingredients</h4>
+                        <p class="text-xs sm:text-sm text-zinc-400">Prepared fresh with premium spices & pure ghee</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm sm:text-base">Lightning Fast Service</h4>
+                        <p class="text-xs sm:text-sm text-zinc-400">Instant WhatsApp ordering & swift table booking</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Grid Section -->
+    <section id="menu" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm uppercase tracking-widest font-semibold block mb-3">Culinary Masterpieces</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Our Signature Royal Thalis</h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed break-words">Every thali is a complete feast balancing sweet, spicy, tangy, and savory notes, meticulously prepared by master chefs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Card 1 -->
+                <div class="bg-[#1E1E24] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Maharaja Royal Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-amber-600 text-white text-xs font-semibold shadow-lg">Bestseller</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Maharaja Royal Thali</h3>
+                                <span class="text-amber-400 font-bold text-lg">₹499</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Paneer Lababdar, Dal Makhani, Veg Kofta, Malai Kofta, 3 Butter Naans, Jeera Rice, Raita, Salad, Papad & 2 Royal Sweets.</p>
+                        </div>
+                        <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20the%20Maharaja%20Royal%20Thali%20(₹499)." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20 transition-all duration-300 text-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Card 2 -->
+                <div class="bg-[#1E1E24] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Deluxe Special Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-800 text-amber-400 border border-amber-500/30 text-xs font-semibold shadow-lg">Popular</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Deluxe Special Thali</h3>
+                                <span class="text-amber-400 font-bold text-lg">₹349</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Shahi Paneer, Yellow Dal Tadka, Seasonal Veg, 2 Tandoori Rotis, Pulao, Raita, Salad & Gulab Jamun.</p>
+                        </div>
+                        <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20the%20Deluxe%20Special%20Thali%20(₹349)." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20 transition-all duration-300 text-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Card 3 -->
+                <div class="bg-[#1E1E24] border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80" alt="Executive North Indian Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-xs font-semibold shadow-lg">Value Meal</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Executive Thali</h3>
+                                <span class="text-amber-400 font-bold text-lg">₹249</span>
+                            </div>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Kadhai Paneer, Dal Fry, Jeera Rice, 2 Tawa Rotis, Salad & Raita. Perfect wholesome meal for lunch or dinner.</p>
+                        </div>
+                        <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20the%20Executive%20Thali%20(₹249)." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20 transition-all duration-300 text-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-[#1E1E24] border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm uppercase tracking-widest font-semibold block mb-3">The Royal Difference</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Why Patna Loves Royal Thali</h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed break-words">We combine age-old recipes with immaculate hygiene and warm hospitality to deliver an unforgettable dining experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-[#121212] border border-zinc-800 p-8 rounded-2xl text-center md:text-left hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 mx-auto md:mx-0">
+                        <i data-lucide="flame" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Authentic Recipes</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Crafted following traditional royal culinary secrets, slow-cooked to perfection with rich aromatic spices.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[#121212] border border-zinc-800 p-8 rounded-2xl text-center md:text-left hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 mx-auto md:mx-0">
+                        <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Pure Ingredients</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">We use 100% pure desi ghee, farm-fresh vegetables, and high-quality ingredients with zero artificial colors.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[#121212] border border-zinc-800 p-8 rounded-2xl text-center md:text-left hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 mx-auto md:mx-0">
+                        <i data-lucide="smile" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Top-Rated Service</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Proudly rated 4.8★ by nearly 2,000 satisfied food enthusiasts across Patna for our polite staff and cozy ambiance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 bg-[#1E1E24]">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Royal Thali Restaurant Ambiance" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Absolute Accent Box -->
+                    <div class="absolute -bottom-6 -right-6 hidden sm:flex flex-col p-6 rounded-2xl bg-[#1E1E24] border border-zinc-700 shadow-2xl max-w-xs">
+                        <div class="flex items-center gap-2 text-amber-400 mb-2">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                            <span class="font-bold text-sm">Patna's Culinary Pride</span>
+                        </div>
+                        <p class="text-xs text-zinc-400">Serving authentic royal thalis with unmatched hospitality and warmth.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <span class="text-amber-500 text-xs sm:text-sm uppercase tracking-widest font-semibold block mb-3">Our Hospitality Heritage</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-6 break-words">A Royal Tradition of Taste & Elegance in Patna</h2>
+                    <p class="text-zinc-400 text-base leading-relaxed mb-6 break-words">
+                        Located near the Peter England Store on Jagat Narayan Lal Rd in Patna, Royal Thali was born out of a profound passion for bringing authentic Indian royal feasts to everyday food lovers.
+                    </p>
+                    <p class="text-zinc-400 text-base leading-relaxed mb-8 break-words">
+                        Every single dish on our thali is prepared with meticulous care, honoring traditional cooking techniques while maintaining the highest global standards of hygiene and taste. Whether you are dining with family or ordering on WhatsApp, we promise a royal experience.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-zinc-800">
+                        <div>
+                            <span class="block font-serif text-3xl font-bold text-amber-500 mb-1">15+</span>
+                            <span class="text-sm text-zinc-400">Delicacies in Maharaja Thali</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-3xl font-bold text-amber-500 mb-1">1,981+</span>
+                            <span class="text-sm text-zinc-400">Verified 5-Star Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery Section -->
+    <section id="gallery" class="py-20 bg-[#1E1E24] border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm uppercase tracking-widest font-semibold block mb-3">Visual Feast</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Restaurant Ambiance & Thali Gallery</h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed break-words">Take a visual tour of our culinary spreads and inviting dining atmosphere.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Royal Thali Spread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group">
+                    <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Maharaja Feast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Deluxe Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group">
+                    <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80" alt="North Indian Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-[#121212] group">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Dining Ambiance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm uppercase tracking-widest font-semibold block mb-3">Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Loved by 1,981+ Foodies in Patna</h2>
+                <div class="flex items-center justify-center gap-1.5 text-amber-400 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <span class="text-white font-bold ml-2 text-lg">4.8 / 5.0</span>
+                </div>
+                <p class="text-zinc-400 text-sm sm:text-base">Read authentic Google reviews from our valued patrons.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-[#1E1E24] border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"The Maharaja Thali is an absolute masterpiece! Every dish tasted authentic and fresh. The service via WhatsApp and at the restaurant was prompt. Best thali in Patna!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-600/20 border border-amber-500/40 flex items-center justify-center font-bold text-amber-500">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Abhishek Kumar</h4>
+                            <span class="text-xs text-zinc-500">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-[#1E1E24] border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Superb ambiance near Jagat Narayan Lal Rd. Ordered Deluxe Special Thali and the paneer melted in my mouth. Extremely hygienic and polite staff."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-600/20 border border-amber-500/40 flex items-center justify-center font-bold text-amber-500">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Priya Singh</h4>
+                            <span class="text-xs text-zinc-500">Verified Diner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-[#1E1E24] border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Fast WhatsApp ordering system! I ordered food for a family gathering and everyone praised the authentic taste and generous portion sizes. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-600/20 border border-amber-500/40 flex items-center justify-center font-bold text-amber-500">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Rajesh Mishra</h4>
+                            <span class="text-xs text-zinc-500">Verified Diner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-20 bg-[#1E1E24] border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm uppercase tracking-widest font-semibold block mb-3">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Frequently Asked Questions</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know about dining and ordering at Royal Thali.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-[#121212] border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif font-bold text-white text-base sm:text-lg hover:text-amber-500 transition-colors">
+                        <span>How can I place an order on WhatsApp?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">Simply click on any "Order on WhatsApp" button on our website or message us directly at +917360060055. Our team will share the menu, confirm your order, and dispatch it swiftly.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-[#121212] border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif font-bold text-white text-base sm:text-lg hover:text-amber-500 transition-colors">
+                        <span>Do you accept table reservations in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">Yes! You can reserve a table by filling out our online reservation form below or by calling us directly at +917360060055. We ensure your table is ready upon arrival.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-[#121212] border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif font-bold text-white text-base sm:text-lg hover:text-amber-500 transition-colors">
+                        <span>Where is Royal Thali located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">We are conveniently located at Jagat Narayan Lal Rd, near Petrol Pump and Peter England Store, Patna, Bihar 801503. You can easily find us on Google Maps.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-[#121212] border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif font-bold text-white text-base sm:text-lg hover:text-amber-500 transition-colors">
+                        <span>Are your thalis pure vegetarian?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">Yes, Royal Thali is a 100% pure vegetarian dining destination offering rich North Indian royal delicacies prepared with pure desi ghee and fresh ingredients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm uppercase tracking-widest font-semibold block mb-3">Visit Us Or Inquire</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Location & Table Reservation</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Drop by for an exquisite dining experience or book your table in advance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info & Hours -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div class="bg-[#1E1E24] border border-zinc-800 p-8 rounded-2xl">
+                        <h3 class="font-serif text-xl font-bold text-white mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-white mb-1">Address</strong>
+                                    <span class="text-zinc-400">Petrol Pump, Peter England Store, Jagat Narayan Lal Rd, near by Laxmi, Patna, Bihar 801503</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0 mt-1">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-white mb-1">Phone / WhatsApp</strong>
+                                    <a href="tel:+917360060055" class="text-amber-400 hover:underline">+91 73600 60055</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0 mt-1">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-white mb-1">Opening Hours</strong>
+                                    <span class="text-zinc-400 block">Monday – Sunday</span>
+                                    <span class="text-amber-400 font-medium">11:00 AM – 11:30 PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-zinc-800">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Royal+Thali+Patna" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20 transition-all duration-300 text-sm">
+                                <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reservation & Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-[#1E1E24] border border-zinc-800 p-8 rounded-2xl">
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Book a Table or Send Inquiry</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Fill out the quick form below and our team will confirm your reservation instantly.</p>
+
+                        <form id="reservation-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">Your Name *</label>
+                                    <input type="text" id="form-name" required placeholder="Abhishek Kumar" class="w-full h-12 bg-[#121212] border border-zinc-700 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">Phone Number *</label>
+                                    <input type="tel" id="form-phone" required placeholder="+91 98765 43210" class="w-full h-12 bg-[#121212] border border-zinc-700 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">Number of Guests *</label>
+                                    <select id="form-guests" class="w-full h-12 bg-[#121212] border border-zinc-700 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                        <option value="1-2 Persons">1-2 Persons (Couple Table)</option>
+                                        <option value="3-4 Persons">3-4 Persons (Family Table)</option>
+                                        <option value="5-8 Persons">5-8 Persons (Group Booking)</option>
+                                        <option value="8+ Persons">8+ Persons (Party / Gathering)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-zinc-300 mb-1">Preferred Time *</label>
+                                    <input type="text" id="form-time" required placeholder="Today, 8:00 PM" class="w-full h-12 bg-[#121212] border border-zinc-700 rounded-xl px-4 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-zinc-300 mb-1">Special Requests (Optional)</label>
+                                <textarea id="form-message" rows="3" placeholder="Any specific seating preference or dietary requirements..." class="w-full bg-[#121212] border border-zinc-700 rounded-xl p-4 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" id="form-submit-btn" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20 transition-all duration-300 text-sm">
+                                <i data-lucide="check-circle" class="w-4 h-4"></i> Confirm Table Reservation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="mt-12 w-full h-[400px] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-[#1E1E24]">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778546124!2d85.1376!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM1JzM4LjgiTiA4NcKwMDguMTYiRQ!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Royal Thali Patna Location Map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1E1E24] border-t border-zinc-800 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-500">
+                            <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white">Royal Thali</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Patna's premier destination for authentic royal thalis and traditional Indian dining. Rated 4.8★ by 1,981+ food lovers.
+                    </p>
+                    <div class="flex items-center gap-3 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span class="text-xs text-white font-medium">4.8 (1,981 Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Our Menu</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-6">Opening Hours</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex justify-between">
+                            <span>Monday – Sunday:</span>
+                            <span class="text-amber-400 font-medium">11:00 AM – 11:30 PM</span>
+                        </li>
+                        <li class="pt-2">
+                            <span class="block text-xs text-zinc-500 mb-1">Dine-in & WhatsApp Delivery Available</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-6">Connect & Order</h4>
+                    <p class="text-zinc-400 text-sm mb-4">Have questions or want to place a bulk order? Contact us instantly.</p>
+                    <div class="flex flex-col gap-3">
+                        <a href="tel:+917360060055" class="text-sm text-amber-400 hover:underline flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i> +91 73600 60055
+                        </a>
+                        <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-10 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium text-xs shadow-lg shadow-amber-600/20 transition-all duration-300">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Royal Thali, Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Royal+Thali+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">Google Maps Listing</a>
+                    <a href="#contact" class="hover:text-amber-400 transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+917360060055" class="flex-1 h-12 rounded-xl bg-[#1E1E24] border border-zinc-700 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917360060055?text=Hello%20Royal%20Thali,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="flex-1 h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg shadow-amber-600/25">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Order</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-[#1E1E24] border border-zinc-700 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-amber-600/20 border border-amber-500/40 flex items-center justify-center text-amber-500 mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-2">Reservation Confirmed!</h3>
+            <p id="success-message" class="text-zinc-300 text-sm mb-6 leading-relaxed">Thank you! Your table reservation request has been successfully recorded. We look forward to welcoming you at Royal Thali.</p>
+            <button id="close-modal-btn" class="w-full h-12 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm transition-all duration-300 shadow-lg shadow-amber-600/20">
+                Close & Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileCloseBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-btn');
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('i[data-lucide="chevron-down"]');
+
+            btn.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                
+                // Close all other accordions
+                faqItems.forEach(otherItem => {
+                    const otherContent = otherItem.querySelector('.faq-content');
+                    const otherIcon = otherItem.querySelector('i[data-lucide="chevron-down"]');
+                    otherContent.style.maxHeight = '0px';
+                    if(otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if(icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.maxHeight = '0px';
+                    if(icon) icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Contact / Reservation Form Submission Logic with XSS protection & Validation
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const successMessage = document.getElementById('success-message');
+
+        function sanitizeInput(str) {
+            const temp = document.createElement('div');
+            temp.textContent = str;
+            return temp.innerHTML;
+        }
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('form-name').value.trim();
+            const phoneInput = document.getElementById('form-phone').value.trim();
+            const guestsInput = document.getElementById('form-guests').value;
+            const timeInput = document.getElementById('form-time').value.trim();
+
+            if (!nameInput || !phoneInput || !timeInput) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            const cleanName = sanitizeInput(nameInput);
+            const cleanTime = sanitizeInput(timeInput);
+            const cleanGuests = sanitizeInput(guestsInput);
+
+            // Update success modal text safely using textContent
+            successMessage.textContent = `Thank you, ${cleanName}! Your table for ${cleanGuests} has been successfully requested for ${cleanTime}. We will confirm via phone shortly.`;
+
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            reservationForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.remove('flex');
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
