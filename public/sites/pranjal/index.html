@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <title>Pranjal Family Restaurant | Fine Dining & Takeaway in Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        surface: '#1E1E1E',
+                        primary: '#D97706',
+                        'primary-hover': '#B45309',
+                        secondary: '#9A3412',
+                        'text-primary': '#F9FAFB',
+                        'text-muted': '#9CA3AF'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #F9FAFB;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-black font-medium text-xs sm:text-sm py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Today: 11:00 AM – 11:00 PM | Call <a href="tel:+916201461392" class="underline font-bold">+91 62014 61392</a> for instant bookings</span>
+    </div>
+
+    <!-- 100% Solid Opaque Header -->
+    <header class="sticky top-0 z-40 bg-[#121212] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <i data-lucide="utensils" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-lg sm:text-xl font-bold tracking-wide text-white block">Pranjal</span>
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-semibold block -mt-1">Family Restaurant</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-text-muted">
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+                <a href="#about" class="hover:text-primary transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+916201461392" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-sm font-medium text-white hover:border-primary/50 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>+91 62014 61392</span>
+                </a>
+                <a href="#contact" class="px-5 py-2 rounded-xl bg-primary hover:bg-primary-hover text-black font-semibold text-sm transition-all shadow-lg shadow-primary/20">
+                    Book Table
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:border-primary/50 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#121212] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                        <i data-lucide="utensils" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-serif font-bold text-lg text-white">Pranjal</span>
+                </div>
+                <button id="menu-close" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-zinc-300">
+                <a href="#menu" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5 text-primary"></i> Menu Highlights
+                </a>
+                <a href="#about" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary transition-colors">
+                    <i data-lucide="info" class="w-5 h-5 text-primary"></i> Our Story
+                </a>
+                <a href="#gallery" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary transition-colors">
+                    <i data-lucide="image" class="w-5 h-5 text-primary"></i> Gallery
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-primary"></i> Customer Reviews
+                </a>
+                <a href="#faq" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary transition-colors">
+                    <i data-lucide="help-circle" class="w-5 h-5 text-primary"></i> FAQ
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-900 hover:text-primary transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i> Location & Contact
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+916201461392" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i> Call +91 62014 61392
+            </a>
+            <a href="https://wa.me/916201461392?text=Hi%20Pranjal%20Family%20Restaurant,%20I%20would%20like%20to%20inquire%20about%20table%20booking." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-primary hover:bg-primary-hover text-black font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Booking
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#121212]/80 via-[#121212]/95 to-[#121212] z-0"></div>
+        
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                
+                <!-- Google Review Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-zinc-800 mb-6 shadow-md">
+                    <div class="flex text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-white">3.9 ★ <span class="text-text-muted font-normal">(84+ Google Reviews)</span></span>
+                </div>
+
+                <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-bold font-serif text-white leading-tight mb-6">
+                    Authentic Flavors & <span class="text-primary italic">Warm Family Ambiance</span> in Patna
+                </h1>
+
+                <p class="text-base sm:text-lg text-text-muted mb-8 leading-relaxed max-w-2xl mx-auto">
+                    Experience exquisite North Indian delicacies, sizzling starters, and memorable family dining right at New Dak Bunglow Road.
+                </p>
+
+                <!-- CTA Group -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-black font-semibold text-base transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-5 h-5"></i> Reserve a Table
+                    </a>
+                    <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface border border-zinc-800 hover:border-primary/50 text-white font-medium text-base transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="book-open" class="w-5 h-5 text-primary"></i> Explore Menu
+                    </a>
+                </div>
+
+                <!-- Quick Location Cue -->
+                <div class="mt-10 flex items-center justify-center gap-2 text-xs sm:text-sm text-text-muted">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                    <span>800, New Dak Bunglow Rd, Fraser Road Area, Patna</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-surface/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                    <div class="text-2xl sm:text-3xl font-bold font-serif text-primary mb-1">3.9 ★</div>
+                    <div class="text-xs sm:text-sm text-text-muted font-medium">Google Rating</div>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                    <div class="text-2xl sm:text-3xl font-bold font-serif text-white mb-1">84+</div>
+                    <div class="text-xs sm:text-sm text-text-muted font-medium">Verified Reviews</div>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                    <div class="text-2xl sm:text-3xl font-bold font-serif text-primary mb-1">Prime</div>
+                    <div class="text-xs sm:text-sm text-text-muted font-medium">Dak Bunglow Road</div>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800/80">
+                    <div class="text-2xl sm:text-3xl font-bold font-serif text-white mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-text-muted font-medium">Family Friendly</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights / Categories -->
+    <section id="menu" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold block mb-3">Culinary Excellence</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Our Signature Menu Highlights</h2>
+                <p class="text-text-muted">Prepared with authentic spices, fresh ingredients, and utmost culinary care.</p>
+            </div>
+
+            <!-- Menu Category Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Menu Item 1 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Special Dum Biryani" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">₹320</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Royal Dum Biryani</h3>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i data-lucide="star" class="w-3 h-3 fill-amber-400"></i> 4.8</span>
+                            </div>
+                            <p class="text-sm text-text-muted mb-4 leading-relaxed">Aromatic basmati rice layered with tender marinated meat or vegetables, slow-cooked in traditional dum style.</p>
+                        </div>
+                        <a href="https://wa.me/916201461392?text=Hi,%20I%20would%20like%20to%20order%20Royal%20Dum%20Biryani." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order / Inquire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Butter Paneer Masala" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">₹260</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Butter Paneer Masala</h3>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i data-lucide="star" class="w-3 h-3 fill-amber-400"></i> 4.7</span>
+                            </div>
+                            <p class="text-sm text-text-muted mb-4 leading-relaxed">Soft cottage cheese cubes simmered in a rich, buttery, creamy tomato gravy with subtle aromatic spices.</p>
+                        </div>
+                        <a href="https://wa.me/916201461392?text=Hi,%20I%20would%20like%20to%20order%20Butter%20Paneer%20Masala." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order / Inquire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599487484170-7c1e66508dbc?auto=format&fit=crop&w=800&q=80" alt="Tandoori Chicken Platter" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">₹380</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Tandoori Platter</h3>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i data-lucide="star" class="w-3 h-3 fill-amber-400"></i> 4.9</span>
+                            </div>
+                            <p class="text-sm text-text-muted mb-4 leading-relaxed">Smoky, charcoal-grilled chicken pieces marinated in yogurt and robust traditional tandoori spices.</p>
+                        </div>
+                        <a href="https://wa.me/916201461392?text=Hi,%20I%20would%20like%20to%20order%20Tandoori%20Platter." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order / Inquire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Crispy Veg Manchurian" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">₹220</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Veg Manchurian</h3>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i data-lucide="star" class="w-3 h-3 fill-amber-400"></i> 4.6</span>
+                            </div>
+                            <p class="text-sm text-text-muted mb-4 leading-relaxed">Golden fried vegetable dumplings tossed in a savory, tangy Indo-Chinese garlic and soy sauce.</p>
+                        </div>
+                        <a href="https://wa.me/916201461392?text=Hi,%20I%20would%20like%20to%20order%20Veg%20Manchurian." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order / Inquire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="North Indian Thali" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">₹290</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Deluxe Thali</h3>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i data-lucide="star" class="w-3 h-3 fill-amber-400"></i> 4.8</span>
+                            </div>
+                            <p class="text-sm text-text-muted mb-4 leading-relaxed">A wholesome platter featuring dal makhani, paneer curry, seasonal veg, rice, butter naan, raita, and dessert.</p>
+                        </div>
+                        <a href="https://wa.me/916201461392?text=Hi,%20I%20would%20like%20to%20order%20Deluxe%20Thali." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order / Inquire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Sizzling Brownie" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full shadow-md">₹180</span>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Sizzling Brownie</h3>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i data-lucide="star" class="w-3 h-3 fill-amber-400"></i> 4.9</span>
+                            </div>
+                            <p class="text-sm text-text-muted mb-4 leading-relaxed">Warm, gooey chocolate walnut brownie served on a hot sizzler plate with vanilla ice cream and hot chocolate fudge.</p>
+                        </div>
+                        <a href="https://wa.me/916201461392?text=Hi,%20I%20would%20like%20to%20order%20Sizzling%20Brownie." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium text-sm flex items-center justify-center gap-2 hover:bg-primary hover:text-black hover:border-primary transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order / Inquire
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold block mb-3">Our Promise</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Why Families Choose Pranjal</h2>
+                <p class="text-text-muted">Dedicated to exceptional hospitality, great hygiene, and memorable dining experiences.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Prime Location</h3>
+                    <p class="text-sm text-text-muted leading-relaxed">Conveniently situated right at New Dak Bunglow Road, Fraser Road Area in the heart of Patna with easy accessibility.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="utensils" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Authentic Taste</h3>
+                    <p class="text-sm text-text-muted leading-relaxed">Master chefs crafting traditional North Indian, Chinese, and Tandoori specialties using premium quality ingredients.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-surface border border-zinc-800 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Warm Ambiance</h3>
+                    <p class="text-sm text-text-muted leading-relaxed">Spacious seating, cozy lighting, and polite staff ensuring a comfortable and delightful dining atmosphere for families.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" alt="Restaurant Interior" class="object-cover w-full h-full">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-surface border border-zinc-800 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-serif font-bold text-white">Patna's Favorite</span>
+                        </div>
+                        <p class="text-xs text-text-muted">Trusted by hundreds of families for celebrations and weekend dinners.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-primary font-bold block mb-3">Our Story</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-6">A Passion for Great Food & Warm Hospitality</h2>
+                    <p class="text-text-muted mb-6 leading-relaxed">
+                        Located at the bustling New Dak Bunglow Road in Patna, <strong class="text-white">Pranjal Family Restaurant</strong> has been serving culinary delight to food lovers and families. We believe that dining out is not just about food; it's about creating cherished memories with your loved ones over piping hot dishes and exceptional flavors.
+                    </p>
+                    <p class="text-text-muted mb-8 leading-relaxed">
+                        Whether you are dropping by for a quick family lunch, a relaxed evening dinner, or ordering takeaway for a house gathering, our kitchen ensures uncompromising quality and taste in every single bite.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-zinc-800">
+                        <div>
+                            <span class="font-serif text-3xl font-bold text-primary block mb-1">100%</span>
+                            <span class="text-xs text-text-muted">Fresh Ingredients</span>
+                        </div>
+                        <div>
+                            <span class="font-serif text-3xl font-bold text-white block mb-1">11 AM - 11 PM</span>
+                            <span class="text-xs text-text-muted">Open All Week</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gallery -->
+    <section id="gallery" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold block mb-3">Visual Feast</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Glimpse of Pranjal</h2>
+                <p class="text-text-muted">Take a peek into our signature dishes and inviting dining atmosphere.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Grilled Dish" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Biryani" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Paneer Curry" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Ambiance" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold block mb-3">Testimonials</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">What Our Patrons Say</h2>
+                <div class="flex items-center justify-center gap-2 text-amber-400 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-zinc-600"></i>
+                    <span class="text-white font-bold ml-2">3.9 / 5.0</span>
+                </div>
+                <p class="text-text-muted text-sm">Based on 84+ genuine Google reviews from our valued guests.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="p-6 sm:p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-text-muted mb-6 leading-relaxed">"Great place for family dinner on New Dak Bunglow Road. The paneer dishes and biryani were absolutely delicious. Polite staff and good service."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-serif">R</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-sm text-white">Rajesh Kumar</h4>
+                            <span class="text-xs text-text-muted">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                        </div>
+                        <p class="text-sm text-text-muted mb-6 leading-relaxed">"Very convenient location in Fraser Road area. Ordered takeaway for a family get-together and the packaging and food quality were top-notch!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-serif">P</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-sm text-white">Priya Sinha</h4>
+                            <span class="text-xs text-text-muted">Verified Diner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-text-muted mb-6 leading-relaxed">"Authentic North Indian flavors! The tandoori starters are a must-try. Clean ambiance and very courteous staff. Will visit again."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-serif">A</div>
+                        <div>
+                            <h4 class="font-serif font-bold text-sm text-white">Amitabh Verma</h4>
+                            <span class="text-xs text-text-muted">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-surface/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold block mb-3">Got Questions?</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-text-muted">Everything you need to know about dining, reservations, and takeaways.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white hover:text-primary transition-colors">
+                        <span>Do you accept advance table reservations?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-text-muted leading-relaxed">
+                        Yes, absolutely! You can easily reserve a table in advance by calling us directly at +91 62014 61392 or by using our instant WhatsApp booking button on the website.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white hover:text-primary transition-colors">
+                        <span>Is parking available near New Dak Bunglow Road?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-text-muted leading-relaxed">
+                        Yes, adequate street parking and vehicle assistance are available near our restaurant premises on New Dak Bunglow Road, Fraser Road Area.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white hover:text-primary transition-colors">
+                        <span>Do you provide home delivery and takeaway services?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-text-muted leading-relaxed">
+                        Yes! We offer quick takeaway services and packaging for all menu items. You can call or WhatsApp us your order ahead of time for swift pick-up.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-surface border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-white hover:text-primary transition-colors">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-text-muted leading-relaxed">
+                        We are open every day of the week from 11:00 AM to 11:00 PM, serving lunch, snacks, and dinner.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 md:py-32">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold block mb-3">Visit & Connect</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Location & Table Booking</h2>
+                <p class="text-text-muted">Drop by for an unforgettable meal or reserve your table in seconds.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Info & Map -->
+                <div class="flex flex-col gap-8">
+                    <div class="bg-surface p-8 rounded-2xl border border-zinc-800 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-white text-lg mb-1">Address</h3>
+                                <p class="text-sm text-text-muted leading-relaxed">800, New Dak Bunglow Rd, Fraser Road Area, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-white text-lg mb-1">Phone / WhatsApp</h3>
+                                <p class="text-sm text-text-muted"><a href="tel:+916201461392" class="hover:text-primary transition-colors">+91 62014 61392</a></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-white text-lg mb-1">Operating Hours</h3>
+                                <p class="text-sm text-text-muted">Monday – Sunday: 11:00 AM – 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 h-64 shadow-xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778911529123!2d85.1375!3d25.6105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef0b6d19f%3A0x6283b95a8f57f6d3!2sNew%20Dak%20Bunglow%20Rd%2C%20Fraser%20Road%20Area%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Working Inquiry / Table Booking Form -->
+                <div class="bg-surface p-8 rounded-2xl border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">Book a Table or Inquire</h3>
+                        <p class="text-sm text-text-muted mb-6">Fill out the quick form below and we will confirm your reservation instantly via phone or WhatsApp.</p>
+
+                        <form id="booking-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Your Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="e.g. Rahul Sharma">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Phone / WhatsApp Number</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="e.g. +91 98765 43210">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Number of Guests</label>
+                                    <select id="guests" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                        <option value="2 People">2 Guests</option>
+                                        <option value="4 People">4 Guests</option>
+                                        <option value="6 People">6 Guests</option>
+                                        <option value="8+ People">8+ Guests (Family Party)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Service Type</label>
+                                    <select id="service" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                        <option value="Dine-in Reservation">Dine-in Table</option>
+                                        <option value="Takeaway Inquiry">Takeaway / Parcel</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Special Request / Message</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Any dietary preferences or specific timing..."></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-primary hover:bg-primary-hover text-black font-semibold text-base transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2">
+                                <span id="btn-text">Confirm Booking Request</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-zinc-800">
+                
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+                            <i data-lucide="utensils" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif text-xl font-bold tracking-wide text-white block">Pranjal</span>
+                            <span class="text-[10px] uppercase tracking-widest text-primary font-semibold block -mt-1">Family Restaurant</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-text-muted leading-relaxed max-w-md">
+                        Serving exquisite North Indian delicacies, sizzling starters, and warm family hospitality right at New Dak Bunglow Road, Patna.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Pranjal+Family+Restaurant+New+Dak+Bunglow+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-primary hover:border-primary transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+916201461392" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-primary hover:border-primary transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/916201461392" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-primary hover:border-primary transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-white text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Menu Highlights</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-white text-lg mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-text-muted">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                            <span>800, New Dak Bunglow Rd, Fraser Road Area, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="tel:+916201461392" class="hover:text-primary transition-colors">+91 62014 61392</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span>11:00 AM – 11:00 PM (All Days)</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-text-muted gap-4">
+                <p>&copy; <span id="current-year"></span> Pranjal Family Restaurant. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-1 text-amber-400 font-semibold"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> 3.9★ Google Rating</span>
+                    <span>Patna, Bihar</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+916201461392" class="flex-1 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold text-sm flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i> Call Now
+        </a>
+        <a href="https://wa.me/916201461392?text=Hi%20Pranjal%20Family%20Restaurant,%20I%20would%20like%20to%20inquire%20about%20a%20table%20booking." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-primary hover:bg-primary-hover text-black font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center text-primary mx-auto">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white">Booking Request Received!</h3>
+            <p id="modal-desc" class="text-sm text-text-muted leading-relaxed">Thank you! Your booking request has been successfully captured. We will call/WhatsApp you shortly to confirm your table.</p>
+            <button id="close-modal" class="w-full py-3 rounded-xl bg-primary hover:bg-primary-hover text-black font-semibold text-sm transition-all">
+                Got It, Thank You!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openDrawer() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openDrawer);
+        menuClose.addEventListener('click', closeDrawer);
+        menuBackdrop.addEventListener('click', closeDrawer);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact / Booking Form Submission
+        const bookingForm = document.getElementById('booking-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Sanitize inputs
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const guests = document.getElementById('guests').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone) {
+                alert('Please fill in your name and phone number.');
+                return;
+            }
+
+            // Simulate loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Processing Request...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Confirm Booking Request';
+                
+                // Show success modal
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+                
+                bookingForm.reset();
+            }, 800);
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>
