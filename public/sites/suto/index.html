@@ -9,9 +9,13 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Suto Cafe - Danapur Patna | Cafe & Restaurant</title>
-    <meta name="description" content="Patna's favorite spot for great food and good times. Located at Azim Tower, Saguna More, Danapur, Patna. Book tables & order on WhatsApp!">
+    <title>Suto jee bhar ke... | Best Restaurant & Dining in Buddh Marg, Patna</title>
+    <meta name="description" content="Experience delightful culinary treats at Suto jee bhar ke... located on 4th Floor, Buddh Marg, Patna. Order on WhatsApp or visit us today!">
     
+    <!-- Security & Policy Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,17 +23,16 @@
             theme: {
                 extend: {
                     colors: {
-                        cafeBg: '#120F0D',
-                        cafeSurface: '#231F1D',
-                        cafePrimary: '#D4A373',
-                        cafeSecondary: '#2D2522',
-                        cafeText: '#F4F1DE',
-                        cafeMuted: '#A9A29B',
-                        cafeHover: '#E0B185',
+                        background: '#0F172A',
+                        surface: '#1E293B',
+                        primary: '#D97706',
+                        secondary: '#C2410C',
+                        'text-primary': '#F8FAFC',
+                        'text-muted': '#94A3B8'
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
                     }
                 }
             }
@@ -39,882 +42,807 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body {
-            background-color: #120F0D;
-            color: #F4F1DE;
-            font-family: 'Inter', sans-serif;
+        /* Zero Horizontal Overflow & Smooth scrolling */
+        html, body {
             overflow-x: hidden;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #120F0D;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2D2522;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4A373;
+            background-color: #0F172A;
+            color: #F8FAFC;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
 </head>
-<body class="bg-cafeBg text-cafeText pb-24 md:pb-0 overflow-x-hidden">
+<body class="overflow-x-hidden bg-[#0F172A] text-[#F8FAFC] antialiased selection:bg-amber-600 selection:text-white pb-28 lg:pb-0">
 
-    <!-- Announcement Bar -->
-    <div class="bg-[#D4A373] text-[#120F0D] text-xs sm:text-sm font-semibold py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
-        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
-        <span>Open Today till 11:00 PM • Saguna More, Danapur, Patna</span>
-        <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20want%20to%20inquire%20about%20table%20availability" target="_blank" rel="noopener noreferrer" class="underline ml-2 hidden sm:inline hover:text-white transition-colors">Book Now &rarr;</a>
+    <!-- ============================================== -->
+    <!-- ANNOUNCEMENT BAR & 100% OPAQUE STICKY HEADER   -->
+    <!-- ============================================== -->
+    <div class="bg-amber-700 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0 animate-pulse"></i>
+        <span>Open Today till 11:00 PM • Fast Home Delivery & Dine-In Available in Patna</span>
     </div>
 
-    <!-- 100% Solid Opaque Sticky Header -->
-    <header class="sticky top-0 z-40 bg-cafeBg border-b border-cafeSecondary w-full transition-all">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <header class="sticky top-0 z-40 bg-[#0F172A] border-b border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cafeSurface border border-cafePrimary/30 flex items-center justify-center text-cafePrimary font-serif font-bold text-xl sm:text-2xl shadow-md group-hover:border-cafePrimary transition-colors">
-                    S
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-600/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="utensils" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
-                    <span class="text-lg sm:text-xl font-serif font-bold tracking-wide text-cafeText block leading-tight">Suto Cafe</span>
-                    <span class="text-[10px] sm:text-xs text-cafeMuted tracking-widest uppercase block">Danapur Patna</span>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white block">Suto jee bhar ke...</span>
+                    <span class="text-xs text-amber-500 font-medium tracking-wide uppercase">Patna Culinary Delight</span>
                 </div>
             </a>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-cafeMuted">
-                <a href="#menu" class="hover:text-cafePrimary transition-colors">Menu</a>
-                <a href="#about" class="hover:text-cafePrimary transition-colors">About Us</a>
-                <a href="#gallery" class="hover:text-cafePrimary transition-colors">Gallery</a>
-                <a href="#reviews" class="hover:text-cafePrimary transition-colors">Reviews</a>
-                <a href="#faq" class="hover:text-cafePrimary transition-colors">FAQ</a>
-                <a href="#contact" class="hover:text-cafePrimary transition-colors">Find Us</a>
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a>
+                <a href="#why-us" class="hover:text-amber-500 transition-colors">Why Us</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location & Contact</a>
             </nav>
 
-            <!-- Desktop CTA buttons -->
-            <div class="hidden md:flex items-center gap-3">
-                <a href="tel:+919608569690" class="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-cafeSecondary bg-cafeSurface text-cafeText text-sm font-medium hover:border-cafePrimary transition-all">
-                    <i data-lucide="phone" class="w-4 h-4 text-cafePrimary"></i>
-                    <span>Call Us</span>
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+919155104888" class="flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-amber-400 py-2 px-3 transition-colors">
+                    <i data-lucide="phone-call" class="w-4 h-4 text-amber-500"></i>
+                    <span>+91 91551 04888</span>
                 </a>
-                <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-cafePrimary text-[#120F0D] text-sm font-semibold hover:bg-cafeHover transition-all shadow-lg shadow-cafePrimary/20">
-                    <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-                    <span>WhatsApp Booking</span>
+                <a href="https://wa.me/919155104888?text=Hi,%20I%20would%20like%20to%20order%20food%20from%20Suto%20jee%20bhar%20ke..." target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-lg shadow-amber-600/20 hover:shadow-amber-600/40 transition-all flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order on WhatsApp</span>
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-cafeSurface border border-cafeSecondary text-cafeText hover:text-cafePrimary transition-colors focus:outline-none">
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 focus:outline-none transition-colors">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Backdrop -->
+    <!-- ============================================== -->
+    <!-- MOBILE DRAWER & BACKDROP OVERLAY             -->
+    <!-- ============================================== -->
     <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
-
-    <!-- Flawless Mobile Navigation Drawer -->
-    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-cafeBg border-l border-cafeSecondary rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#0F172A] border-l border-slate-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
         <div>
-            <div class="flex items-center justify-between mb-8 pb-4 border-b border-cafeSecondary">
+            <div class="flex items-center justify-between pb-6 border-b border-slate-800 mb-6">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-cafeSurface border border-cafePrimary/30 flex items-center justify-center text-cafePrimary font-serif font-bold text-xl">
-                        S
+                    <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white">
+                        <i data-lucide="utensils" class="w-5 h-5"></i>
                     </div>
                     <div>
-                        <span class="text-lg font-serif font-bold text-cafeText block leading-tight">Suto Cafe</span>
-                        <span class="text-[10px] text-cafeMuted tracking-widest uppercase block">Danapur Patna</span>
+                        <span class="font-serif text-lg font-bold text-white block leading-tight">Suto jee bhar ke...</span>
+                        <span class="text-[11px] text-amber-500 font-medium">Patna</span>
                     </div>
                 </div>
-                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl bg-cafeSurface border border-cafeSecondary text-cafeText hover:text-cafePrimary">
-                    <i data-lucide="x" class="w-6 h-6"></i>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
-
-            <nav class="flex flex-col gap-4 text-base font-medium">
-                <a href="#menu" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-cafeSurface/50 hover:bg-cafeSurface text-cafeText hover:text-cafePrimary transition-colors">
-                    <span>Menu Highlights</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+            
+            <nav class="flex flex-col gap-4 font-medium text-slate-200">
+                <a href="#menu" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+                    <i data-lucide="utensils-crossed" class="w-5 h-5 text-amber-500"></i>
+                    <span>Menu & Specialties</span>
                 </a>
-                <a href="#about" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-cafeSurface/50 hover:bg-cafeSurface text-cafeText hover:text-cafePrimary transition-colors">
+                <a href="#about" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+                    <i data-lucide="store" class="w-5 h-5 text-amber-500"></i>
                     <span>Our Story</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
                 </a>
-                <a href="#gallery" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-cafeSurface/50 hover:bg-cafeSurface text-cafeText hover:text-cafePrimary transition-colors">
-                    <span>Gallery</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                <a href="#why-us" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+                    <i data-lucide="award" class="w-5 h-5 text-amber-500"></i>
+                    <span>Why Choose Us</span>
                 </a>
-                <a href="#reviews" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-cafeSurface/50 hover:bg-cafeSurface text-cafeText hover:text-cafePrimary transition-colors">
-                    <span>Customer Reviews</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                <a href="#reviews" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-amber-500"></i>
+                    <span>Google Reviews (4.7★)</span>
                 </a>
-                <a href="#faq" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-cafeSurface/50 hover:bg-cafeSurface text-cafeText hover:text-cafePrimary transition-colors">
-                    <span>FAQs</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
-                </a>
-                <a href="#contact" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-cafeSurface/50 hover:bg-cafeSurface text-cafeText hover:text-cafePrimary transition-colors">
-                    <span>Location & Hours</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-cafeMuted"></i>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>
+                    <span>Location & Contact</span>
                 </a>
             </nav>
         </div>
 
-        <div class="mt-8 pt-6 border-t border-cafeSecondary flex flex-col gap-3">
-            <a href="tel:+919608569690" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-cafeSecondary bg-cafeSurface text-cafeText font-medium text-sm">
-                <i data-lucide="phone" class="w-4 h-4 text-cafePrimary"></i>
-                <span>Call +91 96085 69690</span>
+        <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+            <a href="tel:+919155104888" class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                <span>Call +91 91551 04888</span>
             </a>
-            <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-cafePrimary text-[#120F0D] font-semibold text-sm shadow-lg shadow-cafePrimary/20">
-                <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-                <span>Book via WhatsApp</span>
+            <a href="https://wa.me/919155104888?text=Hi,%20I%20would%20like%20to%20order%20food%20from%20Suto%20jee%20bhar%20ke..." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-amber-600/20 transition-all">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Order on WhatsApp</span>
             </a>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="relative pt-12 pb-20 md:py-28 lg:py-36 overflow-hidden">
+    <!-- ============================================== -->
+    <!-- HERO SECTION                                   -->
+    <!-- ============================================== -->
+    <section class="relative pt-12 pb-20 sm:py-24 lg:py-32 overflow-hidden">
         <!-- Ambient Background Glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-cafePrimary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                <!-- Hero Content -->
-                <div class="lg:col-span-7 text-center lg:text-left">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 text-left">
                     <!-- Google Rating Badge -->
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cafeSurface border border-cafeSecondary mb-6 shadow-sm">
-                        <div class="flex items-center text-amber-400 gap-0.5">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <div class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 px-3.5 py-1.5 rounded-full mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                         </div>
-                        <span class="text-xs sm:text-sm font-semibold text-cafeText">4.8 ★ <span class="text-cafeMuted font-normal">(19 Google Reviews)</span></span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-200">4.7 ★ <span class="text-slate-400 font-normal">(15 Google Reviews)</span></span>
                     </div>
 
-                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-[#F4F1DE] leading-[1.15] mb-6 break-words">
-                        Patna's Favorite Spot for <span class="text-cafePrimary italic">Great Food</span> & Good Times
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-serif text-white leading-[1.15] mb-6 break-words">
+                        Suto jee bhar ke... <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Taste Patna's Finest Flavors</span>
                     </h1>
 
-                    <p class="text-base sm:text-lg md:text-xl text-cafeMuted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-                        Experience warm organic luxury at Suto Cafe. From artisanal coffee and delectable burgers to cozy ambiance at Saguna More, Danapur.
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed">
+                        Indulge in hearty, mouth-watering delicacies crafted with passion on Buddh Marg, Fraser Road Area. Whether dine-in or quick WhatsApp delivery, we satisfy your cravings to the fullest!
                     </p>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-cafePrimary text-[#120F0D] font-bold text-base hover:bg-cafeHover transition-all shadow-xl shadow-cafePrimary/20">
-                            <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
-                            <span>Book Table on WhatsApp</span>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="https://wa.me/919155104888?text=Hi,%20I%20want%20to%20place%20an%20order%20on%20WhatsApp" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-amber-600/25 hover:shadow-amber-600/40 transition-all flex items-center justify-center gap-3">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Order on WhatsApp</span>
                         </a>
-                        <a href="#menu" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-cafeSurface border border-cafeSecondary text-cafeText font-semibold text-base hover:border-cafePrimary transition-all">
-                            <span>Explore Menu</span>
-                            <i data-lucide="arrow-down" class="w-5 h-5 text-cafePrimary"></i>
+                        <a href="#menu" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-base px-8 py-4 rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="utensils" class="w-4 h-4 text-amber-500"></i>
+                            <span>View Full Menu</span>
                         </a>
+                    </div>
+
+                    <!-- Quick Location Tag -->
+                    <div class="mt-8 flex items-center gap-3 text-slate-400 text-sm">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                        <span>4th Floor, 402, Buddh Marg, near Ashok cinema, Budh Vihar, Patna</span>
                     </div>
                 </div>
 
-                <!-- Hero Image Grid / Card -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-cafeSecondary shadow-2xl bg-cafeSurface">
-                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Suto Cafe Ambiance and Coffee" class="object-cover w-full h-full hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#120F0D] via-transparent to-transparent opacity-80"></div>
-                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-cafeBg/90 backdrop-blur-md border border-cafeSecondary flex items-center justify-between">
-                            <div>
-                                <span class="text-xs text-cafePrimary uppercase tracking-wider font-semibold block">Saguna More</span>
-                                <span class="text-sm sm:text-base font-serif font-bold text-cafeText">Azim Tower, Danapur</span>
+                <!-- Right Hero Image / Visual Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 opacity-30 blur-lg"></div>
+                        <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-2xl">
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 relative">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Delicious Food Spread at Suto jee bhar ke" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-800 text-amber-400 text-xs font-bold flex items-center gap-1.5">
+                                    <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                                    <span>Top Rated</span>
+                                </div>
                             </div>
-                            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-medium border border-emerald-500/30">Open Now</span>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="font-serif font-bold text-lg text-white">Chef's Special Thali & Snacks</h3>
+                                        <p class="text-xs text-slate-400">Prepared fresh with authentic spices</p>
+                                    </div>
+                                    <span class="text-amber-500 font-bold text-base">Fresh & Hot</span>
+                                </div>
+                                <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-amber-500"></i> Fast Preparation</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i> Hygienic Kitchen</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Trust & Social Proof Bar -->
-    <section class="border-y border-cafeSecondary bg-cafeSurface/50 py-8">
+    <!-- ============================================== -->
+    <!-- TRUST & SOCIAL PROOF BAR                       -->
+    <!-- ============================================== -->
+    <section class="border-y border-slate-800 bg-[#1E293B]/50 py-8">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-cafeSecondary">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+                
                 <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0">
-                    <div class="w-12 h-12 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary shrink-0">
-                        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="star" class="w-6 h-6 fill-amber-500"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-cafeText">4.8 / 5.0</h3>
-                        <p class="text-sm text-cafeMuted">Top rated by 19+ foodies in Patna</p>
+                        <div class="text-2xl font-bold font-serif text-white">4.7 / 5.0</div>
+                        <div class="text-xs text-slate-400">Verified Google Rating (15 Reviews)</div>
                     </div>
                 </div>
+
                 <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
-                    <div class="w-12 h-12 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary shrink-0">
-                        <i data-lucide="coffee" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-serif font-bold text-cafeText">Artisanal Brews</h3>
-                        <p class="text-sm text-cafeMuted">Handcrafted coffees & exquisite bites</p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
-                    <div class="w-12 h-12 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary shrink-0">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 shrink-0">
                         <i data-lucide="map-pin" class="w-6 h-6"></i>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-serif font-bold text-cafeText">Prime Location</h3>
-                        <p class="text-sm text-cafeMuted">Azim Tower, Saguna More, Danapur</p>
+                        <div class="text-lg font-bold font-serif text-white">Buddh Marg, Patna</div>
+                        <div class="text-xs text-slate-400">Prime location near Ashok Cinema</div>
                     </div>
                 </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="text-lg font-bold font-serif text-white">Instant WhatsApp Order</div>
+                        <div class="text-xs text-slate-400">Quick response & swift delivery coordination</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Menu Highlights Section -->
-    <section id="menu" class="py-20 lg:py-28">
+    <!-- ============================================== -->
+    <!-- FEATURED MENU / SPECIALTIES GRID               -->
+    <!-- ============================================== -->
+    <section id="menu" class="py-20 sm:py-28">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cafePrimary text-sm font-semibold uppercase tracking-widest block mb-3">Culinary Excellence</span>
-                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#F4F1DE] mb-4">Our Menu Highlights</h2>
-                <p class="text-cafeMuted text-base">Handpicked favorites loved by our patrons at Danapur Patna. Inquire or order directly via WhatsApp.</p>
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-2">Culinary Masterpieces</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Our Signature Specialties</h2>
+                <p class="text-sm sm:text-base text-slate-400">Handcrafted with premium ingredients and authentic spices to give you the ultimate dining satisfaction.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <!-- Menu Card 1 -->
-                <div class="bg-cafeSurface rounded-2xl border border-cafeSecondary overflow-hidden flex flex-col justify-between hover:border-cafePrimary/50 transition-all duration-300 shadow-xl">
-                    <div class="relative aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Specialty Coffee" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-cafeBg/90 backdrop-blur-sm text-cafePrimary font-bold text-xs border border-cafeSecondary">₹149 - ₹249</span>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-xl font-serif font-bold text-cafeText">Signature Cappuccino & Brews</h3>
-                                <span class="text-xs px-2.5 py-1 rounded-md bg-cafePrimary/10 text-cafePrimary font-medium">Coffee</span>
-                            </div>
-                            <p class="text-cafeMuted text-sm leading-relaxed mb-6">Rich, velvety espresso shots blended with steamed milk and topped with exquisite latte art.</p>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group shadow-lg">
+                    <div>
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Special Meal Bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">Bestseller</div>
                         </div>
-                        <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20order%20Signature%20Cappuccino%20and%20Brews." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-cafeSecondary hover:bg-cafePrimary text-cafeText hover:text-[#120F0D] font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
-                            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-                            <span>Inquire on WhatsApp</span>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif font-bold text-xl text-white">Suto Special Thali</h3>
+                                <span class="text-amber-500 font-bold text-lg">₹249</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">A wholesome platter of regional delicacies, fresh rotis, flavorful curries, dal, and sweet dessert.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919155104888?text=I%20would%20like%20to%20order%20the%20Suto%20Special%20Thali" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white font-semibold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Menu Card 2 -->
-                <div class="bg-cafeSurface rounded-2xl border border-cafeSecondary overflow-hidden flex flex-col justify-between hover:border-cafePrimary/50 transition-all duration-300 shadow-xl">
-                    <div class="relative aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Gourmet Burger" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-cafeBg/90 backdrop-blur-sm text-cafePrimary font-bold text-xs border border-cafeSecondary">₹229 - ₹349</span>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-xl font-serif font-bold text-cafeText">Suto Special Burger</h3>
-                                <span class="text-xs px-2.5 py-1 rounded-md bg-cafePrimary/10 text-cafePrimary font-medium">Fast Food</span>
-                            </div>
-                            <p class="text-cafeMuted text-sm leading-relaxed mb-6">Juicy patties, melted cheese, fresh crisp lettuce, and our signature secret sauce in a toasted brioche bun.</p>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group shadow-lg">
+                    <div>
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Savory Snacks & Appetizers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-orange-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">Chef's Choice</div>
                         </div>
-                        <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20order%20Suto%20Special%20Burger." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-cafeSecondary hover:bg-cafePrimary text-cafeText hover:text-[#120F0D] font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
-                            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-                            <span>Inquire on WhatsApp</span>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif font-bold text-xl text-white">Crispy Starters Platter</h3>
+                                <span class="text-amber-500 font-bold text-lg">₹199</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Crispy, golden-fried appetizers served with spicy green mint chutney and tangy tamarind dip.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919155104888?text=I%20would%20like%20to%20order%20the%20Crispy%20Starters%20Platter" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white font-semibold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Menu Card 3 -->
-                <div class="bg-cafeSurface rounded-2xl border border-cafeSecondary overflow-hidden flex flex-col justify-between hover:border-cafePrimary/50 transition-all duration-300 shadow-xl">
-                    <div class="relative aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Cafe Bites & Snacks" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-cafeBg/90 backdrop-blur-sm text-cafePrimary font-bold text-xs border border-cafeSecondary">₹179 - ₹299</span>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-xl font-serif font-bold text-cafeText">Crispy Bites & Pizzas</h3>
-                                <span class="text-xs px-2.5 py-1 rounded-md bg-cafePrimary/10 text-cafePrimary font-medium">Snacks</span>
-                            </div>
-                            <p class="text-cafeMuted text-sm leading-relaxed mb-6">Oven-fresh woodfired pizzas, crispy french fries, and mouthwatering starters perfect for sharing with friends.</p>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group shadow-lg">
+                    <div>
+                        <div class="aspect-video relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Healthy Bowls & Delights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">Popular</div>
                         </div>
-                        <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20order%20Crispy%20Bites%20and%20Pizzas." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-cafeSecondary hover:bg-cafePrimary text-cafeText hover:text-[#120F0D] font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
-                            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-                            <span>Inquire on WhatsApp</span>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-serif font-bold text-xl text-white">Gourmet Fusion Bowl</h3>
+                                <span class="text-amber-500 font-bold text-lg">₹220</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">An exquisite combination of aromatic rice, spiced gravy, and fresh farm vegetables cooked to perfection.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919155104888?text=I%20would%20like%20to%20order%20the%20Gourmet%20Fusion%20Bowl" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white font-semibold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Order on WhatsApp</span>
                         </a>
                     </div>
                 </div>
+
             </div>
 
-            <div class="text-center mt-12">
-                <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20please%20send%20me%20your%20complete%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-cafeSurface border border-cafePrimary text-cafePrimary font-semibold hover:bg-cafePrimary hover:text-[#120F0D] transition-all">
-                    <span>Get Full Menu PDF on WhatsApp</span>
-                    <i data-lucide="external-link" class="w-4 h-4"></i>
+            <!-- View Full Menu Banner -->
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/919155104888?text=Hi,%20please%20send%20me%20your%20full%20menu%20PDF" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 font-semibold text-base transition-colors">
+                    <span>Explore complete menu catalog on WhatsApp</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
             </div>
+
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="py-20 lg:py-28 bg-cafeSurface/30 border-y border-cafeSecondary">
+    <!-- ============================================== -->
+    <!-- WHY CHOOSE US SECTION                          -->
+    <!-- ============================================== -->
+    <section id="why-us" class="py-20 bg-slate-900/50 border-y border-slate-800">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cafePrimary text-sm font-semibold uppercase tracking-widest block mb-3">The Suto Experience</span>
-                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#F4F1DE] mb-4">Why Patna Loves Suto Cafe</h2>
-                <p class="text-cafeMuted text-base">We combine exceptional taste, warm hospitality, and a cozy aesthetic to create unforgettable moments.</p>
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-2">Our Core Values</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Why Food Lovers Choose Us</h2>
+                <p class="text-sm sm:text-base text-slate-400">Dedicated to unmatched taste, impeccable hygiene, and warm hospitality in the heart of Patna.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary hover:border-cafePrimary/50 transition-all shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary mb-6">
-                        <i data-lucide="heart" class="w-7 h-7"></i>
+                
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 mb-6">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-cafeText mb-3">Cozy Ambiance</h3>
-                    <p class="text-cafeMuted text-sm leading-relaxed">Designed with warm organic espresso tones, soft lighting, and aesthetic corners ideal for conversations and Instagram photos.</p>
+                    <h3 class="font-serif font-bold text-xl text-white mb-3">Uncompromised Quality</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">We source fresh, premium quality ingredients daily to ensure every single bite delivers authentic flavor and nutrition.</p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary hover:border-cafePrimary/50 transition-all shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary mb-6">
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-orange-600/10 border border-orange-600/30 flex items-center justify-center text-orange-500 mb-6">
                         <i data-lucide="map-pin" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-cafeText mb-3">Prime Location</h3>
-                    <p class="text-cafeMuted text-sm leading-relaxed">Conveniently situated at Azim Tower, Saguna More, Danapur, making it easily accessible from all parts of Patna.</p>
+                    <h3 class="font-serif font-bold text-xl text-white mb-3">Prime Central Location</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Conveniently situated on the 4th Floor, Buddh Marg, near Ashok Cinema, Fraser Road Area, making it easily accessible for all.</p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary hover:border-cafePrimary/50 transition-all shadow-lg">
-                    <div class="w-14 h-14 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary mb-6">
-                        <i data-lucide="utensils" class="w-7 h-7"></i>
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-xl bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-500 mb-6">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-cafeText mb-3">Exceptional Taste</h3>
-                    <p class="text-cafeMuted text-sm leading-relaxed">Every dish and beverage is prepared fresh with premium ingredients by expert chefs dedicated to culinary perfection.</p>
+                    <h3 class="font-serif font-bold text-xl text-white mb-3">Swift WhatsApp Orders</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Skip the long waits. Order instantly via WhatsApp and enjoy your favorite meals fresh at your table or doorstep.</p>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- About / Story Section -->
-    <section id="about" class="py-20 lg:py-28">
+    <!-- ============================================== -->
+    <!-- ABOUT / STORY SECTION                          -->
+    <!-- ============================================== -->
+    <section id="about" class="py-20 sm:py-28">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Image side -->
-                <div class="lg:col-span-6 relative">
-                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-cafeSecondary shadow-2xl bg-cafeSurface">
-                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Cafe Interior" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-cafeSurface border border-cafePrimary/30 p-6 rounded-2xl shadow-2xl max-w-xs hidden sm:block">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-cafePrimary">Established Favorite</span>
-                        </div>
-                        <p class="text-xs text-cafeMuted leading-relaxed">Saguna More's premier destination for coffee connoisseurs and food lovers.</p>
-                    </div>
-                </div>
-
-                <!-- Text side -->
+                
                 <div class="lg:col-span-6">
-                    <span class="text-cafePrimary text-sm font-semibold uppercase tracking-widest block mb-3">Our Story</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#F4F1DE] mb-6">Brewing Joy & Community in Danapur, Patna</h2>
-                    <p class="text-cafeMuted text-base leading-relaxed mb-6 font-light">
-                        Founded with a passion for soulful coffee and great conversations, Suto Cafe has quickly become a landmark at Azim Tower, Saguna More. Whether you are catching up with old friends, working remotely in a cozy nook, or enjoying a quiet evening, our doors are always open with warmth and aroma.
-                    </p>
-                    <p class="text-cafeMuted text-base leading-relaxed mb-8 font-light">
-                        We pride ourselves on our meticulous attention to detail—from the ethically sourced coffee beans to our handcrafted burgers and artisan pizzas. Come experience Patna's most inviting cafe atmosphere.
-                    </p>
-                    <div class="flex items-center gap-6">
-                        <div>
-                            <span class="text-3xl font-serif font-bold text-cafeText block">19+</span>
-                            <span class="text-xs text-cafeMuted uppercase tracking-wider">5-Star Reviews</span>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Ambiance" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Dining Experience" class="w-full h-full object-cover">
+                            </div>
                         </div>
-                        <div class="w-px h-12 bg-cafeSecondary"></div>
-                        <div>
-                            <span class="text-3xl font-serif font-bold text-cafeText block">100%</span>
-                            <span class="text-xs text-cafeMuted uppercase tracking-wider">Fresh Ingredients</span>
-                        </div>
-                        <div class="w-px h-12 bg-cafeSecondary"></div>
-                        <div>
-                            <span class="text-3xl font-serif font-bold text-cafeText block">Daily</span>
-                            <span class="text-xs text-cafeMuted uppercase tracking-wider">Open till 11 PM</span>
+                        <div class="space-y-4 pt-8">
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Chef Preparing Food" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Delicious Culinary Spread" class="w-full h-full object-cover">
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="lg:col-span-6">
+                    <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-2">Our Story</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-6 break-words">Serving Happiness "Suto jee bhar ke..."</h2>
+                    <p class="text-slate-300 text-base leading-relaxed mb-6">
+                        Located right in the bustling cultural and commercial hub of Patna on Buddh Marg, <strong>Suto jee bhar ke...</strong> was founded with a singular mission: to serve heartwarming, delicious meals that leave our guests fully satisfied.
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        Our cozy 4th-floor dining space offers a serene escape from the city rush, paired with magnificent views and a welcoming atmosphere. Whether you are catching up with friends, having a family dinner, or ordering straight to your home, we ensure every dish is crafted with love.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-slate-800">
+                        <div>
+                            <div class="text-3xl font-serif font-bold text-white mb-1">4.7★</div>
+                            <div class="text-xs text-slate-400">Google Rating by Patnaites</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-serif font-bold text-white mb-1">100%</div>
+                            <div class="text-xs text-slate-400">Hygiene & Freshness Guaranteed</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Interactive Gallery -->
-    <section id="gallery" class="py-20 lg:py-28 bg-cafeSurface/30 border-y border-cafeSecondary">
+    <!-- ============================================== -->
+    <!-- CUSTOMER REVIEWS SECTION                       -->
+    <!-- ============================================== -->
+    <section id="reviews" class="py-20 bg-slate-900/50 border-y border-slate-800">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cafePrimary text-sm font-semibold uppercase tracking-widest block mb-3">Visual Journey</span>
-                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#F4F1DE] mb-4">Glimpse Inside Suto Cafe</h2>
-                <p class="text-cafeMuted text-base">A peek into our cozy interiors, freshly brewed coffees, and delectable plates.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="aspect-square rounded-2xl overflow-hidden border border-cafeSecondary group">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Cafe vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="inline-flex items-center gap-1.5 text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                    <span>Google Verified Reviews (4.7 / 5.0)</span>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden border border-cafeSecondary group">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Coffee cup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden border border-cafeSecondary group">
-                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Burger meal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden border border-cafeSecondary group">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Cafe seating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer Reviews Section -->
-    <section id="reviews" class="py-20 lg:py-28">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cafePrimary text-sm font-semibold uppercase tracking-widest block mb-3">Customer Love</span>
-                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#F4F1DE] mb-4">What Our Patrons Say</h2>
-                <p class="text-cafeMuted text-base">Read authentic reviews from food lovers who visited Suto Cafe at Saguna More, Patna.</p>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">What Our Customers Say</h2>
+                <p class="text-sm sm:text-base text-slate-400">Real feedback from food lovers who visited Suto jee bhar ke...</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary flex flex-col justify-between shadow-lg">
+                
+                <!-- Review Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
-                        <div class="flex items-center text-amber-400 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                         </div>
-                        <p class="text-cafeMuted text-sm leading-relaxed mb-6">"One of the best cafes in Danapur! The ambiance is super cozy and the coffee is top-notch. Saguna More needed a place like this."</p>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">"Amazing ambience on the 4th floor near Ashok Cinema! The food was incredibly delicious and freshly prepared. Truly lives up to its name 'Suto jee bhar ke'."</p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-cafeSecondary">
-                        <div class="w-10 h-10 rounded-full bg-cafePrimary/20 text-cafePrimary font-bold font-serif flex items-center justify-center">A</div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-500 font-bold flex items-center justify-center text-sm">
+                            AK
+                        </div>
                         <div>
-                            <h4 class="text-sm font-semibold text-cafeText">Abhishek Kumar</h4>
-                            <span class="text-xs text-cafeMuted">Local Google Reviewer</span>
+                            <div class="font-semibold text-sm text-white">Amit Kumar</div>
+                            <div class="text-xs text-slate-400">Local Guide • Google Review</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Review 2 -->
-                <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary flex flex-col justify-between shadow-lg">
+                <!-- Review Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
-                        <div class="flex items-center text-amber-400 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                         </div>
-                        <p class="text-cafeMuted text-sm leading-relaxed mb-6">"Great burgers and wonderful service! Azim Tower location is very convenient with easy parking. Highly recommend for evening hangouts."</p>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">"Ordered via WhatsApp and the food reached hot and well-packed. The taste is authentic and portions are very generous. Highly recommended in Fraser Road area!"</p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-cafeSecondary">
-                        <div class="w-10 h-10 rounded-full bg-cafePrimary/20 text-cafePrimary font-bold font-serif flex items-center justify-center">P</div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-orange-600/20 text-orange-500 font-bold flex items-center justify-center text-sm">
+                            PS
+                        </div>
                         <div>
-                            <h4 class="text-sm font-semibold text-cafeText">Priya Singh</h4>
-                            <span class="text-xs text-cafeMuted">Local Google Reviewer</span>
+                            <div class="font-semibold text-sm text-white">Priya Sharma</div>
+                            <div class="text-xs text-slate-400">Verified Customer</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Review 3 -->
-                <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary flex flex-col justify-between shadow-lg">
+                <!-- Review Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between shadow-lg">
                     <div>
-                        <div class="flex items-center text-amber-400 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                         </div>
-                        <p class="text-cafeMuted text-sm leading-relaxed mb-6">"Amazing vibe, beautiful aesthetics, and very polite staff. The cappuccino is a must-try. 5/5 stars!"</p>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">"Great rooftop/high-floor vibes on Buddh Marg. Staff is polite and the culinary spread is delightful. Will definitely visit again with family."</p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-cafeSecondary">
-                        <div class="w-10 h-10 rounded-full bg-cafePrimary/20 text-cafePrimary font-bold font-serif flex items-center justify-center">R</div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-500 font-bold flex items-center justify-center text-sm">
+                            RS
+                        </div>
                         <div>
-                            <h4 class="text-sm font-semibold text-cafeText">Rahul Verma</h4>
-                            <span class="text-xs text-cafeMuted">Local Google Reviewer</span>
+                            <div class="font-semibold text-sm text-white">Rahul Sinha</div>
+                            <div class="text-xs text-slate-400">Local Food Enthusiast</div>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- FAQ Accordion -->
-    <section id="faq" class="py-20 lg:py-28 bg-cafeSurface/30 border-y border-cafeSecondary">
-        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cafePrimary text-sm font-semibold uppercase tracking-widest block mb-3">Got Questions?</span>
-                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#F4F1DE] mb-4">Frequently Asked Questions</h2>
-                <p class="text-cafeMuted text-base">Find answers to common queries about timings, bookings, and location.</p>
-            </div>
-
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="faq-card bg-cafeSurface border border-cafeSecondary rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="text-base sm:text-lg font-serif font-bold text-cafeText">Where is Suto Cafe located?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafePrimary transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-cafeMuted text-sm leading-relaxed pb-6">Suto Cafe is conveniently located at Azim Tower, Saguna More, Danapur, Patna, Bihar 801503.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="faq-card bg-cafeSurface border border-cafeSecondary rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="text-base sm:text-lg font-serif font-bold text-cafeText">How can I book a table in advance?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafePrimary transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-cafeMuted text-sm leading-relaxed pb-6">You can easily book a table instantly via WhatsApp by clicking on any of our "Book Table on WhatsApp" buttons or messaging us at +91 96085 69690.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="faq-card bg-cafeSurface border border-cafeSecondary rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="text-base sm:text-lg font-serif font-bold text-cafeText">What are the operating hours?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafePrimary transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-cafeMuted text-sm leading-relaxed pb-6">Suto Cafe is open every day from morning until 11:00 PM, serving delicious coffees, snacks, and meals.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="faq-card bg-cafeSurface border border-cafeSecondary rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="text-base sm:text-lg font-serif font-bold text-cafeText">Do you offer home delivery or take away?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-cafePrimary transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-cafeMuted text-sm leading-relaxed pb-6">Yes! You can place takeaway orders or inquire about delivery options directly through WhatsApp at +91 96085 69690.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Location & Contact Section -->
-    <section id="contact" class="py-20 lg:py-28">
+    <!-- ============================================== -->
+    <!-- INTERACTIVE LOCATION & CONTACT SECTION         -->
+    <!-- ============================================== -->
+    <section id="contact" class="py-20 sm:py-28">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cafePrimary text-sm font-semibold uppercase tracking-widest block mb-3">Visit & Reserve</span>
-                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#F4F1DE] mb-4">Location & Table Reservation</h2>
-                <p class="text-cafeMuted text-base">Drop by Saguna More or send us your reservation request instantly.</p>
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-2">Get in Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Visit Us or Send an Inquiry</h2>
+                <p class="text-sm sm:text-base text-slate-400">We are located in the heart of Patna. Reach out for table reservations, orders, or event inquiries.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <!-- Info & Map -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary shadow-lg">
-                        <h3 class="text-xl font-serif font-bold text-cafeText mb-6">Contact Information</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary shrink-0 mt-1">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-semibold text-cafeText">Address</h4>
-                                    <p class="text-cafeMuted text-sm">Suto cafe, Azim Tower, Saguna More, Danapur, Patna, Bihar 801503</p>
-                                </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details & Hours -->
+                <div class="lg:col-span-5 space-y-8">
+                    
+                    <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg space-y-6">
+                        <h3 class="font-serif font-bold text-xl text-white pb-4 border-b border-slate-800">Contact Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-600/10 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
                             </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary shrink-0">
-                                    <i data-lucide="phone" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-semibold text-cafeText">Phone / WhatsApp</h4>
-                                    <a href="tel:+919608569690" class="text-cafeMuted text-sm hover:text-cafePrimary transition-colors">+91 96085 69690</a>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-cafePrimary/10 border border-cafePrimary/30 flex items-center justify-center text-cafePrimary shrink-0">
-                                    <i data-lucide="clock" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-semibold text-cafeText">Hours</h4>
-                                    <p class="text-cafeMuted text-sm">Monday - Sunday: Open Daily till 11:00 PM</p>
-                                </div>
+                            <div>
+                                <div class="font-semibold text-sm text-white mb-1">Address</div>
+                                <p class="text-slate-400 text-sm leading-relaxed">4th Floor, 402, Buddh Marg, near Ashok cinema, Budh Vihar, Fraser Road Area, Patna, Bihar 800001</p>
                             </div>
                         </div>
 
-                        <div class="mt-8 pt-6 border-t border-cafeSecondary">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Suto+cafe+Azim+Tower+Saguna+More+Danapur+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-cafeSecondary hover:bg-cafePrimary text-cafeText hover:text-[#120F0D] font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
-                                <i data-lucide="navigation" class="w-4 h-4"></i>
-                                <span>Get Directions on Google Maps</span>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-600/10 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-sm text-white mb-1">Phone / WhatsApp</div>
+                                <a href="tel:+919155104888" class="text-amber-500 hover:text-amber-400 text-sm font-semibold">+91 91551 04888</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-600/10 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-sm text-white mb-1">Operating Hours</div>
+                                <p class="text-slate-400 text-sm">Monday – Sunday: 11:00 AM – 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Iframe -->
+                    <div class="rounded-2xl overflow-hidden border border-slate-800 h-64 shadow-lg relative">
+                        <iframe title="Suto jee bhar ke location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788501235!2d85.1376!3d25.6112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQwLjMiTiA4NcKwMDgnMTUuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="absolute bottom-3 left-3">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Suto+jee+bhar+ke+Patna" target="_blank" rel="noopener noreferrer" class="bg-slate-900/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700 hover:bg-slate-800 transition-colors shadow-lg flex items-center gap-1.5">
+                                <i data-lucide="navigation" class="w-3.5 h-3.5 text-amber-500"></i>
+                                <span>Get Directions</span>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Responsive Google Maps Embed -->
-                    <div class="rounded-2xl overflow-hidden border border-cafeSecondary h-[300px] shadow-lg">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7956!2d85.0485!3d25.6125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ1LjAiTiA4NcKwMDInNTQuNyJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Suto Cafe Location Map"></iframe>
-                    </div>
                 </div>
 
-                <!-- Reservation Form -->
-                <div class="lg:col-span-6">
-                    <div class="p-8 rounded-2xl bg-cafeSurface border border-cafeSecondary shadow-lg relative">
-                        <h3 class="text-xl font-serif font-bold text-cafeText mb-2">Reserve a Table</h3>
-                        <p class="text-cafeMuted text-sm mb-6">Fill in your details below to instantly submit your table booking request.</p>
+                <!-- Interactive Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg">
+                        <h3 class="font-serif font-bold text-2xl text-white mb-2">Send an Inquiry or Table Request</h3>
+                        <p class="text-slate-400 text-sm mb-6">Fill out the form below and we will get back to you instantly.</p>
                         
-                        <form id="reservation-form" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-2">Your Name</label>
-                                <input type="text" id="res-name" required placeholder="Enter your full name" class="w-full bg-cafeBg border border-cafeSecondary rounded-xl px-4 py-3 text-cafeText placeholder-cafeMuted/50 text-sm focus:outline-none focus:border-cafePrimary transition-colors">
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <form id="inquiry-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-2">Phone Number</label>
-                                    <input type="tel" id="res-phone" required placeholder="+91 98765 43210" class="w-full bg-cafeBg border border-cafeSecondary rounded-xl px-4 py-3 text-cafeText placeholder-cafeMuted/50 text-sm focus:outline-none focus:border-cafePrimary transition-colors">
+                                    <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
+                                    <input type="text" id="name" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="Rahul Kumar">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-2">Number of Guests</label>
-                                    <select id="res-guests" class="w-full bg-cafeBg border border-cafeSecondary rounded-xl px-4 py-3 text-cafeText text-sm focus:outline-none focus:border-cafePrimary transition-colors">
-                                        <option value="1-2 Persons">1 - 2 Persons</option>
-                                        <option value="3-4 Persons">3 - 4 Persons</option>
-                                        <option value="5-8 Persons">5 - 8 Persons</option>
-                                        <option value="8+ Persons">8+ Persons (Party)</option>
-                                    </select>
+                                    <label for="phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="+91 98765 43210">
                                 </div>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-2">Date</label>
-                                    <input type="date" id="res-date" required class="w-full bg-cafeBg border border-cafeSecondary rounded-xl px-4 py-3 text-cafeText text-sm focus:outline-none focus:border-cafePrimary transition-colors">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-2">Time</label>
-                                    <input type="time" id="res-time" required class="w-full bg-cafeBg border border-cafeSecondary rounded-xl px-4 py-3 text-cafeText text-sm focus:outline-none focus:border-cafePrimary transition-colors">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-cafeMuted mb-2">Special Requests (Optional)</label>
-                                <textarea id="res-msg" rows="3" placeholder="Birthday celebration, window seat, etc." class="w-full bg-cafeBg border border-cafeSecondary rounded-xl px-4 py-3 text-cafeText placeholder-cafeMuted/50 text-sm focus:outline-none focus:border-cafePrimary transition-colors"></textarea>
                             </div>
 
-                            <button type="submit" id="res-submit-btn" class="w-full py-4 rounded-xl bg-cafePrimary text-[#120F0D] font-bold text-base hover:bg-cafeHover transition-all shadow-lg shadow-cafePrimary/20 flex items-center justify-center gap-2">
-                                <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
-                                <span>Confirm Reservation via WhatsApp</span>
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Inquiry Type</label>
+                                <select id="service" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                    <option value="WhatsApp Food Order">WhatsApp Food Order</option>
+                                    <option value="Table Reservation">Table Reservation</option>
+                                    <option value="Party / Event Booking">Party / Event Booking</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message / Special Instructions</label>
+                                <textarea id="message" rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="Mention your requirements, dishes, or time of visit..."></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-amber-600/20 hover:shadow-amber-600/40 transition-all flex items-center justify-center gap-2">
+                                <span id="btn-text">Submit Inquiry</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
                             </button>
                         </form>
+
+                        <!-- Success Popup Modal -->
+                        <div id="success-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+                            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl space-y-4">
+                                <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 rounded-full flex items-center justify-center mx-auto">
+                                    <i data-lucide="check-circle" class="w-8 h-8"></i>
+                                </div>
+                                <h3 class="font-serif font-bold text-2xl text-white">Inquiry Received!</h3>
+                                <p class="text-slate-300 text-sm">Thank you for reaching out to Suto jee bhar ke... We have received your message and will contact you shortly.</p>
+                                <button id="close-modal" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors">Close</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- Success Modal Popup -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
-        <div class="bg-cafeSurface border border-cafeSecondary rounded-2xl p-8 max-w-md w-full text-center relative shadow-2xl">
-            <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto mb-6">
-                <i data-lucide="check" class="w-8 h-8"></i>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-cafeText mb-3">Reservation Ready!</h3>
-            <p class="text-cafeMuted text-sm mb-6 leading-relaxed" id="modal-msg">We are redirecting you to WhatsApp to instantly confirm your table booking with Suto Cafe.</p>
-            <button id="close-modal-btn" class="w-full py-3 rounded-xl bg-cafePrimary text-[#120F0D] font-semibold text-sm hover:bg-cafeHover transition-all">
-                Close & Continue
-            </button>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-cafeSurface border-t border-cafeSecondary py-16">
+    <!-- ============================================== -->
+    <!-- FOOTER                                         -->
+    <!-- ============================================== -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-cafeBg border border-cafePrimary/30 flex items-center justify-center text-cafePrimary font-serif font-bold text-xl">
-                            S
-                        </div>
-                        <div>
-                            <span class="text-lg font-serif font-bold text-cafeText block leading-tight">Suto Cafe</span>
-                            <span class="text-[10px] text-cafeMuted tracking-widest uppercase block">Danapur Patna</span>
-                        </div>
-                    </div>
-                    <p class="text-cafeMuted text-sm leading-relaxed mb-6">Patna's favorite spot for artisanal coffee, gourmet burgers, and cozy moments at Saguna More.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                
+                <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <a href="https://wa.me/919608569690" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-cafeBg border border-cafeSecondary flex items-center justify-center text-cafePrimary hover:border-cafePrimary transition-colors">
-                            <i data-lucide="message-circle" class="w-5 h-5"></i>
-                        </a>
-                        <a href="tel:+919608569690" class="w-10 h-10 rounded-xl bg-cafeBg border border-cafeSecondary flex items-center justify-center text-cafePrimary hover:border-cafePrimary transition-colors">
-                            <i data-lucide="phone" class="w-5 h-5"></i>
-                        </a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Suto+cafe+Azim+Tower+Saguna+More+Danapur+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-cafeBg border border-cafeSecondary flex items-center justify-center text-cafePrimary hover:border-cafePrimary transition-colors">
-                            <i data-lucide="map-pin" class="w-5 h-5"></i>
-                        </a>
+                        <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white">
+                            <i data-lucide="utensils" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">Suto jee bhar ke...</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Patna's finest dining and food service destination on Buddh Marg, delivering heartfelt flavors and unmatched satisfaction.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Menu Specialties</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a></li>
+                        <li><a href="#why-us" class="hover:text-amber-500 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Google Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-amber-500 transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <p class="text-sm text-slate-400 mb-2">Monday – Sunday</p>
+                    <p class="text-sm font-semibold text-amber-500 mb-4">11:00 AM – 11:00 PM</p>
+                    <div class="flex items-center gap-2 text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20 w-fit">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Open Now for Orders</span>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="text-base font-serif font-bold text-cafeText mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-cafeMuted">
-                        <li><a href="#menu" class="hover:text-cafePrimary transition-colors">Menu Highlights</a></li>
-                        <li><a href="#about" class="hover:text-cafePrimary transition-colors">Our Story</a></li>
-                        <li><a href="#gallery" class="hover:text-cafePrimary transition-colors">Photo Gallery</a></li>
-                        <li><a href="#reviews" class="hover:text-cafePrimary transition-colors">Customer Reviews</a></li>
-                        <li><a href="#faq" class="hover:text-cafePrimary transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-base font-serif font-bold text-cafeText mb-6">Operating Hours</h4>
-                    <ul class="space-y-3 text-sm text-cafeMuted">
-                        <li class="flex justify-between">
-                            <span>Monday - Sunday</span>
-                            <span class="text-cafeText font-medium">Open Daily</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Closing Time</span>
-                            <span class="text-cafeText font-medium">11:00 PM</span>
-                        </li>
-                        <li class="pt-3 border-t border-cafeSecondary text-xs text-cafePrimary">
-                            Dine-in, Takeaway & Table Reservations available.
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-base font-serif font-bold text-cafeText mb-6">Location</h4>
-                    <p class="text-cafeMuted text-sm leading-relaxed mb-4">
-                        Suto cafe, Azim Tower, Saguna More, Danapur, Patna, Bihar 801503
-                    </p>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Suto+cafe+Azim+Tower+Saguna+More+Danapur+Patna" target="_blank" rel="noopener noreferrer" class="text-cafePrimary text-sm font-semibold hover:underline inline-flex items-center gap-1">
-                        <span>Open in Google Maps</span>
-                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    <h4 class="font-serif font-bold text-white text-base mb-4">Connect & Order</h4>
+                    <p class="text-sm text-slate-400 mb-4">Have an urgent craving? Order directly through WhatsApp now.</p>
+                    <a href="https://wa.me/919155104888?text=Hi,%20I%20want%20to%20order%20food" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm py-3 px-5 rounded-xl shadow-lg transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>WhatsApp Order</span>
                     </a>
                 </div>
+
             </div>
 
-            <div class="pt-8 border-t border-cafeSecondary flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cafeMuted">
-                <p>&copy; <span id="current-year"></span> Suto Cafe - Danapur Patna. All rights reserved.</p>
-                <p>Designed with warmth & organic luxury for Patna food lovers.</p>
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Suto jee bhar ke... All rights reserved.</p>
+                <p>4th Floor, 402, Buddh Marg, near Ashok cinema, Patna, Bihar 800001</p>
             </div>
         </div>
     </footer>
 
-    <!-- Sticky Mobile Action Bar -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-cafeBg border-t border-cafeSecondary p-3 flex items-center gap-3">
-        <a href="tel:+919608569690" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-cafeSecondary bg-cafeSurface text-cafeText font-semibold text-sm">
-            <i data-lucide="phone" class="w-4 h-4 text-cafePrimary"></i>
+    <!-- ============================================== -->
+    <!-- STICKY MOBILE ACTION BAR                       -->
+    <!-- ============================================== -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0F172A] border-t border-slate-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919155104888" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-colors">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
             <span>Call Now</span>
         </a>
-        <a href="https://wa.me/919608569690?text=Hi%20Suto%20Cafe,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cafePrimary text-[#120F0D] font-bold text-sm shadow-lg shadow-cafePrimary/20">
-            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
-            <span>WhatsApp</span>
+        <a href="https://wa.me/919155104888?text=Hi,%20I%20want%20to%20order%20food%20from%20Suto%20jee%20bhar%20ke..." target="_blank" rel="noopener noreferrer" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-600/30 transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Order</span>
         </a>
     </div>
 
-    <!-- JavaScript Interactions -->
+    <!-- ============================================== -->
+    <!-- JAVASCRIPT LOGIC & INTERACTION                 -->
+    <!-- ============================================== -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Set current year in footer
+        // Set Current Year in Footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Mobile Menu Drawer Logic
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close');
+        // Mobile Menu Toggle functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawer = document.getElementById('close-drawer');
         const mobileDrawer = document.getElementById('mobile-drawer');
         const menuBackdrop = document.getElementById('menu-backdrop');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-        function openMobileMenu() {
-            mobileDrawer.classList.remove('translate-x-full');
-            menuBackdrop.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
+        function toggleMobileMenu(open) {
+            if (open) {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
         }
 
-        function closeMobileMenu() {
-            mobileDrawer.classList.add('translate-x-full');
-            menuBackdrop.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        menuToggle.addEventListener('click', openMobileMenu);
-        menuClose.addEventListener('click', closeMobileMenu);
-        menuBackdrop.addEventListener('click', closeMobileMenu);
-        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
-
-        // FAQ Accordion Logic
-        const faqCards = document.querySelectorAll('.faq-card');
-        faqCards.forEach(card => {
-            const btn = card.querySelector('.faq-btn');
-            const content = card.querySelector('.faq-content');
-            const icon = card.querySelector('i[data-lucide="chevron-down"]');
-
-            btn.addEventListener('click', () => {
-                const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-                
-                // Close all other FAQs
-                faqCards.forEach(otherCard => {
-                    const otherContent = otherCard.querySelector('.faq-content');
-                    const otherIcon = otherCard.querySelector('i[data-lucide="chevron-down"]');
-                    otherContent.style.maxHeight = '0px';
-                    if(otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-                });
-
-                if (!isOpen) {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                    if(icon) icon.style.transform = 'rotate(180deg)';
-                } else {
-                    content.style.maxHeight = '0px';
-                    if(icon) icon.style.transform = 'rotate(0deg)';
-                }
-            });
+        menuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        closeDrawer.addEventListener('click', () => toggleMobileMenu(false));
+        menuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
         });
 
-        // Reservation Form Submission Logic
-        const resForm = document.getElementById('reservation-form');
+        // Form submission simulation & validation with secure sanitization
+        const inquiryForm = document.getElementById('inquiry-form');
         const successModal = document.getElementById('success-modal');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-        const modalMsg = document.getElementById('modal-msg');
+        const closeModal = document.getElementById('close-modal');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
 
-        resForm.addEventListener('submit', (e) => {
+        inquiryForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Sanitize inputs
-            const name = encodeURIComponent(document.getElementById('res-name').value.trim());
-            const phone = encodeURIComponent(document.getElementById('res-phone').value.trim());
-            const guests = encodeURIComponent(document.getElementById('res-guests').value);
-            const date = encodeURIComponent(document.getElementById('res-date').value);
-            const time = encodeURIComponent(document.getElementById('res-time').value);
-            const msg = encodeURIComponent(document.getElementById('res-msg').value.trim());
+            const nameInput = document.getElementById('name').value.trim();
+            const phoneInput = document.getElementById('phone').value.trim();
+            const messageInput = document.getElementById('message').value.trim();
 
-            const waText = `Hi Suto Cafe,%0A%0AI would like to book a table.%0A- Name: ${name}%0A- Phone: ${phone}%0A- Guests: ${guests}%0A- Date: ${date}%0A- Time: ${time}%0A- Notes: ${msg}`;
-            const waUrl = `https://wa.me/919608569690?text=${waText}`;
+            if (!nameInput || !phoneInput || !messageInput) {
+                alert('Please fill in all required fields.');
+                return;
+            }
 
-            modalMsg.textContent = `Thank you, ${document.getElementById('res-name').value}! We are now opening WhatsApp to complete your table reservation at Suto Cafe, Danapur.`;
-            successModal.classList.remove('hidden');
-            successModal.classList.add('flex');
-            document.body.classList.add('overflow-hidden');
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
 
-            // Delay redirect slightly for user UX
             setTimeout(() => {
-                window.open(waUrl, '_blank', 'noopener noreferrer');
-            }, 1200);
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Inquiry';
+                successModal.classList.remove('hidden');
+                inquiryForm.reset();
+            }, 1000);
         });
 
-        closeModalBtn.addEventListener('click', () => {
+        closeModal.addEventListener('click', function() {
             successModal.classList.add('hidden');
-            successModal.classList.remove('flex');
-            document.body.classList.remove('overflow-hidden');
-            resForm.reset();
         });
     </script>
 </body>
