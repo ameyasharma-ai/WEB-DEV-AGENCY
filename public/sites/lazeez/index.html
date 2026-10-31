@@ -3,11 +3,11 @@
 <head>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Lazeez Restaurant | Authentic Dining on Fraser Road, Patna</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lazeez Multicuisine Family Restaurant in Bihta, Bihar. Enjoy authentic North Indian, Chinese, Tandoori & Family Combos near F.D.D.I Institute. Reserve your table on WhatsApp today!">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <title>Lazeez - Multicuisine Family Restaurant | Bihta</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,960 +15,821 @@
             theme: {
                 extend: {
                     colors: {
-                        background: '#121212',
-                        surface: '#1E1E1E',
-                        primary: '#D97706',
-                        secondary: '#B45309',
+                        brand: {
+                            bg: '#0F172A',
+                            surface: '#1E293B',
+                            accent: '#F59E0B',
+                            secondary: '#EA580C',
+                            textPrimary: '#F8FAFC',
+                            textMuted: '#94A3B8',
+                        }
                     },
                     fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <style>
         body {
-            background-color: #121212;
-            color: #F9FAFB;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0F172A;
+            color: #F8FAFC;
         }
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #121212;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D97706;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
         }
     </style>
 </head>
-<body class="overflow-x-hidden bg-[#121212] text-[#F9FAFB] pb-24 lg:pb-0 selection:bg-amber-600 selection:text-white">
+<body class="bg-[#0F172A] text-[#F8FAFC] overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
 
     <!-- Announcement Bar -->
-    <div id="announcement-bar" class="bg-amber-700 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
-        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
-        <span>Open Today: 11:00 AM - 11:00 PM • Fraser Road, Patna</span>
-        <button onclick="document.getElementById('announcement-bar').style.display='none'" class="ml-4 hover:opacity-75 focus:outline-none" aria-label="Close Announcement">
-            <i data-lucide="x" class="w-4 h-4"></i>
-        </button>
+    <div class="bg-gradient-to-r from-orange-600 to-amber-500 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-40 relative">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-2 sm:gap-6">
+            <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"><span>Near F.D.D.I Institute, Bihta, Bihar</span></i></span>
+            <span class="hidden md:inline">•</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"><span>Open Daily: 10:00 AM – 10:30 PM</span></i></span>
+            <span class="hidden md:inline">•</span>
+            <a href="tel:+919060177401" rel="noopener noreferrer" class="underline font-bold flex items-center gap-1 hover:text-amber-100 transition-colors">
+                <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> +91 90601 77401
+            </a>
+        </div>
     </div>
 
-    <!-- 100% Solid Opaque Header -->
-    <header class="sticky top-0 z-40 bg-[#121212] border-b border-zinc-800 w-full">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="bg-[#0F172A] border-b border-slate-800 sticky top-0 z-40 w-full transition-all">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group focus:outline-none">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 font-serif text-xl sm:text-2xl font-bold group-hover:bg-amber-600 group-hover:text-white transition-all duration-300">
-                    L
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="utensils-crossed" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
-                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white block">Lazeez</span>
-                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-amber-500 block -mt-1 font-semibold">Restaurant & Dining</span>
+                    <span class="text-xl sm:text-2xl font-extrabold font-['Outfit'] tracking-tight text-white block">LAZEEZ</span>
+                    <span class="text-[10px] sm:text-xs text-amber-400 font-medium tracking-wider uppercase block -mt-1">Multicuisine Restaurant</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-zinc-300">
-                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
-                <a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a>
-                <a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a>
-                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
-                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
-                <a href="#contact" class="hover:text-amber-500 transition-colors">Location</a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="#menu" class="hover:text-amber-400 transition-colors">Menu</a>
+                <a href="#about" class="hover:text-amber-400 transition-colors">About Us</a>
+                <a href="#gallery" class="hover:text-amber-400 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-amber-400 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors">Location</a>
             </nav>
 
-            <!-- Header Action CTAs -->
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="tel:+918102929898" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 bg-zinc-900 text-zinc-200 hover:text-white hover:border-amber-500/50 text-sm font-medium transition-all duration-300">
-                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
-                    <span>+91 81029 29898</span>
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="tel:+919060177401" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-700 text-sm font-semibold text-slate-200 hover:border-amber-500 hover:text-amber-400 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i> Call Us
                 </a>
-                <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Lazeez%20Restaurant." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-sm font-medium transition-all duration-300 shadow-lg shadow-amber-600/20">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    <span>WhatsApp</span>
+                <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20would%20like%20to%20inquire%20about%20table%20reservation%20and%20menu." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 text-sm font-bold shadow-lg shadow-amber-500/20 transition-all">
+                    <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Table
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle Button -->
-            <button id="menu-btn" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:text-amber-400 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Backdrop Overlay -->
-    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
-
     <!-- Flawless Mobile Drawer -->
-    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#121212] border-l border-zinc-800 rounded-tl-2xl p-6 pt-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs rounded-tl-2xl p-6 bg-[#0F172A] border-l border-slate-800 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between overflow-y-auto">
         <div>
-            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
-                <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-lg bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 font-serif text-lg font-bold">
-                        L
+            <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-bold">
+                        <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
                     </div>
                     <div>
-                        <span class="font-serif text-lg font-bold text-white block">Lazeez</span>
-                        <span class="text-[10px] uppercase tracking-widest text-amber-500 block -mt-1 font-semibold">Restaurant</span>
+                        <h3 class="font-bold text-lg text-white">Lazeez</h3>
+                        <p class="text-xs text-amber-400">Family Restaurant</p>
                     </div>
                 </div>
-                <button id="menu-close-btn" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white focus:outline-none">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+                <button id="close-menu-btn" aria-label="Close Menu" class="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
-            
-            <nav class="flex flex-col space-y-4 pt-6 text-base font-medium text-zinc-300">
-                <a href="#menu" class="mobile-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Menu</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#about" class="mobile-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Our Story</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#gallery" class="mobile-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Gallery</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#reviews" class="mobile-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#faq" class="mobile-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
-                <a href="#contact" class="mobile-link hover:text-amber-500 py-1 transition-colors flex items-center justify-between"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+
+            <!-- Mobile Nav Links -->
+            <nav class="flex flex-col gap-4 pt-6 text-base font-medium text-slate-200">
+                <a href="#menu" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800 transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5 text-amber-500"></i> Explore Menu
+                </a>
+                <a href="#about" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800 transition-colors">
+                    <i data-lucide="info" class="w-5 h-5 text-amber-500"></i> About Us
+                </a>
+                <a href="#gallery" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800 transition-colors">
+                    <i data-lucide="image" class="w-5 h-5 text-amber-500"></i> Photo Gallery
+                </a>
+                <a href="#reviews" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800 transition-colors">
+                    <i data-lucide="star" class="w-5 h-5 text-amber-500"></i> Customer Reviews
+                </a>
+                <a href="#faq" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800 transition-colors">
+                    <i data-lucide="help-circle" class="w-5 h-5 text-amber-500"></i> FAQ
+                </a>
+                <a href="#contact" class="mobile-link flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800 transition-colors">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i> Location & Contact
+                </a>
             </nav>
         </div>
 
-        <div class="pt-6 border-t border-zinc-800 space-y-3">
-            <a href="tel:+918102929898" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-zinc-700 bg-zinc-900 text-white font-medium text-sm">
-                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
-                <span>Call +91 81029 29898</span>
+        <!-- Mobile Drawer Footer CTA -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+            <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-center flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 min-h-[48px]">
+                <i data-lucide="message-square" class="w-5 h-5"></i> Reserve on WhatsApp
             </a>
-            <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Lazeez%20Restaurant." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium text-sm shadow-lg shadow-amber-600/20">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                <span>WhatsApp Reservation</span>
+            <a href="tel:+919060177401" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-slate-800 border border-slate-700 text-white font-semibold text-center flex items-center justify-center gap-2 min-h-[48px]">
+                <i data-lucide="phone-call" class="w-5 h-5 text-amber-500"></i> Call +91 90601 77401
             </a>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-12 pb-16 sm:py-24 lg:py-32 border-b border-zinc-800/60 bg-[#121212]">
-        <!-- Ambient Background Glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-amber-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                
-                <!-- Left Content -->
-                <div class="lg:col-span-7 text-left">
-                    <!-- Trust Rating Badge -->
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-inner">
-                        <div class="flex items-center text-amber-500 gap-0.5">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
-                        </div>
-                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">3.8 ★ <span class="text-zinc-400 font-normal">(267+ Google Reviews)</span></span>
+        <!-- Hero Section -->
+        <section class="py-12 sm:py-16 md:py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 flex flex-col items-start text-left">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-800 border border-slate-700 mb-6 shadow-sm">
+                    <div class="flex items-center text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-slate-600"></i>
                     </div>
-
-                    <!-- Main Heading -->
-                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-serif text-white leading-[1.15] mb-6 break-words">
-                        Exquisite Flavors & <span class="text-amber-500 italic">Unforgettable</span> Dining in Patna
-                    </h1>
-
-                    <!-- Subheadline -->
-                    <p class="text-base sm:text-lg text-zinc-300 mb-8 max-w-2xl leading-relaxed break-words font-light">
-                        Welcome to <strong class="text-white font-medium">Lazeez Restaurant</strong>, ideally situated on Fraser Road (near Petrol Pump, Instair of Astor Hotel). Experience authentic culinary masterpieces crafted with passion and premium ingredients.
-                    </p>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Lazeez%20Restaurant." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-base transition-all duration-300 shadow-xl shadow-amber-600/25 hover:translate-y-[-2px]">
-                            <i data-lucide="calendar" class="w-5 h-5"></i>
-                            <span>Reserve a Table</span>
-                        </a>
-                        <a href="#menu" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 hover:text-white font-semibold text-base transition-all duration-300 hover:translate-y-[-2px]">
-                            <i data-lucide="utensils" class="w-5 h-5 text-amber-500"></i>
-                            <span>View Menu</span>
-                        </a>
-                    </div>
-
-                    <!-- Quick Location Note -->
-                    <div class="mt-8 flex items-center gap-2 text-xs sm:text-sm text-zinc-400">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0"></i>
-                        <span>Fraser Rd, Patna, Bihar 800001 (Near Petrol Pump, Instair Of Astor Hotel)</span>
-                    </div>
+                    <span class="text-xs sm:text-sm font-semibold text-slate-200">4.0★ Rating <span class="text-slate-400 font-normal">(545+ Google Reviews)</span></span>
                 </div>
 
-                <!-- Right Hero Image / Visual Showcase Card -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Delicious food at Lazeez Restaurant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        
-                        <!-- Floating Badge Card -->
-                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-zinc-900/90 backdrop-blur-md border border-zinc-800 flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-xl bg-amber-600/20 flex items-center justify-center text-amber-500">
-                                    <i data-lucide="award" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white">Prime Fraser Road Spot</h4>
-                                    <p class="text-xs text-zinc-400">Family dining & great ambiance</p>
-                                </div>
-                            </div>
-                            <span class="px-3 py-1 rounded-full bg-amber-600/20 text-amber-400 text-xs font-semibold border border-amber-500/30">Open Now</span>
-                        </div>
-                    </div>
+                <!-- Main Heading -->
+                <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-['Outfit'] text-white leading-[1.15] mb-6 break-words">
+                    Authentic Flavors, Unforgettable Family Moments in Bihta
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed max-w-2xl break-words">
+                    Welcome to <strong class="text-amber-400">Lazeez Multicuisine Family Restaurant</strong>. Indulge in mouth-watering North Indian delicacies, sizzling Tandoori specialties, and delightful Chinese favorites right near F.D.D.I Institute. Perfect for family gatherings, student get-togethers, and celebrations.
+                </p>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                    <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20want%20to%20reserve%20a%20table%20for%20today." target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-base text-center shadow-xl shadow-amber-500/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2.5 min-h-[48px]">
+                        <i data-lucide="message-square" class="w-5 h-5"></i> Reserve Table on WhatsApp
+                    </a>
+                    <a href="#menu" class="px-8 py-4 rounded-xl bg-slate-800 border border-slate-700 hover:border-amber-500/50 text-white font-bold text-base text-center hover:bg-slate-750 transition-all flex items-center justify-center gap-2.5 min-h-[48px]">
+                        <span>Explore Menu</span> <i data-lucide="arrow-down" class="w-4 h-4 text-amber-400"></i>
+                    </a>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust & Social Proof Bar -->
-    <section class="bg-zinc-950 border-b border-zinc-800/80 py-6">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
-                <div class="flex items-center justify-center gap-3 py-2 md:py-0">
-                    <div class="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-amber-500">
-                        <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
-                    </div>
-                    <div class="text-left">
-                        <div class="font-bold text-white text-base">3.8 ★ Rating</div>
-                        <div class="text-xs text-zinc-400">Based on 267+ Google Reviews</div>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center gap-3 py-2 md:py-0">
-                    <div class="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-amber-500">
-                        <i data-lucide="map-pin" class="w-5 h-5"></i>
-                    </div>
-                    <div class="text-left">
-                        <div class="font-bold text-white text-base">Prime Fraser Road</div>
-                        <div class="text-xs text-zinc-400">Near Petrol Pump, Instair Of Astor Hotel</div>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center gap-3 py-2 md:py-0">
-                    <div class="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-amber-500">
-                        <i data-lucide="users" class="w-5 h-5"></i>
-                    </div>
-                    <div class="text-left">
-                        <div class="font-bold text-white text-base">Family & Group Dining</div>
-                        <div class="text-xs text-zinc-400">Warm hospitality & rich ambiance</div>
-                    </div>
+                <!-- Quick Location Info -->
+                <div class="mt-8 flex items-center gap-3 text-sm text-slate-400">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+                    <span>Bihta - Kanpa, Bihta Rd, Bihta, Bihar 801103 (Near F.D.D.I Institute)</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Services / Menu Grid Section -->
-    <section id="menu" class="py-16 sm:py-24 bg-[#121212] relative">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Culinary Masterpieces</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Explore Our Signature Menu</h2>
-                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">From succulent starters to rich main courses and refreshing beverages, discover dishes prepared with authentic spices and fresh ingredients.</p>
+            <!-- Hero Image Showcase -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900 group">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Delicious Multicuisine Spread at Lazeez Restaurant Bihta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    
+                    <!-- Floating Badge Card -->
+                    <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-800 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Bihta's Favorite Dining Spot</h4>
+                            <p class="text-xs text-slate-300">Fresh ingredients & expert chefs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decorative Ambient Glow -->
+                <div class="absolute -top-10 -right-10 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-orange-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="py-8 my-6 border-y border-slate-800 bg-slate-900/50 rounded-2xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="text-amber-400 flex items-center gap-1 mb-1 font-bold text-2xl sm:text-3xl font-['Outfit']">
+                        <span>4.0</span> <i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">Google Rating</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 border-l border-slate-800">
+                    <div class="text-white font-bold text-2xl sm:text-3xl font-['Outfit'] mb-1">545+</div>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">Happy Customer Reviews</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 border-l border-slate-800">
+                    <div class="text-amber-400 font-bold text-2xl sm:text-3xl font-['Outfit'] mb-1">Multicuisine</div>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">North Indian, Chinese, Tandoori</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 border-l border-slate-800">
+                    <div class="text-white font-bold text-2xl sm:text-3xl font-['Outfit'] mb-1">F.D.D.I</div>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium">Prime Location Landmark</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Menu Categories Grid -->
+        <section id="menu" class="py-16 sm:py-20">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-wider block mb-2">Our Culinary Masterpieces</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-['Outfit'] text-white">Explore Our Delicious Menu</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">Prepared fresh by our expert culinary team with authentic spices and top-quality ingredients.</p>
             </div>
 
-            <!-- Menu Category Tabs / Filter Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12">
-                <button onclick="filterMenu('all')" class="menu-tab active-tab px-5 py-2.5 rounded-xl text-sm font-medium bg-amber-600 text-white transition-all shadow-lg shadow-amber-600/20">All Dishes</button>
-                <button onclick="filterMenu('starter')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-medium bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-amber-500/50 transition-all">Starters</button>
-                <button onclick="filterMenu('main')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-medium bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-amber-500/50 transition-all">Main Course</button>
-                <button onclick="filterMenu('beverage')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-medium bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-amber-500/50 transition-all">Beverages</button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: North Indian -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="North Indian Delicacies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs shadow">Bestseller</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-['Outfit'] text-white mb-2">North Indian Thali & Curries</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Rich gravies, aromatic Biryanis, buttery Naans, and traditional paneer specialties cooked to perfection.</p>
+                        </div>
+                        <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20want%20to%20order%20North%20Indian%20dishes." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-bold text-sm text-center transition-colors flex items-center justify-center gap-2 min-h-[48px]">
+                            <i data-lucide="message-square" class="w-4 h-4"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Chinese -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80" alt="Chinese Cuisine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-orange-600 text-white font-bold text-xs shadow">Popular</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-['Outfit'] text-white mb-2">Chinese & Indo-Chinese</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Wok-tossed Hakka Noodles, crispy Manchurian, Fried Rice, Chili Paneer, and sizzling appetizers.</p>
+                        </div>
+                        <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20want%20to%20order%20Chinese%20dishes." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-bold text-sm text-center transition-colors flex items-center justify-center gap-2 min-h-[48px]">
+                            <i data-lucide="message-square" class="w-4 h-4"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Tandoori -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599487488170-ded1ec26ae5f?auto=format&fit=crop&w=600&q=80" alt="Tandoori Specialties" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs shadow">Chef Special</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-['Outfit'] text-white mb-2">Sizzling Tandoori Grills</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Smoky Paneer Tikka, Malai Chaap, Tandoori Mushrooms, and succulent kebabs grilled in authentic clay ovens.</p>
+                        </div>
+                        <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20want%20to%20order%20Tandoori%20items." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-bold text-sm text-center transition-colors flex items-center justify-center gap-2 min-h-[48px]">
+                            <i data-lucide="message-square" class="w-4 h-4"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Family Combos -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Family Combos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-orange-600 text-white font-bold text-xs shadow">Value Pack</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-['Outfit'] text-white mb-2">Family Combos & Feasts</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Curated meal packages designed for families and large groups looking for variety and great value.</p>
+                        </div>
+                        <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20want%20to%20inquire%20about%20Family%20Combos." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-bold text-sm text-center transition-colors flex items-center justify-center gap-2 min-h-[48px]">
+                            <i data-lucide="message-square" class="w-4 h-4"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-16 border-t border-slate-800">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-wider block mb-2">The Lazeez Advantage</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-['Outfit'] text-white">Why Families & Students Choose Us</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">We pride ourselves on exceptional hospitality, uncompromising hygiene, and unforgettable tastes.</p>
             </div>
 
-            <!-- Menu Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                
-                <!-- Menu Item 1 -->
-                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-xl" data-category="starter">
-                    <div>
-                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
-                            <img src="https://images.unsplash.com/photo-1599487488170-d3c11c071f42?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-amber-400 text-xs font-semibold border border-zinc-800">Starter</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-serif text-lg sm:text-xl font-bold text-white">Lazeez Special Paneer Tikka</h3>
-                                <span class="text-amber-500 font-bold text-base sm:text-lg">₹320</span>
-                            </div>
-                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Fresh cottage cheese cubes marinated in rich yogurt and exotic spices, charred to perfection in a clay oven.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20order/inquire%20about%20Lazeez%20Special%20Paneer%20Tikka." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span>Inquire on WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Menu Item 2 -->
-                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-xl" data-category="main">
-                    <div>
-                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
-                            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-amber-400 text-xs font-semibold border border-zinc-800">Main Course</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-serif text-lg sm:text-xl font-bold text-white">Classic Butter Chicken</h3>
-                                <span class="text-amber-500 font-bold text-base sm:text-lg">₹450</span>
-                            </div>
-                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Tender chicken pieces simmered in a rich, velvety tomato and butter gravy with aromatic herbs.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20order/inquire%20about%20Classic%20Butter%20Chicken." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span>Inquire on WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Menu Item 3 -->
-                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-xl" data-category="main">
-                    <div>
-                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
-                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Hyderabadi Dum Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-amber-400 text-xs font-semibold border border-zinc-800">Main Course</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-serif text-lg sm:text-xl font-bold text-white">Lazeez Special Dum Biryani</h3>
-                                <span class="text-amber-500 font-bold text-base sm:text-lg">₹380</span>
-                            </div>
-                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Aromatic basmati rice cooked with tender meat/veg, saffron, and traditional secret spices sealed in a clay pot.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20order/inquire%20about%20Lazeez%20Special%20Dum%20Biryani." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span>Inquire on WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Menu Item 4 -->
-                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-xl" data-category="starter">
-                    <div>
-                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
-                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Mutton Seekh Kebab" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-amber-400 text-xs font-semibold border border-zinc-800">Starter</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-serif text-lg sm:text-xl font-bold text-white">Mutton Seekh Kebab</h3>
-                                <span class="text-amber-500 font-bold text-base sm:text-lg">₹420</span>
-                            </div>
-                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Finely minced succulent mutton blended with aromatic herbs and grilled on skewers over glowing charcoal.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20order/inquire%20about%20Mutton%20Seekh%20Kebab." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span>Inquire on WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Menu Item 5 -->
-                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-xl" data-category="main">
-                    <div>
-                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
-                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Dal Makhani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-amber-400 text-xs font-semibold border border-zinc-800">Main Course</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-serif text-lg sm:text-xl font-bold text-white">Royal Dal Makhani</h3>
-                                <span class="text-amber-500 font-bold text-base sm:text-lg">₹280</span>
-                            </div>
-                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Whole black lentils simmered overnight over slow charcoal fires, enriched with butter and fresh cream.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20order/inquire%20about%20Royal%20Dal%20Makhani." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span>Inquire on WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Menu Item 6 -->
-                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-xl" data-category="beverage">
-                    <div>
-                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
-                            <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=600&q=80" alt="Mojito and Mocktails" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-amber-400 text-xs font-semibold border border-zinc-800">Beverage</span>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-2">
-                                <h3 class="font-serif text-lg sm:text-xl font-bold text-white">Mint Mojito & Mocktails</h3>
-                                <span class="text-amber-500 font-bold text-base sm:text-lg">₹180</span>
-                            </div>
-                            <p class="text-zinc-400 text-sm leading-relaxed mb-4">Refreshing chilled mocktails blended with fresh mint leaves, lime, and crushed ice to complement your meal.</p>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20order/inquire%20about%20Mint%20Mojito%20%26%20Mocktails." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all duration-300">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span>Inquire on WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="py-16 sm:py-24 bg-zinc-950 border-t border-b border-zinc-800/80">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">The Lazeez Experience</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Why Choose Lazeez Restaurant?</h2>
-                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">We take pride in offering an exceptional dining experience right in the heart of Patna on Fraser Road.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Feature 1 -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="flame" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-white mb-3">Authentic Taste</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Master chefs blending traditional Indian spices and authentic recipes to ignite your taste buds.</p>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
                     </div>
+                    <h3 class="text-lg font-bold font-['Outfit'] text-white mb-2">Fresh Ingredients</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Every dish is prepared using fresh locally-sourced farm vegetables, authentic spices, and premium oils.</p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-white mb-3">Hygienic Kitchen</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Strict adherence to cleanliness and sanitation standards in every stage of food preparation.</p>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-orange-600/10 text-orange-500 flex items-center justify-center mb-5">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
+                    <h3 class="text-lg font-bold font-['Outfit'] text-white mb-2">Hygienic Kitchen</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Our modern kitchen follows strict hygiene standards, sanitization protocols, and food safety guidelines.</p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="map-pin" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-white mb-3">Prime Location</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Conveniently situated on Fraser Road, near Petrol Pump, Instair of Astor Hotel in Patna.</p>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5">
+                        <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
+                    <h3 class="text-lg font-bold font-['Outfit'] text-white mb-2">Family Ambiance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Warm, welcoming, and spacious seating tailored for family dinners, birthdays, and celebrations.</p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="smile" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-white mb-3">Warm Hospitality</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Friendly staff dedicated to making your family dinners, dates, and get-togethers memorable.</p>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-orange-600/10 text-orange-500 flex items-center justify-center mb-5">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
                     </div>
+                    <h3 class="text-lg font-bold font-['Outfit'] text-white mb-2">Prime Bihta Location</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Conveniently situated on Bihta Rd, right near the prominent F.D.D.I Institute with easy parking access.</p>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About / Story Section -->
-    <section id="about" class="py-16 sm:py-24 bg-[#121212]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                
-                <!-- Left Image Column -->
-                <div class="lg:col-span-6 relative">
-                    <div class="relative w-full aspect-[4/3] sm:aspect-[4/3] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Lazeez Restaurant Ambiance" class="w-full h-full object-cover">
-                    </div>
-                    <!-- Absolute Accent Card -->
-                    <div class="absolute -bottom-6 -right-4 sm:-right-8 p-6 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl max-w-xs hidden sm:block">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-amber-600 flex items-center justify-center text-white font-bold text-xl font-serif">
-                                267+
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-white">Happy Diners</h4>
-                                <p class="text-xs text-zinc-400">Trusted food destination in Patna</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- About / Story Section -->
+        <section id="about" class="py-16 sm:py-20 border-t border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 relative">
+                <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Lazeez Restaurant Interior" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Right Text Column -->
-                <div class="lg:col-span-6">
-                    <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Our Culinary Journey</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-6 break-words">A Legacy of Taste & Elegance on Fraser Road</h2>
-                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 font-light">
-                        Located right near the petrol pump and Instair of Astor Hotel on Fraser Road, Patna, <strong class="text-white font-medium">Lazeez Restaurant</strong> has established itself as a premier destination for food lovers seeking rich aromas, authentic spices, and a welcoming ambiance.
-                    </p>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-8">
-                        Whether you are planning a family celebration, a cozy dinner with friends, or simply craving delicious food in the heart of the city, our dedicated culinary team ensures every dish served is a masterpiece.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-zinc-800">
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold font-serif text-amber-500 mb-1">11 AM - 11 PM</div>
-                            <div class="text-xs sm:text-sm text-zinc-400">Open Daily</div>
-                        </div>
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold font-serif text-amber-500 mb-1">3.8 ★</div>
-                            <div class="text-xs sm:text-sm text-zinc-400">Google Rating</div>
-                        </div>
-                    </div>
+                <div class="absolute -bottom-6 -right-6 bg-amber-500 text-slate-950 p-6 rounded-2xl shadow-xl hidden sm:block">
+                    <div class="text-3xl font-extrabold font-['Outfit']">545+</div>
+                    <div class="text-xs font-bold uppercase tracking-wider">Satisfied Diners</div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Showcase / Gallery -->
-    <section id="gallery" class="py-16 sm:py-24 bg-zinc-950 border-t border-b border-zinc-800/80">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Visual Feast</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Ambiance & Culinary Gallery</h2>
-                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Take a visual tour of our delicious dishes and elegant dining spaces.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white text-sm font-semibold">Cozy Dining Ambiance</span>
+            <div class="lg:col-span-6 flex flex-col items-start text-left">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-wider block mb-2">Our Culinary Heritage</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-['Outfit'] text-white mb-6">Serving Joy & Flavor in Bihta, Bihar</h2>
+                <p class="text-slate-300 text-base leading-relaxed mb-4">
+                    Located near the prestigious F.D.D.I Institute on Bihta Rd, <strong class="text-amber-400">Lazeez Multicuisine Family Restaurant</strong> has become the preferred dining destination for families, working professionals, and students alike.
+                </p>
+                <p class="text-slate-400 text-base leading-relaxed mb-6">
+                    Whether you are craving a comforting North Indian curry after a long week, hosting a family celebration, or enjoying a quick evening snack, our dedicated chefs ensure every single plate is crafted with passion and authentic flavor.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 w-full mb-8">
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900 border border-slate-800">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500"><span>Dine-In & Takeaway</span></i>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900 border border-slate-800">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-amber-500"><span>Fast WhatsApp Orders</span></i>
                     </div>
                 </div>
 
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Gourmet Pizza & Starters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white text-sm font-semibold">Exquisite Starters</span>
+                <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/20 transition-all flex items-center gap-2 min-h-[48px]">
+                    <i data-lucide="message-square" class="w-4 h-4"></i> Chat with Us on WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- Interactive Food Gallery -->
+        <section id="gallery" class="py-16 sm:py-20 border-t border-slate-800">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-wider block mb-2">Visual Feast</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-['Outfit'] text-white">Delicious Moments at Lazeez</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">Take a sneak peek into our kitchen creations and welcoming restaurant ambiance.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden relative group border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Biryani Dish" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white font-bold text-sm">Shahi Biryani</span>
                     </div>
                 </div>
-
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80" alt="Fresh Salads & Delicacies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white text-sm font-semibold">Fresh & Healthy Ingredients</span>
+                <div class="aspect-square rounded-xl overflow-hidden relative group border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Pizza / Snacks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white font-bold text-sm">Sizzling Starters</span>
                     </div>
                 </div>
-
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=600&q=80" alt="Fine Dining Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white text-sm font-semibold">Family & Group Seating</span>
+                <div class="aspect-square rounded-xl overflow-hidden relative group border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white font-bold text-sm">Tandoori Paneer Tikka</span>
                     </div>
                 </div>
-
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Traditional Indian Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white text-sm font-semibold">Authentic Indian Thali</span>
-                    </div>
-                </div>
-
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Desserts & Beverages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white text-sm font-semibold">Decadent Desserts</span>
+                <div class="aspect-square rounded-xl overflow-hidden relative group border border-slate-800">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Restaurant Ambiance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white font-bold text-sm">Cozy Family Seating</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Customer Reviews Section -->
-    <section id="reviews" class="py-16 sm:py-24 bg-[#121212]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Customer Testimonials</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">What Our Patrons Say</h2>
-                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Based on 267+ genuine Google Reviews from our valued guests on Fraser Road.</p>
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="py-16 sm:py-20 border-t border-slate-800">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-amber-400 mb-3">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <span class="text-sm font-bold text-white">4.0 ★ Overall Google Rating (545+ Reviews)</span>
+                </div>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-['Outfit'] text-white">What Our Patrons Say</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">Real experiences shared by families and students who dine with us.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Review 1 -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between shadow-xl">
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center text-amber-500 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed italic mb-6">
-                            "Amazing food quality and wonderful service! Located right on Fraser Road near the petrol pump. Highly recommend their paneer tikka and butter chicken."
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "Amazing food quality near F.D.D.I Bihta! The paneer dishes and tandoori rotis were piping hot and delicious. Very polite staff and clean family environment."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                        <div class="w-10 h-10 rounded-full bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 font-bold text-sm font-serif">
-                            RK
-                        </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">R</div>
                         <div>
-                            <h4 class="text-sm font-bold text-white">Rahul Kumar</h4>
-                            <span class="text-xs text-zinc-400">Google Local Guide</span>
+                            <h4 class="font-bold text-white text-sm">Rahul Kumar</h4>
+                            <span class="text-xs text-slate-400">Google Local Guide</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between shadow-xl">
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center text-amber-500 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-slate-600"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed italic mb-6">
-                            "Great ambiance for family dining in Patna. Very easy to find near Instair of Astor Hotel. The biryani was aromatic and delicious. Will visit again!"
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "Best multicuisine restaurant in Bihta! We hosted a small family dinner here. The Chinese starters and North Indian curries were loved by everyone."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                        <div class="w-10 h-10 rounded-full bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 font-bold text-sm font-serif">
-                            PS
-                        </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-orange-600/20 text-orange-400 flex items-center justify-center font-bold">P</div>
                         <div>
-                            <h4 class="text-sm font-bold text-white">Priya Singh</h4>
-                            <span class="text-xs text-zinc-400">Verified Diner</span>
+                            <h4 class="font-bold text-white text-sm">Priya Sharma</h4>
+                            <span class="text-xs text-slate-400">Verified Customer</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between shadow-xl">
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center text-amber-500 gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
                         </div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed italic mb-6">
-                            "A reliable spot for delicious food on Fraser Road. Good hygiene standards and quick service even during peak evening hours. Highly recommended."
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "As an F.D.D.I student, this is our go-to spot for weekend hangouts and delicious food. Quick service, reasonable pricing, and great ambiance."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                        <div class="w-10 h-10 rounded-full bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 font-bold text-sm font-serif">
-                            AM
-                        </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">A</div>
                         <div>
-                            <h4 class="text-sm font-bold text-white">Amit Mishra</h4>
-                            <span class="text-xs text-zinc-400">Google Reviewer</span>
+                            <h4 class="font-bold text-white text-sm">Amit Verma</h4>
+                            <span class="text-xs text-slate-400">Student Patron</span>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Accordion Section -->
-    <section id="faq" class="py-16 sm:py-24 bg-zinc-950 border-t border-b border-zinc-800/80">
-        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Got Questions?</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Frequently Asked Questions</h2>
-                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Everything you need to know about visiting Lazeez Restaurant on Fraser Road.</p>
+        <!-- FAQ Accordion -->
+        <section id="faq" class="py-16 sm:py-20 border-t border-slate-800 max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-wider block mb-2">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-['Outfit'] text-white">Frequently Asked Questions</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">Everything you need to know about dining, reservations, and timings at Lazeez.</p>
             </div>
 
             <div class="space-y-4">
-                
-                <!-- FAQ 1 -->
-                <div class="faq-item rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-serif text-base sm:text-lg font-bold text-white">What are the operating hours of Lazeez Restaurant?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 shrink-0 transition-transform duration-300"></i>
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-800 rounded-xl bg-slate-900 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-white text-base sm:text-lg focus:outline-none min-h-[48px]">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        We are open every day from 11:00 AM to 11:00 PM. You can drop in for lunch, evening snacks, or dinner anytime during these hours.
+                    <div class="faq-content hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60 pt-3">
+                        We are open every day of the week from 10:00 AM to 10:30 PM. You can drop in for lunch, snacks, or a hearty family dinner.
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
-                <div class="faq-item rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-serif text-base sm:text-lg font-bold text-white">How can I book a table in advance?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 shrink-0 transition-transform duration-300"></i>
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-800 rounded-xl bg-slate-900 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-white text-base sm:text-lg focus:outline-none min-h-[48px]">
+                        <span>How can I reserve a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        You can instantly reserve a table by clicking our WhatsApp reservation buttons or calling us directly at +91 81029 29898. You can also use the reservation form on this page.
+                    <div class="faq-content hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60 pt-3">
+                        Reserving a table is extremely easy! You can click on any "Reserve Table on WhatsApp" button on our website or call us directly at +91 90601 77401.
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
-                <div class="faq-item rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-serif text-base sm:text-lg font-bold text-white">Where is Lazeez Restaurant located?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 shrink-0 transition-transform duration-300"></i>
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-800 rounded-xl bg-slate-900 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-white text-base sm:text-lg focus:outline-none min-h-[48px]">
+                        <span>Where is Lazeez Restaurant located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        We are located near the petrol pump, right opposite/instair of Astor Hotel on Fraser Road, Patna, Bihar 800001. Easily accessible from all parts of the city.
+                    <div class="faq-content hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60 pt-3">
+                        We are located at Bihta - Kanpa, Bihta Rd, Bihta, Bihar 801103. Our prominent landmark is that we are situated right near the F.D.D.I Institute.
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
-                <div class="faq-item rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-serif text-base sm:text-lg font-bold text-white">Is parking available nearby?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 shrink-0 transition-transform duration-300"></i>
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-800 rounded-xl bg-slate-900 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-white text-base sm:text-lg focus:outline-none min-h-[48px]">
+                        <span>Do you offer home delivery or takeaway?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
-                        Yes, adequate parking space is available near our location on Fraser Road for both two-wheelers and four-wheelers.
+                    <div class="faq-content hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60 pt-3">
+                        Yes! We offer quick takeaway services and local delivery inquiries via WhatsApp or phone. Contact us directly to place your food order.
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Interactive Location & Contact Section -->
-    <section id="contact" class="py-16 sm:py-24 bg-[#121212]">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-500 text-xs sm:text-sm font-semibold tracking-widest uppercase block mb-3">Visit Us Today</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4 break-words">Location & Reservations</h2>
-                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Reach out to us for table reservations, catering inquiries, or home delivery information.</p>
+        <!-- Interactive Location & Contact Section -->
+        <section id="contact" class="py-16 sm:py-20 border-t border-slate-800">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amber-400 text-sm font-bold uppercase tracking-wider block mb-2">Visit Us Today</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-['Outfit'] text-white">Location & Table Reservation</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">Drop by for an unforgettable dining experience or reserve your table in seconds.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Left: Contact Info & Hours Table -->
+                <!-- Info & Map -->
                 <div class="lg:col-span-6 space-y-6">
-                    
-                    <!-- Info Card -->
-                    <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xl space-y-6">
-                        <h3 class="font-serif text-xl font-bold text-white pb-4 border-b border-zinc-800">Contact Information</h3>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0 mt-1">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white mb-1">Address</h4>
-                                    <p class="text-zinc-400 text-sm leading-relaxed">Near Petrol Pump, Instair Of Astor Hotel, Fraser Rd, Patna, Bihar 800001</p>
-                                </div>
+                    <!-- Contact Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
                             </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0 mt-1">
-                                    <i data-lucide="phone" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white mb-1">Phone / WhatsApp</h4>
-                                    <a href="tel:+918102929898" class="text-amber-500 hover:text-amber-400 text-sm font-semibold block transition-colors">+91 81029 29898</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 shrink-0 mt-1">
-                                    <i data-lucide="clock" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-white mb-1">Operating Hours</h4>
-                                    <p class="text-zinc-400 text-sm">Monday - Sunday: 11:00 AM – 11:00 PM</p>
-                                </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Address</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Bihta - Kanpa, Bihta Rd, Bihta, Bihar 801103 (Near F.D.D.I Institute)</p>
                             </div>
                         </div>
 
-                        <div class="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row gap-3">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Lazeez+Restaurant+Fraser+Rd+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-amber-600/20">
-                                <i data-lucide="navigation" class="w-4 h-4"></i>
-                                <span>Get Directions</span>
-                            </a>
-                            <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Lazeez%20Restaurant." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-medium text-sm flex items-center justify-center gap-2 transition-all border border-zinc-700">
-                                <i data-lucide="message-circle" class="w-4 h-4 text-amber-500"></i>
-                                <span>WhatsApp Us</span>
-                            </a>
+                        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-orange-600/10 text-orange-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Opening Hours</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Monday - Sunday<br>10:00 AM – 10:30 PM</p>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-
-                <!-- Right: Reservation Form & Map -->
-                <div class="lg:col-span-6 space-y-6">
-                    
-                    <!-- Reservation Form -->
-                    <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xl">
-                        <h3 class="font-serif text-xl font-bold text-white mb-2">Quick Table Reservation</h3>
-                        <p class="text-zinc-400 text-sm mb-6">Fill out the form below or connect instantly via WhatsApp.</p>
-
-                        <form id="reservation-form" class="space-y-4">
+                    <!-- Contact & Phone Card -->
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold">
+                                <i data-lucide="phone-call" class="w-6 h-6"></i>
+                            </div>
                             <div>
-                                <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Name</label>
-                                <input type="text" id="res-name" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="Enter your name">
+                                <h4 class="font-bold text-white text-base">Direct Line</h4>
+                                <p class="text-sm text-amber-400 font-semibold">+91 90601 77401</p>
                             </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone Number</label>
-                                    <input type="tel" id="res-phone" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="+91 98765 43210">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Number of Guests</label>
-                                    <select id="res-guests" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
-                                        <option value="1-2 Guests">1 - 2 Guests (Couple)</option>
-                                        <option value="3-4 Guests">3 - 4 Guests (Family)</option>
-                                        <option value="5-8 Guests">5 - 8 Guests (Group)</option>
-                                        <option value="8+ Guests">8+ Guests (Party)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Special Request or Date/Time</label>
-                                <textarea id="res-msg" rows="3" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors" placeholder="Preferred time, dietary requirements..."></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full py-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-amber-600/20">
-                                <i data-lucide="check-circle" class="w-4 h-4"></i>
-                                <span>Confirm Reservation Request</span>
-                            </button>
-                        </form>
+                        </div>
+                        <a href="tel:+919060177401" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition-colors min-h-[48px] flex items-center justify-center">
+                            Call Now
+                        </a>
                     </div>
 
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-xl h-72 w-full relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.55!2d84.86!3d25.56!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTG16ZWV6IE11bHRpY3Vpc2luZSBGYW1pbHkgUmVzdGF1cmFudCBCaWh0YQ!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Lazeez+Multicuisine+Family+Restaurant+Bihta" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-slate-800 hover:bg-slate-750 border border-slate-700 text-white font-bold text-sm text-center flex items-center justify-center gap-2 transition-colors min-h-[48px]">
+                        <i data-lucide="navigation" class="w-4 h-4 text-amber-400"></i> Get Directions on Google Maps
+                    </a>
                 </div>
 
-            </div>
+                <!-- Interactive Reservation / Inquiry Form -->
+                <div class="lg:col-span-6 bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+                    <h3 class="text-xl font-bold font-['Outfit'] text-white mb-2">Reserve a Table / Food Inquiry</h3>
+                    <p class="text-slate-400 text-sm mb-6">Fill out the quick form below and we will instantly connect with you on WhatsApp or phone.</p>
 
-            <!-- Google Maps Embed -->
-            <div class="mt-12 rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 h-[350px] sm:h-[450px] relative">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.77855075635!2d85.137565!3d25.611234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f5c0000001%3A0x7d8a9b2c3d4e5f6!2sFraser%20Rd%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lazeez Restaurant Location Map"></iframe>
-            </div>
+                    <form id="reservation-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Your Name *</label>
+                            <input type="text" id="form-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 text-sm min-h-[48px]">
+                        </div>
 
-        </div>
-    </section>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Phone / WhatsApp *</label>
+                                <input type="tel" id="form-phone" required placeholder="10-digit mobile number" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 text-sm min-h-[48px]">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Number of Guests</label>
+                                <select id="form-guests" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-amber-500 text-sm min-h-[48px]">
+                                    <option value="1-2 People">1 - 2 People</option>
+                                    <option value="3-5 People" selected>3 - 5 People (Family)</option>
+                                    <option value="6-10 People">6 - 10 People</option>
+                                    <option value="10+ People (Party)">10+ People (Party/Event)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Select Service</label>
+                            <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-amber-500 text-sm min-h-[48px]">
+                                <option value="Table Reservation">Table Reservation (Dine-In)</option>
+                                <option value="Food Order / Takeaway">Food Order / Takeaway</option>
+                                <option value="Family Celebration / Party">Family Celebration / Party</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Special Requests / Message</label>
+                            <textarea id="form-message" rows="3" placeholder="Mention preferred time, dishes, or dietary notes..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-base shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                            <i data-lucide="message-square" class="w-5 h-5"></i> Submit via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                
-                <!-- Col 1: Brand -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 font-serif text-xl font-bold">
-                            L
-                        </div>
-                        <div>
-                            <span class="font-serif text-xl font-bold text-white block">Lazeez</span>
-                            <span class="text-[10px] uppercase tracking-widest text-amber-500 block -mt-1 font-semibold">Restaurant</span>
-                        </div>
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 mt-16 pt-12 pb-24 md:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Brand Info -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white">
+                        <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
                     </div>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        Exquisite culinary delights, authentic flavors, and warm hospitality in the heart of Patna on Fraser Road.
-                    </p>
-                    <div class="flex items-center gap-2 text-xs text-amber-500 font-medium">
-                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                        <span>3.8 ★ (267+ Google Reviews)</span>
+                    <div>
+                        <span class="text-xl font-extrabold font-['Outfit'] text-white">LAZEEZ</span>
+                        <span class="text-[10px] text-amber-400 font-medium uppercase block -mt-1">Multicuisine Restaurant</span>
                     </div>
                 </div>
-
-                <!-- Col 2: Quick Links -->
-                <div>
-                    <h4 class="font-serif text-base font-bold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2.5 text-sm text-zinc-400">
-                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Our Menu</a></li>
-                        <li><a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a></li>
-                        <li><a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a></li>
-                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Customer Reviews</a></li>
-                        <li><a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Operating Hours -->
-                <div>
-                    <h4 class="font-serif text-base font-bold text-white mb-4">Operating Hours</h4>
-                    <ul class="space-y-2.5 text-sm text-zinc-400">
-                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white">11 AM - 11 PM</span></li>
-                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white">11 AM - 11 PM</span></li>
-                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white">11 AM - 11 PM</span></li>
-                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white">11 AM - 11 PM</span></li>
-                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white">11 AM - 11 PM</span></li>
-                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white">11 AM - 11 PM</span></li>
-                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-white">11 AM - 11 PM</span></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Contact Details -->
-                <div>
-                    <h4 class="font-serif text-base font-bold text-white mb-4">Contact Us</h4>
-                    <ul class="space-y-3 text-sm text-zinc-400">
-                        <li class="flex items-start gap-2.5">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
-                            <span>Near Petrol Pump, Instair Of Astor Hotel, Fraser Rd, Patna, Bihar 800001</span>
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <i data-lucide="phone" class="w-4 h-4 text-amber-500 shrink-0"></i>
-                            <a href="tel:+918102929898" class="hover:text-amber-500 transition-colors">+91 81029 29898</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!-- Bottom Copyright -->
-            <div class="pt-8 border-t border-zinc-900 text-center text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p>&copy; <span id="current-year"></span> Lazeez Restaurant, Patna. All rights reserved.</p>
-                <p class="flex items-center gap-1">
-                    <span>Designed with passion for authentic dining</span>
+                <p class="text-sm leading-relaxed text-slate-400">
+                    Serving authentic North Indian, Chinese, Tandoori delicacies and unforgettable family dining experiences near F.D.D.I Institute in Bihta.
                 </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="https://wa.me/919060177401" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500 text-amber-400 flex items-center justify-center transition-colors">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                    </a>
+                    <a href="tel:+919060177401" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500 text-amber-400 flex items-center justify-center transition-colors">
+                        <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Lazeez+Multicuisine+Family+Restaurant+Bihta" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500 text-amber-400 flex items-center justify-center transition-colors">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </a>
+                </div>
             </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold text-white text-base mb-4 font-['Outfit']">Quick Links</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="#menu" class="hover:text-amber-400 transition-colors">Explore Menu</a></li>
+                    <li><a href="#about" class="hover:text-amber-400 transition-colors">About Our Kitchen</a></li>
+                    <li><a href="#gallery" class="hover:text-amber-400 transition-colors">Food Gallery</a></li>
+                    <li><a href="#reviews" class="hover:text-amber-400 transition-colors">Google Reviews (545+)</a></li>
+                    <li><a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a></li>
+                    <li><a href="#contact" class="hover:text-amber-400 transition-colors">Location & Directions</a></li>
+                </ul>
+            </div>
+
+            <!-- Operating Hours -->
+            <div>
+                <h4 class="font-bold text-white text-base mb-4 font-['Outfit']">Opening Hours</h4>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex justify-between py-1 border-b border-slate-900">
+                        <span>Monday:</span>
+                        <span class="text-white font-medium">10:00 AM – 10:30 PM</span>
+                    </li>
+                    <li class="flex justify-between py-1 border-b border-slate-900">
+                        <span>Tuesday:</span>
+                        <span class="text-white font-medium">10:00 AM – 10:30 PM</span>
+                    </li>
+                    <li class="flex justify-between py-1 border-b border-slate-900">
+                        <span>Wednesday:</span>
+                        <span class="text-white font-medium">10:00 AM – 10:30 PM</span>
+                    </li>
+                    <li class="flex justify-between py-1 border-b border-slate-900">
+                        <span>Thursday:</span>
+                        <span class="text-white font-medium">10:00 AM – 10:30 PM</span>
+                    </li>
+                    <li class="flex justify-between py-1 border-b border-slate-900">
+                        <span>Friday:</span>
+                        <span class="text-white font-medium">10:00 AM – 10:30 PM</span>
+                    </li>
+                    <li class="flex justify-between py-1 border-b border-slate-900">
+                        <span>Saturday & Sunday:</span>
+                        <span class="text-white font-medium">10:00 AM – 10:30 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div>
+                <h4 class="font-bold text-white text-base mb-4 font-['Outfit']">Contact Info</h4>
+                <div class="space-y-3 text-sm">
+                    <p class="flex items-start gap-2.5">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
+                        <span>Bihta - Kanpa, Bihta Rd, Bihta, Bihar 801103 (Near F.D.D.I Institute)</span>
+                    </p>
+                    <p class="flex items-center gap-2.5">
+                        <i data-lucide="phone-call" class="w-4 h-4 text-amber-400 shrink-0"></i>
+                        <a href="tel:+919060177401" rel="noopener noreferrer" class="hover:text-white transition-colors">+91 90601 77401</a>
+                    </p>
+                    <p class="flex items-center gap-2.5">
+                        <i data-lucide="message-square" class="w-4 h-4 text-amber-400 shrink-0"></i>
+                        <a href="https://wa.me/919060177401" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WhatsApp Order & Table Booking</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
+            <p>© <span id="current-year"></span> Lazeez Multicuisine Family Restaurant, Bihta, Bihar. All rights reserved. Designed for local food lovers.</p>
         </div>
     </footer>
 
-    <!-- Sticky Mobile Bottom Action Bar (Mobile Only) -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
-        <a href="tel:+918102929898" class="flex-1 py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-xs flex items-center justify-center gap-2">
-            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
-            <span>Call Now</span>
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0F172A] border-t border-slate-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+919060177401" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold text-sm min-h-[48px]">
+            <i data-lucide="phone-call" class="w-4 h-4 text-amber-400"></i> Call Now
         </a>
-        <a href="https://wa.me/918102929898?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Lazeez%20Restaurant." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-amber-600 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg shadow-amber-600/20">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>WhatsApp</span>
+        <a href="https://wa.me/919060177401?text=Hi%20Lazeez%20Restaurant,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/20 min-h-[48px]">
+            <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp
         </a>
     </div>
 
     <!-- Success Modal Popup -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden flex items-center justify-center p-4">
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
-            <div class="w-16 h-16 rounded-full bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 mx-auto">
-                <i data-lucide="check-circle" class="w-8 h-8"></i>
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
             </div>
-            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">Reservation Request Received!</h3>
-            <p class="text-zinc-400 text-sm leading-relaxed" id="success-modal-text">
-                Thank you! We have received your table reservation request. We will contact you shortly via phone or WhatsApp to confirm your booking.
-            </p>
-            <button onclick="closeSuccessModal()" class="w-full py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm transition-all shadow-lg shadow-amber-600/20">
+            <h3 class="text-2xl font-bold font-['Outfit'] text-white mb-2">Request Prepared!</h3>
+            <p class="text-slate-300 text-sm mb-6">We are redirecting you to WhatsApp with your reservation details so our team can confirm instantly.</p>
+            <button id="close-modal-btn" class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm min-h-[48px]">
                 Got It
             </button>
         </div>
@@ -979,12 +840,12 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Set current year in footer
+        // Set Current Year in Footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Mobile Drawer Toggle
+        // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
-        const menuCloseBtn = document.getElementById('menu-close-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
         const mobileDrawer = document.getElementById('mobile-drawer');
         const menuBackdrop = document.getElementById('menu-backdrop');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -1002,88 +863,70 @@
         }
 
         menuBtn.addEventListener('click', openMobileMenu);
-        menuCloseBtn.addEventListener('click', closeMobileMenu);
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
         menuBackdrop.addEventListener('click', closeMobileMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-        // Menu Filtering
-        function filterMenu(category) {
-            const tabs = document.querySelectorAll('.menu-tab');
-            tabs.forEach(tab => {
-                tab.classList.remove('bg-amber-600', 'text-white', 'shadow-lg', 'shadow-amber-600/20');
-                tab.classList.add('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
-            });
-            event.target.classList.remove('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
-            event.target.classList.add('bg-amber-600', 'text-white', 'shadow-lg', 'shadow-amber-600/20');
-
-            const cards = document.querySelectorAll('.menu-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
 
         // FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const btn = item.querySelector('.faq-btn');
-            const content = item.querySelector('.faq-content');
-            const icon = item.querySelector('i');
-
-            btn.addEventListener('click', () => {
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg');
+                
+                // Toggle current
                 const isOpen = !content.classList.contains('hidden');
                 
-                // Close all other accordions
-                faqItems.forEach(otherItem => {
-                    otherItem.querySelector('.faq-content').classList.add('hidden');
-                    otherItem.querySelector('i').style.transform = 'rotate(0deg)';
+                // Close all others
+                faqToggles.forEach(t => {
+                    t.nextElementSibling.classList.add('hidden');
+                    t.querySelector('svg').style.transform = 'rotate(0deg)';
                 });
 
-                if (!isOpen) {
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
                     content.classList.remove('hidden');
                     icon.style.transform = 'rotate(180deg)';
                 }
             });
         });
 
-        // Reservation Form Handling with XSS Prevention & Sanitization
+        // Reservation Form Handler & WhatsApp Integration
         const reservationForm = document.getElementById('reservation-form');
         const successModal = document.getElementById('success-modal');
-        const successModalText = document.getElementById('success-modal-text');
-
-        function sanitizeInput(str) {
-            const temp = document.createElement('div');
-            temp.textContent = str;
-            return temp.innerHTML;
-        }
+        const closeModalBtn = document.getElementById('close-modal-btn');
 
         reservationForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            const rawName = document.getElementById('res-name').value;
-            const rawPhone = document.getElementById('res-phone').value;
-            const guests = document.getElementById('res-guests').value;
-            const rawMsg = document.getElementById('res-msg').value;
 
-            const name = sanitizeInput(rawName);
-            const phone = sanitizeInput(rawPhone);
-            const msg = sanitizeInput(rawMsg);
+            // Sanitize and fetch input values securely
+            const name = encodeURIComponent(document.getElementById('form-name').value.trim());
+            const phone = encodeURIComponent(document.getElementById('form-phone').value.trim());
+            const guests = encodeURIComponent(document.getElementById('form-guests').value);
+            const service = encodeURIComponent(document.getElementById('form-service').value);
+            const message = encodeURIComponent(document.getElementById('form-message').value.trim());
 
-            // Safe DOM insertion for modal feedback
-            successModalText.textContent = `Thank you, ${name}! We have received your table reservation request for ${guests} at Fraser Road, Patna. We will contact you at ${phone} shortly.`;
-            
+            // Construct WhatsApp URL
+            const whatsappNumber = '919060177401';
+            const whatsappText = `Hi%20Lazeez%20Restaurant,%0A*New%20Inquiry/Reservation*%0A-Name:%20${name}%0A-Phone:%20${phone}%0A-Guests:%20${guests}%0A-Service:%20${service}%0A-Message:%20${message}`;
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
+            // Show success modal
             successModal.classList.remove('hidden');
             document.body.classList.add('overflow-hidden');
-            reservationForm.reset();
-        });
 
-        function closeSuccessModal() {
-            successModal.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
+            // Set timeout for redirect after modal acknowledgement or auto redirect
+            closeModalBtn.onclick = () => {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+                window.open(whatsappUrl, '_noopener noreferrer');
+            };
+        });
     </script>
 </body>
 </html>
