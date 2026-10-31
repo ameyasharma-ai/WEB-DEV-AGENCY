@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Lemon Chilli Restaurant | Kidwaipuri, Patna | Fine Dining & Tandoori</title>
+    <meta name="description" content="Experience the finest North Indian, Chinese, and Tandoori dishes at Lemon Chilli Restaurant, near Kumar Tower, Kidwaipuri, Patna. Book a table or order via WhatsApp!">
+    
+    <!-- Security & Protocol Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        surface: '#1E1E1E',
+                        primary: '#9B111E',
+                        'primary-hover': '#7A0C17',
+                        secondary: '#E65100',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A0A0A0',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbar and utilities */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9B111E;
+        }
+        body {
+            background-color: #121212;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background text-text-primary pb-28 md:pb-0 overflow-x-hidden">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- 1. ANNOUNCEMENT BAR & 100% SOLID OPAQUE HEADER -->
+    <div class="bg-primary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative">
+        <span>🔥 Special Weekend Offer: Get 10% OFF on Family Platter Bookings via WhatsApp!</span>
+        <a href="https://wa.me/919835478674?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20the%20weekend%20offer." target="_blank" rel="noopener noreferrer" class="underline ml-2 font-bold hover:text-amber-200 transition-colors">Claim Now</a>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-[#121212] border-b border-zinc-800 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="flame" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                    <span class="font-syne font-bold text-lg sm:text-2xl tracking-tight text-white block leading-none">Lemon Chilli</span>
+                    <span class="text-[10px] sm:text-xs text-text-muted font-medium tracking-wider uppercase">Restaurant • Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="#menu" class="text-text-muted hover:text-white transition-colors">Menu</a>
+                <a href="#about" class="text-text-muted hover:text-white transition-colors">About Us</a>
+                <a href="#gallery" class="text-text-muted hover:text-white transition-colors">Gallery</a>
+                <a href="#reviews" class="text-text-muted hover:text-white transition-colors">Reviews</a>
+                <a href="#faq" class="text-text-muted hover:text-white transition-colors">FAQ</a>
+                <a href="#contact" class="text-text-muted hover:text-white transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action CTAs -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+919835478674" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-sm font-semibold text-white transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>+91 98354 78674</span>
+                </a>
+                <a href="#reservation" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-hover text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-all">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="hamburger-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 sm:top-14 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#121212] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <i data-lucide="flame" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Lemon Chilli</span>
+                </div>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 pt-6 font-medium text-base">
+                <a href="#menu" class="mobile-link text-zinc-300 hover:text-white flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Explore Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#about" class="mobile-link text-zinc-300 hover:text-white flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#gallery" class="mobile-link text-zinc-300 hover:text-white flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Ambience & Food</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#reviews" class="mobile-link text-zinc-300 hover:text-white flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#faq" class="mobile-link text-zinc-300 hover:text-white flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#contact" class="mobile-link text-zinc-300 hover:text-white flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Location & Hours</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919835478674" class="w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center gap-2 font-semibold text-white">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                <span>Call +91 98354 78674</span>
+            </a>
+            <a href="https://wa.me/919835478674?text=Hi,%20I%20want%20to%20book%20a%20table%20at%20Lemon%20Chilli." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 flex items-center justify-center gap-2 font-semibold text-white shadow-lg shadow-emerald-900/30">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Booking</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Radial Gradient Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-primary/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.2★ <span class="text-text-muted font-normal">(134+ Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Main H1 Title -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Sizzling Flavors & <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Unforgettable</span> Dining in Patna
+                    </h1>
+
+                    <p class="text-text-muted text-base sm:text-lg leading-relaxed mb-8 max-w-2xl break-words">
+                        Welcome to <strong class="text-white font-semibold">Lemon Chilli Restaurant</strong>, Kidwaipuri’s favorite destination for delectable North Indian delicacies, authentic Chinese, aromatic Tandoori starters, and cozy family ambience.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919835478674?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20Lemon%20Chilli." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-base shadow-xl shadow-primary/30 transition-all group">
+                            <i data-lucide="message-circle" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                            <span>Book Table via WhatsApp</span>
+                        </a>
+                        <a href="#menu" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-white font-semibold text-base transition-all">
+                            <span>Explore Menu</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Grid -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Lemon Chilli Restaurant Interior and Delicious Food" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-text-muted block">Prime Location</span>
+                                <span class="text-sm font-bold text-white">Beside Kumar Tower, Kidwaipuri</span>
+                            </div>
+                            <span class="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">Open Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="flex justify-center mb-2 text-amber-400">
+                        <i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-bold font-syne text-white block">4.2 / 5.0</span>
+                    <span class="text-xs sm:text-sm text-text-muted">Google Rating</span>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="flex justify-center mb-2 text-primary">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-bold font-syne text-white block">134+</span>
+                    <span class="text-xs sm:text-sm text-text-muted">Verified Reviews</span>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="flex justify-center mb-2 text-emerald-500">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-bold font-syne text-white block">Kidwaipuri</span>
+                    <span class="text-xs sm:text-sm text-text-muted">Prime Patna Hub</span>
+                </div>
+                <div class="p-4 rounded-xl bg-surface border border-zinc-800">
+                    <div class="flex justify-center mb-2 text-secondary">
+                        <i data-lucide="utensils" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-bold font-syne text-white block">100%</span>
+                    <span class="text-xs sm:text-sm text-text-muted">Fresh Ingredients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICES / MENU CATEGORIES GRID -->
+    <section id="menu" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Culinary Excellence</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Our Signature Menu Categories</h2>
+                <p class="text-text-muted text-sm sm:text-base">Explore our rich menu crafted by master chefs, blending authentic spices with contemporary culinary techniques.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: North Indian -->
+                <div class="rounded-2xl bg-surface border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition-all">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80" alt="North Indian Cuisine" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm text-xs font-semibold text-white border border-zinc-700">Best Seller</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">North Indian Delicacies</h3>
+                            <p class="text-text-muted text-sm leading-relaxed mb-6">Rich gravies, buttery naans, tender paneer dishes, and aromatic biryanis prepared with authentic spices.</p>
+                        </div>
+                        <a href="https://wa.me/919835478674?text=Hi,%20I%20want%20to%20order%20North%20Indian%20dishes." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-center font-semibold text-white text-sm transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Tandoori Starters -->
+                <div class="rounded-2xl bg-surface border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition-all">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Tandoori Starters" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm text-xs font-semibold text-white border border-zinc-700">Smoky & Juicy</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Tandoori Barbeque</h3>
+                            <p class="text-text-muted text-sm leading-relaxed mb-6">Charcoal-grilled tikkas, kebabs, and tandoori specials marinated in yogurt and signature spices.</p>
+                        </div>
+                        <a href="https://wa.me/919835478674?text=Hi,%20I%20want%20to%20order%20Tandoori%20items." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-center font-semibold text-white text-sm transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Chinese & Indo-Chinese -->
+                <div class="rounded-2xl bg-surface border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition-all">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="Chinese & Indo-Chinese" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm text-xs font-semibold text-white border border-zinc-700">Wok Tossed</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Chinese & Wok</h3>
+                            <p class="text-text-muted text-sm leading-relaxed mb-6">Crispy Manchurian, flavorful hakka noodles, spicy chilli paneer, and delightful fried rice.</p>
+                        </div>
+                        <a href="https://wa.me/919835478674?text=Hi,%20I%20want%20to%20order%20Chinese%20dishes." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-center font-semibold text-white text-sm transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Beverages & Desserts -->
+                <div class="rounded-2xl bg-surface border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-zinc-700 transition-all">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" alt="Beverages & Desserts" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-sm text-xs font-semibold text-white border border-zinc-700">Refreshing</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Mocktails & Desserts</h3>
+                            <p class="text-text-muted text-sm leading-relaxed mb-6">Refreshing lemonades, rich milkshakes, soothing mocktails, and decadent dessert finales.</p>
+                        </div>
+                        <a href="https://wa.me/919835478674?text=Hi,%20I%20want%20to%20know%20more%20about%20beverages." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary text-center font-semibold text-white text-sm transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US SECTION -->
+    <section class="py-20 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">The Lemon Chilli Advantage</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Why Food Lovers Choose Us</h2>
+                <p class="text-text-muted text-sm sm:text-base">We take pride in offering an exceptional dining experience right in the heart of Kidwaipuri, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-2">Prime Location</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Conveniently situated near Kumar Tower, Kidwaipuri, making it easily accessible from all parts of Patna.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-2">Hygienic Kitchen</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Strict adherence to hygiene protocols, pristine kitchen standards, and sanitized dining areas.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 mb-6">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-2">Superior Quality</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Only farm-fresh ingredients, premium spices, and pure oils used in crafting every single dish.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-surface border border-zinc-800">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white mb-2">Warm Hospitality</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Courteous staff dedicated to making your family dinners, dates, and celebrations truly memorable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT / STORY SECTION -->
+    <section id="about" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Lemon Chilli Restaurant Ambience" class="object-cover w-full h-full">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 p-6 rounded-2xl bg-surface border border-zinc-800 hidden sm:block shadow-2xl max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">134+</div>
+                            <div>
+                                <span class="font-bold text-white text-sm block">Happy Diners</span>
+                                <span class="text-xs text-text-muted">Trust our taste every week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Our Story</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">A Passion for Taste in Kidwaipuri, Patna</h2>
+                    <p class="text-text-muted text-base leading-relaxed mb-4">
+                        Founded with a simple mission—to serve soul-satisfying, authentic food in an inviting atmosphere—Lemon Chilli Restaurant has grown into Kidwaipuri’s premier culinary destination.
+                    </p>
+                    <p class="text-text-muted text-base leading-relaxed mb-8">
+                        Whether you are catching up with old friends over aromatic tandoori starters or celebrating a family milestone with our grand North Indian feast, our chefs pour passion into every plate. Located conveniently near Kumar Tower, we invite you to experience hospitality that feels like home.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 w-full mb-8">
+                        <div class="p-4 rounded-xl bg-surface border border-zinc-800">
+                            <span class="font-syne font-bold text-2xl text-white block mb-1">Fast</span>
+                            <span class="text-xs text-text-muted">Table & Takeaway Service</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface border border-zinc-800">
+                            <span class="font-syne font-bold text-2xl text-white block mb-1">Cozy</span>
+                            <span class="text-xs text-text-muted">Family & Couple Ambience</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919835478674?text=Hi,%20I%20want%20to%20know%20more%20about%20Lemon%20Chilli%20Restaurant." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-white font-semibold text-sm transition-all flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                        <span>Chat with Us on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE FOOD & AMBIENCE GALLERY -->
+    <section id="gallery" class="py-20 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Visual Feast</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Food & Ambience Gallery</h2>
+                <p class="text-text-muted text-sm sm:text-base">Take a visual tour of our culinary creations and warm dining spaces.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative aspect-video sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Delicious Salad & Meal" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Healthy & Fresh Plates</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Gourmet Burger & Fries" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Gourmet Fast Bites</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Woodfired Pizza" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Cheesy Delights</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80" alt="Colorful Salad Bowl" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Vibrant Ingredients</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Cocktail & Mocktail Drinks" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Refreshing Mocktails</span>
+                    </div>
+                </div>
+                <div class="relative aspect-video sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Healthy Buddha Bowl" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-semibold text-sm">Master Chef Specials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Testimonials</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white">What Our Patrons Say</h2>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center gap-3 bg-surface px-4 py-2.5 rounded-xl border border-zinc-800">
+                    <div class="flex text-amber-400">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        <i data-lucide="star-half" class="w-5 h-5 fill-amber-400"></i>
+                    </div>
+                    <span class="text-white font-bold text-sm">4.2 / 5.0 (134 Google Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="p-6 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6 italic">
+                            "Amazing food quality! We ordered paneer tikka and butter chicken with garlic naans. Everything was piping hot and delicious. Kidwaipuri’s best spot for family dinner."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary font-bold">R</div>
+                        <div>
+                            <span class="text-white font-semibold text-sm block">Rajesh Kumar</span>
+                            <span class="text-xs text-text-muted">Verified Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-6 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6 italic">
+                            "Great ambience and polite staff. The Chinese starters and chilli paneer were exceptionally tasty. Conveniently located right near Kumar Tower."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary font-bold">P</div>
+                        <div>
+                            <span class="text-white font-semibold text-sm block">Priya Sinha</span>
+                            <span class="text-xs text-text-muted">Verified Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-6 rounded-2xl bg-surface border border-zinc-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                        </div>
+                        <p class="text-text-muted text-sm leading-relaxed mb-6 italic">
+                            "Quick service and neat packaging for takeaway. Their tandoori items are top-notch. Will definitely visit again with friends!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">A</div>
+                        <div>
+                            <span class="text-white font-semibold text-sm block">Amit Verma</span>
+                            <span class="text-xs text-text-muted">Verified Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section id="faq" class="py-20 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-text-muted text-sm sm:text-base">Find answers to common queries regarding reservations, timings, and menu options.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="rounded-xl bg-surface border border-zinc-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>Where is Lemon Chilli Restaurant located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        We are conveniently located near Boring Road, beside Kumar Tower, Kidwaipuri, Patna, Bihar 800001. You can easily find us on Google Maps.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="rounded-xl bg-surface border border-zinc-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>How can I book a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        You can instantly book a table by filling out our reservation form on this page or by clicking the WhatsApp booking button to chat with our staff directly at +91 98354 78674.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="rounded-xl bg-surface border border-zinc-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>Do you offer home delivery and takeaway?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        Yes! We offer quick takeaways and home delivery services across Patna. You can place your direct order over WhatsApp or phone call for special discounts.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="rounded-xl bg-surface border border-zinc-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-lg text-white hover:text-primary transition-colors">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-text-muted text-sm leading-relaxed">
+                        We are open every day from 11:00 AM to 11:00 PM, serving lunch, evening snacks, and dinner.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider block mb-2">Visit Us</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">Location & Table Reservation</h2>
+                <p class="text-text-muted text-sm sm:text-base">Drop by our Kidwaipuri restaurant or reserve your table in advance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left: Info & Map -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    <!-- Contact Card -->
+                    <div class="p-6 rounded-2xl bg-surface border border-zinc-800 flex flex-col gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Address</h3>
+                                <p class="text-text-muted text-sm leading-relaxed">near, Boring Rd, beside Kumar Tower, Kidwaipuri, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Phone / WhatsApp</h3>
+                                <a href="tel:+919835478674" class="text-text-muted text-sm hover:text-white transition-colors block">+91 98354 78674</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-lg text-white mb-1">Opening Hours</h3>
+                                <p class="text-text-muted text-sm leading-relaxed">Monday – Sunday: 11:00 AM – 11:00 PM</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Lemon+Chilli+Restaurant+Kidwaipuri+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-sm text-center shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="navigation" class="w-4 h-4"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+
+                    <!-- Embedded Map -->
+                    <div class="rounded-2xl overflow-hidden border border-zinc-800 h-64 sm:h-80 w-full">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788481234!2d85.123456!3d25.612345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ0LjQiTiA4NcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lemon Chilli Restaurant Location"></iframe>
+                    </div>
+                </div>
+
+                <!-- Right: Reservation Form -->
+                <div id="reservation" class="lg:col-span-6">
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800">
+                        <h3 class="font-syne font-bold text-2xl text-white mb-2">Book Your Table</h3>
+                        <p class="text-text-muted text-sm mb-6">Fill in the details below and we will confirm your table instantly.</p>
+
+                        <form id="reservation-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Name *</label>
+                                <input type="text" id="res-name" required placeholder="Enter your full name" class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone / WhatsApp *</label>
+                                    <input type="tel" id="res-phone" required placeholder="+91 98354 78674" class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Number of Guests *</label>
+                                    <select id="res-guests" required class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none focus:border-primary transition-colors text-sm">
+                                        <option value="1-2 Persons">1 - 2 Persons (Couple)</option>
+                                        <option value="3-4 Persons">3 - 4 Persons (Family)</option>
+                                        <option value="5-8 Persons">5 - 8 Persons (Group)</option>
+                                        <option value="8+ Persons">8+ Persons (Party)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Date *</label>
+                                    <input type="date" id="res-date" required class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none focus:border-primary transition-colors text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Time *</label>
+                                    <input type="time" id="res-time" required class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none focus:border-primary transition-colors text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Special Requests (Optional)</label>
+                                <textarea id="res-notes" rows="3" placeholder="Any dietary preferences or birthday celebration notes..." class="w-full px-4 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-base shadow-xl shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                                <span>Confirm Table Reservation</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Reservation Received!</h3>
+            <p id="success-message" class="text-text-muted text-sm mb-6">Thank you! Your table has been successfully reserved. We look forward to hosting you at Lemon Chilli Restaurant.</p>
+            <button id="close-modal" class="w-full py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-sm transition-all">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- 11. STICKY MOBILE ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+919835478674" class="flex-1 py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center gap-2 font-semibold text-white text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919835478674?text=Hi,%20I%20want%20to%20book%20a%20table%20at%20Lemon%20Chilli." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 flex items-center justify-center gap-2 font-semibold text-white text-sm shadow-lg shadow-emerald-900/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="flex flex-col items-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-syne font-bold text-xl text-white">Lemon Chilli</span>
+                    </div>
+                    <p class="text-text-muted text-sm leading-relaxed mb-6">
+                        Kidwaipuri’s favorite destination for North Indian, Chinese, and Tandoori dining. Sizzling taste, warm hospitality.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Lemon+Chilli+Restaurant+Kidwaipuri+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white transition-colors" aria-label="Google Maps">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/919835478674" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-emerald-400 transition-colors" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+919835478674" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-primary transition-colors" aria-label="Phone">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h3 class="font-syne font-bold text-base text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#menu" class="text-text-muted hover:text-white transition-colors">Our Menu</a></li>
+                        <li><a href="#about" class="text-text-muted hover:text-white transition-colors">About Story</a></li>
+                        <li><a href="#gallery" class="text-text-muted hover:text-white transition-colors">Ambience Gallery</a></li>
+                        <li><a href="#reviews" class="text-text-muted hover:text-white transition-colors">Customer Reviews</a></li>
+                        <li><a href="#reservation" class="text-text-muted hover:text-white transition-colors">Book a Table</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Menu Categories -->
+                <div>
+                    <h3 class="font-syne font-bold text-base text-white mb-4">Specialties</h3>
+                    <ul class="space-y-3 text-sm text-text-muted">
+                        <li>North Indian Gravies</li>
+                        <li>Tandoori Starters & Kebabs</li>
+                        <li>Chinese & Indo-Chinese Wok</li>
+                        <li>Biryani & Rice Specials</li>
+                        <li>Refreshing Mocktails & Desserts</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact & Hours -->
+                <div>
+                    <h3 class="font-syne font-bold text-base text-white mb-4">Contact Us</h3>
+                    <p class="text-text-muted text-sm leading-relaxed mb-3">
+                        near, Boring Rd, beside Kumar Tower, Kidwaipuri, Patna, Bihar 800001
+                    </p>
+                    <p class="text-text-muted text-sm mb-3">
+                        Phone: <a href="tel:+919835478674" class="text-white hover:underline">+91 98354 78674</a>
+                    </p>
+                    <p class="text-text-muted text-sm">
+                        Hours: 11:00 AM – 11:00 PM (Daily)
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-text-muted gap-4">
+                <p>&copy; <span id="current-year"></span> Lemon Chilli Restaurant. All rights reserved.</p>
+                <p>Kidwaipuri, Patna, Bihar 800001</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeDrawer = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileMenu() {
+            const isOpen = !mobileDrawer.classList.contains('translate-x-full');
+            if (isOpen) {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMobileMenu);
+        closeDrawer.addEventListener('click', toggleMobileMenu);
+        menuBackdrop.addEventListener('click', toggleMobileMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                faqToggles.forEach(t => {
+                    t.nextElementSibling.classList.add('hidden');
+                    t.querySelector('i').style.transform = 'rotate(0deg)';
+                });
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Reservation Form Handling & Success Modal
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        const successMessage = document.getElementById('success-message');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('res-name').value.trim();
+            const phone = document.getElementById('res-phone').value.trim();
+            const guests = document.getElementById('res-guests').value;
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+
+            // Basic sanitization and validation
+            if (!name || !phone || !date || !time) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Safe text insertion
+            successMessage.textContent = `Thank you, ${name}! Your table for ${guests} on ${date} at ${time} has been reserved. We will contact you at ${phone} to confirm.`;
+            
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            
+            reservationForm.reset();
+        });
+
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>

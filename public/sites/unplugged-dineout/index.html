@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Unplugged Dineout - Patna's premier restaurant & dineout lounge offering exquisite food, cozy ambiance, and top-tier hospitality near Congress Maidan.">
+    <meta name="theme-color" content="#09090b">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Unplugged Dineout | Restaurant & Lounge in Patna</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090b',
+                        surface: '#18181b',
+                        primary: '#f59e0b',
+                        secondary: '#f97316',
+                        muted: '#a1a1aa'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#09090b] text-[#fafafa] font-inter antialiased overflow-x-hidden pb-28 lg:pb-0 selection:bg-amber-500 selection:text-black">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-600 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse flex-shrink-0"></i>
+        <span>Special Weekend Live Music & Rooftop Dining! Reserve Your Table Now.</span>
+        <a href="#reservation" class="underline font-bold hover:text-zinc-100 ml-1 whitespace-nowrap">Book Now &rarr;</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="z-40 sticky top-0 z-[80] w-full bg-[#09090b] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-black font-syne font-extrabold text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+                    UD
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight block text-white">Unplugged</span>
+                    <span class="text-[10px] tracking-widest text-amber-500 font-semibold uppercase block -mt-1">Dineout Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">Why Us</a>
+                <a href="#gallery" class="hover:text-amber-500 transition-colors">Ambiance</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:+919155772224" class="flex items-center gap-2 text-sm font-semibold text-zinc-300 hover:text-white px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>+91 91557 72224</span>
+                </a>
+                <a href="#reservation" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black font-syne font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-amber-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+                    <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-black font-syne font-extrabold text-sm">
+                        UD
+                    </div>
+                    <span class="font-syne font-bold text-white text-lg">Unplugged Dineout</span>
+                </div>
+                <button id="close-drawer-btn" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 font-medium text-base text-zinc-200">
+                <a href="#menu" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/60 transition-colors">
+                    <span>Explore Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-amber-500"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/60 transition-colors">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-amber-500"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/60 transition-colors">
+                    <span>Ambiance & Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-amber-500"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/60 transition-colors">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-amber-500"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800/60 transition-colors">
+                    <span>Location & Hours</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-amber-500"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919155772224" class="w-full bg-zinc-900 border border-zinc-800 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-zinc-800 transition-colors">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                <span>Call +91 91557 72224</span>
+            </a>
+            <a href="#reservation" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-black font-syne font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+                <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                <span>Book a Table Now</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 sm:space-y-32 py-8">
+
+        <!-- Hero Section -->
+        <section class="relative pt-6 sm:pt-12 lg:pt-16">
+            <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent blur-3xl pointer-events-none"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 shadow-sm">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.4★ Rating <span class="text-zinc-400 font-normal">(390+ Google Reviews)</span></span>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Patna's Ultimate <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Dineout & Lounge</span> Experience
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed max-w-2xl break-words">
+                        Unplug from the ordinary and immerse yourself in exquisite culinary masterpieces, mesmerizing mood lighting, and vibrant rooftop vibes right at Congress Maidan, Patna.
+                    </p>
+
+                    <!-- CTA Group -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="#reservation" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black font-syne font-bold px-8 py-4 rounded-xl shadow-xl shadow-amber-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 text-base">
+                            <i data-lucide="utensils" class="w-5 h-5"></i>
+                            <span>Book Your Table</span>
+                        </a>
+                        <a href="#menu" class="bg-zinc-900 hover:bg-zinc-800 text-white font-syne font-semibold px-8 py-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-all flex items-center justify-center gap-3 text-base">
+                            <i data-lucide="book-open" class="w-5 h-5 text-amber-500"></i>
+                            <span>Explore Menu</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Pill -->
+                    <div class="flex items-center gap-3 pt-4 text-xs sm:text-sm text-zinc-400">
+                        <div class="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-amber-500 flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </div>
+                        <p class="break-words">Anugrah Narayan Road, Congress Maidan Rd, opp. Vidya Niketan School, Patna</p>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Unplugged Dineout Ambiance" class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Badge Card -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md p-4 rounded-xl border border-zinc-800/80 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 flex-shrink-0">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-syne font-bold text-sm sm:text-base text-white">Top Rated in Patna</h3>
+                                <p class="text-xs text-zinc-400">Loved by 390+ food & lounge enthusiasts</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Glows -->
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-6 sm:p-8 shadow-xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                <div class="flex items-center gap-4 pt-4 md:pt-0 md:px-6 first:pt-0 first:px-0">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 flex-shrink-0">
+                        <i data-lucide="star" class="w-7 h-7 fill-amber-500"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-bold font-syne text-white">4.4 / 5.0</div>
+                        <div class="text-xs sm:text-sm text-zinc-400">Verified Google Rating</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 pt-4 md:pt-0 md:px-6">
+                    <div class="w-14 h-14 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 flex-shrink-0">
+                        <i data-lucide="message-square" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-bold font-syne text-white">390+ Reviews</div>
+                        <div class="text-xs sm:text-sm text-zinc-400">Happy diners & party lovers</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 pt-4 md:pt-0 md:px-6">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 flex-shrink-0">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <div class="text-lg sm:text-xl font-bold font-syne text-white">Congress Maidan</div>
+                        <div class="text-xs sm:text-sm text-zinc-400">Prime Landmark Location, Patna</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Menu / Offerings Grid -->
+        <section id="menu" class="space-y-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-2">Culinary Excellence</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne break-words">Our Signature Offerings</h2>
+                </div>
+                <p class="text-sm text-zinc-400 max-w-md">From sizzling tandoori starters to rich gourmet mains and refreshing mocktails, curated for every palate.</p>
+            </div>
+
+            <!-- Menu Category Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+                <button onclick="filterMenu('all')" class="menu-tab-btn active px-5 py-2.5 rounded-xl font-syne font-semibold text-sm bg-amber-500 text-black transition-all whitespace-nowrap">All Favorites</button>
+                <button onclick="filterMenu('starters')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-syne font-semibold text-sm bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all whitespace-nowrap">Starters & Tandoor</button>
+                <button onclick="filterMenu('mains')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-syne font-semibold text-sm bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all whitespace-nowrap">Gourmet Mains</button>
+                <button onclick="filterMenu('beverages')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-syne font-semibold text-sm bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all whitespace-nowrap">Mocktails & Drinks</button>
+                <button onclick="filterMenu('specials')" class="menu-tab-btn px-5 py-2.5 rounded-xl font-syne font-semibold text-sm bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all whitespace-nowrap">Party Specials</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all group" data-category="starters">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 font-syne font-bold text-xs px-3 py-1.5 rounded-lg border border-zinc-800">
+                                ₹349
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-syne font-bold text-lg text-white">Signature Paneer Tikka</h3>
+                                <span class="text-xs bg-amber-500/10 text-amber-500 font-semibold px-2 py-0.5 rounded">Veg</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed break-words">Cottage cheese cubes marinated in spiced yogurt and roasted in traditional tandoor to perfection.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#reservation" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 font-syne font-semibold py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span>Order / Reserve</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all group" data-category="starters">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Chicken Wings" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 font-syne font-bold text-xs px-3 py-1.5 rounded-lg border border-zinc-800">
+                                ₹429
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-syne font-bold text-lg text-white">Crispy BBQ Wings</h3>
+                                <span class="text-xs bg-orange-500/10 text-orange-500 font-semibold px-2 py-0.5 rounded">Non-Veg</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed break-words">Juicy chicken wings glazed with smoky barbecue sauce and served with a tangy dip.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#reservation" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 font-syne font-semibold py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span>Order / Reserve</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all group" data-category="mains">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 font-syne font-bold text-xs px-3 py-1.5 rounded-lg border border-zinc-800">
+                                ₹499
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-syne font-bold text-lg text-white">Unplugged Butter Chicken</h3>
+                                <span class="text-xs bg-orange-500/10 text-orange-500 font-semibold px-2 py-0.5 rounded">Chef's Pick</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed break-words">Tender tandoori chicken simmered in a rich, velvety tomato and butter gravy.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#reservation" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 font-syne font-semibold py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span>Order / Reserve</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all group" data-category="mains">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
+                            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80" alt="Dal Makhani" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 font-syne font-bold text-xs px-3 py-1.5 rounded-lg border border-zinc-800">
+                                ₹329
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-syne font-bold text-lg text-white">Smoked Dal Makhani</h3>
+                                <span class="text-xs bg-amber-500/10 text-amber-500 font-semibold px-2 py-0.5 rounded">Veg</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed break-words">Whole black lentils simmered overnight with butter and cream, finished with charcoal smoke.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#reservation" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 font-syne font-semibold py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span>Order / Reserve</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all group" data-category="beverages">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Mojito" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 font-syne font-bold text-xs px-3 py-1.5 rounded-lg border border-zinc-800">
+                                ₹249
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-syne font-bold text-lg text-white">Virgin Mint Mojito</h3>
+                                <span class="text-xs bg-amber-500/10 text-amber-500 font-semibold px-2 py-0.5 rounded">Refreshing</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed break-words">A refreshing blend of fresh mint leaves, lime juice, sugar, and sparkling club soda.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#reservation" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 font-syne font-semibold py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span>Order / Reserve</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all group" data-category="specials">
+                    <div>
+                        <div class="relative w-full aspect-[4/3] overflow-hidden bg-zinc-950">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Platter" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 font-syne font-bold text-xs px-3 py-1.5 rounded-lg border border-zinc-800">
+                                ₹899
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-syne font-bold text-lg text-white">Unplugged Grand Platter</h3>
+                                <span class="text-xs bg-orange-500/10 text-orange-500 font-semibold px-2 py-0.5 rounded">Bestseller</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed break-words">An assortment of assorted kebabs, tikkas, and finger foods ideal for sharing with friends.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#reservation" class="w-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-zinc-200 font-syne font-semibold py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span>Order / Reserve</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="about" class="space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block">The Unplugged Difference</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne break-words">Why Patna Chooses Us</h2>
+                <p class="text-sm text-zinc-400">We combine exquisite culinary art with electrifying lounge ambiance to give you unforgettable evenings.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-4 hover:border-amber-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white">Prime Landmark Location</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed break-words">Conveniently situated at Anugrah Narayan Road, near Congress Maidan and opposite Vidya Niketan School, making it easily accessible from all parts of Patna.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-4 hover:border-amber-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white">Cozy & Electric Ambiance</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed break-words">Warm mood lighting, comfortable seating arrangements, and soothing background music create the ultimate mood for romantic dinners and friends hangouts.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-4 hover:border-amber-500/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-xl text-white">Top-Tier Hospitality</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed break-words">Our courteous staff and attentive service ensure every guest receives personalized care from the moment they step through our doors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ambiance & Gallery Showcase -->
+        <section id="gallery" class="space-y-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block mb-2">Visual Tour</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne break-words">Ambiance & Gallery</h2>
+                </div>
+                <p class="text-sm text-zinc-400 max-w-md">Take a glimpse into our stylish interiors, lively bar setup, and mouth-watering food presentations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-semibold text-sm">Lounge Dining Area</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80" alt="Cocktail Bar" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-semibold text-sm">Bar Counter</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Food Spread" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-semibold text-sm">Gourmet Spread</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Seating Setup" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-semibold text-sm">Cozy Seating</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=800&q=80" alt="Evening Vibe" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-semibold text-sm">Evening Ambiance</span>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Delicious Food" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-syne font-semibold text-sm">Chef Specials</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block">Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne break-words">Loved by 390+ Patna Patrons</h2>
+                <p class="text-sm text-zinc-400">Read what our valued customers have to say about their experience at Unplugged Dineout.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed italic break-words">"One of the best lounges in Patna! The ambiance near Congress Maidan is fantastic, and their butter chicken and mocktails are simply outstanding."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-syne font-bold flex items-center justify-center">
+                            AK
+                        </div>
+                        <div>
+                            <h3 class="font-syne font-bold text-sm text-white">Ankit Kumar</h3>
+                            <span class="text-xs text-zinc-500">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed italic break-words">"Amazing atmosphere for weekend hangouts with friends. Courteous staff, fast service, and the location opposite Vidya Niketan School is very easy to find."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-orange-500/20 text-orange-500 font-syne font-bold flex items-center justify-center">
+                            PS
+                        </div>
+                        <div>
+                            <h3 class="font-syne font-bold text-sm text-white">Priya Singh</h3>
+                            <span class="text-xs text-zinc-500">Verified Diner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-sm text-zinc-300 leading-relaxed italic break-words">"Great food quality and portion sizes. Celebrated my birthday here and everyone loved the setup and music. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 font-syne font-bold flex items-center justify-center">
+                            RM
+                        </div>
+                        <div>
+                            <h3 class="font-syne font-bold text-sm text-white">Rahul Mehta</h3>
+                            <span class="text-xs text-zinc-500">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Location & Contact Section + Reservation Form -->
+        <section id="reservation" class="space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest block">Get In Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne break-words">Book a Table & Visit Us</h2>
+                <p class="text-sm text-zinc-400">Reserve your table instantly or drop by our lounge at Congress Maidan, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Reservation & Contact Form -->
+                <div class="lg:col-span-6 bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-xl space-y-6">
+                    <h3 class="font-syne font-bold text-xl text-white flex items-center gap-2">
+                        <i data-lucide="calendar-check" class="w-5 h-5 text-amber-500"></i>
+                        <span>Table Reservation Inquiry</span>
+                    </h3>
+
+                    <form id="reservation-form" onsubmit="handleReservation(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label for="name" class="text-xs font-semibold text-zinc-300">Your Name *</label>
+                                <input type="text" id="name" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="Rahul Sharma">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="phone" class="text-xs font-semibold text-zinc-300">Phone / WhatsApp *</label>
+                                <input type="tel" id="phone" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label for="guests" class="text-xs font-semibold text-zinc-300">Number of Guests *</label>
+                                <select id="guests" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                    <option value="1-2 People">1 - 2 Guests (Couple Table)</option>
+                                    <option value="3-5 People">3 - 5 Guests (Small Group)</option>
+                                    <option value="6-10 People">6 - 10 Guests (Party Group)</option>
+                                    <option value="10+ People">10+ Guests (Private Event)</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="time" class="text-xs font-semibold text-zinc-300">Preferred Time *</label>
+                                <input type="text" id="time" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="Today @ 8:00 PM">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="text-xs font-semibold text-zinc-300">Special Request / Occasion</label>
+                            <textarea id="message" rows="3" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="Birthday celebration, rooftop preference, etc."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black font-syne font-bold py-4 px-6 rounded-xl shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2 text-base">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <span>Confirm Reservation Request</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Location & Hours Details + Map -->
+                <div id="contact" class="lg:col-span-6 space-y-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-xl space-y-6">
+                        <h3 class="font-syne font-bold text-xl text-white flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-amber-500"></i>
+                            <span>Visit & Contact Info</span>
+                        </h3>
+
+                        <div class="space-y-4 text-sm text-zinc-300">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                                <p class="break-words">Anugrah narayan road, Congress Maidan Rd, opp. vidya niketan school, Patna, Bihar 800003</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <a href="tel:+919155772224" class="hover:text-amber-400 transition-colors font-semibold">+91 91557 72224</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-amber-500 flex-shrink-0"></i>
+                                <p>Open Daily: 11:00 AM – 11:30 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Unplugged+Dineout+Patna+Bihar" target="_blank" rel="noopener noreferrer" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white font-syne font-semibold py-3 px-4 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                                <i data-lucide="navigation" class="w-4 h-4 text-amber-500"></i>
+                                <span>Get Directions</span>
+                            </a>
+                            <a href="https://wa.me/919155772224?text=Hi%20Unplugged%20Dineout,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-syne font-semibold py-3 px-4 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Chat on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788481234!2d85.1234567!3d25.6123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ0LjQiTiA4NcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Unplugged Dineout Patna Location Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 mt-20 text-zinc-400">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-black font-syne font-extrabold text-base">
+                            UD
+                        </div>
+                        <span class="font-syne font-extrabold text-white text-lg">Unplugged Dineout</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Patna's favorite restaurant & lounge for exquisite food, lively ambiance, and unforgettable celebrations.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-syne font-bold text-white text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Menu Offerings</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-500 transition-colors">Ambiance Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-syne font-bold text-white text-sm uppercase tracking-wider">Hours & Contact</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li>Open Daily: 11:00 AM – 11:30 PM</li>
+                        <li><a href="tel:+919155772224" class="hover:text-amber-500 transition-colors">+91 91557 72224</a></li>
+                        <li>Congress Maidan Rd, Patna, Bihar</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-syne font-bold text-white text-sm uppercase tracking-wider">Connect & Share</h4>
+                    <p class="text-xs text-zinc-400">Tag us in your photos @UnpluggedDineoutPatna</p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://wa.me/919155772224" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-emerald-500 hover:bg-zinc-800 transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Unplugged+Dineout+Patna+Bihar" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-amber-500 hover:bg-zinc-800 transition-colors">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+919155772224" aria-label="Phone" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-orange-500 hover:bg-zinc-800 transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> Unplugged Dineout, Patna. All rights reserved.</p>
+                <p>Designed with excellence for local dining supremacy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+919155772224" class="flex-1 bg-zinc-900 border border-zinc-800 text-white font-syne font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs shadow-lg">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919155772224?text=Hi%20Unplugged%20Dineout,%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-syne font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs shadow-lg">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 max-w-md w-full space-y-6 text-center shadow-2xl animate-in fade-in zoom-in duration-200">
+            <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/20 text-amber-500 rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <div class="space-y-2">
+                <h3 class="font-syne font-bold text-2xl text-white">Reservation Request Received!</h3>
+                <p class="text-sm text-zinc-400" id="success-msg-text">Thank you! We have received your table inquiry. Our team will contact you shortly on WhatsApp/Phone to confirm your booking.</p>
+            </div>
+            <button onclick="closeSuccessModal()" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-black font-syne font-bold py-3.5 px-6 rounded-xl shadow-lg hover:scale-[1.02] transition-all">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions & Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeDrawerBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // Menu Filtering Logic
+        function filterMenu(category) {
+            const buttons = document.querySelectorAll('.menu-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-black');
+                btn.classList.add('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
+            });
+            event.currentTarget.classList.remove('bg-zinc-900', 'border', 'border-zinc-800', 'text-zinc-300');
+            event.currentTarget.classList.add('bg-amber-500', 'text-black');
+
+            const cards = document.querySelectorAll('.menu-card');
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Reservation Form Handler with XSS & Sanitization Protection
+        function handleReservation(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById('name').value.trim();
+            const phoneInput = document.getElementById('phone').value.trim();
+            const guestsInput = document.getElementById('guests').value;
+            const timeInput = document.getElementById('time').value.trim();
+            const messageInput = document.getElementById('message').value.trim();
+
+            // Basic sanitization
+            const sanitizedName = nameInput.replace(/[<>]/g, '');
+            const sanitizedPhone = phoneInput.replace(/[<>]/g, '');
+            const sanitizedTime = timeInput.replace(/[<>]/g, '');
+            const sanitizedMessage = messageInput.replace(/[<>]/g, '');
+
+            // Show success modal
+            const successModal = document.getElementById('success-modal');
+            const successMsgText = document.getElementById('success-msg-text');
+            
+            successMsgText.textContent = `Thank you ${sanitizedName}! Your table inquiry for ${guestsInput} at ${sanitizedTime} has been recorded. Our team will verify and connect with you on ${sanitizedPhone} shortly.`;
+            
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Reset form
+            document.getElementById('reservation-form').reset();
+        }
+
+        function closeSuccessModal() {
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.remove('flex');
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>
