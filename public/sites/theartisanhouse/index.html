@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>The Artisan House | Bakery, Cafe & Fine Dining in Kidwaipuri, Patna</title>
+    <meta name="description" content="Experience Patna's finest artisanal bakery, cozy cafe, and restaurant located in Nageshwar Colony, Kidwaipuri. Book tables and order via WhatsApp!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#FAF8F5',
+                        brandSurface: '#FFFFFF',
+                        brandPrimary: '#3D2314',
+                        brandSecondary: '#C68B59',
+                        brandText: '#222222',
+                        brandMuted: '#666666',
+                        brandDark: '#2A180E',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F5;
+            color: #222222;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-brandBg text-brandText antialiased overflow-x-hidden pb-28 md:pb-0">
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#3D2314] text-[#FAF8F5] text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50 flex items-center justify-center gap-2">
+        <i data-lucide="clock" class="w-4 h-4 text-[#C68B59]"></i>
+        <span>Open Daily: 10:00 AM – 11:00 PM • Kidwaipuri, Patna</span>
+        <a href="tel:+919354953594" class="hidden md:inline-flex items-center gap-1 underline text-[#C68B59] hover:text-white ml-4 font-semibold">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i> +91 93549 53594
+        </a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-brandBg border-b border-neutral-200 shadow-sm">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-[#3D2314] text-[#C68B59] flex items-center justify-center font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    AH
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg sm:text-xl text-[#3D2314] tracking-tight block leading-tight">The Artisan House</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-[#C68B59] font-semibold">Bakery • Cafe • Restaurant</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-[#222222]">
+                <a href="#menu" class="hover:text-[#C68B59] transition-colors">Menu</a>
+                <a href="#about" class="hover:text-[#C68B59] transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-[#C68B59] transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-[#C68B59] transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-[#C68B59] transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-[#C68B59] transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Desktop CTA Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20book%20a%20table%20at%20The%20Artisan%20House." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#22bf5b] text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm flex items-center gap-2 transition-all transform hover:-translate-y-0.5">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i> WhatsApp Order
+                </a>
+                <a href="#contact" class="bg-[#3D2314] hover:bg-[#2A180E] text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition-all transform hover:-translate-y-0.5">
+                    Book Table
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-xl text-[#3D2314] hover:bg-neutral-200/50 transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-6 bg-brandBg border-l border-neutral-200 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-neutral-200">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-[#3D2314] text-[#C68B59] flex items-center justify-center font-serif font-bold text-base">
+                        AH
+                    </div>
+                    <span class="font-serif font-bold text-base text-[#3D2314]">The Artisan House</span>
+                </div>
+                <button id="menu-close" aria-label="Close Navigation Menu" class="p-2 rounded-xl text-[#666666] hover:bg-neutral-200 transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 pt-6 text-base font-medium text-[#222222]">
+                <a href="#menu" class="mobile-nav-link flex items-center justify-between py-2 border-b border-neutral-100 hover:text-[#C68B59]">
+                    <span>Menu Categories</span> <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link flex items-center justify-between py-2 border-b border-neutral-100 hover:text-[#C68B59]">
+                    <span>Our Story</span> <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link flex items-center justify-between py-2 border-b border-neutral-100 hover:text-[#C68B59]">
+                    <span>Gallery</span> <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between py-2 border-b border-neutral-100 hover:text-[#C68B59]">
+                    <span>Customer Reviews</span> <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                </a>
+                <a href="#faq" class="mobile-nav-link flex items-center justify-between py-2 border-b border-neutral-100 hover:text-[#C68B59]">
+                    <span>FAQ</span> <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between py-2 border-b border-neutral-100 hover:text-[#C68B59]">
+                    <span>Location & Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                </a>
+            </nav>
+        </div>
+        <div class="pt-8 border-t border-neutral-200 flex flex-col gap-3">
+            <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20order%20from%20The%20Artisan%20House." target="_blank" rel="noopener noreferrer" class="w-full bg-[#25D366] text-white py-3 rounded-xl font-semibold text-center flex items-center justify-center gap-2 shadow-sm">
+                <i data-lucide="message-circle" class="w-5 h-5 fill-white"></i> Order via WhatsApp
+            </a>
+            <a href="tel:+919354953594" class="w-full bg-[#3D2314] text-white py-3 rounded-xl font-semibold text-center flex items-center justify-center gap-2 shadow-sm">
+                <i data-lucide="phone" class="w-5 h-5"></i> Call +91 93549 53594
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-8 pb-16 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-[#FAF8F5] to-[#F3EEE6]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 shadow-sm mb-6">
+                        <div class="flex items-center text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-[#3D2314]">4.1★ <span class="font-normal text-[#666666]">(1,054+ Google Reviews)</span></span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-serif text-[#3D2314] leading-[1.15] mb-6 break-words">
+                        Patna’s Finest <span class="text-[#C68B59] italic">Artisanal Bakery</span>, Cozy Cafe & Restaurant
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-[#666666] mb-8 leading-relaxed max-w-2xl break-words">
+                        Step into a haven of warmth and aroma at Nageshwar Colony, Kidwaipuri. From freshly baked artisanal sourdoughs and decadent pastries to wood-fired delights and exquisite multi-cuisine dining.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#contact" class="bg-[#3D2314] hover:bg-[#2A180E] text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <i data-lucide="calendar" class="w-5 h-5 text-[#C68B59]"></i> Book a Table
+                        </a>
+                        <a href="#menu" class="bg-white hover:bg-neutral-50 text-[#3D2314] border border-neutral-300 font-semibold px-8 py-4 rounded-xl shadow-sm transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="utensils" class="w-5 h-5 text-[#C68B59]"></i> Explore Menu
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-[#C68B59] to-[#3D2314] rounded-2xl blur-lg opacity-20"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-square lg:aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80" alt="The Artisan House Cafe Ambiance and Pastries" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Floating Badge Card -->
+                        <div class="absolute -bottom-6 -left-6 sm:bottom-6 sm:-left-6 bg-white p-4 rounded-xl shadow-xl border border-neutral-100 flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-[#FAF8F5] text-[#C68B59] flex items-center justify-center border border-neutral-200">
+                                <i data-lucide="coffee" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="block font-serif font-bold text-[#3D2314]">Freshly Brewed</span>
+                                <span class="text-xs text-[#666666]">Specialty Coffee & Pastries</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-white border-y border-neutral-200 py-6">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-neutral-200">
+                <div class="flex flex-col items-center justify-center py-2 md:py-0">
+                    <div class="flex items-center gap-1.5 text-amber-500 mb-1">
+                        <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+                        <span class="font-bold text-lg text-[#3D2314]">4.1 / 5.0 Rating</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#666666]">Over 1,054+ Verified Google Reviews</p>
+                </div>
+                <div class="flex flex-col items-center justify-center py-2 md:py-0">
+                    <div class="flex items-center gap-1.5 text-[#3D2314] mb-1">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-[#C68B59]"></i>
+                        <span class="font-bold text-lg text-[#3D2314]">Kidwaipuri, Patna</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#666666]">Nageshwar Colony, Prime Location</p>
+                </div>
+                <div class="flex flex-col items-center justify-center py-2 md:py-0">
+                    <div class="flex items-center gap-1.5 text-[#3D2314] mb-1">
+                        <i data-lucide="clock" class="w-5 h-5 text-[#C68B59]"></i>
+                        <span class="font-bold text-lg text-[#3D2314]">10:00 AM – 11:00 PM</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#666666]">Open All 7 Days a Week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Categories -->
+    <section id="menu" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#C68B59] font-bold block mb-2">Artisanal Offerings</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] mb-4 break-words">
+                    Explore Our Signature Menu
+                </h2>
+                <p class="text-sm sm:text-base text-[#666666]">
+                    Crafted with passion using authentic recipes and the finest ingredients. Order directly via WhatsApp or reserve your dining table today.
+                </p>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <!-- Card 1: Bakery & Breads -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Artisanal Bakery Breads" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-[#3D2314] text-[#C68B59] text-xs font-bold px-3 py-1 rounded-full shadow">Bakery</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-2">Artisanal Bakery</h3>
+                            <p class="text-sm text-[#666666] leading-relaxed mb-4">
+                                Freshly baked sourdoughs, croissants, artisanal baguettes, and gourmet bread loaves made fresh every morning.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20order%20from%20the%20Bakery%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-[#FAF8F5] hover:bg-[#3D2314] text-[#3D2314] hover:text-white text-sm font-semibold rounded-xl border border-neutral-200 transition-colors text-center flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order Bakery Items
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Cafe & Coffee -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Cafe & Specialty Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-[#3D2314] text-[#C68B59] text-xs font-bold px-3 py-1 rounded-full shadow">Cafe</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-2">Cozy Cafe & Brews</h3>
+                            <p class="text-sm text-[#666666] leading-relaxed mb-4">
+                                Rich specialty coffees, iced lattes, handcrafted mocktails, milkshakes, and delectable quick bites to elevate your day.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20order%20from%20the%20Cafe%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-[#FAF8F5] hover:bg-[#3D2314] text-[#3D2314] hover:text-white text-sm font-semibold rounded-xl border border-neutral-200 transition-colors text-center flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order Cafe Drinks
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Restaurant Mains -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Fine Dining Restaurant Mains" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-[#3D2314] text-[#C68B59] text-xs font-bold px-3 py-1 rounded-full shadow">Restaurant</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-2">Fine Dining Mains</h3>
+                            <p class="text-sm text-[#666666] leading-relaxed mb-4">
+                                Exquisite multi-cuisine restaurant dishes, wood-fired pizzas, creamy pastas, sizzling appetizers, and hearty main courses.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20order%20from%20the%20Restaurant%20menu." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-[#FAF8F5] hover:bg-[#3D2314] text-[#3D2314] hover:text-white text-sm font-semibold rounded-xl border border-neutral-200 transition-colors text-center flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> View Restaurant Menu
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Custom Cakes & Desserts -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative aspect-video sm:aspect-[4/3] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Custom Cakes & Desserts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-[#3D2314] text-[#C68B59] text-xs font-bold px-3 py-1 rounded-full shadow">Celebration</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-2">Custom Cakes</h3>
+                            <p class="text-sm text-[#666666] leading-relaxed mb-4">
+                                Handcrafted birthday cakes, anniversary treats, designer cupcakes, and luxurious pastries tailored for your special celebrations.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-[#FAF8F5] hover:bg-[#3D2314] text-[#3D2314] hover:text-white text-sm font-semibold rounded-xl border border-neutral-200 transition-colors text-center flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Order Custom Cake
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 md:py-24 bg-white border-y border-neutral-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#C68B59] font-bold block mb-2">The Artisan Difference</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] mb-4 break-words">
+                    Why Patnaites Love The Artisan House
+                </h2>
+                <p class="text-sm sm:text-base text-[#666666]">
+                    We combine world-class culinary artistry with warm Patna hospitality to give you an unforgettable dining and cafe experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-[#FAF8F5] p-8 rounded-2xl border border-neutral-200 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-2xl bg-[#3D2314] text-[#C68B59] flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="wheat" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-3">Artisanal Baking</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        Traditional baking techniques with uncompromised quality, yielding crusty breads and melt-in-your-mouth pastries.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[#FAF8F5] p-8 rounded-2xl border border-neutral-200 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-2xl bg-[#3D2314] text-[#C68B59] flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="utensils-crossed" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-3">Fresh Ingredients</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        Every single dish and beverage is prepared fresh upon order using premium ingredients and rigorous quality checks.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[#FAF8F5] p-8 rounded-2xl border border-neutral-200 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-2xl bg-[#3D2314] text-[#C68B59] flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="coffee" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-3">Cozy Ambiance</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        Warm lighting, aesthetic interiors, and serene seating designed for deep conversations, family dinners, and coffee dates.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-[#FAF8F5] p-8 rounded-2xl border border-neutral-200 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-2xl bg-[#3D2314] text-[#C68B59] flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-[#3D2314] mb-3">Prime Kidwaipuri</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        Conveniently located in Nageshwar Colony with easy accessibility and ample parking space for all our esteemed guests.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="rounded-2xl shadow-md w-full h-48 sm:h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Chef Preparing Food" class="rounded-2xl shadow-md w-full h-36 sm:h-48 object-cover">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Bakery Pastries" class="rounded-2xl shadow-md w-full h-36 sm:h-48 object-cover">
+                            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" alt="Coffee Cup" class="rounded-2xl shadow-md w-full h-48 sm:h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-xs sm:text-sm uppercase tracking-widest text-[#C68B59] font-bold block mb-2">Our Story & Heritage</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] mb-6 break-words">
+                        Where Passion Meets Culinary Excellence in Patna
+                    </h2>
+                    <p class="text-sm sm:text-base text-[#666666] mb-4 leading-relaxed">
+                        Founded with a vision to redefine the culinary landscape of Patna, <strong class="text-[#3D2314]">The Artisan House</strong> was born out of a deep love for authentic baking and refined dining. Located in the peaceful lanes of Nageshwar Colony, Kidwaipuri, our space is a celebration of flavors, aromas, and heartfelt hospitality.
+                    </p>
+                    <p class="text-sm sm:text-base text-[#666666] mb-8 leading-relaxed">
+                        Whether you are catching up with an old friend over a pour-over coffee, celebrating a milestone with our custom cakes, or enjoying a candle-lit family dinner, we strive to make every moment unforgettable.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 w-full py-6 border-y border-neutral-200 mb-8">
+                        <div>
+                            <span class="block font-serif font-bold text-2xl sm:text-3xl text-[#3D2314]">1,000+</span>
+                            <span class="text-xs sm:text-sm text-[#666666]">Happy Foodies</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif font-bold text-2xl sm:text-3xl text-[#3D2314]">50+</span>
+                            <span class="text-xs sm:text-sm text-[#666666]">Menu Delicacies</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif font-bold text-2xl sm:text-3xl text-[#3D2314]">4.1★</span>
+                            <span class="text-xs sm:text-sm text-[#666666]">Google Rating</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="bg-[#3D2314] hover:bg-[#2A180E] text-white font-semibold px-8 py-3.5 rounded-xl shadow-md transition-all flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-5 h-5 text-[#C68B59]"></i> Reserve Your Table Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-16 md:py-24 bg-white border-y border-neutral-200">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#C68B59] font-bold block mb-2">Visual Showcase</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] mb-4 break-words">
+                    A Glimpse Inside The Artisan House
+                </h2>
+                <p class="text-sm sm:text-base text-[#666666]">
+                    Explore our exquisite cafe ambiance, freshly plated gourmet dishes, and artisanal creations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Cafe Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Artisanal Breads" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Restaurant Dish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Pastry Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Coffee Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Seating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Wood-fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md aspect-square group">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Fine Dining Experience" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#C68B59] font-bold block mb-2">Customer Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] mb-4 break-words">
+                    Loved by Over 1,054+ Google Reviewers
+                </h2>
+                <p class="text-sm sm:text-base text-[#666666]">
+                    Read what our valued patrons have to say about our food, coffee, and ambiance in Kidwaipuri.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-neutral-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-[#666666] leading-relaxed italic mb-6">
+                            "Absolute gem in Kidwaipuri! The ambiance is so warm and cozy, perfect for weekend coffee dates. Their croissants and wood-fired pizzas are out of this world. Highly recommend!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-neutral-100">
+                        <div class="w-10 h-10 rounded-full bg-[#3D2314] text-[#C68B59] font-serif font-bold flex items-center justify-center text-sm">
+                            AS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-[#3D2314]">Aman Singh</h4>
+                            <span class="text-xs text-[#666666]">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-neutral-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-[#666666] leading-relaxed italic mb-6">
+                            "Ordered a custom birthday cake for my daughter and everyone was blown away by how delicious and beautifully decorated it was. The Artisan House is now our go-to bakery in Patna!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-neutral-100">
+                        <div class="w-10 h-10 rounded-full bg-[#3D2314] text-[#C68B59] font-serif font-bold flex items-center justify-center text-sm">
+                            PR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-[#3D2314]">Priya Ranjan</h4>
+                            <span class="text-xs text-[#666666]">Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-neutral-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        </div>
+                        <p class="text-sm text-[#666666] leading-relaxed italic mb-6">
+                            "Great service, extremely polite staff, and wonderful multi-cuisine dishes. Nageshwar Colony needed a fine dining spot like this. Will definitely be visiting frequently."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-neutral-100">
+                        <div class="w-10 h-10 rounded-full bg-[#3D2314] text-[#C68B59] font-serif font-bold flex items-center justify-center text-sm">
+                            MK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-[#3D2314]">Manish Kumar</h4>
+                            <span class="text-xs text-[#666666]">Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-16 md:py-24 bg-white border-y border-neutral-200">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#C68B59] font-bold block mb-2">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-sm sm:text-base text-[#666666]">
+                    Everything you need to know about dining, table reservations, and bakery orders at The Artisan House.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-neutral-200 rounded-xl overflow-hidden bg-[#FAF8F5]">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-lg text-[#3D2314] flex items-center justify-between gap-4 focus:outline-none">
+                        <span>What are the opening and closing hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C68B59] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#666666] leading-relaxed">
+                        The Artisan House is open every single day of the week from 10:00 AM to 11:00 PM. You can drop in for morning coffee, lunch, evening snacks, or a late dinner!
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-neutral-200 rounded-xl overflow-hidden bg-[#FAF8F5]">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-lg text-[#3D2314] flex items-center justify-between gap-4 focus:outline-none">
+                        <span>How can I book a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C68B59] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#666666] leading-relaxed">
+                        You can easily book a table by filling out our reservation form on this website, calling us directly at +91 93549 53594, or messaging us on WhatsApp for instant confirmation.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-neutral-200 rounded-xl overflow-hidden bg-[#FAF8F5]">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-lg text-[#3D2314] flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Do you take custom cake orders for birthdays and anniversaries?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C68B59] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#666666] leading-relaxed">
+                        Yes, absolutely! We specialize in custom designer cakes, pastries, and celebration boxes. We recommend placing custom cake orders at least 24 hours in advance via WhatsApp.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-neutral-200 rounded-xl overflow-hidden bg-[#FAF8F5]">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-lg text-[#3D2314] flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Where is The Artisan House located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#C68B59] transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-5 text-sm text-[#666666] leading-relaxed">
+                        We are conveniently located at Nageshwar Colony, Kidwaipuri, Patna, Bihar 800001. You can click on the Google Maps directions button in our contact section for precise GPS navigation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-16 md:py-24">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs sm:text-sm uppercase tracking-widest text-[#C68B59] font-bold block mb-2">Visit Or Reserve</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#3D2314] mb-4 break-words">
+                    Plan Your Visit or Book a Table
+                </h2>
+                <p class="text-sm sm:text-base text-[#666666]">
+                    Connect with us for table reservations, takeaway orders, or event inquiries.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left: Contact Details & Hours & Map -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    <!-- Info Cards -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-neutral-200 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] text-[#C68B59] flex items-center justify-center border border-neutral-200 flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-[#3D2314] mb-1">Our Location</h3>
+                                <p class="text-sm text-[#666666]">Nageshwar Colony, Kidwaipuri, Patna, Bihar 800001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] text-[#C68B59] flex items-center justify-center border border-neutral-200 flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-[#3D2314] mb-1">Phone & WhatsApp</h3>
+                                <a href="tel:+919354953594" class="text-sm text-[#C68B59] font-semibold hover:underline block">+91 93549 53594</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] text-[#C68B59] flex items-center justify-center border border-neutral-200 flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-[#3D2314] mb-1">Business Hours</h3>
+                                <p class="text-sm text-[#666666]">Monday – Sunday: 10:00 AM – 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-neutral-200 h-72 sm:h-80 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778553258832!2d85.1226!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef0b89f89%3A0xc39cf629e5a1b32!2sKidwaipuri%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            title="The Artisan House Location Map">
+                        </iframe>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=The+Artisan+House+Bakery+Cafe+Restaurant+Kidwaipuri+Patna" target="_blank" rel="noopener noreferrer" class="w-full bg-[#3D2314] hover:bg-[#2A180E] text-white py-3.5 rounded-xl font-semibold text-center flex items-center justify-center gap-2 shadow-md transition-all">
+                        <i data-lucide="navigation" class="w-5 h-5 text-[#C68B59]"></i> Get Directions on Google Maps
+                    </a>
+                </div>
+
+                <!-- Right: Working Table Reservation & Inquiry Form -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-neutral-200">
+                        <h3 class="font-serif font-bold text-2xl text-[#3D2314] mb-2">Book a Table</h3>
+                        <p class="text-sm text-[#666666] mb-6">Fill out the quick form below to reserve your table instantly.</p>
+                        
+                        <form id="reservation-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-[#3D2314] mb-1">Your Full Name *</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-[#C68B59] text-sm" placeholder="Aman Sharma">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-[#3D2314] mb-1">Phone Number *</label>
+                                    <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-[#C68B59] text-sm" placeholder="+91 98765 43210">
+                                </div>
+                                <div>
+                                    <label for="guests" class="block text-xs font-bold uppercase tracking-wider text-[#3D2314] mb-1">Number of Guests *</label>
+                                    <select id="guests" required class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-[#C68B59] text-sm bg-white">
+                                        <option value="1">1 Person</option>
+                                        <option value="2" selected>2 People</option>
+                                        <option value="4">4 People</option>
+                                        <option value="6">6 People</option>
+                                        <option value="8+">8+ People (Large Group)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="date" class="block text-xs font-bold uppercase tracking-wider text-[#3D2314] mb-1">Reservation Date *</label>
+                                    <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-[#C68B59] text-sm">
+                                </div>
+                                <div>
+                                    <label for="time" class="block text-xs font-bold uppercase tracking-wider text-[#3D2314] mb-1">Preferred Time *</label>
+                                    <input type="time" id="time" required class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-[#C68B59] text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-bold uppercase tracking-wider text-[#3D2314] mb-1">Special Requests / Occasion</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:ring-2 focus:ring-[#C68B59] text-sm" placeholder="Birthday celebration, window seating preferred, etc."></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full bg-[#3D2314] hover:bg-[#2A180E] text-white py-4 rounded-xl font-semibold text-base shadow-lg transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-[#C68B59]"></i> Confirm Table Reservation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[200] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl border border-neutral-200 transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-serif font-bold text-2xl text-[#3D2314] mb-2">Reservation Received!</h3>
+            <p id="modal-msg" class="text-sm text-[#666666] mb-6">
+                Thank you! Your table reservation request has been successfully submitted. We look forward to welcoming you at The Artisan House.
+            </p>
+            <button id="modal-close-btn" class="w-full bg-[#3D2314] text-white py-3 rounded-xl font-semibold text-sm hover:bg-[#2A180E] transition-colors">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Bottom Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-neutral-200 p-3 shadow-lg flex items-center gap-3">
+        <a href="tel:+919354953594" class="flex-1 bg-[#3D2314] text-white py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 shadow-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-[#C68B59]"></i> Call Now
+        </a>
+        <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20order%20or%20book%20a%20table%20at%20The%20Artisan%20House." target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#25D366] text-white py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 shadow-sm">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A180E] text-[#FAF8F5] pt-16 pb-12 border-t border-neutral-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-neutral-800">
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#C68B59] text-[#2A180E] flex items-center justify-center font-serif font-bold text-lg">
+                            AH
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">The Artisan House</span>
+                    </div>
+                    <p class="text-sm text-neutral-400 leading-relaxed">
+                        Patna’s premier destination for artisanal baking, specialty coffee, and exquisite fine dining in Kidwaipuri.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-500 pt-2">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+                        <i data-lucide="star-half" class="w-4 h-4 fill-amber-500"></i>
+                        <span class="text-xs text-neutral-300 font-bold ml-1">4.1★ (1,054+ Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-neutral-400">
+                        <li><a href="#menu" class="hover:text-[#C68B59] transition-colors">Menu Categories</a></li>
+                        <li><a href="#about" class="hover:text-[#C68B59] transition-colors">Our Story & Heritage</a></li>
+                        <li><a href="#gallery" class="hover:text-[#C68B59] transition-colors">Visual Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-[#C68B59] transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-[#C68B59] transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-[#C68B59] transition-colors">Table Reservation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact & Hours -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-white mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-neutral-400">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#C68B59] flex-shrink-0 mt-1"></i>
+                            <span>Nageshwar Colony, Kidwaipuri, Patna, Bihar 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="phone" class="w-4 h-4 text-[#C68B59] flex-shrink-0"></i>
+                            <a href="tel:+919354953594" class="hover:text-white transition-colors">+91 93549 53594</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="clock" class="w-4 h-4 text-[#C68B59] flex-shrink-0"></i>
+                            <span>Open Daily: 10:00 AM – 11:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: WhatsApp CTA -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-white mb-4">Instant Orders</h4>
+                    <p class="text-sm text-neutral-400 mb-4 leading-relaxed">
+                        Craving something delicious? Order directly or book a table over WhatsApp in seconds.
+                    </p>
+                    <a href="https://wa.me/919354953594?text=Hi%2C%20I%20would%20like%20to%20place%20an%20order%20or%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full bg-[#25D366] hover:bg-[#22bf5b] text-white py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 shadow-md transition-colors">
+                        <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i> WhatsApp Us Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+                <p>&copy; <span id="current-year"></span> The Artisan House Bakery, Cafe & Restaurant. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="https://www.google.com/maps/search/?api=1&query=The+Artisan+House+Bakery+Cafe+Restaurant+Kidwaipuri+Patna" target="_blank" rel="noopener noreferrer" class="hover:text-[#C68B59] transition-colors">Google Maps Listing</a>
+                    <a href="#contact" class="hover:text-[#C68B59] transition-colors">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions & Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Elements
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                faqButtons.forEach(otherBtn => {
+                    otherBtn.nextElementSibling.classList.add('hidden');
+                    const otherIcon = otherBtn.querySelector('svg');
+                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.classList.remove('hidden');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Reservation Form Validation & Success Modal
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const modalMsg = document.getElementById('modal-msg');
+
+        reservationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const guests = document.getElementById('guests').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            if (!name || !phone || !date || !time) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Sanitize and format message
+            const sanitizedName = name.replace(/[<>]/g, '');
+            modalMsg.textContent = `Thank you, ${sanitizedName}! Your table for ${guests} guest(s) on ${date} at ${time} has been successfully requested. We will call you shortly to confirm.`;
+            
+            successModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            reservationForm.reset();
+        });
+
+        modalCloseBtn.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+
+        // Set min date for reservation to today
+        const todayStr = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            dateInput.min = todayStr;
+            dateInput.value = todayStr;
+        }
+    </script>
+</body>
+</html>

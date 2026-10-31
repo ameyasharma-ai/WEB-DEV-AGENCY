@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Cafe Skylite | Rooftop Cafe & Restaurant in Patna</title>
+    <meta name="description" content="Experience Patna's best rooftop dining at Cafe Skylite, Bailey Road. Enjoy scenic 6th-floor skyline views, delicious continental mains, mocktails, and cozy ambiance.">
+    
+    <!-- Security Policy Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com https://fonts.gstatic.com https://images.unsplash.com https://maps.google.com https://www.google.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; img-src 'self' https://images.unsplash.com https://maps.gstatic.com data:; frame-src https://www.google.com;">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#121214',
+                            surface: '#1E1E24',
+                            surfaceHover: '#2A2A33',
+                            primary: '#D97706',
+                            secondary: '#F59E0B',
+                            accentHover: '#B45309',
+                            muted: '#A1A1AA',
+                            light: '#FAFAFA'
+                        }
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121214;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A33;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D97706;
+        }
+    </style>
+</head>
+<body class="bg-[#121214] text-[#FAFAFA] font-inter antialiased overflow-x-hidden pb-28 md:pb-0 selection:bg-amber-600 selection:text-white">
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- 100% Solid Opaque Header & Announcement Bar -->
+    <div class="bg-amber-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium sticky top-0 z-50 flex items-center justify-center gap-2 shadow-md">
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse shrink-0"></i>
+        <span>Open Today till 11:30 PM • Experience Patna's Finest Rooftop Skyline View at RPS More!</span>
+    </div>
+
+    <header class="bg-[#121214] border-b border-zinc-800 sticky top-[37px] sm:top-[41px] z-40 w-full transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-syne font-bold text-xl shadow-lg shadow-amber-600/20 group-hover:scale-105 transition-transform">
+                    CS
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-lg sm:text-2xl tracking-wide text-white block leading-none">Cafe Skylite</span>
+                    <span class="text-xs text-amber-500 font-medium tracking-wider uppercase mt-1 block">Rooftop Lounge • Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
+                <a href="#home" class="hover:text-amber-500 transition-colors">Home</a>
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#ambiance" class="hover:text-amber-500 transition-colors">Ambiance</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">Story</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop CTAs -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:+919031023202" class="flex items-center gap-2 text-zinc-300 hover:text-amber-500 text-sm font-semibold transition-colors bg-zinc-900 border border-zinc-800 px-4 py-2.5 rounded-xl">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>+91 90310 23202</span>
+                </a>
+                <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-amber-600/20 transition-all flex items-center gap-2 min-h-[48px]">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Book on WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer (100% Opaque & Secure) -->
+    <div id="mobile-drawer" class="fixed top-[74px] sm:top-[78px] bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#121214] border-l border-zinc-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800 mb-6">
+                <span class="font-syne font-bold text-lg text-white">Menu Navigation</span>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-5 font-medium text-base text-zinc-300">
+                <a href="#home" class="mobile-nav-link flex items-center justify-between p-2 hover:text-amber-500 rounded-lg hover:bg-zinc-900 transition-all"><span>Home</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#menu" class="mobile-nav-link flex items-center justify-between p-2 hover:text-amber-500 rounded-lg hover:bg-zinc-900 transition-all"><span>Menu & Specialties</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#ambiance" class="mobile-nav-link flex items-center justify-between p-2 hover:text-amber-500 rounded-lg hover:bg-zinc-900 transition-all"><span>Ambiance & Gallery</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-nav-link flex items-center justify-between p-2 hover:text-amber-500 rounded-lg hover:bg-zinc-900 transition-all"><span>Our Story</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between p-2 hover:text-amber-500 rounded-lg hover:bg-zinc-900 transition-all"><span>Customer Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#faq" class="mobile-nav-link flex items-center justify-between p-2 hover:text-amber-500 rounded-lg hover:bg-zinc-900 transition-all"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between p-2 hover:text-amber-500 rounded-lg hover:bg-zinc-900 transition-all"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 mt-6 flex flex-col gap-3">
+            <a href="tel:+919031023202" class="w-full bg-zinc-900 border border-zinc-800 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 min-h-[48px]">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                <span>Call +91 90310 23202</span>
+            </a>
+            <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 min-h-[48px] shadow-lg shadow-amber-600/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Book Table on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <main id="home">
+        <!-- Hero Section -->
+        <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+            <!-- Background Image with Overlay & Glow -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80" alt="Cafe Skylite Rooftop Ambiance" class="w-full h-full object-cover object-center filter brightness-[0.35]">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#121214] via-[#121214]/60 to-transparent"></div>
+                <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-amber-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+            </div>
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <!-- Trust Rating Badge -->
+                <div class="inline-flex items-center gap-2 bg-zinc-900/90 border border-zinc-800 px-4 py-2 rounded-full mb-6 backdrop-blur-md shadow-xl">
+                    <div class="flex items-center text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm font-semibold text-white">4.7 ★ <span class="text-zinc-400 font-normal">(2,908 Google Reviews)</span></span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words max-w-4xl mx-auto">
+                    Elevate Your Dining Experience at Patna's Best <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Rooftop Cafe</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Perched on the 6th floor at KV Complex, Bailey Road. Savor breathtaking skyline views, exquisite continental delicacies, refreshing mocktails, and unforgettable rooftop vibes.
+                </p>
+
+                <!-- Hero CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+                    <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-amber-600/30 transition-all flex items-center justify-center gap-3 min-h-[48px] group">
+                        <i data-lucide="calendar-check" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                        <span>Reserve a Table Now</span>
+                    </a>
+                    <a href="#menu" class="w-full sm:w-auto bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700 text-white font-semibold text-base px-8 py-4 rounded-xl backdrop-blur-md transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                        <i data-lucide="utensils" class="w-5 h-5 text-amber-500"></i>
+                        <span>View Menu</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="border-y border-zinc-800 bg-zinc-950/80 py-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 bg-zinc-900/50 border border-zinc-800/60 rounded-2xl">
+                        <div class="text-2xl sm:text-3xl font-extrabold font-syne text-amber-500 mb-1">4.7 ★</div>
+                        <div class="text-xs sm:text-sm text-zinc-400 font-medium">Google Rating</div>
+                    </div>
+                    <div class="p-4 bg-zinc-900/50 border border-zinc-800/60 rounded-2xl">
+                        <div class="text-2xl sm:text-3xl font-extrabold font-syne text-white mb-1">2,900+</div>
+                        <div class="text-xs sm:text-sm text-zinc-400 font-medium">Happy Diners</div>
+                    </div>
+                    <div class="p-4 bg-zinc-900/50 border border-zinc-800/60 rounded-2xl">
+                        <div class="text-2xl sm:text-3xl font-extrabold font-syne text-amber-500 mb-1">6th Floor</div>
+                        <div class="text-xs sm:text-sm text-zinc-400 font-medium">Rooftop Skyline View</div>
+                    </div>
+                    <div class="p-4 bg-zinc-900/50 border border-zinc-800/60 rounded-2xl">
+                        <div class="text-2xl sm:text-3xl font-extrabold font-syne text-white mb-1">Bailey Rd</div>
+                        <div class="text-xs sm:text-sm text-zinc-400 font-medium">Prime RPS More Location</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services / Menu Categories Grid -->
+        <section id="menu" class="py-20 bg-[#121214]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Culinary Excellence</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Explore Our Signature Menu</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">From mouth-watering starters to indulgent desserts, crafted by expert chefs with premium ingredients.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1: Starters -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-600/5 transition-all duration-300 group">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Starters & Appetizers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4">
+                                <i data-lucide="flame" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Starters & Appetizers</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Crispy tandoori delights, sizzling platters, and bite-sized appetizers perfect to kickstart your evening.</p>
+                        </div>
+                        <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20view%20the%20Starters%20menu%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                            <span>Inquire Menu</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: Continental Mains -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-600/5 transition-all duration-300 group">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Continental Mains" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4">
+                                <i data-lucide="utensils" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Continental Mains</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Handcrafted wood-fired pizzas, creamy pastas, creamy risottos, and wholesome continental feasts.</p>
+                        </div>
+                        <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20view%20the%20Continental%20Mains%20menu%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                            <span>Inquire Menu</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: Mocktails & Beverages -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-600/5 transition-all duration-300 group">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Mocktails & Beverages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4">
+                                <i data-lucide="wine" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Mocktails & Beverages</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Refreshing signature coolers, artisanal coffees, tropical fruit blends, and fizzy mocktail creations.</p>
+                        </div>
+                        <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20view%20the%20Mocktails%20menu%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                            <span>Inquire Menu</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 4: Desserts & Sweets -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-600/5 transition-all duration-300 group">
+                        <div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6 bg-zinc-800">
+                                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80" alt="Desserts & Sweets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4">
+                                <i data-lucide="cake" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Desserts & Sweets</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Sizzling brownies with vanilla ice cream, molten lava cakes, and decadent sweet finishes.</p>
+                        </div>
+                        <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20view%20the%20Desserts%20menu%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="w-full bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-sm py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                            <span>Inquire Menu</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 bg-zinc-950 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider mb-2 block">The Skylite Difference</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Why Patna Chooses Cafe Skylite</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">We combine exceptional culinary artistry with unmatched rooftop atmosphere to create memories.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800 p-8 rounded-2xl relative overflow-hidden group hover:border-amber-500/50 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="mountain" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Scenic 6th-Floor Views</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Overlooking Bailey Road and RPS More, enjoy open-air breezes, stunning sunset views, and twinkling city lights at night.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800 p-8 rounded-2xl relative overflow-hidden group hover:border-amber-500/50 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="utensils-crossed" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Exceptional Taste</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Every dish is meticulously prepared using premium quality ingredients and authentic recipes that satisfy every craving.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800 p-8 rounded-2xl relative overflow-hidden group hover:border-amber-500/50 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Vibrant Ambiance</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Warm amber mood lighting, aesthetic cozy seating corners, and soothing background music make it perfect for dates and hangouts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Story Section -->
+        <section id="about" class="py-20 bg-[#121214]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Our Story</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 leading-tight break-words">Where Great Food Meets Patna's Skyline</h2>
+                        <p class="text-zinc-300 text-base mb-6 leading-relaxed">
+                            Established on the 6th floor of KV Complex, above Silk House Hotel at RPS More, Kaliket Nagar, Cafe Skylite was born out of a passion to give Patna a truly world-class rooftop dining destination.
+                        </p>
+                        <p class="text-zinc-400 text-sm sm:text-base mb-8 leading-relaxed">
+                            Whether you are planning a romantic candlelight dinner under the stars, celebrating a birthday with friends, or simply unwinding after a long work week with our signature mocktails, Cafe Skylite offers an unmatched ambiance paired with warm, attentive hospitality.
+                        </p>
+                        <div class="flex items-center gap-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold font-syne text-lg">2.9k</div>
+                                <div class="text-xs text-zinc-400 font-medium">Verified 5-Star<br>Google Reviews</div>
+                            </div>
+                            <div class="h-10 w-px bg-zinc-800"></div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold font-syne text-lg">6th</div>
+                                <div class="text-xs text-zinc-400 font-medium">Floor Skyline<br>Rooftop View</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="Cafe Skylite Rooftop Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-800 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                                <span class="text-xs font-semibold text-white">Prime Location</span>
+                            </div>
+                            <p class="text-xs text-zinc-400">KV Complex, Bailey Rd, above Silk House Hotel, RPS More, Patna.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Showcase / Gallery -->
+        <section id="ambiance" class="py-20 bg-zinc-950 border-t border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Visual Experience</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Ambiance & Gallery</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Take a visual journey through our rooftop seating, delicious culinary creations, and glowing night ambiance.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=800&q=80" alt="Rooftop Dining View" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80" alt="Gourmet Food Plate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" alt="Cafe Evening Lights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80" alt="Mocktail Drinks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Delicious Appetizers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Cozy Rooftop Seating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="py-20 bg-[#121214]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Testimonials</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Loved by 2,900+ Patnaites</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Read authentic Google reviews from guests who experienced our food and rooftop ambiance.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm sm:text-base mb-6 leading-relaxed">
+                                "Hands down the best rooftop cafe in Patna! The view from the 6th floor at RPS More during sunset is breathtaking. Food and mocktails were exceptionally delicious."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                            <div class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-500 font-bold font-syne flex items-center justify-center">
+                                AK
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm text-white">Abhishek Kumar</h4>
+                                <span class="text-xs text-zinc-500">Local Google Guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm sm:text-base mb-6 leading-relaxed">
+                                "Amazing ambiance for birthday celebrations and date nights. The lighting on the terrace at night is so cozy. Staff is courteous and service is prompt."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                            <div class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-500 font-bold font-syne flex items-center justify-center">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm text-white">Priya Singh</h4>
+                                <span class="text-xs text-zinc-500">Google Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center text-amber-400 mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm sm:text-base mb-6 leading-relaxed">
+                                "Great location right on Bailey Road above Silk House Hotel. Parking was easy and the continental food quality is top-notch. Highly recommended!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800/80">
+                            <div class="w-10 h-10 rounded-full bg-amber-600/20 text-amber-500 font-bold font-syne flex items-center justify-center">
+                                RM
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm text-white">Rohit Mishra</h4>
+                                <span class="text-xs text-zinc-500">Google Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion Section -->
+        <section id="faq" class="py-20 bg-zinc-950 border-t border-zinc-800">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Got Questions?</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Frequently Asked Questions</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know before visiting Cafe Skylite.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-semibold text-base sm:text-lg text-white">Do I need to reserve a table in advance?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800/50 pt-4">
+                            While walk-ins are always welcome, we highly recommend reserving a table in advance—especially during weekends and evenings—to secure the best rooftop seating with skyline views. You can instantly book via WhatsApp or our form below.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-semibold text-base sm:text-lg text-white">What are your operating hours?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800/50 pt-4">
+                            Cafe Skylite is open every day of the week from 11:00 AM to 11:30 PM. Come over for lunch, evening snacks under the sunset, or dinner under the stars!
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-semibold text-base sm:text-lg text-white">Is parking available at KV Complex, RPS More?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800/50 pt-4">
+                            Yes! Adequate parking space is available around KV Complex near RPS More on Bailey Road for both two-wheelers and four-wheelers.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[48px]">
+                            <span class="font-syne font-semibold text-base sm:text-lg text-white">Do you host private parties and birthday celebrations?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 shrink-0"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800/50 pt-4">
+                            Absolutely! We specialize in birthday parties, anniversary celebrations, kitty parties, and private corporate gatherings on our rooftop. Contact us directly on WhatsApp to discuss customized decoration and menu packages.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Location & Contact Section -->
+        <section id="contact" class="py-20 bg-[#121214]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Visit Us</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Location & Table Reservation</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Drop by for an incredible rooftop experience or reserve your table ahead of time.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Contact Details & Form -->
+                    <div class="space-y-8">
+                        <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl">
+                            <h3 class="font-syne font-bold text-xl text-white mb-6">Contact Information</h3>
+                            <div class="space-y-5">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0 mt-1">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white text-sm mb-1">Address</h4>
+                                        <p class="text-zinc-400 text-sm leading-relaxed">6th Floor, KV Complex, Bailey Rd, above Silk House Hotel, RPS More, Kaliket Nagar, Patna, Bihar 801503</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white text-sm mb-1">Phone / WhatsApp</h4>
+                                        <a href="tel:+919031023202" class="text-zinc-400 hover:text-amber-500 text-sm transition-colors">+91 90310 23202</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                                        <i data-lucide="clock" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-white text-sm mb-1">Operating Hours</h4>
+                                        <p class="text-zinc-400 text-sm">Monday – Sunday: 11:00 AM – 11:30 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reservation Form -->
+                        <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl">
+                            <h3 class="font-syne font-bold text-xl text-white mb-2">Instant Table Reservation</h3>
+                            <p class="text-zinc-400 text-sm mb-6">Fill out the form below or message us directly on WhatsApp.</p>
+                            
+                            <form id="reservation-form" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Full Name</label>
+                                    <input type="text" id="res-name" required placeholder="e.g. Rahul Sharma" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone Number</label>
+                                        <input type="tel" id="res-phone" required placeholder="e.g. 9876543210" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Number of Guests</label>
+                                        <select id="res-guests" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                            <option value="2 Guests">2 Guests (Couple)</option>
+                                            <option value="4 Guests">4 Guests (Family)</option>
+                                            <option value="6 Guests">6 Guests</option>
+                                            <option value="8+ Guests">8+ Guests (Party)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Date</label>
+                                        <input type="date" id="res-date" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Time Slot</label>
+                                        <input type="time" id="res-time" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                    </div>
+                                </div>
+                                <button type="submit" id="res-submit-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-amber-600/20 transition-all flex items-center justify-center gap-2 min-h-[48px]">
+                                    <span id="res-btn-text">Confirm Reservation</span>
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed & Directions -->
+                    <div class="space-y-6">
+                        <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl overflow-hidden shadow-2xl">
+                            <div class="aspect-[4/3] w-full rounded-xl overflow-hidden bg-zinc-950">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.77859871542!2d85.068412!3d25.610515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57c0e66b3f7f%3A0x6b0a70191aa0ef45!2sCafe%20Skylite%20Patna!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Cafe Skylite Google Map Location">
+                                </iframe>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between p-2">
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-sm">Cafe Skylite, Patna</h4>
+                                    <p class="text-xs text-zinc-400">RPS More, Bailey Road</p>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Cafe+Skylite+Patna+Bailey+Road" target="_blank" rel="noopener noreferrer" class="bg-zinc-800 hover:bg-amber-600 text-white font-semibold text-xs py-2.5 px-4 rounded-xl transition-all flex items-center gap-2 min-h-[40px]">
+                                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                                    <span>Get Directions</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 py-16 text-zinc-400">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white font-syne font-bold text-lg">
+                            CS
+                        </div>
+                        <span class="font-syne font-extrabold text-xl text-white">Cafe Skylite</span>
+                    </div>
+                    <p class="text-sm mb-6 leading-relaxed">
+                        Patna's premier rooftop cafe & restaurant offering breathtaking skyline views, continental delicacies, and cozy ambiance on Bailey Road.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919031023202" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-white hover:bg-amber-600 transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919031023202" aria-label="Phone" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-white hover:bg-amber-600 transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Cafe+Skylite+Patna+Bailey+Road" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-white hover:bg-amber-600 transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-amber-500 transition-colors">Home</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Menu Specialties</a></li>
+                        <li><a href="#ambiance" class="hover:text-amber-500 transition-colors">Ambiance Gallery</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Menu Categories</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Starters & Appetizers</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Continental Mains</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Mocktails & Beverages</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition-colors">Desserts & Sweets</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Hours & Location</h4>
+                    <p class="text-sm mb-2 text-zinc-300 font-medium">Open Daily: 11:00 AM – 11:30 PM</p>
+                    <p class="text-sm text-zinc-400 mb-4 leading-relaxed">6th Floor, KV Complex, Bailey Rd, above Silk House Hotel, RPS More, Patna, Bihar 801503</p>
+                    <div class="inline-flex items-center gap-1.5 text-xs bg-amber-500/10 text-amber-500 px-3 py-1.5 rounded-lg font-semibold">
+                        <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
+                        <span>4.7 ★ (2,908 Google Reviews)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Cafe Skylite, Patna. All rights reserved.</p>
+                <p>Designed for an exceptional rooftop dining experience.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121214] border-t border-zinc-800 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+        <a href="tel:+919031023202" class="bg-zinc-900 hover:bg-zinc-800 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 border border-zinc-800 min-h-[48px] text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919031023202?text=Hi%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Cafe%20Skylite." target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 min-h-[48px] text-sm shadow-md shadow-amber-600/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center relative shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Reservation Received!</h3>
+            <p id="success-modal-text" class="text-zinc-300 text-sm sm:text-base mb-6 leading-relaxed">
+                Thank you! Your table reservation request has been successfully registered. We will contact you shortly to confirm.
+            </p>
+            <button id="close-modal-btn" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-amber-600/20 transition-all min-h-[48px]">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion Logic
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('lucide, svg');
+                
+                // Close other open accordions
+                faqButtons.forEach(otherBtn => {
+                    if (otherBtn !== button) {
+                        otherBtn.nextElementSibling.classList.add('hidden');
+                        const otherIcon = otherBtn.querySelector('lucide, svg');
+                        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current accordion
+                content.classList.toggle('hidden');
+                if (!content.classList.contains('hidden')) {
+                    button.querySelector('svg').style.transform = 'rotate(180deg)';
+                } else {
+                    button.querySelector('svg').style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Reservation Form Submission Logic & Sanitization
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const successModalText = document.getElementById('success-modal-text');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Sanitize inputs
+            const rawName = document.getElementById('res-name').value;
+            const rawPhone = document.getElementById('res-phone').value;
+            const guests = document.getElementById('res-guests').value;
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+
+            // Basic XSS Prevention / Escape helper
+            const sanitizeHTML = (str) => {
+                const temp = document.createElement('div');
+                temp.textContent = str;
+                return temp.innerHTML;
+            };
+
+            const name = sanitizeHTML(rawName);
+            const phone = sanitizeHTML(rawPhone);
+
+            // Display success message safely using textContent
+            successModalText.textContent = `Thank you, ${name}! Your table for ${guests} on ${date} at ${time} has been requested successfully. We will call you at ${phone} to confirm.`;
+            
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            reservationForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
