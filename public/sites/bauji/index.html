@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Bauji Cafe | Best Cafe & Casual Dining in Patna</title>
+    <meta name="description" content="Experience Patna's coziest cafe at Dashratha More, Bypass Rd, Sipara. Enjoy signature beverages, delicious cafe bites, warm ambiance, and instant table reservations via WhatsApp.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#18181B',
+                            surface: '#27272A',
+                            primary: '#F59E0B',
+                            secondary: '#78350F',
+                            text: '#FAFAFA',
+                            muted: '#A1A1AA',
+                            hover: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Base scroll & overflow protection */
+        html, body {
+            overflow-x: hidden;
+            background-color: #18181B;
+            color: #FAFAFA;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #18181B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F59E0B;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-brand-bg text-brand-text font-sans antialiased pb-28 md:pb-0">
+
+    <!-- ================= 1. ANNOUNCEMENT BAR & 100% OPAQUE STICKY HEADER ================= -->
+    <div id="announcement-bar" class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-zinc-950 font-semibold text-xs sm:text-sm py-2 px-4 text-center relative z-50 flex items-center justify-center gap-2 shadow-sm">
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse"></i>
+        <span>Open Today till 11:00 PM • Visit us near Prema Kia Showroom, Sipara, Patna!</span>
+    </div>
+
+    <header class="sticky top-0 z-40 w-full bg-[#18181B] border-b border-zinc-800 shadow-xl">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 font-serif font-bold text-xl sm:text-2xl group-hover:bg-amber-500 group-hover:text-zinc-950 transition-all duration-300">
+                    B
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-bold font-serif tracking-tight text-white block">Bauji Cafe</span>
+                    <span class="text-[10px] sm:text-xs text-brand-muted uppercase tracking-widest block">Casual Dining & Cafe</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-zinc-300">
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menu</a>
+                <a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a>
+                <a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-amber-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+917061421090" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 bg-zinc-900 text-zinc-200 text-sm font-semibold hover:border-amber-500 hover:text-amber-500 transition-all duration-300 focus:outline-none">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 text-zinc-950 text-sm font-bold hover:bg-amber-400 transition-all duration-300 shadow-lg shadow-amber-500/20 focus:outline-none">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp Order</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-amber-500 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER & BACKDROP -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-zinc-950 border-l border-zinc-800 rounded-tl-2xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500 text-zinc-950 flex items-center justify-center font-serif font-bold text-xl">B</div>
+                    <span class="text-xl font-bold font-serif text-white">Bauji Cafe</span>
+                </div>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 font-medium text-lg text-zinc-200">
+                <a href="#menu" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <span>Menu & Bites</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <span>Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#faq" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between py-2 px-3 rounded-lg hover:bg-zinc-900 hover:text-amber-500 transition-colors">
+                    <span>Location & Map</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+917061421090" class="w-full py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-semibold flex items-center justify-center gap-2 hover:border-amber-500">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                <span>+91 70614 21090</span>
+            </a>
+            <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-amber-500 text-zinc-950 font-bold flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Reservation</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ================= 2. HERO SECTION ================= -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-zinc-950">
+        <!-- Background Ambient Glow & Image -->
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=80" alt="Bauji Cafe Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/40"></div>
+        </div>
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 w-full max-w-5xl mx-auto text-center">
+            <!-- Trust Rating Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/90 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-medium mb-6 shadow-lg backdrop-blur-md">
+                <div class="flex items-center gap-1 text-amber-400">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <span class="font-bold">4.4</span>
+                </div>
+                <span class="text-zinc-500">|</span>
+                <span class="text-zinc-300">43+ Verified Google Reviews</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: md: lg: font-extrabold font-serif text-white leading-[1.1] mb-6 break-words tracking-tight">
+                Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">Bauji Cafe</span>, Patna's Coziest Hub
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-zinc-300 mb-10 leading-relaxed font-normal">
+                Sip exquisite artisanal coffees, relish mouth-watering casual dining bites, and create timeless memories in a warm rustic ambiance at Dashratha More, Bypass Road, Sipara.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+                <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20want%20to%20reserve%20a%20table%20now." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-amber-500 text-zinc-950 font-bold text-base hover:bg-amber-400 transition-all duration-300 shadow-xl shadow-amber-500/25 flex items-center justify-center gap-3 transform hover:scale-[1.02]">
+                    <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                    <span>Reserve a Table</span>
+                </a>
+                <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-base hover:border-amber-500 hover:text-amber-400 transition-all duration-300 flex items-center justify-center gap-3">
+                    <i data-lucide="utensils" class="w-5 h-5 text-amber-500"></i>
+                    <span>Explore Menu</span>
+                </a>
+            </div>
+
+            <!-- Quick Location Tag -->
+            <div class="mt-12 flex items-center justify-center gap-2 text-xs sm:text-sm text-zinc-400">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+                <span>Dashratha more, Bypass Rd, near Prema Kia Showroom, Sipara, Patna, Bihar 800001</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 3. TRUST & SOCIAL PROOF BAR ================= -->
+    <section class="border-y border-zinc-800 bg-zinc-900/60 py-8 px-4">
+        <div class="w-full max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                <div class="text-3xl sm:text-4xl font-extrabold font-serif text-amber-500 mb-1">4.4★</div>
+                <div class="text-xs sm:text-sm text-zinc-400 font-medium">Google Rating</div>
+            </div>
+            <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                <div class="text-3xl sm:text-4xl font-extrabold font-serif text-amber-500 mb-1">43+</div>
+                <div class="text-xs sm:text-sm text-zinc-400 font-medium">Happy Reviews</div>
+            </div>
+            <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                <div class="text-3xl sm:text-4xl font-extrabold font-serif text-amber-500 mb-1">100%</div>
+                <div class="text-xs sm:text-sm text-zinc-400 font-medium">Fresh Ingredients</div>
+            </div>
+            <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                <div class="text-3xl sm:text-4xl font-extrabold font-serif text-amber-500 mb-1">Prime</div>
+                <div class="text-xs sm:text-sm text-zinc-400 font-medium">Bypass Rd Location</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 4. SERVICES / MENU GRID ================= -->
+    <section id="menu" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">Culinary Delights</span>
+            <h2 class="break-words text-2xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Our Signature Menu</h2>
+            <p class="text-zinc-400 text-sm sm:text-base">Handcrafted coffees, refreshing beverages, and delectable cafe bites made fresh to order.</p>
+        </div>
+
+        <!-- Menu Categories Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Menu Item 1 -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Signature Cappuccino" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 px-3 py-1 rounded-full text-xs font-bold border border-amber-500/30">₹149</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold font-serif text-white">Signature Cappuccino</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-medium">Hot Beverage</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Rich espresso balanced with steamed milk and a deep layer of velvety foam.</p>
+                    </div>
+                    <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20order:%20Signature%20Cappuccino" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-zinc-950 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 2 -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Crispy Paneer Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 px-3 py-1 rounded-full text-xs font-bold border border-amber-500/30">₹199</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold font-serif text-white">Loaded Paneer Burger</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-medium">Bestseller</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Crispy spiced paneer patty topped with fresh lettuce, special house sauce, and melted cheese.</p>
+                    </div>
+                    <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20order:%20Loaded%20Paneer%20Burger" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-zinc-950 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 3 -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Wood-fired Style Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 px-3 py-1 rounded-full text-xs font-bold border border-amber-500/30">₹299</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold font-serif text-white">Farmhouse Pizza</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-medium">Chef Special</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Loaded with fresh bell peppers, mushrooms, sweet corn, onions, and generous mozzarella.</p>
+                    </div>
+                    <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20order:%20Farmhouse%20Pizza" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-zinc-950 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 4 -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Cafe Sandwich" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 px-3 py-1 rounded-full text-xs font-bold border border-amber-500/30">₹169</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold font-serif text-white">Grilled Veggie Sandwich</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-medium">Snacks</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Triple-layered grilled sandwich packed with fresh veggies, herbs, and creamy mayonnaise.</p>
+                    </div>
+                    <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20order:%20Grilled%20Veggie%20Sandwich" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-zinc-950 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 5 -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Chocolate Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 px-3 py-1 rounded-full text-xs font-bold border border-amber-500/30">₹129</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold font-serif text-white">Sizzling Brownie with Ice Cream</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-medium">Dessert</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Fudgy walnut chocolate brownie served hot on a sizzler plate with vanilla ice cream.</p>
+                    </div>
+                    <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20order:%20Sizzling%20Brownie" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-zinc-950 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Menu Item 6 -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80" alt="Cold Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute top-3 right-3 bg-zinc-950/80 backdrop-blur-md text-amber-400 px-3 py-1 rounded-full text-xs font-bold border border-amber-500/30">₹159</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold font-serif text-white">Classic Cold Coffee</h3>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-medium">Cold Beverage</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Thick, creamy blended cold coffee topped with chocolate syrup and a scoop of ice cream.</p>
+                    </div>
+                    <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20order:%20Classic%20Cold%20Coffee" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 text-zinc-200 font-semibold text-sm hover:bg-amber-500 hover:text-zinc-950 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 5. WHY CHOOSE US SECTION ================= -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">The Bauji Experience</span>
+                <h2 class="break-words text-2xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Why Patna Loves Bauji Cafe</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">We combine great taste, exceptional hospitality, and a welcoming vibe.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col items-center text-center group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-zinc-950 transition-all duration-300">
+                        <i data-lucide="coffee" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Cozy & Rustic Ambiance</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Designed for relaxed conversations, casual dates, and peaceful work sessions with warm lighting and comfortable seating.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col items-center text-center group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-zinc-950 transition-all duration-300">
+                        <i data-lucide="sparkles" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Fresh Quality Ingredients</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Every dish is prepared using premium, farm-fresh ingredients and authentic culinary recipes crafted by expert chefs.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col items-center text-center group hover:border-amber-500/50 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-zinc-950 transition-all duration-300">
+                        <i data-lucide="map-pin" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-white mb-3">Prime Accessible Location</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Conveniently located at Dashratha More, Bypass Road near Prema Kia Showroom in Sipara with ample parking space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 6. ABOUT / STORY SECTION ================= -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80" alt="Bauji Cafe Story" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-amber-500/30 p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i data-lucide="heart" class="w-6 h-6 text-amber-500 fill-amber-500"></i>
+                        <span class="font-bold text-white text-base">Made with Love</span>
+                    </div>
+                    <p class="text-xs text-zinc-400">Serving Patnaites with passion, great coffee, and wholesome meals every single day.</p>
+                </div>
+            </div>
+
+            <div>
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">Our Heritage</span>
+                <h2 class="break-words text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-6">The Story Behind Bauji Cafe</h2>
+                <p class="text-zinc-300 text-base leading-relaxed mb-6">
+                    Founded with a vision to redefine casual dining in Patna, <strong class="text-amber-400">Bauji Cafe</strong> was born out of a deep love for community, soulful conversation, and exceptional food. Located strategically near Dashratha More on Bypass Road, we wanted to create a haven where friends and families could unwind away from the city rush.
+                </p>
+                <p class="text-zinc-400 text-sm leading-relaxed mb-8">
+                    Whether you are dropping by after checking out cars at Prema Kia Showroom or looking for a weekend hangout spot in Sipara, Bauji Cafe welcomes you with open arms, aromatic brews, and an unforgettable culinary experience.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-zinc-800">
+                    <div>
+                        <span class="block text-3xl font-extrabold font-serif text-amber-500 mb-1">100%</span>
+                        <span class="text-xs text-zinc-400">Hygienic & Clean Environment</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-extrabold font-serif text-amber-500 mb-1">Fast</span>
+                        <span class="text-xs text-zinc-400">Courteous Table Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 7. INTERACTIVE SHOWCASE / GALLERY ================= -->
+    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">Visual Tour</span>
+                <h2 class="break-words text-2xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Cafe Moments & Ambience</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Take a sneak peek into our cozy corners and freshly prepared delicacies.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 8. CUSTOMER REVIEWS SECTION ================= -->
+    <section id="reviews" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold mb-3">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span>Google Verified Reviews (4.4★)</span>
+            </div>
+            <h2 class="break-words text-2xl sm:text-2xl sm:text-3xl md:text-4xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">What Our Patrons Say</h2>
+            <p class="text-zinc-400 text-sm sm:text-base">Real feedback from coffee lovers and foodies across Patna.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between shadow-lg">
+                <div>
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">"One of the best cafes near Bypass Road! The coffee is exceptionally rich and the vibe is super relaxing. Perfect spot for evening hangouts."</p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                    <div class="w-10 h-10 rounded-full bg-amber-500 text-zinc-950 font-bold flex items-center justify-center text-sm">
+                        AK
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Abhishek Kumar</h4>
+                        <span class="text-xs text-zinc-500">Google Local Guide</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between shadow-lg">
+                <div>
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Visited after checking out a car at Prema Kia showroom nearby. Extremely polite staff and delicious paneer burgers. Highly recommended!"</p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                    <div class="w-10 h-10 rounded-full bg-amber-500 text-zinc-950 font-bold flex items-center justify-center text-sm">
+                        PS
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Priya Sharma</h4>
+                        <span class="text-xs text-zinc-500">Google Reviewer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 flex flex-col justify-between shadow-lg">
+                <div>
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-zinc-600"></i>
+                    </div>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Great ambiance at Dashratha More. The pizzas and sizzling brownies are mouth-watering. Great addition to Sipara!"</p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                    <div class="w-10 h-10 rounded-full bg-amber-500 text-zinc-950 font-bold flex items-center justify-center text-sm">
+                        RM
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Rahul Mehta</h4>
+                        <span class="text-xs text-zinc-500">Google Reviewer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 9. FAQ ACCORDION ================= -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900/40 border-y border-zinc-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know about visiting Bauji Cafe.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-bold text-base sm:text-lg text-white">Where is Bauji Cafe located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">Bauji Cafe is conveniently located at Dashratha More, Bypass Road, near Prema Kia Showroom, Sipara, Patna, Bihar 800001. Easily accessible from all major parts of Patna.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-bold text-base sm:text-lg text-white">How can I reserve a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">You can easily reserve a table instantly via our WhatsApp button (+91 7061421090) or by filling out the table reservation form on our website below.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-bold text-base sm:text-lg text-white">Do you offer home delivery or takeaway?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">Yes! You can place takeaway and direct orders instantly over WhatsApp for quick pickup or delivery assistance in the local Sipara & Bypass Road area.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="font-bold text-base sm:text-lg text-white">What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-500 transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-zinc-400 text-sm leading-relaxed">
+                        <p class="pb-6">We are open 7 days a week from 10:00 AM to 11:00 PM, serving fresh beverages, snacks, and dinner options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 10. INTERACTIVE LOCATION & CONTACT SECTION ================= -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Left Column: Contact & Hours -->
+            <div>
+                <span class="text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">Visit Us</span>
+                <h2 class="break-words text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white mb-6">Come Over for a Cup</h2>
+                <p class="text-zinc-400 text-sm sm:text-base mb-8 leading-relaxed">
+                    We would love to host you. Drop by our cafe or reach out to us for party bookings, queries, or advance table reservations.
+                </p>
+
+                <div class="space-y-6 mb-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base mb-1">Address</h4>
+                            <p class="text-zinc-400 text-sm leading-relaxed">Dashratha more, Bypass Rd, near Prema Kia Showroom, Sipara, Patna, Bihar 800001</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 flex-shrink-0">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base mb-1">Phone / WhatsApp</h4>
+                            <a href="tel:+917061421090" class="text-zinc-400 text-sm hover:text-amber-400 transition-colors">+91 70614 21090</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 flex-shrink-0">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base mb-1">Opening Hours</h4>
+                            <p class="text-zinc-400 text-sm">Monday – Sunday: 10:00 AM – 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Bauji+Cafe+Dashratha+more+Bypass+Rd+Sipara+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-amber-500 text-zinc-950 font-bold text-sm hover:bg-amber-400 transition-all duration-300 shadow-lg shadow-amber-500/20">
+                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                    <span>Get Directions on Google Maps</span>
+                </a>
+            </div>
+
+            <!-- Right Column: Interactive Reservation Form & Map -->
+            <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-3xl shadow-2xl">
+                <h3 class="text-2xl font-bold font-serif text-white mb-2">Instant Table Reservation</h3>
+                <p class="text-zinc-400 text-sm mb-6">Fill in your details and we'll confirm your table instantly.</p>
+
+                <form id="reservation-form" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Name</label>
+                        <input type="text" id="res-name" required placeholder="Enter your full name" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone Number</label>
+                            <input type="tel" id="res-phone" required placeholder="+91 98765 43210" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Guests</label>
+                            <select id="res-guests" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition-colors">
+                                <option value="1-2 Persons">1 - 2 Persons</option>
+                                <option value="3-4 Persons">3 - 4 Persons</option>
+                                <option value="5-8 Persons">5 - 8 Persons (Group)</option>
+                                <option value="8+ Persons">8+ Party / Celebration</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Special Request / Notes</label>
+                        <textarea id="res-msg" rows="3" placeholder="Any dietary preference or special occasion..." class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-amber-500 transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-amber-500 text-zinc-950 font-bold text-base hover:bg-amber-400 transition-all duration-300 shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                        <span>Confirm Reservation</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Maps Responsive Embed -->
+        <div class="mt-16 w-full h-[400px] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.995963071378!2d85.1325!3d25.5685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58525b50b815%3A0x89e27c73bdf602a6!2sBauji%20Cafe!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Bauji Cafe Google Map">
+            </iframe>
+        </div>
+    </section>
+
+
+    <!-- ================= 11. STICKY MOBILE ACTION BAR ================= -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#18181B] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+917061421090" class="flex-1 py-3 px-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-bold text-sm flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917061421090?text=Hi%20Bauji%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-amber-500 text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+
+    <!-- ================= 12. FOOTER ================= -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 text-zinc-400 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500 text-zinc-950 flex items-center justify-center font-serif font-bold text-xl">B</div>
+                    <span class="text-xl font-bold font-serif text-white">Bauji Cafe</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-6">Patna's favorite casual dining cafe offering exquisite artisanal coffee, snacks, and a cozy rustic ambiance at Dashratha More, Sipara.</p>
+                <div class="flex items-center gap-3">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Bauji+Cafe+Dashratha+more+Bypass+Rd+Sipara+Patna" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-amber-500 hover:border-amber-500 transition-colors">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://wa.me/917061421090" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-amber-500 hover:border-amber-500 transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </a>
+                    <a href="tel:+917061421090" aria-label="Phone" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-amber-500 hover:border-amber-500 transition-colors">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-base font-serif mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#menu" class="hover:text-amber-500 transition-colors">Our Menu</a></li>
+                    <li><a href="#about" class="hover:text-amber-500 transition-colors">Our Story</a></li>
+                    <li><a href="#gallery" class="hover:text-amber-500 transition-colors">Gallery</a></li>
+                    <li><a href="#reviews" class="hover:text-amber-500 transition-colors">Customer Reviews</a></li>
+                    <li><a href="#faq" class="hover:text-amber-500 transition-colors">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-base font-serif mb-6">Opening Hours</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between">
+                        <span>Monday:</span>
+                        <span class="text-white font-medium">10 AM - 11 PM</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Tuesday:</span>
+                        <span class="text-white font-medium">10 AM - 11 PM</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Wednesday:</span>
+                        <span class="text-white font-medium">10 AM - 11 PM</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Thursday:</span>
+                        <span class="text-white font-medium">10 AM - 11 PM</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Friday - Sunday:</span>
+                        <span class="text-white font-medium">10 AM - 11 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-base font-serif mb-6">Location & Contact</h4>
+                <p class="text-sm leading-relaxed mb-4">Dashratha more, Bypass Rd, near Prema Kia Showroom, Sipara, Patna, Bihar 800001</p>
+                <p class="text-sm text-amber-500 font-semibold mb-2">+91 70614 21090</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bauji+Cafe+Dashratha+more+Bypass+Rd+Sipara+Patna" target="_blank" rel="noopener noreferrer" class="text-xs text-zinc-400 underline hover:text-amber-400">View on Google Maps (4.4★ / 43 Reviews)</a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+            <p>&copy; <span id="current-year"></span> Bauji Cafe, Patna. All rights reserved.</p>
+            <p class="mt-2 sm:mt-0">Designed for casual dining & unforgettable moments.</p>
+        </div>
+    </footer>
+
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center shadow-2xl relative animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-serif text-white mb-2">Reservation Received!</h3>
+            <p id="success-msg-text" class="text-zinc-400 text-sm mb-8 leading-relaxed">Thank you for reserving a table at Bauji Cafe. We have saved your request and are redirecting you to WhatsApp for instant confirmation.</p>
+            <button id="close-modal-btn" class="w-full py-3.5 rounded-xl bg-amber-500 text-zinc-950 font-bold text-sm hover:bg-amber-400 transition-colors">
+                Okay, Got It
+            </button>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle Elements
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawer = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu(open) {
+            if (open) {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        closeDrawer.addEventListener('click', () => toggleMobileMenu(false));
+        menuBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
+        });
+
+        // FAQ Accordion Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-btn');
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('[data-lucide="chevron-down"]');
+
+            btn.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                
+                // Close all other accordions
+                faqItems.forEach(otherItem => {
+                    otherItem.querySelector('.faq-content').style.maxHeight = '0px';
+                    otherItem.querySelector('[data-lucide="chevron-down"]').style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Interactive Reservation Form Handler
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const successMsgText = document.getElementById('success-msg-text');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('res-name').value.trim();
+            const phone = document.getElementById('res-phone').value.trim();
+            const guests = document.getElementById('res-guests').value;
+            const msg = document.getElementById('res-msg').value.trim();
+
+            // Sanitize and format WhatsApp message
+            const encodedText = encodeURIComponent(`Hi Bauji Cafe, I would like to reserve a table.\n\nName: ${name}\nPhone: ${phone}\nGuests: ${guests}\nNotes: ${msg}`);
+            
+            // Show success modal
+            successMsgText.textContent = `Thank you ${name}! Your table reservation request for ${guests} has been recorded. Click below to confirm instantly via WhatsApp.`;
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+
+            // Store whatsapp url for modal action
+            window.whatsappReservationUrl = `https://wa.me/917061421090?text=${encodedText}`;
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            if (window.whatsappReservationUrl) {
+                window.open(window.whatsappReservationUrl, '_blank', 'noopener noreferrer');
+            }
+            reservationForm.reset();
+        });
+    </script>
+</body>
+</html>
