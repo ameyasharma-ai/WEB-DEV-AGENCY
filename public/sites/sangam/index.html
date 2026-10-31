@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Sangam Restaurant | Best Dining & Food in Mithapur, Patna</title>
+    <meta name="description" content="Experience authentic dining and delicious food at Sangam Restaurant, Mithapur, Patna. Order on WhatsApp or reserve a table today.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0F0F0F',
+                        surface: '#1F1F1F',
+                        primary: '#E65100',
+                        secondary: '#FFB300',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A3A3A3',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F0F0F;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F0F0F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E65100;
+        }
+    </style>
+</head>
+<body class="bg-background text-textPrimary overflow-x-hidden pb-28 md:pb-0 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-primary to-[#FF6F00] text-white text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 relative z-50">
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse"></i>
+        <span>Special Offer: Get 10% OFF on your first WhatsApp takeaway order! Use code <strong class="underline font-bold">SANGAM10</strong></span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="bg-[#0F0F0F] border-b border-zinc-800 sticky top-0 z-40 w-full transition-all">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-lg shadow-primary/10">
+                    <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-xl sm:text-2xl tracking-tight text-white block leading-none">Sangam</span>
+                    <span class="text-xs uppercase tracking-widest text-secondary font-semibold">Restaurant & Dining</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-textMuted">
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+                <a href="#about" class="hover:text-primary transition-colors">Our Story</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+918092638317" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 hover:border-primary text-sm font-semibold transition-all hover:bg-zinc-800">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary hover:bg-[#F57C00] text-white text-sm font-semibold shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02]">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-surface border border-zinc-800 text-white hover:border-primary transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#0F0F0F] border-l border-zinc-800 rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+                        <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-syne font-bold text-lg text-white">Sangam Restaurant</span>
+                </div>
+                <button id="menu-close" aria-label="Close Navigation Menu" class="p-2 rounded-lg bg-surface text-textMuted hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 pt-6 text-base font-medium">
+                <a href="#menu" class="mobile-nav-link text-textMuted hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Menu Categories</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link text-textMuted hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#why-us" class="mobile-nav-link text-textMuted hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Why Choose Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-textMuted hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Food Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-textMuted hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-zinc-900">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-textMuted hover:text-primary transition-colors flex items-center justify-between py-2">
+                    <span>Location & Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-primary hover:bg-[#F57C00] text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 text-center">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Order on WhatsApp</span>
+            </a>
+            <a href="tel:+918092638317" class="w-full py-3 px-4 rounded-xl bg-surface border border-zinc-700 text-white font-semibold flex items-center justify-center gap-2 hover:border-primary transition-colors text-center">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <span>Call +91 80926 38317</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="w-full">
+        <!-- Hero Section -->
+        <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-[#0F0F0F] via-[#161616] to-[#0F0F0F]">
+            <!-- Decorative Glow Elements -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <!-- Trust Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface border border-zinc-800 mb-6 shadow-md">
+                            <div class="flex items-center text-secondary">
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-bold text-white">4.7 ★ <span class="text-textMuted font-normal">(23+ Google Reviews)</span></span>
+                        </div>
+
+                        <!-- Main Headline -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                            Authentic Flavors, <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Unforgettable Dining</span> in Patna
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-lg text-textMuted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed break-words">
+                            Welcome to Sangam Restaurant at Mithapur, Patna. Savor delicious traditional dishes, wholesome thalis, and savory snacks prepared fresh with premium ingredients.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary hover:bg-[#F57C00] text-white font-semibold flex items-center justify-center gap-3 shadow-xl shadow-primary/25 transition-all transform hover:scale-105">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                            <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface border border-zinc-700 hover:border-primary text-white font-semibold flex items-center justify-center gap-2 transition-all hover:bg-zinc-800">
+                                <i data-lucide="utensils" class="w-4 h-4 text-primary"><span>View Menu</span></i>
+                            </a>
+                        </div>
+
+                        <!-- Location quick pill -->
+                        <div class="mt-8 flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm text-textMuted">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i>
+                            <span>Bangali Tola Bus Stand Rd, opposite Jakkanpur, Mithapur, Patna</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual / Featured Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-surface">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Delicious food at Sangam Restaurant" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 sm:p-8">
+                                <span class="px-3 py-1 bg-primary text-white text-xs font-bold rounded-full w-max mb-2">Chef's Special</span>
+                                <h3 class="text-xl sm:text-2xl font-bold font-syne text-white">Royal Thali & Snacks</h3>
+                                <p class="text-xs sm:text-sm text-textMuted mt-1">Prepared fresh daily with authentic spices.</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Rating Badge Card -->
+                        <div class="absolute -bottom-6 -left-4 sm:left-6 bg-surface/90 backdrop-blur-md border border-zinc-700 p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Top Rated in Mithapur</div>
+                                <div class="text-xs text-textMuted">Trusted by local food lovers</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="border-y border-zinc-800 bg-[#141414] py-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                    <div class="flex flex-col items-center justify-center pt-4 md:pt-0">
+                        <div class="flex items-center gap-1 text-secondary mb-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-secondary"></i>
+                            <span class="text-2xl font-bold font-syne text-white">4.7 / 5.0</span>
+                        </div>
+                        <p class="text-sm text-textMuted">Google Rating across 23+ authentic reviews</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center pt-4 md:pt-0">
+                        <div class="flex items-center gap-2 text-primary mb-1">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            <span class="text-xl font-bold font-syne text-white">Prime Location</span>
+                        </div>
+                        <p class="text-sm text-textMuted">Mithapur, Patna (Opp. Jakkanpur Thana)</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center pt-4 md:pt-0">
+                        <div class="flex items-center gap-2 text-secondary mb-1">
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                            <span class="text-xl font-bold font-syne text-white">Fast Service</span>
+                        </div>
+                        <p class="text-sm text-textMuted">Quick WhatsApp Orders & Dine-in</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Menu Categories -->
+        <section id="menu" class="py-20 md:py-32 bg-[#0F0F0F]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Our Culinary Offerings</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        Explore Our Popular Menu
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base">
+                        From hearty Indian thalis to mouth-watering snacks and beverages, we serve something special for every craving.
+                    </p>
+                </div>
+
+                <!-- Menu Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Menu Item 1 -->
+                    <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                        <div>
+                            <div class="relative aspect-video w-full overflow-hidden bg-zinc-800">
+                                <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Special Thali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow">Best Seller</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold font-syne text-white group-hover:text-primary transition-colors">Sangam Special Thali</h3>
+                                    <span class="text-secondary font-bold text-lg">₹249</span>
+                                </div>
+                                <p class="text-textMuted text-sm leading-relaxed mb-4">
+                                    A wholesome platter featuring dal makhani, paneer curry, seasonal veg, rice, butter naan, raita, and dessert.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20I%20would%20like%20to%20order%20the%20Sangam%20Special%20Thali." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-medium text-sm flex items-center justify-center gap-2 transition-all">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                        <div>
+                            <div class="relative aspect-video w-full overflow-hidden bg-zinc-800">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="North Indian Delicacies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 bg-secondary text-black text-xs font-bold px-2.5 py-1 rounded-lg shadow">Chef Choice</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold font-syne text-white group-hover:text-primary transition-colors">Paneer Butter Masala & Naan</h3>
+                                    <span class="text-secondary font-bold text-lg">₹199</span>
+                                </div>
+                                <p class="text-textMuted text-sm leading-relaxed mb-4">
+                                    Rich and creamy tomato gravy loaded with soft paneer cubes, served piping hot with freshly baked butter rotis or naan.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20I%20would%20like%20to%20order%20Paneer%20Butter%20Masala." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-medium text-sm flex items-center justify-center gap-2 transition-all">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="bg-surface rounded-2xl border border-zinc-800 overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 shadow-xl">
+                        <div>
+                            <div class="relative aspect-video w-full overflow-hidden bg-zinc-800">
+                                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Snacks & Starters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 bg-zinc-900/80 text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow border border-zinc-700">Popular</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold font-syne text-white group-hover:text-primary transition-colors">Crispy Veg Snacks & Starters</h3>
+                                    <span class="text-secondary font-bold text-lg">₹149</span>
+                                </div>
+                                <p class="text-textMuted text-sm leading-relaxed mb-4">
+                                    A crunchy assortment of golden fried starters served with our signature spicy green mint chutney and onion rings.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20I%20would%20like%20to%20order%20Veg%20Starters." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-zinc-800 hover:bg-primary text-white font-medium text-sm flex items-center justify-center gap-2 transition-all">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20please%20send%20me%20your%20full%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-surface border border-zinc-700 hover:border-primary text-white font-semibold transition-all">
+                        <i data-lucide="file-text" class="w-5 h-5 text-primary"></i>
+                        <span>Request Full Menu Catalog on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 md:py-32 bg-[#141414] border-t border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">The Sangam Standard</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        Why Local Food Lovers Choose Us
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base">
+                        We take pride in exceptional food quality, hygienic preparation, and warm hospitality.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-primary/50 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Fresh Ingredients Daily</h3>
+                        <p class="text-textMuted text-sm leading-relaxed">
+                            We source farm-fresh vegetables and authentic spices every single day to ensure rich, natural flavors in every bite.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-primary/50 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary mb-6">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">100% Hygiene Assured</h3>
+                        <p class="text-textMuted text-sm leading-relaxed">
+                            Our kitchen maintains rigorous cleanliness standards, safe sanitization protocols, and pure RO water for food preparation.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-8 rounded-2xl bg-surface border border-zinc-800 hover:border-primary/50 transition-all duration-300">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="map-pin" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-white mb-3">Prime Mithapur Location</h3>
+                        <p class="text-textMuted text-sm leading-relaxed">
+                            Conveniently located at Bangali Tola Bus Stand Rd, right opposite Jakkanpur Thana in Patna for effortless dining and pickups.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Story Section -->
+        <section id="about" class="py-20 md:py-32 bg-[#0F0F0F]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative aspect-video sm:aspect-[4/3] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-surface">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-4 sm:-right-8 bg-primary text-white p-6 rounded-2xl shadow-xl max-w-xs">
+                            <div class="text-3xl font-extrabold font-syne mb-1">4.7★</div>
+                            <div class="text-xs font-medium text-white/90">Rated excellent by food connoisseurs across Patna.</div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Our Story</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                            Serving Passion and Great Taste in Mithapur
+                        </h2>
+                        <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-6">
+                            Sangam Restaurant was founded with a singular mission: to serve heartwarming, delicious meals that bring people together. Located near the bustling Mithapur bus stand area opposite Jakkanpur Thana, we have become a trusted culinary destination for locals and travelers alike.
+                        </p>
+                        <p class="text-textMuted text-sm sm:text-base leading-relaxed mb-8">
+                            Whether you want to enjoy a peaceful dine-in experience with family or grab a quick, tasty parcel on your way, our dedicated culinary team ensures every dish is crafted to perfection.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 pt-4 border-t border-zinc-800">
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold font-syne text-white mb-1">23+</div>
+                                <div class="text-xs sm:text-sm text-textMuted">Verified Google Reviews</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-bold font-syne text-white mb-1">100%</div>
+                                <div class="text-xs sm:text-sm text-textMuted">Customer Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gallery -->
+        <section id="gallery" class="py-20 md:py-32 bg-[#141414] border-t border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Visual Feast</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        Glimpse of Sangam Restaurant
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base">
+                        Take a look at our freshly prepared delicacies and welcoming dining ambiance.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group bg-surface">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Fresh salad bowl" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group bg-surface">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Delicious pizza/snack" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group bg-surface">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" alt="Indian Biryani" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group bg-surface">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant dining" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="py-20 md:py-32 bg-[#0F0F0F]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Testimonials</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        What Our Customers Say
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base">
+                        Proudly rated 4.7 out of 5 stars by our valued patrons on Google Reviews.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-surface p-8 rounded-2xl border border-zinc-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-secondary mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            </div>
+                            <p class="text-textMuted text-sm leading-relaxed mb-6">
+                                "Amazing food quality right near Mithapur bus stand! The thali was extremely fresh and tasty. Very hygienic place and polite staff."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">R</div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Rahul Kumar</div>
+                                <div class="text-xs text-textMuted">Google Local Guide</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-surface p-8 rounded-2xl border border-zinc-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-secondary mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            </div>
+                            <p class="text-textMuted text-sm leading-relaxed mb-6">
+                                "Conveniently located opposite Jakkanpur Thana. Great taste at affordable prices. Highly recommend their paneer dishes and snacks!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-secondary/20 text-secondary font-bold flex items-center justify-center">A</div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Ankit Verma</div>
+                                <div class="text-xs text-textMuted">Verified Customer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-surface p-8 rounded-2xl border border-zinc-800 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-secondary mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-secondary"></i>
+                            </div>
+                            <p class="text-textMuted text-sm leading-relaxed mb-6">
+                                "Super fast service and wonderful ambiance. Ordered through WhatsApp for pickup and it was ready in no time. Excellent experience!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center">P</div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Pooja Sinha</div>
+                                <div class="text-xs text-textMuted">Verified Customer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Location & Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-[#141414] border-t border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-semibold text-sm uppercase tracking-widest block mb-3">Get in Touch</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                        Visit Us or Send an Inquiry
+                    </h2>
+                    <p class="text-textMuted text-sm sm:text-base">
+                        Have questions about catering or want to reserve a table? Reach out to us directly.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Details & Map -->
+                    <div class="lg:col-span-6 flex flex-col gap-8">
+                        <!-- Info Card -->
+                        <div class="bg-surface p-8 rounded-2xl border border-zinc-800">
+                            <h3 class="text-xl font-bold font-syne text-white mb-6">Sangam Restaurant Details</h3>
+                            
+                            <ul class="space-y-4 text-sm">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-white block mb-0.5">Address:</strong>
+                                        <span class="text-textMuted leading-relaxed">Bangali Tola Bus Stand Rd, opposite Jakkanpur, Mithapur, Thana, Patna, Bihar 800001</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
+                                        <i data-lucide="phone" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-white block mb-0.5">Phone / WhatsApp:</strong>
+                                        <a href="tel:+918092638317" class="text-textMuted hover:text-primary transition-colors">+91 80926 38317</a>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                        <i data-lucide="clock" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-white block mb-0.5">Opening Hours:</strong>
+                                        <span class="text-textMuted block">Monday – Sunday: 10:00 AM – 10:30 PM</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Google Maps Embed -->
+                        <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-800 shadow-xl bg-surface">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.77810793619!2d85.1375!3d25.6012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f123456789%3A0x123456789abcdef!2sMithapur%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Sangam Restaurant Google Map Location">
+                            </iframe>
+                        </div>
+                        <a href="https://maps.google.com/?q=Sangam+Restaurant+Mithapur+Patna" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-surface border border-zinc-700 hover:border-primary text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all">
+                            <i data-lucide="navigation" class="w-4 h-4 text-primary"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+
+                    <!-- Contact / Inquiry Form -->
+                    <div class="lg:col-span-6">
+                        <div class="bg-surface p-8 rounded-2xl border border-zinc-800 shadow-xl">
+                            <h3 class="text-xl font-bold font-syne text-white mb-2">Send an Inquiry or Table Reservation</h3>
+                            <p class="text-textMuted text-sm mb-6">Fill out the form below and we will get back to you promptly.</p>
+
+                            <form id="contact-form" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Your Name</label>
+                                    <input type="text" id="name" required class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter your full name">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                                    <input type="tel" id="phone" required class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Enter your mobile number">
+                                </div>
+                                <div>
+                                    <label for="service" class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Service Required</label>
+                                    <select id="service" class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                        <option value="WhatsApp Order">WhatsApp Food Order</option>
+                                        <option value="Table Reservation">Table Reservation</option>
+                                        <option value="Party Catering">Party / Event Catering</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-xs font-semibold text-textMuted uppercase tracking-wider mb-2">Message or Order Details</label>
+                                    <textarea id="message" rows="4" required class="w-full bg-background border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors" placeholder="Type your dishes or specific request here..."></textarea>
+                                </div>
+                                <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-primary hover:bg-[#F57C00] text-white font-semibold text-sm shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>Send Inquiry Now</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-3xl p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div class="w-16 h-16 rounded-2xl bg-primary/20 text-primary border border-primary/40 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-syne text-white mb-2">Inquiry Received!</h3>
+            <p id="success-message" class="text-textMuted text-sm mb-6">Thank you for reaching out to Sangam Restaurant. We will get back to you shortly via phone or WhatsApp.</p>
+            <button id="modal-close-btn" class="w-full py-3.5 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-[#F57C00] transition-colors">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Bottom Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0F0F0F] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+918092638317" class="flex-1 py-3 rounded-xl bg-surface border border-zinc-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918092638317?text=Hi%20Sangam%20Restaurant,%20I%20would%20like%20to%20order." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-primary text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Order</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0A0A0A] border-t border-zinc-800 text-textMuted py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+                            <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="font-syne font-extrabold text-xl text-white block leading-none">Sangam Restaurant</span>
+                            <span class="text-xs uppercase tracking-widest text-secondary font-semibold">Mithapur, Patna</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-textMuted max-w-sm mb-6 leading-relaxed">
+                        Serving authentic, hygienic, and delicious meals right opposite Jakkanpur Thana on Bangali Tola Bus Stand Road in Patna. Order on WhatsApp or dine in today!
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/918092638317" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-white hover:border-primary transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+918092638317" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-white hover:border-primary transition-colors">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://maps.google.com/?q=Sangam+Restaurant+Mithapur+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-surface border border-zinc-800 flex items-center justify-center text-white hover:border-primary transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-syne font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Menu Categories</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Food Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Location & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Opening Hours -->
+                <div>
+                    <h4 class="text-white font-syne font-bold text-sm uppercase tracking-wider mb-4">Opening Hours</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li class="flex justify-between">
+                            <span>Mon - Sun:</span>
+                            <strong class="text-white">10:00 AM - 10:30 PM</strong>
+                        </li>
+                        <li class="pt-3 border-t border-zinc-800">
+                            <span class="text-xs text-secondary font-medium block">✓ Dine-in & WhatsApp Takeaway Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-textMuted">
+                <p>&copy; <span id="current-year"></span> Sangam Restaurant, Mithapur, Patna. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed with culinary excellence for local food lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Drawer Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Contact Form Submission & Success Modal
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('name').value.trim();
+            const serviceInput = document.getElementById('service').value;
+
+            // Sanitize inputs before showing in modal
+            const sanitizedName = nameInput.replace(/[<>]/g, "");
+
+            successMessage.textContent = `Thank you, ${sanitizedName}! Your inquiry regarding "${serviceInput}" has been recorded successfully. We will get back to you shortly.`;
+            
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            
+            contactForm.reset();
+        });
+
+        modalCloseBtn.addEventListener('click', function() {
+            successModal.classList.remove('flex');
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                successModal.classList.remove('flex');
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
