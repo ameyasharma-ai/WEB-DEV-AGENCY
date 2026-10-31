@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JASHN | Restaurant, Cafe & Banquet in Patna</title>
+    <meta name="description" content="Patna's ultimate destination for fine dining, cozy cafe vibes, and grand banquet halls. Located above Redtape, Saguna Khagaul Rd. Call +91 92795 38592.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#D4AF37',
+                        'primary-hover': '#E5C158',
+                        wine: '#2D1517',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 lg:pb-0">
+
+    <!-- BACKDROP OVERLAY FOR MOBILE DRAWER -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-[#2D1517] via-[#D4AF37]/20 to-[#2D1517] border-b border-zinc-800 text-xs sm:text-sm py-2 px-4 text-center z-40 relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap text-zinc-200">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Open Today: 11:00 AM - 11:00 PM</span>
+            <span class="hidden sm:inline text-primary">|</span>
+            <span class="font-medium text-primary">Saguna More, Patna</span>
+            <a href="tel:+919279538592" class="underline hover:text-white font-semibold ml-1">Call: +91 92795 38592</a>
+        </div>
+    </div>
+
+    <!-- 100% SOLID OPAQUE STICKY HEADER -->
+    <header class="z-40 sticky top-0 z-[80] bg-[#09090B] border-b border-zinc-800 w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[#2D1517] flex items-center justify-center border border-primary/30 shadow-lg shadow-primary/10">
+                    <span class="font-syne font-bold text-xl text-white">J</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-2xl tracking-wider text-white group-hover:text-primary transition-colors">JASHN</span>
+                    <span class="text-[10px] tracking-widest text-primary uppercase font-medium">Restaurant • Cafe • Banquet</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#restaurant" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Restaurant</a>
+                <a href="#cafe" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Cafe</a>
+                <a href="#banquet" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Banquet</a>
+                <a href="#menu" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Menu</a>
+                <a href="#reviews" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="h-11 px-5 rounded-xl bg-primary hover:bg-[#E5C158] text-zinc-950 font-bold text-sm flex items-center gap-2 shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02]">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp Booking</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-200 hover:text-primary focus:outline-none min-h-[48px] min-w-[48px] flex items-center justify-center">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#09090B] border-l border-zinc-800 rounded-tl-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <span class="font-syne font-bold text-zinc-950">J</span>
+                    </div>
+                    <span class="font-syne font-bold text-xl text-white">JASHN</span>
+                </div>
+                <button id="close-drawer-btn" aria-label="Close Menu" class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white min-h-[48px] min-w-[48px] flex items-center justify-center">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 pt-6">
+                <a href="#restaurant" class="mobile-nav-link text-base font-medium text-zinc-200 hover:text-primary py-2 border-b border-zinc-900">Fine Dining Restaurant</a>
+                <a href="#cafe" class="mobile-nav-link text-base font-medium text-zinc-200 hover:text-primary py-2 border-b border-zinc-900">Cozy Cafe Vibes</a>
+                <a href="#banquet" class="mobile-nav-link text-base font-medium text-zinc-200 hover:text-primary py-2 border-b border-zinc-900">Grand Banquet Hall</a>
+                <a href="#menu" class="mobile-nav-link text-base font-medium text-zinc-200 hover:text-primary py-2 border-b border-zinc-900">Culinary Highlights</a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-zinc-200 hover:text-primary py-2 border-b border-zinc-900">Customer Reviews</a>
+                <a href="#contact" class="mobile-nav-link text-base font-medium text-zinc-200 hover:text-primary py-2">Location & Contact</a>
+            </nav>
+        </div>
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20want%20to%20book%20a%20table." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-primary text-zinc-950 font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>WhatsApp Reservation</span>
+            </a>
+            <a href="tel:+919279538592" class="w-full h-12 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-medium flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                <span>+91 92795 38592</span>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative pt-12 pb-20 sm:py-24 lg:py-32 overflow-hidden">
+            <!-- Ambient Glow Effects -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute top-1/2 right-0 w-[250px] h-[250px] bg-wine/30 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left">
+                        <!-- Rating Badge -->
+                        <div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-zinc-900/90 border border-zinc-800 shadow-xl mb-6 backdrop-blur-md">
+                            <div class="flex items-center gap-1 text-primary">
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-zinc-200">4.6★ <span class="text-zinc-400 font-normal">(2,900+ Google Reviews)</span></span>
+                        </div>
+
+                        <!-- H1 Heading -->
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                            Patna’s Ultimate Destination for <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#E5C158] to-amber-200">Fine Dining</span>, Cafe Vibes & Grand Banquets
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-zinc-300 max-w-2xl mb-8 leading-relaxed font-light">
+                            Immerse your senses in luxurious culinary artistry, cozy aesthetic cafe corners, and magnificent banquet halls designed for your most cherished celebrations. Located above Redtape, Saguna More, Patna.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                            <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20want%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="h-14 px-8 rounded-xl bg-primary hover:bg-[#E5C158] text-zinc-950 font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-primary/20 transition-all transform hover:scale-[1.02]">
+                                <i data-lucide="utensils" class="w-5 h-5"></i>
+                                <span>Reserve Table Now</span>
+                            </a>
+                            <a href="#banquet" class="h-14 px-8 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-primary/50 text-white font-semibold text-base flex items-center justify-center gap-3 transition-all hover:bg-zinc-800">
+                                <i data-lucide="calendar-check" class="w-5 h-5 text-primary"></i>
+                                <span>Book Banquet Hall</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Card / Carousel -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 group">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Jashn Fine Dining Interior Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-zinc-950/80 backdrop-blur-md border border-zinc-800 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary border border-primary/30">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-syne font-bold text-sm text-white">Shanti Palace, Saguna More</h4>
+                                        <p class="text-xs text-zinc-400">Above Redtape Showroom, Patna</p>
+                                    </div>
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=JASHN+Restaurant+Cafe+Banquet+Saguna+Khagaul+Rd+Patna" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg bg-primary text-zinc-950 font-bold text-xs hover:bg-[#E5C158] transition-colors">
+                                    Map
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST & SOCIAL PROOF BAR -->
+        <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                        <div class="font-syne font-extrabold text-3xl sm:text-4xl text-primary mb-1">4.6★</div>
+                        <div class="text-xs sm:text-sm text-zinc-400">Google Rating</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                        <div class="font-syne font-extrabold text-3xl sm:text-4xl text-white mb-1">2,907+</div>
+                        <div class="text-xs sm:text-sm text-zinc-400">Verified Reviews</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                        <div class="font-syne font-extrabold text-3xl sm:text-4xl text-primary mb-1">3-in-1</div>
+                        <div class="text-xs sm:text-sm text-zinc-400">Restaurant, Cafe & Banquet</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                        <div class="font-syne font-extrabold text-3xl sm:text-4xl text-white mb-1">Saguna</div>
+                        <div class="text-xs sm:text-sm text-zinc-400">Prime Patna Location</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE PILLARS GRID (Restaurant, Cafe, Banquet) -->
+        <section id="restaurant" class="py-20 sm:py-28 relative">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-semibold tracking-widest text-primary uppercase mb-3 block">Experiences Tailored For You</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Three Distinct Worlds Under One Roof</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Whether you are craving royal Mughlai & Continental dining, aesthetic Instagram cafe corners, or a grand banquet hall for 500+ guests, Jashn has it all.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Pillar 1: Restaurant -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="utensils-crossed" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl sm:text-2xl text-white mb-3">Fine Dining Restaurant</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Experience authentic North Indian, Chinese, and Continental culinary masterpieces prepared by expert chefs in an opulent, family-friendly ambience.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="space-y-2 mb-8 text-xs sm:text-sm text-zinc-300">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Multi-cuisine gourmet menu</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Elegant ambient lighting</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Dedicated family dining zones</li>
+                            </ul>
+                            <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20would%20like%20to%20reserve%20a%20table%20in%20the%20Restaurant." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <span>Reserve Table</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Cafe -->
+                    <div id="cafe" class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="coffee" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl sm:text-2xl text-white mb-3">The Cafe</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                The ultimate hangout spot in Patna. Enjoy artisan coffees, delectable mocktails, wood-fired pizzas, and chic aesthetic backdrops for your photos.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="space-y-2 mb-8 text-xs sm:text-sm text-zinc-300">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Artisan coffee & shakes</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Trendy snacks & wood-fired pizzas</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Instagrammable aesthetic decor</li>
+                            </ul>
+                            <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20want%20to%20inquire%20about%20Cafe%20seating." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <span>Visit Cafe</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Banquet -->
+                    <div id="banquet" class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group">
+                        <div>
+                            <div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <i data-lucide="party-popper" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-syne font-bold text-xl sm:text-2xl text-white mb-3">Grand Banquet Hall</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                                Host weddings, receptions, birthday parties, and corporate galas with customizable stage decor, premium catering, and seamless hospitality.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="space-y-2 mb-8 text-xs sm:text-sm text-zinc-300">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Capacity for up to 500+ guests</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Custom floral & lighting decor</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-primary"></i> Professional event management</li>
+                            </ul>
+                            <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20would%20like%20to%20book%20the%20Banquet%20Hall%20for%20an%20event." target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-primary hover:bg-[#E5C158] text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                                <span>Book Banquet</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED MENU / CULINARY HIGHLIGHTS -->
+        <section id="menu" class="py-20 sm:py-28 bg-zinc-900/30 border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div>
+                        <span class="text-xs font-semibold tracking-widest text-primary uppercase mb-3 block">Taste The Masterpieces</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white break-words">Featured Culinary Highlights</h2>
+                    </div>
+                    <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20please%20send%20me%20your%20complete%20menu." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary hover:text-white font-semibold text-sm transition-colors">
+                        <span>View Full Menu on WhatsApp</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Dish 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-full aspect-[4/3] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Royal Biryani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md text-primary font-bold text-xs border border-zinc-800">Chef's Special</span>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="font-syne font-bold text-lg text-white mb-2">Jashn Special Dum Biryani</h3>
+                                <p class="text-xs text-zinc-400 line-clamp-2 leading-relaxed mb-4">Aromatic basmati rice layered with tender marinated meat or vegetables, slow-cooked in traditional dum style.</p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://wa.me/919279538592?text=Hi,%20I%20would%20like%20to%20order%20Jashn%20Special%20Dum%20Biryani." target="_blank" rel="noopener noreferrer" class="w-full h-10 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-zinc-950 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dish 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-full aspect-[4/3] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Wood Fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md text-primary font-bold text-xs border border-zinc-800">Cafe Favorite</span>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="font-syne font-bold text-lg text-white mb-2">Artisan Wood-Fired Pizza</h3>
+                                <p class="text-xs text-zinc-400 line-clamp-2 leading-relaxed mb-4">Hand-tossed crust topped with rich San Marzano tomato sauce, fresh mozzarella, and basil leaves.</p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://wa.me/919279538592?text=Hi,%20I%20would%20like%20to%20order%20Artisan%20Wood-Fired%20Pizza." target="_blank" rel="noopener noreferrer" class="w-full h-10 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-zinc-950 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dish 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-full aspect-[4/3] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Tandoori Platters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md text-primary font-bold text-xs border border-zinc-800">Must Try</span>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="font-syne font-bold text-lg text-white mb-2">Royal Tandoori Platter</h3>
+                                <p class="text-xs text-zinc-400 line-clamp-2 leading-relaxed mb-4">An assortment of succulent kebabs and tikkas grilled to perfection in a traditional clay oven.</p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://wa.me/919279538592?text=Hi,%20I%20would%20like%20to%20order%20Royal%20Tandoori%20Platter." target="_blank" rel="noopener noreferrer" class="w-full h-10 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-zinc-950 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dish 4 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div>
+                            <div class="relative w-full aspect-[4/3] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Signature Cocktails & Shakes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md text-primary font-bold text-xs border border-zinc-800">Refreshing</span>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="font-syne font-bold text-lg text-white mb-2">Signature Mocktails & Shakes</h3>
+                                <p class="text-xs text-zinc-400 line-clamp-2 leading-relaxed mb-4">Exquisite blends of fresh fruits, ice creams, and exotic syrups crafted by master mixologists.</p>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <a href="https://wa.me/919279538592?text=Hi,%20I%20would%20like%20to%20order%20Signature%20Mocktails%20&%20Shakes." target="_blank" rel="noopener noreferrer" class="w-full h-10 rounded-xl bg-zinc-800 hover:bg-primary text-white hover:text-zinc-950 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANQUET & EVENT HOSTING SECTION -->
+        <section class="py-20 sm:py-28 relative overflow-hidden">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-br from-zinc-900 via-zinc-900 to-[#2D1517] border border-zinc-800 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl">
+                    <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                        <div class="lg:col-span-7">
+                            <span class="text-xs font-semibold tracking-widest text-primary uppercase mb-3 block">Grand Celebrations</span>
+                            <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">Host Your Dream Event at Jashn Banquet Hall</h2>
+                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8">
+                                From intimate birthday bashes and silver anniversaries to grand wedding receptions and corporate galas, our magnificent banquet hall provides seamless event execution, customizable decoration packages, and stellar multi-cuisine catering.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                        <i data-lucide="users" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Up to 500+ Guests</h4>
+                                        <p class="text-xs text-zinc-400">Spacious pillarless hall layout</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Customized Decor</h4>
+                                        <p class="text-xs text-zinc-400">Floral, theme & stage lighting</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                        <i data-lucide="chef-hat" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Expert Catering</h4>
+                                        <p class="text-xs text-zinc-400">Live counters & multi-course meals</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">Valet & Security</h4>
+                                        <p class="text-xs text-zinc-400">Hassle-free parking & management</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20want%20to%20get%20a%20quote%20for%20banquet%20booking." target="_blank" rel="noopener noreferrer" class="h-12 px-6 rounded-xl bg-primary hover:bg-[#E5C158] text-zinc-950 font-bold text-sm flex items-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                    <span>Get Instant Banquet Quote</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-2xl overflow-hidden border border-zinc-700 shadow-2xl aspect-[4/5]">
+                                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Banquet Hall Decoration" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-zinc-950/80 backdrop-blur-md border border-zinc-800 text-center">
+                                    <p class="text-primary font-bold text-xs uppercase tracking-wider mb-1">Bookings Open for 2025/2026</p>
+                                    <p class="text-xs text-zinc-300">Special seasonal discounts available on advance booking!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE JASHN SECTION -->
+        <section class="py-20 sm:py-28 bg-zinc-900/30 border-t border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-semibold tracking-widest text-primary uppercase mb-3 block">The Jashn Advantage</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Why Patna Chooses Us Over & Over Again</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">We combine world-class hospitality, immaculate hygiene standards, and prime accessibility to give you an unforgettable experience.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-lg text-white mb-2">Luxurious Ambiance</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Thoughtfully designed interiors blending modern aesthetics with warm, cozy lighting.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-lg text-white mb-2">Pristine Hygiene</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Strict food safety protocols, sanitized kitchens, and immaculate dining areas.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-lg text-white mb-2">Prime Location</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Conveniently situated above Redtape showroom, Saguna More with easy transit.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-primary/50 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-lg text-white mb-2">Warm Hospitality</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Courteous staff dedicated to making every guest feel like royalty.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOMER REVIEWS SECTION -->
+        <section id="reviews" class="py-20 sm:py-28">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-semibold tracking-widest text-primary uppercase mb-3 block">Loved By Thousands</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">What Our Guests Say</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Backed by 2,907+ verified Google reviews with an outstanding 4.6-star rating.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-primary mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                                "Jashn has the best food and ambience in Saguna More! We celebrated our anniversary in their banquet hall and the decor was breathtaking. Highly recommend their biryani and Chinese starters."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm text-white">Rahul Kumar</h4>
+                                <p class="text-xs text-zinc-400">Google Local Guide</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-primary mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                                "Such a cozy cafe vibe! Perfect place to hang out with friends in Patna. Their coffee and wood-fired pizzas are top-notch. Staff is extremely polite and service is fast."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm text-white">Priya Singh</h4>
+                                <p class="text-xs text-zinc-400">Verified Diner</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-primary mb-4">
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-primary"></i>
+                            </div>
+                            <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                                "We hosted our corporate dinner here. The banquet space on the 3rd floor is extremely spacious and well-managed. Everyone praised the food quality. Will definitely book again!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">
+                                AM
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm text-white">Amit Mishra</h4>
+                                <p class="text-xs text-zinc-400">Corporate Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ ACCORDION -->
+        <section class="py-20 sm:py-28 bg-zinc-900/30 border-t border-zinc-800">
+            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-semibold tracking-widest text-primary uppercase mb-3 block">Got Questions?</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Frequently Asked Questions</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base">Find answers to common queries regarding reservations, banquets, and timings.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">Do I need to reserve a table in advance?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            While walk-ins are always welcomed, we strongly recommend reserving a table in advance—especially on weekends and holidays—to secure your preferred seating in our restaurant or cafe.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">What is the capacity of the Jashn Banquet Hall?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            Our grand banquet hall can comfortably accommodate anywhere from 100 to over 500 guests, making it ideal for weddings, receptions, birthday parties, and corporate events.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">What are your operating hours?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            We are open every single day from 11:00 AM to 11:00 PM for lunch, evening cafe snacks, dinner, and banquet celebrations.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                        <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none min-h-[56px]">
+                            <span class="font-syne font-bold text-base sm:text-lg text-white">Where is Jashn located exactly?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                            JASHN is located on the 2nd & 3rd floor, Shanti Palace, Saguna Khagaul Rd, right above the Redtape showroom, Kaliket Nagar, Patna, Bihar 801105.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE LOCATION & CONTACT SECTION -->
+        <section id="contact" class="py-20 sm:py-28 relative">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-semibold tracking-widest text-primary uppercase mb-3 block">Plan Your Visit</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">Location & Table Inquiry</h2>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Drop us a line or visit us directly at Saguna More, Patna.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Contact Info & Hours -->
+                    <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                            <h3 class="font-syne font-bold text-xl text-white">Contact Information</h3>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Address</h4>
+                                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">2nd & 3rd floor, Shanti Palace, Saguna Khagaul Rd, above Redtape showroom, Kaliket Nagar, Patna, Bihar 801105</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Phone / WhatsApp</h4>
+                                    <a href="tel:+919279538592" class="text-xs sm:text-sm text-zinc-400 hover:text-primary transition-colors">+91 92795 38592</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Operating Hours</h4>
+                                    <p class="text-xs sm:text-sm text-zinc-400">Monday - Sunday: 11:00 AM - 11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Google Maps Directions Button -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=JASHN+Restaurant+Cafe+Banquet+Saguna+Khagaul+Rd+Patna" target="_blank" rel="noopener noreferrer" class="h-14 rounded-xl bg-primary hover:bg-[#E5C158] text-zinc-950 font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-primary/20 transition-all">
+                            <i data-lucide="navigation" class="w-5 h-5"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+
+                    <!-- Inquiry Form -->
+                    <div class="lg:col-span-7 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                        <h3 class="font-syne font-bold text-xl text-white mb-2">Send an Inquiry or Reservation Request</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 mb-6">Fill out the quick form below and our team will get back to you instantly via phone or WhatsApp.</p>
+
+                        <form id="inquiry-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1">Your Name *</label>
+                                    <input type="text" id="visitor-name" required placeholder="e.g. Aman Sharma" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1">Phone / WhatsApp Number *</label>
+                                    <input type="tel" id="visitor-phone" required placeholder="e.g. +91 98765 43210" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1">Select Service *</label>
+                                    <select id="visitor-service" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                        <option value="Fine Dining Table">Fine Dining Table Reservation</option>
+                                        <option value="Cafe Seating">Cafe Seating</option>
+                                        <option value="Grand Banquet Hall">Grand Banquet Hall Booking</option>
+                                        <option value="Home Delivery / Takeaway">Home Delivery / Takeaway</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-zinc-300 mb-1">Date & Time</label>
+                                    <input type="datetime-local" id="visitor-datetime" class="w-full h-12 px-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-300 mb-1">Special Request / Message</label>
+                                <textarea id="visitor-message" rows="4" placeholder="Mention guest count, special dietary requirements, or decoration theme..." class="w-full p-4 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-sm focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full h-12 rounded-xl bg-primary hover:bg-[#E5C158] text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                                <span id="btn-text">Submit Inquiry via WhatsApp</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="mt-16 w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl h-[400px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848149867!2d85.04561847648356!3d25.61244Ms!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5852a3b8d69f%3A0x6b8f3a3f5c9e2b1a!2sShanti%20Palace%2C%20Saguna%20Khagaul%20Rd%2C%20Patna!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jashn Location Map"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                            <span class="font-syne font-bold text-zinc-950">J</span>
+                        </div>
+                        <span class="font-syne font-bold text-xl text-white">JASHN</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-6">
+                        Patna’s premier destination for fine dining, cozy cafe experiences, and grand banquet celebrations. Located at Saguna More.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=JASHN+Restaurant+Cafe+Banquet+Saguna+Khagaul+Rd+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-primary transition-colors" aria-label="Google Maps">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://wa.me/919279538592" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-primary transition-colors" aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="tel:+919279538592" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-primary transition-colors" aria-label="Phone">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-zinc-400">
+                        <li><a href="#restaurant" class="hover:text-primary transition-colors">Fine Dining Restaurant</a></li>
+                        <li><a href="#cafe" class="hover:text-primary transition-colors">The Cafe Experience</a></li>
+                        <li><a href="#banquet" class="hover:text-primary transition-colors">Grand Banquet Hall</a></li>
+                        <li><a href="#menu" class="hover:text-primary transition-colors">Culinary Menu</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Google Reviews (4.6★)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-white uppercase tracking-wider mb-4">Operating Hours</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-zinc-400">
+                        <li class="flex justify-between"><span>Monday:</span> <span class="text-white font-medium">11am - 11pm</span></li>
+                        <li class="flex justify-between"><span>Tuesday:</span> <span class="text-white font-medium">11am - 11pm</span></li>
+                        <li class="flex justify-between"><span>Wednesday:</span> <span class="text-white font-medium">11am - 11pm</span></li>
+                        <li class="flex justify-between"><span>Thursday:</span> <span class="text-white font-medium">11am - 11pm</span></li>
+                        <li class="flex justify-between"><span>Friday:</span> <span class="text-white font-medium">11am - 11pm</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span class="text-white font-medium">11am - 11pm</span></li>
+                        <li class="flex justify-between"><span>Sunday:</span> <span class="text-white font-medium">11am - 11pm</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-white uppercase tracking-wider mb-4">Visit Us</h4>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-4">
+                        2nd & 3rd floor, Shanti Palace, Saguna Khagaul Rd, above Redtape showroom, Kaliket Nagar, Patna, Bihar 801105
+                    </p>
+                    <a href="tel:+919279538592" class="text-primary font-bold text-sm hover:underline">+91 92795 38592</a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> JASHN (Restaurant, Cafe & Banquet). All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+919279538592" class="flex-1 h-12 rounded-xl bg-zinc-900 border border-zinc-800 text-white font-bold text-xs flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919279538592?text=Hi%20Jashn%20Team,%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="flex-1 h-12 rounded-xl bg-primary hover:bg-[#E5C158] text-zinc-950 font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center relative">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl text-white mb-2">Inquiry Ready!</h3>
+            <p id="modal-desc" class="text-xs sm:text-sm text-zinc-400 mb-6">Your details have been captured. Click below to instantly send your reservation request via WhatsApp to Jashn.</p>
+            <div class="flex flex-col gap-3">
+                <a id="whatsapp-redirect-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full h-12 rounded-xl bg-primary text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Open WhatsApp Now</span>
+                </a>
+                <button id="close-modal-btn" class="w-full h-12 rounded-xl bg-zinc-800 text-white font-medium text-sm hover:bg-zinc-700 transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeDrawerBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+
+                // Close others
+                faqToggles.forEach(other => {
+                    if (other !== toggle) {
+                        other.nextElementSibling.classList.add('hidden');
+                        other.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Form Submission & WhatsApp Integration
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const whatsappRedirectBtn = document.getElementById('whatsapp-redirect-btn');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Sanitize and get values
+            const name = document.getElementById('visitor-name').value.trim();
+            const phone = document.getElementById('visitor-phone').value.trim();
+            const service = document.getElementById('visitor-service').value;
+            const datetime = document.getElementById('visitor-datetime').value;
+            const message = document.getElementById('visitor-message').value.trim();
+
+            if (!name || !phone) {
+                alert('Please fill in your name and phone number.');
+                return;
+            }
+
+            // Construct WhatsApp URL
+            let waText = `Hi Jashn Team,%0A%0AMy Name: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}`;
+            if (datetime) {
+                waText += `%0ADate/Time: ${encodeURIComponent(datetime)}`;
+            }
+            if (message) {
+                waText += `%0AMessage: ${encodeURIComponent(message)}`;
+            }
+
+            const waURL = `https://wa.me/919279538592?text=${waText}`;
+            whatsappRedirectBtn.href = waURL;
+
+            // Show success modal
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            inquiryForm.reset();
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
