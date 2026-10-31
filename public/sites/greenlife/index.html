@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Life Dental Care | Best Dentist in Mithapur, Patna</title>
+    <meta name="description" content="Experience painless, advanced dental care at Green Life Dental Care in Mithapur, Patna. 5.0★ Rated clinic offering root canals, implants, braces, and more. Book on WhatsApp!">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D9488',
+                        'primary-dark': '#0F766E',
+                        secondary: '#CCFBF1',
+                        surface: '#F8FAFC',
+                        darkText: '#0F172A',
+                        mutedText: '#64748B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-darkText font-sans antialiased overflow-x-hidden pb-24 md:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white text-xs sm:text-sm py-2 px-4 text-center font-medium sticky top-0 z-50 flex items-center justify-center gap-2 shadow-sm">
+        <i data-lucide="clock" class="w-4 h-4 shrink-0"></i>
+        <span>Open Today • Call or WhatsApp to Book Your Priority Slot!</span>
+        <a href="tel:+919570374377" class="underline font-bold ml-1 hover:text-secondary transition-colors">+91 95703 74377</a>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-[36px] sm:top-[37px] z-40 bg-white border-b border-zinc-200 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-11 h-11 rounded-xl bg-secondary flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-heading font-extrabold text-darkText tracking-tight block leading-none">Green Life</span>
+                    <span class="text-xs uppercase tracking-widest text-primary font-bold mt-1 block">Dental Care • Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-mutedText">
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919570374377" class="inline-flex items-center justify-center h-11 px-4 rounded-xl border border-zinc-200 text-darkText hover:border-primary hover:text-primary font-semibold text-sm transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2 text-primary"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/919570374377?text=Hello%20Green%20Life%20Dental%20Care,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-11 px-5 rounded-xl bg-primary hover:bg-primary-dark text-white font-semibold text-sm shadow-lg shadow-primary/20 transition-all hover:scale-[1.02]">
+                    <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+                    <span>WhatsApp Booking</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-surface border border-zinc-200 text-darkText hover:text-primary focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-white border-l border-zinc-200 rounded-tl-2xl p-6 pt-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-100">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-primary">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-heading font-bold text-lg text-darkText">Green Life Dental</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-lg bg-surface text-mutedText hover:text-darkText">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 pt-6 text-base font-semibold text-darkText">
+                <a href="#services" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-surface transition-colors"><span>Services</span><i data-lucide="chevron-right" class="w-4 h-4 text-mutedText"></i></a>
+                <a href="#why-us" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-surface transition-colors"><span>Why Choose Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-mutedText"></i></a>
+                <a href="#about" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-surface transition-colors"><span>About Clinic</span><i data-lucide="chevron-right" class="w-4 h-4 text-mutedText"></i></a>
+                <a href="#reviews" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-surface transition-colors"><span>Patient Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-mutedText"></i></a>
+                <a href="#faq" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-surface transition-colors"><span>FAQs</span><i data-lucide="chevron-right" class="w-4 h-4 text-mutedText"></i></a>
+                <a href="#contact" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-surface transition-colors"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-mutedText"></i></a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-100 flex flex-col gap-3">
+            <a href="https://wa.me/919570374377?text=Hello%20Green%20Life%20Dental%20Care,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 h-12 rounded-xl bg-primary text-white font-semibold shadow-md">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Book on WhatsApp</span>
+            </a>
+            <a href="tel:+919570374377" class="flex items-center justify-center gap-2 h-12 rounded-xl bg-surface border border-zinc-200 text-darkText font-semibold">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <span>Call +91 95703 74377</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:py-24 bg-gradient-to-b from-secondary/40 via-white to-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Trust Rating Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-zinc-200 shadow-sm mb-6">
+                        <div class="flex text-amber-500">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-darkText">5.0 ★ Google Rating (Verified Clinic)</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words sm: lg: font-heading font-extrabold text-darkText tracking-tight leading-[1.15] mb-6">
+                        Advanced, Painless <span class="text-primary underline decoration-secondary decoration-wavy decoration-2">Dental Care</span> in Mithapur, Patna
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-mutedText leading-relaxed mb-8 max-w-2xl">
+                        Welcome to <strong class="text-darkText">Green Life Dental Care</strong>. From routine cleanings to advanced root canals, implants, and orthodontics—we deliver gentle, state-of-the-art treatments for your entire family.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919570374377?text=Hello%20Green%20Life%20Dental%20Care,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-primary hover:bg-primary-dark text-white font-bold text-base shadow-xl shadow-primary/25 transition-all hover:scale-[1.02]">
+                            <i data-lucide="calendar-check" class="w-5 h-5 mr-3"></i>
+                            <span>Book Appointment</span>
+                        </a>
+                        <a href="tel:+919570374377" class="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-white hover:bg-surface border-2 border-zinc-200 hover:border-primary text-darkText font-bold text-base transition-colors">
+                            <i data-lucide="phone-call" class="w-5 h-5 mr-3 text-primary"></i>
+                            <span>Call +91 95703 74377</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlight Pills -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10 pt-8 border-t border-zinc-100 w-full text-xs sm:text-sm text-mutedText font-medium">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-primary shrink-0"></i>
+                            <span>100% Sterilization</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="smile" class="w-5 h-5 text-primary shrink-0"></i>
+                            <span>Painless Procedures</span>
+                        </div>
+                        <div class="flex items-center gap-2 col-span-2 sm:col-span-1">
+                            <i data-lucide="award" class="w-5 h-5 text-primary shrink-0"></i>
+                            <span>Expert Dentists</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Image / Visual Card Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-surface">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Dental Clinic in Patna" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkText/70 via-transparent to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+                            <span class="text-xs uppercase tracking-wider text-secondary font-bold mb-1">State-of-the-Art Facility</span>
+                            <h3 class="text-xl sm:text-2xl font-heading font-bold">Your Smile, Our Priority</h3>
+                            <p class="text-xs sm:text-sm text-zinc-200 mt-1">Near Dayand Boys High School, B Area, Jakkanpur, Mithapur, Patna</p>
+                        </div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-zinc-100 hidden sm:flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-primary">
+                            <i data-lucide="thumbs-up" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg font-heading font-extrabold text-darkText">5.0 Star Rated</div>
+                            <div class="text-xs text-mutedText">Trusted by Patna patients</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-surface border-y border-zinc-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl border border-zinc-100 shadow-sm">
+                    <div class="text-3xl sm:text-4xl font-heading font-extrabold text-primary mb-1">5.0 ★</div>
+                    <div class="text-xs sm:text-sm text-mutedText font-medium">Google Rating</div>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl border border-zinc-100 shadow-sm">
+                    <div class="text-3xl sm:text-4xl font-heading font-extrabold text-primary mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-mutedText font-medium">Sterilization Protocol</div>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl border border-zinc-100 shadow-sm">
+                    <div class="text-3xl sm:text-4xl font-heading font-extrabold text-primary mb-1">Advanced</div>
+                    <div class="text-xs sm:text-sm text-mutedText font-medium">Dental Equipment</div>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl border border-zinc-100 shadow-sm">
+                    <div class="text-3xl sm:text-4xl font-heading font-extrabold text-primary mb-1">Mithapur</div>
+                    <div class="text-xs sm:text-sm text-mutedText font-medium">Convenient Patna Location</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Offerings Grid -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold px-3 py-1 bg-secondary rounded-full inline-block mb-3">Our Comprehensive Treatments</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-darkText tracking-tight mb-4">
+                    Expert Dental Services Tailored for You
+                </h2>
+                <p class="text-mutedText text-base sm:text-lg">
+                    Using cutting-edge technology and gentle techniques to ensure your comfort at every visit.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-surface rounded-3xl p-8 border border-zinc-200 hover:border-primary transition-all duration-300 hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-darkText mb-3">Root Canal Treatment (RCT)</h3>
+                        <p class="text-mutedText text-sm leading-relaxed mb-6">
+                            Painless single-visit or multi-visit root canal treatments to save infected teeth and eliminate toothache completely.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919570374377?text=Hello,%20I%20want%20to%20know%20more%20about%20Root%20Canal%20Treatment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-bold text-sm hover:text-primary-dark">
+                        <span>Book Consultation</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-surface rounded-3xl p-8 border border-zinc-200 hover:border-primary transition-all duration-300 hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-darkText mb-3">Scaling & Polishing</h3>
+                        <p class="text-mutedText text-sm leading-relaxed mb-6">
+                            Professional ultrasonic teeth cleaning to remove stubborn tartar, plaque, and stains, giving you a brighter, healthier smile.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919570374377?text=Hello,%20I%20want%20to%20book%20Scaling%20and%20Polishing." target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-bold text-sm hover:text-primary-dark">
+                        <span>Book Consultation</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-surface rounded-3xl p-8 border border-zinc-200 hover:border-primary transition-all duration-300 hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="smile" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-darkText mb-3">Orthodontics & Braces</h3>
+                        <p class="text-mutedText text-sm leading-relaxed mb-6">
+                            Straighten crooked teeth and fix bite issues with modern metal braces, ceramic braces, and clear aligners.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919570374377?text=Hello,%20I%20want%20to%20know%20about%20Braces%20and%20Orthodontics." target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-bold text-sm hover:text-primary-dark">
+                        <span>Book Consultation</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-surface rounded-3xl p-8 border border-zinc-200 hover:border-primary transition-all duration-300 hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="shield" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-darkText mb-3">Dental Implants</h3>
+                        <p class="text-mutedText text-sm leading-relaxed mb-6">
+                            Permanent, natural-looking tooth replacement solutions that restore full chewing function and confidence.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919570374377?text=Hello,%20I%20want%20to%20consult%20for%20Dental%20Implants." target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-bold text-sm hover:text-primary-dark">
+                        <span>Book Consultation</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-surface rounded-3xl p-8 border border-zinc-200 hover:border-primary transition-all duration-300 hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-darkText mb-3">Tooth Extraction & Surgery</h3>
+                        <p class="text-mutedText text-sm leading-relaxed mb-6">
+                            Safe, painless tooth removals including wisdom tooth extraction performed by experienced dental surgeons.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919570374377?text=Hello,%20I%20need%20assistance%20with%20Tooth%20Extraction." target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-bold text-sm hover:text-primary-dark">
+                        <span>Book Consultation</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 6 (Custom Booking Card) -->
+                <div class="bg-primary text-white rounded-3xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-10">
+                        <i data-lucide="activity" class="w-48 h-48"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-secondary font-bold px-3 py-1 bg-white/10 rounded-full inline-block mb-4">Need Something Else?</span>
+                        <h3 class="text-2xl font-heading font-extrabold mb-3">Custom Dental Consultation</h3>
+                        <p class="text-zinc-100 text-sm leading-relaxed mb-6">
+                            Unsure about your dental condition? Chat directly with our dental experts on WhatsApp for instant guidance and appointment scheduling.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919570374377?text=Hello%20Green%20Life%20Dental%20Care,%20I%20would%20like%20to%20discuss%20a%20custom%20dental%20query." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-12 bg-white text-primary font-bold rounded-xl shadow-md hover:bg-secondary transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold px-3 py-1 bg-secondary rounded-full inline-block mb-3">The Green Life Advantage</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-darkText tracking-tight mb-4">
+                    Why Patna Families Trust Green Life Dental Care
+                </h2>
+                <p class="text-mutedText text-base sm:text-lg">
+                    We combine clinical excellence with genuine empathy to make every dental visit stress-free and comfortable.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold text-darkText mb-2">Painless Care</h3>
+                    <p class="text-mutedText text-sm leading-relaxed">
+                        Advanced anesthesia techniques and gentle handling ensure maximum comfort during all procedures.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold text-darkText mb-2">Expert Dentists</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                        Highly qualified dental professionals with years of experience in treating complex dental cases.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold text-darkText mb-2">Modern Equipment</h3>
+                    <p class="text-mutedText text-sm leading-relaxed">
+                        Equipped with state-of-the-art dental chairs, digital imaging, and precise diagnostic tools.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-heading font-bold text-darkText mb-2">Strict Hygiene</h3>
+                    <p class="text-mutedText text-sm leading-relaxed">
+                        Hospital-grade autoclaving and rigorous sterilization protocols for 100% infection control.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Collage -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-3xl overflow-hidden aspect-[4/3] shadow-lg border border-zinc-100">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Clinic Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-3xl overflow-hidden aspect-square shadow-lg border border-zinc-100 bg-primary/10 p-6 flex flex-col justify-center text-center">
+                            <div class="text-4xl font-heading font-extrabold text-primary mb-1">5.0 ★</div>
+                            <div class="text-sm font-bold text-darkText">Patient Satisfaction</div>
+                            <p class="text-xs text-mutedText mt-1">Rated 5 out of 5 stars on Google Reviews</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-3xl overflow-hidden aspect-square shadow-lg border border-zinc-100 bg-secondary flex flex-col justify-center p-6 text-darkText">
+                            <i data-lucide="heart" class="w-10 h-10 text-primary mb-3"></i>
+                            <h4 class="font-heading font-bold text-lg mb-1">Compassionate Care</h4>
+                            <p class="text-xs text-mutedText">Treating every patient like family with patience and warmth.</p>
+                        </div>
+                        <div class="rounded-3xl overflow-hidden aspect-[4/3] shadow-lg border border-zinc-100">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Dental Consultation" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-6">
+                    <span class="text-xs uppercase tracking-widest text-primary font-bold px-3 py-1 bg-secondary rounded-full inline-block mb-4">About Green Life Dental</span>
+                    <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-darkText tracking-tight mb-6">
+                        Dedicated to Creating Healthy, Confident Smiles in Patna
+                    </h2>
+                    <p class="text-mutedText text-base leading-relaxed mb-6">
+                        Located conveniently near Dayand Boys High School in B Area, Jakkanpur, Mithapur, Patna, <strong class="text-darkText">Green Life Dental Care</strong> is your trusted neighborhood destination for comprehensive oral health.
+                    </p>
+                    <p class="text-mutedText text-base leading-relaxed mb-8">
+                        We believe visiting the dentist should be a comfortable, anxiety-free experience. Our clinic is equipped with advanced dental technology and adheres to rigorous international sterilization standards. Whether it's a routine check-up or a complex restorative procedure, our experienced dental team provides personalized attention tailored to your unique needs.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-darkText">Transparent Treatment Plans</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-darkText">Affordable Pricing</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-darkText">Zero Wait-Time Priority Slots</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-darkText">Emergency Dental Support</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919570374377?text=Hello%20Green%20Life%20Dental%20Care,%20I%20would%20like%20to%20know%20more%20about%20your%20clinic." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-primary text-white font-bold shadow-md hover:bg-primary-dark transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                        <span>Connect With Us on WhatsApp</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold px-3 py-1 bg-secondary rounded-full inline-block mb-3">Patient Testimonials</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-darkText tracking-tight mb-4">
+                    What Our Patients Say on Google
+                </h2>
+                <div class="flex items-center justify-center gap-2 text-amber-500 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <span class="text-darkText font-bold ml-1 text-lg">5.0 / 5.0</span>
+                </div>
+                <p class="text-mutedText text-sm sm:text-base">Verified patient reviews highlighting our compassionate and professional care.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Review Card 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-darkText text-sm sm:text-base leading-relaxed italic mb-6">
+                            "One of the best dental clinics in Mithapur Patna! The doctor is extremely polite, explains the problem thoroughly, and the procedure was completely painless. Highly recommended for root canal and scaling."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
+                        <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary font-bold">
+                            R
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-sm text-darkText">Rajesh Kumar</div>
+                            <div class="text-xs text-mutedText">Verified Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-darkText text-sm sm:text-base leading-relaxed italic mb-6">
+                            "Very clean and hygienic clinic near Jakkanpur. Staff is very cooperative and the treatment charges are very reasonable. Got my teeth scaling done smoothly without any discomfort."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
+                        <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary font-bold">
+                            P
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-sm text-darkText">Priya Kumari</div>
+                            <div class="text-xs text-mutedText">Verified Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold px-3 py-1 bg-secondary rounded-full inline-block mb-3">Got Questions?</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-darkText tracking-tight mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-mutedText text-base">
+                    Find quick answers about our dental treatments, appointments, and clinic visits.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-surface transition-colors">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-heading font-bold text-darkText focus:outline-none">
+                        <span>How can I book an appointment at Green Life Dental Care?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-mutedText leading-relaxed">
+                        You can instantly book an appointment by tapping our WhatsApp booking button (+919570374377) or by calling us directly. Walk-ins are also welcome, though advance booking ensures zero wait time.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-surface transition-colors">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-heading font-bold text-darkText focus:outline-none">
+                        <span>Are root canal treatments painful?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-mutedText leading-relaxed">
+                        Not at all! With modern local anesthesia and advanced rotary instruments, root canal treatments at Green Life Dental Care are virtually painless. We ensure your absolute comfort throughout the procedure.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-surface transition-colors">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-heading font-bold text-darkText focus:outline-none">
+                        <span>Where is the clinic located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-mutedText leading-relaxed">
+                        Our clinic is conveniently situated at H4XH+JJ3, near Dayand Boys High School, B Area, Jakkanpur, Mithapur, Patna, Bihar 800001. Easily accessible from all parts of Patna.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-zinc-200 rounded-2xl overflow-hidden bg-surface transition-colors">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-heading font-bold text-darkText focus:outline-none">
+                        <span>What are the clinic timings?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-mutedText leading-relaxed">
+                        We are open all days of the week. For exact morning and evening slot timings or emergency visits, please call or WhatsApp us at +919570374377.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-surface border-t border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-primary font-bold px-3 py-1 bg-secondary rounded-full inline-block mb-3">Visit Us</span>
+                <h2 class="break-words text-3xl sm:text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-darkText tracking-tight mb-4">
+                    Location & Contact Details
+                </h2>
+                <p class="text-mutedText text-base">
+                    Drop by our clinic in Mithapur or reach out via phone and WhatsApp.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info & Form Column -->
+                <div class="lg:col-span-6 bg-white p-8 sm:p-10 rounded-3xl border border-zinc-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-darkText mb-6">Get in Touch</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-darkText mb-1">Clinic Address</h4>
+                                    <p class="text-mutedText text-sm leading-relaxed">
+                                        H4XH+JJ3 Dayand Boys High school, B Area, Jakkanpur, Mithapur, Patna, Bihar 800001
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="phone-call" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-darkText mb-1">Phone & WhatsApp</h4>
+                                    <a href="tel:+919570374377" class="text-primary font-bold text-sm hover:underline block">+91 95703 74377</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-primary shrink-0 mt-1">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-darkText mb-1">Operating Hours</h4>
+                                    <p class="text-mutedText text-sm">Monday – Sunday: Open Daily</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Appointment Form -->
+                        <form id="contact-form" class="space-y-4 pt-6 border-t border-zinc-100">
+                            <h4 class="font-heading font-bold text-darkText text-base">Quick Inquiry / Booking Form</h4>
+                            <div>
+                                <input type="text" id="form-name" required placeholder="Your Full Name" class="w-full h-12 px-4 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:border-primary">
+                            </div>
+                            <div>
+                                <input type="tel" id="form-phone" required placeholder="Your Phone Number" class="w-full h-12 px-4 rounded-xl border border-zinc-200 text-sm focus:outline-none focus:border-primary">
+                            </div>
+                            <div>
+                                <select id="form-service" class="w-full h-12 px-4 rounded-xl border border-zinc-200 text-sm bg-white text-darkText focus:outline-none focus:border-primary">
+                                    <option value="Root Canal">Root Canal Treatment</option>
+                                    <option value="Scaling">Scaling & Polishing</option>
+                                    <option value="Braces">Orthodontics & Braces</option>
+                                    <option value="Implants">Dental Implants</option>
+                                    <option value="Other">General Consultation</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full h-12 rounded-xl bg-primary hover:bg-primary-dark text-white font-bold text-sm shadow-md transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Send Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Column -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div class="w-full h-full min-h-[400px] rounded-3xl overflow-hidden border border-zinc-200 shadow-sm relative bg-white">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.87654321!2d85.13!3d25.60!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzAwLjAiTiA4NcKwMDcnNDguMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 450px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Green Life Dental Care Location Map">
+                        ></iframe>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Green+life+dental+care+Mithapur+Patna" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full h-14 bg-white hover:bg-surface border border-zinc-200 text-darkText font-bold rounded-2xl shadow-sm transition-colors">
+                            <i data-lucide="navigation" class="w-5 h-5 text-primary"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkText text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-zinc-800">
+                
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xl font-heading font-extrabold tracking-tight">Green Life Dental</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Your trusted dental clinic in Mithapur, Patna. Dedicated to painless, advanced, and affordable dental healthcare for everyone.
+                    </p>
+                    <div class="flex items-center gap-3 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span class="text-white text-xs font-bold">5.0 Star Google Rating</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-base mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Clinic</a></li>
+                        <li><a href="#reviews" class="hover:text-primary transition-colors">Patient Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading font-bold text-base mb-4 text-white">Treatments</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><span class="hover:text-white transition-colors">Root Canal Treatment</span></li>
+                        <li><span class="hover:text-white transition-colors">Scaling & Polishing</span></li>
+                        <li><span class="hover:text-white transition-colors">Orthodontics & Braces</span></li>
+                        <li><span class="hover:text-white transition-colors">Dental Implants</span></li>
+                        <li><span class="hover:text-white transition-colors">Tooth Extraction</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="font-heading font-bold text-base mb-4 text-white">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-1"></i>
+                            <span>Dayand Boys High school, B Area, Jakkanpur, Mithapur, Patna, 800001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="tel:+919570374377" class="hover:text-white">+91 95703 74377</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-primary shrink-0"></i>
+                            <a href="https://wa.me/919570374377" target="_blank" rel="noopener noreferrer" class="hover:text-white">WhatsApp Chat</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+                <p>&copy; <span id="current-year"></span> Green Life Dental Care. All rights reserved.</p>
+                <p>Designed with clinical precision for Patna patients.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-darkText border-t border-zinc-800 p-3 flex items-center justify-around shadow-2xl">
+        <a href="tel:+919570374377" class="flex-1 flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white py-3 rounded-xl font-bold text-sm border border-zinc-700">
+            <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+            <span>Call Now</span>
+        </a>
+        <div class="w-3"></div>
+        <a href="https://wa.me/919570374377?text=Hello%20Green%20Life%20Dental%20Care,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-primary/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl border border-zinc-100 transform transition-all">
+            <div class="w-16 h-16 bg-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-2xl font-heading font-extrabold text-darkText mb-2">Inquiry Received!</h3>
+            <p id="modal-message" class="text-mutedText text-sm mb-6 leading-relaxed">
+                Thank you! We have received your inquiry. Our clinic representative will contact you shortly to confirm your appointment.
+            </p>
+            <button id="modal-close" class="w-full h-12 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-md transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Contact Form Handling & Success Modal
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const modalMessage = document.getElementById('modal-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const service = document.getElementById('form-service').value;
+
+            // Basic Sanitize/Validation check
+            if(!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Safe DOM update for modal
+            modalMessage.textContent = `Thank you, ${name}! Your inquiry for ${service} has been submitted securely. We will reach out to ${phone} shortly.`;
+            successModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            contactForm.reset();
+        });
+
+        modalClose.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
