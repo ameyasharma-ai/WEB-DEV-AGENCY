@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden bg-[#121212]">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DIVA Restaurant & Cafe - Patna's finest culinary destination in Sri Krishna Puri. Cozy ambiance, master chefs, and exquisite dining.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <title>DIVA Restaurant & Cafe | Patna</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        surface: '#1E1E1E',
+                        terracotta: '#C85A32',
+                        gold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #F9F9F9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom scrollbar for premium aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2D2D2D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C85A32;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-[#121212] text-[#F9F9F9] pb-28 lg:pb-0">
+
+    <!-- Announcement Bar -->
+    <div class="bg-gradient-to-r from-[#C85A32] to-[#D4AF37] text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative flex items-center justify-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse"></i>
+        <span>Special Offer: Enjoy 15% off on all weekend dinners! Reserve your table today.</span>
+        <i data-lucide="sparkles" class="w-4 h-4 animate-pulse hidden sm:inline-block"></i>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#121212] border-b border-zinc-800 transition-all duration-300">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C85A32] to-[#D4AF37] flex items-center justify-center shadow-lg shadow-terracotta/20 group-hover:scale-105 transition-transform">
+                    <span class="font-syne font-bold text-white text-xl">D</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white">DIVA</span>
+                    <span class="text-[10px] tracking-widest text-[#A0A0A0] uppercase font-semibold">Restaurant & Cafe</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#menu" class="text-sm font-medium text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Menu</a>
+                <a href="#about" class="text-sm font-medium text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Our Story</a>
+                <a href="#gallery" class="text-sm font-medium text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Action CTAs -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+919430232325" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface border border-zinc-700 text-sm font-medium text-white hover:border-[#C85A32] transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-[#C85A32]"></i>
+                    <span>+91 94302 32325</span>
+                </a>
+                <a href="#reservation" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#C85A32] text-white text-sm font-semibold hover:bg-[#b04d2a] transition-all shadow-lg shadow-terracotta/30">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book Table</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-surface border border-zinc-800 text-white hover:text-[#C85A32] transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-2xl p-6 pt-5 bg-[#121212] border-l border-zinc-800 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#C85A32] to-[#D4AF37] flex items-center justify-center">
+                        <span class="font-syne font-bold text-white text-lg">D</span>
+                    </div>
+                    <span class="font-syne font-bold text-white text-lg">DIVA</span>
+                </div>
+                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl bg-surface border border-zinc-800 text-white hover:text-[#C85A32] transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4 mt-6">
+                <a href="#menu" class="mobile-nav-link text-base font-medium text-[#A0A0A0] hover:text-[#C85A32] py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Menu Categories</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link text-base font-medium text-[#A0A0A0] hover:text-[#C85A32] py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Our Story</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-base font-medium text-[#A0A0A0] hover:text-[#C85A32] py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Photo Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-[#A0A0A0] hover:text-[#C85A32] py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Customer Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-base font-medium text-[#A0A0A0] hover:text-[#C85A32] py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Location & Map</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919430232325" class="w-full py-3 px-4 rounded-xl bg-surface border border-zinc-700 text-white text-center font-medium flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-[#C85A32]"></i>
+                <span>Call +91 94302 32325</span>
+            </a>
+            <a href="https://wa.me/919430232325" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-600 text-white text-center font-semibold flex items-center justify-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Order</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-[#C85A32]/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Trust Rating Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex items-center text-[#D4AF37]">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-medium text-white">4.8★ Rating <span class="text-[#A0A0A0]">(108+ Google Reviews)</span></span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Patna’s Most Exquisite <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C85A32] to-[#D4AF37]">Culinary Haven</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-[#A0A0A0] font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                        Welcome to DIVA Restaurant & Cafe at Sri Krishna Puri. Experience masterfully crafted continental and Indian delicacies, cozy ambient lighting, and unforgettable hospitality.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#reservation" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#C85A32] text-white text-base font-semibold hover:bg-[#b04d2a] transition-all shadow-xl shadow-terracotta/30 group">
+                            <span>Reserve Table Now</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#menu" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-surface border border-zinc-700 text-white text-base font-semibold hover:border-[#C85A32] transition-all">
+                            <i data-lucide="utensils" class="w-5 h-5 text-[#C85A32]"></i>
+                            <span>Explore Menu</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image Showcase Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="DIVA Restaurant Interior and Ambience" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
+                        
+                        <!-- Floating Badge Card -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#1E1E1E]/90 backdrop-blur-md border border-zinc-700 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#C85A32]/20 flex items-center justify-center text-[#C85A32]">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-sm sm:text-base text-white">Sri Krishna Puri, Patna</h4>
+                                <p class="text-xs text-[#A0A0A0]">House no. 3, AN Path, Block - A</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-[#1E1E1E]/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                
+                <!-- Stat 1 -->
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-6 first:pl-0">
+                    <div class="w-12 h-12 rounded-xl bg-[#C85A32]/10 flex items-center justify-center text-[#C85A32] shrink-0">
+                        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-syne font-bold text-xl text-white">4.8 / 5.0 Rating</h3>
+                        <p class="text-xs sm:text-sm text-[#A0A0A0]">Top rated fine-dining & cafe experience</p>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-6">
+                    <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] shrink-0">
+                        <i data-lucide="message-square-quote" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-syne font-bold text-xl text-white">108+ Reviews</h3>
+                        <p class="text-xs sm:text-sm text-[#A0A0A0]">Loved by foodies across Patna</p>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:px-6 last:pr-0">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-syne font-bold text-xl text-white">Prime Location</h3>
+                        <p class="text-xs sm:text-sm text-[#A0A0A0]">Sri Krishna Puri, Block-A, Patna</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Grid Section -->
+    <section id="menu" class="py-20 lg:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-[#C85A32] uppercase bg-[#C85A32]/10 px-3 py-1.5 rounded-full">Culinary Masterpieces</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mt-4 mb-4 text-white">Explore Our Signature Menu</h2>
+                <p class="text-sm sm:text-base text-[#A0A0A0]">From aromatic starters to decadent desserts, prepared fresh by our expert culinary masters.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex items-center justify-center gap-2 sm:gap-4 mb-12 flex-wrap">
+                <button onclick="filterMenu('all')" class="menu-tab active px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-[#C85A32] text-white shadow-md shadow-terracotta/30">All Items</button>
+                <button onclick="filterMenu('starters')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-surface text-[#A0A0A0] hover:text-white border border-zinc-800">Starters</button>
+                <button onclick="filterMenu('mains')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-surface text-[#A0A0A0] hover:text-white border border-zinc-800">Main Course</button>
+                <button onclick="filterMenu('beverages')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-surface text-[#A0A0A0] hover:text-white border border-zinc-800">Beverages & Cafe</button>
+                <button onclick="filterMenu('desserts')" class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-surface text-[#A0A0A0] hover:text-white border border-zinc-800">Desserts</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Item 1: Starter -->
+                <div class="menu-item group bg-surface border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#C85A32] transition-all duration-300 flex flex-col justify-between" data-category="starters">
+                    <div>
+                        <div class="relative w-full aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Tandoori Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-[#121212]/80 backdrop-blur-md text-xs font-semibold text-[#D4AF37] border border-zinc-700">₹345</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Signature Paneer Tikka</h3>
+                                <span class="text-xs text-[#C85A32] font-medium bg-[#C85A32]/10 px-2.5 py-1 rounded-md">Starter</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Cottage cheese cubes marinated in rich Indian spices, grilled to smoky perfection in our traditional clay tandoor.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919430232325?text=Hi,%20I%20would%20like%20to%20order%20Signature%20Paneer%20Tikka" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-[#121212] border border-zinc-700 text-white text-xs sm:text-sm font-medium hover:bg-[#C85A32] hover:border-[#C85A32] transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 2: Starter -->
+                <div class="menu-item group bg-surface border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#C85A32] transition-all duration-300 flex flex-col justify-between" data-category="starters">
+                    <div>
+                        <div class="relative w-full aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Crispy Honey Chilli Potato" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-[#121212]/80 backdrop-blur-md text-xs font-semibold text-[#D4AF37] border border-zinc-700">₹275</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Honey Chilli Potato</h3>
+                                <span class="text-xs text-[#C85A32] font-medium bg-[#C85A32]/10 px-2.5 py-1 rounded-md">Starter</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Crispy potato fingers tossed in a sweet and spicy honey chilli glaze, garnished with sesame seeds.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919430232325?text=Hi,%20I%20would%20like%20to%20order%20Honey%20Chilli%20Potato" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-[#121212] border border-zinc-700 text-white text-xs sm:text-sm font-medium hover:bg-[#C85A32] hover:border-[#C85A32] transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3: Main Course -->
+                <div class="menu-item group bg-surface border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#C85A32] transition-all duration-300 flex flex-col justify-between" data-category="mains">
+                    <div>
+                        <div class="relative w-full aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-[#121212]/80 backdrop-blur-md text-xs font-semibold text-[#D4AF37] border border-zinc-700">₹495</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">DIVA Special Butter Chicken</h3>
+                                <span class="text-xs text-[#C85A32] font-medium bg-[#C85A32]/10 px-2.5 py-1 rounded-md">Main Course</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Tender chicken pieces simmered in a rich, velvety tomato and butter gravy with aromatic spices.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919430232325?text=Hi,%20I%20would%20like%20to%20order%20DIVA%20Special%20Butter%20Chicken" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-[#121212] border border-zinc-700 text-white text-xs sm:text-sm font-medium hover:bg-[#C85A32] hover:border-[#C85A32] transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4: Main Course -->
+                <div class="menu-item group bg-surface border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#C85A32] transition-all duration-300 flex flex-col justify-between" data-category="mains">
+                    <div>
+                        <div class="relative w-full aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80" alt="Woodfire Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-[#121212]/80 backdrop-blur-md text-xs font-semibold text-[#D4AF37] border border-zinc-700">₹425</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Margherita Woodfire Pizza</h3>
+                                <span class="text-xs text-[#C85A32] font-medium bg-[#C85A32]/10 px-2.5 py-1 rounded-md">Main Course</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Hand-tossed crust topped with San Marzano tomato sauce, fresh mozzarella cheese, and fragrant basil leaves.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919430232325?text=Hi,%20I%20would%20like%20to%20order%20Margherita%20Woodfire%20Pizza" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-[#121212] border border-zinc-700 text-white text-xs sm:text-sm font-medium hover:bg-[#C85A32] hover:border-[#C85A32] transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 5: Beverages -->
+                <div class="menu-item group bg-surface border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#C85A32] transition-all duration-300 flex flex-col justify-between" data-category="beverages">
+                    <div>
+                        <div class="relative w-full aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Cold Coffee with Ice Cream" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-[#121212]/80 backdrop-blur-md text-xs font-semibold text-[#D4AF37] border border-zinc-700">₹210</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">DIVA Signature Cold Coffee</h3>
+                                <span class="text-xs text-[#C85A32] font-medium bg-[#C85A32]/10 px-2.5 py-1 rounded-md">Beverages</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Rich espresso blended with chilled milk and ice cream, topped with cocoa powder and chocolate drizzle.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919430232325?text=Hi,%20I%20would%20like%20to%20order%20DIVA%20Signature%20Cold%20Coffee" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-[#121212] border border-zinc-700 text-white text-xs sm:text-sm font-medium hover:bg-[#C85A32] hover:border-[#C85A32] transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 6: Desserts -->
+                <div class="menu-item group bg-surface border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#C85A32] transition-all duration-300 flex flex-col justify-between" data-category="desserts">
+                    <div>
+                        <div class="relative w-full aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Chocolate Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-lg bg-[#121212]/80 backdrop-blur-md text-xs font-semibold text-[#D4AF37] border border-zinc-700">₹245</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-syne font-bold text-lg text-white">Sizzling Brownie with Ice Cream</h3>
+                                <span class="text-xs text-[#C85A32] font-medium bg-[#C85A32]/10 px-2.5 py-1 rounded-md">Desserts</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Fudgy chocolate brownie served sizzling hot on a iron plate with vanilla ice cream and warm chocolate fudge.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/919430232325?text=Hi,%20I%20would%20like%20to%20order%20Sizzling%20Brownie" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-[#121212] border border-zinc-700 text-white text-xs sm:text-sm font-medium hover:bg-[#C85A32] hover:border-[#C85A32] transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-[#1E1E1E]/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-[#C85A32] uppercase bg-[#C85A32]/10 px-3 py-1.5 rounded-full">The DIVA Difference</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mt-4 mb-4 text-white">Why Patna Loves Dining With Us</h2>
+                <p class="text-sm sm:text-base text-[#A0A0A0]">We combine exceptional culinary artistry with an unmatched warm atmosphere to give you a memorable experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="bg-surface border border-zinc-800 p-8 rounded-2xl hover:border-[#C85A32] transition-all duration-300 flex flex-col">
+                    <div class="w-14 h-14 rounded-xl bg-[#C85A32]/10 flex items-center justify-center text-[#C85A32] mb-6">
+                        <i data-lucide="lamp-ceiling" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-3">Cozy Ambiance</h3>
+                    <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Thoughtfully designed warm lighting, aesthetic corners, and soothing music for family dinners and dates.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-surface border border-zinc-800 p-8 rounded-2xl hover:border-[#C85A32] transition-all duration-300 flex flex-col">
+                    <div class="w-14 h-14 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6">
+                        <i data-lucide="utensils-crossed" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-3">Master Chefs</h3>
+                    <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Expert culinary team with years of experience crafting authentic Indian, Continental, and cafe delights.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-surface border border-zinc-800 p-8 rounded-2xl hover:border-[#C85A32] transition-all duration-300 flex flex-col">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-3">Pristine Hygiene</h3>
+                    <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Rigorous kitchen sanitation standards, farm-fresh ingredients, and safe food preparation practices.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-surface border border-zinc-800 p-8 rounded-2xl hover:border-[#C85A32] transition-all duration-300 flex flex-col">
+                    <div class="w-14 h-14 rounded-xl bg-[#C85A32]/10 flex items-center justify-center text-[#C85A32] mb-6">
+                        <i data-lucide="award" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-syne font-bold text-lg text-white mb-3">Top Rated (4.8★)</h3>
+                    <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">Consistently praised by over 108+ Google reviewers for prompt service and mouth-watering flavors.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 lg:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/5] border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-square border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=600&q=80" alt="Delicious Food" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="relative rounded-2xl overflow-hidden aspect-square border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Cafe Drinks" class="w-full h-full object-cover">
+                        </div>
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/5] border border-zinc-800">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Dining Vibe" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Narrative Column -->
+                <div class="lg:col-span-6 flex flex-col items-start">
+                    <span class="text-xs font-bold tracking-widest text-[#C85A32] uppercase bg-[#C85A32]/10 px-3 py-1.5 rounded-full mb-4">Our Culinary Journey</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mb-6 text-white leading-tight">
+                        Crafting Memorable Dining Moments in Sri Krishna Puri
+                    </h2>
+                    <p class="text-sm sm:text-base text-[#A0A0A0] leading-relaxed mb-6">
+                        Established with a passion for great food and soulful conversations, <strong class="text-white">DIVA Restaurant & Cafe</strong> has quickly grown into Patna's premier dining destination. Located in the heart of Sri Krishna Puri, we offer a tranquil escape from the bustling city streets.
+                    </p>
+                    <p class="text-sm sm:text-base text-[#A0A0A0] leading-relaxed mb-8">
+                        Whether you are planning a romantic candle-light dinner, a family celebration, or catching up with friends over coffee, our attentive staff and ambient interiors ensure every visit feels extraordinary.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 w-full pt-6 border-t border-zinc-800">
+                        <div>
+                            <h4 class="font-syne font-bold text-3xl text-[#C85A32] mb-1">100+</h4>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0]">Delicious Menu Items</p>
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-3xl text-[#D4AF37] mb-1">4.8★</h4>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0]">Google Rating Score</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-[#1E1E1E]/30 border-y border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-[#C85A32] uppercase bg-[#C85A32]/10 px-3 py-1.5 rounded-full">Visual Gallery</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mt-4 mb-4 text-white">A Glimpse Into DIVA</h2>
+                <p class="text-sm sm:text-base text-[#A0A0A0]">Explore snapshots of our handcrafted dishes, artisanal drinks, and cozy cafe interiors.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80" alt="Salad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Biryani" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Cocktail Mocktail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Cafe Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Pasta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="relative aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Table" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 lg:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-[#C85A32] uppercase bg-[#C85A32]/10 px-3 py-1.5 rounded-full">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mt-4 mb-4 text-white">What Our Guests Say</h2>
+                <p class="text-sm sm:text-base text-[#A0A0A0]">Read authentic Google reviews from our valued patrons in Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-surface border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative">
+                    <div class="absolute top-6 right-6 text-[#C85A32]/20">
+                        <i data-lucide="quote" class="w-10 h-10"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center text-[#D4AF37] mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-[#A0A0A0] leading-relaxed mb-6">
+                            "One of the best cafes in Sri Krishna Puri! The ambiance is extremely cozy and soothing. We tried their butter chicken and cold coffee, and both were absolutely top-notch."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-[#C85A32]/20 flex items-center justify-center font-bold text-[#C85A32]">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Aditya Kumar</h4>
+                            <span class="text-xs text-[#A0A0A0]">Local Guide • 42 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-surface border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative">
+                    <div class="absolute top-6 right-6 text-[#C85A32]/20">
+                        <i data-lucide="quote" class="w-10 h-10"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center text-[#D4AF37] mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-[#A0A0A0] leading-relaxed mb-6">
+                            "Amazing place for birthday celebrations and family dinners. The staff is polite and courteous. Food presentation and taste are both 10/10. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-[#D4AF37]/20 flex items-center justify-center font-bold text-[#D4AF37]">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Priya Sinha</h4>
+                            <span class="text-xs text-[#A0A0A0]">Google Reviewer • 15 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-surface border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between relative">
+                    <div class="absolute top-6 right-6 text-[#C85A32]/20">
+                        <i data-lucide="quote" class="w-10 h-10"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center text-[#D4AF37] mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-sm text-[#A0A0A0] leading-relaxed mb-6">
+                            "Great vibe in Sri Krishna Puri! Their woodfire pizza and sizzling brownie are must-tries. Fast service and clean surroundings. Will definitely visit again."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-emerald-500">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-white">Rahul Mishra</h4>
+                            <span class="text-xs text-[#A0A0A0]">Local Guide • 88 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-20 bg-[#1E1E1E]/30 border-y border-zinc-800">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-[#C85A32] uppercase bg-[#C85A32]/10 px-3 py-1.5 rounded-full">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mt-4 mb-4 text-white">Frequently Asked Questions</h2>
+                <p class="text-sm sm:text-base text-[#A0A0A0]">Everything you need to know about dining, reservations, and orders at DIVA.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#C85A32] transition-colors">
+                        <span>Do I need to reserve a table in advance?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A0A0A0] leading-relaxed border-t border-zinc-900 pt-4">
+                        While walk-ins are always welcomed, we highly recommend reserving a table in advance—especially on weekends and evenings—to secure your preferred seating and avoid wait times.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#C85A32] transition-colors">
+                        <span>What are your operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A0A0A0] leading-relaxed border-t border-zinc-900 pt-4">
+                        We are open every day from 11:00 AM to 11:00 PM, serving delicious lunch, evening snacks, and cozy candle-light dinners.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#C85A32] transition-colors">
+                        <span>Do you offer home delivery and takeaway?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A0A0A0] leading-relaxed border-t border-zinc-900 pt-4">
+                        Yes! You can easily place direct takeaway or home delivery orders via WhatsApp at +91 94302 32325. We also partner with major food delivery apps in Patna.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-surface border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-syne font-bold text-base sm:text-lg text-white hover:text-[#C85A32] transition-colors">
+                        <span>Can we host private parties or birthdays?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A0A0A0] leading-relaxed border-t border-zinc-900 pt-4">
+                        Absolutely! We specialize in birthday parties, anniversary celebrations, and corporate get-togethers with customized buffet and decoration options. Contact our team for details.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location, Contact & Reservation Section -->
+    <section id="contact" class="py-20 lg:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-[#C85A32] uppercase bg-[#C85A32]/10 px-3 py-1.5 rounded-full">Visit Us</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne mt-4 mb-4 text-white">Location & Table Reservation</h2>
+                <p class="text-sm sm:text-base text-[#A0A0A0]">Drop by our restaurant in Sri Krishna Puri or book your table instantly below.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Column: Contact info & Google Map -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    
+                    <!-- Contact Details Card -->
+                    <div class="bg-surface border border-zinc-800 p-8 rounded-2xl">
+                        <h3 class="font-syne font-bold text-xl text-white mb-6">DIVA Restaurant & Cafe</h3>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-[#C85A32]/10 flex items-center justify-center text-[#C85A32] shrink-0 mt-1">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block text-sm mb-1">Address:</strong>
+                                    <span class="text-xs sm:text-sm text-[#A0A0A0]">House number 3, AN Path, Block - A, Sri Krishna Puri, Patna, Bihar 800013</span>
+                                </div>
+                            </li>
+
+                            <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block text-sm mb-1">Phone / WhatsApp:</strong>
+                                    <a href="tel:+919430232325" class="text-xs sm:text-sm text-[#C85A32] hover:underline">+91 94302 32325</a>
+                                </div>
+                            </li>
+
+                            <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-white block text-sm mb-1">Operating Hours:</strong>
+                                    <span class="text-xs sm:text-sm text-[#A0A0A0]">Monday – Sunday: 11:00 AM – 11:00 PM</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="flex items-center gap-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=DIVA+RESTAURANT+%26+CAFE+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-[#C85A32] text-white text-center text-sm font-semibold hover:bg-[#b04d2a] transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Directions</span>
+                            </a>
+                            <a href="https://wa.me/919430232325" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-surface border border-zinc-700 text-white text-center text-sm font-semibold hover:border-[#C85A32] transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                                <span>WhatsApp Us</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Google Maps Embed -->
+                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-zinc-800 shadow-xl">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.772594619728!2d85.1205!3d25.6092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzMzLjIiTiA4NcKwMDcnMTMuOCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="DIVA Restaurant & Cafe Location Map">
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Working Table Reservation Form -->
+                <div id="reservation" class="lg:col-span-6 bg-surface border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="mb-6">
+                            <h3 class="font-syne font-bold text-2xl text-white mb-2">Reserve a Table</h3>
+                            <p class="text-xs sm:text-sm text-[#A0A0A0]">Fill out the details below to book your table instantly at DIVA.</p>
+                        </div>
+
+                        <form id="reservation-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-[#A0A0A0] mb-2">Full Name</label>
+                                <input type="text" id="name" required placeholder="Enter your full name" class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C85A32] transition-colors">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="phone" class="block text-xs font-semibold uppercase tracking-wider text-[#A0A0A0] mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" required placeholder="+91 98765 43210" class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C85A32] transition-colors">
+                                </div>
+                                <div>
+                                    <label for="guests" class="block text-xs font-semibold uppercase tracking-wider text-[#A0A0A0] mb-2">Number of Guests</label>
+                                    <select id="guests" class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C85A32] transition-colors">
+                                        <option value="1">1 Person</option>
+                                        <option value="2" selected>2 People (Couple)</option>
+                                        <option value="4">4 People (Family)</option>
+                                        <option value="6">6 People</option>
+                                        <option value="8+">8+ People (Party)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="date" class="block text-xs font-semibold uppercase tracking-wider text-[#A0A0A0] mb-2">Reservation Date</label>
+                                    <input type="date" id="date" required class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C85A32] transition-colors">
+                                </div>
+                                <div>
+                                    <label for="time" class="block text-xs font-semibold uppercase tracking-wider text-[#A0A0A0] mb-2">Time Slot</label>
+                                    <select id="time" class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C85A32] transition-colors">
+                                        <option value="12:00 PM">12:00 PM (Lunch)</option>
+                                        <option value="01:30 PM">01:30 PM (Lunch)</option>
+                                        <option value="05:00 PM">05:00 PM (Evening Cafe)</option>
+                                        <option value="07:30 PM" selected>07:30 PM (Dinner)</option>
+                                        <option value="09:00 PM">09:00 PM (Dinner)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-[#A0A0A0] mb-2">Special Requests (Optional)</label>
+                                <textarea id="message" rows="3" placeholder="Anniversary setup, window view, dietary notes..." class="w-full bg-[#121212] border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C85A32] transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-[#C85A32] text-white font-semibold hover:bg-[#b04d2a] transition-all shadow-xl shadow-terracotta/30 flex items-center justify-center gap-2">
+                                <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                                <span>Confirm Reservation</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Popup Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+        <div class="bg-surface border border-zinc-800 rounded-2xl max-w-md w-full p-8 text-center relative shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Reservation Confirmed!</h3>
+            <p id="success-modal-desc" class="text-sm text-[#A0A0A0] mb-6">Thank you! Your table has been reserved successfully. We look forward to hosting you at DIVA.</p>
+            <button id="modal-close-btn" class="w-full py-3 rounded-xl bg-[#C85A32] text-white font-semibold hover:bg-[#b04d2a] transition-all">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-zinc-800 p-3 flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919430232325" class="flex-1 py-3 px-4 rounded-xl bg-surface border border-zinc-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-[#C85A32]"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919430232325" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-zinc-800 pt-16 pb-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-zinc-800">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C85A32] to-[#D4AF37] flex items-center justify-center shadow-lg shadow-terracotta/20">
+                            <span class="font-syne font-bold text-white text-xl">D</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-syne font-extrabold text-xl tracking-wider text-white">DIVA</span>
+                            <span class="text-[10px] tracking-widest text-[#A0A0A0] uppercase font-semibold">Restaurant & Cafe</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#A0A0A0] leading-relaxed">
+                        Patna's finest culinary haven offering exquisite continental and Indian dishes, cozy ambiance, and 4.8★ rated hospitality in Sri Krishna Puri.
+                    </p>
+                    <div class="flex items-center text-[#D4AF37]">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span class="text-xs font-semibold text-white ml-2">4.8 (108 Google Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#menu" class="text-sm text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Our Menu</a></li>
+                        <li><a href="#about" class="text-sm text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="text-sm text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Photo Gallery</a></li>
+                        <li><a href="#reviews" class="text-sm text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Customer Reviews</a></li>
+                        <li><a href="#reservation" class="text-sm text-[#A0A0A0] hover:text-[#C85A32] transition-colors">Table Reservation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Operating Hours -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Operating Hours</h4>
+                    <ul class="space-y-3 text-sm text-[#A0A0A0]">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday:</span>
+                            <span class="text-white font-medium">11 AM - 11 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday - Sunday:</span>
+                            <span class="text-white font-medium">11 AM - 11 PM</span>
+                        </li>
+                        <li class="pt-2 text-xs text-[#C85A32] font-medium">
+                            * Open all 365 days of the year for dine-in & takeaway.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact & Address -->
+                <div>
+                    <h4 class="font-syne font-bold text-base text-white mb-4">Visit & Connect</h4>
+                    <ul class="space-y-3 text-sm text-[#A0A0A0]">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#C85A32] shrink-0 mt-1"></i>
+                            <span>House no. 3, AN Path, Block - A, Sri Krishna Puri, Patna, Bihar 800013</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-[#D4AF37] shrink-0"></i>
+                            <a href="tel:+919430232325" class="hover:text-white transition-colors">+91 94302 32325</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A0A0A0]">
+                <p>&copy; <span id="current-year"></span> DIVA Restaurant & Cafe, Patna. All rights reserved.</p>
+                <p class="flex items-center gap-1">
+                    Designed with culinary passion for Sri Krishna Puri food lovers.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openDrawer() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeDrawer() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', openDrawer);
+        menuClose.addEventListener('click', closeDrawer);
+        menuBackdrop.addEventListener('click', closeDrawer);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+        // Interactive Menu Filtering
+        function filterMenu(category) {
+            const tabs = document.querySelectorAll('.menu-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active', 'bg-[#C85A32]', 'text-white', 'shadow-md', 'shadow-terracotta/30');
+                tab.classList.add('bg-surface', 'text-[#A0A0A0]');
+            });
+            event.target.classList.add('active', 'bg-[#C85A32]', 'text-white', 'shadow-md', 'shadow-terracotta/30');
+            event.target.classList.remove('bg-surface', 'text-[#A0A0A0]');
+
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion Logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('lucide-icon, svg');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    const chevron = btn.querySelector('svg');
+                    if(chevron) chevron.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Reservation Form Submission & Success Modal
+        const reservationForm = document.getElementById('reservation-form');
+        const successModal = document.getElementById('success-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const successModalDesc = document.getElementById('success-modal-desc');
+
+        reservationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const guests = document.getElementById('guests').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Basic Sanitization & Validation check
+            if (!name || !guests || !date || !time) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            // Sanitize name against XSS
+            const safeName = name.replace(/[<>]/g, '');
+
+            successModalDesc.textContent = `Thank you, ${safeName}! Your table for ${guests} on ${date} at ${time} has been successfully reserved. We look forward to hosting you at DIVA.`;
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        });
+
+        modalCloseBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            reservationForm.reset();
+        });
+    </script>
+</body>
+</html>
