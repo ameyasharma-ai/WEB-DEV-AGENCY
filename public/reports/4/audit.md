@@ -14,7 +14,7 @@ I noticed your gym has strong 4.8★ reviews in Patliputra Colony, but your curr
 
 Maine aapke gym ke liye ek custom live website concept design kiya hai — jisme direct WhatsApp trial booking, membership pricing plans, aur batch timings integrate kiye hain:
 
-🔗 https://crossfit.arclanestudios.space/
+🔗 https://www.arclanestudios.space/sites/crossfit/
 
 Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 
