@@ -14,7 +14,7 @@ I noticed your gym has strong 4.5★ reviews from 212+ members in Kadamkuan, Pat
 
 Maine aapke gym ke liye ek custom live website concept design kiya hai — jisme direct WhatsApp trial booking, morning/evening timings, aur workout program showcase integrate kiya hai:
 
-🔗 https://fitnation.arclanestudios.space
+🔗 https://www.arclanestudios.space/sites/fitnation
 
 Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 
