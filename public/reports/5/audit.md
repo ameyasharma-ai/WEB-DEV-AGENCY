@@ -14,7 +14,7 @@ I noticed your gym has stellar 4.9★ reviews from over 100 members in Patliputr
 
 Maine aapke gym ke liye ek custom live website concept design kiya hai — jisme direct WhatsApp trial booking, workout programs, aur batch timings integrate kiye hain:
 
-🔗 https://gymparadox.arclanestudios.space
+🔗 https://www.arclanestudios.space/sites/gymparadox
 
 Aapko overall look aur concept kaisa laga? Would love your honest feedback!
 
