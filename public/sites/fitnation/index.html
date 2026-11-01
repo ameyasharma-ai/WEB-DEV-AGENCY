@@ -43,6 +43,26 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <base href="/sites/fitnation/">
+    <script>
+        // Universal Image Fallback & Path Normalizer
+        window.addEventListener('error', function(e) {
+            if (e.target && e.target.tagName === 'IMG') {
+                var img = e.target;
+                if (!img.dataset.hasFallenBack) {
+                    img.dataset.hasFallenBack = 'true';
+                    var src = img.getAttribute('src') || '';
+                    if (src.includes('assets/')) {
+                        var filename = src.split('assets/').pop();
+                        img.src = '/sites/fitnation/assets/' + filename;
+                        return;
+                    }
+                    img.src = 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80';
+                }
+            }
+        }, true);
+    </script>
+
     <style>
         /* Custom Scrollbar & Utility */
         ::-webkit-scrollbar {
@@ -165,8 +185,8 @@
     <!-- Hero Section -->
     <section class="relative pt-8 pb-16 md:py-24 overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-20">
-            <!-- Authentic Hero Background Image -->
-            <img src="./assets/hero.jpg" alt="Spacious gym floor with equipment" class="w-full h-full object-cover">
+            <!-- Authentic Hero Background Image With Fallback -->
+            <img src="/sites/fitnation/assets/hero.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80';" alt="Spacious gym floor with equipment" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-[#09090B]/80 to-transparent"></div>
         </div>
 
@@ -412,8 +432,8 @@
 
                 <div class="lg:col-span-6">
                     <div class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl aspect-[4/3]">
-                        <!-- Authentic Gallery Image 1 -->
-                        <img src="./assets/gallery-1.jpg" alt="Three members posing in gym" class="w-full h-full object-cover">
+                        <!-- Authentic Gallery Image 1 With Fallback -->
+                        <img src="/sites/fitnation/assets/gallery-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80';" alt="Three members posing in gym" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                             <div>
                                 <span class="px-3 py-1 rounded-md bg-primary text-background font-bold text-xs uppercase">Patna Community</span>

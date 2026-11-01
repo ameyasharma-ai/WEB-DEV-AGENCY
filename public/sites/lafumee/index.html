@@ -43,6 +43,26 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <base href="/sites/lafumee/">
+    <script>
+        // Universal Image Fallback & Path Normalizer
+        window.addEventListener('error', function(e) {
+            if (e.target && e.target.tagName === 'IMG') {
+                var img = e.target;
+                if (!img.dataset.hasFallenBack) {
+                    img.dataset.hasFallenBack = 'true';
+                    var src = img.getAttribute('src') || '';
+                    if (src.includes('assets/')) {
+                        var filename = src.split('assets/').pop();
+                        img.src = '/sites/lafumee/assets/' + filename;
+                        return;
+                    }
+                    img.src = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80';
+                }
+            }
+        }, true);
+    </script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -176,8 +196,8 @@
         <!-- Hero Section -->
         <section class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 bg-[#0A0A0A]">
             <div class="absolute inset-0 z-0 opacity-40">
-                <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED -->
-                <img src="./assets/hero.jpg" alt="Exterior storefront sign for restaurant" class="w-full h-full object-cover">
+                <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED WITH BULLETPROOF FALLBACK -->
+                <img src="/sites/lafumee/assets/hero.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80';" alt="La Fumee Restaurant Ambiance" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-[#0A0A0A]/40"></div>
             </div>
 
@@ -303,7 +323,7 @@
             <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-xs font-semibold uppercase tracking-widest text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The La Fumee Experience</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">Why Patna Loves Dining With Us</h2>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mt-4 mb-4">Why Patna Loves Dining With Us</h2>
                     <p class="text-sm sm:text-base text-zinc-400">From family gatherings to cozy coffee dates, we offer unmatched ambiance, authentic flavors, and exceptional hospitality.</p>
                 </div>
 
@@ -311,8 +331,8 @@
                     <!-- Feature Card 1 -->
                     <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/50 transition-all group">
                         <div class="overflow-hidden rounded-xl mb-6">
-                            <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED -->
-                            <img src="./assets/featured-1.jpg" alt="Close-up of crispy fried rolls" class="w-full h-56 sm:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED WITH FALLBACK -->
+                            <img src="/sites/lafumee/assets/featured-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80';" alt="Crispy & Flavorful Starters" class="w-full h-56 sm:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <h3 class="font-syne font-bold text-xl sm:text-2xl text-white mb-3">Crispy & Flavorful Starters</h3>
                         <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Every starter is prepared fresh upon order, ensuring maximum crunch, authentic spices, and unforgettable taste profiles that set the tone for your meal.</p>
@@ -321,8 +341,8 @@
                     <!-- Feature Card 2 -->
                     <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/50 transition-all group">
                         <div class="overflow-hidden rounded-xl mb-6">
-                            <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED -->
-                            <img src="./assets/featured-2.jpg" alt="Spicy glazed chicken starter dish" class="w-full h-56 sm:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED WITH FALLBACK -->
+                            <img src="/sites/lafumee/assets/featured-2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80';" alt="Signature Glazed Creations" class="w-full h-56 sm:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <h3 class="font-syne font-bold text-xl sm:text-2xl text-white mb-3">Signature Glazed Creations</h3>
                         <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Our master chefs blend traditional Indian spices with modern culinary techniques, resulting in succulent glazed dishes that keep Patna food lovers coming back.</p>
@@ -364,15 +384,15 @@
                     <div class="lg:col-span-6">
                         <div class="relative">
                             <div class="absolute -inset-4 bg-gradient-to-r from-amber-600 to-orange-600 rounded-3xl opacity-20 blur-xl"></div>
-                            <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED -->
+                            <!-- AUTHENTIC BUSINESS PHOTOGRAPHY EMBED WITH FALLBACK -->
                             <div class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
-                                <img src="./assets/gallery-1.jpg" alt="Birthday celebration event in interior" class="w-full h-[400px] object-cover">
+                                <img src="/sites/lafumee/assets/gallery-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80';" alt="La Fumee Dining Room & Party Hall" class="w-full h-[400px] object-cover">
                             </div>
                         </div>
                     </div>
                     <div class="lg:col-span-6 flex flex-col items-start">
                         <span class="text-xs font-semibold uppercase tracking-widest text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-4">Our Heart & Soul</span>
-                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">Redefining Dining in Patna Since Inception</h2>
+                        <h2 class="break-words text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">Redefining Dining in Patna Since Inception</h2>
                         <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">
                             Located right opposite Cimage on Boring Road, La Fumee has grown to become Patna's preferred destination for casual dining, birthday celebrations, and cozy evening hangouts.
                         </p>
@@ -843,7 +863,7 @@
                 card.innerHTML = `
                     <div>
                         <div class="relative h-48 sm:h-52 overflow-hidden">
-                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="${item.image}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80';" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             ${item.badge ? `<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-600 text-white text-[10px] font-bold uppercase tracking-wider shadow">${item.badge}</span>` : ''}
                         </div>
                         <div class="p-5">
