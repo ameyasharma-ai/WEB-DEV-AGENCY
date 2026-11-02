@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden scroll-smooth">
-<head>
-    <base href="/sites/manipal/">
-    <script>
-      window.addEventListener('error', function(e) {
-        if (e.target && e.target.tagName === 'IMG') {
-          var img = e.target;
-          if (!img.dataset.hasFallenBack) {
-            img.dataset.hasFallenBack = 'true';
-            var src = img.getAttribute('src') || '';
-            if (src.includes('assets/')) {
-              var fName = src.split('assets/').pop();
-              img.src = '/sites/manipal/assets/' + fName;
-              return;
-            }
-            img.src = 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80';
-          }
-        }
-      }, true);
-    </script>
-    <!-- ArcLane Zero-Vulnerability Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>✂️</text></svg>">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Manipal Dental Clinic | Best Dental & Orthodontic Clinic in Boring Road, Patna</title>
-    <meta name="description" content="Manipal Dental Clinic in Boring Road, Patna offers 19+ years of expert dental care, painless root canals, orthodontics, and dental implants. Led by Dr. Sanjay Kumar Singh. 4.9★ rated. Book an appointment today!">
+<html lang="en" class="scroll-smooth overflow-x-hidden"><head>
+    <base href="/sites/manipaldental/">
     
+    <!-- ArcLane Responsive Typography & Distortion Prevention Guard -->
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+      img, svg, video, canvas, audio, iframe, embed, object {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/&gt;&lt;text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22&gt;✂️&lt;/text&gt;&lt;/svg&gt;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipal Dental Clinic | Best Dental Clinic &amp; Orthodontics in Boring Road Patna</title>
+    <meta name="description" content="Manipal Dental Clinic led by Dr. Sanjay Kumar Singh (MDS Orthodontist) offers painless RCT, dental implants, braces, and advanced dental care at Boring Road, Patna. 4.9★ rated with 19+ years experience.">
+    
+    <!-- Security & CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -38,22 +36,25 @@
                 extend: {
                     colors: {
                         medical: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a',
+                            DEFAULT: '#0D9488',
+                            dark: '#0F766E',
+                            light: '#CCFBF1',
+                            surface: '#F8FAFC'
                         },
                         slate: {
-                            850: '#1e293b',
-                            900: '#0f172a',
+                            900: '#0F172A',
+                            800: '#1E293B',
+                            700: '#334155',
+                            600: '#475569',
+                            500: '#64748B',
+                            200: '#E2E8F0',
+                            100: '#F1F5F9',
+                            50: '#F8FAFC'
                         }
                     },
                     fontFamily: {
                         'plus-jakarta': ['"Plus Jakarta Sans"', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif'],
+                        'inter': ['"Inter"', 'sans-serif']
                     }
                 }
             }
@@ -62,8 +63,8 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -78,852 +79,884 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
-</head>
-<body class="overflow-x-hidden pb-28 md:pb-0">
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-4{bottom:1rem}.left-0{left:0px}.left-4{left:1rem}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.top-11{top:2.75rem}.top-4{top:1rem}.z-40{z-index:40}.z-50{z-index:50}.z-\[100\]{z-index:100}.z-\[110\]{z-index:110}.z-\[90\]{z-index:90}.col-span-1{grid-column:span 1 / span 1}.mx-auto{margin-left:auto;margin-right:auto}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.ml-2{margin-left:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-72{height:18rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[400px\]{height:400px}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-95{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.whitespace-nowrap{white-space:nowrap}.break-words{overflow-wrap:break-word}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.rounded-tl-3xl{border-top-left-radius:1.5rem}.border{border-width:1px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-medical\/20{border-color:rgb(13 148 136 / 0.2)}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-teal-500\/20{border-color:rgb(20 184 166 / 0.2)}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-black\/70{background-color:rgb(0 0 0 / 0.7)}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-medical{--tw-bg-opacity:1;background-color:rgb(13 148 136 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/90{background-color:rgb(15 23 42 / 0.9)}.bg-teal-100{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500\/10{background-color:rgb(20 184 166 / 0.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-teal-50\/50{--tw-gradient-from:rgb(240 253 250 / 0.5) var(--tw-gradient-from-position);--tw-gradient-to:rgb(240 253 250 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-slate-50{--tw-gradient-to:rgb(248 250 252 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #F8FAFC var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-slate-50{--tw-gradient-to:#F8FAFC var(--tw-gradient-to-position)}.fill-amber-500{fill:#f59e0b}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-12{padding-bottom:3rem}.pb-16{padding-bottom:4rem}.pb-24{padding-bottom:6rem}.pb-6{padding-bottom:1.5rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.font-inter{font-family:"Inter", sans-serif}.font-plus-jakarta{font-family:"Plus Jakarta Sans", sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.15\]{line-height:1.15}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-medical{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emerald-600\/20{--tw-shadow-color:rgb(5 150 105 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-medical\/20{--tw-shadow-color:rgb(13 148 136 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-medical\/25{--tw-shadow-color:rgb(13 148 136 / 0.25);--tw-shadow:var(--tw-shadow-colored)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-medical:hover{--tw-border-opacity:1;border-color:rgb(13 148 136 / var(--tw-border-opacity, 1))}.hover\:border-medical\/50:hover{border-color:rgb(13 148 136 / 0.5)}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-700:hover{--tw-bg-opacity:1;background-color:rgb(4 120 87 / var(--tw-bg-opacity, 1))}.hover\:bg-medical-dark:hover{--tw-bg-opacity:1;background-color:rgb(15 118 110 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:text-medical:hover{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.hover\:text-medical-dark:hover{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.hover\:text-medical-light:hover{--tw-text-opacity:1;color:rgb(204 251 241 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-medical:focus{--tw-border-opacity:1;border-color:rgb(13 148 136 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-medical{--tw-bg-opacity:1;background-color:rgb(13 148 136 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:top-12{top:3rem}.sm\:col-span-1{grid-column:span 1 / span 1}.sm\:inline{display:inline}.sm\:max-w-sm{max-width:24rem}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:p-10{padding:2.5rem}.sm\:p-5{padding:1.25rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:pb-0{padding-bottom:0px}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:h-\[400px\]{height:400px}.lg\:h-\[480px\]{height:480px}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:gap-12{gap:3rem}.lg\:gap-4{gap:1rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:pb-24{padding-bottom:6rem}.lg\:pt-16{padding-top:4rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width: 1280px){.xl\:inline-block{display:inline-block}.xl\:gap-8{gap:2rem}}</style></head>
+<body class="overflow-x-hidden pb-24 md:pb-0">
 
-    <!-- Mobile Menu Backdrop -->
-    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
 
     <!-- Announcement Bar -->
-    <div class="bg-medical-900 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3">
-            <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-medical-300"></i> Mon - Sat: 9:30 AM - 8:30 PM | Sun: 10:00 AM - 2:00 PM</span>
-            <span class="hidden sm:inline text-medical-400">|</span>
-            <a href="tel:+918969566559" class="underline hover:text-medical-200 transition-colors flex items-center gap-1">
-                <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> Emergency Helpline: +91 89695 66559
-            </a>
-        </div>
+    <div class="bg-slate-900 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2 relative z-50">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Open Today till 8:00 PM • Boring Road, Patna</span>
+        <a href="tel:+918969566559" class="underline hover:text-medical-light ml-2 hidden sm:inline font-semibold">Call +91 89695 66559</a>
     </div>
 
-    <!-- 100% Solid Opaque Sticky Header -->
-    <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- 100% Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-xl bg-medical-600 flex items-center justify-center text-white shadow-md shadow-medical-600/20 group-hover:scale-105 transition-transform">
-                    <i data-lucide="activity" class="w-6 h-6"></i>
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group whitespace-nowrap shrink-0">
+                <div class="w-11 h-11 rounded-xl bg-teal-50 border border-medical/20 flex items-center justify-center text-medical shadow-inner group-hover:scale-105 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cross" aria-hidden="true" class="lucide lucide-cross w-6 h-6"><path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path></svg>
                 </div>
                 <div>
-                    <span class="text-xl sm:text-2xl font-extrabold font-plus-jakarta tracking-tight text-slate-900 block leading-tight">Manipal Dental</span>
-                    <span class="text-xs font-semibold text-medical-600 uppercase tracking-widest block">Clinic & Orthodontics</span>
+                    <span class="text-lg sm:text-xl font-bold font-plus-jakarta text-slate-900 tracking-tight block leading-tight whitespace-nowrap">Manipal Dental</span>
+                    <span class="text-xs text-medical font-semibold tracking-wider uppercase block whitespace-nowrap">Clinic &amp; Orthodontics</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
-                <a href="#services" class="hover:text-medical-600 transition-colors">Services</a>
-                <a href="#doctor" class="hover:text-medical-600 transition-colors">Our Expert</a>
-                <a href="#why-us" class="hover:text-medical-600 transition-colors">Why Choose Us</a>
-                <a href="#reviews" class="hover:text-medical-600 transition-colors">Reviews</a>
-                <a href="#contact" class="hover:text-medical-600 transition-colors">Location & Contact</a>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-3 lg:gap-4 xl:gap-8 font-medium text-slate-700 shrink">
+                <a href="#services" class="hover:text-medical transition-colors whitespace-nowrap shrink-0">Services</a>
+                <a href="#doctor" class="hover:text-medical transition-colors whitespace-nowrap shrink-0">Meet Dr. Singh</a>
+                <a href="#reviews" class="hover:text-medical transition-colors whitespace-nowrap hidden xl:inline-block shrink-0">Reviews</a>
+                <a href="#why-us" class="hover:text-medical transition-colors whitespace-nowrap hidden xl:inline-block shrink-0">Why Us</a>
+                <a href="#contact" class="hover:text-medical transition-colors whitespace-nowrap shrink-0">Location &amp; Contact</a>
             </nav>
 
-            <!-- Header Action Buttons -->
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="https://wa.me/918969566559?text=Hello%20Manipal%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-medical-600 text-medical-600 hover:bg-medical-50 font-semibold text-sm transition-all shadow-sm">
-                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i> WhatsApp
+            <!-- Desktop Header CTAs -->
+            <div class="hidden md:flex items-center gap-3 shrink-0 flex-nowrap gap-2 sm:gap-3">
+                <a href="tel:+918969566559" class="whitespace-nowrap shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 text-slate-800 hover:border-medical hover:text-medical font-semibold text-sm transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    <span class="whitespace-nowrap">+91 89695 66559</span>
                 </a>
-                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-semibold text-sm transition-all shadow-md shadow-medical-600/25">
-                    <i data-lucide="calendar" class="w-4 h-4"></i> Book Visit
+                <a href="https://wa.me/918969566559?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Manipal%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" class="whitespace-nowrap shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl bg-medical hover:bg-medical-dark text-white font-semibold text-sm shadow-md shadow-medical/20 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-square" aria-hidden="true" class="lucide lucide-message-square w-4 h-4"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+                    <span class="whitespace-nowrap">WhatsApp</span>
                 </a>
             </div>
 
             <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center">
-                <i data-lucide="menu" class="w-7 h-7"></i>
+            <button id="hamburger-btn" class="whitespace-nowrap shrink-0 lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none" aria-label="Toggle Navigation Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-7 h-7"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
             </button>
         </div>
     </header>
 
-    <!-- Flawless Mobile Drawer Menu -->
-    <div id="mobile-menu" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-t border-zinc-800 text-white p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto rounded-tl-2xl">
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-white border-l border-slate-200 rounded-tl-3xl p-6 pt-8 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
         <div>
             <div class="flex items-center justify-between pb-6 border-b border-slate-100">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-medical-600 flex items-center justify-center text-white">
-                        <i data-lucide="activity" class="w-5 h-5"></i>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-teal-50 flex items-center justify-center text-medical">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cross" aria-hidden="true" class="lucide lucide-cross w-5 h-5"><path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path></svg>
                     </div>
-                    <span class="font-bold text-lg text-slate-900">Manipal Dental</span>
+                    <div>
+                        <span class="font-bold text-slate-900 block leading-tight">Manipal Dental</span>
+                        <span class="text-[11px] text-medical font-semibold uppercase">Patna</span>
+                    </div>
                 </div>
-                <button id="close-btn" aria-label="Close Menu" class="p-2 rounded-xl text-slate-500 hover:bg-slate-100 min-h-[48px] min-w-[48px] flex items-center justify-center">
-                    <i data-lucide="x" class="w-6 h-6"></i>
+                <button id="close-drawer" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100" aria-label="Close menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
                 </button>
             </div>
-            
-            <nav class="flex flex-col gap-4 pt-6 text-base font-semibold text-slate-800">
-                <a href="#services" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-medical-50 hover:text-medical-600 transition-colors">
-                    <span>Services</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#doctor" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-medical-50 hover:text-medical-600 transition-colors">
-                    <span>Our Expert</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#why-us" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-medical-50 hover:text-medical-600 transition-colors">
-                    <span>Why Choose Us</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#reviews" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-medical-50 hover:text-medical-600 transition-colors">
-                    <span>Patient Reviews</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#contact" class="mobile-link flex items-center justify-between p-2 rounded-lg hover:bg-medical-50 hover:text-medical-600 transition-colors">
-                    <span>Location & Contact</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
+
+            <nav class="flex flex-col gap-4 pt-6 font-medium text-slate-700 text-lg">
+                <a href="#services" class="mobile-nav-link flex items-center justify-between py-2 hover:text-medical"><span>Services</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#doctor" class="mobile-nav-link flex items-center justify-between py-2 hover:text-medical"><span>Meet Dr. Singh</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#reviews" class="mobile-nav-link flex items-center justify-between py-2 hover:text-medical"><span>Patient Reviews</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#why-us" class="mobile-nav-link flex items-center justify-between py-2 hover:text-medical"><span>Why Choose Us</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#contact" class="mobile-nav-link flex items-center justify-between py-2 hover:text-medical"><span>Location &amp; Map</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg></a>
             </nav>
         </div>
 
         <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
-            <a href="https://wa.me/918969566559?text=Hello%20Manipal%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-medical-600 text-medical-600 font-semibold text-base min-h-[48px]">
-                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i> Chat on WhatsApp
+            <a href="tel:+918969566559" class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 bg-slate-900 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg> Call +91 89695 66559
             </a>
-            <a href="tel:+918969566559" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-medical-600 text-white font-semibold text-base min-h-[48px] shadow-md shadow-medical-600/25">
-                <i data-lucide="phone-call" class="w-5 h-5"></i> Call +91 89695 66559
+            <a href="https://wa.me/918969566559?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 bg-emerald-600 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-square" aria-hidden="true" class="lucide lucide-message-square w-4 h-4"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg> Chat on WhatsApp
             </a>
         </div>
     </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-gradient-to-b from-white to-slate-50">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Hero Content -->
-                    <div class="lg:col-span-7 flex flex-col items-start text-left">
-                        <!-- Rating Badge -->
-                        <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-full mb-6">
-                            <div class="flex items-center text-amber-500">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            </div>
-                            <span class="text-xs sm:text-sm font-bold text-amber-900">4.9 ★ (786+ Verified Google Reviews)</span>
-                        </div>
-
-                        <!-- Main H1 Headline -->
-                        <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-plus-jakarta text-slate-900 leading-[1.15] mb-6 break-words">
-                            Advanced Dental Care & <span class="text-medical-600">Orthodontics</span> in Boring Road, Patna
-                        </h1>
-
-                        <!-- Value Proposition Subheadline -->
-                        <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl break-words">
-                            Experience state-of-the-art, painless dental treatments backed by 19+ years of clinical excellence. From precision orthodontics to painless root canals and implants, your perfect smile is in expert hands.
-                        </p>
-
-                        <!-- CTA Group -->
-                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-                            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-base transition-all shadow-lg shadow-medical-600/30 hover:scale-[1.02] min-h-[52px]">
-                                <i data-lucide="calendar-check" class="w-5 h-5"></i> Book Your Visit
-                            </a>
-                            <a href="https://wa.me/918969566559?text=Hello%20Manipal%20Dental%20Clinic,%20I%20would%20like%20to%20consult%20about%20dental%20treatments." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-slate-300 hover:border-emerald-600 hover:bg-emerald-50 text-slate-800 hover:text-emerald-700 font-bold text-base transition-all min-h-[52px]">
-                                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i> Chat on WhatsApp
-                            </a>
-                        </div>
-
-                        <!-- Highlights Micro-Bar -->
-                        <div class="grid grid-cols-3 gap-4 pt-10 mt-10 border-t border-slate-200 w-full">
-                            <div>
-                                <span class="block text-xl sm:text-2xl font-extrabold text-slate-900">19+</span>
-                                <span class="text-xs sm:text-sm text-slate-500 font-medium">Years Experience</span>
-                            </div>
-                            <div>
-                                <span class="block text-xl sm:text-2xl font-extrabold text-slate-900">5,000+</span>
-                                <span class="text-xs sm:text-sm text-slate-500 font-medium">Happy Smiles</span>
-                            </div>
-                            <div>
-                                <span class="block text-xl sm:text-2xl font-extrabold text-slate-900">100%</span>
-                                <span class="text-xs sm:text-sm text-slate-500 font-medium">Painless Care</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hero Visual Image (Authentic Asset Mandate) -->
-                    <div class="lg:col-span-5 relative">
-                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-square bg-slate-100">
-                            <!-- EMBEDDED AUTHENTIC BUSINESS PHOTO -->
-                            <img src="/sites/manipal/assets/hero.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80';" alt="Wide view of dental clinic interior at Manipal Dental Clinic Patna" class="w-full h-full object-cover">
-                        </div>
-                        <!-- Floating Badge -->
-                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden sm:flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600">
-                                <i data-lucide="shield-check" class="w-7 h-7"></i>
-                            </div>
-                            <div>
-                                <span class="block font-bold text-sm text-slate-900">Verified & Trusted</span>
-                                <span class="text-xs text-slate-500">Verma Centre, Boring Road</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Trust & Social Proof Bar -->
-        <section class="bg-medical-900 text-white py-12">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-medical-800 flex items-center justify-center mb-3 text-medical-300">
-                            <i data-lucide="star" class="w-6 h-6 fill-medical-300"></i>
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold">4.9 / 5.0</h3>
-                        <p class="text-xs sm:text-sm text-medical-200 mt-1">786+ Google Reviews</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-medical-800 flex items-center justify-center mb-3 text-medical-300">
-                            <i data-lucide="award" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold">19+ Years</h3>
-                        <p class="text-xs sm:text-sm text-medical-200 mt-1">Clinical Mastery</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-medical-800 flex items-center justify-center mb-3 text-medical-300">
-                            <i data-lucide="users" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold">5,000+</h3>
-                        <p class="text-xs sm:text-sm text-medical-200 mt-1">Successful Treatments</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-medical-800 flex items-center justify-center mb-3 text-medical-300">
-                            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold">Painless</h3>
-                        <p class="text-xs sm:text-sm text-medical-200 mt-1">Advanced Technology</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Grid Section -->
-        <section id="services" class="py-20 bg-slate-50">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-medical-600 font-bold uppercase tracking-wider text-xs sm:text-sm bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Our Comprehensive Services</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mt-3 mb-4">Advanced Dental Solutions Tailored For You</h2>
-                    <p class="text-slate-600 text-base">We combine cutting-edge dental technology with gentle, patient-focused care to ensure optimum dental health.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Service Card 1 (Authentic Asset Mandate) -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:border-medical-300 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <!-- EMBEDDED AUTHENTIC BUSINESS PHOTO -->
-                            <div class="overflow-hidden rounded-xl mb-4">
-                                <img src="/sites/manipal/assets/featured-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80';" alt="Consultation desk with treatment charts at Manipal Dental Clinic" class="w-full h-48 sm:h-56 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-4 group-hover:bg-medical-600 group-hover:text-white transition-colors">
-                                <i data-lucide="smile" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Orthodontics & Braces</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Straighten misaligned teeth and correct bite issues with traditional braces, ceramic braces, and modern clear aligners.</p>
-                        </div>
-                        <a href="#contact" class="inline-flex items-center gap-2 text-medical-600 font-bold text-sm hover:text-medical-700">
-                            Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 2 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:border-medical-300 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="overflow-hidden rounded-xl mb-4">
-                                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=600" alt="Root Canal Treatment" class="w-full h-48 sm:h-56 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-4 group-hover:bg-medical-600 group-hover:text-white transition-colors">
-                                <i data-lucide="zap" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Root Canal Treatment (RCT)</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Advanced single-visit and painless root canal treatments using rotary endodontics to save infected or decayed teeth.</p>
-                        </div>
-                        <a href="#contact" class="inline-flex items-center gap-2 text-medical-600 font-bold text-sm hover:text-medical-700">
-                            Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 3 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:border-medical-300 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="overflow-hidden rounded-xl mb-4">
-                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600" alt="Dental Implants" class="w-full h-48 sm:h-56 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-4 group-hover:bg-medical-600 group-hover:text-white transition-colors">
-                                <i data-lucide="cpu" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Dental Implants</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Permanent, natural-looking tooth replacement solutions that restore full chewing function and facial aesthetics.</p>
-                        </div>
-                        <a href="#contact" class="inline-flex items-center gap-2 text-medical-600 font-bold text-sm hover:text-medical-700">
-                            Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 4 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:border-medical-300 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="overflow-hidden rounded-xl mb-4">
-                                <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&q=80&w=600" alt="Cosmetic Dentistry" class="w-full h-48 sm:h-56 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-4 group-hover:bg-medical-600 group-hover:text-white transition-colors">
-                                <i data-lucide="sparkles" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Cosmetic Dentistry</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Transform your smile with professional teeth whitening, porcelain veneers, dental crowns, and smile makeovers.</p>
-                        </div>
-                        <a href="#contact" class="inline-flex items-center gap-2 text-medical-600 font-bold text-sm hover:text-medical-700">
-                            Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 5 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:border-medical-300 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="overflow-hidden rounded-xl mb-4">
-                                <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600" alt="Pediatric Dentistry" class="w-full h-48 sm:h-56 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-4 group-hover:bg-medical-600 group-hover:text-white transition-colors">
-                                <i data-lucide="heart" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Pediatric Dentistry</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Gentle, child-friendly dental care focusing on cavity prevention, sealants, and early habit correction in a stress-free environment.</p>
-                        </div>
-                        <a href="#contact" class="inline-flex items-center gap-2 text-medical-600 font-bold text-sm hover:text-medical-700">
-                            Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                    <!-- Service Card 6 -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-xl hover:border-medical-300 transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="overflow-hidden rounded-xl mb-4">
-                                <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=600" alt="Jaw Treatments" class="w-full h-48 sm:h-56 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-4 group-hover:bg-medical-600 group-hover:text-white transition-colors">
-                                <i data-lucide="activity" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Jaw & TMJ Treatments</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Specialized diagnosis and therapy for jaw clicking, TMJ pain, bruxism (teeth grinding), and corrective surgical opinions.</p>
-                        </div>
-                        <a href="#contact" class="inline-flex items-center gap-2 text-medical-600 font-bold text-sm hover:text-medical-700">
-                            Book Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Meet Dr. Sanjay Kumar Singh Section -->
-        <section id="doctor" class="py-20 bg-white border-y border-slate-200">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Doctor Image / Gallery Showcase -->
-                    <div class="lg:col-span-5 relative">
-                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-50 aspect-[4/5] bg-slate-100">
-                            <!-- EMBEDDED AUTHENTIC BUSINESS PHOTO -->
-                            <img src="/sites/manipal/assets/gallery-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80';" alt="Panoramic view of clinic treatment room at Manipal Dental Clinic Patna" class="w-full h-full object-cover">
-                        </div>
-                        <div class="absolute -bottom-6 -right-6 bg-medical-900 text-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
-                            <span class="block text-2xl font-extrabold font-plus-jakarta text-medical-300">19+ Years</span>
-                            <span class="text-xs text-slate-300">Of dedicated clinical experience in advanced orthodontics & dental surgery.</span>
-                        </div>
-                    </div>
-
-                    <!-- Doctor Bio & Philosophy -->
-                    <div class="lg:col-span-7 flex flex-col items-start">
-                        <span class="text-medical-600 font-bold uppercase tracking-wider text-xs sm:text-sm bg-medical-50 px-3 py-1 rounded-full border border-medical-200 mb-4">Lead Orthodontist & Founder</span>
-                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mb-2">Dr. Sanjay Kumar Singh</h2>
-                        <p class="text-medical-700 font-semibold text-base mb-6">MDS - Orthodontics & Dentofacial Orthopedics</p>
-
-                        <p class="text-slate-600 text-base leading-relaxed mb-6">
-                            Dr. Sanjay Kumar Singh is a renowned dental surgeon and specialized orthodontist with over 19 years of extensive clinical practice in Patna. Known for his meticulous precision, gentle demeanor, and patient-first philosophy, he has successfully transformed thousands of smiles.
-                        </p>
-
-                        <p class="text-slate-600 text-base leading-relaxed mb-8">
-                            At Manipal Dental Clinic, Dr. Singh believes that visiting the dentist should be a comfortable, anxiety-free experience. He stays at the forefront of modern dentistry through continuous education and adoption of state-of-the-art equipment.
-                        </p>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-8">
-                            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
-                                <div class="text-medical-600 mt-0.5"><i data-lucide="check-circle" class="w-5 h-5"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-sm text-slate-900">MDS Specialist</h4>
-                                    <p class="text-xs text-slate-500 mt-0.5">Expert in braces & alignment</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
-                                <div class="text-medical-600 mt-0.5"><i data-lucide="check-circle" class="w-5 h-5"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-sm text-slate-900">Patient-First Care</h4>
-                                    <p class="text-xs text-slate-500 mt-0.5">Zero-pain clinical protocols</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="#contact" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-sm transition-all shadow-md shadow-medical-600/25">
-                            <i data-lucide="calendar" class="w-4 h-4"></i> Schedule Consultation with Dr. Singh
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us Section -->
-        <section id="why-us" class="py-20 bg-slate-50">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-medical-600 font-bold uppercase tracking-wider text-xs sm:text-sm bg-medical-50 px-3 py-1 rounded-full border border-medical-200">The Manipal Difference</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mt-3 mb-4">Why Patients in Patna Trust Us</h2>
-                    <p class="text-slate-600 text-base">We go above and beyond to provide world-class dental care in a welcoming, hygienic, and comforting environment.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-5">
-                            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Painless Procedures</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Advanced local anesthesia techniques and gentle dental machinery ensure maximum comfort during all procedures.</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-5">
-                            <i data-lucide="cpu" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Modern Technology</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Equipped with state-of-the-art diagnostic imaging, rotary endodontics, and UV-sterilized clinical equipment.</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-5">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Strict Hygiene Standards</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Hospital-grade sterilization protocols and single-use disposables guarantee 100% infection-free safety.</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                        <div class="w-12 h-12 rounded-xl bg-medical-50 text-medical-600 flex items-center justify-center mb-5">
-                            <i data-lucide="user-check" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">19+ Years Expertise</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Decades of proven clinical mastery delivering exceptional outcomes for routine checks to complex jaw surgeries.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Patient Reviews Section -->
-        <section id="reviews" class="py-20 bg-white border-y border-slate-200">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-medical-600 font-bold uppercase tracking-wider text-xs sm:text-sm bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Patient Testimonials</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mt-3 mb-4">Loved By 786+ Patients on Google</h2>
-                    <p class="text-slate-600 text-base">Read genuine experiences from patients who visited Manipal Dental Clinic in Boring Road, Patna.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-                    <!-- Review 1 -->
-                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center text-amber-500 mb-4">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            </div>
-                            <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
-                                "Dr. Sanjay Kumar Singh is an exceptional dentist. I had a root canal treatment done and it was completely painless. The clinic is extremely clean and well-maintained. Highly recommended!"
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
-                            <div class="w-10 h-10 rounded-full bg-medical-600 text-white font-bold flex items-center justify-center text-sm">
-                                UN
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-sm text-slate-900">Umesh Nepali</h4>
-                                <span class="text-xs text-slate-500">Google Verified Review</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review 2 -->
-                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center text-amber-500 mb-4">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            </div>
-                            <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
-                                "Best dental clinic in Boring Road! Got my braces treatment done here. Dr. Singh explained every step clearly and the results are fantastic. Very polite and professional staff."
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
-                            <div class="w-10 h-10 rounded-full bg-medical-600 text-white font-bold flex items-center justify-center text-sm">
-                                RK
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-sm text-slate-900">Rajesh Kumar</h4>
-                                <span class="text-xs text-slate-500">Google Verified Review</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review 3 -->
-                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center text-amber-500 mb-4">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            </div>
-                            <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
-                                "Very hygienic clinic near Verma Centre. I brought my mother for dental implants and the procedure went smoothly without any complications. Thank you Manipal Dental Clinic!"
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
-                            <div class="w-10 h-10 rounded-full bg-medical-600 text-white font-bold flex items-center justify-center text-sm">
-                                AK
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-sm text-slate-900">Anjali Kumari</h4>
-                                <span class="text-xs text-slate-500">Google Verified Review</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Accordion Section -->
-        <section class="py-20 bg-slate-50">
-            <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <span class="text-medical-600 font-bold uppercase tracking-wider text-xs sm:text-sm bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Got Questions?</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mt-3 mb-4">Frequently Asked Questions</h2>
-                    <p class="text-slate-600 text-base">Find clear answers to common questions about our dental treatments and procedures.</p>
-                </div>
-
-                <div class="space-y-4">
-                    
-                    <!-- FAQ 1 -->
-                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:text-medical-600 transition-colors">
-                            <span class="text-base sm:text-lg">Are root canal treatments at Manipal Dental Clinic painful?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
-                            Not at all! With modern rotary endodontics and effective local anesthesia, root canal treatments at our clinic are virtually painless. Most patients experience immediate relief from toothache.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 2 -->
-                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:text-medical-600 transition-colors">
-                            <span class="text-base sm:text-lg">How long does an orthodontic braces treatment take?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
-                            The duration of braces treatment typically ranges from 12 to 24 months, depending on the complexity of the alignment required. Dr. Sanjay Kumar Singh provides a precise timeline during your initial consultation.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:text-medical-600 transition-colors">
-                            <span class="text-base sm:text-lg">Do I need an appointment before visiting the clinic?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
-                            While walk-ins are welcome, booking an appointment via phone or WhatsApp beforehand ensures you receive prompt attention without waiting time.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-slate-900 hover:text-medical-600 transition-colors">
-                            <span class="text-base sm:text-lg">Where is Manipal Dental Clinic located in Patna?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
-                            We are conveniently located on the First Floor, Verma Centre, 102, Boring Road, beside the petrol pump crossing/chauraha, Sri Krishna Puri, Patna, Bihar 800001.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Location & Contact Section -->
-        <section id="contact" class="py-20 bg-white border-t border-slate-200">
-            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-medical-600 font-bold uppercase tracking-wider text-xs sm:text-sm bg-medical-50 px-3 py-1 rounded-full border border-medical-200">Get In Touch</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mt-3 mb-4">Visit Our Clinic or Book Appointment</h2>
-                    <p class="text-slate-600 text-base">We are conveniently located in the heart of Boring Road, Patna. Reach out to schedule your visit.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- Contact Info & Hours & Map -->
-                    <div class="lg:col-span-6 flex flex-col justify-between space-y-8">
-                        
-                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-6">
-                            <h3 class="text-xl font-bold text-slate-900">Clinic Information</h3>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-medical-100 text-medical-600 flex items-center justify-center shrink-0 mt-1">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-sm text-slate-900">Address</h4>
-                                    <p class="text-slate-600 text-sm mt-1 leading-relaxed">First Floor, Verma Centre, 102, Boring Rd, beside petrol pump, crossing, chauraha, Sri Krishna Puri, Patna, Bihar 800001</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-medical-100 text-medical-600 flex items-center justify-center shrink-0 mt-1">
-                                    <i data-lucide="phone-call" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-sm text-slate-900">Phone & WhatsApp</h4>
-                                    <a href="tel:+918969566559" class="text-medical-600 font-semibold text-sm mt-1 block hover:underline">+91 89695 66559</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-medical-100 text-medical-600 flex items-center justify-center shrink-0 mt-1">
-                                    <i data-lucide="clock" class="w-5 h-5"></i>
-                                </div>
-                                <div class="w-full">
-                                    <h4 class="font-bold text-sm text-slate-900 mb-2">Operating Hours</h4>
-                                    <div class="flex justify-between text-xs sm:text-sm text-slate-600 py-1 border-b border-slate-200">
-                                        <span>Monday - Saturday</span>
-                                        <span class="font-semibold text-slate-900">9:30 AM - 8:30 PM</span>
-                                    </div>
-                                    <div class="flex justify-between text-xs sm:text-sm text-slate-600 py-1 pt-2">
-                                        <span>Sunday</span>
-                                        <span class="font-semibold text-slate-900">10:00 AM - 2:00 PM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Google Maps Embed -->
-                        <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-sm h-72">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778536342672!2d85.12234!3d25.61054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef1a55555%3A0x2a9e336b9e28989a!2sManipal%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"
-                                title="Manipal Dental Clinic Location Map">
-                            </iframe>
-                        </div>
-                        <a href="https://maps.google.com/?q=Manipal+Dental+Clinic+Boring+Road+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-slate-300 hover:bg-slate-50 font-bold text-sm text-slate-800 transition-colors">
-                            <i data-lucide="navigation" class="w-4 h-4 text-medical-600"></i> Get Directions on Google Maps
-                        </a>
-
-                    </div>
-
-                    <!-- Appointment Booking Form -->
-                    <div class="lg:col-span-6 bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200">
-                        <h3 class="text-2xl font-bold font-plus-jakarta text-slate-900 mb-2">Book Your Appointment</h3>
-                        <p class="text-slate-600 text-sm mb-8">Fill out the form below and our team will get back to you instantly to confirm your slot.</p>
-
-                        <form id="appointment-form" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Full Name *</label>
-                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-600 focus:border-medical-600 outline-none bg-white text-sm" placeholder="Enter your full name">
-                            </div>
-
-                            <div>
-                                <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Phone Number *</label>
-                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-600 focus:border-medical-600 outline-none bg-white text-sm" placeholder="Enter your 10-digit phone number">
-                            </div>
-
-                            <div>
-                                <label for="service" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Select Service *</label>
-                                <select id="service" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-600 focus:border-medical-600 outline-none bg-white text-sm">
-                                    <option value="" disabled selected>Choose a dental service</option>
-                                    <option value="Orthodontics & Braces">Orthodontics & Braces</option>
-                                    <option value="Root Canal Treatment">Root Canal Treatment (RCT)</option>
-                                    <option value="Dental Implants">Dental Implants</option>
-                                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-                                    <option value="Pediatric Dentistry">Pediatric Dentistry</option>
-                                    <option value="Jaw & TMJ Treatments">Jaw & TMJ Treatments</option>
-                                    <option value="General Consultation">General Consultation</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Additional Notes (Optional)</label>
-                                <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-medical-600 focus:border-medical-600 outline-none bg-white text-sm" placeholder="Describe any specific pain or requirements..."></textarea>
-                            </div>
-
-                            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-base transition-all shadow-lg shadow-medical-600/30 flex items-center justify-center gap-2">
-                                <i data-lucide="calendar-check" class="w-5 h-5"></i> Confirm Appointment Request
-                            </button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <!-- Hero Section -->
+    <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-teal-50/50 via-slate-50 to-slate-50 overflow-hidden">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
-                <!-- Brand Info -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-medical-600 flex items-center justify-center text-white">
-                            <i data-lucide="activity" class="w-5 h-5"></i>
+                <!-- Left Column -->
+                <div class="col-span-1 lg:col-span-7">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 shadow-sm mb-6">
+                        <div class="flex items-center text-amber-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
                         </div>
-                        <span class="text-xl font-extrabold font-plus-jakarta tracking-tight">Manipal Dental</span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-900">4.9 ★ <span class="text-slate-500 font-normal">(786+ Google Reviews)</span></span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Providing advanced, painless dental care and specialized orthodontics in Boring Road, Patna since 19+ years. Led by Dr. Sanjay Kumar Singh (MDS).
+
+                    <!-- Locality Chip -->
+                    <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-medical bg-teal-50 px-3 py-1 rounded-md mb-4 ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-3.5 h-3.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Boring Road, Patna • Sri Krishna Puri</span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight break-words font-plus-jakarta text-slate-900 mb-6">
+                        Advanced Dental Care &amp; <span class="text-medical">Orthodontics</span> in Patna
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl font-inter">
+                        Led by <strong class="text-slate-900">Dr. Sanjay Kumar Singh (MDS)</strong> with 19+ years of clinical excellence. Experience painless root canals, precision braces, and modern dental implants in a warm, pristine environment.
                     </p>
-                    <div class="flex items-center gap-3 text-amber-400 pt-2">
-                        <div class="flex items-center">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="#contact" class="flex items-center justify-center gap-2.5 bg-medical hover:bg-medical-dark text-white font-bold py-4 px-5 sm:px-8 rounded-2xl shadow-xl shadow-medical/25 transition-all transform hover:-translate-y-0.5 text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar w-5 h-5"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path></svg>
+                            <span>Book Your Visit</span>
+                        </a>
+                        <a href="https://wa.me/918969566559?text=Hello%2C%20I%20want%20to%20consult%20Dr.%20Sanjay%20Kumar%20Singh%20at%20Manipal%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-5 sm:px-8 rounded-2xl shadow-xl shadow-emerald-600/20 transition-all text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-square" aria-hidden="true" class="lucide lucide-message-square w-5 h-5"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Checklist -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10 pt-8 border-t border-slate-200">
+                        <div class="flex items-center gap-2 text-slate-700 text-sm font-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-medical flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span>19+ Years Exp</span>
                         </div>
-                        <span class="text-sm font-bold text-white">4.9 / 5.0 (786+ Reviews)</span>
+                        <div class="flex items-center gap-2 text-slate-700 text-sm font-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-medical flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span>Painless RCT</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-700 text-sm font-medium col-span-1 sm:col-span-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-medical flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span>Advanced Tech</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-base font-bold font-plus-jakarta mb-4 text-white">Quick Links</h4>
-                    <ul class="space-y-2.5 text-sm text-slate-400">
-                        <li><a href="#services" class="hover:text-medical-400 transition-colors">Our Services</a></li>
-                        <li><a href="#doctor" class="hover:text-medical-400 transition-colors">Meet Dr. Sanjay Kumar Singh</a></li>
-                        <li><a href="#why-us" class="hover:text-medical-400 transition-colors">Why Choose Us</a></li>
-                        <li><a href="#reviews" class="hover:text-medical-400 transition-colors">Patient Reviews</a></li>
-                        <li><a href="#contact" class="hover:text-medical-400 transition-colors">Location & Contact</a></li>
-                    </ul>
+                <!-- Right Column: Elevated Showcase Card -->
+                <div class="col-span-1 lg:col-span-5">
+                    <div class="relative bg-white border border-slate-200 rounded-3xl p-4 sm:p-5 shadow-2xl backdrop-blur-md overflow-hidden">
+                        
+                        <!-- Real Image -->
+                        <div class="relative rounded-2xl overflow-hidden shadow-md">
+                            <img src="/sites/manipaldental/assets/gallery-1.jpg" alt="Doctor desk and treatment charts at Manipal Dental Clinic Patna" class="w-full h-72 sm:h-84 lg:h-[400px] object-cover rounded-2xl">
+                            
+                            <!-- Floating Badge -->
+                            <span class="absolute top-4 left-4 bg-amber-500 text-black font-black text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-lg">⭐ 4.9★ Top Rated</span>
+                            
+                            <!-- Status Chip -->
+                            <span class="absolute bottom-4 right-4 bg-slate-900/90 text-white font-medium text-xs px-3.5 py-1.5 rounded-full border border-slate-700 backdrop-blur-sm flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span>Verma Centre, Boring Rd</span>
+                            </span>
+                        </div>
+
+                        <!-- Card Footer Info -->
+                        <div class="mt-4 p-3 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Dr. Sanjay Kumar Singh</h4>
+                                <p class="text-xs text-slate-500">MDS - Orthodontist &amp; Dentofacial Orthopedic Surgeon</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-teal-100 text-medical flex items-center justify-center flex-shrink-0 font-bold">
+                                19+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <!-- Services List -->
-                <div>
-                    <h4 class="text-base font-bold font-plus-jakarta mb-4 text-white">Dental Specialties</h4>
-                    <ul class="space-y-2.5 text-sm text-slate-400">
-                        <li><span class="hover:text-medical-400 transition-colors cursor-pointer">Orthodontics & Braces</span></li>
-                        <li><span class="hover:text-medical-400 transition-colors cursor-pointer">Root Canal Treatment</span></li>
-                        <li><span class="hover:text-medical-400 transition-colors cursor-pointer">Dental Implants</span></li>
-                        <li><span class="hover:text-medical-400 transition-colors cursor-pointer">Cosmetic Dentistry</span></li>
-                        <li><span class="hover:text-medical-400 transition-colors cursor-pointer">Pediatric Dentistry</span></li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-white border-y border-slate-200 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-medical font-plus-jakarta">4.9 ★</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-medium mt-1">786+ Verified Google Reviews</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-plus-jakarta">19+</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-medium mt-1">Years Clinical Experience</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-plus-jakarta">5,000+</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-medium mt-1">Happy Smiles Restored</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div class="text-2xl sm:text-4xl font-extrabold text-medical font-plus-jakarta">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-600 font-medium mt-1">Painless Care Protocol</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section id="services" class="py-16 lg:py-24 bg-slate-50">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical bg-teal-50 px-3.5 py-1.5 rounded-full border border-medical/20">Comprehensive Dental Treatments</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-plus-jakarta text-slate-900 mt-4 mb-4">
+                    Expert Care for Every Dental Need
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Using advanced medical technology and sterilization standards to deliver comfortable, long-lasting dental solutions in Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Orthodontics & Braces -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-medical/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-medical flex items-center justify-center mb-6 group-hover:bg-medical group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="smile" aria-hidden="true" class="lucide lucide-smile w-7 h-7"><path d="M15 10V9"></path><path d="M16.472 15a6 6 0 01-8.943 0"></path><path d="M9 10V9"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                        </div>
+                        <h3 class="break-words text-xl font-bold text-slate-900 mb-3 font-plus-jakarta">Orthodontics &amp; Braces</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Straighten crooked teeth and correct bite alignment with traditional metal, ceramic, or modern invisible aligners by specialist Dr. Sanjay Kumar Singh.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-medical font-bold text-sm hover:text-medical-dark group-hover:translate-x-1 transition-transform">
+                        <span>Book Consultation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
                 </div>
 
-                <!-- Contact Details -->
-                <div>
-                    <h4 class="text-base font-bold font-plus-jakarta mb-4 text-white">Contact Clinic</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        First Floor, Verma Centre, 102, Boring Rd, beside petrol pump, Patna, Bihar 800001
-                    </p>
-                    <p class="text-sm text-slate-300 font-semibold mb-2">Phone: <a href="tel:+918969566559" class="text-medical-400 hover:underline">+91 89695 66559</a></p>
-                    <a href="https://wa.me/918969566559?text=Hello%20Manipal%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors">
-                        <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp
+                <!-- Service 2: Root Canal Treatment -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-medical/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-medical flex items-center justify-center mb-6 group-hover:bg-medical group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-7 h-7"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>
+                        </div>
+                        <h3 class="break-words text-xl font-bold text-slate-900 mb-3 font-plus-jakarta">Painless Root Canal (RCT)</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Advanced single-sitting and multi-sitting rotary endodontics ensuring deep infection removal with virtually zero pain and maximum comfort.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-medical font-bold text-sm hover:text-medical-dark group-hover:translate-x-1 transition-transform">
+                        <span>Book Consultation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Service 3: Dental Implants -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-medical/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-medical flex items-center justify-center mb-6 group-hover:bg-medical group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-7 h-7"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </div>
+                        <h3 class="break-words text-xl font-bold text-slate-900 mb-3 font-plus-jakarta">Dental Implants</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Permanent, natural-looking tooth replacement solutions that restore normal chewing function and rebuild your confident smile.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-medical font-bold text-sm hover:text-medical-dark group-hover:translate-x-1 transition-transform">
+                        <span>Book Consultation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Service 4: Cosmetic Dentistry -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-medical/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-medical flex items-center justify-center mb-6 group-hover:bg-medical group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-7 h-7"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                        </div>
+                        <h3 class="break-words text-xl font-bold text-slate-900 mb-3 font-plus-jakarta">Cosmetic Dentistry</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Teeth whitening, porcelain veneers, smile makeovers, and aesthetic contouring to give you a dazzling Hollywood-grade smile.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-medical font-bold text-sm hover:text-medical-dark group-hover:translate-x-1 transition-transform">
+                        <span>Book Consultation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Service 5: Pediatric Dentistry -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-medical/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-medical flex items-center justify-center mb-6 group-hover:bg-medical group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart w-7 h-7"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                        </div>
+                        <h3 class="break-words text-xl font-bold text-slate-900 mb-3 font-plus-jakarta">Pediatric Dentistry</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Gentle, kid-friendly dental checkups, cavity prevention, fluoride treatments, and early habit-breaking appliances in a stress-free setting.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-medical font-bold text-sm hover:text-medical-dark group-hover:translate-x-1 transition-transform">
+                        <span>Book Consultation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Service 6: Jaw & Gum Care -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-medical/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-medical flex items-center justify-center mb-6 group-hover:bg-medical group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" aria-hidden="true" class="lucide lucide-activity w-7 h-7"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
+                        </div>
+                        <h3 class="break-words text-xl font-bold text-slate-900 mb-3 font-plus-jakarta">Jaw &amp; Gum Treatments</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Periodontal care, scaling and polishing, TMJ disorder management, and surgical extractions performed with utmost precision.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-medical font-bold text-sm hover:text-medical-dark group-hover:translate-x-1 transition-transform">
+                        <span>Book Consultation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                     </a>
                 </div>
 
             </div>
+        </div>
+    </section>
 
-            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p>&copy; <span id="current-year"></span> Manipal Dental Clinic. All rights reserved.</p>
-                <p class="flex items-center gap-1">Designed with precision for excellence in dental healthcare.</p>
+    <!-- Meet Dr. Sanjay Kumar Singh Section -->
+    <section id="doctor" class="py-16 lg:py-24 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Doctor Image / Gallery Card -->
+                <div class="col-span-1 lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Interior and treatment setup at Manipal Dental Clinic Patna" class="w-full h-[400px] lg:h-[480px] object-cover rounded-3xl">
+                        <div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 text-white p-4 rounded-2xl backdrop-blur-md border border-slate-700">
+                            <span class="text-medical font-bold text-xs uppercase tracking-wider block">Lead Consultant</span>
+                            <h4 class="font-bold text-lg">Dr. Sanjay Kumar Singh</h4>
+                            <p class="text-xs text-slate-300">MDS (Orthodontics &amp; Dentofacial Orthopedics)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor Bio & Credentials -->
+                <div class="col-span-1 lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical bg-teal-50 px-3.5 py-1.5 rounded-full border border-medical/20">Experienced Specialist</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-plus-jakarta text-slate-900 mt-4 mb-6">
+                        Meet Dr. Sanjay Kumar Singh
+                    </h2>
+                    
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
+                        With over <strong class="text-slate-900">19 years of dedicated clinical experience</strong>, Dr. Sanjay Kumar Singh is one of Patna's most trusted orthodontists and dental surgeons. Specializing in complex brace treatments, corrective jaw adjustments, and advanced restorative dentistry, he combines clinical precision with genuine patient empathy.
+                    </p>
+
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
+                        His patient-first philosophy ensures that every individual who walks into Manipal Dental Clinic receives transparent diagnoses, painless procedures, and customized care plans tailored to their dental health and budget.
+                    </p>
+
+                    <!-- Credentials Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-teal-50 text-medical flex items-center justify-center flex-shrink-0 font-bold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-5 h-5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">MDS Degree</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Specialized in Orthodontics &amp; Dentofacial Orthopedics</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-teal-50 text-medical flex items-center justify-center flex-shrink-0 font-bold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">19+ Years Practice</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Decades of trusted smiles across Patna &amp; Bihar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <a href="#contact" class="bg-medical hover:bg-medical-dark text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-medical/20 text-sm transition-all">
+                            Book Appointment with Dr. Singh
+                        </a>
+                        <a href="tel:+918969566559" class="border border-slate-200 hover:border-medical text-slate-800 font-bold py-3.5 px-6 rounded-xl text-sm transition-all">
+                            Call Clinic Directly
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Reviews Section -->
+    <section id="reviews" class="py-16 lg:py-24 bg-slate-50">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical bg-teal-50 px-3.5 py-1.5 rounded-full border border-medical/20">Patient Testimonials</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-plus-jakarta text-slate-900 mt-4 mb-4">
+                    Trusted by 786+ Patients on Google
+                </h2>
+                <div class="flex items-center justify-center gap-2 text-amber-500 mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    <span class="text-slate-900 font-bold text-lg ml-1">4.9 / 5.0</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        </div>
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+                            "Dr. Sanjay Kumar Singh is extremely knowledgeable and polite. I had a complex root canal treatment done and it was completely painless. Manipal Dental Clinic is easily the best dental clinic on Boring Road!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 text-medical font-bold flex items-center justify-center">
+                            UN
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Umesh Nepali</h4>
+                            <p class="text-xs text-slate-500">Google Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        </div>
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+                            "Very clean clinic environment with top-notch sterilization. Got my braces fixed here and the results have been fantastic. Highly recommend Dr. Singh for anyone seeking orthodontic care in Patna."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 text-medical font-bold flex items-center justify-center">
+                            RK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Rajesh Kumar</h4>
+                            <p class="text-xs text-slate-500">Google Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        </div>
+                        <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+                            "Wonderful experience! Staff is very courteous and Dr. Sanjay explains every procedure in detail before starting. Location at Verma Centre Boring Road is very convenient to reach."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 text-medical font-bold flex items-center justify-center">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Anjali Kumari</h4>
+                            <p class="text-xs text-slate-500">Google Verified Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 lg:py-24 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical bg-teal-50 px-3.5 py-1.5 rounded-full border border-medical/20">The Manipal Advantage</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-plus-jakarta text-slate-900 mt-4 mb-4">
+                    Why Patients in Patna Choose Us
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    We combine clinical expertise with modern technology to deliver a superior dental experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-100 text-medical flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield w-6 h-6"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                    </div>
+                    <h3 class="break-words font-bold text-slate-900 text-lg mb-2 font-plus-jakarta">Painless Procedures</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Advanced anesthesia techniques and gentle handling ensure your dental treatments are completely comfortable and stress-free.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-100 text-medical flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cpu" aria-hidden="true" class="lucide lucide-cpu w-6 h-6"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg>
+                    </div>
+                    <h3 class="break-words font-bold text-slate-900 text-lg mb-2 font-plus-jakarta">Modern Technology</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Equipped with state-of-the-art rotary endodontics, digital imaging, and high-precision dental instruments.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-100 text-medical flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkle" aria-hidden="true" class="lucide lucide-sparkle w-6 h-6"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>
+                    </div>
+                    <h3 class="break-words font-bold text-slate-900 text-lg mb-2 font-plus-jakarta">Pristine &amp; Sterile</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Strict autoclave sterilization protocols and spotless hygienic operatories adhering to international safety standards.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-100 text-medical flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-check" aria-hidden="true" class="lucide lucide-user-check w-6 h-6"><path d="m16 11 2 2 4-4"></path><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3 class="break-words font-bold text-slate-900 text-lg mb-2 font-plus-jakarta">Expert Care</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Personally consulted and treated by Dr. Sanjay Kumar Singh (MDS) with over 19 years of proven expertise.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-16 lg:py-24 bg-slate-50">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical bg-teal-50 px-3.5 py-1.5 rounded-full border border-medical/20">Got Questions?</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-plus-jakarta text-slate-900 mt-4 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-600 text-base">
+                    Find quick answers about our treatments, appointments, and dental care protocols.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left font-bold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors">
+                        <span class="text-base sm:text-lg font-plus-jakarta">Is Root Canal Treatment (RCT) painful at Manipal Dental Clinic?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-slate-500 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Not at all! With modern rotary endodontic tools and advanced local anesthesia, root canal treatments at our clinic are virtually painless. Most patients experience immediate relief from toothache during the procedure.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left font-bold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors">
+                        <span class="text-base sm:text-lg font-plus-jakarta">How long does braces or orthodontic treatment take?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-slate-500 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        The duration of braces typically ranges between 12 to 24 months, depending on the complexity of teeth misalignment. Dr. Sanjay Kumar Singh will provide an exact timeline during your initial consultation.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left font-bold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors">
+                        <span class="text-base sm:text-lg font-plus-jakarta">How can I book an appointment with Dr. Sanjay Kumar Singh?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-slate-500 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        You can easily book an appointment by calling us directly at +91 89695 66559, clicking the WhatsApp chat button on our website, or filling out the quick appointment form below.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full p-6 text-left font-bold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors">
+                        <span class="text-base sm:text-lg font-plus-jakarta">Where is Manipal Dental Clinic located in Patna?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-slate-500 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        We are conveniently located on the First Floor, Verma Centre, 102, Boring Road (beside petrol pump, crossing/chauraha), Sri Krishna Puri, Patna, Bihar 800001.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-16 lg:py-24 bg-white">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical bg-teal-50 px-3.5 py-1.5 rounded-full border border-medical/20">Visit Our Clinic</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-plus-jakarta text-slate-900 mt-4 mb-4">
+                    Location &amp; Appointment Booking
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Schedule your visit or drop by our clinic at Boring Road, Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contact Info & Hours -->
+                <div class="col-span-1 lg:col-span-5 space-y-8">
+                    
+                    <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 space-y-6">
+                        <h3 class="break-words text-xl font-bold text-slate-900 font-plus-jakarta">Contact Details</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-teal-100 text-medical flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Clinic Address</h4>
+                                <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                                    First Floor, Verma Centre, 102, Boring Rd, beside petrol pump, crossing, chauraha, Sri Krishna Puri, Patna, Bihar 800001
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-teal-100 text-medical flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Phone &amp; WhatsApp</h4>
+                                <a href="tel:+918969566559" class="text-medical font-bold text-sm mt-1 block hover:underline">+91 89695 66559</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-teal-100 text-medical flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Operating Hours</h4>
+                                <p class="text-slate-600 text-sm mt-1">Monday – Sunday: 10:00 AM – 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-sm w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl relative">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7788484185265!2d85.12641047539958!3d25.61142991475143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58f2e213b73b%3A0x6b8f149b1a5e128!2sVerma%20Centre%2C%20Boring%20Rd%2C%20Sri%20Krishna%20Puri%2C%20Patna%2C%20Bihar%20800001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border: 0px; width: 100%; height: 100%; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Manipal Dental Clinic Location Map" class="w-full h-full block border-0">
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <!-- Appointment Form -->
+                <div class="col-span-1 lg:col-span-7">
+                    <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words text-slate-900 font-plus-jakarta mb-2">Book Your Appointment</h3>
+                        <p class="text-slate-600 text-sm mb-8">Fill out the form below and our team will get in touch with you shortly to confirm your slot.</p>
+                        
+                        <form id="appointment-form" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="patient-name" class="block text-sm font-semibold text-slate-700 mb-2">Full Name *</label>
+                                    <input type="text" id="patient-name" required="" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-medical bg-white text-slate-900 text-sm" placeholder="e.g. Rahul Sharma">
+                                </div>
+                                <div>
+                                    <label for="patient-phone" class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
+                                    <input type="tel" id="patient-phone" required="" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-medical bg-white text-slate-900 text-sm" placeholder="e.g. +91 98765 43210">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="service-select" class="block text-sm font-semibold text-slate-700 mb-2">Select Service *</label>
+                                    <select id="service-select" required="" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-medical bg-white text-slate-900 text-sm">
+                                        <option value="">Choose Service</option>
+                                        <option value="Orthodontics &amp; Braces">Orthodontics &amp; Braces</option>
+                                        <option value="Root Canal Treatment">Root Canal Treatment (RCT)</option>
+                                        <option value="Dental Implants">Dental Implants</option>
+                                        <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                        <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+                                        <option value="General Consultation">General Consultation</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="visit-date" class="block text-sm font-semibold text-slate-700 mb-2">Preferred Date *</label>
+                                    <input type="date" id="visit-date" required="" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-medical bg-white text-slate-900 text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="patient-message" class="block text-sm font-semibold text-slate-700 mb-2">Message / Symptoms (Optional)</label>
+                                <textarea id="patient-message" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-medical bg-white text-slate-900 text-sm" placeholder="Describe any pain or dental issues..."></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full py-4 px-6 rounded-xl bg-medical hover:bg-medical-dark text-white font-bold text-base shadow-lg shadow-medical/20 transition-all flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar w-5 h-5"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path></svg>
+                                <span>Confirm Appointment Request</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[110] hidden justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-8 text-center shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 bg-teal-100 text-medical rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle w-8 h-8"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words text-slate-900 font-plus-jakarta mb-2">Appointment Request Received!</h3>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                Thank you, <span id="modal-name" class="font-bold text-slate-900"></span>. Our team at Manipal Dental Clinic will call you shortly at <span id="modal-phone" class="font-bold text-slate-900"></span> to confirm your slot.
+            </p>
+            <button id="close-modal" class="w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm">
+                Close &amp; Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-medical">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cross" aria-hidden="true" class="lucide lucide-cross w-5 h-5"><path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path></svg>
+                        </div>
+                        <span class="text-lg font-bold font-plus-jakarta text-white tracking-tight">Manipal Dental</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Leading dental clinic &amp; orthodontics practice in Boring Road, Patna, led by Dr. Sanjay Kumar Singh (MDS).
+                    </p>
+                    <div class="flex items-center gap-3 text-white text-sm font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-500 text-amber-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        <span>4.9 Star Rating (786+ Reviews)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-4 font-plus-jakarta">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#services" class="hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="#doctor" class="hover:text-white transition-colors">Meet Dr. Sanjay Kumar Singh</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition-colors">Patient Reviews</a></li>
+                        <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Location &amp; Map</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-4 font-plus-jakarta">Treatments</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#services" class="hover:text-white transition-colors">Orthodontics &amp; Braces</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Root Canal Treatment (RCT)</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Dental Implants</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Cosmetic Dentistry</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Pediatric Dental Care</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-base mb-4 font-plus-jakarta">Clinic Hours</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                        Monday to Sunday:<br>
+                        <strong class="text-white">10:00 AM – 8:00 PM</strong>
+                    </p>
+                    <p class="text-xs text-slate-500">
+                        First Floor, Verma Centre, 102, Boring Rd, beside petrol pump, Patna, Bihar 800001
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© <span id="current-year">2026</span> Manipal Dental Clinic. All rights reserved.</p>
+                <p>Designed with clinical excellence in Patna, Bihar.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Sticky Mobile Action Bar -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 p-3 flex items-center justify-between gap-3 shadow-2xl">
-        <a href="tel:+918969566559" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 text-white font-bold text-sm min-h-[48px] shadow-md">
-            <i data-lucide="phone-call" class="w-4 h-4 text-medical-400"></i> Call Now
+    <!-- Clean 2-Button Sticky Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900 border-t border-slate-800 p-3 flex gap-3 shadow-2xl">
+        <a href="tel:+918969566559" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-slate-800 hover:bg-slate-700 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg> Call Now
         </a>
-        <a href="https://wa.me/918969566559?text=Hello%20Manipal%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm min-h-[48px] shadow-md">
-            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        <a href="https://wa.me/918969566559?text=Hello%2C%20I%20want%20to%20book%20an%20appointment%20at%20Manipal%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-square" aria-hidden="true" class="lucide lucide-message-square w-4 h-4"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg> WhatsApp
         </a>
-    </div>
-
-    <!-- Success Modal Popup -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl transform scale-95 transition-transform duration-300" id="modal-card">
-            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                <i data-lucide="check-circle" class="w-10 h-10"></i>
-            </div>
-            <h3 class="text-2xl font-bold font-plus-jakarta text-slate-900">Appointment Request Received!</h3>
-            <p id="modal-message" class="text-slate-600 text-sm leading-relaxed">
-                Thank you. Our clinic coordinator will contact you shortly at your phone number to confirm your slot.
-            </p>
-            <button id="close-modal" class="w-full py-3.5 rounded-xl bg-medical-600 hover:bg-medical-700 text-white font-bold text-sm transition-colors mt-4">
-                Done
-            </button>
-        </div>
     </div>
 
     <!-- JavaScript Interactivity -->
     <script>
         // Initialize Lucide Icons
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        });
+        lucide.createIcons();
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
         const menuBackdrop = document.getElementById('menu-backdrop');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
         function toggleMobileMenu() {
-            const isOpen = !mobileMenu.classList.contains('translate-x-full');
+            const isOpen = !mobileDrawer.classList.contains('translate-x-full');
             if (isOpen) {
-                mobileMenu.classList.add('translate-x-full');
+                mobileDrawer.classList.add('translate-x-full');
                 menuBackdrop.classList.add('hidden');
                 document.body.classList.remove('overflow-hidden');
             } else {
-                mobileMenu.classList.remove('translate-x-full');
+                mobileDrawer.classList.remove('translate-x-full');
                 menuBackdrop.classList.remove('hidden');
                 document.body.classList.add('overflow-hidden');
             }
         }
 
-        menuBtn.addEventListener('click', toggleMobileMenu);
-        closeBtn.addEventListener('click', toggleMobileMenu);
+        hamburgerBtn.addEventListener('click', toggleMobileMenu);
+        closeDrawerBtn.addEventListener('click', toggleMobileMenu);
         menuBackdrop.addEventListener('click', toggleMobileMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', toggleMobileMenu));
 
-        // FAQ Accordion
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+
+        // FAQ Accordion Functionality
         const faqToggles = document.querySelectorAll('.faq-toggle');
         faqToggles.forEach(toggle => {
             toggle.addEventListener('click', () => {
@@ -932,51 +965,50 @@
                 
                 // Toggle current
                 content.classList.toggle('hidden');
-                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                icon.classList.toggle('rotate-180');
             });
         });
 
-        // Appointment Form Submission & Modal Handler
+        // Appointment Form Submission & Success Modal
         const appointmentForm = document.getElementById('appointment-form');
         const successModal = document.getElementById('success-modal');
-        const closeModal = document.getElementById('close-modal');
-        const modalMessage = document.getElementById('modal-message');
+        const closeModalBtn = document.getElementById('close-modal');
+        const modalName = document.getElementById('modal-name');
+        const modalPhone = document.getElementById('modal-phone');
 
         appointmentForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            const nameInput = document.getElementById('name').value.trim();
-            const phoneInput = document.getElementById('phone').value.trim();
-            const serviceInput = document.getElementById('service').value;
+            const nameInput = document.getElementById('patient-name').value;
+            const phoneInput = document.getElementById('patient-phone').value;
 
-            // Basic sanitization check
-            if(!nameInput || !phoneInput || !serviceInput) {
-                alert('Please fill in all required fields.');
-                return;
-            }
+            // XSS / Text Sanitization check
+            const sanitizedName = nameInput.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            const sanitizedPhone = phoneInput.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-            // Customize message
-            modalMessage.textContent = `Thank you, ${nameInput}! Your appointment request for ${serviceInput} has been successfully received. Our clinic team will call you at ${phoneInput} shortly.`;
+            modalName.textContent = sanitizedName;
+            modalPhone.textContent = sanitizedPhone;
 
-            // Show modal
             successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
             document.body.classList.add('overflow-hidden');
-            
-            // Reset form
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
             appointmentForm.reset();
         });
 
-        closeModal.addEventListener('click', () => {
-            successModal.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        });
-
         successModal.addEventListener('click', (e) => {
-            if(e.target === successModal) {
+            if (e.target === successModal) {
                 successModal.classList.add('hidden');
+                successModal.classList.remove('flex');
                 document.body.classList.remove('overflow-hidden');
+                appointmentForm.reset();
             }
         });
     </script>
-</body>
-</html>
+
+</body></html>
