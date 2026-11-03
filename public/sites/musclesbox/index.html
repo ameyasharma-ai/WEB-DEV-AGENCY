@@ -1,47 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden scroll-smooth dark">
-<head>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+<html lang="en" class="overflow-x-hidden scroll-smooth"><head>
+    <base href="/sites/musclesbox/">
+    
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- ArcLane Responsive Typography & Distortion Prevention Guard -->
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+      img, svg, video, canvas, audio, iframe, embed, object {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/&gt;&lt;text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22&gt;⚡&lt;/text&gt;&lt;/svg&gt;">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muscles Box Gym - Best Gym in Patna | Anisabad Fitness Center</title>
-    <meta name="description" content="Muscles Box Gym is Patna's elite fitness destination. Rated 4.9★ with 246+ reviews. Located near Imam plaza, Anisabad, Patna. Certified trainers & modern equipment.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Muscles Box Gym - Best gym in Patna | Anisabad Fitness Hub</title>
+    <meta name="description" content="Muscles Box Gym is Patna's elite fitness destination. Rated 4.9★ with certified trainers, modern equipment, strength training &amp; fat loss programs in Anisabad, Patna.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            bg: '#09090B',
-                            surface: '#18181B',
-                            amber: '#FFB800',
-                            amberHover: '#FFC72C',
-                            red: '#FF3333',
-                            textPrimary: '#FAFAFA',
-                            textMuted: '#A1A1AA',
-                            border: '#27272A'
-                        }
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#FFB800',
+                        'primary-hover': '#FFC72C',
+                        secondary: '#FF3333',
                     },
                     fontFamily: {
                         syne: ['Syne', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif']
+                        inter: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
-    <!-- Google Fonts: Syne & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         body {
@@ -49,7 +65,7 @@
             background-color: #09090B;
             color: #FAFAFA;
         }
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4, .font-syne {
             font-family: 'Syne', sans-serif;
         }
         /* Custom scrollbar */
@@ -68,921 +84,1050 @@
         }
     </style>
 </head>
-<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 md:pb-0">
+<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 lg:pb-0">
 
-    <!-- 1. ANNOUNCEMENT & 100% SOLID OPAQUE STICKY HEADER -->
-    <div class="bg-[#FFB800] text-black text-xs sm:text-sm font-semibold py-2 px-4 text-center tracking-wide z-50 relative">
-        🔥 Special Offer: Get a FREE 1-Day Trial Pass! Limited Slots Available. <a href="#contact" class="underline hover:text-white font-bold ml-1">Claim Now &rarr;</a>
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-black px-4 py-2 text-center text-xs sm:text-sm font-bold flex items-center justify-center gap-2 relative z-50 h-auto py-2.5 w-full" style="height: auto; min-height: auto; aspect-ratio: auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-4 h-4 fill-black shrink-0"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>
+        <span>🔥 Limited Time Offer: Claim Your FREE 1-Day Trial Pass at Patna's #1 Gym!</span>
+        <a href="#trial" class="underline hover:text-zinc-900 ml-1 hidden sm:inline-block">Book Now →</a>
     </div>
 
-    <header class="sticky top-0 z-40 w-full bg-[#09090B] border-b border-[#27272A]">
+    <!-- 100% SOLID OPAQUE STICKY HEADER -->
+    <header class="sticky top-0 z-40 bg-[#09090B] border-b border-zinc-800 w-full">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFB800] to-[#FF3333] flex items-center justify-center font-syne font-extrabold text-black text-xl shadow-lg shadow-[#FFB800]/20 group-hover:scale-105 transition-transform">
+            
+            <!-- BRAND LOGO -->
+            <a href="#" class="flex items-center gap-3 shrink-0 mr-4 lg:mr-8 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-syne font-black text-xl text-black shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
                     MB
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-white leading-tight">MUSCLES BOX</span>
-                    <span class="text-[10px] sm:text-xs text-[#FFB800] tracking-widest font-semibold uppercase">GYM • PATNA</span>
+                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-tight text-white leading-tight">Muscles Box</span>
+                    <span class="text-[10px] text-amber-400 font-semibold uppercase tracking-widest">Gym Patna</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-[#A1A1AA]">
-                <a href="#services" class="hover:text-[#FFB800] transition-colors">Services</a>
-                <a href="#packages" class="hover:text-[#FFB800] transition-colors">Packages</a>
-                <a href="#trainers" class="hover:text-[#FFB800] transition-colors">Trainers</a>
-                <a href="#gallery" class="hover:text-[#FFB800] transition-colors">Gallery</a>
-                <a href="#reviews" class="hover:text-[#FFB800] transition-colors">Reviews</a>
-                <a href="#contact" class="hover:text-[#FFB800] transition-colors">Contact</a>
+            <!-- BALANCED CENTERED NAVBAR -->
+            <nav class="hidden lg:flex items-center justify-center mx-auto lg: -0 shrink-0 gap-3 lg:gap-4 xl:gap-6 2xl:gap-6 px-2 lg:px-4">
+                <a href="#programs" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">Programs</a>
+                <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">About</a>
+                <a href="#pricing" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">Plans</a>
+                <a href="#trainers" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">Trainers</a>
+                <a href="#gallery" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">FAQ</a>
+                <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-amber-400 transition-colors whitespace-nowrap shrink-0">Contact</a>
             </nav>
 
-            <!-- Action CTAs -->
-            <div class="hidden sm:flex items-center gap-4">
-                <a href="tel:+919279446246" class="flex items-center gap-2 text-sm font-semibold text-white bg-[#18181B] border border-[#27272A] px-4 py-2.5 rounded-xl hover:border-[#FFB800] transition-all">
-                    <i data-lucide="phone" class="w-4 h-4 text-[#FFB800]"></i>
-                    <span>+91 92794 46246</span>
+            <!-- ACTION CTAS -->
+            <div class="hidden sm:flex items-center gap-2 sm:gap-3 shrink-0 flex-nowrap">
+                <a href="tel:+919279446246" class="whitespace-nowrap shrink-0 bg-zinc-800 hover:bg-zinc-700 text-white px-3.5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-amber-400"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    <span class="hidden xl:inline whitespace-nowrap">+91 92794 46246</span>
+                    <span class="xl:hidden whitespace-nowrap">Call</span>
                 </a>
-                <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20know%20more%20about%20Muscles%20Box%20Gym%20membership%20plans." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-bold text-black bg-[#FFB800] hover:bg-[#FFC72C] px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-[#FFB800]/20">
-                    <i data-lucide="message-square" class="w-4 h-4"></i>
-                    <span>WhatsApp</span>
+                <a href="https://wa.me/919279446246?text=Hi%20Muscles%20Box%20Gym,%20I%20want%20to%20book%20a%20free%20trial%20session!" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap shrink-0 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors shadow-lg shadow-emerald-600/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4 fill-white"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                    <span class="whitespace-nowrap">WhatsApp</span>
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="menu-toggle" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-[#18181B] border border-[#27272A] text-white hover:border-[#FFB800] transition-colors">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+            <!-- MOBILE HAMBURGER BUTTON -->
+            <button id="menu-toggle" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white focus:outline-none whitespace-nowrap shrink-0" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Backdrop & Drawer -->
+    <!-- MOBILE BACKDROP -->
     <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
-    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs bg-[#09090B] border-l border-[#27272A] rounded-tl-2xl p-6 pt-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+
+    <!-- FLAWLESS MOBILE DRAWER -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs rounded-tl-2xl p-6 bg-[#09090B] border-l border-zinc-800 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between overflow-y-auto">
         <div>
-            <div class="flex items-center justify-between pb-6 border-b border-[#27272A]">
+            <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
                 <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#FFB800] to-[#FF3333] flex items-center justify-center font-syne font-extrabold text-black text-lg">
-                        MB
-                    </div>
-                    <span class="font-syne font-bold text-white text-lg">Muscles Box</span>
+                    <div class="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center font-syne font-black text-black">MB</div>
+                    <span class="font-syne font-bold text-lg text-white">Muscles Box</span>
                 </div>
-                <button id="menu-close" aria-label="Close Menu" class="p-2 rounded-xl bg-[#18181B] border border-[#27272A] text-white">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+                <button id="menu-close" class="p-2 rounded-lg bg-zinc-900 text-zinc-400 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
                 </button>
             </div>
-            <nav class="flex flex-col gap-4 mt-6 text-base font-medium text-[#A1A1AA]">
-                <a href="#services" class="mobile-nav-link hover:text-[#FFB800] transition-colors py-2 border-b border-[#27272A]/50 flex items-center justify-between">Services <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                <a href="#packages" class="mobile-nav-link hover:text-[#FFB800] transition-colors py-2 border-b border-[#27272A]/50 flex items-center justify-between">Packages <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                <a href="#trainers" class="mobile-nav-link hover:text-[#FFB800] transition-colors py-2 border-b border-[#27272A]/50 flex items-center justify-between">Trainers <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                <a href="#gallery" class="mobile-nav-link hover:text-[#FFB800] transition-colors py-2 border-b border-[#27272A]/50 flex items-center justify-between">Gallery <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                <a href="#reviews" class="mobile-nav-link hover:text-[#FFB800] transition-colors py-2 border-b border-[#27272A]/50 flex items-center justify-between">Reviews <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                <a href="#contact" class="mobile-nav-link hover:text-[#FFB800] transition-colors py-2 flex items-center justify-between">Contact <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            
+            <nav class="flex flex-col gap-4 pt-6">
+                <a href="#programs" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2 border-b border-zinc-900">Programs</a>
+                <a href="#about" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2 border-b border-zinc-900">About Gym</a>
+                <a href="#pricing" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2 border-b border-zinc-900">Membership Plans</a>
+                <a href="#trainers" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2 border-b border-zinc-900">Expert Trainers</a>
+                <a href="#gallery" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2 border-b border-zinc-900">Gym Tour Gallery</a>
+                <a href="#reviews" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2 border-b border-zinc-900">Google Reviews</a>
+                <a href="#faq" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2 border-b border-zinc-900">FAQ</a>
+                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium text-base py-2">Contact &amp; Location</a>
             </nav>
         </div>
-        <div class="pt-6 border-t border-[#27272A] flex flex-col gap-3">
-            <a href="tel:+919279446246" class="flex items-center justify-center gap-2 w-full py-3 bg-[#18181B] border border-[#27272A] text-white rounded-xl font-semibold">
-                <i data-lucide="phone" class="w-4 h-4 text-[#FFB800]"></i> Call Now
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="tel:+919279446246" class="w-full py-3 px-4 rounded-xl font-bold text-sm bg-zinc-800 hover:bg-zinc-700 text-white flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-amber-400"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg> Call +91 92794 46246
             </a>
-            <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20claim%20my%20free%20trial%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-[#FFB800] text-black rounded-xl font-bold">
-                <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Chat
+            <a href="https://wa.me/919279446246?text=Hi%20Muscles%20Box%20Gym,%20I%20want%20to%20book%20a%20free%20trial%20session!" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4 fill-white"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg> WhatsApp Trial
             </a>
         </div>
     </div>
 
-    <!-- 2. HERO SECTION -->
-    <section class="relative min-h-[90vh] flex items-center justify-center bg-cover bg-center overflow-hidden py-20" style="background-image: linear-gradient(to bottom, rgba(9,9,11,0.85), rgba(9,9,11,0.95)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80');">
-        <!-- Ambient Glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-[#FFB800]/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden bg-[#09090B]">
+        <!-- Ambient Radial Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
-            
-            <!-- Trust Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#18181B] border border-[#27272A] mb-6 shadow-md">
-                <div class="flex items-center text-[#FFB800]">
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Column -->
+                <div class="col-span-1 lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Rating & Location Badge -->
+                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                        <div class="flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 px-3.5 py-1.5 rounded-full shadow-lg">
+                            <div class="flex text-amber-400">
+                                ★★★★★
+                            </div>
+                            <span class="text-white font-bold text-xs sm:text-sm">4.9</span>
+                            <span class="text-zinc-400 text-xs sm:text-sm">(246+ Google Reviews)</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 px-3.5 py-1.5 rounded-full text-amber-400 font-medium text-xs sm:text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-3.5 h-3.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Anisabad, Patna</span>
+                        </div>
+                    </div>
+
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight break-words font-syne text-white mb-6">
+                        Patna's Elite Fitness Destination – Transform Your Body at <span class="text-amber-400">Muscles Box Gym</span>
+                    </h1>
+
+                    <p class="text-zinc-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed mb-8 max-w-2xl">
+                        Unleash your ultimate potential with state-of-the-art strength equipment, certified expert coaches, and Patna's most energetic fitness community. Start your transformation today.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#trial" class="bg-amber-500 hover:bg-amber-400 text-black font-extrabold px-5 sm:px-8 py-4 rounded-2xl text-base text-center shadow-xl shadow-amber-500/20 transition-all flex items-center justify-center gap-2 group">
+                            <span>Claim Free Trial</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-5 h-5 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                        <a href="#pricing" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white font-bold px-5 sm:px-8 py-4 rounded-2xl text-base text-center transition-all flex items-center justify-center gap-2">
+                            <span>View Packages</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Trust Bullets -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-10 mt-10 border-t border-zinc-800/80 w-full">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            </div>
+                            <span class="text-xs sm:text-sm text-zinc-300 font-medium">Certified Trainers</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dumbbell" aria-hidden="true" class="lucide lucide-dumbbell w-4 h-4"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"></path><path d="m2.5 21.5 1.4-1.4"></path><path d="m20.1 3.9 1.4-1.4"></path><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"></path><path d="m9.6 14.4 4.8-4.8"></path></svg>
+                            </div>
+                            <span class="text-xs sm:text-sm text-zinc-300 font-medium">Pro Equipment</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 col-span-1 sm:col-span-1">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            </div>
+                            <span class="text-xs sm:text-sm text-zinc-300 font-medium">Open 6 AM - 10 PM</span>
+                        </div>
+                    </div>
+
                 </div>
-                <span class="text-xs sm:text-sm font-semibold text-white">4.9★ Rated by 246+ Fitness Enthusiasts in Patna</span>
+
+                <!-- Right Column (Desktop Elevated Showcase Card with Authentic Image) -->
+                <div class="col-span-1 lg:col-span-5">
+                    <div class="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden group">
+                        
+                        <!-- 100% Opaque Vibrant Authentic Photo -->
+                        <div class="relative w-full h-72 sm:h-84 lg:h-[400px] overflow-hidden rounded-2xl">
+                            <img src="/sites/musclesbox/assets/hero.jpg" alt="Gym reception and consultation area at Muscles Box Gym Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            
+                            <!-- Floating House Signature Badge -->
+                            <span class="absolute top-4 left-4 bg-amber-500 text-black font-black text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                                ⭐ Patna's #1 Rated
+                            </span>
+
+                            <!-- Real-time Status Chip -->
+                            <span class="absolute bottom-4 right-4 bg-black/90 text-white font-medium text-xs px-3.5 py-1.5 rounded-full border border-zinc-700 backdrop-blur-sm flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                Open Now (6 AM - 10 PM)
+                            </span>
+                        </div>
+
+                        <!-- Card Footer Info -->
+                        <div class="p-4 sm:p-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-white">Anisabad Elite Facility</h3>
+                                <span class="text-amber-400 font-bold text-sm">Gate No. 3</span>
+                            </div>
+                            <p class="text-zinc-400 text-xs sm:text-sm">
+                                Experience world-class ventilation, heavy lifting zones, modern cardio decks &amp; expert supervision.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-
-            <!-- Main Heading -->
-            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words max-w-4xl">
-                Patna's Elite Fitness Destination – Transform Your Body at <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FF3333]">Muscles Box Gym</span>
-            </h1>
-
-            <!-- Subheadline -->
-            <p class="text-base sm:text-lg md:text-xl text-[#A1A1AA] max-w-2xl mb-10 leading-relaxed">
-                State-of-the-art equipment, certified expert trainers, and a high-energy environment right near Imam Plaza, Anisabad, Patna. Your ultimate transformation starts here.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-[#FFB800] hover:bg-[#FFC72C] text-black font-extrabold text-base rounded-xl transition-all shadow-xl shadow-[#FFB800]/25 flex items-center justify-center gap-3">
-                    <i data-lucide="zap" class="w-5 h-5"></i>
-                    <span>Claim Free Trial</span>
-                </a>
-                <a href="#packages" class="w-full sm:w-auto px-8 py-4 bg-[#18181B] hover:bg-[#27272A] border border-[#27272A] text-white font-bold text-base rounded-xl transition-all flex items-center justify-center gap-2">
-                    <span>View Packages</span>
-                    <i data-lucide="arrow-down" class="w-4 h-4 text-[#FFB800]"></i>
-                </a>
-            </div>
-
         </div>
     </section>
 
-    <!-- 3. TRUST & SOCIAL PROOF BAR -->
-    <section class="border-y border-[#27272A] bg-[#18181B]/50 py-8">
+    <!-- TRUST & SOCIAL PROOF BAR -->
+    <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="flex flex-col items-center p-4 rounded-xl bg-[#09090B] border border-[#27272A]">
-                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-[#FFB800] mb-1">4.9★</div>
-                    <div class="text-xs sm:text-sm text-[#A1A1AA] font-medium">Google Rating</div>
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-400 text-3xl sm:text-4xl font-extrabold font-syne mb-1">4.9★</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Google Rating</div>
                 </div>
-                <div class="flex flex-col items-center p-4 rounded-xl bg-[#09090B] border border-[#27272A]">
-                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">246+</div>
-                    <div class="text-xs sm:text-sm text-[#A1A1AA] font-medium">Verified Reviews</div>
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-400 text-3xl sm:text-4xl font-extrabold font-syne mb-1">246+</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Verified Reviews</div>
                 </div>
-                <div class="flex flex-col items-center p-4 rounded-xl bg-[#09090B] border border-[#27272A]">
-                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-[#FF3333] mb-1">100%</div>
-                    <div class="text-xs sm:text-sm text-[#A1A1AA] font-medium">Certified Trainers</div>
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-400 text-3xl sm:text-4xl font-extrabold font-syne mb-1">100%</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Certified Coaches</div>
                 </div>
-                <div class="flex flex-col items-center p-4 rounded-xl bg-[#09090B] border border-[#27272A]">
-                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">Anisabad</div>
-                    <div class="text-xs sm:text-sm text-[#A1A1AA] font-medium">Prime Patna Location</div>
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                    <div class="text-amber-400 text-3xl sm:text-4xl font-extrabold font-syne mb-1">Anisabad</div>
+                    <div class="text-zinc-400 text-xs sm:text-sm font-medium">Prime Patna Location</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. SERVICES & TRAINING GRID -->
-    <section id="services" class="py-20 sm:py-28 bg-[#09090B] relative">
+    <!-- SERVICES & TRAINING GRID -->
+    <section id="programs" class="py-20 lg:py-28 bg-[#09090B]">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">ELITE PROGRAMS</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    Tailored Fitness Programs for Every Goal
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Elite Training Programs</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                    Designed to Build Muscle, Burn Fat &amp; Transform Physiques
                 </h2>
-                <p class="text-[#A1A1AA] text-sm sm:text-base">
-                    Whether you want to build raw muscle, torch stubborn fat, or boost athletic endurance, our specialized training regimes deliver results.
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Whether you are a beginner stepping into a gym for the first time or an advanced athlete looking to break plateaus, we have the specialized program for you.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Service 1 -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#FFB800]/50 transition-all group">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-[#FFB800]/10 flex items-center justify-center text-[#FFB800] mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dumbbell" aria-hidden="true" class="lucide lucide-dumbbell w-7 h-7"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"></path><path d="m2.5 21.5 1.4-1.4"></path><path d="m20.1 3.9 1.4-1.4"></path><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"></path><path d="m9.6 14.4 4.8-4.8"></path></svg>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold font-syne text-white mb-3">Strength Training</h3>
-                        <p class="text-[#A1A1AA] text-sm leading-relaxed mb-6">
-                            Professional heavy-duty free weights, power racks, and pin-loaded machines designed for maximum hypertrophy and raw power.
+                        <h3 class="break-words font-syne font-bold text-xl text-white mb-3">Strength Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Heavy powerlifting racks, Olympic bumper plates, calibrated dumbbells, and specialized resistance machines.
                         </p>
                     </div>
-                    <a href="https://wa.me/919279446246?text=Hi,%20I'm%20interested%20in%20Strength%20Training%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#FFB800] hover:text-white transition-colors">
-                        <span>Inquire on WhatsApp</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20know%20more%20about%20Strength%20Training%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl text-sm transition-colors text-center">
+                        Inquire Now →
                     </a>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#FFB800]/50 transition-all group">
+                <!-- Service Card 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-[#FF3333]/10 flex items-center justify-center text-[#FF3333] mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-check" aria-hidden="true" class="lucide lucide-user-check w-7 h-7"><path d="m16 11 2 2 4-4"></path><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold font-syne text-white mb-3">Personal Coaching</h3>
-                        <p class="text-[#A1A1AA] text-sm leading-relaxed mb-6">
-                            One-on-one custom workout blueprints, strict form correction, and personalized nutrition charting by elite certified trainers.
+                        <h3 class="break-words font-syne font-bold text-xl text-white mb-3">Personal Coaching</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            1-on-1 customized workout regimens, dietary macro planning, and constant progress tracking with pro trainers.
                         </p>
                     </div>
-                    <a href="https://wa.me/919279446246?text=Hi,%20I'm%20interested%20in%20Personal%20Coaching%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#FFB800] hover:text-white transition-colors">
-                        <span>Inquire on WhatsApp</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20know%20more%20about%20Personal%20Coaching%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl text-sm transition-colors text-center">
+                        Inquire Now →
                     </a>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#FFB800]/50 transition-all group">
+                <!-- Service Card 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-[#FFB800]/10 flex items-center justify-center text-[#FFB800] mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flame" aria-hidden="true" class="lucide lucide-flame w-7 h-7"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"></path></svg>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold font-syne text-white mb-3">Cardio & Fat Loss</h3>
-                        <p class="text-[#A1A1AA] text-sm leading-relaxed mb-6">
-                            Advanced treadmills, cross-trainers, and high-intensity interval training (HIIT) zones engineered to incinerate calories fast.
+                        <h3 class="break-words font-syne font-bold text-xl text-white mb-3">Cardio &amp; Fat Loss</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Advanced treadmills, ellipticals, stationary bikes, and HIIT circuit training areas designed for rapid fat burn.
                         </p>
                     </div>
-                    <a href="https://wa.me/919279446246?text=Hi,%20I'm%20interested%20in%20Cardio%20and%20Fat%20Loss%20programs." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#FFB800] hover:text-white transition-colors">
-                        <span>Inquire on WhatsApp</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20know%20more%20about%20Cardio%20%26%20Fat%20Loss%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl text-sm transition-colors text-center">
+                        Inquire Now →
                     </a>
                 </div>
 
-                <!-- Service 4 -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#FFB800]/50 transition-all group">
+                <!-- Service Card 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-[#FF3333]/10 flex items-center justify-center text-[#FF3333] mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 group-hover:bg-amber-500 group-hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" aria-hidden="true" class="lucide lucide-activity w-7 h-7"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold font-syne text-white mb-3">Endurance Conditioning</h3>
-                        <p class="text-[#A1A1AA] text-sm leading-relaxed mb-6">
-                            Functional training rigs, battle ropes, kettlebells, and agility circuits built to elevate stamina and core core strength.
+                        <h3 class="break-words font-syne font-bold text-xl text-white mb-3">Endurance Conditioning</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Functional training turf, battle ropes, kettlebells, and core stability tools to enhance stamina and agility.
                         </p>
                     </div>
-                    <a href="https://wa.me/919279446246?text=Hi,%20I'm%20interested%20in%20Endurance%20Conditioning." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#FFB800] hover:text-white transition-colors">
-                        <span>Inquire on WhatsApp</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20know%20more%20about%20Endurance%20Conditioning%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl text-sm transition-colors text-center">
+                        Inquire Now →
                     </a>
                 </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 lg:py-28 bg-zinc-900/50 border-t border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="col-span-1 lg:col-span-6">
+                    <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">About Muscles Box Gym</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-6">
+                        Patna’s Premier Fitness Hub Located in Anisabad
+                    </h2>
+                    <p class="text-zinc-300 text-base leading-relaxed mb-6">
+                        Founded with a mission to bring world-class fitness infrastructure to Patna, <strong class="text-white">Muscles Box Gym</strong> has quickly grown into the highest-rated fitness center in the area with over 246+ five-star Google reviews.
+                    </p>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                        We believe fitness is not just about lifting weights; it's about building a disciplined lifestyle, mental fortitude, and a supportive community. Our gym features pristine locker rooms, air-conditioned workout halls, top-tier imported machines, and certified personal trainers who are dedicated to your results.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-2 border-amber-400 pl-4">
+                            <div class="text-2xl sm:text-3xl font-extrabold font-syne text-white mb-1">5,000+</div>
+                            <div class="text-zinc-400 text-xs sm:text-sm">Sq. Ft. Training Floor</div>
+                        </div>
+                        <div class="border-l-2 border-amber-400 pl-4">
+                            <div class="text-2xl sm:text-3xl font-extrabold font-syne text-white mb-1">100%</div>
+                            <div class="text-zinc-400 text-xs sm:text-sm">Hygiene &amp; Sanitization</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1 lg:col-span-6">
+                    <div class="relative rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Muscular male torso close-up shot at Muscles Box Gym" class="w-full h-80 sm:h-96 lg:h-[450px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                            <div>
+                                <span class="bg-amber-500 text-black font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Pro Standard</span>
+                                <p class="text-white font-syne font-bold text-xl">Built for Serious Transformations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 5. MEMBERSHIP PACKAGES SECTION -->
-    <section id="packages" class="py-20 sm:py-28 bg-[#18181B]/30 border-y border-[#27272A]">
+    <!-- MEMBERSHIP PACKAGES SECTION -->
+    <section id="pricing" class="py-20 lg:py-28 bg-[#09090B]">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">INVEST IN YOURSELF</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    Transparent Membership Plans
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Transparent Membership Plans</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                    Choose Your Path to Peak Fitness
                 </h2>
-                <p class="text-[#A1A1AA] text-sm sm:text-base">
-                    No hidden charges. Choose the plan that fits your fitness journey and join Patna's strongest community today.
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Flexible plans with zero hidden fees. Join Patna's most vibrant gym community today.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
                 <!-- Monthly Plan -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl p-8 flex flex-col justify-between">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col justify-between hover:border-zinc-700 transition-all">
                     <div>
-                        <div class="text-xs font-bold uppercase tracking-widest text-[#FFB800] mb-2">STARTER</div>
-                        <h3 class="text-2xl font-bold font-syne text-white mb-4">Monthly Pass</h3>
-                        <div class="flex items-baseline gap-1 mb-6">
-                            <span class="text-4xl font-extrabold font-syne text-white">Flexible</span>
-                            <span class="text-xs text-[#A1A1AA]">/ month</span>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="break-words font-syne font-bold text-xl text-white">Monthly Pass</h3>
+                            <span class="text-xs font-semibold bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">Flexible</span>
                         </div>
-                        <ul class="space-y-3 mb-8 text-sm text-[#A1A1AA]">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Full Gym Floor Access</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Modern Cardio & Weights</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Locker & Changing Room</li>
-                            <li class="flex items-center gap-2 text-zinc-500"><i data-lucide="x" class="w-4 h-4"></i> Personal Training Guide</li>
+                        <div class="mb-6">
+                            <span class="text-3xl sm:text-4xl font-black font-syne text-white">Standard</span>
+                            <span class="text-zinc-400 text-sm block mt-1">Pay &amp; Train</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-zinc-300 text-sm">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Full Gym Floor Access</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Cardio &amp; Weight Training</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Locker Room Facility</li>
+                            <li class="flex items-center gap-2 text-zinc-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-4 h-4"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Personal Trainer Guidance</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20book%20the%20Monthly%20Membership%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-[#27272A] hover:bg-[#3f3f46] text-white font-bold rounded-xl text-center transition-colors">
-                        Book Monthly via WhatsApp
+                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20inquire%20about%20the%20Monthly%20Membership%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-xl text-center text-sm transition-colors">
+                        Select Monthly
                     </a>
                 </div>
 
-                <!-- Quarterly Plan (Featured) -->
-                <div class="bg-[#18181B] border-2 border-[#FFB800] rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-[#FFB800]/10">
-                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FFB800] text-black text-xs font-extrabold px-4 py-1 rounded-full uppercase tracking-wider">
-                        Most Popular
-                    </div>
+                <!-- Quarterly Plan (Popular) -->
+                <div class="bg-zinc-900 border-2 border-amber-500 rounded-3xl p-5 sm:p-8 flex flex-col justify-between relative shadow-2xl shadow-amber-500/10">
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-black font-extrabold text-xs px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
+                        🔥 Most Popular
+                    </span>
                     <div>
-                        <div class="text-xs font-bold uppercase tracking-widest text-[#FFB800] mb-2">TRANSFORMATION</div>
-                        <h3 class="text-2xl font-bold font-syne text-white mb-4">Quarterly Plan</h3>
-                        <div class="flex items-baseline gap-1 mb-6">
-                            <span class="text-4xl font-extrabold font-syne text-white">Best Value</span>
-                            <span class="text-xs text-[#A1A1AA]">/ 3 months</span>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="break-words font-syne font-bold text-xl text-white">Quarterly Plan</h3>
+                            <span class="text-xs font-semibold bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full">3 Months</span>
                         </div>
-                        <ul class="space-y-3 mb-8 text-sm text-white">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Full Gym Floor Access</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Cardio & Weight Training</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Diet & Nutrition Guidance</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Free Fitness Assessment</li>
+                        <div class="mb-6">
+                            <span class="text-3xl sm:text-4xl font-black font-syne text-white">Best Value</span>
+                            <span class="text-zinc-400 text-sm block mt-1">Accelerated Results</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-zinc-300 text-sm">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Full Gym Floor Access</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Cardio &amp; Weight Training</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Free Diet Consultation</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Locker &amp; Shower Access</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20book%20the%20Quarterly%20Membership%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-[#FFB800] hover:bg-[#FFC72C] text-black font-extrabold rounded-xl text-center transition-colors shadow-lg shadow-[#FFB800]/20">
-                        Book Quarterly via WhatsApp
+                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20inquire%20about%20the%20Quarterly%20Membership%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-amber-500 hover:bg-amber-400 text-black font-extrabold rounded-xl text-center text-sm transition-colors shadow-lg shadow-amber-500/20">
+                        Book Quarterly Plan
                     </a>
                 </div>
 
                 <!-- Annual Plan -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl p-8 flex flex-col justify-between">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col justify-between hover:border-zinc-700 transition-all">
                     <div>
-                        <div class="text-xs font-bold uppercase tracking-widest text-[#FFB800] mb-2">PRO ATHLETE</div>
-                        <h3 class="text-2xl font-bold font-syne text-white mb-4">Annual Pass</h3>
-                        <div class="flex items-baseline gap-1 mb-6">
-                            <span class="text-4xl font-extrabold font-syne text-white">Maximum</span>
-                            <span class="text-xs text-[#A1A1AA]">/ 12 months</span>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="break-words font-syne font-bold text-xl text-white">Annual Elite</h3>
+                            <span class="text-xs font-semibold bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full">12 Months</span>
                         </div>
-                        <ul class="space-y-3 mb-8 text-sm text-[#A1A1AA]">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Unlimited All-Access</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Priority Trainer Assistance</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Custom Diet & Routine Plan</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FFB800]"></i> Free Guest Passes Included</li>
+                        <div class="mb-6">
+                            <span class="text-3xl sm:text-4xl font-black font-syne text-white">Maximum Savings</span>
+                            <span class="text-zinc-400 text-sm block mt-1">Ultimate Commitment</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-zinc-300 text-sm">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Unlimited 1-Year Access</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Priority Trainer Support</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Custom Diet &amp; Workout Plan</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-amber-400"><path d="M20 6 9 17l-5-5"></path></svg> Locker, Sauna &amp; Shower Access</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20book%20the%20Annual%20Membership%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-[#27272A] hover:bg-[#3f3f46] text-white font-bold rounded-xl text-center transition-colors">
-                        Book Annual via WhatsApp
+                    <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20inquire%20about%20the%20Annual%20Elite%20Membership%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-xl text-center text-sm transition-colors">
+                        Select Annual Plan
                     </a>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- 6. WHY CHOOSE US SECTION -->
-    <section class="py-20 sm:py-28 bg-[#09090B]">
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="py-20 lg:py-28 bg-zinc-900/50 border-t border-zinc-800">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">THE MUSCLES BOX ADVANTAGE</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    Why Patna's Fitness Enthusiasts Choose Us
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Why Patna Chooses Us</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                    The Muscles Box Gym Difference
                 </h2>
-                <p class="text-[#A1A1AA] text-sm sm:text-base">
-                    We aren't just a gym; we are a dedicated ecosystem built for serious transformations.
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    We combine unmatched equipment quality, expert mentorship, and an electrifying atmosphere to guarantee your fitness success.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-[#18181B] border border-[#27272A] p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#FFB800]/10 flex items-center justify-center text-[#FFB800] mb-4">
-                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-6 h-6"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
                     </div>
-                    <h3 class="font-syne font-bold text-lg text-white mb-2">4.9★ Proven Excellence</h3>
-                    <p class="text-sm text-[#A1A1AA]">Over 246+ verified 5-star Google reviews from happy members across Patna.</p>
+                    <h3 class="break-words font-syne font-bold text-lg text-white mb-2">4.9★ Excellence</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Backed by 246+ verified 5-star Google reviews from dedicated members across Patna.
+                    </p>
                 </div>
 
-                <div class="bg-[#18181B] border border-[#27272A] p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#FF3333]/10 flex items-center justify-center text-[#FF3333] mb-4">
-                        <i data-lucide="award" class="w-6 h-6"></i>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-6 h-6"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
                     </div>
-                    <h3 class="font-syne font-bold text-lg text-white mb-2">Certified Pro Trainers</h3>
-                    <p class="text-sm text-[#A1A1AA]">Experienced trainers providing rigorous form coaching and result-oriented routines.</p>
+                    <h3 class="break-words font-syne font-bold text-lg text-white mb-2">Certified Pro Trainers</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Experienced fitness professionals who guide your form, prevent injuries, and accelerate results.
+                    </p>
                 </div>
 
-                <div class="bg-[#18181B] border border-[#27272A] p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#FFB800]/10 flex items-center justify-center text-[#FFB800] mb-4">
-                        <i data-lucide="layers" class="w-6 h-6"></i>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield w-6 h-6"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
                     </div>
-                    <h3 class="font-syne font-bold text-lg text-white mb-2">Modern Equipment</h3>
-                    <p class="text-sm text-[#A1A1AA]">Imported heavy-duty machines, Olympic weights, and clean, spacious workout zones.</p>
+                    <h3 class="break-words font-syne font-bold text-lg text-white mb-2">Modern Equipment</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Top-tier imported machines, heavy-duty racks, and pristine free weights maintained daily.
+                    </p>
                 </div>
 
-                <div class="bg-[#18181B] border border-[#27272A] p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-xl bg-[#FF3333]/10 flex items-center justify-center text-[#FF3333] mb-4">
-                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-6 h-6"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
-                    <h3 class="font-syne font-bold text-lg text-white mb-2">Prime Anisabad Location</h3>
-                    <p class="text-sm text-[#A1A1AA]">Conveniently located at Gate no. 3, near Imam plaza, Ali Nagar Colony, Patna.</p>
+                    <h3 class="break-words font-syne font-bold text-lg text-white mb-2">Prime Location</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Conveniently located near Imam Plaza, Ali Nagar Colony, Anisabad, Patna with easy parking.
+                    </p>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- 7. TRAINER EXPERTISE SHOWCASE -->
-    <section id="trainers" class="py-20 sm:py-28 bg-[#18181B]/30 border-y border-[#27272A]">
+    <!-- TRAINER EXPERTISE SHOWCASE -->
+    <section id="trainers" class="py-20 lg:py-28 bg-[#09090B]">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">EXPERT MENTORSHIP</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    Train With Patna's Best Coaches
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Expert Coaching Team</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                    Train With Patna’s Elite Fitness Mentors
                 </h2>
-                <p class="text-[#A1A1AA] text-sm sm:text-base">
-                    Our elite trainers push your limits safely, ensuring proper biomechanics and maximum muscle growth.
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Our certified trainers bring years of specialized bodybuilding, fat loss, and strength conditioning experience.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
                 <!-- Trainer 1 -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl overflow-hidden group">
-                    <div class="aspect-[4/3] relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=80" alt="Vikram Singh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#18181B] via-transparent to-transparent"></div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Head Strength Coach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-4 left-4 bg-amber-500 text-black font-bold text-xs px-3 py-1 rounded-full">Head Coach</span>
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-bold text-[#FFB800] uppercase tracking-wider">Head Strength Coach</span>
-                        <h3 class="text-xl font-bold font-syne text-white mt-1 mb-2">Vikram Singh</h3>
-                        <p class="text-sm text-[#A1A1AA] mb-4">Specializes in powerlifting, hypertrophy, and advanced biomechanical training.</p>
-                        <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20train%20with%20Coach%20Vikram." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-white hover:text-[#FFB800] transition-colors">
-                            <span>Train with Vikram</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <h3 class="break-words font-syne font-bold text-xl text-white mb-1">Vikram Singh</h3>
+                        <p class="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">Strength &amp; Hypertrophy Specialist</p>
+                        <p class="text-zinc-400 text-sm italic mb-6">
+                            "Discipline beats motivation every single day. If you stay consistent, the results are inevitable."
+                        </p>
+                        <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20train%20with%20Coach%20Vikram." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl text-sm transition-colors text-center block">
+                            Train With Vikram
                         </a>
                     </div>
                 </div>
 
                 <!-- Trainer 2 -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl overflow-hidden group">
-                    <div class="aspect-[4/3] relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Rahul Kumar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#18181B] via-transparent to-transparent"></div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Fat Loss &amp; Functional Coach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-4 left-4 bg-amber-500 text-black font-bold text-xs px-3 py-1 rounded-full">Senior Coach</span>
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-bold text-[#FF3333] uppercase tracking-wider">Fat Loss & HIIT Specialist</span>
-                        <h3 class="text-xl font-bold font-syne text-white mt-1 mb-2">Rahul Kumar</h3>
-                        <p class="text-sm text-[#A1A1AA] mb-4">Expert in rapid fat loss protocols, functional conditioning, and injury rehab.</p>
-                        <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20train%20with%20Coach%20Rahul." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-white hover:text-[#FFB800] transition-colors">
-                            <span>Train with Rahul</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <h3 class="break-words font-syne font-bold text-xl text-white mb-1">Rohit Verma</h3>
+                        <p class="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">Fat Loss &amp; HIIT Expert</p>
+                        <p class="text-zinc-400 text-sm italic mb-6">
+                            "Transforming your physique starts in the kitchen and is forged on the gym floor."
+                        </p>
+                        <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20train%20with%20Coach%20Rohit." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl text-sm transition-colors text-center block">
+                            Train With Rohit
                         </a>
                     </div>
                 </div>
 
                 <!-- Trainer 3 -->
-                <div class="bg-[#18181B] border border-[#27272A] rounded-2xl overflow-hidden group">
-                    <div class="aspect-[4/3] relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Anjali Sharma" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#18181B] via-transparent to-transparent"></div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Fitness &amp; Conditioning Coach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-4 left-4 bg-amber-500 text-black font-bold text-xs px-3 py-1 rounded-full">Nutritionist</span>
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-bold text-[#FFB800] uppercase tracking-wider">Nutrition & Conditioning</span>
-                        <h3 class="text-xl font-bold font-syne text-white mt-1 mb-2">Anjali Sharma</h3>
-                        <p class="text-sm text-[#A1A1AA] mb-4">Certified nutrition consultant focused on body toning and sustainable lifestyle transformation.</p>
-                        <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20consult%20with%20Coach%20Anjali." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-white hover:text-[#FFB800] transition-colors">
-                            <span>Consult Anjali</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <h3 class="break-words font-syne font-bold text-xl text-white mb-1">Priya Sharma</h3>
+                        <p class="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">Diet &amp; Conditioning Coach</p>
+                        <p class="text-zinc-400 text-sm italic mb-6">
+                            "Proper nutrition fuels hard work. Let's make your diet work for your fitness goals."
+                        </p>
+                        <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20consult%20with%20Coach%20Priya." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl text-sm transition-colors text-center block">
+                            Consult Priya
                         </a>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- 8. INTERACTIVE GALLERY / GYM TOUR -->
-    <section id="gallery" class="py-20 sm:py-28 bg-[#09090B]">
+    <!-- INTERACTIVE GALLERY / GYM TOUR -->
+    <section id="gallery" class="py-20 lg:py-28 bg-zinc-900/50 border-t border-zinc-800">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">VISUAL TOUR</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    Inside Muscles Box Gym
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Gym Tour &amp; Facility</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                    Take a Visual Tour of Muscles Box Gym
                 </h2>
-                <p class="text-[#A1A1AA] text-sm sm:text-base">
-                    Take a virtual look at our immaculate training floors, heavy rack setups, and premium equipment.
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    State-of-the-art equipment, pristine environment, and heavy lifting zones located in Anisabad, Patna.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-[#27272A] group">
-                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Gym Floor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="relative overflow-hidden rounded-3xl border border-zinc-800 group h-80">
+                    <img src="/sites/musclesbox/assets/gallery-1.jpg" alt="Modern gym interior ceiling lighting and floor at Muscles Box Gym" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Main Workout Floor</span>
+                    </div>
                 </div>
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-[#27272A] group">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Weights Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                <div class="relative overflow-hidden rounded-3xl border border-zinc-800 group h-80">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Free weights dumbbell rack" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Dumbbell &amp; Free Weight Zone</span>
+                    </div>
                 </div>
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-[#27272A] group">
-                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80" alt="Cardio Zone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+                <div class="relative overflow-hidden rounded-3xl border border-zinc-800 group h-80">
+                    <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Cardio treadmill zone" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <span class="text-white font-syne font-bold text-lg">Cardio &amp; Treadmill Deck</span>
+                    </div>
                 </div>
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-[#27272A] group">
-                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Strength Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-[#27272A] group">
-                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Dumbbell Rack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-[#27272A] group">
-                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Fitness Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- 9. CUSTOMER REVIEWS SECTION -->
-    <section id="reviews" class="py-20 sm:py-28 bg-[#18181B]/30 border-y border-[#27272A]">
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" class="py-20 lg:py-28 bg-[#09090B]">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">TESTIMONIALS</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    What Our Patna Members Say
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Google Reviews</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                    What Patna Fitness Enthusiasts Say About Us
                 </h2>
-                <div class="flex items-center justify-center gap-2 text-[#FFB800] mb-2">
-                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    <span class="text-white font-bold ml-2">4.9 / 5.0 (246+ Google Reviews)</span>
+                <div class="flex items-center justify-center gap-2 text-amber-400 mt-2">
+                    <span class="text-2xl font-bold font-syne">4.9 ★★★★★</span>
+                    <span class="text-zinc-400 text-sm font-normal">(Based on 246+ Google Reviews)</span>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
                 <!-- Review 1 -->
-                <div class="bg-[#18181B] border border-[#27272A] p-8 rounded-2xl flex flex-col justify-between">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center gap-1 text-[#FFB800] mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-sm sm:text-base text-[#A1A1AA] italic mb-6 leading-relaxed">
-                            "Hands down the best gym in Anisabad, Patna! The equipment is top-notch, trainers are very knowledgeable, and the vibe is super energetic."
+                        <div class="flex text-amber-400 mb-4">★★★★★</div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                            "Hands down the best gym in Patna! The equipment is top-notch, trainers are extremely knowledgeable, and the crowd at Anisabad branch is very motivating. Highly recommend Muscles Box Gym."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-[#27272A]">
-                        <div class="w-10 h-10 rounded-full bg-[#FFB800] text-black font-bold flex items-center justify-center font-syne">
-                            A
-                        </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center font-syne">AK</div>
                         <div>
-                            <h4 class="font-syne font-bold text-white text-sm">Abhishek Sinha</h4>
-                            <span class="text-xs text-[#A1A1AA]">Patna Member</span>
+                            <h4 class="font-syne font-bold text-white text-sm">Abhishek Kumar</h4>
+                            <span class="text-zinc-400 text-xs">Patna Member</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="bg-[#18181B] border border-[#27272A] p-8 rounded-2xl flex flex-col justify-between">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center gap-1 text-[#FFB800] mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-sm sm:text-base text-[#A1A1AA] italic mb-6 leading-relaxed">
-                            "Clean environment, great ventilation, and professional trainers who actually focus on correct form. Highly recommended if you are serious about fitness."
+                        <div class="flex text-amber-400 mb-4">★★★★★</div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                            "Great ambiance and very clean workout space. Trainers like Vikram Sir pay personal attention to your form. Lost 6 kgs in 2 months under their guidance. Amazing place!"
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-[#27272A]">
-                        <div class="w-10 h-10 rounded-full bg-[#FF3333] text-white font-bold flex items-center justify-center font-syne">
-                            P
-                        </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center font-syne">PS</div>
                         <div>
-                            <h4 class="font-syne font-bold text-white text-sm">Priya Kumari</h4>
-                            <span class="text-xs text-[#A1A1AA]">Anisabad Resident</span>
+                            <h4 class="font-syne font-bold text-white text-sm">Pooja Singh</h4>
+                            <span class="text-zinc-400 text-xs">Anisabad Resident</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="bg-[#18181B] border border-[#27272A] p-8 rounded-2xl flex flex-col justify-between">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center gap-1 text-[#FFB800] mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-sm sm:text-base text-[#A1A1AA] italic mb-6 leading-relaxed">
-                            "Great location near Imam Plaza with ample space. The personal coaching program helped me drop 8 kgs in 3 months safely. Amazing facility!"
+                        <div class="flex text-amber-400 mb-4">★★★★★</div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                            "Spacious floor, heavy dumbbells, squat racks, and friendly staff. If you are serious about bodybuilding or fitness in Patna, Muscles Box Gym is the ultimate destination."
                         </p>
                     </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-[#27272A]">
-                        <div class="w-10 h-10 rounded-full bg-[#FFB800] text-black font-bold flex items-center justify-center font-syne">
-                            M
-                        </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center font-syne">MK</div>
                         <div>
-                            <h4 class="font-syne font-bold text-white text-sm">Manish Tiwary</h4>
-                            <span class="text-xs text-[#A1A1AA]">Patna Regular</span>
+                            <h4 class="font-syne font-bold text-white text-sm">Manish Kumar</h4>
+                            <span class="text-zinc-400 text-xs">Verified Reviewer</span>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- 10. FAQ ACCORDION -->
-    <section class="py-20 sm:py-28 bg-[#09090B]">
+    <!-- FAQ ACCORDION -->
+    <section id="faq" class="py-20 lg:py-28 bg-zinc-900/50 border-t border-zinc-800">
         <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">GOT QUESTIONS?</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    Frequently Asked Questions
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Frequently Asked Questions</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                    Got Questions? We’ve Got Answers
                 </h2>
-                <p class="text-[#A1A1AA] text-sm sm:text-base">
+                <p class="text-zinc-400 text-sm sm:text-base">
                     Everything you need to know about joining Muscles Box Gym in Anisabad, Patna.
                 </p>
             </div>
 
             <div class="space-y-4">
+                
                 <!-- FAQ Item 1 -->
-                <div class="faq-item bg-[#18181B] border border-[#27272A] rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg">
-                        <span>How can I claim my Free 1-Day Trial Pass?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#FFB800] transition-transform duration-300"></i>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>How can I claim my free trial pass?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-amber-400 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed border-t border-[#27272A] pt-4">
-                        You can claim your free trial pass instantly by filling out the trial form on this page or by clicking our WhatsApp quick button. Our team will share your digital pass instantly!
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-300 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                        You can claim your free 1-day trial pass instantly by filling out the trial form on our website or by clicking the WhatsApp button to message our front desk.
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="faq-item bg-[#18181B] border border-[#27272A] rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
                         <span>What are the gym operating hours?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#FFB800] transition-transform duration-300"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-amber-400 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed border-t border-[#27272A] pt-4">
-                        We are open Monday to Saturday from 6:00 AM to 10:00 PM. We remain closed on Sundays for routine deep cleaning and maintenance.
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-300 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                        Muscles Box Gym is open Monday through Saturday from 6:00 AM to 10:00 PM. We remain closed on Sundays for maintenance and deep sanitization.
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="faq-item bg-[#18181B] border border-[#27272A] rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg">
-                        <span>Where exactly is Muscles Box Gym located?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#FFB800] transition-transform duration-300"></i>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Are personal trainers available for beginners?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-amber-400 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed border-t border-[#27272A] pt-4">
-                        We are conveniently located at Gate no. 3, near Imam plaza, Ali Nagar Colony, Anisabad, Patna, Bihar 800002. Easily accessible from all parts of Patna.
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-300 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                        Yes! We have certified personal coaches who specialize in guiding beginners through correct form, personalized workout regimens, and diet planning to ensure injury-free progress.
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="faq-item bg-[#18181B] border border-[#27272A] rounded-2xl overflow-hidden transition-all">
-                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-syne font-bold text-white text-base sm:text-lg">
-                        <span>Are personal trainers available for beginners?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-[#FFB800] transition-transform duration-300"></i>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-syne font-bold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Where is Muscles Box Gym located in Patna?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-amber-400 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
                     </button>
-                    <div class="faq-content hidden px-6 pb-6 text-sm text-[#A1A1AA] leading-relaxed border-t border-[#27272A] pt-4">
-                        Yes! We have certified professional trainers on the floor to guide all new members on correct posture, machine usage, and customized workout routines.
+                    <div class="faq-content hidden px-6 pb-5 text-zinc-300 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                        We are conveniently located at Gate no. 3, near Imam Plaza, Ali Nagar Colony, Anisabad, Patna, Bihar 800002.
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- 11. INTERACTIVE LOCATION & CONTACT SECTION -->
-    <section id="contact" class="py-20 sm:py-28 bg-[#18181B]/30 border-y border-[#27272A]">
+    <!-- INTERACTIVE LOCATION & CONTACT SECTION -->
+    <section id="contact" class="py-20 lg:py-28 bg-[#09090B]">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[#FFB800] text-xs sm:text-sm font-bold uppercase tracking-widest block mb-3">GET IN TOUCH</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
-                    Visit Or Send Us A Message
-                </h2>
-                <p class="text-[#A1A1AA] text-sm sm:text-base">
-                    Ready to start your fitness journey? Drop by our Anisabad center or claim your free trial pass below.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Info & Hours & Map -->
-                <div class="space-y-8">
-                    <!-- Details Card -->
-                    <div class="bg-[#18181B] border border-[#27272A] p-8 rounded-2xl space-y-6">
-                        <h3 class="font-syne font-bold text-xl text-white">Gym Information</h3>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-[#FFB800]/10 flex items-center justify-center text-[#FFB800] shrink-0 mt-1">
-                                <i data-lucide="map-pin" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Location</h4>
-                                <p class="text-sm text-[#A1A1AA]">Gate no. 3, near Imam plaza, Ali Nagar Colony, Anisabad, Patna, Bihar 800002</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-[#FFB800]/10 flex items-center justify-center text-[#FFB800] shrink-0 mt-1">
-                                <i data-lucide="phone" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Phone / WhatsApp</h4>
-                                <a href="tel:+919279446246" class="text-sm text-[#A1A1AA] hover:text-[#FFB800] transition-colors">+91 92794 46246</a>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-[#FFB800]/10 flex items-center justify-center text-[#FFB800] shrink-0 mt-1">
-                                <i data-lucide="clock" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Operating Hours</h4>
-                                <p class="text-xs text-[#A1A1AA]">Monday – Saturday: 6:00 AM – 10:00 PM</p>
-                                <p class="text-xs text-[#FF3333] font-medium mt-1">Sunday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Google Maps Embed -->
-                    <div class="bg-[#18181B] border border-[#27272A] p-4 rounded-2xl">
-                        <div class="w-full h-[300px] rounded-xl overflow-hidden border border-[#27272A] relative">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.904245672836!2d85.0925989!3d25.5857641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57181d2f0c2d%3A0xb1ed96d5af2eea66!2sMuscles%20Box%20Gym%20-%20Best%20gym%20in%20Patna!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="mt-4">
-                            <a href="https://www.google.com/maps/place/Muscles+Box+Gym+-+Best+gym+in+Patna/data=!4m7!3m6!1s0x39ed57181d2f0c2d:0xb1ed96d5af2eea66!8m2!3d25.5857641!4d85.0925989!16s%2Fg%2F11y2qcjwty!19sChIJLQwvHRhX7TkRZuour9WW7bE?authuser=0&hl=en&g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&rclk=1" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-[#27272A] hover:bg-[#3f3f46] text-white font-bold rounded-xl text-sm transition-colors">
-                                <i data-lucide="navigation" class="w-4 h-4 text-[#FFB800]"></i> Get Directions on Google Maps
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Trial Pass Inquiry Form -->
-                <div class="bg-[#18181B] border border-[#27272A] p-8 rounded-2xl flex flex-col justify-between">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left: Contact Info & Hours -->
+                <div class="col-span-1 lg:col-span-6 space-y-8">
                     <div>
-                        <h3 class="font-syne font-bold text-2xl text-white mb-2">Claim Free Trial Pass</h3>
-                        <p class="text-sm text-[#A1A1AA] mb-8">Fill out this quick form to reserve your free 1-day trial pass or membership consultation at Muscles Box Gym.</p>
+                        <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Get In Touch</span>
+                        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-white mb-4">
+                            Visit Muscles Box Gym Today
+                        </h2>
+                        <p class="text-zinc-400 text-sm sm:text-base">
+                            Drop by our Anisabad facility or reach out via phone/WhatsApp to start your fitness journey.
+                        </p>
+                    </div>
 
-                        <form id="trial-form" class="space-y-6">
-                            <div>
-                                <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Your Full Name</label>
-                                <input type="text" id="form-name" required placeholder="e.g. Aman Kumar" class="w-full bg-[#09090B] border border-[#27272A] rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FFB800] transition-colors">
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             </div>
-
                             <div>
-                                <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
-                                <input type="tel" id="form-phone" required placeholder="e.g. +91 98765 43210" class="w-full bg-[#09090B] border border-[#27272A] rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FFB800] transition-colors">
+                                <h4 class="font-syne font-bold text-white text-sm mb-1">Address</h4>
+                                <p class="text-zinc-400 text-xs sm:text-sm">Gate no. 3, near Imam plaza, Ali Nagar Colony, Anisabad, Patna, Bihar 800002</p>
                             </div>
+                        </div>
 
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            </div>
                             <div>
-                                <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Select Interest / Package</label>
-                                <select id="form-service" class="w-full bg-[#09090B] border border-[#27272A] rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FFB800] transition-colors">
-                                    <option value="Free Trial Pass">Free 1-Day Trial Pass</option>
-                                    <option value="Strength Training">Strength Training</option>
-                                    <option value="Personal Coaching">Personal Coaching</option>
-                                    <option value="Cardio & Fat Loss">Cardio & Fat Loss</option>
-                                    <option value="Quarterly Membership">Quarterly Membership</option>
-                                    <option value="Annual Membership">Annual Membership</option>
-                                </select>
+                                <h4 class="font-syne font-bold text-white text-sm mb-1">Phone / WhatsApp</h4>
+                                <a href="tel:+919279446246" class="text-amber-400 text-xs sm:text-sm font-semibold hover:underline">+91 92794 46246</a>
                             </div>
+                        </div>
 
-                            <div>
-                                <label class="block text-xs font-bold text-white uppercase tracking-wider mb-2">Message or Goal (Optional)</label>
-                                <textarea id="form-message" rows="3" placeholder="Tell us your fitness goal..." class="w-full bg-[#09090B] border border-[#27272A] rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-[#FFB800] transition-colors"></textarea>
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
                             </div>
+                            <div class="w-full">
+                                <h4 class="font-syne font-bold text-white text-sm mb-2">Operating Hours</h4>
+                                <div class="flex justify-between text-xs sm:text-sm text-zinc-400 py-1 border-b border-zinc-800">
+                                    <span>Monday - Saturday:</span>
+                                    <span class="text-white font-medium">6:00 AM - 10:00 PM</span>
+                                </div>
+                                <div class="flex justify-between text-xs sm:text-sm text-zinc-400 pt-1">
+                                    <span>Sunday:</span>
+                                    <span class="text-red-400 font-medium">Closed (Maintenance)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                            <button type="submit" id="form-submit-btn" class="w-full py-4 bg-[#FFB800] hover:bg-[#FFC72C] text-black font-extrabold rounded-xl transition-all shadow-lg shadow-[#FFB800]/20 flex items-center justify-center gap-2">
-                                <span id="btn-text">Submit & Claim Free Pass</span>
-                                <i data-lucide="send" class="w-4 h-4"></i>
-                            </button>
-                        </form>
+                    <!-- Google Maps Embed & Directions Button -->
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden border border-zinc-800 w-full aspect-[4/3] sm:aspect-[16/9] relative">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.995973685419!2d85.0925989!3d25.5857641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57181d2f0c2d%3A0xb1ed96d5af2eea66!2sMuscles%20Box%20Gym%20-%20Best%20gym%20in%20Patna!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border: 0px; width: 100%; height: 100%; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full block border-0"></iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/place/Muscles+Box+Gym+-+Best+gym+in+Patna/data=!4m7!3m6!1s0x39ed57181d2f0c2d:0xb1ed96d5af2eea66!8m2!3d25.5857641!4d85.0925989!16s%2Fg%2F11y2qcjwty!19sChIJLQwvHRhX7TkRZuour9WW7bE?authuser=0&amp;hl=en&amp;g_ep=EgoyMDI2MTAyMC4wIJJjKgBIAVAD&amp;rclk=1" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-2xl text-center text-sm transition-colors flex items-center justify-center gap-2 shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation w-4 h-4 text-amber-400"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> Get Directions on Google Maps
+                        </a>
                     </div>
                 </div>
+
+                <!-- Right: Trial Pass Inquiry Form -->
+                <div id="trial" class="col-span-1 lg:col-span-6 bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                    <span class="bg-amber-500/20 text-amber-400 font-bold text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-block mb-4">Free Trial Pass</span>
+                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-syne text-white mb-2">Claim Your Free Session</h3>
+                    <p class="text-zinc-400 text-sm mb-6">Fill out the form below and our team will instantly confirm your free trial pass via WhatsApp or phone.</p>
+
+                    <form id="trial-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Full Name</label>
+                            <input type="text" id="form-name" required="" placeholder="Enter your full name" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                            <input type="tel" id="form-phone" required="" placeholder="+91 XXXXX XXXXX" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Fitness Goal</label>
+                            <select id="form-goal" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors">
+                                <option value="Strength Training">Strength &amp; Muscle Building</option>
+                                <option value="Fat Loss &amp; Cardio">Fat Loss &amp; Cardio</option>
+                                <option value="Personal Coaching">Personal Coaching</option>
+                                <option value="General Fitness">General Fitness</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Message (Optional)</label>
+                            <textarea id="form-message" rows="3" placeholder="Any specific questions or preferred timing?" class="w-full bg-[#09090B] border border-zinc-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" id="form-submit-btn" class="w-full py-4 bg-amber-500 hover:bg-amber-400 text-black font-extrabold rounded-xl text-base transition-all shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2">
+                            <span>Claim Free Trial Pass</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" aria-hidden="true" class="lucide lucide-send w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        </button>
+                    </form>
+
+                    <!-- Success Feedback Modal / Message -->
+                    <div id="form-success-msg" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm text-center font-medium">
+                        🎉 Success! Your free trial request has been submitted. Our team will contact you shortly on WhatsApp to confirm your slot.
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- SUCCESS MODAL POPUP -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
-        <div class="bg-[#18181B] border border-[#27272A] p-8 rounded-2xl max-w-md w-full text-center relative shadow-2xl">
-            <div class="w-16 h-16 rounded-full bg-[#FFB800]/20 text-[#FFB800] flex items-center justify-center mx-auto mb-6">
-                <i data-lucide="check-circle-2" class="w-8 h-8"></i>
-            </div>
-            <h3 class="font-syne font-bold text-2xl text-white mb-2">Pass Claimed Successfully!</h3>
-            <p id="modal-desc" class="text-sm text-[#A1A1AA] mb-8 leading-relaxed">
-                Thank you! Your trial request has been registered. We are redirecting you to WhatsApp to confirm your pass instantly with our gym manager.
-            </p>
-            <button id="modal-close-btn" class="w-full py-3.5 bg-[#FFB800] hover:bg-[#FFC72C] text-black font-extrabold rounded-xl transition-colors">
-                Done & Continue
-            </button>
-        </div>
-    </div>
-
-    <!-- 12. STICKY MOBILE ACTION BAR -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-[#27272A] p-3 flex items-center gap-3">
-        <a href="tel:+919279446246" class="flex-1 flex items-center justify-center gap-2 py-3 bg-[#18181B] border border-[#27272A] text-white font-bold text-sm rounded-xl">
-            <i data-lucide="phone" class="w-4 h-4 text-[#FFB800]"></i> Call Now
-        </a>
-        <a href="https://wa.me/919279446246?text=Hi,%20I%20want%20to%20claim%20my%20free%20trial%20pass%20at%20Muscles%20Box%20Gym." target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3 bg-[#FFB800] text-black font-extrabold text-sm rounded-xl shadow-lg shadow-[#FFB800]/20">
-            <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp
-        </a>
-    </div>
-
-    <!-- 13. FOOTER -->
-    <footer class="bg-[#09090B] border-t border-[#27272A] py-16">
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-zinc-800 pt-16 pb-12">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <!-- Brand Info -->
-                <div class="space-y-4 md:col-span-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-zinc-800/80">
+                
+                <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#FFB800] to-[#FF3333] flex items-center justify-center font-syne font-extrabold text-black text-lg">
-                            MB
-                        </div>
-                        <span class="font-syne font-extrabold text-white text-lg">MUSCLES BOX</span>
+                        <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center font-syne font-black text-black text-xl">MB</div>
+                        <span class="font-syne font-bold text-xl text-white">Muscles Box Gym</span>
                     </div>
-                    <p class="text-sm text-[#A1A1AA] leading-relaxed">
-                        Patna's premier fitness destination. Certified trainers, modern machinery, and a 4.9★ rated community near Imam Plaza, Anisabad.
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Patna's elite fitness destination. Rated 4.9★ with certified trainers, heavy equipment, and a passionate fitness community in Anisabad.
                     </p>
-                    <div class="flex items-center gap-3 text-[#FFB800]">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <span class="text-white text-xs font-semibold">4.9/5 (246 Reviews)</span>
-                    </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
                     <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm text-[#A1A1AA]">
-                        <li><a href="#services" class="hover:text-[#FFB800] transition-colors">Services</a></li>
-                        <li><a href="#packages" class="hover:text-[#FFB800] transition-colors">Packages</a></li>
-                        <li><a href="#trainers" class="hover:text-[#FFB800] transition-colors">Trainers</a></li>
-                        <li><a href="#gallery" class="hover:text-[#FFB800] transition-colors">Gym Tour</a></li>
-                        <li><a href="#reviews" class="hover:text-[#FFB800] transition-colors">Google Reviews</a></li>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#programs" class="hover:text-amber-400 transition-colors">Training Programs</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">About Gym</a></li>
+                        <li><a href="#pricing" class="hover:text-amber-400 transition-colors">Membership Plans</a></li>
+                        <li><a href="#trainers" class="hover:text-amber-400 transition-colors">Expert Trainers</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition-colors">Facility Gallery</a></li>
                     </ul>
                 </div>
 
-                <!-- Programs -->
                 <div>
-                    <h4 class="font-syne font-bold text-white text-base mb-4">Programs</h4>
-                    <ul class="space-y-2 text-sm text-[#A1A1AA]">
-                        <li><a href="#services" class="hover:text-[#FFB800] transition-colors">Strength Training</a></li>
-                        <li><a href="#services" class="hover:text-[#FFB800] transition-colors">Personal Coaching</a></li>
-                        <li><a href="#services" class="hover:text-[#FFB800] transition-colors">Cardio & Fat Loss</a></li>
-                        <li><a href="#services" class="hover:text-[#FFB800] transition-colors">Endurance Conditioning</a></li>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Operating Hours</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li>Monday - Saturday: <span class="text-white font-medium">6 AM - 10 PM</span></li>
+                        <li>Sunday: <span class="text-red-400 font-medium">Closed</span></li>
+                        <li class="pt-2 text-amber-400 font-semibold">📍 Anisabad, Patna</li>
                     </ul>
                 </div>
 
-                <!-- Location & Hours -->
                 <div>
-                    <h4 class="font-syne font-bold text-white text-base mb-4">Location & Hours</h4>
-                    <p class="text-sm text-[#A1A1AA] mb-2">Gate no. 3, near Imam plaza, Ali Nagar Colony, Anisabad, Patna, Bihar 800002</p>
-                    <p class="text-sm text-[#FFB800] font-semibold mb-1">Mon - Sat: 6:00 AM - 10:00 PM</p>
-                    <p class="text-sm text-[#FF3333]">Sun: Closed</p>
+                    <h4 class="font-syne font-bold text-white text-base mb-4">Contact &amp; Location</h4>
+                    <p class="text-zinc-400 text-sm mb-4 leading-relaxed">
+                        Gate no. 3, near Imam plaza, Ali Nagar Colony, Anisabad, Patna, Bihar 800002
+                    </p>
+                    <a href="tel:+919279446246" class="text-amber-400 font-bold text-sm hover:underline block mb-1">+91 92794 46246</a>
+                    <a href="https://wa.me/919279446246" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-bold text-sm hover:underline block">WhatsApp Chat →</a>
                 </div>
+
             </div>
 
-            <div class="border-t border-[#27272A] pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#A1A1AA] gap-4">
-                <p>&copy; 2026 Muscles Box Gym - Patna. All rights reserved.</p>
-                <p>Designed with elite standards for Patna fitness enthusiasts.</p>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+                <p>© <span id="current-year">2026</span> Muscles Box Gym - Best gym in Patna. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT INTERACTIONS -->
+    <!-- STICKY MOBILE BOTTOM BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex gap-3">
+        <a href="tel:+919279446246" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-zinc-800 hover:bg-zinc-700 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-amber-400"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919279446246?text=Hi%20Muscles%20Box%20Gym,%20I%20want%20to%20book%20a%20free%20trial%20session!" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4 fill-white"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & INTERACTION -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Mobile Menu Toggle
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
         const menuToggle = document.getElementById('menu-toggle');
         const menuClose = document.getElementById('menu-close');
         const mobileDrawer = document.getElementById('mobile-drawer');
         const menuBackdrop = document.getElementById('menu-backdrop');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-        function openMenu() {
+        function openMobileMenu() {
             mobileDrawer.classList.remove('translate-x-full');
             menuBackdrop.classList.remove('hidden');
             document.body.classList.add('overflow-hidden');
         }
 
-        function closeMenu() {
+        function closeMobileMenu() {
             mobileDrawer.classList.add('translate-x-full');
             menuBackdrop.classList.add('hidden');
             document.body.classList.remove('overflow-hidden');
         }
 
-        menuToggle.addEventListener('click', openMenu);
-        menuClose.addEventListener('click', closeMenu);
-        menuBackdrop.addEventListener('click', closeMenu);
-        mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+        menuToggle.addEventListener('click', openMobileMenu);
+        menuClose.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
 
-        // FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const btn = item.querySelector('.faq-btn');
-            const content = item.querySelector('.faq-content');
-            const icon = item.querySelector('i');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
 
+        // FAQ Accordion Logic
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
             btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const chevron = btn.querySelector('lucide-icon, svg');
+                
+                // Toggle current
                 const isOpen = !content.classList.contains('hidden');
                 
                 // Close all
-                faqItems.forEach(other => {
-                    other.querySelector('.faq-content').classList.add('hidden');
-                    other.querySelector('i').style.transform = 'rotate(0deg)';
-                });
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn svg').forEach(s => s.style.transform = 'rotate(0deg)');
 
-                // Toggle current
-                if (!isOpen) {
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    if(chevron) chevron.style.transform = 'rotate(0deg)';
+                } else {
                     content.classList.remove('hidden');
-                    icon.style.transform = 'rotate(180deg)';
+                    if(chevron) chevron.style.transform = 'rotate(180deg)';
                 }
             });
         });
 
-        // Interactive Trial Form & Success Modal
+        // Trial Form Submission Logic with Safe Client-Side Handling
         const trialForm = document.getElementById('trial-form');
-        const successModal = document.getElementById('success-modal');
-        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const formSuccessMsg = document.getElementById('form-success-msg');
+        const formSubmitBtn = document.getElementById('form-submit-btn');
 
-        trialForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('form-name').value.trim();
-            const phone = document.getElementById('form-phone').value.trim();
-            const service = document.getElementById('form-service').value;
-            const message = document.getElementById('form-message').value.trim();
+        if(trialForm) {
+            trialForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('form-name').value.trim();
+                const phone = document.getElementById('form-phone').value.trim();
+                const goal = document.getElementById('form-goal').value;
+                const message = document.getElementById('form-message').value.trim();
 
-            if (!name || !phone) {
-                alert('Please enter your name and phone number.');
-                return;
-            }
+                if(!name || !phone) {
+                    alert('Please fill in your name and phone number.');
+                    return;
+                }
 
-            // Show success modal
-            successModal.classList.remove('hidden');
-            successModal.classList.add('flex');
-            document.body.classList.add('overflow-hidden');
+                // Simulate loading state
+                formSubmitBtn.disabled = true;
+                formSubmitBtn.textContent = 'Submitting...';
 
-            // Prepare WhatsApp redirection URL after modal close
-            const waText = `Hi, my name is ${name}. Phone: ${phone}. I registered for: ${service}. Message: ${message}`;
-            const waUrl = `https://wa.me/919279446246?text=${encodeURIComponent(waText)}`;
+                setTimeout(() => {
+                    formSubmitBtn.style.display = 'none';
+                    formSuccessMsg.classList.remove('hidden');
+                    trialForm.reset();
 
-            modalCloseBtn.onclick = () => {
-                window.open(waUrl, '_blank', 'noopener noreferrer');
-                successModal.classList.add('hidden');
-                successModal.classList.remove('flex');
-                document.body.classList.remove('overflow-hidden');
-                trialForm.reset();
-            };
-        });
+                    // Optional redirect to WhatsApp with pre-filled details
+                    const waText = encodeURIComponent(`Hi, my name is ${name}. I want to claim my free trial pass for ${goal}. Phone: ${phone}. ${message}`);
+                    setTimeout(() => {
+                        window.open(`https://wa.me/919279446246?text=${waText}`, '_blank');
+                    }, 1500);
+                }, 1000);
+            });
+        }
     </script>
-</body>
-</html>
+
+</body></html>
