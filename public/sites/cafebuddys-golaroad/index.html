@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth"><head>
+    <base href="/sites/cafebuddys/">
+    
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- ArcLane Responsive Typography & Distortion Prevention Guard -->
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+      img, svg, video, canvas, audio, iframe, embed, object {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/&gt;&lt;text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22&gt;🍽️&lt;/text&gt;&lt;/svg&gt;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Buddy's Espresso - Gola Road | Official Website</title>
+    <meta name="description" content="Experience Patna's coziest artisan cafe at Gola Road. Fresh espresso brews, shakes, continental snacks, and warm ambiance near St. Karen's High School. Order via WhatsApp!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#121212',
+                            surface: '#1E1E1E',
+                            border: '#2C1810',
+                            primary: '#E5BA73',
+                            secondary: '#C68B59',
+                            text: '#F9F6F0',
+                            muted: '#A39B90'
+                        }
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #121212;
+            color: #F9F6F0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-text overflow-x-hidden pb-28 md:pb-0 pb-24">
+
+    <!-- Backdrop Overlay for Mobile Drawer -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-[#1a0f0a] border-b border-[#2C1810] text-[#E5BA73] text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50">
+        ✨ Welcome to Cafe Buddy's Espresso! Open Daily: 10:00 AM - 10:30 PM | 📍 Gola Road, Patna
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#121212] border-b border-[#2C1810] w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo Monogram -->
+            <a href="#" class="flex items-center gap-3 shrink-0 mr-4 lg:mr-8 group">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#E5BA73] to-[#C68B59] flex items-center justify-center font-syne font-black text-xl text-black shadow-lg shadow-[#E5BA73]/10 transition-transform group-hover:scale-105">
+                    CB
+                </div>
+                <div>
+                    <span class="font-syne font-extrabold text-base sm:text-lg tracking-tight text-[#F9F6F0] block leading-tight">Cafe Buddy's</span>
+                    <span class="text-[10px] sm:text-xs text-[#E5BA73] font-medium tracking-wider uppercase block">Espresso • Gola Rd</span>
+                </div>
+            </a>
+
+            <!-- Balanced Centered Navbar -->
+            <nav class="hidden lg:flex items-center justify-center mx-auto lg: -0 shrink-0 gap-3 lg:gap-4 xl:gap-6 2xl:gap-6 px-2 lg:px-4">
+                <a href="#services" class="text-sm font-medium text-[#A39B90] hover:text-[#E5BA73] transition-colors whitespace-nowrap shrink-0">Menu</a>
+                <a href="#pricing" class="text-sm font-medium text-[#A39B90] hover:text-[#E5BA73] transition-colors whitespace-nowrap shrink-0">Pricing</a>
+                <a href="#about" class="text-sm font-medium text-[#A39B90] hover:text-[#E5BA73] transition-colors whitespace-nowrap shrink-0">About Us</a>
+                <a href="#gallery" class="text-sm font-medium text-[#A39B90] hover:text-[#E5BA73] transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">Gallery</a>
+                <a href="#why-us" class="text-sm font-medium text-[#A39B90] hover:text-[#E5BA73] transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">Why Us</a>
+                <a href="#reviews" class="text-sm font-medium text-[#A39B90] hover:text-[#E5BA73] transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-[#A39B90] hover:text-[#E5BA73] transition-colors whitespace-nowrap shrink-0">Contact</a>
+            </nav>
+
+            <!-- Action CTAs -->
+            <div class="hidden sm:flex items-center gap-2 sm:gap-3 shrink-0 flex-nowrap">
+                <a href="tel:+917463917733" class="whitespace-nowrap shrink-0 hidden xl:flex items-center gap-2 px-4 py-2.5 rounded-xl border border-[#2C1810] bg-[#1E1E1E] text-sm font-semibold hover:border-[#E5BA73] text-[#F9F6F0] transition-all mr-4 lg:mr-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-[#E5BA73]"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    <span class="whitespace-nowrap">Call Us</span>
+                </a>
+                <a href="https://wa.me/917463917733?text=Hi%20Cafe%20Buddy's%20Espresso,%20I%20would%20like%20to%20order..." target="_blank" rel="noopener noreferrer" class="whitespace-nowrap shrink-0 flex items-center gap-2 px-4.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold shadow-lg shadow-emerald-900/30 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                    <span class="whitespace-nowrap">Order on WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-[#1E1E1E] border border-[#2C1810] text-[#E5BA73] focus:outline-none whitespace-nowrap shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flavored Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed top-12 bottom-0 right-0 z-[100] w-full max-w-xs rounded-tl-2xl p-6 bg-[#121212] border-l border-[#2C1810] shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-[#2C1810]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E5BA73] to-[#C68B59] flex items-center justify-center font-syne font-black text-lg text-black">
+                        CB
+                    </div>
+                    <div>
+                        <span class="font-syne font-bold text-sm block">Cafe Buddy's</span>
+                        <span class="text-[10px] text-[#E5BA73] uppercase">Espresso Patna</span>
+                    </div>
+                </div>
+                <button id="mobile-close-btn" aria-label="Close Navigation Menu" class="p-2 rounded-lg bg-[#1E1E1E] text-[#A39B90] hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4">
+                <a href="#services" class="mobile-nav-link text-base font-medium text-[#F9F6F0] hover:text-[#E5BA73] py-2 border-b border-[#1E1E1E] flex items-center justify-between">
+                    <span>Menu Highlights</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-[#A39B90]"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#pricing" class="mobile-nav-link text-base font-medium text-[#F9F6F0] hover:text-[#E5BA73] py-2 border-b border-[#1E1E1E] flex items-center justify-between">
+                    <span>Pricing / Deals</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-[#A39B90]"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#why-us" class="mobile-nav-link text-base font-medium text-[#F9F6F0] hover:text-[#E5BA73] py-2 border-b border-[#1E1E1E] flex items-center justify-between">
+                    <span>Why Choose Us</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-[#A39B90]"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#about" class="mobile-nav-link text-base font-medium text-[#F9F6F0] hover:text-[#E5BA73] py-2 border-b border-[#1E1E1E] flex items-center justify-between">
+                    <span>Our Story</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-[#A39B90]"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-base font-medium text-[#F9F6F0] hover:text-[#E5BA73] py-2 border-b border-[#1E1E1E] flex items-center justify-between">
+                    <span>Gallery</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-[#A39B90]"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-[#F9F6F0] hover:text-[#E5BA73] py-2 border-b border-[#1E1E1E] flex items-center justify-between">
+                    <span>Customer Reviews</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-[#A39B90]"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-base font-medium text-[#F9F6F0] hover:text-[#E5BA73] py-2 flex items-center justify-between">
+                    <span>Location &amp; Contact</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-[#A39B90]"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-[#2C1810] flex flex-col gap-3">
+            <a href="tel:+917463917733" class="w-full py-3 rounded-xl bg-[#1E1E1E] border border-[#2C1810] font-semibold text-center text-sm flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-[#E5BA73]"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                <span>Call +91 74639 17733</span>
+            </a>
+            <a href="https://wa.me/917463917733?text=Hi%20Cafe%20Buddy's%20Espresso,%20I%20would%20like%20to%20order..." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-emerald-600 font-bold text-center text-sm flex items-center justify-center gap-2 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                <span>Order on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section with Desktop Split-Hero Showcase Architecture -->
+    <section class="relative pt-8 pb-16 lg:py-24 bg-brand-bg overflow-hidden">
+        <!-- Ambient background glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#E5BA73]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Column (col-span-1 lg:col-span-7) -->
+                <div class="col-span-1 lg:col-span-7 text-left">
+                    
+                    <!-- Google Rating Badge & Locality Chip -->
+                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                        <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#1E1E1E] border border-[#2C1810] text-xs font-semibold text-[#E5BA73] shadow-sm">
+                            <span class="text-amber-400">⭐</span>
+                            <span>4.5 ★ (27 Google Reviews)</span>
+                        </div>
+                        <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#1E1E1E] border border-[#2C1810] text-xs font-medium text-[#A39B90]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-3.5 h-3.5 text-[#E5BA73]"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Gola Road, Patna</span>
+                        </div>
+                    </div>
+
+                    <!-- Punchy Value Proposition H1 -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight break-words font-syne text-[#F9F6F0] mb-6">
+                        Patna's Coziest Spot for <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E5BA73] to-[#C68B59]">Artisan Espresso</span> &amp; Good Vibes.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-[#A39B90] mb-8 leading-relaxed max-w-2xl">
+                        Located right infront of St. Karen's High School on Gola Road. Enjoy freshly brewed espresso, signature shakes, gourmet burgers, and continental treats in an ambient, warm setting.
+                    </p>
+
+                    <!-- Primary Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="https://wa.me/917463917733?text=Hi%20Cafe%20Buddy's%20Espresso,%20I%20would%20like%20to%20order..." target="_blank" rel="noopener noreferrer" class="py-4 px-5 sm:px-8 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-emerald-900/30 transition-all hover:scale-[1.02]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Order on WhatsApp</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Buddys+Espresso+Gola+Road+Patna" target="_blank" rel="noopener noreferrer" class="py-4 px-5 sm:px-8 rounded-2xl bg-[#1E1E1E] hover:bg-[#252525] border border-[#2C1810] text-[#F9F6F0] font-semibold text-base flex items-center justify-center gap-3 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation w-5 h-5 text-[#E5BA73]"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                            <span>Get Directions</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights Below CTAs -->
+                    <div class="grid grid-cols-3 mt-10 pt-8 border-t border-[#2C1810] w-full gap-2 sm:gap-4">
+                        <div class="min-w-0">
+                            <span class="block font-syne font-bold text-xl sm:text-2xl text-[#E5BA73] text-base break-words tracking-tight" style="font-size: clamp(0.95rem, 4vw, 1.4rem);">100%</span>
+                            <span class="text-xs text-[#A39B90] break-words leading-tight">Fresh Roasted Beans</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="block font-syne font-bold text-xl sm:text-2xl text-[#E5BA73] text-base break-words tracking-tight" style="font-size: clamp(0.95rem, 4vw, 1.4rem);">St. Karen's</span>
+                            <span class="text-xs text-[#A39B90] break-words leading-tight">Landmark Location</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="block font-syne font-bold text-xl sm:text-2xl text-[#E5BA73] text-base break-words tracking-tight" style="font-size: clamp(0.95rem, 4vw, 1.4rem);">10:30 PM</span>
+                            <span class="text-xs text-[#A39B90] break-words leading-tight">Late Evening Open</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Dedicated Elevated Showcase Card -->
+                <div class="col-span-1 lg:col-span-5">
+                    <div class="relative bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden group">
+                        
+                        <!-- Authentic Hero Image -->
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-square lg:aspect-[4/5]">
+                            <img src="/sites/cafebuddys/assets/gallery-2.jpg" alt="Bright modern cafe dining interior at Cafe Buddy's Espresso" class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" onerror="this.src="/sites/cafebuddys/assets/gallery-2.jpg""
+                            
+                            <!-- Elevated Floating Badge --
+                            <span class="absolute top-6 left-6 bg-[#E5BA73] text-black font-black text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-lg"
+                                ⭐ House Signature
+                            </span
+
+                            <!-- Real-time Status Chip -->
+                            <span class="absolute bottom-6 right-6 bg-black/80 text-white font-medium text-xs px-3.5 py-1.5 rounded-full border border-[#2C1810] backdrop-blur-sm flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span>Open Now</span>
+                            </span>
+                        </div>
+
+                        <!-- Card Footer Subtitle -->
+                        <div class="p-4 pt-4 flex justify-between flex-col sm:flex-row items-start sm:items-center gap-3">
+                            <div>
+                                <h3 class="break-words font-syne font-bold text-base text-[#F9F6F0]">Cafe Buddy's Espresso</h3>
+                                <p class="text-xs text-[#A39B90]">Narendra Villa, Infront of St. Karens High School, Gola Rd</p>
+                            </div>
+                            <a href="https://wa.me/917463917733?text=Hi%20Cafe%20Buddy's,%20I%20want%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-[#2C1810] hover:bg-[#E5BA73] hover:text-black text-[#E5BA73] transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="py-6 bg-[#181818] border-y border-[#2C1810]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-syne font-black text-[#E5BA73] mb-1">4.5 ★</div>
+                    <div class="text-xs sm:text-sm text-[#A39B90]">Google Rating (27 Reviews)</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-syne font-black text-[#E5BA73] mb-1">Gola Rd</div>
+                    <div class="text-xs sm:text-sm text-[#A39B90]">Prime Patna Location</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-syne font-black text-[#E5BA73] mb-1">Artisan</div>
+                    <div class="text-xs sm:text-sm text-[#A39B90]">Fresh Espresso Blends</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-syne font-black text-[#E5BA73] mb-1">10:30 PM</div>
+                    <div class="text-xs sm:text-sm text-[#A39B90]">Late Night Hangout</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights Grid -->
+    <section id="services" class="py-20 bg-brand-bg">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#E5BA73] px-3.5 py-1 rounded-full bg-[#1E1E1E] border border-[#2C1810] inline-block mb-3">Our Menu Highlights</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-[#F9F6F0] mb-4">Crafted With Passion &amp; Flavor</h2>
+                <p class="text-sm sm:text-base text-[#A39B90]">Explore our most loved coffees, refreshing shakes, and delicious snacks. Order directly on WhatsApp for quick pickup or delivery.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Menu Item 1: Espresso / Coffee -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#E5BA73]/50 transition-all duration-300 group">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Iced Coffee &amp; Espresso" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src=" sites="" cafebuddys="" assets="" featured-1.jpg""=""
+                            <span class="absolute top-4 right-4 bg-black/85 text-[#E5BA73] font-bold text-xs px-3 py-1 rounded-full border border-[#2C1810]"
+                                ₹149 onwards
+                            </span
+                        </div
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-[#F9F6F0]">Signature Espresso &amp; Cold Brews</h3>
+                                <span class="text-xs text-[#E5BA73] bg-[#2C1810] px-2.5 py-0.5 rounded">Coffee</span>
+                            </div>
+                            <p class="text-sm text-[#A39B90] mb-4 leading-relaxed">
+                                Rich, aromatic espresso shots, creamy cappuccinos, and refreshing iced lattes brewed with hand-selected coffee beans.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20order%20Signature%20Espresso%20from%20Cafe%20Buddy's" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#2C1810] hover:bg-emerald-600 text-[#E5BA73] hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2: Continental Pizzas -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#E5BA73]/50 transition-all duration-300 group">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Margherita Pizza" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            <span class="absolute top-4 right-4 bg-black/85 text-[#E5BA73] font-bold text-xs px-3 py-1 rounded-full border border-[#2C1810]"
+                                ₹249 onwards
+                            </span
+                        </div
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-[#F9F6F0]">Artisan Wood-Fired Pizzas</h3>
+                                <span class="text-xs text-[#E5BA73] bg-[#2C1810] px-2.5 py-0.5 rounded">Continental</span>
+                            </div>
+                            <p class="text-sm text-[#A39B90] mb-4 leading-relaxed">
+                                Freshly baked crusts topped with gooey mozzarella cheese, herb-infused tomato sauce, and garden-fresh toppings.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20order%20Artisan%20Pizza%20from%20Cafe%20Buddy's" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#2C1810] hover:bg-emerald-600 text-[#E5BA73] hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3: Shakes & Desserts -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#E5BA73]/50 transition-all duration-300 group">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="/sites/cafebuddys/assets/featured-1.jpg" alt="Vibrant blue cocktail macro shot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&amp;fit=crop&amp;q=80&amp;w=600""
+                            <span class="absolute top-4 right-4 bg-black/85 text-[#E5BA73] font-bold text-xs px-3 py-1 rounded-full border border-[#2C1810]"
+                                ₹179 onwards
+                            </span
+                        </div
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-[#F9F6F0]">Thick Shakes &amp; Mocktails</h3>
+                                <span class="text-xs text-[#E5BA73] bg-[#2C1810] px-2.5 py-0.5 rounded">Beverages</span>
+                            </div>
+                            <p class="text-sm text-[#A39B90] mb-4 leading-relaxed">
+                                Indulgent chocolate milkshakes, Oreo blends, and refreshing fruit mocktails crafted to chill your mood.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20order%20Thick%20Shakes%20from%20Cafe%20Buddy's" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#2C1810] hover:bg-emerald-600 text-[#E5BA73] hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4: Creamy Pasta -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#E5BA73]/50 transition-all duration-300 group">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Creamy White Sauce Pasta" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            <span class="absolute top-4 right-4 bg-black/85 text-[#E5BA73] font-bold text-xs px-3 py-1 rounded-full border border-[#2C1810]"
+                                ₹219 onwards
+                            </span
+                        </div
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-[#F9F6F0]">Creamy White Sauce Pasta</h3>
+                                <span class="text-xs text-[#E5BA73] bg-[#2C1810] px-2.5 py-0.5 rounded">Pasta</span>
+                            </div>
+                            <p class="text-sm text-[#A39B90] mb-4 leading-relaxed">
+                                Penne pasta tossed in velvety garlic cream sauce with herbs, bell peppers, and melted cheese served with garlic bread.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20order%20Pasta%20from%20Cafe%20Buddy's" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#2C1810] hover:bg-emerald-600 text-[#E5BA73] hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5: Burgers & Fries -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#E5BA73]/50 transition-all duration-300 group">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Crispy Fries &amp; Starters" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            <span class="absolute top-4 right-4 bg-black/85 text-[#E5BA73] font-bold text-xs px-3 py-1 rounded-full border border-[#2C1810]"
+                                ₹129 onwards
+                            </span
+                        </div
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-[#F9F6F0]">Loaded Fries &amp; Crispy Starters</h3>
+                                <span class="text-xs text-[#E5BA73] bg-[#2C1810] px-2.5 py-0.5 rounded">Snacks</span>
+                            </div>
+                            <p class="text-sm text-[#A39B90] mb-4 leading-relaxed">
+                                Golden crispy french fries loaded with peri-peri seasoning, cheese sauce, and delightful crunchy appetizers.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20order%20Fries%20and%20Snacks%20from%20Cafe%20Buddy's" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#2C1810] hover:bg-emerald-600 text-[#E5BA73] hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6: Burgers -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#E5BA73]/50 transition-all duration-300 group">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Gourmet Burger" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            <span class="absolute top-4 right-4 bg-black/85 text-[#E5BA73] font-bold text-xs px-3 py-1 rounded-full border border-[#2C1810]"
+                                ₹169 onwards
+                            </span
+                        </div
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-[#F9F6F0]">Gourmet Burgers</h3>
+                                <span class="text-xs text-[#E5BA73] bg-[#2C1810] px-2.5 py-0.5 rounded">Fast Food</span>
+                            </div>
+                            <p class="text-sm text-[#A39B90] mb-4 leading-relaxed">
+                                Juicy patty burgers layered with fresh lettuce, special buddy sauce, caramelized onions, and toasted sesame buns.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20order%20Burgers%20from%20Cafe%20Buddy's" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#2C1810] hover:bg-emerald-600 text-[#E5BA73] hover:text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Order via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing / Deals Section -->
+    <section id="pricing" class="py-20 bg-[#161616] border-y border-[#2C1810]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#E5BA73] px-3.5 py-1 rounded-full bg-[#1E1E1E] border border-[#2C1810] inline-block mb-3">Buddy Combos &amp; Plans</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-[#F9F6F0] mb-4">Value Combo Specials</h2>
+                <p class="text-sm sm:text-base text-[#A39B90]">Great food meets great savings. Pick your favorite combo for hangouts and group get-togethers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Combo 1 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 flex flex-col justify-between relative hover:border-[#E5BA73] transition-all">
+                    <div>
+                        <div class="text-xs font-semibold uppercase text-[#E5BA73] tracking-widest mb-2">Solo Coffee Break</div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-syne text-[#F9F6F0] mb-4">Espresso + Snack</h3>
+                        <div class="text-3xl font-black font-syne text-[#E5BA73] mb-6">₹299 <span class="text-xs text-[#A39B90] font-normal">/ combo</span></div>
+                        <ul class="space-y-3 mb-8 text-sm text-[#A39B90]">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> Any Hot Coffee or Espresso</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> Choice of Fries or Garlic Bread</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> Cozy Indoor Seating</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20book%20the%20Solo%20Coffee%20Break%20combo." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-[#2C1810] hover:bg-[#E5BA73] text-[#E5BA73] hover:text-black font-bold text-sm text-center transition-colors">
+                        Book on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Combo 2 (Featured) -->
+                <div class="bg-gradient-to-b from-[#1E1E1E] to-[#241a13] border-2 border-[#E5BA73] rounded-3xl p-5 sm:p-8 flex flex-col justify-between relative shadow-2xl scale-105">
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#E5BA73] text-black font-black text-xs px-4 py-1 rounded-full uppercase tracking-wider">
+                        🔥 Most Popular
+                    </span>
+                    <div>
+                        <div class="text-xs font-semibold uppercase text-[#E5BA73] tracking-widest mb-2">Buddy Date Deal</div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-syne text-[#F9F6F0] mb-4">Pizza + Pasta + Shakes</h3>
+                        <div class="text-3xl font-black font-syne text-[#E5BA73] mb-6">₹699 <span class="text-xs text-[#A39B90] font-normal">/ couple</span></div>
+                        <ul class="space-y-3 mb-8 text-sm text-[#F9F6F0]">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> 1 Regular Artisan Pizza</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> 1 Creamy Pasta Bowl</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> 2 Thick Shakes of Choice</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20book%20the%20Buddy%20Date%20Deal%20combo." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm text-center transition-colors shadow-lg">
+                        Book on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Combo 3 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 flex flex-col justify-between relative hover:border-[#E5BA73] transition-all">
+                    <div>
+                        <div class="text-xs font-semibold uppercase text-[#E5BA73] tracking-widest mb-2">Squad Hangout</div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-syne text-[#F9F6F0] mb-4">Party Platter &amp; Drinks</h3>
+                        <div class="text-3xl font-black font-syne text-[#E5BA73] mb-6">₹1,199 <span class="text-xs text-[#A39B90] font-normal">/ group</span></div>
+                        <ul class="space-y-3 mb-8 text-sm text-[#A39B90]">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> 2 Large Wood-Fired Pizzas</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> Loaded Fries &amp; Starters</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-[#E5BA73]"><path d="M20 6 9 17l-5-5"></path></svg> 4 Beverages of Choice</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20book%20the%20Squad%20Hangout%20party%20combo." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-[#2C1810] hover:bg-[#E5BA73] text-[#E5BA73] hover:text-black font-bold text-sm text-center transition-colors">
+                        Book on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-brand-bg">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#E5BA73] px-3.5 py-1 rounded-full bg-[#1E1E1E] border border-[#2C1810] inline-block mb-3">Why Cafe Buddy's</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-[#F9F6F0] mb-4">The Ultimate Cafe Experience in Gola Road</h2>
+                <p class="text-sm sm:text-base text-[#A39B90]">We combine premium coffee, mouth-watering food, and a cozy atmosphere for students, families, and friends.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 hover:border-[#E5BA73]/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-[#2C1810] flex items-center justify-center text-[#E5BA73] mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="coffee" aria-hidden="true" class="lucide lucide-coffee w-7 h-7"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
+                    </div>
+                    <h3 class="break-words font-syne font-bold text-xl text-[#F9F6F0] mb-3">Cozy Ambiance &amp; Aesthetic</h3>
+                    <p class="text-sm text-[#A39B90] leading-relaxed">
+                        Designed with warm espresso tones, comfortable seating, and soft lighting—perfect for catching up, studying, or relaxed evening conversations.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 hover:border-[#E5BA73]/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-[#2C1810] flex items-center justify-center text-[#E5BA73] mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-7 h-7"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h3 class="break-words font-syne font-bold text-xl text-[#F9F6F0] mb-3">Prime Location on Gola Road</h3>
+                    <p class="text-sm text-[#A39B90] leading-relaxed">
+                        Conveniently situated right infront of St. Karen's High School in Narendra Villa, Danapur, Patna. Easily accessible with ample parking.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 hover:border-[#E5BA73]/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-[#2C1810] flex items-center justify-center text-[#E5BA73] mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-7 h-7"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                    </div>
+                    <h3 class="break-words font-syne font-bold text-xl text-[#F9F6F0] mb-3">Fresh Quality &amp; Hygiene</h3>
+                    <p class="text-sm text-[#A39B90] leading-relaxed">
+                        Every single dish and brew is prepared fresh on order using top-grade ingredients, ensuring delicious flavor and pristine hygiene standards.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-20 bg-[#161616] border-y border-[#2C1810]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="col-span-1 lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="/sites/cafebuddys/assets/gallery-1.jpg" alt="Close up mojito drinks table" class="w-full h-64 object-cover rounded-2xl border border-[#2C1810]" onerror="this.src="/sites/cafebuddys/assets/gallery-1.jpg""
+                            <div class="bg-[#1E1E1E] border border-[#2C1810] p-6 rounded-2xl text-center"
+                                <span class="font-syne font-black text-3xl text-[#E5BA73] block mb-1"4.5★</span
+                                <span class="text-xs text-[#A39B90]">Google Rated</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="bg-[#E5BA73] text-black p-6 rounded-2xl text-center font-syne font-bold">
+                                "Best coffee hangout spot in Gola Road Patna!"
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Cafe counter service and seating" class="w-full h-64 object-cover rounded-2xl border border-[#2C1810]" onerror="this.src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=800""
+                        </div
+                    </div
+                </div
+
+                <div class="col-span-1 lg:col-span-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#E5BA73] px-3.5 py-1 rounded-full bg-[#1E1E1E] border border-[#2C1810] inline-block mb-3">Our Story</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-[#F9F6F0] mb-6">Brewing Friendships &amp; Memories in Patna</h2>
+                    <p class="text-base text-[#A39B90] mb-6 leading-relaxed">
+                        Cafe Buddy's Espresso started with a simple vision: to create a warm, inviting sanctuary where coffee lovers, students, and families can gather over exceptional brews and delicious continental treats.
+                    </p>
+                    <p class="text-base text-[#A39B90] mb-8 leading-relaxed">
+                        Located at Narendra Villa right opposite St. Karen's High School on Gola Road, we take pride in serving aromatic espresso, comforting shakes, and wood-fired pizzas in an ambient atmosphere that feels like your second home.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://wa.me/917463917733?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20Cafe%20Buddy's" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center gap-2 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Chat With Us</span>
+                        </a>
+                        <div class="flex items-center gap-2 text-sm text-[#E5BA73] font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            <span>Open Daily till 10:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-brand-bg">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#E5BA73] px-3.5 py-1 rounded-full bg-[#1E1E1E] border border-[#2C1810] inline-block mb-3">Google Reviews</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-[#F9F6F0] mb-4">Loved by Our Patrons</h2>
+                <p class="text-sm sm:text-base text-[#A39B90]">See what locals and foodies are saying about Cafe Buddy's Espresso on Google.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-sm text-[#A39B90] mb-6 leading-relaxed">
+                            "Amazing coffee and wonderful cozy vibe right near St. Karen's school on Gola Road. Their espresso and cold shakes are top notch!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#2C1810]">
+                        <div class="w-10 h-10 rounded-full bg-[#2C1810] flex items-center justify-center font-bold text-[#E5BA73]">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#F9F6F0]">Aman Kumar</h4>
+                            <span class="text-xs text-[#A39B90]">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-sm text-[#A39B90] mb-6 leading-relaxed">
+                            "Great hangout spot for friends. The pizzas and white sauce pasta are delicious, and the service over WhatsApp is super fast!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#2C1810]">
+                        <div class="w-10 h-10 rounded-full bg-[#2C1810] flex items-center justify-center font-bold text-[#E5BA73]">
+                            PS
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#F9F6F0]">Priya Singh</h4>
+                            <span class="text-xs text-[#A39B90]">Patna Foodie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-sm text-[#A39B90] mb-6 leading-relaxed">
+                            "Very pleasant atmosphere and polite staff. Perfect place to relax with a cup of coffee after a long day. Highly recommended!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-[#2C1810]">
+                        <div class="w-10 h-10 rounded-full bg-[#2C1810] flex items-center justify-center font-bold text-[#E5BA73]">
+                            RV
+                        </div>
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#F9F6F0]">Rahul Verma</h4>
+                            <span class="text-xs text-[#A39B90]">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 bg-[#161616] border-y border-[#2C1810]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#E5BA73] px-3.5 py-1 rounded-full bg-[#1E1E1E] border border-[#2C1810] inline-block mb-3">Find &amp; Contact Us</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-[#F9F6F0] mb-4">Visit Cafe Buddy's Espresso Today</h2>
+                <p class="text-sm sm:text-base text-[#A39B90]">Drop by for a coffee or send us an inquiry for table bookings and bulk orders.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contact Info & Form (col-6) -->
+                <div class="col-span-1 lg:col-span-6 bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-5 sm:p-8">
+                    
+                    <h3 class="break-words font-syne font-bold text-xl text-[#F9F6F0] mb-6">Get in Touch</h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-[#2C1810] text-[#E5BA73] shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-[#F9F6F0] mb-1">Address</h4>
+                                <p class="text-xs sm:text-sm text-[#A39B90] leading-relaxed">
+                                    Narendra Villa, Infront of St. Karens high school, Gola Rd, Shri Krishna Puram, Danapur, Patna, Bihar 801503
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-[#2C1810] text-[#E5BA73] shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-[#F9F6F0] mb-1">Phone / WhatsApp</h4>
+                                <a href="tel:+917463917733" class="text-xs sm:text-sm text-[#E5BA73] hover:underline">+91 74639 17733</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-[#2C1810] text-[#E5BA73] shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-[#F9F6F0] mb-1">Operating Hours</h4>
+                                <p class="text-xs sm:text-sm text-[#A39B90]">Monday – Sunday: 10:00 AM – 10:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Inquiry Form -->
+                    <form id="inquiry-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-[#A39B90] mb-1">Your Name</label>
+                            <input type="text" id="form-name" required="" class="w-full px-4 py-3 rounded-xl bg-[#121212] border border-[#2C1810] text-[#F9F6F0] text-sm focus:outline-none focus:border-[#E5BA73]" placeholder="Aman Kumar">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-[#A39B90] mb-1">Phone Number</label>
+                            <input type="tel" id="form-phone" required="" class="w-full px-4 py-3 rounded-xl bg-[#121212] border border-[#2C1810] text-[#F9F6F0] text-sm focus:outline-none focus:border-[#E5BA73]" placeholder="+91 98765 43210">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-[#A39B90] mb-1">Message / Table Booking</label>
+                            <textarea id="form-message" rows="3" required="" class="w-full px-4 py-3 rounded-xl bg-[#121212] border border-[#2C1810] text-[#F9F6F0] text-sm focus:outline-none focus:border-[#E5BA73]" placeholder="Hi, I want to book a table for 4 people today at 7 PM..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-[#E5BA73] hover:bg-[#D4A359] text-black font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <span>Send Inquiry Message</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" aria-hidden="true" class="lucide lucide-send w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        </button>
+                    </form>
+
+                </div>
+
+                <!-- Google Maps Embed (col-6) -->
+                <div class="col-span-1 lg:col-span-6 bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-4 h-full min-h-[450px] flex flex-col justify-between">
+                    <div class="w-full h-full min-h-[400px] rounded-2xl overflow-hidden relative border border-[#2C1810] aspect-[4/3] sm:aspect-[16/9]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.773432924355!2d85.0682!3d25.6125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzQ5LjAiTiA4NcKwMDQnMDUuNiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border: 0px; width: 100%; height: 100%; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="block border-0 w-full h-full object-cover">
+                        ></iframe>
+                    </div>
+                    <div class="p-4 flex justify-between flex-col sm:flex-row items-start sm:items-center gap-3">
+                        <div>
+                            <h4 class="font-syne font-bold text-sm text-[#F9F6F0]">Cafe Buddy's Espresso - Gola Road</h4>
+                            <p class="text-xs text-[#A39B90]">Infront of St. Karens High School, Patna</p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Buddys+Espresso+Gola+Road+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-[#2C1810] hover:bg-[#E5BA73] text-[#E5BA73] hover:text-black font-bold text-xs flex items-center gap-2 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation w-4 h-4"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                            <span>Directions</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-bg border-t border-[#2C1810] py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1: Brand -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E5BA73] to-[#C68B59] flex items-center justify-center font-syne font-black text-lg text-black">
+                            CB
+                        </div>
+                        <span class="font-syne font-extrabold text-lg text-[#F9F6F0]">Cafe Buddy's</span>
+                    </div>
+                    <p class="text-xs text-[#A39B90] leading-relaxed mb-4">
+                        Patna's coziest artisan cafe for fresh espresso, shakes, and continental delights at Gola Road.
+                    </p>
+                    <div class="flex items-center gap-3 text-xs text-[#E5BA73]">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                        <span>Open Daily: 10 AM - 10:30 PM</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-[#F9F6F0] mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-[#A39B90]">
+                        <li><a href="#services" class="hover:text-[#E5BA73] transition-colors">Menu Highlights</a></li>
+                        <li><a href="#pricing" class="hover:text-[#E5BA73] transition-colors">Combos &amp; Pricing</a></li>
+                        <li><a href="#why-us" class="hover:text-[#E5BA73] transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-[#E5BA73] transition-colors">Our Story</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Menu Categories -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-[#F9F6F0] mb-4">Popular Treats</h4>
+                    <ul class="space-y-2.5 text-xs text-[#A39B90]">
+                        <li><a href="#services" class="hover:text-[#E5BA73] transition-colors">Artisan Espresso</a></li>
+                        <li><a href="#services" class="hover:text-[#E5BA73] transition-colors">Wood-Fired Pizzas</a></li>
+                        <li><a href="#services" class="hover:text-[#E5BA73] transition-colors">Thick Shakes &amp; Mocktails</a></li>
+                        <li><a href="#services" class="hover:text-[#E5BA73] transition-colors">Creamy Pasta</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Location & Contact -->
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-[#F9F6F0] mb-4">Location</h4>
+                    <p class="text-xs text-[#A39B90] leading-relaxed mb-3">
+                        Narendra Villa, Infront of St. Karens High School, Gola Rd, Danapur, Patna, Bihar 801503
+                    </p>
+                    <a href="tel:+917463917733" class="text-xs text-[#E5BA73] font-bold block mb-1">Phone: +91 74639 17733</a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-[#2C1810] flex flex-col sm:flex-row items-center justify-between text-xs text-[#A39B90]">
+                <p>© <span id="current-year">2026</span> Cafe Buddy's Espresso - Gola Road Patna. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for Local Foot Traffic &amp; WhatsApp Orders</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Clean 2-Button Sticky Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#121212] border-t border-[#2C1810] p-3 flex gap-3">
+        <a href="tel:+917463917733" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-[#1E1E1E] hover:bg-[#252525] border border-[#2C1810] text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-[#E5BA73]"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/917463917733?text=Hi%20Cafe%20Buddy's%20Espresso,%20I%20would%20like%20to%20order..." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Success Popup Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden justify-center p-4">
+        <div class="bg-[#1E1E1E] border border-[#2C1810] rounded-3xl p-6 sm:p-8 max-w-md w-full text-center relative shadow-2xl">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-600/20 text-emerald-500 flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle w-8 h-8"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+            </div>
+            <h3 class="break-words font-syne font-bold text-xl text-[#F9F6F0] mb-2">Inquiry Received Successfully!</h3>
+            <p id="success-message" class="text-xs sm:text-sm text-[#A39B90] mb-6 leading-relaxed">
+                Thank you! We have received your message and will get back to you shortly regarding your table booking.
+            </p>
+            <button id="close-modal-btn" class="w-full py-3 rounded-xl bg-[#E5BA73] hover:bg-[#D4A359] text-black font-bold text-sm transition-all">
+                Close Window
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileCloseBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Inquiry Form Submission & Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const successMessage = document.getElementById('success-message');
+
+        inquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('form-name').value.trim();
+            const phoneInput = document.getElementById('form-phone').value.trim();
+            const msgInput = document.getElementById('form-message').value.trim();
+
+            // Sanitize and format feedback
+            if(nameInput && phoneInput) {
+                successMessage.textContent = `Thank you, ${nameInput}! Your inquiry has been sent to Cafe Buddy's Espresso. We will contact you at ${phoneInput} shortly.`;
+                successModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                inquiryForm.reset();
+            }
+        });
+
+        closeModalBtn.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+
+</body></html>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>HARDCORE GYM | Official Website</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#EF4444',
+                        'primary-hover': '#DC2626',
+                        secondary: '#27272A',
+                        textPrimary: '#FAFAFA',
+                        textMuted: '#A1A1AA'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #09090B;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EF4444;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-[#09090B] text-[#FAFAFA] pb-28 md:pb-0 selection:bg-red-500 selection:text-white">
+
+    <!-- 1. Announcement Bar & 100% Solid Opaque Sticky Header -->
+    <div class="bg-red-600 text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center sticky top-0 z-[60] shadow-md flex items-center justify-center gap-2">
+        <i data-lucide="zap" class="w-4 h-4 animate-bounce shrink-0"></i>
+        <span>PATNA'S ELITE STRENGTH ZONE — Claim Your FREE Trial Pass Today!</span>
+    </div>
+
+    <header class="sticky top-[33px] sm:top-[37px] z-50 bg-[#09090B] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="bg-red-600 text-white p-2 rounded-xl group-hover:bg-red-700 transition-colors shadow-lg shadow-red-600/30">
+                    <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-xl sm:text-2xl tracking-wider text-white">HARDCORE<span class="text-red-500">GYM</span></span>
+                    <span class="text-[10px] tracking-widest text-zinc-400 font-semibold uppercase">Patliputra Colony, Patna</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#services" class="hover:text-red-500 transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-red-500 transition-colors">Why Us</a>
+                <a href="#about" class="hover:text-red-500 transition-colors">About</a>
+                <a href="#gallery" class="hover:text-red-500 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-red-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-red-500 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-red-500 transition-colors">Location</a>
+            </nav>
+
+            <!-- Desktop CTAs -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="tel:+919576780805" class="flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-red-500 text-white transition-all">
+                    <i data-lucide="phone" class="w-4 h-4 text-red-500"></i>
+                    <span>+91 95767 80805</span>
+                </a>
+                <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white transition-all shadow-lg shadow-red-600/30">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Backdrop & Drawer -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+    <div id="mobile-drawer" class="fixed top-[69px] sm:top-[73px] bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090B] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="flex flex-col gap-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <span class="font-syne font-bold text-lg text-white">Menu</span>
+                <button id="close-drawer" aria-label="Close Menu" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 text-base font-medium text-zinc-300">
+                <a href="#services" class="mobile-link hover:text-red-500 transition-colors flex items-center justify-between py-2 border-b border-zinc-900"><span>Services</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#why-us" class="mobile-link hover:text-red-500 transition-colors flex items-center justify-between py-2 border-b border-zinc-900"><span>Why Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#about" class="mobile-link hover:text-red-500 transition-colors flex items-center justify-between py-2 border-b border-zinc-900"><span>About</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#gallery" class="mobile-link hover:text-red-500 transition-colors flex items-center justify-between py-2 border-b border-zinc-900"><span>Gallery</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#reviews" class="mobile-link hover:text-red-500 transition-colors flex items-center justify-between py-2 border-b border-zinc-900"><span>Reviews</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#faq" class="mobile-link hover:text-red-500 transition-colors flex items-center justify-between py-2 border-b border-zinc-900"><span>FAQ</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+                <a href="#contact" class="mobile-link hover:text-red-500 transition-colors flex items-center justify-between py-2 border-b border-zinc-900"><span>Location & Contact</span><i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i></a>
+            </nav>
+        </div>
+        <div class="flex flex-col gap-3 pt-6 border-t border-zinc-800">
+            <a href="tel:+919576780805" class="flex items-center justify-center gap-2 text-sm font-semibold py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white">
+                <i data-lucide="phone" class="w-4 h-4 text-red-500"></i>
+                <span>Call +91 95767 80805</span>
+            </a>
+            <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 text-sm font-bold py-3 rounded-xl bg-red-600 text-white shadow-lg shadow-red-600/30">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 2. Hero Section -->
+    <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 lg:pt-28 lg:pb-36 overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-red-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-sm">
+                        <div class="flex text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-300">4.2★ <span class="text-zinc-500 font-normal">| 235+ Google Reviews</span></span>
+                    </div>
+
+                    <!-- Main H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        BUILD RAW STRENGTH AT <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-400">HARDCORE GYM</span> PATNA
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-zinc-400 mb-8 max-w-2xl leading-relaxed">
+                        Patliputra Colony’s premier destination for heavy duty strength training, advanced bodybuilding equipment, and elite personal coaching. Transform your physique today.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I%20would%20like%20to%20book%20a%20Free%20Trial%20session!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-red-600/30 transition-all transform hover:-translate-y-0.5">
+                            <i data-lucide="flame" class="w-5 h-5"></i>
+                            <span>Book Free Trial</span>
+                        </a>
+                        <a href="tel:+919576780805" class="flex items-center justify-center gap-3 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 font-semibold text-base px-8 py-4 rounded-xl transition-all">
+                            <i data-lucide="phone-call" class="w-5 h-5 text-red-500"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlights Under CTAs -->
+                    <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-zinc-800/80 w-full">
+                        <div>
+                            <span class="block font-syne font-bold text-2xl sm:text-3xl text-white">235+</span>
+                            <span class="text-xs text-zinc-400">Verified Reviews</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne font-bold text-2xl sm:text-3xl text-white">4.2★</span>
+                            <span class="text-xs text-zinc-400">Google Rating</span>
+                        </div>
+                        <div>
+                            <span class="block font-syne font-bold text-2xl sm:text-3xl text-white">Patna</span>
+                            <span class="text-xs text-zinc-400">Patliputra Colony</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl aspect-[4/3] sm:aspect-square bg-zinc-900">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Hardcore Gym Interior Patna" class="w-full h-full object-cover"
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-transparent to-transparent opacity-80"</div
+                        
+                        <!-- Floating Badge on Image --
+                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-800 flex items-center gap-4">
+                            <div class="p-3 bg-red-600 text-white rounded-lg">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-sm">Pro Grade Equipment</h4>
+                                <p class="text-xs text-zinc-400">Heavy iron, dumbbells & power racks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Trust & Social Proof Bar -->
+    <div class="border-y border-zinc-800 bg-[#09090B]/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+                <div class="flex items-center justify-center md:justify-start gap-4 pb-4 md:pb-0">
+                    <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-red-500">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-syne font-bold text-white text-base">Patliputra Colony, Patna</h4>
+                        <p class="text-xs text-zinc-400">Near Patliputra Police Station, Bihar 800013</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 py-4 md:py-0 md:pl-8">
+                    <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-amber-400">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-syne font-bold text-white text-base">Top Rated Fitness Hub</h4>
+                        <p class="text-xs text-zinc-400">4.2 Star Rating from 235+ Google Members</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-8">
+                    <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-red-500">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-syne font-bold text-white text-base">Expert Trainers</h4>
+                        <p class="text-xs text-zinc-400">Personalized guidance for all fitness levels</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Services / Offerings Grid -->
+    <section id="services" class="py-20 sm:py-28 relative">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2 block">What We Offer</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">ENGINEERED FOR REAL RESULTS</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Whether your goal is raw power, fat loss, or bodybuilding, our facility is equipped to push your limits.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-all">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Strength Training</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Heavy-duty power racks, Olympic barbells, bumper plates, and specialized machines designed for serious lifters.</p>
+                    </div>
+                    <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I'm%20interested%20in%20Strength%20Training." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-white bg-zinc-800 hover:bg-red-600 p-3 rounded-xl transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-all">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Personal Coaching</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">One-on-one expert trainers to correct your form, design customized workout splits, and track your weekly progress.</p>
+                    </div>
+                    <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I'm%20interested%20in%20Personal%20Coaching." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-white bg-zinc-800 hover:bg-red-600 p-3 rounded-xl transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-all">
+                            <i data-lucide="flame" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Fat Loss & Cardio</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">High-intensity interval training zones, treadmills, spinning bikes, and scientifically structured fat-burning programs.</p>
+                    </div>
+                    <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I'm%20interested%20in%20Fat%20Loss%20programs." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-white bg-zinc-800 hover:bg-red-600 p-3 rounded-xl transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-red-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-all">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-syne font-bold text-xl text-white mb-3">Muscle Building</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">Hypertrophy-focused isolation and compound machines combined with expert nutritional guidance for maximum gains.</p>
+                    </div>
+                    <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I'm%20interested%20in%20Muscle%20Building." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between text-xs font-bold text-white bg-zinc-800 hover:bg-red-600 p-3 rounded-xl transition-colors">
+                        <span>Inquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-zinc-950/60 border-y border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2 block">The Hardcore Advantage</span>
+                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">WHY PATNA'S LIFTERS CHOOSE US</h2>
+                    <p class="text-zinc-400 text-base leading-relaxed mb-8">
+                        We aren't a commercial fitness club filled with distractions. Hardcore Gym is a dedicated powerhouse designed for those who take their fitness, strength, and physique seriously.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-red-600/10 text-red-500 rounded-xl shrink-0">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Heavy Iron Setup</h4>
+                                <p class="text-xs text-zinc-400">Dumbbells up to heavy weights and professional racks.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-red-600/10 text-red-500 rounded-xl shrink-0">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Prime Location</h4>
+                                <p class="text-xs text-zinc-400">Conveniently located in Patliputra Colony, Patna.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-red-600/10 text-red-500 rounded-xl shrink-0">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">No Judgment Zone</h4>
+                                <p class="text-xs text-zinc-400">A motivating community focused purely on hard work.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-red-600/10 text-red-500 rounded-xl shrink-0">
+                                <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-syne font-bold text-white text-base mb-1">Affordable Memberships</h4>
+                                <p class="text-xs text-zinc-400">Flexible monthly, quarterly, and annual pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square bg-zinc-900">
+                                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=600&q=80" alt="Gym Workout" class="w-full h-full object-cover"
+                            </div
+                            <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/3] bg-zinc-900"
+                                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Weightlifting" class="w-full h-full object-cover"
+                            </div
+                        </div
+                        <div class="space-y-4 pt-8"
+                            <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/3] bg-zinc-900">
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym Floor" class="w-full h-full object-cover"
+                            </div
+                            <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square bg-zinc-900"
+                                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80" alt="Fitness Training" class="w-full h-full object-cover"
+                            </div
+                        </div
+                    </div
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About / Story Section -->
+    <section id="about" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-red-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <div class="lg:col-span-7">
+                        <span class="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Our Culture & Story</span>
+                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6">BUILT FOR THOSE WHO REFUSE TO QUIT</h2>
+                        <p class="text-zinc-300 text-base leading-relaxed mb-6">
+                            Located right in the heart of Patliputra Colony near the Police Station, <strong>Hardcore Gym</strong> was founded with a singular mission: to provide a high-energy, distraction-free environment where fitness enthusiasts and serious athletes can push their absolute boundaries.
+                        </p>
+                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+                            With over 235 verified Google reviews maintaining a stellar 4.2-star rating, our community speaks for itself. We believe in sweat, consistency, proper form, and relentless self-improvement. Come train with Patna's finest.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I%20want%20to%20visit%20the%20gym%20today!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg shadow-red-600/30 transition-all">
+                                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                <span>Visit Gym Today</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col gap-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center shrink-0">
+                                    <i data-lucide="star" class="w-6 h-6 fill-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-syne font-bold text-white text-lg">4.2 Star Rating</h4>
+                                    <p class="text-xs text-zinc-400">Based on 235+ authentic member reviews on Google</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-zinc-800 pt-6">
+                                <h5 class="font-syne font-semibold text-white mb-3 text-sm">Quick Facts:</h5>
+                                <ul class="space-y-3 text-xs sm:text-sm text-zinc-400">
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-red-500"></i>
+                                        <span>Address: Patliputra Colony, Patna, Bihar 800013</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-red-500"></i>
+                                        <span>Landmark: Near Patliputra Police Station</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i data-lucide="check" class="w-4 h-4 text-red-500"></i>
+                                        <span>Phone/WhatsApp: +91 95767 80805</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 bg-zinc-950/50 border-t border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Facility Tour</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">INSIDE HARDCORE GYM</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Take a virtual glance at our fully equipped training floor in Patliputra Colony, Patna.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&fit=crop&q=80&w=800" alt="Gym Floor 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&q=80&w=800" alt="Gym Floor 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=1200" alt="Gym Floor 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1200" alt="Gym Floor 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+            </div
+        </div
+    </section>
+
+    <!-- 8. Customer Reviews Section -->
+    <section id="reviews" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Testimonials</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">WHAT OUR MEMBERS SAY</h2>
+                <div class="flex items-center justify-center gap-2 text-amber-400 mb-2">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                </div>
+                <p class="text-zinc-400 text-sm">4.2 Star Rating across 235+ Google Reviews in Patna</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Best gym in Patliputra Colony! Incredible equipment for heavy lifting and bodybuilding. Trainers are extremely helpful and supportive."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-sm">A</div>
+                        <div>
+                            <h5 class="font-syne font-bold text-white text-sm">Aditya Kumar</h5>
+                            <span class="text-[11px] text-zinc-500">Google Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Amazing atmosphere. If you want a real hardcore gym experience in Patna with proper dumbbells and barbells, this is the spot."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-sm">R</div>
+                        <div>
+                            <h5 class="font-syne font-bold text-white text-sm">Rahul Sinha</h5>
+                            <span class="text-[11px] text-zinc-500">Verified Member</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">"Great location near Patliputra police station. Reasonable membership fees and top-notch training environment. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-sm">V</div>
+                        <div>
+                            <h5 class="font-syne font-bold text-white text-sm">Vikash Verma</h5>
+                            <span class="text-[11px] text-zinc-500">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ Accordion -->
+    <section id="faq" class="py-20 bg-zinc-950/50 border-t border-zinc-900">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Got Questions?</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-zinc-400 text-sm">Everything you need to know about joining Hardcore Gym Patna.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Where is Hardcore Gym located in Patna?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-zinc-400 text-sm pb-6 leading-relaxed">
+                            We are conveniently located at 22, Nehru Nagar Rd, near Patliputra Police Station, Patliputra Colony, Patna, Bihar 800013.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Do you offer a free trial session?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-zinc-400 text-sm pb-6 leading-relaxed">
+                            Yes! You can book a free trial session by clicking our WhatsApp button or calling us directly at +91 95767 80805.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>What are the gym operating hours?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-zinc-400 text-sm pb-6 leading-relaxed">
+                            We are open Monday through Saturday from 6:00 AM to 10:00 PM. Sunday timings may vary.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-syne font-bold text-white text-base sm:text-lg focus:outline-none">
+                        <span>Are personal trainers available?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-red-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-zinc-400 text-sm pb-6 leading-relaxed">
+                            Yes, professional personal trainers are available to guide you through custom workout splits, fat loss programs, and bodybuilding routines.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 sm:py-28">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-red-500 font-semibold text-sm uppercase tracking-wider mb-2 block">Get In Touch</span>
+                <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4">VISIT OR SEND AN INQUIRY</h2>
+                <p class="text-zinc-400 text-sm">We are ready to welcome you to Patliputra Colony's finest gym.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Details & Form -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8">
+                        <h3 class="font-syne font-bold text-xl text-white mb-6">Send Us a Message</h3>
+                        
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1">Your Name</label>
+                                <input type="text" id="form-name" required placeholder="Enter your full name" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1">Phone / WhatsApp</label>
+                                <input type="tel" id="form-phone" required placeholder="Enter 10-digit mobile number" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1">Service Interested In</label>
+                                <select id="form-service" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
+                                    <option>Strength Training</option>
+                                    <option>Personal Coaching</option>
+                                    <option>Fat Loss & Cardio</option>
+                                    <option>Muscle Building</option>
+                                    <option>Free Trial Pass</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-zinc-400 mb-1">Message</label>
+                                <textarea id="form-msg" rows="3" placeholder="Any specific questions?" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2">
+                                <span id="btn-text">Submit Inquiry</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map & Hours -->
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    <!-- Google Maps Embed -->
+                    <div class="rounded-3xl overflow-hidden border border-zinc-800 h-[300px] bg-zinc-900 relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778536214044!2d85.127!3d25.612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58ce1234567%3A0xabcdef!2sPatliputra%20Colony%2C%20Patna%2C%20Bihar%20800013!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Hardcore Gym Location Map">
+                        </iframe>
+                    </div>
+
+                    <!-- Business Info Card -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col gap-4">
+                        <h4 class="font-syne font-bold text-white text-lg">Gym Details & Hours</h4>
+                        <div class="space-y-3 text-sm text-zinc-400">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                                <span>police station, 22, Nehru Nagar Rd, near patliputra, Patliputra Colony, Patna, Bihar 800013</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-red-500 shrink-0"></i>
+                                <a href="tel:+919576780805" class="hover:text-white transition-colors">+91 95767 80805</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-red-500 shrink-0"></i>
+                                <span>Mon - Sat: 6:00 AM – 10:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-zinc-800 flex items-center gap-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=HARDCORE+GYM+Patliputra+Colony+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-2.5 rounded-xl text-xs text-center transition-colors">
+                                Get Directions
+                            </a>
+                            <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I%20found%20you%20online%20and%20want%20to%20chat." target="_blank" rel="noopener noreferrer" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-semibold py-2.5 rounded-xl text-xs text-center transition-colors">
+                                WhatsApp Chat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl">
+            <div class="w-16 h-16 bg-red-600/20 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-syne font-bold text-2xl text-white mb-2">Inquiry Received!</h3>
+            <p id="success-message" class="text-zinc-400 text-sm mb-6">Thank you! We have received your inquiry and will contact you via phone/WhatsApp shortly.</p>
+            <button id="close-modal" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl transition-all">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- 11. Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center gap-3">
+        <a href="tel:+919576780805" class="flex-1 flex items-center justify-center gap-2 bg-zinc-900 border border-zinc-800 text-white font-bold text-sm py-3 rounded-xl">
+            <i data-lucide="phone" class="w-4 h-4 text-red-500"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919576780805?text=Hi%20Hardcore%20Gym,%20I%20want%20to%20book%20a%20free%20trial!" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-red-600 text-white font-bold text-sm py-3 rounded-xl shadow-lg shadow-red-600/30">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-red-600 text-white p-2 rounded-xl">
+                            <i data-lucide="dumbbell" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-syne font-extrabold text-xl tracking-wider text-white">HARDCORE<span class="text-red-500">GYM</span></span>
+                    </div>
+                    <p class="text-zinc-400 text-sm max-w-sm mb-4 leading-relaxed">
+                        Patliputra Colony's elite strength training and bodybuilding destination. Equipped with professional gear and expert trainers in Patna.
+                    </p>
+                    <div class="flex items-center gap-3 text-zinc-400 text-xs">
+                        <span class="inline-flex items-center gap-1 text-amber-400 font-bold"><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i> 4.2★</span>
+                        <span>•</span>
+                        <span>235+ Google Reviews</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="font-syne font-bold text-white text-base mb-4">Quick Links</h5>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-red-500 transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="hover:text-red-500 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-red-500 transition-colors">About Story</a></li>
+                        <li><a href="#gallery" class="hover:text-red-500 transition-colors">Gym Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-red-500 transition-colors">Member Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-syne font-bold text-white text-base mb-4">Contact & Location</h5>
+                    <ul class="space-y-2.5 text-sm text-zinc-400">
+                        <li>Patliputra Colony, Patna</li>
+                        <li>Bihar 800013</li>
+                        <li>Phone: +91 95767 80805</li>
+                        <li><a href="https://wa.me/919576780805" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:underline">Chat on WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> HARDCORE GYM Patna. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for Strength & Elite Fitness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript & Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeDrawerBtn.addEventListener('click', closeMenu);
+        menuBackdrop.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg');
+                
+                // Toggle active state
+                const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                
+                // Close all others
+                faqToggles.forEach(t => {
+                    t.nextElementSibling.style.maxHeight = null;
+                    t.querySelector('svg').style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Contact Form Submission & Success Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const successMessage = document.getElementById('success-message');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const service = document.getElementById('form-service').value;
+
+            // Sanitize and format success message safely
+            const sanitizedName = name.replace(/[<>]/g, '');
+            successMessage.textContent = `Thank you ${sanitizedName}! We have received your inquiry for ${service}. Our team at Hardcore Gym Patna will contact you at ${phone} shortly.`;
+
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            inquiryForm.reset();
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.remove('flex');
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    </script>
+</body>
+</html>

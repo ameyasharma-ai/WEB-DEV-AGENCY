@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Barbell Fitness Studio | Official Website</title>
+    <meta name="description" content="Transform your physique at The Barbell Gym in Jagdeo Path, Khajpura, Patna. 4.9★ rated gym with expert trainers, state-of-the-art equipment, and personalized training. Claim your free trial today!">
+    
+    <!-- Security & Policy Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http: data: blob: 'unsafe-inline';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#09090B',
+                        surface: '#18181B',
+                        primary: '#F59E0B',
+                        'primary-hover': '#D97706',
+                        secondary: '#EF4444',
+                        'text-primary': '#FAFAFA',
+                        'text-muted': '#A1A1AA',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090B;
+            color: #FAFAFA;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        .amber-glow {
+            box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.25);
+        }
+        .amber-glow-sm {
+            box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#09090B] text-[#FAFAFA] overflow-x-hidden pb-28 md:pb-0 antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- 1. Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black font-semibold text-xs sm:text-sm py-2 px-4 text-center z-50 relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="bg-black text-amber-400 text-[10px] uppercase font-bold px-2 py-0.5 rounded-full tracking-wider">Limited Offer</span>
+            <span>🔥 Get Your First 3 Days Free Trial + Free Diet Consultation!</span>
+            <a href="#contact" class="underline hover:text-white font-bold ml-1 transition-colors">Claim Pass &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Mobile Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="fixed top-11 sm:top-12 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090B] border-l border-zinc-800 rounded-tl-2xl p-6 pt-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl overflow-y-auto">
+        <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-black font-extrabold font-syne text-lg">B</div>
+                    <span class="text-lg font-bold font-syne tracking-tight text-white">THE BARBELL <span class="text-amber-500">GYM</span></span>
+                </div>
+                <button id="close-drawer" aria-label="Close Menu" class="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col space-y-4">
+                <a href="#services" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium py-2 transition-colors flex items-center justify-between">
+                    <span>Services</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#why-us" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium py-2 transition-colors flex items-center justify-between">
+                    <span>Why Us</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#about" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium py-2 transition-colors flex items-center justify-between">
+                    <span>About</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium py-2 transition-colors flex items-center justify-between">
+                    <span>Gallery</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium py-2 transition-colors flex items-center justify-between">
+                    <span>Reviews</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#faq" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium py-2 transition-colors flex items-center justify-between">
+                    <span>FAQ</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-amber-400 font-medium py-2 transition-colors flex items-center justify-between">
+                    <span>Contact</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 space-y-3">
+            <a href="https://wa.me/919939900708?text=Hi%20The%20Barbell%20Gym,%20I%20want%20to%20book%20a%20free%20trial%20session!" target="_blank" rel="noopener noreferrer" class="w-full h-12 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-xl flex items-center justify-center space-x-2 transition-all">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+            <a href="tel:+919939900708" class="w-full h-12 bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-white font-semibold rounded-xl flex items-center justify-center space-x-2 transition-all">
+                <i data-lucide="phone" class="w-5 h-5 text-amber-500"></i>
+                <span>+91 85398 82493</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 w-full bg-[#09090B] border-b border-zinc-800">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-black font-black font-syne text-xl amber-glow-sm group-hover:scale-105 transition-transform">
+                    B
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg sm:text-xl font-black font-syne tracking-tight text-white leading-none">THE BARBELL</span>
+                    <span class="text-xs tracking-widest text-amber-500 font-semibold mt-0.5">GYM • PATNA</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#services" class="text-zinc-300 hover:text-amber-400 transition-colors">Services</a>
+                <a href="#why-us" class="text-zinc-300 hover:text-amber-400 transition-colors">Why Us</a>
+                <a href="#about" class="text-zinc-300 hover:text-amber-400 transition-colors">About</a>
+                <a href="#gallery" class="text-zinc-300 hover:text-amber-400 transition-colors">Gallery</a>
+                <a href="#reviews" class="text-zinc-300 hover:text-amber-400 transition-colors">Reviews</a>
+                <a href="#faq" class="text-zinc-300 hover:text-amber-400 transition-colors">FAQ</a>
+                <a href="#contact" class="text-zinc-300 hover:text-amber-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="https://wa.me/919939900708?text=Hi%20The%20Barbell%20Gym,%20I%20want%20to%20book%20a%20free%20trial%20session!" target="_blank" rel="noopener noreferrer" class="h-11 px-4 bg-zinc-900 border border-zinc-700 hover:border-amber-500/50 text-white font-medium text-sm rounded-xl flex items-center space-x-2 transition-all hover:bg-zinc-800">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#contact" class="h-11 px-5 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm rounded-xl flex items-center space-x-2 transition-all amber-glow hover:scale-105">
+                    <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
+                    <span>Free Trial</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="hamburger-btn" aria-label="Toggle Navigation Menu" class="lg:hidden w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white transition-colors focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="relative pt-12 pb-20 md:py-28 overflow-hidden bg-[#09090B]">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <!-- Trust Badge -->
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 amber-glow-sm">
+                        <div class="flex items-center space-x-1 text-amber-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-zinc-300">4.9 ★ <span class="text-zinc-500 font-normal">(19 Google Reviews)</span></span>
+                    </div>
+
+                    <!-- H1 Heading -->
+                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words text-2xl sm: md: lg: xl: font-extrabold font-syne text-white leading-[1.15] mb-6 break-words">
+                        Forge Your Ultimate Strength at <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">The Barbell Gym</span>
+                    </h1>
+
+                    <p class="text-zinc-400 text-base sm:text-lg lg:text-xl font-normal leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 break-words">
+                        Patna’s elite fitness destination located in Jagdeo Path. Premium heavy-duty equipment, certified expert trainers, and a results-driven atmosphere for serious transformations.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="w-full sm:w-auto h-14 px-8 bg-amber-500 hover:bg-amber-400 text-black font-bold text-base rounded-xl flex items-center justify-center space-x-3 transition-all amber-glow hover:scale-105">
+                            <i data-lucide="dumbbell" class="w-5 h-5"></i>
+                            <span>Claim Free Trial Pass</span>
+                        </a>
+                        <a href="https://wa.me/919939900708?text=Hi%20The%20Barbell%20Gym,%20I%20want%20to%20know%20about%20membership%20plans." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto h-14 px-8 bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-white font-semibold text-base rounded-xl flex items-center justify-center space-x-3 transition-all hover:bg-zinc-800">
+                            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Location Pill -->
+                    <div class="mt-8 flex items-center justify-center lg:justify-start space-x-2 text-zinc-400 text-sm">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                        <span>Jagdeo Path, Khajpura, Patna, Bihar 800014</span>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 amber-glow">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="The Barbell Gym Interior in Patna" class="w-full h-full object-cover"
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6"
+                            <div class="bg-black/80 backdrop-blur-md border border-zinc-800 p-4 rounded-xl w-full"
+                                <div class="flex items-center justify-between"
+                                    <div>
+                                        <p class="text-xs text-amber-400 font-semibold uppercase tracking-wider">State of the Art</p>
+                                        <p class="text-sm sm:text-base font-bold font-syne text-white">Professional Training Floor</p>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+                                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-800 p-4 rounded-xl hidden sm:flex items-center space-x-3 amber-glow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-zinc-400 font-medium">Active Community</p>
+                            <p class="text-lg font-bold font-syne text-white">500+ Members</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Trust & Social Proof Bar -->
+    <section class="border-y border-zinc-800 bg-zinc-900/50 py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-amber-400 mb-1">4.9 ★</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Google Rating (19 Reviews)</p>
+                </div>
+                <div class="p-4 border-l border-zinc-800">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">100%</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Pro-Grade Equipment</p>
+                </div>
+                <div class="p-4 border-l border-zinc-800">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-amber-400 mb-1">Expert</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Certified Personal Trainers</p>
+                </div>
+                <div class="p-4 border-l border-zinc-800">
+                    <div class="text-3xl sm:text-4xl font-extrabold font-syne text-white mb-1">Prime</div>
+                    <p class="text-xs sm:text-sm text-zinc-400 font-medium">Location in Jagdeo Path</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Services / Offerings Grid -->
+    <section id="services" class="py-20 md:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-amber-500 mb-3 block">What We Offer</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Engineered For Maximum Results
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Whether your goal is powerlifting, muscle building, or rapid fat loss, we have the specialized programs and equipment to get you there.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mb-3">Strength Training</h3>
+                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-6">
+                            Heavy-duty Olympic barbells, robust power racks, calibrated plates, and heavy dumbbells designed for serious strength gains.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919939900708?text=Hi%20The%20Barbell%20Gym,%20I'm%20interested%20in%20Strength%20Training." target="_blank" rel="noopener noreferrer" class="w-full h-12 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl flex items-center justify-center space-x-2 transition-colors">
+                        <span>Enquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mb-3">Personal Coaching</h3>
+                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-6">
+                            One-on-one expert guidance customized to your body type, metabolism, and fitness goals with structured workout routines.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919939900708?text=Hi%20The%20Barbell%20Gym,%20I'm%20interested%20in%20Personal%20Coaching." target="_blank" rel="noopener noreferrer" class="w-full h-12 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl flex items-center justify-center space-x-2 transition-colors">
+                        <span>Enquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-syne text-white mb-3">Fat Loss & Conditioning</h3>
+                        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-6">
+                            High-intensity interval training (HIIT), advanced cardio conditioning, and customized fat-burning nutrition blueprints.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919939900708?text=Hi%20The%20Barbell%20Gym,%20I'm%20interested%20in%20Fat%20Loss%20%26%20Conditioning." target="_blank" rel="noopener noreferrer" class="w-full h-12 bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-semibold rounded-xl flex items-center justify-center space-x-2 transition-colors">
+                        <span>Enquire Now</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us Section -->
+    <section id="why-us" class="py-20 md:py-28 bg-zinc-950 border-t border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-amber-500 mb-3 block">Why The Barbell Gym</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Built Different For Serious Lifters
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    We aren't just another commercial fitness club. We are a temple of discipline, hard work, and real physical transformation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Zero Ego Atmosphere</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        A welcoming, motivating environment where beginners and seasoned athletes push each other to excel.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Certified Trainers</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Experienced fitness professionals who correct your form, prevent injuries, and monitor your daily progress.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Flexible Timings</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Open early morning till late evening so you can fit your rigorous workout around your busy work schedule.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-zinc-900/80 border border-zinc-800 rounded-2xl p-6">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-4">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-syne text-white mb-2">Immaculate Hygiene</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Regularly sanitized equipment, well-ventilated workout floors, and clean locker room facilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About / Story Section -->
+    <section id="about" class="py-20 md:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 amber-glow">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Gym Workout at The Barbell Gym Patna" class="w-full h-full object-cover"
+                    </div
+                </div
+                <div class="lg:col-span-6"
+                    <span class="text-xs uppercase font-bold tracking-widest text-amber-500 mb-3 block">Our Story & Mission</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                        Empowering Patna With Strength & Discipline
+                    </h2>
+                    <p class="text-zinc-400 text-base sm:text-lg leading-relaxed mb-6">
+                        Founded in the heart of Jagdeo Path, Patna, <strong class="text-white">The Barbell Gym</strong> was built with a singular mission: to provide a world-class training sanctuary for fitness enthusiasts who refuse to compromise on quality.
+                    </p>
+                    <p class="text-zinc-400 text-base leading-relaxed mb-8">
+                        We believe fitness is not a temporary trend, but a lifelong commitment. Our community consists of hardworking individuals, athletes, and beginners all striving to become stronger versions of themselves every single day.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div>
+                            <p class="text-3xl font-extrabold font-syne text-amber-400">4.9 ★</p>
+                            <p class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Google Rating</p>
+                        </div>
+                        <div class="w-px h-12 bg-zinc-800"></div>
+                        <div>
+                            <p class="text-3xl font-extrabold font-syne text-white">100%</p>
+                            <p class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Dedication</p>
+                        </div>
+                        <div class="w-px h-12 bg-zinc-800"></div>
+                        <div>
+                            <p class="text-3xl font-extrabold font-syne text-amber-400">Jagdeo Path</p>
+                            <p class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Prime Location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-20 md:py-28 bg-zinc-950 border-t border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-amber-500 mb-3 block">Gym Floor & Equipment</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Take a Visual Tour
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    A glimpse inside our spacious, well-equipped training floor in Khajpura, Patna.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Gym Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Weight Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&fit=crop&q=80&w=800" alt="Cardio Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" alt="Dumbbell Rack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&q=80&w=800" alt="Fitness Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 group bg-zinc-900"
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Crossfit Zone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                </div
+            </div
+        </div
+    </section>
+
+    <!-- 8. Customer Reviews Section -->
+    <section id="reviews" class="py-20 md:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-amber-500 mb-3 block">Testimonials</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Loved By Patna's Fitness Community
+                </h2>
+                <div class="flex items-center justify-center space-x-1 text-amber-400 mt-3">
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                    <span class="text-white font-bold ml-2">4.9 / 5.0 (19 Google Reviews)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                            "Best gym in Jagdeo Path area! Excellent equipment, very motivating trainers, and a clean environment. Highly recommended for serious weight training."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold font-syne flex items-center justify-center">
+                            AK
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Abhishek Kumar</p>
+                            <p class="text-xs text-zinc-500">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                            "The trainers here really know their stuff. Personal attention is given to everyone. Good vibe and top-notch machines in Patna."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold font-syne flex items-center justify-center">
+                            RP
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Rahul Pandey</p>
+                            <p class="text-xs text-zinc-500">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        </div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                            "Amazing gym! Spacious workout area, proper ventilation, and premium barbell sets. Great value for money in Khajpura."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold font-syne flex items-center justify-center">
+                            PS
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Priya Singh</p>
+                            <p class="text-xs text-zinc-500">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ Accordion -->
+    <section id="faq" class="py-20 md:py-28 bg-zinc-950 border-t border-zinc-900">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-amber-500 mb-3 block">Got Questions?</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-zinc-400 text-base">Everything you need to know about joining The Barbell Gym.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-syne text-white">How do I claim my free trial pass?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        You can claim your free trial instantly by filling out our quick inquiry form on this website or by clicking the WhatsApp button to message us directly at +91 85398 82493.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-syne text-white">What are the gym timings?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        We are open from Monday to Saturday, bright and early from 6:00 AM to 10:00 PM, giving you ample flexibility to train before or after work.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-syne text-white">Are personal trainers available for beginners?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        Yes! We have certified trainers on the floor to assist all members. We also offer dedicated one-on-one personal coaching packages tailored to your specific fitness goals.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-colors">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none">
+                        <span class="text-base sm:text-lg font-bold font-syne text-white">Where is The Barbell Gym located?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">
+                        We are conveniently located at J32F+JPQ, Jagdeo Path, Khajpura, Patna, Bihar 800014. Easily accessible from all parts of Patna.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Interactive Location & Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-amber-500 mb-3 block">Get In Touch</span>
+                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                    Visit Our Gym Or Send An Inquiry
+                </h2>
+                <p class="text-zinc-400 text-base sm:text-lg">
+                    Ready to start your transformation? Drop us a message or visit us in Jagdeo Path today.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left: Contact Form & Info -->
+                <div class="lg:col-span-6 space-y-8">
+                    <!-- Contact Details Card -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                        <h3 class="text-xl font-bold font-syne text-white">Contact Information</h3>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Address</p>
+                                <p class="text-white font-medium text-sm sm:text-base">J32F+JPQ, Jagdeo Path, Khajpura, Patna, Bihar 800014</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                                <i data-lucide="phone-call" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Phone / WhatsApp</p>
+                                <a href="tel:+919939900708" class="text-white font-medium text-sm sm:text-base hover:text-amber-400 transition-colors">+91 85398 82493</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-zinc-400 uppercase tracking-wider font-semibold">Opening Hours</p>
+                                <p class="text-white font-medium text-sm sm:text-base">Monday – Saturday: 6:00 AM – 10:00 PM</p>
+                                <p class="text-zinc-500 text-xs">Sunday: Maintenance & Rest</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800">
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+Barbell+Gym+Jagdeo+Path+Khajpura+Patna" target="_blank" rel="noopener noreferrer" class="w-full h-12 bg-amber-500 hover:bg-amber-400 text-black font-bold text-sm rounded-xl flex items-center justify-center space-x-2 transition-all amber-glow">
+                                <i data-lucide="navigation" class="w-4 h-4 fill-black"></i>
+                                <span>Get Directions on Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Inquiry Form -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-bold font-syne text-white mb-2">Claim Free Trial / Enquiry</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Fill out the form below and our team will get in touch instantly.</p>
+
+                        <form id="inquiry-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Your Full Name</label>
+                                <input type="text" id="name" required class="w-full h-12 bg-zinc-950 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="e.g. Aman Sharma">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full h-12 bg-zinc-950 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="e.g. +91 98765 43210">
+                            </div>
+
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Interested Service</label>
+                                <select id="service" class="w-full h-12 bg-zinc-950 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                    <option value="Free Trial Pass">Free Trial Pass (3 Days)</option>
+                                    <option value="Strength Training">Strength Training</option>
+                                    <option value="Personal Coaching">Personal Coaching</option>
+                                    <option value="Fat Loss Conditioning">Fat Loss Conditioning</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Message (Optional)</label>
+                                <textarea id="message" rows="3" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="Any specific fitness goals or questions..."></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full h-14 bg-amber-500 hover:bg-amber-400 text-black font-bold text-base rounded-xl flex items-center justify-center space-x-2 transition-all amber-glow">
+                                <span id="btn-text">Submit Inquiry Now</span>
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right: Google Maps Embed -->
+                <div class="lg:col-span-6 flex flex-col">
+                    <div class="w-full h-[450px] sm:h-[600px] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 amber-glow relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.7785575510655!2d85.1054!3d25.6111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed582f3a5323e9%3A0x6b8f047712f5a6b0!2sJagdeo%20Path%2C%20Khajpura%2C%20Patna%2C%20Bihar%20800014!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="The Barbell Gym Location Map">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Popup -->
+    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 max-w-md w-full text-center space-y-4 amber-glow animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/40">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-syne text-white">Inquiry Received Successfully!</h3>
+            <p id="modal-msg" class="text-zinc-400 text-sm leading-relaxed">
+                Thank you! Our trainer at The Barbell Gym will call you back shortly to confirm your free trial pass.
+            </p>
+            <button id="close-modal" class="w-full h-12 bg-amber-500 hover:bg-amber-400 text-black font-bold rounded-xl transition-all">
+                Got It, Thanks!
+            </button>
+        </div>
+    </div>
+
+    <!-- 11. Sticky Mobile Bottom Action Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 grid grid-cols-2 gap-3">
+        <a href="tel:+919939900708" class="h-12 bg-zinc-900 border border-zinc-800 text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2 transition-colors">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-400"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919939900708?text=Hi%20The%20Barbell%20Gym,%20I%20want%20to%20book%20my%20free%20trial%20session!" target="_blank" rel="noopener noreferrer" class="h-12 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl flex items-center justify-center space-x-2 transition-colors shadow-lg">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- 12. Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-16">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-black font-black font-syne text-xl">
+                            B
+                        </div>
+                        <span class="text-lg font-bold font-syne tracking-tight text-white">THE BARBELL GYM</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Patna’s premier destination for strength training, personal coaching, and real physical transformations.
+                    </p>
+                    <div class="flex items-center space-x-3 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <span class="text-white text-sm font-semibold">4.9/5 (19 Google Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold font-syne text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Services & Offerings</a></li>
+                        <li><a href="#why-us" class="hover:text-amber-400 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">About Story</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition-colors">Gallery Tour</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-400 transition-colors">Customer Reviews</a></li>
+                        <li><a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold font-syne text-base mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Strength Training</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Personal Coaching</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Fat Loss Conditioning</a></li>
+                        <li><a href="#contact" class="hover:text-amber-400 transition-colors">Free Trial Pass</a></li>
+                        <li><a href="#contact" class="hover:text-amber-400 transition-colors">Diet Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold font-syne text-base mb-4">Visit Location</h4>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                        J32F+JPQ, Jagdeo Path, Khajpura, Patna, Bihar 800014
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=The+Barbell+Gym+Jagdeo+Path+Khajpura+Patna" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline text-sm font-semibold flex items-center space-x-1">
+                        <span>View on Google Maps &rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+                <p>&copy; <span id="current-year"></span> The Barbell Gym, Patna. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Crafted with precision for elite fitness performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity Script -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Drawer Toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        hamburgerBtn.addEventListener('click', openMobileMenu);
+        closeDrawerBtn.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // FAQ Accordion Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Interactive Contact Form Handling with Modal
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const modalMsg = document.getElementById('modal-msg');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+
+            if(!name || !phone) {
+                alert('Please fill in your name and phone number.');
+                return;
+            }
+
+            // Simulate loading
+            submitBtn.disabled = true;
+            btnText.textContent = 'Processing...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Submit Inquiry Now';
+                
+                // Customize modal message safely
+                modalMsg.textContent = `Thank you, ${name}! Your request for ${service} has been received. Our team will contact you at ${phone} shortly.`;
+                successModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                
+                inquiryForm.reset();
+            }, 800);
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        successModal.addEventListener('click', (e) => {
+            if(e.target === successModal) {
+                successModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
