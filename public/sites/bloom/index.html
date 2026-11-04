@@ -468,7 +468,7 @@
                     <div class="col-span-1 lg:col-span-6">
                         <div class="grid grid-cols-2 gap-4">
                             <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Close up of fitness equipment Bloom The Gym" class="w-full h-64 object-cover rounded-2xl border border-zinc-800">
-                            <img src="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Gym multi-station equipment with flags Bloom The Gym" class="w-full h-64 object-cover rounded-2xl border border-zinc-800 mt-8"></div>>
+                            <img src="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Gym multi-station equipment with flags Bloom The Gym" class="w-full h-64 object-cover rounded-2xl border border-zinc-800 mt-8"></div>
                     </div>
                 </div>
             </div>
@@ -806,9 +806,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Bloom The Gym. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Bloom The Gym. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -821,9 +826,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- MOBILE STICKY BOTTOM BAR -->
@@ -844,7 +846,7 @@
         lucide.createIcons();
 
         // Set Current Year in Footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Drawer Toggle
         const menuBtn = document.getElementById('menu-btn');

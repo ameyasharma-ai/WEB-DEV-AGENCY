@@ -1022,9 +1022,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Muscles Box Gym - Best gym in Patna. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Muscles Box Gym - Best gym in Patna. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -1037,9 +1042,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- STICKY MOBILE BOTTOM BAR -->
@@ -1060,7 +1062,7 @@
         lucide.createIcons();
 
         // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle Logic
         const menuToggle = document.getElementById('menu-toggle');

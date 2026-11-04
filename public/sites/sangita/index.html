@@ -293,7 +293,7 @@
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">Curated Curation</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
                         Explore Our Store Collections & Offerings
                     </h2>
                     <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
@@ -367,7 +367,7 @@
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">The Sangita Advantage</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
                         Why Families in Patna Choose Us
                     </h2>
                     <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
@@ -421,12 +421,12 @@
                     
                     <div class="lg:col-span-6 relative">
                         <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-zinc-200">
-                            <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&w=1000&q=80" alt="Sangita Store Interior Shopping Experience" class="object-cover w-full h-full"></div>>
+                            <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&w=1000&q=80" alt="Sangita Store Interior Shopping Experience" class="object-cover w-full h-full"></div>
                     </div>
 
                     <div class="lg:col-span-6 flex flex-col items-start">
                         <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">Our Story on Buddh Marg</span>
-                        <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-6 break-words">
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif text-charcoal mb-6 break-words">
                             Rooted in Patna’s Heritage, Dedicated to Modern Shoppers
                         </h2>
                         <p class="text-slateGray text-base leading-relaxed mb-4 break-words">
@@ -462,7 +462,7 @@
                         </div>
                         <span class="text-xs font-bold text-charcoal">4.2 Star Google Rating (1,146+ Reviews)</span>
                     </div>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
                         What Our Customers Say About Us
                     </h2>
                     <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
@@ -560,7 +560,7 @@
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-xs font-bold uppercase tracking-widest text-terracotta mb-2 block">Visit or Reach Out</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif text-charcoal mb-4 break-words">
                         Store Location & Contact Information
                     </h2>
                     <p class="text-slateGray text-sm sm:text-base leading-relaxed break-words">
@@ -764,9 +764,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Sangita. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Sangita. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -779,9 +784,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- ==========================================
@@ -810,7 +812,7 @@
         lucide.createIcons();
 
         // Set Current Year in Footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle Logic
         const menuToggle = document.getElementById('menu-toggle');

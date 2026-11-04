@@ -298,7 +298,7 @@
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-caramel font-semibold text-sm uppercase tracking-widest block mb-3">Indulgent Selection</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     Our Bestselling Waffles & Desserts
                 </h2>
                 <p class="text-warmGray text-base sm:text-lg">
@@ -528,7 +528,7 @@
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-caramel font-semibold text-sm uppercase tracking-widest block mb-3">The Waffcha Difference</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     Why Patna Falls in Love With Us
                 </h2>
                 <p class="text-warmGray text-base sm:text-lg">
@@ -595,13 +595,13 @@
                     <div class="relative">
                         <div class="absolute -inset-2 bg-gradient-to-br from-caramel/30 to-chocolate rounded-3xl blur-xl opacity-75"></div>
                         <div class="relative rounded-2xl overflow-hidden border-2 border-chocolate shadow-2xl aspect-[4/3] bg-chocolate">
-                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Waffcha Cafe Interior and Dessert Craft" class="object-cover w-full h-full"></div>>
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Waffcha Cafe Interior and Dessert Craft" class="object-cover w-full h-full"></div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-6">
                     <span class="text-caramel font-semibold text-sm uppercase tracking-widest block mb-3">Our Sweet Journey</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-6 break-words">
                         Bringing Authentic European Waffle Culture to Patna
                     </h2>
                     <p class="text-warmGray text-base sm:text-lg leading-relaxed mb-6">
@@ -641,7 +641,7 @@
                     </div>
                     <span class="text-xs sm:text-sm font-semibold text-white">4.3 Star Rated across 1,026+ Reviews</span>
                 </div>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     What Patna Foodies Are Saying
                 </h2>
                 <p class="text-warmGray text-base sm:text-lg">
@@ -735,7 +735,7 @@
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-caramel font-semibold text-sm uppercase tracking-widest block mb-3">Visit Or Order</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     Find Waffcha Anandpuri
                 </h2>
                 <p class="text-warmGray text-base sm:text-lg">
@@ -900,9 +900,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Waffcha - The European Dessert. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Waffcha - The European Dessert. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -915,9 +920,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- Sticky Mobile Action Bar (Mobile Only) -->
@@ -938,7 +940,7 @@
         lucide.createIcons();
 
         // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Drawer Toggle Logic
         const menuBtn = document.getElementById('menu-btn');

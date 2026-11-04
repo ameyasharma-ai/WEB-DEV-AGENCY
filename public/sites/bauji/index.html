@@ -191,7 +191,7 @@
         <!-- Background Ambient Glow & Image -->
         <div class="absolute inset-0 z-0 opacity-30">
             <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=80" alt="Bauji Cafe Interior" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/40"></div>>
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/40"></div>
         </div>
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -443,7 +443,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="relative">
                 <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80" alt="Bauji Cafe Story" class="w-full h-full object-cover"></div>>
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80" alt="Bauji Cafe Story" class="w-full h-full object-cover"></div>
                 <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-amber-500/30 p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
                     <div class="flex items-center gap-3 mb-2">
                         <i data-lucide="heart" class="w-6 h-6 text-amber-500 fill-amber-500"></i>
@@ -489,13 +489,13 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
             </div>
         </div>
     </section>
@@ -826,9 +826,13 @@
         </div>
 
         
+            
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Bauji Cafe. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Bauji Cafe. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -841,8 +845,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-    
-    
 </footer>
 
 
@@ -867,7 +869,7 @@
         lucide.createIcons();
 
         // Set Current Year in Footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Drawer Toggle Elements
         const menuBtn = document.getElementById('menu-btn');

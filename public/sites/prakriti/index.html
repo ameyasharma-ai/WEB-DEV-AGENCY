@@ -256,7 +256,7 @@
                             <!-- Main Image Wrapper -->
                             <div class="relative bg-white p-3 rounded-2xl border border-slate-200 shadow-2xl">
                                 <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100">
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Dental Clinic Interior at Prakriti Dental Care Patna" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"></div>>
+                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Dental Clinic Interior at Prakriti Dental Care Patna" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"></div>
 
                                 <!-- Floating Badge Card --
                                 <div class="absolute -bottom-6 -left-6 bg-white border border-slate-200 p-4 rounded-xl shadow-xl flex items-center gap-3 hidden sm:flex">
@@ -311,7 +311,7 @@
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-sky-600 font-bold text-sm tracking-widest uppercase mb-2 block">Comprehensive Dental Solutions</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4 break-words">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4 break-words">
                         Specialized Treatments Tailored for You
                     </h2>
                     <p class="text-slate-600 text-base">
@@ -436,7 +436,7 @@
                     
                     <div class="lg:col-span-5">
                         <span class="text-sky-600 font-bold text-sm tracking-widest uppercase mb-2 block">The Prakriti Advantage</span>
-                        <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mb-6 leading-tight">
+                        <h2 class="break-words text-2xl sm:text-3xl lg:text-4xl font-bold font-plus-jakarta text-slate-900 mb-6 leading-tight">
                             Why Patients in Patna Trust Us With Their Smiles
                         </h2>
                         <p class="text-slate-600 text-base mb-8 leading-relaxed">
@@ -584,7 +584,7 @@
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-emerald-600 font-bold text-sm tracking-widest uppercase mb-2 block">Verified Testimonials</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4">
+                    <h2 class="break-words text-2xl sm:text-3xl lg:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4">
                         Loved By 215+ Patients in Patna
                     </h2>
                     <p class="text-slate-600 text-base">
@@ -680,7 +680,7 @@
                 
                 <div class="text-center mb-16">
                     <span class="text-sky-600 font-bold text-sm tracking-widest uppercase mb-2 block">Got Questions?</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4">
+                    <h2 class="break-words text-2xl sm:text-3xl lg:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4">
                         Frequently Asked Questions
                     </h2>
                     <p class="text-slate-600 text-base">
@@ -745,7 +745,7 @@
                 
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-sky-600 font-bold text-sm tracking-widest uppercase mb-2 block">Visit Our Clinic</span>
-                    <h2 class="break-words text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4">
+                    <h2 class="break-words text-2xl sm:text-3xl lg:text-4xl font-bold font-plus-jakarta text-slate-900 mb-4">
                         Location & Appointment Booking
                     </h2>
                     <p class="text-slate-600 text-base">
@@ -952,9 +952,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 PRAKRITI DENTAL CARE cum ORAL & MAXILLOFACIAL SURGERY CENTER. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> PRAKRITI DENTAL CARE cum ORAL & MAXILLOFACIAL SURGERY CENTER. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -967,9 +972,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- JavaScript Interactivity -->
@@ -978,7 +980,7 @@
         lucide.createIcons();
 
         // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle Logic
         const menuToggle = document.getElementById('menu-toggle');

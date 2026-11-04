@@ -414,7 +414,7 @@
                 
                 <div class="relative">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" alt="Restaurant Interior" class="object-cover w-full h-full"></div>>
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" alt="Restaurant Interior" class="object-cover w-full h-full"></div>
                     <div class="absolute -bottom-6 -right-6 bg-surface border border-zinc-800 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
                         <div class="flex items-center gap-3 mb-2">
                             <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
@@ -463,13 +463,13 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Grilled Dish" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Grilled Dish" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Biryani" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Biryani" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Paneer Curry" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Paneer Curry" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>
                 <div class="aspect-square rounded-2xl overflow-hidden border border-zinc-800 group">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Ambiance" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Ambiance" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"></div>
             </div>
         </div>
     </section>
@@ -783,9 +783,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Pranjal Family Restaurant. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Pranjal Family Restaurant. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -798,9 +803,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- Sticky Mobile Action Bar -->
@@ -833,7 +835,7 @@
         lucide.createIcons();
 
         // Set Current Year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Drawer Toggle
         const menuToggle = document.getElementById('menu-toggle');

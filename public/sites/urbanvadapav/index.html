@@ -283,7 +283,7 @@
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-saffron font-bold text-sm tracking-widest uppercase mb-3 block">OUR SIGNATURE MENU</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     Crafted with Crunch, Served with Love
                 </h2>
                 <p class="text-zinc-400 text-sm sm:text-base">
@@ -403,7 +403,7 @@
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-saffron font-bold text-sm tracking-widest uppercase mb-3 block">WHY PATNA LOVES US</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     The Urban Vada Pav Difference
                 </h2>
                 <p class="text-zinc-400 text-sm sm:text-base">
@@ -482,7 +482,7 @@
 
                 <div class="lg:col-span-6">
                     <span class="text-saffron font-bold text-sm tracking-widest uppercase mb-3 block">OUR STORY</span>
-                    <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-6 break-words">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-6 break-words">
                         Bringing Mumbai's Iconic Street Flavor to Mithapur, Patna
                     </h2>
                     <p class="text-zinc-300 text-base leading-relaxed mb-6">
@@ -518,7 +518,7 @@
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-saffron font-bold text-sm tracking-widest uppercase mb-3 block">CUSTOMER LOVE</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     What Patna Says About Us
                 </h2>
                 <p class="text-zinc-400 text-sm sm:text-base">
@@ -610,7 +610,7 @@
         <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-saffron font-bold text-sm tracking-widest uppercase mb-3 block">GOT QUESTIONS?</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     Frequently Asked Questions
                 </h2>
                 <p class="text-zinc-400 text-sm sm:text-base">
@@ -671,7 +671,7 @@
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-saffron font-bold text-sm tracking-widest uppercase mb-3 block">VISIT OR CONNECT</span>
-                <h2 class="text-2xl sm:text-3xl md:text-2xl sm:text-3xl md:text-4xl font-bold font-syne text-white mb-4 break-words">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-syne text-white mb-4 break-words">
                     Location & Contact Us
                 </h2>
                 <p class="text-zinc-400 text-sm sm:text-base">
@@ -845,9 +845,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Urban vada pav mithapur patna. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Urban vada pav mithapur patna. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -860,9 +865,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- Sticky Mobile Bottom Bar -->
@@ -884,7 +886,7 @@
             lucide.createIcons();
 
             // Set Current Year in Footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+            const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
             // Mobile Menu Drawer Toggle
             const menuToggle = document.getElementById('menu-toggle');

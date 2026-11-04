@@ -187,8 +187,8 @@
         <!-- Background Ambient Glow & Image with Gradient Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80" alt="High-Bae Patna Ambiance" class="w-full h-full object-cover opacity-30 scale-105 animate-pulse duration-[10000ms]">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent"></div>>
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent"></div>
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
         </div>
 
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
@@ -497,7 +497,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="relative">
                     <div class="relative aspect-[4/3] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80" alt="High-Bae Cafe Interior" class="w-full h-full object-cover"></div>>
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80" alt="High-Bae Cafe Interior" class="w-full h-full object-cover"></div>
                     <div class="absolute -bottom-6 -right-6 bg-[#18181B] border border-zinc-700 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
                         <div class="flex items-center gap-3 mb-2">
                             <div class="w-10 h-10 rounded-full bg-[#D4AF37] text-black font-syne font-bold flex items-center justify-center">4.8</div>
@@ -978,9 +978,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 High-Bae Patna. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> High-Bae Patna. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -993,9 +998,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- JAVASCRIPT LOGIC -->
@@ -1004,7 +1006,7 @@
         lucide.createIcons();
 
         // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Drawer Functionality
         const menuToggle = document.getElementById('menu-toggle');

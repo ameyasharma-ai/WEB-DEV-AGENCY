@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>🍽️</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -216,7 +216,7 @@
                 <!-- Hero Image Showcase -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
-                        <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80" alt="Delicious Indian Sweets and Mithai assortment at Hariram's Patna" class="object-cover w-full h-full hover:scale-105 transition-transform duration-700"></div>>
+                        <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80" alt="Delicious Indian Sweets and Mithai assortment at Hariram's Patna" class="object-cover w-full h-full hover:scale-105 transition-transform duration-700"></div>
                     <!-- Floating Highlight Card --
                     <div class="absolute -bottom-6 -left-6 sm:bottom-6 sm:-left-8 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-amber-200 flex items-center gap-4 max-w-xs">
                         <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
@@ -505,7 +505,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 relative">
                     <div class="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-amber-100">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Hariram's Restaurant interior and sweets counter in Kankarbagh Patna" class="object-cover w-full h-full"></div>>
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Hariram's Restaurant interior and sweets counter in Kankarbagh Patna" class="object-cover w-full h-full"></div>
                     <div class="absolute -bottom-6 -right-6 bg-burntOrange text-white p-6 rounded-3xl shadow-xl hidden sm:block max-w-[220px]">
                         <div class="text-3xl font-extrabold font-serif mb-1"1,000+</div>
                         <p class="text-xs font-medium leading-relaxed">Happy families served daily across Patna and Kankarbagh.</p>
@@ -894,9 +894,14 @@
 
             <!-- Bottom Copyright -->
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Hariram's Sweets & Restaurant. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Hariram's Sweets & Restaurant. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -909,9 +914,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- Success Modal Popup -->
@@ -936,7 +938,7 @@
         lucide.createIcons();
 
         // Set Current Year in Footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Drawer Toggle
         const menuBtn = document.getElementById('menu-btn');

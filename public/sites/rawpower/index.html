@@ -359,7 +359,7 @@
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between group">
                     <div class="relative aspect-video w-full overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Strength & Hypertrophy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
                         <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow"Popular</span>
                     </div>
                     <div class="p-8 flex-1 flex flex-col justify-between">
@@ -396,7 +396,7 @@
                     </div>
                     <div class="relative aspect-video w-full overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Fat Loss & Shredding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col justify-between">
                         <div>
@@ -429,7 +429,7 @@
                 <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between group">
                     <div class="relative aspect-video w-full overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=800&q=80" alt="Personal Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
                         <span class="absolute top-4 right-4 bg-zinc-800 text-zinc-200 text-xs font-bold px-3 py-1.5 rounded-lg shadow"1-on-1</span>
                     </div>
                     <div class="p-8 flex-1 flex flex-col justify-between">
@@ -742,9 +742,12 @@
     <footer class="bg-[#060608] border-t border-zinc-900 py-12">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
+            
+
+            
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Raw Power Gym & Fitness. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Raw Power Gym & Fitness. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -757,11 +760,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-                <p>© <span id="current-year"></span> Raw Power Gym & Fitness, Patna. All rights reserved.</p>
-                <p>Designed with professional excellence for Patna fitness enthusiasts.</p>
-            </div>
         </div>
     
     
@@ -785,7 +783,7 @@
         lucide.createIcons();
 
         // Set current year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Drawer Toggle Logic
         const menuToggle = document.getElementById('menu-toggle');

@@ -191,7 +191,7 @@
                 <div class="lg:col-span-5 relative">
                     <div class="relative w-full aspect-[4/3] sm:aspect-square rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
                         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Golden Flavour Restaurant Interior and Food" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 p-4 rounded-2xl flex items-center justify-between">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500">
@@ -343,7 +343,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 relative">
                     <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Golden Flavour Restaurant Ambiance" class="w-full h-full object-cover"></div>>
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Golden Flavour Restaurant Ambiance" class="w-full h-full object-cover"></div>
                     <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-zinc-800 p-6 rounded-3xl shadow-2xl max-w-xs hidden sm:block">
                         <div class="flex items-center gap-3 mb-2">
                             <div class="flex text-amber-500">
@@ -759,9 +759,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Golden Flavour. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Golden Flavour. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -774,9 +779,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- 11. Sticky Mobile Action Bar -->
@@ -797,7 +799,7 @@
         lucide.createIcons();
 
         // Set current copyright year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle Logic
         const menuToggle = document.getElementById('menu-toggle');
@@ -858,7 +860,7 @@
             container.innerHTML = items.map(item => `
                 <div class="flex flex-col sm:flex-row items-center gap-4 p-5 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/50 transition-all">
                     <div class="w-full sm:w-28 h-28 rounded-xl overflow-hidden shrink-0 border border-zinc-800">
-                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="${item.name}" class="w-full h-full object-cover"></div>>
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="${item.name}" class="w-full h-full object-cover"></div>
                     <div class="flex-1 flex flex-col justify-between w-full text-center sm:text-left">
                         <div
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">

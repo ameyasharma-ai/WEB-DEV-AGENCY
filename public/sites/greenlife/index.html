@@ -447,7 +447,7 @@
                 <div class="lg:col-span-6 grid grid-cols-2 gap-4">
                     <div class="space-y-4">
                         <div class="rounded-3xl overflow-hidden aspect-[4/3] shadow-lg border border-zinc-100">
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Clinic Interior" class="w-full h-full object-cover"></div>>
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Clinic Interior" class="w-full h-full object-cover"></div>
                         <div class="rounded-3xl overflow-hidden aspect-square shadow-lg border border-zinc-100 bg-primary/10 p-6 flex flex-col justify-center text-center">
                             <div class="text-4xl font-heading font-extrabold text-primary mb-1"5.0 ★</div>
                             <div class="text-sm font-bold text-darkText">Patient Satisfaction</div>
@@ -461,7 +461,7 @@
                             <p class="text-xs text-mutedText">Treating every patient like family with patience and warmth.</p>
                         </div>
                         <div class="rounded-3xl overflow-hidden aspect-[4/3] shadow-lg border border-zinc-100">
-                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Dental Consultation" class="w-full h-full object-cover"></div>>
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Dental Consultation" class="w-full h-full object-cover"></div>
                     </div>
                 </div>
 
@@ -831,9 +831,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 Green life dental care. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> Green life dental care. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -846,9 +851,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- Sticky Mobile Bottom Bar -->
@@ -886,7 +888,7 @@
         lucide.createIcons();
 
         // Set Current Year in Footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');

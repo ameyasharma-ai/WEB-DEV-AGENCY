@@ -610,7 +610,7 @@
                 <div class="bg-surface border border-zinc-800 rounded-3xl overflow-hidden group">
                     <div class="h-72 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Rahul Verma - Strength &amp; Conditioning Expert" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
                         <span class="absolute bottom-4 left-4 bg-primary text-black font-extrabold text-xs px-3 py-1 rounded-full">
                             Head Coach
                         </span>
@@ -632,7 +632,7 @@
                 <div class="bg-surface border border-zinc-800 rounded-3xl overflow-hidden group">
                     <div class="h-72 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Priya Nair - Women Fitness Specialist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
                         <span class="absolute bottom-4 left-4 bg-rose-500 text-white font-extrabold text-xs px-3 py-1 rounded-full">
                             Ladies Batch Lead
                         </span>
@@ -654,7 +654,7 @@
                 <div class="bg-surface border border-zinc-800 rounded-3xl overflow-hidden group">
                     <div class="h-72 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Arjun Singh - CrossFit &amp; Endurance Coach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
                         <span class="absolute bottom-4 left-4 bg-amber-500 text-black font-extrabold text-xs px-3 py-1 rounded-full">
                             CrossFit Specialist
                         </span>
@@ -1219,9 +1219,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 CROSSFIT GYM. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> CROSSFIT GYM. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -1234,9 +1239,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- STICKY MOBILE BOTTOM BAR -->
@@ -1273,7 +1275,7 @@
         lucide.createIcons();
 
         // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Drawer Logic
         const menuBtn = document.getElementById('menu-btn');

@@ -451,10 +451,10 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4">
                             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Restaurant interior" class="rounded-2xl shadow-lg w-full h-48 object-cover">
-                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80" alt="Fresh ingredients" class="rounded-2xl shadow-lg w-full h-64 object-cover"></div>>
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80" alt="Fresh ingredients" class="rounded-2xl shadow-lg w-full h-64 object-cover"></div>
                         <div class="space-y-4 pt-8">
                             <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=500&q=80" alt="Indian Meal" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Dining area" class="rounded-2xl shadow-lg w-full h-48 object-cover"></div>>
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Dining area" class="rounded-2xl shadow-lg w-full h-48 object-cover"></div>
                     </div>
                 </div>
 
@@ -743,9 +743,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 VISHAKHA BHOJNALAY exhibition road. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> VISHAKHA BHOJNALAY exhibition road. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -758,9 +763,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- STICKY MOBILE BOTTOM ACTION BAR -->
@@ -781,7 +783,7 @@
         lucide.createIcons();
 
         // Set Current Year in Footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Drawer Toggle Logic
         const menuToggleBtn = document.getElementById('menu-toggle-btn');

@@ -468,11 +468,11 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4">
                             <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5] bg-zinc-900">
-                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Cafe Interior Patna" class="w-full h-full object-cover"></div>>
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Cafe Interior Patna" class="w-full h-full object-cover"></div>
                         </div>
                         <div class="space-y-4 pt-8">
                             <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/5] bg-zinc-900">
-                                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Cafe Food and Drinks Anisabad" class="w-full h-full object-cover"></div>>
+                                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Cafe Food and Drinks Anisabad" class="w-full h-full object-cover"></div>
                         </div>
                     </div>
                 </div>
@@ -524,16 +524,16 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 
                 <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Cafe food D.Halloween Patna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Cafe food D.Halloween Patna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
 
                 <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Burgers and fries Anisabad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Burgers and fries Anisabad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
 
                 <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Cafe interior lights Patna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Cafe interior lights Patna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
 
                 <div class="rounded-2xl overflow-hidden border border-zinc-800 aspect-square group bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Cocktails and mocktails cafe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>>
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Cocktails and mocktails cafe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
 
             </div>
         </div>
@@ -900,9 +900,14 @@
             </div>
 
             
+            
+        </div>
+    
+    
+
             <!-- Unified ArcLane Verified Footer Signature -->
             <div class="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>&copy; 2026 D.Halloween Restro & Cafe. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2026</span> D.Halloween Restro & Cafe. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -915,9 +920,6 @@
                 </div>
             </div>
             <!-- End ArcLane Signature -->
-        </div>
-    
-    
 </footer>
 
     <!-- JAVASCRIPT LOGIC -->
@@ -926,7 +928,7 @@
         lucide.createIcons();
 
         // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
 
         // Mobile Menu Drawer Toggle
         const menuToggle = document.getElementById('menu-toggle');
