@@ -57,7 +57,7 @@
     <meta name="twitter:title" content="The Green Resort &amp; Restaurant | Official Website">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&amp;fit=crop&amp;w=1920&amp;q=80">
 </head>
-<body class="bg-[#FAFAF7] text-[#1A1A1A] font-jakarta antialiased overflow-x-hidden md:pb-0" x-data="{ mobileMenuOpen: false, inquiryModal: false, selectedService: 'General Table / Room Inquiry', successModal: false, formName: '', formPhone: '', formService: 'Table Booking', formMessage: '' }">
+<body class="bg-[#FAFAF7] text-[#1A1A1A] font-jakarta antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false, inquiryModal: false, selectedService: 'General Table / Room Inquiry', successModal: false, formName: '', formPhone: '', formService: 'Table Booking', formMessage: '' }">
 
     <!-- 100% Solid Opaque Announcement Bar -->
     <div class="bg-[#1B4D3E] text-white text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50 flex items-center justify-center gap-2">
@@ -108,7 +108,7 @@
     </header>
 
     <!-- Mobile Backdrop -->
-    <div id="menu-backdrop" class="fixed inset bg-black/80 backdrop-blur-sm z-[90] transition-opacity duration-300" :class="fixed inset-0 mobileMenuOpen ? z-[90]'block' : 'hidden'" @click="mobileMenuOpen = false"></div>
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] transition-opacity duration-300" :class="fixed inset-0 mobileMenuOpen ? z-[90]'block' : 'hidden'" @click="mobileMenuOpen = false"></div>
 
     <!-- Flawless Mobile Drawer -->
     <div class="fixed top-12 bottom right z-[100] w-full max-w-xs sm:max-w-sm bg-[#FAFAF7] border-l border-zinc-200 rounded-tl-3xl p-6 pt-8 flex flex-col justify-between transform transition-transform duration-300 shadow-2xl overflow-y-auto lg:hidden" :class="mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'">
@@ -767,7 +767,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#09090b] text-white border-t border-zinc-800 sm: md: pt-10 sm:pt-12 pb-6 md:pb-8">
+    <footer class="bg-[#09090b] text-white border-t border-zinc-800 pt-10 sm:pt-12 pb-24 md:pb-12">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Brand Column -->
@@ -858,7 +858,7 @@
     </footer>
 
     <!-- Sticky Mobile Action Bar -->
-    <div class="md:hidden fixed bottom left right z-40 bg-[#1B4D3E] border-t border-emerald-900 p-3 grid grid-cols-2 gap-3 shadow-2xl">
+    <div class="md:hidden fixed inset-x-0 bottom-0 z-40 bg-[#1B4D3E] border-t border-emerald-900 p-3 grid grid-cols-2 gap-3 shadow-2xl">
         <a href="tel:+919939921877" class="py-3 px-4 rounded-xl bg-white text-[#1B4D3E] font-bold text-sm text-center flex items-center justify-center gap-2 shadow-md">
             <i data-lucide="phone" class="w-4 h-4 text-[#1B4D3E]"></i>
             <span>Call Now</span>
@@ -870,7 +870,7 @@
     </div>
 
     <!-- Interactive Inquiry Modal -->
-    <div x-show="inquiryModal" class="fixed inset z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" x-cloak="">
+    <div x-show="inquiryModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" x-cloak="">
         <div @click.away="inquiryModal = false" class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl border border-zinc-200">
             <button @click="inquiryModal = false" class="absolute top-6 right-6 p-2 rounded-full hover:bg-zinc-100 text-zinc-500">
                 <i data-lucide="x" class="w-5 h-5"></i>
@@ -909,7 +909,7 @@
     </div>
 
     <!-- Success Modal Popup -->
-    <div x-show="successModal" class="fixed inset z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" x-cloak="">
+    <div x-show="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" x-cloak="">
         <div @click.away="successModal = false" class="bg-white rounded-3xl max-w-sm w-full p-8 text-center relative shadow-2xl border border-zinc-200">
             <div class="w-16 h-16 rounded-full bg-emerald-100 text-[#1B4D3E] flex items-center justify-center mx-auto mb-4">
                 <i data-lucide="check" class="w-8 h-8"></i>
