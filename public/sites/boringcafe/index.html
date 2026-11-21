@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth"><head>
+    <base href="/sites/boringcafe/">
+    
+    <!-- ArcLane Zero-Vulnerability Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- ArcLane Responsive Typography & Distortion Prevention Guard -->
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+      img, svg, video, canvas, audio, iframe, embed, object {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/&gt;&lt;text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22&gt;🍽️&lt;/text&gt;&lt;/svg&gt;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>The Boring Café | Patna | Best Rooftop Cafe &amp; Restaurant on Boring Road</title>
+    <meta name="description" content="Experience Patna's finest 3rd and 4th-floor rooftop cafe on Boring Road. Enjoy artisan coffee, delicious wood-fired pizzas, gourmet burgers, and cozy ambiance. Reserve your table on WhatsApp!">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#120A08',
+                        surface: '#1E1412',
+                        'surface-light': '#2A1D1A',
+                        primary: '#E6A15C',
+                        'primary-hover': '#F3B46D',
+                        secondary: '#C85A32',
+                        'text-primary': '#F9F6F0',
+                        'text-muted': '#C2B5B0',
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@600;700;800;900&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #120A08;
+            color: #F9F6F0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #120A08;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A1D1A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E6A15C;
+        }
+    </style>
+</head>
+<body class="pb-20 md:pb-0 overflow-x-hidden bg-background text-text-primary antialiased selection:bg-primary selection:text-black">
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-secondary text-white text-xs sm:text-sm font-medium py-2 px-4 text-center relative z-50 flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>🟢 Open Today till 11:00 PM • 3rd &amp; 4th Floor, Nath Tower, Boring Road, Patna</span>
+    </div>
+
+    <!-- 100% Solid Opaque Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#120A08] border-b border-zinc-800/80 backdrop-blur-none w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 sm:gap-3 group min-w-0 mr-3 lg:mr-8 flex-1 sm:flex-initial shrink-0">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-primary text-black font-outfit font-black text-base sm:text-lg tracking-tight shrink-0 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform font-syne text-lg shadow-md">
+                    BC
+                </div>
+                <div class="min-w-0 flex flex-col justify-center">
+                    <span class="block font-extrabold text-base sm:text-lg lg:text-xl font-syne tracking-tight text-text-primary group-hover:text-primary transition-colors max-w-[160px] xs:max-w-[200px] sm:max-w-none leading-tight break-words leading-normal">The Boring Café</span>
+                    <span class="block text-[10px] sm:text-xs text-text-muted max-w-[160px] xs:max-w-[200px] sm:max-w-none break-words leading-normal">Patna's Rooftop Haven</span>
+                </div>
+            </a>
+
+            <!-- Balanced Centered Navbar -->
+            <nav class="hidden lg:flex items-center justify-center mx-auto -0 shrink-0 gap-3 lg:gap-4 xl:gap-6 2xl:gap-6 px-2 lg:px-4">
+                <a href="#menu" class="text-sm font-medium text-text-muted hover:text-primary transition-colors whitespace-nowrap shrink-0">Menu</a>
+                <a href="#about" class="text-sm font-medium text-text-muted hover:text-primary transition-colors whitespace-nowrap shrink-0">About Us</a>
+                <a href="#pricing" class="text-sm font-medium text-text-muted hover:text-primary transition-colors whitespace-nowrap shrink-0">Specials</a>
+                <a href="#gallery" class="text-sm font-medium text-text-muted hover:text-primary transition-colors whitespace-nowrap shrink-0">Gallery</a>
+                <a href="#reviews" class="text-sm font-medium text-text-muted hover:text-primary transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">Reviews</a>
+                <a href="#contact" class="text-sm font-medium text-text-muted hover:text-primary transition-colors whitespace-nowrap shrink-0 hidden 2xl:inline-block">Location</a>
+            </nav>
+
+            <!-- Action CTAs -->
+            <div class="hidden sm:flex items-center gap-2 sm:gap-3 shrink-0 flex-nowrap">
+                <a href="tel:+919090514544" class="whitespace-nowrap h-10 px-4 rounded-xl bg-surface hover:bg-surface-light border border-zinc-700 text-text-primary text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all min-w-0 flex-1 sm:flex-initial mr-3 lg:mr-8 shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    <span class="hidden md:inline whitespace-nowrap">+91 90905 14544</span>
+                </a>
+                <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20The%20Boring%20Café!" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap h-10 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg shadow-emerald-900/30 transition-all min-w-0 flex-1 sm:flex-initial mr-3 lg:mr-8 shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                    <span class="whitespace-nowrap">Reserve WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-surface border border-zinc-700 text-text-primary hover:text-primary focus:outline-none shrink-0 whitespace-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed inset-y-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 text-white top-0 bg-[#120A08] p-6 pt-8 flex flex-col justify-between shadow-2xl overflow-y-auto pt-5 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+        <div>
+            <div class="flex items-center justify-between pb-6 mb-6 border-b border-zinc-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-primary text-black font-outfit font-black text-base flex items-center justify-center">BC</div>
+                    <div>
+                        <h3 class="break-words font-bold font-syne text-base text-text-primary">The Boring Café</h3>
+                        <p class="text-xs text-text-muted">Boring Road, Patna</p>
+                    </div>
+                </div>
+                <button id="close-drawer" aria-label="Close Navigation Menu" class="p-2 rounded-xl bg-surface border border-zinc-700 text-text-muted hover:text-white shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-4">
+                <a href="#menu" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Menu &amp; Dishes</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-text-muted"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#about" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>About Our Story</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-text-muted"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#pricing" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Chef Specials</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-text-muted"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#gallery" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Rooftop Gallery</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-text-muted"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Google Reviews</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-text-muted"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+                <a href="#contact" class="mobile-nav-link text-base font-medium text-text-primary hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between">
+                    <span>Location &amp; Map</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-text-muted"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+            <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table!" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                <span>Reserve on WhatsApp</span>
+            </a>
+            <a href="tel:+919090514544" class="w-full py-3.5 px-4 rounded-xl bg-surface border border-zinc-700 text-white font-semibold text-sm flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                <span>Call +91 90905 14544</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="w-full overflow-x-hidden">
+        
+        <!-- Hero Section -->
+        <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 bg-[#120A08]">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(230,161,92,0.1),transparent_50%)] pointer-events-none"></div>
+            
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left Column: Typography & CTAs -->
+                    <div class="col-span-1 lg:col-span-7 flex flex-col items-start text-left">
+                        
+                        <!-- Trust Badge & Locality Chip -->
+                        <div class="flex flex-wrap items-center gap-2.5 mb-6">
+                            <div class="inline-flex items-center gap-1.5 bg-surface border border-zinc-800 py-1.5 px-3.5 rounded-full text-xs font-semibold text-text-primary shadow-sm">
+                                <span class="text-amber-400">★</span> 
+                                <span>4.1 (1,569+ Google Reviews)</span>
+                            </div>
+                            <div class="inline-flex items-center gap-1.5 bg-surface border border-zinc-800 py-1.5 px-3.5 rounded-full text-xs font-semibold text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-3.5 h-3.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span>Boring Road, Patna</span>
+                            </div>
+                        </div>
+
+                        <!-- Main H1 Heading -->
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight break-words font-syne text-text-primary leading-[1.15] mb-6">
+                            Patna’s Ultimate <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-200">Rooftop Cafe</span> &amp; Dining Experience
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-lg text-text-muted font-normal leading-relaxed mb-8 max-w-2xl break-words">
+                            Perched on the 3rd and 4th floor of Nath Tower on Boring Road. Enjoy artisan coffee, mouth-watering wood-fired pizzas, sizzling appetizers, and breathtaking sunset views with your loved ones.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                            <a href="https://wa.me/919090514544?text=Hi,%20I%20want%20to%20reserve%20a%20table%20at%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="h-12 sm:h-14 px-5 sm:px-8 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-3 shadow-xl shadow-emerald-900/40 transition-all hover:scale-[1.02]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                                <span>Reserve on WhatsApp</span>
+                            </a>
+                            <a href="#menu" class="h-12 sm:h-14 px-5 sm:px-8 rounded-xl bg-surface hover:bg-surface-light border border-zinc-700 text-text-primary font-semibold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:border-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="utensils" aria-hidden="true" class="lucide lucide-utensils w-4 h-4 text-primary"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+                                <span>Explore Full Menu</span>
+                            </a>
+                        </div>
+
+                        <!-- Highlights Row -->
+                        <div class="grid grid-cols-3 mt-12 pt-8 border-t border-zinc-800/80 w-full gap-2 sm:gap-4">
+                            <div class="min-w-0">
+                                <h4 class="font-syne font-bold text-lg sm:text-xl text-text-primary">1,500+</h4>
+                                <p class="text-xs sm:text-sm text-text-muted break-words leading-tight">Happy Reviews</p>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="font-syne font-bold text-lg sm:text-xl text-text-primary">3rd &amp; 4th</h4>
+                                <p class="text-xs sm:text-sm text-text-muted break-words leading-tight">Floor Rooftop</p>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="font-syne font-bold text-lg sm:text-xl text-text-primary">11 AM - 11 PM</h4>
+                                <p class="text-xs sm:text-sm text-text-muted break-words leading-tight">Open Daily</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Elevated Showcase Card -->
+                    <div class="col-span-1 lg:col-span-5">
+                        <div class="relative bg-surface border border-zinc-800 rounded-3xl p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden group">
+                            
+                            <!-- Elevated Floating Badge -->
+                            <span class="absolute top-6 left-6 z-10 bg-primary text-black font-black text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                                ⭐ Rooftop Ambiance
+                            </span>
+
+                            <!-- Real-time Status Chip -->
+                            <span class="absolute bottom-6 right-6 z-10 bg-black/80 text-white font-medium text-xs px-3.5 py-1.5 rounded-full border border-zinc-700 backdrop-blur-sm flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Open Now in Patna
+                            </span>
+
+                            <!-- Showcase Image (100% Un-tinted, vibrant) -->
+                            <div class="w-full h-72 sm:h-96 lg:h-[420px] rounded-2xl overflow-hidden relative">
+                                <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="The Boring Café Ambiance Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;q=80&amp;w=800'"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6">
+                                    <p class="text-white font-syne font-bold text-lg">Nath Tower, Boring Road</p>
+                                    <p class="text-zinc-300 text-xs">The finest multi-level dining &amp; coffee experience</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Social Proof Bar -->
+        <section class="py-8 bg-surface border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center">
+                    
+                    <div class="flex items-center justify-center md:justify-start gap-4 p-4 rounded-2xl bg-[#120A08] border border-zinc-800">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-6 h-6 fill-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 font-bold text-sm">
+                                <span>4.1 ★</span>
+                                <span class="text-text-muted font-normal">(1,569 Reviews)</span>
+                            </div>
+                            <p class="text-xs text-text-muted">Top Rated Google Local Café</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center md:justify-start gap-4 p-4 rounded-2xl bg-[#120A08] border border-zinc-800">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layers" aria-hidden="true" class="lucide lucide-layers w-6 h-6"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-text-primary">3rd &amp; 4th Floor Ambiance</h4>
+                            <p class="text-xs text-text-muted">Spacious indoor &amp; open rooftop seating</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center md:justify-start gap-4 p-4 rounded-2xl bg-[#120A08] border border-zinc-800">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-6 h-6"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-text-primary">Prime Boring Road</h4>
+                            <p class="text-xs text-text-muted">Easy valet parking &amp; central location</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services / Menu Categories Grid -->
+        <section id="menu" class="py-16 lg:py-24 bg-[#120A08]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Our Signature Menu</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-text-primary mt-4 mb-4">Crafted With Love &amp; Flavor</h2>
+                    <p class="text-text-muted text-sm sm:text-base">Explore our crowd-favorite culinary delights, handcrafted beverages, and decadent desserts made fresh daily.</p>
+                </div>
+
+                <!-- Menu Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    
+                    <!-- Menu Item 1: Artisan Coffee -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-5 sm:p-6 flex flex-col justify-between group hover:border-primary/50 transition-all">
+                        <div>
+                            <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5">
+                                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Artisan Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                                <span class="absolute top-3 right-3 bg-black/80 text-primary font-bold text-xs px-3 py-1 rounded-full border border-zinc-700 backdrop-blur-sm">Best Seller</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-text-primary">Artisan Coffee &amp; Lattes</h3>
+                                <span class="font-syne font-bold text-primary text-base">₹180+</span>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">Freshly brewed cappuccinos, cold brews, and caramel macchiatos made from premium Arabica beans.</p>
+                        </div>
+                        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20order%20Artisan%20Coffee%20from%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#120A08] hover:bg-primary hover:text-black border border-zinc-700 text-text-primary font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <span>Order via WhatsApp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Menu Item 2: Wood-Fired Pizza -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-5 sm:p-6 flex flex-col justify-between group hover:border-primary/50 transition-all">
+                        <div>
+                            <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5">
+                                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Wood-Fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                                <span class="absolute top-3 right-3 bg-black/80 text-primary font-bold text-xs px-3 py-1 rounded-full border border-zinc-700 backdrop-blur-sm">Chef Special</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-text-primary">Wood-Fired Pizzas</h3>
+                                <span class="font-syne font-bold text-primary text-base">₹340+</span>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">Hand-tossed crusts loaded with gooey mozzarella, fresh herbs, and exotic toppings like Peri Peri Chicken &amp; Margherita.</p>
+                        </div>
+                        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20order%20Wood-Fired%20Pizza%20from%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#120A08] hover:bg-primary hover:text-black border border-zinc-700 text-text-primary font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <span>Order via WhatsApp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Menu Item 3: Gourmet Burgers & Fries -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-5 sm:p-6 flex flex-col justify-between group hover:border-primary/50 transition-all">
+                        <div>
+                            <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5">
+                                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Gourmet Burgers and Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                                <span class="absolute top-3 right-3 bg-black/80 text-primary font-bold text-xs px-3 py-1 rounded-full border border-zinc-700 backdrop-blur-sm">Crispy &amp; Juicy</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-text-primary">Gourmet Burgers &amp; Fries</h3>
+                                <span class="font-syne font-bold text-primary text-base">₹220+</span>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">Juicy double-patty burgers served with golden, crispy loaded fries and secret house dip.</p>
+                        </div>
+                        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20order%20Burgers%20from%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#120A08] hover:bg-primary hover:text-black border border-zinc-700 text-text-primary font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <span>Order via WhatsApp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Menu Item 4: Creamy Pasta -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-5 sm:p-6 flex flex-col justify-between group hover:border-primary/50 transition-all">
+                        <div>
+                            <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5">
+                                <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Creamy Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1621996346565-e3d5d6281298?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                                <span class="absolute top-3 right-3 bg-black/80 text-primary font-bold text-xs px-3 py-1 rounded-full border border-zinc-700 backdrop-blur-sm">Italian Classic</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-text-primary">Alfredo &amp; Arrabbiata Pasta</h3>
+                                <span class="font-syne font-bold text-primary text-base">₹290+</span>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">Penne pasta tossed in rich white garlic cream sauce or tangy tomato basil with garlic bread.</p>
+                        </div>
+                        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20order%20Pasta%20from%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#120A08] hover:bg-primary hover:text-black border border-zinc-700 text-text-primary font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <span>Order via WhatsApp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Menu Item 5: Thick Shakes & Mocktails -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-5 sm:p-6 flex flex-col justify-between group hover:border-primary/50 transition-all">
+                        <div>
+                            <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5">
+                                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Thick Shakes and Mocktails" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                                <span class="absolute top-3 right-3 bg-black/80 text-primary font-bold text-xs px-3 py-1 rounded-full border border-zinc-700 backdrop-blur-sm">Refreshing</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-text-primary">Thick Shakes &amp; Mojitos</h3>
+                                <span class="font-syne font-bold text-primary text-base">₹200+</span>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">Oreo milkshakes, KitKat frappes, and fizzy mint mojitos to beat the Patna heat in style.</p>
+                        </div>
+                        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20order%20Shakes%20from%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#120A08] hover:bg-primary hover:text-black border border-zinc-700 text-text-primary font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <span>Order via WhatsApp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Menu Item 6: Sizzlers & Tandoori -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-5 sm:p-6 flex flex-col justify-between group hover:border-primary/50 transition-all">
+                        <div>
+                            <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5">
+                                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Tandoori Starters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                                <span class="absolute top-3 right-3 bg-black/80 text-primary font-bold text-xs px-3 py-1 rounded-full border border-zinc-700 backdrop-blur-sm">Smoky &amp; Spicy</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="break-words font-syne font-bold text-lg text-text-primary">Tandoori Starters &amp; Snacks</h3>
+                                <span class="font-syne font-bold text-primary text-base">₹250+</span>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">Paneer tikka, chicken kebabs, and crispy corn salt &amp; pepper made with authentic Indian spices.</p>
+                        </div>
+                        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20order%20Starters%20from%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-[#120A08] hover:bg-primary hover:text-black border border-zinc-700 text-text-primary font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all">
+                            <span>Order via WhatsApp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-16 lg:py-24 bg-surface border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">The Boring Experience</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-text-primary mt-4 mb-4">Why Patna Loves Hanging Out Here</h2>
+                    <p class="text-text-muted text-sm sm:text-base">We aren't just about coffee; we curate memorable evenings, cozy romantic dates, and vibrant birthday celebrations.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-[#120A08] border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" aria-hidden="true" class="lucide lucide-sun w-7 h-7"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                        </div>
+                        <h3 class="break-words font-syne font-bold text-xl text-text-primary mb-3">Stunning Rooftop Views</h3>
+                        <p class="text-text-muted text-sm leading-relaxed">Spread across the 3rd and 4th floors of Nath Tower, enjoy open-air seating with cool evening breezes and city lights.</p>
+                    </div>
+
+                    <div class="bg-[#120A08] border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="coffee" aria-hidden="true" class="lucide lucide-coffee w-7 h-7"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
+                        </div>
+                        <h3 class="break-words font-syne font-bold text-xl text-text-primary mb-3">Premium Coffee &amp; Brews</h3>
+                        <p class="text-text-muted text-sm leading-relaxed">Master baristas craft every cup to perfection using hand-selected, ethically sourced coffee beans.</p>
+                    </div>
+
+                    <div class="bg-[#120A08] border border-zinc-800 rounded-3xl p-5 sm:p-8 flex flex-col items-start">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart w-7 h-7"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                        </div>
+                        <h3 class="break-words font-syne font-bold text-xl text-text-primary mb-3">Cozy Vibe &amp; Music</h3>
+                        <p class="text-text-muted text-sm leading-relaxed">Acoustic tunes, aesthetic Instagram-worthy corners, and warm lighting make it Patna's favorite hangout spot.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About / Story Section -->
+        <section id="about" class="py-16 lg:py-24 bg-[#120A08]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="col-span-1 lg:col-span-6">
+                        <div class="relative rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="The Boring Cafe Interior" class="w-full h-80 sm:h-[450px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;q=80&amp;w=800'">
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 lg:col-span-6 flex flex-col items-start">
+                        <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full mb-4">Our Story</span>
+                        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-text-primary mb-6">
+                            Redefining Patna’s Cafe Culture from Boring Road
+                        </h2>
+                        <p class="text-text-muted text-sm sm:text-base leading-relaxed mb-6">
+                            Founded with a passion for great food and relaxed conversations, <strong class="text-text-primary">The Boring Café</strong> has rapidly become the crown jewel of Boring Road. Occupying both the 3rd and 4th floors of Nath Tower, our multi-level layout lets you choose between cozy indoor booths and breezy rooftop seating under the Patna sky.
+                        </p>
+                        <p class="text-text-muted text-sm sm:text-base leading-relaxed mb-8">
+                            Whether you are dropping by for a quick meeting over espresso, celebrating a birthday with friends, or enjoying a romantic candlelight dinner, our hospitable staff ensures every moment is special.
+                        </p>
+                        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20hosting%20an%20event%20at%20The%20Boring%20Café." target="_blank" rel="noopener noreferrer" class="h-12 px-5 sm:px-8 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center gap-3 shadow-lg transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Plan Private Event</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Showcase / Gallery -->
+        <section id="gallery" class="py-16 lg:py-24 bg-surface border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Photo Gallery</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-text-primary mt-4 mb-4">Glimpse Inside The Boring Café</h2>
+                    <p class="text-text-muted text-sm sm:text-base">Take a visual tour of our vibrant rooftop, mouth-watering dishes, and cozy aesthetic corners.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                    
+                    <div class="relative h-48 sm:h-64 rounded-2xl overflow-hidden border border-zinc-800 group">
+                        <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Cafe Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white text-xs font-bold font-syne">Cozy Indoor Seating</p>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 sm:h-64 rounded-2xl overflow-hidden border border-zinc-800 group">
+                        <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Wood fired pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white text-xs font-bold font-syne">Fresh Pizza</p>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 sm:h-64 rounded-2xl overflow-hidden border border-zinc-800 group">
+                        <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Coffee preparation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white text-xs font-bold font-syne">Artisan Coffee</p>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 sm:h-64 rounded-2xl overflow-hidden border border-zinc-800 group">
+                        <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Starters" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white text-xs font-bold font-syne">Sizzling Starters</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="py-16 lg:py-24 bg-[#120A08]">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Customer Love</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-text-primary mt-4 mb-4">What Patnaites Say About Us</h2>
+                    <p class="text-text-muted text-sm sm:text-base">Rated 4.1 ★ across 1,500+ genuine Google reviews from food lovers and coffee enthusiasts.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    
+                    <!-- Review 1 -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">
+                                "The rooftop ambiance on the 4th floor is unmatched in Boring Road! Great coffee, delicious wood-fired pizzas, and very polite staff. Perfect for evening dates."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold font-syne flex items-center justify-center">AR</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-text-primary">Abhishek Ranjan</h4>
+                                <p class="text-xs text-text-muted">Local Google Guide</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">
+                                "Celebrated my best friend's birthday here on the 3rd floor. The music, lighting, and burgers were top-notch. Highly recommend their white sauce pasta and shakes!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold font-syne flex items-center justify-center">PS</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-text-primary">Priya Singh</h4>
+                                <p class="text-xs text-text-muted">Patna Resident</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-surface border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            </div>
+                            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-6">
+                                "Easily one of the best cafes in Patna. Located right in Nath Tower on Boring Road with easy access and elevators. The iced latte is a must-try!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold font-syne flex items-center justify-center">MK</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-text-primary">Manish Kumar</h4>
+                                <p class="text-xs text-text-muted">Google Reviewer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Location & Contact Section -->
+        <section id="contact" class="py-16 lg:py-24 bg-surface border-y border-zinc-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <span class="text-primary font-semibold text-xs uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Find Us</span>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne text-text-primary mt-4 mb-4">Visit The Boring Café Today</h2>
+                    <p class="text-text-muted text-sm sm:text-base">Located at the heart of Boring Road, Patna. Drop by or drop us a message!</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    
+                    <!-- Left: Contact Details & Form -->
+                    <div class="col-span-1 lg:col-span-6 bg-[#120A08] border border-zinc-800 rounded-3xl p-6 sm:p-8">
+                        <h3 class="break-words font-syne font-bold text-xl text-text-primary mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-text-primary">Address</h4>
+                                    <p class="text-xs sm:text-sm text-text-muted">3rd and 4th Floor, Nath Tower, Boring Rd, Nageshwar Colony, Kidwaipuri, Patna, Bihar 800001</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-text-primary">Phone / WhatsApp</h4>
+                                    <a href="tel:+919090514544" class="text-xs sm:text-sm text-primary hover:underline">+91 90905 14544</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-text-primary">Operating Hours</h4>
+                                    <p class="text-xs sm:text-sm text-text-muted">Monday – Sunday: 11:00 AM – 11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Inquiry Form -->
+                        <form id="inquiry-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label class="block text-xs font-semibold text-text-muted mb-1">Your Name</label>
+                                <input type="text" id="visitor-name" required="" placeholder="Enter your name" class="w-full h-11 px-4 rounded-xl bg-surface border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-text-muted mb-1">Phone Number</label>
+                                <input type="tel" id="visitor-phone" required="" placeholder="Enter 10-digit mobile number" class="w-full h-11 px-4 rounded-xl bg-surface border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary">
+                            </div>
+                            <div class="min-w-0 max-w-full">
+                                <label class="block text-xs font-semibold text-text-muted mb-1">Reservation / Inquiry</label>
+                                <select id="visitor-service" class="w-full max-w-full appearance-none bg-no-repeat bg-[right_1rem_center] pr-10 h-11 px-4 rounded-xl bg-surface border border-zinc-700 text-text-primary text-sm focus:outline-none focus:border-primary truncate text-ellipsis" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%239ca3af\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem;">
+                                    <option value="Table Reservation">Table Reservation</option>
+                                    <option value="Birthday Party">Birthday Party</option>
+                                    <option value="Private Event">Private Event</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full h-12 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" aria-hidden="true" class="lucide lucide-send w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                                <span>Send Inquiry on WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Google Maps Embed -->
+                    <div class="col-span-1 lg:col-span-6 rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl relative w-full aspect-[4/3] sm:aspect-[16/9] rounded-2xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778846153676!2d85.1276!3d25.6092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58cef0000001%3A0x0!2zVGhlIEJvcmluZyBDYWbDqSBQYXRuYQ!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border: 0px; width: 100%; height: 100%; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="The Boring Café Google Map Location" class="w-full h-full block border-0"></iframe>
+                        <div class="absolute bottom-6 left-6 right-6 bg-black/90 backdrop-blur-md p-4 rounded-2xl border border-zinc-800 flex justify-between flex-col sm:flex-row items-start sm:items-center gap-3">
+                            <div>
+                                <h4 class="font-bold text-sm text-text-primary">Nath Tower, Boring Road</h4>
+                                <p class="text-xs text-text-muted">Patna, Bihar 800001</p>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Boring+Caf%C3%A9+Patna" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-primary text-black font-bold text-xs flex items-center gap-1.5 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation w-3.5 h-3.5"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0504] border-t border-zinc-800 pt-10 sm:pt-12 pb-6 md:pb-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary text-black font-outfit font-black text-base flex items-center justify-center">BC</div>
+                        <span class="font-extrabold text-lg font-syne text-text-primary">The Boring Café</span>
+                    </div>
+                    <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-4">
+                        Patna’s premier rooftop cafe and restaurant offering artisan coffee, wood-fired pizzas, and cozy ambiance on Boring Road.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wa.me/919090514544" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-surface border border-zinc-700 flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                        </a>
+                        <a href="tel:+919090514544" aria-label="Phone" class="w-9 h-9 rounded-xl bg-surface border border-zinc-700 flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Boring+Caf%C3%A9+Patna" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-9 h-9 rounded-xl bg-surface border border-zinc-700 flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-text-primary uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><a href="#menu" class="text-text-muted hover:text-primary transition-colors">Signature Menu</a></li>
+                        <li><a href="#about" class="text-text-muted hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#gallery" class="text-text-muted hover:text-primary transition-colors">Rooftop Gallery</a></li>
+                        <li><a href="#reviews" class="text-text-muted hover:text-primary transition-colors">Google Reviews</a></li>
+                        <li><a href="#contact" class="text-text-muted hover:text-primary transition-colors">Location &amp; Map</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-text-primary uppercase tracking-wider mb-4">Menu Categories</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm">
+                        <li><span class="text-text-muted">Artisan Coffee &amp; Lattes</span></li>
+                        <li><span class="text-text-muted">Wood-Fired Pizzas</span></li>
+                        <li><span class="text-text-muted">Gourmet Burgers &amp; Fries</span></li>
+                        <li><span class="text-text-muted">Alfredo &amp; Arrabbiata Pasta</span></li>
+                        <li><span class="text-text-muted">Thick Shakes &amp; Mojitos</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-syne font-bold text-sm text-text-primary uppercase tracking-wider mb-4">Opening Hours</h4>
+                    <p class="text-xs sm:text-sm text-text-muted mb-2">Monday to Sunday:</p>
+                    <p class="text-sm font-bold text-text-primary mb-4">11:00 AM – 11:00 PM</p>
+                    <p class="text-xs text-text-muted">3rd &amp; 4th Floor, Nath Tower, Boring Road, Patna, Bihar 800001</p>
+                </div>
+
+            </div>
+
+            
+            <!-- Unified ArcLane Verified Footer Signature -->
+            <div class="pt-6 mt-6 sm:mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-3">
+                <p>© <span id="current-year">2026</span> The Boring Café. All rights reserved.</p>
+                <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
+                    <span>Concept &amp; Digital Architecture by</span>
+                    <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-zinc-500 group-hover:text-amber-400 transition-colors"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <div class="flex items-center gap-4 text-zinc-500">
+                    <span class="hover:text-zinc-400 cursor-pointer">Privacy Policy</span>
+                    <span>•</span>
+                    <span class="hover:text-zinc-400 cursor-pointer">Terms of Service</span>
+                </div>
+            </div>
+            <!-- End ArcLane Signature -->
+        </div>
+    </footer>
+
+    <!-- Clean 2-Button Sticky Mobile Bottom Bar (Strictly 2 buttons) -->
+    <div class="md:hidden fixed inset-x-0 bottom-0 z-40 bg-[#09090b] border-t border-zinc-800 p-3 flex gap-3">
+        <a href="tel:+919090514544" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-zinc-800 hover:bg-zinc-700 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919090514544?text=Hi,%20I%20would%20like%20to%20reserve%20a%20table%20at%20The%20Boring%20Café!" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Initialize Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawer = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileDrawer.classList.remove('translate-x-full');
+            menuBackdrop.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.add('translate-x-full');
+            menuBackdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        closeDrawer.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('visitor-name').value.trim();
+            const phone = document.getElementById('visitor-phone').value.trim();
+            const service = document.getElementById('visitor-service').value;
+
+            if (!name || !phone) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            const whatsappMessage = encodeURIComponent(`Hi, my name is ${name} (Phone: ${phone}). I would like to inquire about: ${service}. Please assist!`);
+            const whatsappUrl = `https://wa.me/919090514544?text=${whatsappMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+</body></html>
