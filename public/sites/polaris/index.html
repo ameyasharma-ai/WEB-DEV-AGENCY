@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth"><head>
+    <base href="/sites/polaris/">
+    
+    <!-- ArcLane Responsive Typography & Distortion Prevention Guard -->
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+      img, svg, video, canvas, audio, iframe, embed, object {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/&gt;&lt;text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22&gt;✂️&lt;/text&gt;&lt;/svg&gt;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Polaris Hair Studio by Sumeet &amp; Sujeet - Luxury Hair Salon &amp; Styling Studio on Boring Road, Patna. Expert haircuts, coloring, treatments &amp; grooming. Book via WhatsApp.">
+  <meta name="theme-color" content="#0D0D0D">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; connect-src 'self' https:; frame-src https://www.google.com;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Polaris Hair Studio by Sumeet &amp; Sujeet | Luxury Hair Salon, Boring Road Patna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#0D0D0D',
+            surface: '#1A1A1A',
+            primary: '#D4AF37',
+            'primary-hover': '#E6C557',
+            secondary: '#B38B6D',
+            'text-primary': '#F9F9F9',
+            'text-muted': '#A1A1A1',
+            border: '#2A2A2A',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 40px -10px rgba(212, 175, 55, 0.3)',
+            'gold-glow-sm': '0 0 20px -5px rgba(212, 175, 55, 0.2)',
+            'inner-glow': 'inset 0 1px 0 rgba(212, 175, 55, 0.1)',
+          },
+          backgroundImage: {
+            'radial-gold': 'radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%)',
+            'radial-gold-top': 'radial-gradient(ellipse at top, rgba(212, 175, 55, 0.06) 0%, transparent 60%)',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html, body { overflow-x: hidden; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0D0D0D; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+    .text-balance { text-wrap: balance; }
+    .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-heading { font-family: 'Playfair Display', serif; }
+    .gold-gradient-text { background: linear-gradient(135deg, #D4AF37 0%, #E6C557 50%, #D4AF37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-hover { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.2); }
+    .btn-primary { background: linear-gradient(135deg, #D4AF37 0%, #B38B6D 100%); transition: all 0.3s ease; }
+    .btn-primary:hover { background: linear-gradient(135deg, #E6C557 0%, #D4AF37 100%); transform: translateY(-2px); box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.4); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-secondary { background: transparent; border: 1px solid rgba(212, 175, 55, 0.5); transition: all 0.3s ease; }
+    .btn-secondary:hover { background: rgba(212, 175, 55, 0.1); border-color: #D4AF37; }
+    .input-field { background: #141414; border: 1px solid #2A2A2A; transition: all 0.3s ease; }
+    .input-field:focus { border-color: #D4AF37; box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); outline: none; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.3s ease; opacity: 0; padding-top: 0; padding-bottom: 0; }
+    .faq-answer.open { max-height: 500px; opacity: 1; padding-top: 1rem; padding-bottom: 0.5rem; }
+    .faq-chevron { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .faq-chevron.open { transform: rotate(180deg); }
+    .filter-btn { transition: all 0.25s ease; }
+    .filter-btn.active { background: linear-gradient(135deg, #D4AF37 0%, #B38B6D 100%); color: #0D0D0D; box-shadow: 0 4px 20px -4px rgba(212, 175, 55, 0.5); }
+    .filter-btn:not(.active):hover { background: rgba(212, 175, 55, 0.1); border-color: #D4AF37; color: #D4AF37; }
+    .gallery-item { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .gallery-item.visible { opacity: 1; transform: translateY(0); }
+    .gallery-item.hidden { display: none; }
+    .mobile-drawer { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .mobile-drawer.open { transform: translateX(0); }
+    .menu-backdrop { opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+    .menu-backdrop.open { opacity: 1; visibility: visible; }
+    .modal-overlay { opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+    .modal-overlay.open { opacity: 1; visibility: visible; }
+    .modal-content { transform: scale(0.95) translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .modal-overlay.open .modal-content { transform: scale(1) translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .hero-gradient { background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%), #0D0D0D; }
+    .spotlight { background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.06) 0%, transparent 70%); }
+  </style>
+</head>
+<body class="pb-20 md:pb-0 overflow-x-hidden font-body text-text-primary bg-background antialiased">
+  <!-- Announcement Bar -->
+  <div class="bg-secondary/10 border-b border-secondary/20 px-4 py-2.5" role="status" aria-live="polite">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-4 sm:justify-between text-xs sm:text-sm font-medium text-secondary">
+      <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-3.5 h-3.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> Mon–Sat: 10:00 AM – 8:30 PM | Sun: 11:00 AM – 7:00 PM</span>
+      <span class="hidden sm:inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-3.5 h-3.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Mirambika Apt, Boring Rd, Opp. Alankar Palace, Patna 800001</span>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 bg-background border-b border-zinc-800" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-18 shrink-0 flex-nowrap gap-2 sm:gap-3">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-2.5 sm:gap-3 group min-w-0 mr-3 lg:mr-8 flex-1 sm:flex-initial focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg shrink-0" aria-label="Polaris Hair Studio - Home">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-primary text-black font-heading font-black text-base sm:text-lg tracking-tight shrink-0 flex items-center justify-center shadow-md group-hover:shadow-gold-glow-sm transition-shadow duration-300 font-syne text-lg" aria-hidden="true">PH</div>
+          <div class="min-w-0 flex flex-col justify-center">
+            <span class="block font-extrabold text-base sm:text-lg lg:text-xl leading-tight text-text-primary max-w-[160px] xs:max-w-[200px] sm:max-w-none break-words leading-normal">Polaris Hair Studio</span>
+            <span class="block text-[10px] sm:text-xs text-text-muted font-medium tracking-wide max-w-[160px] xs:max-w-[200px] sm:max-w-none break-words leading-normal">by Sumeet &amp; Sujeet</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center justify-center mx-auto -0 shrink-0 gap-3 lg:gap-4 xl:gap-6 2xl:gap-6 px-2 lg:px-4" aria-label="Main navigation">
+          <a href="#services" class="text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-primary after:scale-x-0 after:origin-center hover:after:scale-x-100 transition-transform duration-300 whitespace-nowrap shrink-0">Services</a>
+          <a href="#about" class="text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-primary after:scale-x-0 after:origin-center hover:after:scale-x-100 transition-transform duration-300 whitespace-nowrap shrink-0">About</a>
+          <a href="#gallery" class="text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-primary after:scale-x-0 after:origin-center hover:after:scale-x-100 transition-transform duration-300 whitespace-nowrap shrink-0">Gallery</a>
+          <a href="#reviews" class="hidden 2xl:inline-block text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-primary after:scale-x-0 after:origin-center hover:after:scale-x-100 transition-transform duration-300 whitespace-nowrap shrink-0">Reviews</a>
+          <a href="#contact" class="text-sm font-medium text-text-muted hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-primary after:scale-x-0 after:origin-center hover:after:scale-x-100 transition-transform duration-300 whitespace-nowrap shrink-0">Contact</a>
+        </nav>
+
+        <!-- Desktop CTAs -->
+        <div class="hidden sm:flex items-center gap-2 sm:gap-3 shrink-0 flex-nowrap">
+          <a href="tel:+917254968468" class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary bg-surface border border-border hover:border-primary/50 hover:bg-surface/80 transition-all duration-200 flex items-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background min-w-0 flex-1 sm:flex-initial mr-3 lg:mr-8 shrink-0" aria-label="Call us: +91 72549 68468">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+            <span class="hidden sm:inline whitespace-nowrap">Call</span>
+          </a>
+          <a href="https://wa.me/917254968468?text=Hello%20Polaris%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn-primary px-5 py-2.5 rounded-xl text-sm font-semibold text-black whitespace-nowrap flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background min-w-0 flex-1 sm:flex-initial mr-3 lg:mr-8 shrink-0" aria-label="Book via WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+            <span class="whitespace-nowrap">WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="lg:hidden p-2 rounded-xl text-text-primary hover:bg-surface transition-colors shrink-0 whitespace-nowrap" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop -->
+  <div id="menu-backdrop" class="menu-backdrop fixed inset-0 bg-black/80 backdrop-blur-sm z-[90]" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer -->
+  <aside id="mobile-menu" class="mobile-drawer fixed top-16 bottom-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm rounded-tl-3xl p-6 pt-8 bg-background border-l border-zinc-800 shadow-2xl flex flex-col justify-between overflow-y-auto lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+      <a href="#services" class="px-4 py-3.5 rounded-xl text-lg font-medium text-text-primary hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-menu-link="">Services</a>
+      <a href="#about" class="px-4 py-3.5 rounded-xl text-lg font-medium text-text-primary hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-menu-link="">About Us</a>
+      <a href="#gallery" class="px-4 py-3.5 rounded-xl text-lg font-medium text-text-primary hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-menu-link="">Gallery</a>
+      <a href="#reviews" class="px-4 py-3.5 rounded-xl text-lg font-medium text-text-primary hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-menu-link="">Reviews</a>
+      <a href="#faq" class="px-4 py-3.5 rounded-xl text-lg font-medium text-text-primary hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-menu-link="">FAQ</a>
+      <a href="#contact" class="px-4 py-3.5 rounded-xl text-lg font-medium text-text-primary hover:bg-surface transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-menu-link="">Contact</a>
+    </nav>
+    <div class="pt-6 border-t border-zinc-800 space-y-3">
+      <a href="tel:+917254968468" class="flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl text-lg font-semibold text-text-primary bg-surface border border-border hover:border-primary/50 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary shrink-0 min-w-0 gap-2.5 sm:gap-3" data-menu-link="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5 text-primary min-w-0 flex flex-col justify-center"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+        Call Now
+      </a>
+      <a href="https://wa.me/917254968468?text=Hello%20Polaris%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn-primary flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl text-lg font-semibold text-black w-full" data-menu-link="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+        Book via WhatsApp
+      </a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="relative hero-gradient min-h-[85vh] sm:min-h-[90vh] flex items-center pt-16 lg:pt-0" aria-labelledby="hero-title">
+      <div class="absolute inset-0 spotlight pointer-events-none" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Left Column - Content -->
+          <div class="col-span-1 lg:col-span-7 space-y-6 sm:space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold">
+              <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span>
+              <span>Now Open on Boring Road, Patna</span>
+            </div>
+            <h1 id="hero-title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight break-words font-heading leading-[1.15] text-balance">
+              Luxury Hair Artistry,<br class="hidden sm:block"> Redefined.
+            </h1>
+            <p class="text-lg sm:text-xl text-text-muted leading-relaxed max-w-xl">
+              Experience bespoke haircuts, world-class color, and restorative treatments by Master Stylists Sumeet &amp; Sujeet. Where precision meets passion in the heart of Patna.
+            </p>
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
+              <a href="https://wa.me/917254968468?text=Hello%20Polaris%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn-primary px-7 py-4 rounded-xl text-base font-semibold text-black flex items-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                Book via WhatsApp
+              </a>
+              <a href="#services" class="btn-secondary px-7 py-4 rounded-xl text-base font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-5 h-5"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                Explore Services
+              </a>
+            </div>
+            <!-- Trust Badge -->
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-4 border-t border-zinc-800">
+              <div class="flex items-center gap-2">
+                <div class="flex -space-x-1" aria-label="4.6 out of 5 stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="font-heading text-xl font-bold text-text-primary">4.6</span>
+              </div>
+              <span class="text-text-muted text-sm sm:text-base">766+ Google Reviews</span>
+              <span class="w-px h-6 bg-zinc-800"></span>
+              <span class="text-text-muted text-sm sm:text-base flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4 text-secondary"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Boring Road, Patna</span>
+            </div>
+          </div>
+
+          <!-- Right Column - Showcase Card -->
+          <div class="col-span-1 lg:col-span-5 relative">
+            <div class="relative bg-surface border border-border rounded-3xl p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden card-hover" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <!-- Signature Badge -->
+              <span class="absolute top-4 left-4 z-10 bg-primary/95 text-black font-black text-[10px] sm:text-xs px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm shadow-lg">⭐ House Signature</span>
+              <!-- Status Chip -->
+              <span class="absolute bottom-4 right-4 z-10 bg-black/80 text-white font-medium text-[10px] sm:text-xs px-3 py-1.5 rounded-full border border-zinc-700 backdrop-blur-sm flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Open Now
+              </span>
+              <!-- Image -->
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Polaris Hair Studio - Luxury salon interior with modern styling stations" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="eager" onerror="this.src='https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&amp;fit=crop&amp;q=80&amp;w=800'">
+              </div>
+            </div>
+            <!-- Floating Accent Decor -->
+            <div class="absolute -top-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute bottom-8 left-8 w-24 h-24 bg-secondary/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="py-12 sm:py-16 bg-surface/50 border-y border-zinc-800" aria-label="Key statistics">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <dl class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div class="text-center lg:first:border-0 border-r border-zinc-800 lg:border-r-0 py-4 lg:py-0">
+            <dt class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight">4.6★</dt>
+            <dd class="text-text-muted text-sm sm:text-base mt-1 font-medium">Google Rating</dd>
+          </div>
+          <div class="text-center border-r border-zinc-800 lg:border-r-0 py-4 lg:py-0">
+            <dt class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight">766+</dt>
+            <dd class="text-text-muted text-sm sm:text-base mt-1 font-medium">Happy Clients</dd>
+          </div>
+          <div class="text-center border-r border-zinc-800 lg:border-r-0 py-4 lg:py-0">
+            <dt class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight">2</dt>
+            <dd class="text-text-muted text-sm sm:text-base mt-1 font-medium">Master Stylists</dd>
+          </div>
+          <div class="text-center py-4 lg:py-0">
+            <dt class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-tight">#1</dt>
+            <dd class="text-text-muted text-sm sm:text-base mt-1 font-medium">Boring Road Salon</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 sm:py-24 lg:py-32" aria-labelledby="services-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="z-40 sticky top-0 text-center max-w-3xl mx-auto mb-12 sm:mb-16" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Our Offerings</span>
+          <h2 id="services-title" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-heading text-balance">
+            Crafted for <span class="gold-gradient-text">Excellence</span>
+          </h2>
+          <p class="text-text-muted text-base sm:text-lg mt-4 leading-relaxed">
+            Every service is a signature experience — using premium international products (L'Oréal Professionnel, Wella, Olaplex, Kerastase) in a hygienic, luxury ambiance.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <!-- Service 1: Precision Haircuts -->
+          <article class="group card-hover bg-surface border border-border rounded-2xl overflow-hidden flex flex-col" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative aspect-square overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Precision haircut in progress at Polaris Hair Studio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+              <span class="absolute top-3 right-3 bg-primary/95 text-black text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Signature</span>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="scissors" aria-hidden="true" class="lucide lucide-scissors w-5 h-5 text-primary"><circle cx="6" cy="6" r="3"></circle><path d="M8.12 8.12 12 12"></path><path d="M20 4 8.12 15.88"></path><circle cx="6" cy="18" r="3"></circle><path d="M14.8 14.8 20 20"></path></svg></div>
+                <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words">Precision Haircuts</h3>
+              </div>
+              <p class="text-text-muted text-sm sm:text-base leading-relaxed flex-1">Bespoke cuts tailored to your face shape, hair texture &amp; lifestyle. Includes consultation, wash, precision cut &amp; finish.</p>
+              <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-800">
+                <span class="font-heading text-lg font-bold text-primary">From ₹899</span>
+                <button class="whatsap-btn btn-primary px-4 py-2 rounded-xl text-sm font-semibold text-black whitespace-nowrap flex items-center gap-1.5" data-service="Precision Haircut">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                  Book
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Premium Coloring -->
+          <article class="group card-hover bg-surface border border-border rounded-2xl overflow-hidden flex flex-col" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative aspect-square overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1605497788044-5c52e9f6c1e1?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Premium hair coloring with balayage technique" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+              <span class="absolute top-3 right-3 bg-secondary/95 text-black text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Popular</span>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="palette" aria-hidden="true" class="lucide lucide-palette w-5 h-5 text-primary"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"></path><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle></svg></div>
+                <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words">Premium Coloring</h3>
+              </div>
+              <p class="text-text-muted text-sm sm:text-base leading-relaxed flex-1">Global color, balayage, ombré, highlights &amp; color correction using Wella &amp; L'Oréal Professionnel. Includes Olaplex bond protection.</p>
+              <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-800">
+                <span class="font-heading text-lg font-bold text-primary">From ₹3,499</span>
+                <button class="whatsap-btn btn-primary px-4 py-2 rounded-xl text-sm font-semibold text-black whitespace-nowrap flex items-center gap-1.5" data-service="Premium Coloring">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                  Book
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Hair Treatments -->
+          <article class="group card-hover bg-surface border border-border rounded-2xl overflow-hidden flex flex-col" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative aspect-square overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Luxury hair spa treatment at Polaris Hair Studio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+              <span class="absolute top-3 right-3 bg-green-500/90 text-black text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Restorative</span>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-5 h-5 text-primary"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></div>
+                <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words">Hair Treatments</h3>
+              </div>
+              <p class="text-text-muted text-sm sm:text-base leading-relaxed flex-1">Kerastase rituals, Olaplex repair, keratin smoothing, scalp detox &amp; deep conditioning. Restore health, shine &amp; manageability.</p>
+              <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-800">
+                <span class="font-heading text-lg font-bold text-primary">From ₹1,799</span>
+                <button class="whatsap-btn btn-primary px-4 py-2 rounded-xl text-sm font-semibold text-black whitespace-nowrap flex items-center gap-1.5" data-service="Hair Treatment">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                  Book
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Men's Grooming -->
+          <article class="group card-hover bg-surface border border-border rounded-2xl overflow-hidden flex flex-col" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative aspect-square overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Men's grooming and beard styling at Polaris Hair Studio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+              <span class="absolute top-3 right-3 bg-amber-500/90 text-black text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">Grooming</span>
+            </div>
+            <div class="p-5 sm:p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user" aria-hidden="true" class="lucide lucide-user w-5 h-5 text-primary"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words">Men's Grooming</h3>
+              </div>
+              <p class="text-text-muted text-sm sm:text-base leading-relaxed flex-1">Executive haircuts, beard sculpting, hot towel shaves, gray blending &amp; scalp therapy. Sharp, refined, effortless.</p>
+              <div class="flex items-center justify-between mt-4 pt-4 border-t border-zinc-800">
+                <span class="font-heading text-lg font-bold text-primary">From ₹699</span>
+                <button class="whatsap-btn btn-primary px-4 py-2 rounded-xl text-sm font-semibold text-black whitespace-nowrap flex items-center gap-1.5" data-service="Men's Grooming">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                  Book
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- View All Services CTA -->
+        <div class="text-center mt-10 sm:mt-12">
+          <a href="https://wa.me/917254968468?text=Hello%20Polaris%20Hair%20Studio%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn-secondary inline-flex items-center gap-2 px-5 sm:px-8 py-3.5 rounded-xl text-base font-semibold text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+            View All Services
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 sm:py-24 lg:py-32 bg-surface/30" aria-labelledby="why-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="z-40 sticky top-0 text-center max-w-3xl mx-auto mb-12 sm:mb-16" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">The Polaris Difference</span>
+          <h2 id="why-title" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-heading text-balance">
+            Why Patna Chooses <span class="gold-gradient-text">Us</span>
+          </h2>
+          <p class="text-text-muted text-base sm:text-lg mt-4 leading-relaxed">
+            Not just a salon — a destination for hair artistry backed by expertise, premium products, and uncompromising hygiene.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <!-- Feature 1: Master Stylists -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative overflow-hidden" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+            <div class="relative flex flex-col h-full">
+              <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-7 h-7 text-primary"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg></div>
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words mb-3">Master Stylists Sumeet &amp; Sujeet</h3>
+              <p class="text-text-muted leading-relaxed flex-1">15+ years combined expertise. Trained at Toni &amp; Guy, Vidal Sassoon &amp; L'Oréal Academies. Specialists in precision cutting, advanced color architecture &amp; restorative trichology.</p>
+            </div>
+          </article>
+
+          <!-- Feature 2: Premium Products -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative overflow-hidden" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-secondary/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+            <div class="relative flex flex-col h-full">
+              <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gem" aria-hidden="true" class="lucide lucide-gem w-7 h-7 text-primary"><path d="M10.5 3 8 9l4 13 4-13-2.5-6"></path><path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z"></path><path d="M2 9h20"></path></svg></div>
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words mb-3">International Product Partners</h3>
+              <p class="text-text-muted leading-relaxed flex-1">Exclusive use of L'Oréal Professionnel, Wella Professionals, Olaplex, Kerastase &amp; Moroccanoil. Zero ammonia options, vegan formulations &amp; bond-building technology in every service.</p>
+            </div>
+          </article>
+
+          <!-- Feature 3: Luxury Ambience -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative overflow-hidden" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+            <div class="relative flex flex-col h-full">
+              <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" aria-hidden="true" class="lucide lucide-home w-7 h-7 text-primary"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words mb-3">Hygienic Luxury Ambience</h3>
+              <p class="text-text-muted leading-relaxed flex-1">Climate-controlled studio, UV-sterilized tools, disposable capes/towels, HEPA-filtered air &amp; contactless payments. A sanctuary where safety meets sophistication.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section id="about" class="py-16 sm:py-24 lg:py-32" aria-labelledby="about-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Image Column -->
+          <div class="col-span-1 lg:col-span-5 relative">
+            <div class="relative aspect-[4/5] rounded-3xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Sumeet and Sujeet - Master Stylists at Polaris Hair Studio" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=80&amp;w=800'">
+            </div>
+            <!-- Floating Stats -->
+            <div class="absolute -bottom-6 -left-6 lg:-bottom-8 lg:-left-8 bg-surface border border-border rounded-2xl p-5 sm:p-6 shadow-2xl">
+              <div class="flex items-baseline gap-1">
+                <span class="font-heading text-3xl sm:text-4xl font-extrabold gold-gradient-text">15+</span>
+                <span class="text-text-muted text-sm">Years Experience</span>
+              </div>
+              <p class="text-text-muted text-sm mt-1">Combined mastery of Sumeet &amp; Sujeet</p>
+            </div>
+            <div class="absolute -top-4 -right-4 lg:-top-6 lg:-right-6 bg-primary/10 rounded-2xl p-4 sm:p-5 shadow-xl">
+              <div class="flex items-baseline gap-1">
+                <span class="font-heading text-3xl sm:text-4xl font-extrabold text-primary">5000+</span>
+                <span class="text-text-muted text-sm">Transformations</span>
+              </div>
+              <p class="text-text-muted text-sm mt-1">Happy clients across Patna</p>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="col-span-1 lg:col-span-7 space-y-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold">Our Story</span>
+            <h2 id="about-title" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-heading text-balance">
+              Two Brothers, One Vision: <span class="gold-gradient-text">Hair Artistry</span> at Its Finest
+            </h2>
+            <div class="space-y-4 text-text-muted leading-relaxed">
+              <p>Founded by brothers <strong class="text-text-primary">Sumeet</strong> and <strong class="text-text-primary">Sujeet</strong>, Polaris Hair Studio was born from a shared obsession with the craft of hair. After honing their skills at world-renowned academies — Toni &amp; Guy London, Vidal Sassoon, and L'Oréal Professionnel — they returned to Patna with a mission: to bring global standards of precision, color science, and hair health to Boring Road.</p>
+              <p>Today, Polaris stands as Patna's most awarded luxury salon, where every appointment begins with a thorough consultation and ends with a transformation that feels unmistakably <em class="text-primary">you</em>.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-800">
+              <a href="https://wa.me/917254968468?text=Hello%20Sumeet%20and%20Sujeet%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3 rounded-xl text-sm font-semibold text-black flex items-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                Book Consultation
+              </a>
+              <a href="#gallery" class="btn-secondary px-6 py-3 rounded-xl text-sm font-semibold text-text-primary flex items-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" aria-hidden="true" class="lucide lucide-image w-4 h-4"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                View Our Work
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery / Showcase Section -->
+    <section id="gallery" class="py-16 sm:py-24 lg:py-32 bg-surface/30" aria-labelledby="gallery-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="z-40 sticky top-0 text-center max-w-3xl mx-auto mb-8 sm:mb-12" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Transformation Gallery</span>
+          <h2 id="gallery-title" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-heading text-balance">
+            Our Work <span class="gold-gradient-text">Speaks</span>
+          </h2>
+          <p class="text-text-muted text-base sm:text-lg mt-4 leading-relaxed">Real clients, real results. No filters, just craft.</p>
+        </header>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8" role="tablist" aria-label="Gallery categories">
+          <button class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-semibold text-text-primary bg-surface border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-filter="all" role="tab" aria-selected="true" aria-controls="gallery-panel">All</button>
+          <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-text-muted bg-surface border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-filter="haircuts" role="tab" aria-selected="false" aria-controls="gallery-panel">Haircuts</button>
+          <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-text-muted bg-surface border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-filter="color" role="tab" aria-selected="false" aria-controls="gallery-panel">Color</button>
+          <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-text-muted bg-surface border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-filter="treatments" role="tab" aria-selected="false" aria-controls="gallery-panel">Treatments</button>
+          <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold text-text-muted bg-surface border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" data-filter="grooming" role="tab" aria-selected="false" aria-controls="gallery-panel">Grooming</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="gallery-panel" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" role="tabpanel">
+          <!-- Gallery Item 1 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="haircuts" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Precision bob haircut transformation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Haircut</span>
+                <h4 class="font-heading text-lg font-bold">Precision Bob</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gallery Item 2 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="color" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1605497788044-5c52e9f6c1e1?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Balayage color transformation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Color</span>
+                <h4 class="font-heading text-lg font-bold">Caramel Balayage</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gallery Item 3 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="treatments" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Kerastase hair spa treatment result" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Treatment</span>
+                <h4 class="font-heading text-lg font-bold">Kerastase Ritual</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gallery Item 4 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="grooming" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Men's executive haircut and beard trim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Grooming</span>
+                <h4 class="font-heading text-lg font-bold">Executive Cut &amp; Beard</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gallery Item 5 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="haircuts" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Layered haircut with texture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Haircut</span>
+                <h4 class="font-heading text-lg font-bold">Textured Layers</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gallery Item 6 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="color" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Platinum blonde color correction" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1605497788044-5c52e9f6c1e1?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Color</span>
+                <h4 class="font-heading text-lg font-bold">Platinum Correction</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gallery Item 7 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="treatments" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Olaplex bond building treatment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Treatment</span>
+                <h4 class="font-heading text-lg font-bold">Olaplex Repair</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gallery Item 8 -->
+          <article class="gallery-item visible relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" data-category="grooming" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Classic taper fade with beard shaping" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div class="w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary/90 text-black text-xs font-black uppercase tracking-wider mb-2">Grooming</span>
+                <h4 class="font-heading text-lg font-bold">Taper Fade &amp; Shape</h4>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-16 sm:py-24 lg:py-32" aria-labelledby="reviews-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="z-40 sticky top-0 text-center max-w-3xl mx-auto mb-12 sm:mb-16" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Client Love</span>
+          <h2 id="reviews-title" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-heading text-balance">
+            <span class="gold-gradient-text">766+</span> Reasons to Trust Us
+          </h2>
+          <p class="text-text-muted text-base sm:text-lg mt-4 leading-relaxed">Authentic Google reviews from real clients who experienced the Polaris difference.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <!-- Review 1 -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+            <p class="text-text-primary leading-relaxed mb-6">"Absolutely blown away by the precision of my haircut. Sumeet took the time to understand my face shape and hair texture before even picking up scissors. The finish was salon-perfect and lasted weeks. Best haircut in Patna, hands down."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary">RK</div>
+              <div>
+                <p class="font-semibold text-text-primary">Rahul K.</p>
+                <p class="text-text-muted text-sm">Precision Haircut • 2 weeks ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+            <p class="text-text-primary leading-relaxed mb-6">"The balayage Sujeet did is the most natural, sun-kissed color I've ever had. He used Olaplex throughout so my hair feels healthier than before coloring. The studio vibe is luxurious but warm — you feel pampered, not processed."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary">PS</div>
+              <div>
+                <p class="font-semibold text-text-primary">Priya S.</p>
+                <p class="text-text-muted text-sm">Balayage Color • 1 month ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+            <p class="text-text-primary leading-relaxed mb-6">"Finally a place in Patna that gets men's grooming right. The hot towel shave was incredible, beard shape is sharp, and the scalp massage at the end? Chef's kiss. Sujeet knows his craft. Booking monthly now."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary">AM</div>
+              <div>
+                <p class="font-semibold text-text-primary">Amit M.</p>
+                <p class="text-text-muted text-sm">Men's Grooming • 3 weeks ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 4 -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+            <p class="text-text-primary leading-relaxed mb-6">"Kerastase Fusio-Dose ritual saved my damaged bleached hair. In one session, the elasticity and shine returned. Sumeet explained exactly what my hair needed and why. The products they use are genuinely top-tier, not just marketing."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary">NS</div>
+              <div>
+                <p class="font-semibold text-text-primary">Neha S.</p>
+                <p class="text-text-muted text-sm">Hair Treatment • 2 months ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 5 -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+            <p class="text-text-primary leading-relaxed mb-6">"Brought my mother for a color correction after a bad experience elsewhere. Sujeet fixed it beautifully — even tone, healthy ends, and she felt comfortable the entire time. The hygiene standards (disposable capes, sterilized tools) gave us total peace of mind."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary">AD</div>
+              <div>
+                <p class="font-semibold text-text-primary">Anjali D.</p>
+                <p class="text-text-muted text-sm">Color Correction • 1 month ago</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 6 -->
+          <article class="card-hover bg-surface border border-border rounded-2xl p-6 sm:p-8 relative" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="flex items-center gap-1 mb-4" aria-label="5 out of 5 stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+            <p class="text-text-primary leading-relaxed mb-6">"The consultation-first approach sets Polaris apart. No rush, no upsell — just honest advice. My keratin smoothing treatment has lasted 4 months with zero frizz. Worth every rupee. Thank you Sumeet &amp; Sujeet for raising the bar in Patna!"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary">VR</div>
+              <div>
+                <p class="font-semibold text-text-primary">Vikram R.</p>
+                <p class="text-text-muted text-sm">Keratin Treatment • 4 months ago</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Google Reviews Link -->
+        <div class="text-center mt-10 sm:mt-12">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Polaris+Hair+Studio+Boring+Road+Patna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-base font-semibold text-text-primary bg-surface border border-border hover:border-primary/50 hover:bg-surface/80 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-5 h-5 fill-primary text-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            View All 766+ Reviews on Google
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="external-link" aria-hidden="true" class="lucide lucide-external-link w-4 h-4"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-16 sm:py-24 lg:py-32 bg-surface/30" aria-labelledby="faq-title">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="z-40 sticky top-0 text-center mb-10 sm:mb-14" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Frequently Asked</span>
+          <h2 id="faq-title" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-heading text-balance">
+            Your Questions, <span class="gold-gradient-text">Answered</span>
+          </h2>
+        </header>
+
+        <div class="space-y-3" id="faq-accordion">
+          <!-- FAQ 1 -->
+          <details class="group bg-surface border border-border rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words pr-4">Do I need an appointment or are walk-ins welcome?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down faq-chevron w-5 h-5 text-text-muted shrink-0 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+            </summary>
+            <div class="faq-answer px-5 sm:px-6 pb-5 sm:pb-6 text-text-muted leading-relaxed">
+              <p>We strongly recommend booking ahead via WhatsApp to secure your preferred stylist and time slot. Walk-ins are accommodated based on availability, but wait times can be 30–60 minutes during peak hours (weekends &amp; evenings).</p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="group bg-surface border border-border rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words pr-4">Which color brands do you use? Are they ammonia-free?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down faq-chevron w-5 h-5 text-text-muted shrink-0 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+            </summary>
+            <div class="faq-answer px-5 sm:px-6 pb-5 sm:pb-6 text-text-muted leading-relaxed">
+              <p>We exclusively use Wella Professionals Koleston Perfect &amp; Illumina Color, and L'Oréal Professionnel Majirel &amp; Inoa (ammonia-free). Inoa delivers up to 100% gray coverage with zero ammonia odor and optimal scalp comfort. Olaplex bond protection is included in every color service at no extra charge.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="group bg-surface border border-border rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words pr-4">What is the price range for a keratin smoothing treatment?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down faq-chevron w-5 h-5 text-text-muted shrink-0 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+            </summary>
+            <div class="faq-answer px-5 sm:px-6 pb-5 sm:pb-6 text-text-muted leading-relaxed">
+              <p>Keratin smoothing starts at ₹4,999 for short hair, ₹6,499 for medium, and ₹7,999 for long/thick hair. Price includes formaldehyde-free keratin, Olaplex prep, sulfate-free aftercare shampoo &amp; mask (travel size), and a 2-week follow-up consultation. Results last 3–5 months with proper care.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="group bg-surface border border-border rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words pr-4">Do you offer bridal &amp; event packages?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down faq-chevron w-5 h-5 text-text-muted shrink-0 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+            </summary>
+            <div class="faq-answer px-5 sm:px-6 pb-5 sm:pb-6 text-text-muted leading-relaxed">
+              <p>Yes! Our Bridal Glow Package includes: trial session (hair + makeup), pre-wedding hair treatment, wedding day styling for bride &amp; up to 3 family members, and emergency touch-up kit. Custom packages available for engagement, reception &amp; festive events. Book 2–3 months in advance for best availability.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="group bg-surface border border-border rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words pr-4">What safety &amp; hygiene protocols do you follow?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down faq-chevron w-5 h-5 text-text-muted shrink-0 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+            </summary>
+            <div class="faq-answer px-5 sm:px-6 pb-5 sm:pb-6 text-text-muted leading-relaxed">
+              <p>Medical-grade UV sterilization for all tools, disposable capes/towels/gowns per client, HEPA-filtered air circulation, contactless payment &amp; digital forms, mandatory hand sanitization at entry, and stations sanitized between every appointment. Your safety is non-negotiable.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="group bg-surface border border-border rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer list-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+              <h3 class="font-heading text-lg sm:text-xl font-bold leading-snug break-words pr-4">Can I purchase the professional products you use?</h3>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down faq-chevron w-5 h-5 text-text-muted shrink-0 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+            </summary>
+            <div class="faq-answer px-5 sm:px-6 pb-5 sm:pb-6 text-text-muted leading-relaxed">
+              <p>Absolutely. We retail authentic Kerastase, Olaplex, Moroccanoil, L'Oréal Professionnel Serie Expert &amp; Wella SP at studio prices. Your stylist will prescribe the exact regimen for your hair type after service. No guesswork, no counterfeit risk.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 lg:py-32" aria-labelledby="contact-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="z-40 sticky top-0 text-center max-w-3xl mx-auto mb-10 sm:mb-14" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Visit Us</span>
+          <h2 id="contact-title" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-heading text-balance">
+            Find Us on <span class="gold-gradient-text">Boring Road</span>
+          </h2>
+          <p class="text-text-muted text-base sm:text-lg mt-4 leading-relaxed">Prime location opposite Alankar Palace. Easy parking, ground floor access.</p>
+        </header>
+
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+          <!-- Contact Info & Form -->
+          <div class="col-span-1 lg:col-span-7 space-y-8">
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <a href="https://wa.me/917254968468?text=Hello%20Polaris%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="card-hover bg-surface border border-border rounded-2xl p-5 sm:p-6 text-center group" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+                <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-7 h-7 text-emerald-500"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg></div>
+                <h3 class="break-words font-heading text-lg font-bold mb-1">WhatsApp Booking</h3>
+                <p class="text-text-muted text-sm">Instant confirmation</p>
+              </a>
+              <a href="tel:+917254968468" class="card-hover bg-surface border border-border rounded-2xl p-5 sm:p-6 text-center group" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+                <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-7 h-7 text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></div>
+                <h3 class="break-words font-heading text-lg font-bold mb-1">Call Us</h3>
+                <p class="text-text-muted text-sm">+91 72549 68468</p>
+              </a>
+              <div class="card-hover bg-surface border border-border rounded-2xl p-5 sm:p-6 text-center" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+                <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-7 h-7 text-secondary"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
+                <h3 class="break-words font-heading text-lg font-bold mb-1">Hours</h3>
+                <p class="text-text-muted text-sm">Mon–Sat 10AM–8:30PM<br>Sun 11AM–7PM</p>
+              </div>
+            </div>
+
+            <!-- Appointment Form -->
+            <div class="bg-surface border border-border rounded-2xl p-5 sm:p-8">
+              <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-heading mb-6">Book Your Appointment</h3>
+              <form id="booking-form" class="space-y-4" novalidate="">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-text-primary mb-1.5">Full Name *</label>
+                    <input type="text" id="name" name="name" required="" autocomplete="name" class="input-field w-full px-4 py-3 rounded-xl text-text-primary placeholder:text-text-muted focus-visible:outline-none" placeholder="Your name" aria-required="true">
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-text-primary mb-1.5">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required="" autocomplete="tel" pattern="[0-9+\-\s]{10,}" class="input-field w-full px-4 py-3 rounded-xl text-text-primary placeholder:text-text-muted focus-visible:outline-none" placeholder="+91 XXXXX XXXXX" aria-required="true">
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="min-w-0 max-w-full">
+                    <label for="service" class="block text-sm font-medium text-text-primary mb-1.5">Service Interested In *</label>
+                    <select id="service" name="service" required="" class="input-field w-full max-w-full appearance-none bg-no-repeat bg-[right_1rem_center] pr-10 px-4 py-3 rounded-xl text-text-primary focus-visible:outline-none cursor-pointer truncate" aria-required="true" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%239ca3af\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem;">
+                      <option value="" disabled="" selected="">Select a service</option>
+                      <option value="Precision Haircut">Precision Haircut</option>
+                      <option value="Premium Coloring">Premium Coloring</option>
+                      <option value="Hair Treatment">Hair Treatment</option>
+                      <option value="Men's Grooming">Men's Grooming</option>
+                      <option value="Bridal &amp; Event">Bridal &amp; Event Styling</option>
+                      <option value="Consultation Only">Consultation Only</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="preferred-date" class="block text-sm font-medium text-text-primary mb-1.5">Preferred Date</label>
+                    <input type="date" id="preferred-date" name="preferred_date" class="input-field w-full px-4 py-3 rounded-xl text-text-primary focus-visible:outline-none" aria-label="Preferred appointment date">
+                  </div>
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-text-primary mb-1.5">Notes / Special Requests</label>
+                  <textarea id="message" name="message" rows="3" class="input-field w-full px-4 py-3 rounded-xl text-text-primary placeholder:text-text-muted focus-visible:outline-none resize-y min-h-[100px]" placeholder="Hair length, color history, allergies, reference photos..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full sm:w-auto px-5 sm:px-8 py-3.5 rounded-xl text-base font-semibold text-black flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background" id="submit-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar-plus" aria-hidden="true" class="lucide lucide-calendar-plus w-5 h-5"><path d="M16 18h6"></path><path d="M16 2v3"></path><path d="M19 15v6"></path><path d="M21 11.5V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h8.3"></path><path d="M3 9h18"></path><path d="M8 2v3"></path></svg>
+                  <span>Request Appointment</span>
+                  <span class="hidden" id="btn-loader"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="loader-2" aria-hidden="true" class="lucide lucide-loader-2 w-5 h-5 animate-spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span>
+                </button>
+                <p class="text-text-muted text-xs text-center sm:text-left">We'll confirm via WhatsApp within 15 minutes during business hours.</p>
+              </form>
+            </div>
+          </div>
+
+          <!-- Map & Address -->
+          <div class="col-span-1 lg:col-span-5 space-y-6">
+            <!-- Google Maps Embed -->
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-800">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.8!2d85.120!3d25.615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f29e0b0b0b0b0b%3A0x0b0b0b0b0b0b0b0b!2sPolaris%20Hair%20Studio%20Boring%20Road%20Patna!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border: 0px; width: 100%; height: 100%; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Polaris Hair Studio location on Google Maps" aria-label="Polaris Hair Studio location on Google Maps" class="w-full h-full block border-0">
+              </iframe>
+            </div>
+
+            <!-- Address Card -->
+            <div class="bg-surface border border-border rounded-2xl p-5 sm:p-6">
+              <h3 class="break-words font-heading text-lg sm:text-xl font-bold mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5 text-primary"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Our Address</h3>
+              <address class="not-italic text-text-muted leading-relaxed space-y-2">
+                <p><strong class="text-text-primary">Polaris Hair Studio by Sumeet &amp; Sujeet</strong></p>
+                <p>Mirambika Apartment, Boring Road</p>
+                <p>Opposite Alankar Palace, Nageshwar Colony</p>
+                <p>Chouraha, Kidwaipuri, Patna, Bihar 800001</p>
+                <div class="flex flex-wrap gap-3 mt-4 pt-4 border-t border-zinc-800">
+                  <a href="https://wa.me/917254968468?text=Hello%20Polaris%20Hair%20Studio%2C%20I%27d%20like%20directions." target="_blank" rel="noopener noreferrer" class="btn-secondary px-4 py-2 rounded-xl text-sm font-semibold text-text-primary flex items-center gap-1.5 whitespace-nowrap">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation w-4 h-4"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                    Get Directions
+                  </a>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Polaris+Hair+Studio+Boring+Road+Patna" target="_blank" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-xl text-sm font-semibold text-black flex items-center gap-1.5 whitespace-nowrap">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Open in Maps
+                  </a>
+                </div>
+              </address>
+            </div>
+
+            <!-- Parking/Access Info -->
+            <div class="bg-primary/5 border border-primary/20 rounded-2xl p-5 sm:p-6">
+              <h4 class="font-heading text-lg font-bold text-primary mb-2 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" aria-hidden="true" class="lucide lucide-info w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg> Good to Know</h4>
+              <ul class="text-text-muted text-sm space-y-1.5">
+                <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Ground floor — wheelchair &amp; stroller accessible</li>
+                <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Dedicated 2-wheeler parking in building compound</li>
+                <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> 4-wheeler street parking available on Boring Road</li>
+                <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> 2 mins walk from Boring Road Chouraha auto stand</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-zinc-800 pt-10 sm:pt-12 pb-6 md:pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <!-- Brand Column -->
+        <div class="lg:col-span-1 space-y-5">
+          <a href="#" class="flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg" aria-label="Polaris Hair Studio - Home">
+            <div class="w-11 h-11 rounded-xl bg-primary text-black font-heading font-black text-lg tracking-tight shrink-0 flex items-center justify-center shadow-md">PH</div>
+            <div>
+              <span class="block font-extrabold text-lg leading-tight text-text-primary">Polaris Hair Studio</span>
+              <span class="block text-xs text-text-muted">by Sumeet &amp; Sujeet</span>
+            </div>
+          </a>
+          <p class="text-text-muted text-sm leading-relaxed">Patna's premier luxury hair studio. Master stylists, international products, hygienic excellence. Where your hair finds its true north.</p>
+          <div class="flex items-center gap-4 pt-2">
+            <a href="https://wa.me/917254968468" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 hover:bg-emerald-500/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg></a>
+            <a href="https://www.instagram.com/polarishairstudio" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-surface border border-border flex items-center justify-center text-text-muted hover:text-primary hover:border-primary/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Polaris+Hair+Studio+Boring+Road+Patna" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-surface border border-border flex items-center justify-center text-text-muted hover:text-primary hover:border-primary/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Google Maps"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></a>
+            <a href="tel:+917254968468" class="w-10 h-10 rounded-xl bg-surface border border-border flex items-center justify-center text-text-muted hover:text-primary hover:border-primary/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Call us"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <nav class="space-y-4" aria-label="Quick links">
+          <h4 class="font-heading text-lg font-bold text-text-primary">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-text-muted hover:text-primary transition-colors text-sm">Our Services</a></li>
+            <li><a href="#about" class="text-text-muted hover:text-primary transition-colors text-sm">About Us</a></li>
+            <li><a href="#gallery" class="text-text-muted hover:text-primary transition-colors text-sm">Gallery</a></li>
+            <li><a href="#reviews" class="text-text-muted hover:text-primary transition-colors text-sm">Reviews</a></li>
+            <li><a href="#faq" class="text-text-muted hover:text-primary transition-colors text-sm">FAQ</a></li>
+            <li><a href="#contact" class="text-text-muted hover:text-primary transition-colors text-sm">Contact &amp; Location</a></li>
+          </ul>
+        </nav>
+
+        <!-- Services List -->
+        <nav class="space-y-4" aria-label="Services">
+          <h4 class="font-heading text-lg font-bold text-text-primary">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-text-muted hover:text-primary transition-colors text-sm">Precision Haircuts</a></li>
+            <li><a href="#services" class="text-text-muted hover:text-primary transition-colors text-sm">Premium Coloring &amp; Balayage</a></li>
+            <li><a href="#services" class="text-text-muted hover:text-primary transition-colors text-sm">Hair Treatments &amp; Spa</a></li>
+            <li><a href="#services" class="text-text-muted hover:text-primary transition-colors text-sm">Men's Grooming</a></li>
+            <li><a href="#services" class="text-text-muted hover:text-primary transition-colors text-sm">Bridal &amp; Event Styling</a></li>
+            <li><a href="#services" class="text-text-muted hover:text-primary transition-colors text-sm">Keratin Smoothing</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact Info -->
+        <div class="space-y-4" aria-label="Contact information">
+          <h4 class="font-heading text-lg font-bold text-text-primary">Visit Us</h4>
+          <address class="not-italic text-text-muted text-sm leading-relaxed space-y-3">
+            <p><strong class="text-text-primary">Polaris Hair Studio</strong></p>
+            <p>Mirambika Apt, Boring Rd</p>
+            <p>Opp. Alankar Palace, Nageshwar Colony</p>
+            <p>Chouraha, Kidwaipuri, Patna 800001</p>
+            
+            <!-- Unified ArcLane Verified Footer Signature -->
+            <div class="pt-6 mt-6 sm:mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-3">
+                <p>© <span id="current-year">2026</span> Polaris Hair Studio by Sumeet &amp; Sujeet. All rights reserved.</p>
+                <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
+                    <span>Concept &amp; Digital Architecture by</span>
+                    <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-zinc-500 group-hover:text-amber-400 transition-colors"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <div class="flex items-center gap-4 text-zinc-500">
+                    <span class="hover:text-zinc-400 cursor-pointer">Privacy Policy</span>
+                    <span>•</span>
+                    <span class="hover:text-zinc-400 cursor-pointer">Terms of Service</span>
+                </div>
+            </div>
+            <!-- End ArcLane Signature -->
+          </address>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-text-muted text-sm">© 2025 Polaris Hair Studio by Sumeet &amp; Sujeet. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-xs text-text-muted">
+          <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+          <span>Crafted by <a href="https://antigravity.co" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">Antigravity</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Action Bar -->
+  <div class="md:hidden fixed inset-x-0 bottom-0 z-40 bg-background border-t border-zinc-800 p-3 flex gap-3" role="navigation" aria-label="Quick actions">
+    <a href="tel:+917254968468" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-zinc-800 hover:bg-zinc-700 text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Call now">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+      Call Now
+    </a>
+    <a href="https://wa.me/917254968468?text=Hello%20Polaris%20Hair%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="Book via WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal-overlay fixed inset-0 z-[200] justify-center p-4 bg-black/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-content bg-surface border border-border rounded-2xl p-6 sm:p-8 max-w-md w-full text-center relative">
+      <button id="modal-close" class="absolute top-4 right-4 p-1 rounded-lg text-text-muted hover:text-text-primary hover:bg-zinc-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+      <div class="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle w-8 h-8 text-emerald-500"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg></div>
+      <h3 id="modal-title" class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-heading mb-2">Request Submitted!</h3>
+      <p id="modal-desc" class="text-text-muted mb-6">We've received your appointment request. Our team will confirm via WhatsApp within 15 minutes during business hours.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-start sm:items-center justify-between">
+        <a href="https://wa.me/917254968468" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3 rounded-xl text-sm font-semibold text-black whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+          Chat on WhatsApp
+        </a>
+        <button id="modal-close-btn" class="btn-secondary px-6 py-3 rounded-xl text-sm font-semibold text-text-primary whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // ==================== MOBILE MENU ====================
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBackdrop = document.getElementById('menu-backdrop');
+    const menuLinks = document.querySelectorAll('[data-menu-link]');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      menuBackdrop.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      // Change icon to X
+      const icon = menuToggle.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', 'x');
+        lucide.createIcons();
+      }
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      menuBackdrop.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      // Change icon back to menu
+      const icon = menuToggle.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', 'menu');
+        lucide.createIcons();
+      }
+    }
+
+    menuToggle.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    menuBackdrop.addEventListener('click', closeMenu);
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    // ==================== FAQ ACCORDION ====================
+    const faqItems = document.querySelectorAll('#faq-accordion details');
+
+    faqItems.forEach(item => {
+      const summary = item.querySelector('summary');
+      const answer = item.querySelector('.faq-answer');
+      const chevron = item.querySelector('.faq-chevron');
+
+      // Handle open/close via details toggle
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          answer.classList.add('open');
+          chevron.classList.add('open');
+        } else {
+          answer.classList.remove('open');
+          chevron.classList.remove('open');
+        }
+      });
+
+      // Keyboard support for summary
+      summary.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.open = !item.open;
+        }
+      });
+    });
+
+    // ==================== GALLERY FILTER ====================
+    const filterBtns = document.querySelectorAll('[data-filter]');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active button
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+          b.classList.add('text-text-muted');
+          b.classList.remove('text-text-primary');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        btn.classList.remove('text-text-muted');
+        btn.classList.add('text-text-primary');
+
+        // Filter items with animation
+        galleryItems.forEach((item, index) => {
+          const category = item.dataset.category;
+          const shouldShow = filter === 'all' || category === filter;
+
+          if (shouldShow) {
+            item.style.display = 'block';
+            // Stagger animation
+            setTimeout(() => {
+              item.classList.remove('hidden');
+              requestAnimationFrame(() => {
+                item.classList.add('visible');
+              });
+            }, index * 50);
+          } else {
+            item.classList.remove('visible');
+            item.classList.add('hidden');
+            setTimeout(() => {
+              if (item.classList.contains('hidden')) {
+                item.style.display = 'none';
+              }
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // ==================== BOOKING FORM ====================
+    const bookingForm = document.getElementById('booking-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnLoader = document.getElementById('btn-loader');
+    const btnText = submitBtn.querySelector('span:not(#btn-loader)');
+    const successModal = document.getElementById('success-modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+
+    function sanitizeInput(input) {
+      const div = document.createElement('div');
+      div.textContent = input;
+      return div.innerHTML;
+    }
+
+    function showModal() {
+      successModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      // Focus management
+      modalCloseBtn.focus();
+    }
+
+    function hideModal() {
+      successModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    bookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+
+      if (!name || !phone || !service) {
+        // Show native validation
+        bookingForm.reportValidity();
+        return;
+      }
+
+      // Phone validation
+      const phoneRegex = /^[\+]?[0-9\s\-]{10,}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid phone number');
+        return;
+      }
+
+      // Loading state
+      submitBtn.disabled = true;
+      btnText.classList.add('hidden');
+      btnLoader.classList.remove('hidden');
+      submitBtn.setAttribute('aria-busy', 'true');
+
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // Sanitize form data (for logging/display only)
+      const formData = {
+        name: sanitizeInput(name),
+        phone: sanitizeInput(phone),
+        service: sanitizeInput(service),
+        date: sanitizeInput(document.getElementById('preferred-date').value),
+        message: sanitizeInput(document.getElementById('message').value.trim())
+      };
+
+      console.log('Booking request:', formData);
+
+      // Reset form
+      bookingForm.reset();
+
+      // Reset button
+      submitBtn.disabled = false;
+      btnText.classList.remove('hidden');
+      btnLoader.classList.add('hidden');
+      submitBtn.removeAttribute('aria-busy');
+
+      // Show success modal
+      showModal();
+    });
+
+    modalClose.addEventListener('click', hideModal);
+    modalCloseBtn.addEventListener('click', hideModal);
+
+    // Close modal on backdrop click
+    successModal.addEventListener('click', (e) => {
+      if (e.target === successModal) {
+        hideModal();
+      }
+    });
+
+    // Close modal on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && successModal.classList.contains('open')) {
+        hideModal();
+      }
+    });
+
+    // ==================== WHATSAPP BUTTONS ====================
+    const whatsappBtns = document.querySelectorAll('.whatsap-btn');
+
+    whatsappBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const service = btn.dataset.service || 'Service';
+        const message = encodeURIComponent(`Hello Polaris Hair Studio, I'd like to book: ${service}.`);
+        window.open(`https://wa.me/917254968468?text=${message}`, '_blank', 'noopener,noreferrer');
+      });
+    });
+
+    // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+
+          // Focus for accessibility
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      });
+    });
+
+    // ==================== INTERSECTION OBSERVER FOR ANIMATIONS ====================
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1
+    };
+
+    const fadeInObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for scroll animations
+    document.querySelectorAll('.card-hover, section > div > header, .gallery-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+      fadeInObserver.observe(el);
+    });
+
+    // ==================== HEADER SCROLL EFFECT ====================
+    const header = document.querySelector('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 4px 30px -10px rgba(0,0,0,0.5), 0 0 0 1px rgba(212, 175, 55, 0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ==================== INITIALIZE ====================
+    // Ensure all icons are rendered
+    lucide.createIcons();
+
+    // Set initial gallery items as visible
+    galleryItems.forEach(item => {
+      item.classList.add('visible');
+    });
+
+    console.log('Polaris Hair Studio website initialized successfully.');
+  </script>
+
+</body></html>
