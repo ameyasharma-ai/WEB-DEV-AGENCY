@@ -1,14 +1,32 @@
-<!DOCTYPE html><html lang="en" class="overflow-x-hidden scroll-smooth"><head>
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden scroll-smooth"><head>
+    <base href="/sites/powerzone/">
+    
     <!-- ArcLane Zero-Vulnerability Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22>⚡</text></svg>">
+    <!-- ArcLane Responsive Typography & Distortion Prevention Guard -->
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+      img, svg, video, canvas, audio, iframe, embed, object {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230F172A%22/&gt;&lt;text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2260%22&gt;⚡&lt;/text&gt;&lt;/svg&gt;">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>POWER ZONE (THE FITNESS CLUB) | Patna's #1 Strength &amp; Powerlifting Gym</title>
-    <meta name="description" content="Unleash your power at Power Zone The Fitness Club in Biscomaun Colony, Patna. Expert training, bodybuilding, powerlifting, weight loss &amp; 4.9★ rated programs. Book your free trial today!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Zone Gym | Purabsarai, Munger | Premium Fitness &amp; Health Club</title>
+    <meta name="description" content="Power Zone Gym in Purabsarai, Munger, Bihar. Premier fitness club with certified trainers, modern equipment, strength training, cardio &amp; personal coaching. 4.8★ rating from 163+ Google Reviews.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,21 +35,15 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            bg: '#09090B',
-                            surface: '#18181B',
-                            card: '#27272A',
-                            primary: '#EF4444',
-                            'primary-hover': '#DC2626',
-                            secondary: '#F59E0B',
-                            accent: '#F43F5E',
-                            muted: '#A1A1AA',
-                            light: '#FAFAFA'
-                        }
+                        primary: '#10B981', // Electric Lime / Emerald
+                        secondary: '#EF4444', // Neon Red
+                        surface: '#18181B',
+                        darkBg: '#09090B',
                     },
                     fontFamily: {
                         syne: ['Syne', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif']
+                        inter: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
                     }
                 }
             }
@@ -41,832 +53,869 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@500;700;900&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         body {
-            background-color: #09090B;
-            color: #FAFAFA;
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            background-color: #09090B;
+            color: #FFFFFF;
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Syne', sans-serif;
         }
-        .glow-red {
-            box-shadow: 0 0 25px rgba(239, 68, 68, 0.25);
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .glow-gold {
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3F3F46;
         }
     </style>
-
-    <!-- OpenGraph Social & WhatsApp Card Meta -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="POWER ZONE (THE FITNESS CLUB) | Official Website">
-    <meta property="og:description" content="Welcome to POWER ZONE (THE FITNESS CLUB). Explore our services, gallery, verified reviews, and instant WhatsApp booking.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=800&amp;q=80">
-    <meta property="og:url" content="https://www.arclanestudios.space/sites/powerzone">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="POWER ZONE (THE FITNESS CLUB) | Official Website">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=800&amp;q=80">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="overflow-x-hidden bg-[#09090B] text-[#FAFAFA] font-inter antialiased selection:bg-red-600 selection:text-white-0">
+<body class="pb-20 md:pb-0 bg-[#09090B] text-white overflow-x-hidden">
 
-    <!-- 1. ANNOUNCEMENT BAR -->
-    <div class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-500 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center z-50 relative">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-6">
-            <span class="flex items-center gap-1.5">
-                <i data-lucide="clock" class="w-3.5 h-3.5 inline"></i> 
-                Morning: 5:30 AM – 11:00 AM | Evening: 4:00 PM – 10:00 PM
-            </span>
-            <span class="hidden md:inline text-white/80">•</span>
-            <span class="flex items-center gap-1.5 font-bold">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 inline"></i> Biscomaun Colony, Patna
-            </span>
-            <a href="#trial-modal" onclick="openTrialModal()" class="bg-black/30 hover:bg-black/50 text-white px-2.5 py-0.5 rounded text-xs font-bold transition-all underline decoration-amber-400">
-                Claim Free Trial 🔥
-            </a>
+    <!-- Backdrop Overlay for Mobile Drawer -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-zinc-900 border-b border-zinc-800 text-xs sm:text-sm py-2 px-4 text-center z-50 relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap text-zinc-300">
+            <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full font-bold text-[10px] sm:text-xs uppercase tracking-wider">⚡ Special Offer</span>
+            <span>Join today &amp; get 1-on-1 Personal Trainer Consultation FREE!</span>
+            <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20claim%20the%20free%20consultation%20offer!" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline inline-flex items-center gap-1">Claim Now →</a>
         </div>
     </div>
 
-    <!-- 2. 100% SOLID OPAQUE STICKY HEADER -->
+    <!-- 100% Solid Opaque Sticky Header -->
     <header class="sticky top-0 z-40 bg-[#09090B] border-b border-zinc-800 w-full">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group min-w-0 gap-2.5 sm:gap-3 mr-3 lg:mr-8 flex-1 sm:flex-initial">
-                <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white font-extrabold shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform shrink-0 font-black shadow-md sm:w-11 sm:h-11 font-outfit text-base sm:text-lg tracking-tight">
-                    PZ
-                </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo Monogram -->
+            <a href="#" class="flex items-center gap-2.5 sm:gap-3 group min-w-0 mr-3 lg:mr-8 flex-1 sm:flex-initial shrink-0">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-primary text-black font-outfit font-black text-base sm:text-lg tracking-tight shrink-0 flex items-center justify-center shadow-lg shadow-primary/20 font-syne text-lg shadow-md">PZ</div>
                 <div class="min-w-0 flex flex-col justify-center">
-                    <span class="font-syne font-extrabold text-lg sm:text-xl tracking-wider text-white block leading-none truncate leading-tight">POWER ZONE</span>
-                    <span class="text-[10px] sm:text-xs text-amber-400 font-semibold tracking-widest uppercase block mt-1 truncate tracking-wider">The Fitness Club</span>
+                    <span class="block font-extrabold text-base sm:text-lg lg:text-xl leading-tight font-syne tracking-wide max-w-[160px] xs:max-w-[200px] sm:max-w-none break-words leading-normal">POWER ZONE</span>
+                    <span class="block text-[10px] sm:text-xs text-primary font-bold tracking-widest uppercase max-w-[160px] xs:max-w-[200px] sm:max-w-none break-words leading-normal">GYM MUNGER</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-300">
-                <a href="#services" class="hover:text-red-500 transition-colors">Programs</a>
-                <a href="#pricing" class="hover:text-red-500 transition-colors">Pricing</a>
-                <a href="#transformations" class="hover:text-red-500 transition-colors">Results</a>
-                <a href="#coaches" class="hover:text-red-500 transition-colors">Coaches</a>
-                <a href="#bmi" class="hover:text-red-500 transition-colors">BMI Calc</a>
-                <a href="#contact" class="hover:text-red-500 transition-colors">Contact</a>
+            <!-- Balanced Centered Desktop Navigation -->
+            <nav class="hidden lg:flex items-center justify-center mx-auto -0 shrink-0 gap-3 lg:gap-4 xl:gap-6 2xl:gap-6 px-2 lg:px-4">
+                <a href="#programs" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors whitespace-nowrap shrink-0">Programs</a>
+                <a href="#why-us" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors whitespace-nowrap shrink-0 hidden 2xl:inline-block">Why Us</a>
+                <a href="#schedule" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors whitespace-nowrap shrink-0">Schedule</a>
+                <a href="#gallery" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors whitespace-nowrap shrink-0">Facility</a>
+                <a href="#pricing" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors whitespace-nowrap shrink-0">Plans</a>
+                <a href="#reviews" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors hidden 2xl:inline-block whitespace-nowrap shrink-0">FAQ</a>
+                <a href="#contact" class="text-sm font-medium text-zinc-300 hover:text-primary transition-colors whitespace-nowrap shrink-0">Contact</a>
             </nav>
 
-            <!-- Desktop Action Buttons -->
-            <div class="hidden sm:flex items-center gap-3">
-                <a href="tel:+919852866577" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-700 hover:border-zinc-500 text-sm font-semibold transition-colors">
-                    <i data-lucide="phone-call" class="w-4 h-4 text-red-500"></i>
-                    <span>+91 98528 66577</span>
+            <!-- Action CTAs -->
+            <div class="hidden sm:flex items-center gap-2 sm:gap-3 shrink-0 flex-nowrap">
+                <a href="tel:+917349046105" class="whitespace-nowrap bg-zinc-800 hover:bg-zinc-700 text-white px-3.5 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all min-w-0 flex-1 sm:flex-initial mr-3 lg:mr-8 shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                    <span class="hidden xl:inline whitespace-nowrap">+91 73490 46105</span>
                 </a>
-                <button onclick="openTrialModal()" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all flex items-center gap-2">
-                    <i data-lucide="zap" class="w-4 h-4"></i> Free Trial
-                </button>
+                <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20book%20a%20free%20trial%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-emerald-600/20 transition-all min-w-0 flex-1 sm:flex-initial mr-3 lg:mr-8 shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                    <span class="whitespace-nowrap">Free Trial</span>
+                </a>
             </div>
 
             <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:outline-none shrink-0" aria-label="Toggle Navigation Menu">
-                <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            <button id="menu-btn" aria-label="Toggle Menu" class="lg:hidden text-zinc-300 hover:text-white p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 focus:outline-none shrink-0 whitespace-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
             </button>
         </div>
     </header>
 
-    <!-- MOBILE BACKDROP OVERLAY -->
-    <div id="menu-backdrop" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[90] hidden transition-opacity duration-300"></div>
-
-    <!-- MOBILE NAVIGATION DRAWER -->
-    <div id="mobile-drawer" class="fixed inset-y-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090B] border-l border-zinc-800 p-6 pt-6 flex flex-col justify-between shadow-2xl overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <!-- Flawless Mobile Drawer -->
+    <div id="mobile-drawer" class="fixed inset-y-0 right-0 z-[100] w-full max-w-xs sm:max-w-sm bg-[#09090b] border-l border-zinc-800 text-white top-0 bg-[#09090B] p-6 pt-5 flex flex-col justify-between shadow-2xl overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
         <div>
             <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white font-syne font-extrabold text-lg">
-                        PZ
-                    </div>
+                    <div class="w-10 h-10 rounded-xl bg-primary text-black font-outfit font-black text-base flex items-center justify-center">PZ</div>
                     <div>
-                        <span class="font-syne font-bold text-white text-base block">POWER ZONE</span>
-                        <span class="text-[10px] text-amber-400 font-semibold tracking-wider">THE FITNESS CLUB</span>
+                        <span class="font-extrabold text-base font-syne tracking-wide">POWER ZONE</span>
+                        <span class="block text-[10px] text-primary font-bold tracking-widest uppercase">GYM MUNGER</span>
                     </div>
                 </div>
-                <button onclick="toggleMobileMenu()" class="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white" aria-label="Close menu">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+                <button id="close-menu-btn" aria-label="Close Menu" class="text-zinc-400 hover:text-white p-2 rounded-lg bg-zinc-900 border border-zinc-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
                 </button>
             </div>
-
-            <nav class="flex flex-col gap-4 pt-6 text-base font-semibold text-zinc-300">
-                <a href="#services" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 hover:text-red-500 transition-colors">
-                    <span>Programs &amp; Services</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
-                </a>
-                <a href="#pricing" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 hover:text-red-500 transition-colors">
-                    <span>Membership Pricing</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
-                </a>
-                <a href="#transformations" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 hover:text-red-500 transition-colors">
-                    <span>Transformation Gallery</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
-                </a>
-                <a href="#coaches" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 hover:text-red-500 transition-colors">
-                    <span>Expert Trainers</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
-                </a>
-                <a href="#bmi" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 hover:text-red-500 transition-colors">
-                    <span>BMI Calculator</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
-                </a>
-                <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center justify-between p-3 rounded-xl bg-zinc-900/50 hover:bg-zinc-900 hover:text-red-500 transition-colors">
-                    <span>Location &amp; Contact</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
-                </a>
+            
+            <nav class="flex flex-col gap-4 mt-6">
+                <a href="#programs" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Training Programs</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#why-us" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Why Choose Us</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#schedule" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Batch Schedule</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#gallery" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Facility Gallery</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#pricing" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Membership Plans</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#reviews" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>Client Reviews</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#faq" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 border-b border-zinc-900 flex items-center justify-between"><span>FAQ</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
+                <a href="#contact" class="mobile-nav-link text-base font-medium text-zinc-300 hover:text-primary py-2 flex items-center justify-between"><span>Location &amp; Contact</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-zinc-600"><path d="m9 18 6-6-6-6"></path></svg></a>
             </nav>
         </div>
 
-        <div class="pt-6 border-t border-zinc-800 space-y-3">
-            <button onclick="toggleMobileMenu(); openTrialModal();" class="w-full bg-red-600 hover:bg-red-700 text-white py-3.5 rounded-xl font-bold text-center shadow-lg shadow-red-600/30 flex items-center justify-center gap-2">
-                <i data-lucide="zap" class="w-5 h-5"></i> Book Free Trial
-            </button>
-            <a href="tel:+919852866577" class="w-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-white py-3.5 rounded-xl font-semibold text-center flex items-center justify-center gap-2">
-                <i data-lucide="phone" class="w-4 h-4 text-red-500"></i> Call +91 98528 66577
+        <div class="pt-6 border-t border-zinc-800 mt-6 flex flex-col gap-3">
+            <a href="tel:+917349046105" class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg> Call: +91 73490 46105
+            </a>
+            <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20book%20a%20free%20trial%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg> WhatsApp Free Trial
             </a>
         </div>
     </div>
 
-    <!-- MAIN CONTENT CONTAINER -->
-    <main class="w-full overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="relative pt-8 sm:pt-16 pb-16 lg:pb-24 overflow-hidden bg-[#09090B]">
+        <!-- Radial Gradient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <!-- 3. HERO SECTION -->
-        <section class="relative min-h-[90vh] flex items-center justify-center py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#09090B] via-[#121216] to-[#09090B]">
-            <!-- Background glow effects -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none"></div>
-            
-            <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-                <div class="lg:col-span-7 text-center lg:text-left">
-                    <!-- Google Rating Badge -->
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6 shadow-md">
-                        <div class="flex items-center text-amber-400 gap-0.5">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Column (Content) -->
+                <div class="col-span-1 lg:col-span-7 flex flex-col items-start text-left">
+                    
+                    <!-- Google Rating Badge & Locality Chip -->
+                    <div class="flex items-center gap-3 flex-wrap mb-4">
+                        <div class="inline-flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 text-amber-400 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-full shadow-md">
+                            <span>⭐ 4.8</span>
+                            <span class="text-zinc-400 font-normal">(163+ Google Reviews)</span>
                         </div>
-                        <span class="text-xs sm:text-sm font-semibold text-zinc-300">4.9★ Rated (<span class="text-white font-bold">204 Google Reviews</span>)</span>
+                        <div class="inline-flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 text-primary font-medium text-xs sm:text-sm px-3.5 py-1.5 rounded-full shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-3.5 h-3.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Purabsarai, Munger</span>
+                        </div>
                     </div>
 
                     <!-- H1 Heading -->
-                    <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.15] break-words font-extrabold font-syne text-white leading-[1.1] mb-6 break-words">
-                        Unleash Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-amber-400">Power</span> at Patna's #1 Strength Club
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight break-words leading-[1.1] font-syne mb-6">
+                        TRANSFORM YOUR BODY AT <span class="text-primary underline decoration-primary/40 decoration-wavy">MUNGER'S ELITE</span> FITNESS ZONE
                     </h1>
 
                     <!-- Subheadline -->
-                    <p class="text-base sm:text-lg text-zinc-400 mb-8 max-w-2xl mx-auto lg:mx leading-relaxed font-normal">
-                        Elite powerlifting, hardcore bodybuilding, and advanced weight loss training equipped with professional gear in Biscomaun Colony, Patna. Transform your physique today.
+                    <p class="text-zinc-400 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl font-normal">
+                        State-of-the-art equipment, certified expert trainers, and high-energy strength &amp; conditioning programs designed to push your limits and deliver guaranteed results.
                     </p>
 
                     <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <button onclick="openTrialModal()" class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-red-600/30 hover:shadow-red-600/50 hover:scale-105 transition-all flex items-center justify-center gap-3 text-base">
-                            <i data-lucide="zap" class="w-5 h-5"></i> Book Free Trial Now
-                        </button>
-                        <a href="#pricing" class="w-full sm:w-auto bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-white font-semibold px-8 py-4 rounded-xl transition-all text-center text-base">
-                            View Membership Plans
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20book%20a%20free%20trial%20session%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-emerald-400 text-black font-extrabold py-4 px-5 sm:px-8 rounded-xl text-center sm:text-left flex items-center justify-center gap-3 shadow-xl shadow-primary/25 transition-all transform hover:-translate-y-0.5 text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                            <span>Book Free Trial on WhatsApp</span>
+                        </a>
+                        <a href="#programs" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white font-bold py-4 px-5 sm:px-8 rounded-xl text-center flex items-center justify-center gap-2 transition-all text-base">
+                            <span>Explore Programs</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-down" aria-hidden="true" class="lucide lucide-arrow-down w-4 h-4 text-primary"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
                         </a>
                     </div>
 
-                    <!-- Quick Location Tag -->
-                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm text-zinc-400">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 shrink-0"></i>
-                        <span>Suman Nivas, Near Kidzee School, Biscomaun Colony, Bajrangpuri, Patna</span>
+                    <!-- Mini Trust Highlights -->
+                    <div class="grid grid-cols-3 mt-10 pt-8 border-t border-zinc-800/80 w-full max-w-xl gap-2 sm:gap-4">
+                        <div class="min-w-0">
+                            <div class="sm:text-3xl font-extrabold text-primary font-syne text-base sm:text-2xl break-words tracking-tight" style="font-size: clamp(0.95rem, 4vw, 1.4rem);">100%</div>
+                            <div class="text-xs sm:text-sm text-zinc-400 mt-0.5 break-words leading-tight">Certified Trainers</div>
+                        </div>
+                        <div class="min-w-0">
+                            <div class="sm:text-3xl font-extrabold text-white font-syne text-base sm:text-2xl break-words tracking-tight" style="font-size: clamp(0.95rem, 4vw, 1.4rem);">Pro</div>
+                            <div class="text-xs sm:text-sm text-zinc-400 mt-0.5 break-words leading-tight">Heavy Equipment</div>
+                        </div>
+                        <div class="min-w-0">
+                            <div class="sm:text-3xl font-extrabold text-primary font-syne text-base sm:text-2xl break-words tracking-tight" style="font-size: clamp(0.95rem, 4vw, 1.4rem);">4.8★</div>
+                            <div class="text-xs sm:text-sm text-zinc-400 mt-0.5 break-words leading-tight">Google Rating</div>
+                        </div>
                     </div>
+
                 </div>
 
-                <!-- Hero Image Card -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl group aspect-[4/3] sm:aspect-square">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Power Zone Gym Interior Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                <!-- Right Column (Elevated Showcase Card) -->
+                <div class="col-span-1 lg:col-span-5">
+                    <div class="relative bg-zinc-900 border border-zinc-800 rounded-3xl p-3 sm:p-4 shadow-2xl backdrop-blur-md overflow-hidden group">
+                        
+                        <!-- Image Container with 100% Un-tinted Vibrant Photography -->
+                        <div class="relative w-full h-[350px] sm:h-[420px] rounded-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Power Zone Gym Floor Munger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&amp;fit=crop&amp;q=80&amp;w=800'">
+                            
+                            <!-- Elevated Floating Badge -->
+                            <span class="absolute top-4 left-4 bg-primary text-black font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-wider shadow-lg">⭐ Premium Facility</span>
+
+                            <!-- Real-time Status Chip -->
+                            <span class="absolute bottom-4 right-4 bg-black/80 text-white font-medium text-xs px-3 py-1.5 rounded-full border border-zinc-700 backdrop-blur-sm flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                🟢 Open Now in Purabsarai
+                            </span>
+                        </div>
+
+                        <!-- Card Footer Info -->
+                        <div class="p-4 sm:p-5 flex justify-between flex-col sm:flex-row items-start sm:items-center gap-3">
                             <div>
-                                <span class="bg-red-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Hardcore Gym</span>
-                                <h3 class="font-syne font-bold text-white text-lg sm:text-xl mt-1">State-of-the-art Equipment</h3>
+                                <h3 class="break-words font-bold text-lg font-syne text-white">Power Zone Main Floor</h3>
+                                <p class="text-xs text-zinc-400">Purabsarai, Munger Station Rd</p>
                             </div>
-                            <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg shadow-amber-500/30">
-                                4.9★
-                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Power+Zone+Gym+Purabsarai+Munger+Bihar" target="_blank" rel="noopener noreferrer" class="bg-zinc-800 hover:bg-zinc-700 text-primary p-3 rounded-xl transition-all" aria-label="Get Directions">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation w-5 h-5"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                            </a>
                         </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 4. TRUST & SOCIAL PROOF BAR -->
-        <section class="border-y border-zinc-800 bg-[#121216] py-8 px-4">
-            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
-                    <div class="font-syne font-extrabold text-3xl sm:text-4xl text-white mb-1">500+</div>
-                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Active Members</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Social Proof Bar -->
+    <section class="bg-zinc-900 border-y border-zinc-800 py-6 sm:py-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-6 h-6 fill-primary"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne text-white">4.8 / 5.0 Rating</span>
+                    <span class="text-xs sm:text-sm text-zinc-400 mt-1">Verified Google Reviews (163+)</span>
                 </div>
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
-                    <div class="font-syne font-extrabold text-3xl sm:text-4xl text-amber-400 mb-1">98%</div>
-                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Success Rate</div>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-primary flex items-center justify-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-6 h-6"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne text-white">Certified Experts</span>
+                    <span class="text-xs sm:text-sm text-zinc-400 mt-1">Professional Personal Trainers</span>
                 </div>
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
-                    <div class="font-syne font-extrabold text-3xl sm:text-4xl text-red-500 mb-1">8+</div>
-                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Years Experience</div>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/10 text-secondary flex items-center justify-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dumbbell" aria-hidden="true" class="lucide lucide-dumbbell w-6 h-6"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"></path><path d="m2.5 21.5 1.4-1.4"></path><path d="m20.1 3.9 1.4-1.4"></path><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"></path><path d="m9.6 14.4 4.8-4.8"></path></svg>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne text-white">Heavy Machinery</span>
+                    <span class="text-xs sm:text-sm text-zinc-400 mt-1">Advanced Strength &amp; Cardio</span>
                 </div>
-                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
-                    <div class="font-syne font-extrabold text-3xl sm:text-4xl text-white mb-1">4.9★</div>
-                    <div class="text-xs sm:text-sm text-zinc-400 font-medium">Google Reviews (204)</div>
+                <div class="flex flex-col items-center justify-center p-3">
+                    <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock w-6 h-6"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-extrabold font-syne text-white">Flexible Batches</span>
+                    <span class="text-xs sm:text-sm text-zinc-400 mt-1">Morning &amp; Evening Slots</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 5. SERVICES / PROGRAMS GRID -->
-        <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-red-500 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Elite Training Programs</span>
-                <h2 class="break-words font-syne font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl text-white mb-4">
-                    Built for Results, Not Excuses
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Whether your goal is raw strength, fat loss, or aesthetic bodybuilding, Power Zone provides professional coaching tailored to your needs.
-                </p>
+    <!-- Services / Training Programs Grid -->
+    <section id="programs" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Elite Training Programs</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mt-4 mb-4">CHOOSE YOUR PATH TO PEAK FITNESS</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Whether your goal is muscle hypertrophy, fat loss, or total athletic transformation, Power Zone Gym has the perfect specialized program for you.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
                 <!-- Card 1 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-red-500/50 transition-all duration-300 group flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-red-600/10 border border-red-500/20 rounded-xl flex items-center justify-center text-red-500 mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-syne font-bold text-xl text-white mb-2">Powerlifting &amp; Strength</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            Master the big three (Squat, Bench, Deadlift) with specialized heavy-duty racks and expert spotting.
-                        </p>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-48 sm:h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Strength Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                        <span class="absolute top-3 right-3 bg-primary text-black font-black text-xs px-2.5 py-1 rounded-full uppercase tracking-wider">Hypertrophy</span>
                     </div>
-                    <button onclick="openTrialModal()" class="text-red-500 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        <span>Get Started</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </button>
+                    <div class="p-6 flex flex-col justify-between flex-1 sm:flex-row items-start sm:items-center gap-3">
+                        <div>
+                            <h3 class="break-words text-xl font-bold font-syne mb-2 text-white">Strength Training</h3>
+                            <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">Build raw power and lean muscle mass with olympic barbells, heavy dumbbells, and professional rack setups.</p>
+                        </div>
+                        <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Strength%20Training%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 bg-zinc-800 hover:bg-primary hover:text-black text-white font-bold text-xs sm:text-sm rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                            <span>Join Program</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-amber-500/50 transition-all duration-300 group flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-black transition-colors">
-                            <i data-lucide="flame" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-syne font-bold text-xl text-white mb-2">Fat Loss &amp; Weight Loss</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            Intense metabolic conditioning, HIIT routines, and customized fat-shredding diet plans.
-                        </p>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-48 sm:h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Cardio &amp; Endurance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                        <span class="absolute top-3 right-3 bg-secondary text-white font-black text-xs px-2.5 py-1 rounded-full uppercase tracking-wider">Stamina</span>
                     </div>
-                    <button onclick="openTrialModal()" class="text-amber-400 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        <span>Get Started</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </button>
+                    <div class="p-6 flex flex-col justify-between flex-1 sm:flex-row items-start sm:items-center gap-3">
+                        <div>
+                            <h3 class="break-words text-xl font-bold font-syne mb-2 text-white">Cardio &amp; Endurance</h3>
+                            <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">High-grade treadmills, cross trainers, and stationary bikes to boost heart health, stamina, and calorie burn.</p>
+                        </div>
+                        <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Cardio%20Training%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 bg-zinc-800 hover:bg-primary hover:text-black text-white font-bold text-xs sm:text-sm rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                            <span>Join Program</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-red-500/50 transition-all duration-300 group flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-red-600/10 border border-red-500/20 rounded-xl flex items-center justify-center text-red-500 mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                            <i data-lucide="shield" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-syne font-bold text-xl text-white mb-2">Bodybuilding &amp; Hypertrophy</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            Targeted muscle building workouts, isolation equipment, and muscle-mass building nutrition guides.
-                        </p>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-48 sm:h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Personal Coaching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                        <span class="absolute top-3 right-3 bg-primary text-black font-black text-xs px-2.5 py-1 rounded-full uppercase tracking-wider">1-on-1</span>
                     </div>
-                    <button onclick="openTrialModal()" class="text-red-500 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        <span>Get Started</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </button>
+                    <div class="p-6 flex flex-col justify-between flex-1 sm:flex-row items-start sm:items-center gap-3">
+                        <div>
+                            <h3 class="break-words text-xl font-bold font-syne mb-2 text-white">Personal Coaching</h3>
+                            <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">Customized workout blueprints, dietary meal planning, and continuous motivation from Munger's elite coaches.</p>
+                        </div>
+                        <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Personal%20Coaching%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 bg-zinc-800 hover:bg-primary hover:text-black text-white font-bold text-xs sm:text-sm rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                            <span>Join Program</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:border-amber-500/50 transition-all duration-300 group flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center text-amber-500 mb-6 group-hover:bg-amber-500 group-hover:text-black transition-colors">
-                            <i data-lucide="user-check" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-syne font-bold text-xl text-white mb-2">1-on-1 Personal Training</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            Dedicated personal coaches guiding your form, diet, progression, and daily motivation.
-                        </p>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-48 sm:h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Fat Loss &amp; Shredding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1550259979-ed79b48d2a30?auto=format&amp;fit=crop&amp;q=80&amp;w=600'">
+                        <span class="absolute top-3 right-3 bg-secondary text-white font-black text-xs px-2.5 py-1 rounded-full uppercase tracking-wider">Fat Loss</span>
                     </div>
-                    <button onclick="openTrialModal()" class="text-amber-400 font-semibold text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                        <span>Get Started</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </button>
+                    <div class="p-6 flex flex-col justify-between flex-1 sm:flex-row items-start sm:items-center gap-3">
+                        <div>
+                            <h3 class="break-words text-xl font-bold font-syne mb-2 text-white">Fat Loss &amp; Shred</h3>
+                            <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">High-intensity interval training (HIIT) combined with targeted metabolic circuits to strip stubborn body fat.</p>
+                        </div>
+                        <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Fat%20Loss%20Programs%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 bg-zinc-800 hover:bg-primary hover:text-black text-white font-bold text-xs sm:text-sm rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                            <span>Join Program</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
                 </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 6. MEMBERSHIP PRICING SECTION -->
-        <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-[#121216]/50 rounded-3xl border border-zinc-800/80 my-12">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Transparent Investment</span>
-                <h2 class="break-words font-syne font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl text-white mb-4">
-                    Choose Your Membership Tier
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    No hidden fees. Flexible packages designed for everyone from beginners to hardcore athletes.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Silver Tier -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="inline-block px-3 py-1 bg-zinc-800 text-zinc-300 text-xs font-bold rounded-full mb-4">STARTER</div>
-                        <h3 class="font-syne font-extrabold text-2xl text-white mb-2">Silver Package</h3>
-                        <p class="text-zinc-400 text-sm mb-6">Great for consistent general fitness and standard gym access.</p>
-                        <div class="flex items-baseline gap-1 mb-8">
-                            <span class="font-syne font-extrabold text-4xl sm:text-5xl text-white">₹1,200</span>
-                            <span class="text-zinc-400 text-sm">/ month</span>
-                        </div>
-                        <ul class="space-y-3.5 text-sm text-zinc-300 mb-8">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Full Gym Equipment Access</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Standard Cardio Floor</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Locker &amp; Changing Rooms</li>
-                            <li class="flex items-center gap-2 text-zinc-500"><i data-lucide="x" class="w-4 h-4"></i> Personal Diet Consultation</li>
-                        </ul>
-                    </div>
-                    <button onclick="openTrialModal()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-3.5 rounded-xl transition-all">
-                        Join Silver Tier
-                    </button>
-                </div>
-
-                <!-- Gold Tier (Most Popular) -->
-                <div class="bg-gradient-to-b from-zinc-900 to-[#1a120b] border-2 border-amber-500/80 rounded-2xl p-8 flex flex-col justify-between relative shadow-xl glow-gold">
-                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-xs font-extrabold px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
-                        🔥 Most Popular
-                    </div>
-                    <div>
-                        <div class="inline-block px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-bold rounded-full mb-4">RECOMMENDED</div>
-                        <h3 class="font-syne font-extrabold text-2xl text-white mb-2">Gold Package</h3>
-                        <p class="text-zinc-400 text-sm mb-6">Best value for serious bodybuilders and transformation seekers.</p>
-                        <div class="space-y-1 mb-8">
-                            <div class="flex items-baseline gap-1">
-                                <span class="font-syne font-extrabold text-4xl sm:text-5xl text-amber-400">₹2,700</span>
-                                <span class="text-zinc-400 text-sm">/ 3 Months</span>
-                            </div>
-                            <div class="text-xs text-amber-400/80 font-medium">Or ₹4,800 for 6 Months (Save ₹600)</div>
-                        </div>
-                        <ul class="space-y-3.5 text-sm text-zinc-300 mb-8">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Full Gym &amp; Heavy Lifting Access</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Cardio &amp; Powerlifting Racks</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Monthly Diet &amp; Workout Chart</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Professional Trainer Guidance</li>
-                        </ul>
-                    </div>
-                    <button onclick="openTrialModal()" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-extrabold py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/20">
-                        Join Gold Tier
-                    </button>
-                </div>
-
-                <!-- Diamond Tier -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="inline-block px-3 py-1 bg-red-600/10 text-red-500 text-xs font-bold rounded-full mb-4">VIP ELITE</div>
-                        <h3 class="font-syne font-extrabold text-2xl text-white mb-2">Diamond Annual</h3>
-                        <p class="text-zinc-400 text-sm mb-6">Ultimate full-year access with VIP perks and maximum savings.</p>
-                        <div class="flex items-baseline gap-1 mb-8">
-                            <span class="font-syne font-extrabold text-4xl sm:text-5xl text-white">₹8,400</span>
-                            <span class="text-zinc-400 text-sm">/ Year</span>
-                        </div>
-                        <ul class="space-y-3.5 text-sm text-zinc-300 mb-8">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> 12 Months Full VIP Gym Access</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Priority Personal Training Slots</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Custom Diet &amp; Supplement Plan</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Dedicated Locker Privileges</li>
-                        </ul>
-                    </div>
-                    <button onclick="openTrialModal()" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-red-600/30">
-                        Join Diamond VIP
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. TRANSFORMATION SHOWCASE -->
-        <section id="transformations" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-red-500 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Real Member Results</span>
-                <h2 class="break-words font-syne font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl text-white mb-4">
-                    Transformations That Speak
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    See how our members in Biscomaun Colony built muscle, shredded fat, and transformed their confidence at Power Zone.
-                </p>
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 sm:py-24 bg-zinc-950 border-t border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Competitive Advantage</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mt-4 mb-4">WHY POWER ZONE GYM IS MUNGER'S #1 CHOICE</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">We don't just provide equipment; we provide an ecosystem of success, discipline, and community.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Result 1 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group">
-                    <div class="relative aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Fat Loss Transformation Patna Gym" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-lg" fat="" loss="" (-14="" kg)="" <="" div="">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-syne font-bold text-lg text-white">Rahul Sharma</h3>
-                            <span class="text-xs text-amber-400 font-semibold">4 Months Program</span>
-                        </div>
-                        <p class="text-zinc-400 text-sm leading-relaxed">
-                            "Lost 14 kilos and gained unbelievable stamina. The trainers at Power Zone kept me accountable every single day."
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Result 2 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group">
-                    <div class="relative aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bodybuilding Muscle Gain" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 left-3 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-lg" muscle="" gain="" (+8="" kg)="" <="" div="">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-syne font-bold text-lg text-white">Vikramaditya Kumar</h3>
-                            <span class="text-xs text-amber-400 font-semibold">6 Months Program</span>
-                        </div>
-                        <p class="text-zinc-400 text-sm leading-relaxed">
-                            "From skinny to solid muscle. The heavy squat racks and guidance from Rohit sir changed my entire physique."
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Result 3 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group">
-                    <div class="relative aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Strength &amp; Powerlifting Patna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-lg" deadlift="" 180kg="" club="" <="" div="">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-syne font-bold text-lg text-white">Amitabh Sinha</h3>
-                            <span class="text-xs text-amber-400 font-semibold">1 Year Member</span>
-                        </div>
-                        <p class="text-zinc-400 text-sm leading-relaxed">
-                            "If you want real powerlifting equipment and an energetic atmosphere in Patna, Power Zone is unmatched."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div></div></div></section>
-
-        <!-- 8. MEET THE COACHES -->
-        <section id="coaches" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-[#121216]/50 rounded-3xl border border-zinc-800/80 my-12">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Expert Leadership</span>
-                <h2 class="break-words font-syne font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl text-white mb-4">
-                    Meet Your Elite Coaches
-                </h2>
-                <p class="text-zinc-400 text-sm sm:text-base">
-                    Certified trainers with years of competitive experience dedicated to pushing your limits safely.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Coach 1 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group text-center p-6">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-2 border-red-500/50">
-                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Rohit Kumar Coach" class="w-full h-full object-cover group-hover:scale-105 transition-transform"></div>
-                    <h3 class="font-syne font-bold text-xl text-white mb-1">Rohit Kumar</h3>
-                    <span class="text-red-500 text-xs font-bold uppercase tracking-wider block mb-3">Head Strength Coach</span>
-                    <p class="text-zinc-400 text-sm mb-6">
-                        Specializes in powerlifting mechanics, heavy compound lifting, and advanced strength programming with 8+ years experience.
-                    </p>
-                    <button onclick="openTrialModal()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white text-sm font-semibold py-2.5 rounded-xl transition-all">
-                        Train With Rohit
-                    </button>
-                </div>
-
-                <!-- Coach 2 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group text-center p-6">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-2 border-amber-500/50">
-                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Priya Singh Trainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform"></div>
-                    <h3 class="font-syne font-bold text-xl text-white mb-1">Priya Singh</h3>
-                    <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-3">Fat Loss &amp; Women's Fitness</span>
-                    <p class="text-zinc-400 text-sm mb-6">
-                        Expert in metabolic training, core conditioning, sustainable fat loss, and customized nutrition planning.
-                    </p>
-                    <button onclick="openTrialModal()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white text-sm font-semibold py-2.5 rounded-xl transition-all">
-                        Train With Priya
-                    </button>
-                </div>
-
-                <!-- Coach 3 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden group text-center p-6">
-                    <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-2 border-red-500/50">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Aman Raj Trainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform"></div>
-                    <h3 class="font-syne font-bold text-xl text-white mb-1">Aman Raj</h3>
-                    <span class="text-red-500 text-xs font-bold uppercase tracking-wider block mb-3">Hypertrophy &amp; Bodybuilding</span>
-                    <p class="text-zinc-400 text-sm mb-6">
-                        Focuses on muscle isolation, symmetry, mass building, and contest preparation for aspiring bodybuilders.
-                    </p>
-                    <button onclick="openTrialModal()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white text-sm font-semibold py-2.5 rounded-xl transition-all">
-                        Train With Aman
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. INTERACTIVE BMI CALCULATOR -->
-        <section id="bmi" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-                <div class="absolute top right w-64 h-64 bg-red-600/10 blur-[80px] pointer-events-none rounded-full"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <div class="text-center max-w-xl mx-auto mb-10">
-                    <span class="text-red-500 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-2">Interactive Tool</span>
-                    <h2 class="break-words font-syne font-extrabold text-2xl sm:text-3xl text-white mb-3">Check Your BMI &amp; Health Status</h2>
-                    <p class="text-zinc-400 text-sm">Calculate your Body Mass Index instantly and get professional recommendations.</p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Height (cm)</label>
-                        <input type="number" id="bmi-height" placeholder="e.g. 175" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-red-500 text-base">
+                <!-- Feature 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-7 h-7"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
                     </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Weight (kg)</label>
-                        <input type="number" id="bmi-weight" placeholder="e.g. 75" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-red-500 text-base">
+                    <h3 class="break-words text-lg sm:text-xl font-bold font-syne mb-3 text-white">Certified Trainers</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Experienced professionals guiding your posture, form, and progressive overload to prevent injuries and maximize gains.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-primary flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-7 h-7"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>
                     </div>
+                    <h3 class="break-words text-lg sm:text-xl font-bold font-syne mb-3 text-white">Advanced Equipment</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Immaculately maintained heavy-duty machines, rubber grip dumbbells, and professional resistance stations.</p>
                 </div>
 
-                <button onclick="calculateBMI()" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-red-600/30 transition-all text-base mb-6">
-                    Calculate BMI Now
-                </button>
-
-                <div id="bmi-result" class="hidden p-6 rounded-2xl bg-zinc-950 border border-zinc-800 text-center">
-                    <div class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Your Calculated BMI</div>
-                    <div id="bmi-score" class="font-syne font-extrabold text-3xl text-white mb-2">0.0</div>
-                    <div id="bmi-category" class="font-bold text-amber-400 text-sm mb-4">Normal Weight</div>
-                    <p class="text-xs text-zinc-400 max-w-md mx-auto mb-4">Ready to reach your fitness goals? Book your free trial session at Power Zone Patna today!</p>
-                    <button onclick="openTrialModal()" class="bg-amber-500 hover:bg-amber-600 text-black font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg">
-                        Claim Free Diet Plan &amp; Trial
-                    </button>
+                <!-- Feature 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-red-500/10 text-secondary flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart-pulse" aria-hidden="true" class="lucide lucide-heart-pulse w-7 h-7"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"></path></svg>
+                    </div>
+                    <h3 class="break-words text-lg sm:text-xl font-bold font-syne mb-3 text-white">Hygiene &amp; Safety</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Sanitized workout floors, well-ventilated training area, and clean locker room facilities for members.</p>
                 </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users w-7 h-7"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3 class="break-words text-lg sm:text-xl font-bold font-syne mb-3 text-white">Motivating Community</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Train alongside driven fitness enthusiasts in Purabsarai who push you to break your personal best records.</p>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 10. GOOGLE REVIEW HIGHLIGHTS -->
-        <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-400 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Authentic Feedback</span>
-                <h2 class="break-words font-syne font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl lg:text-2xl sm:text-3xl md:text-4xl text-white mb-4">
-                    Loved by 204+ Reviewers on Google
-                </h2>
-                <div class="flex items-center justify-center gap-1 text-amber-400 mb-2">
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
-                    <span class="text-white font-bold ml-2 text-lg">4.9 / 5.0</span>
-                </div>
+    <!-- Workout Schedule -->
+    <section id="schedule" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Timings &amp; Batches</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mt-4 mb-4">DAILY GYM OPERATING HOURS</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Convenient morning and evening batch timings designed to fit your busy professional or student schedule.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-1 text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                        </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
-                            "Best gym in Biscomaun Colony Patna! Top-class equipment for powerlifting and bodybuilding. Trainers are very supportive and knowledgeable."
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                        <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 font-bold flex items-center justify-center text-sm">
-                            AK
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Morning Batch -->
+                <div class="bg-zinc-900 border border-zinc-800 p-5 sm:p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary/20 text-primary text-xs font-bold px-4 py-1.5 rounded-bl-2xl">Morning Slot</div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" aria-hidden="true" class="lucide lucide-sun w-8 h-8"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
                         </div>
                         <div>
-                            <h4 class="font-syne font-bold text-white text-sm">Abhishek Kumar</h4>
-                            <span class="text-[11px] text-zinc-400">Google Local Guide</span>
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-syne text-white">Morning Batches</h3>
+                            <p class="text-xs text-zinc-400">Start your day with high energy</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-zinc-300">
+                        <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                            <span class="font-medium">Early Bird Slot</span>
+                            <span class="text-primary font-bold">5:30 AM – 9:00 AM</span>
+                        </li>
+                        <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                            <span class="font-medium">Late Morning Slot</span>
+                            <span class="text-primary font-bold">9:00 AM – 11:30 AM</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20join%20the%20Morning%20Batch%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-primary hover:text-black text-white font-bold rounded-xl text-center block transition-all">
+                        Book Morning Slot
+                    </a>
+                </div>
+
+                <!-- Evening Batch -->
+                <div class="bg-zinc-900 border border-zinc-800 p-5 sm:p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-secondary/20 text-secondary text-xs font-bold px-4 py-1.5 rounded-bl-2xl">Evening Slot</div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="moon" aria-hidden="true" class="lucide lucide-moon w-8 h-8"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-bold leading-snug break-words font-syne text-white">Evening Batches</h3>
+                            <p class="text-xs text-zinc-400">De-stress and power through workout</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-zinc-300">
+                        <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                            <span class="font-medium">Post-Work / College Slot</span>
+                            <span class="text-secondary font-bold">4:00 PM – 7:30 PM</span>
+                        </li>
+                        <li class="flex items-center justify-between pb-3 border-b border-zinc-800">
+                            <span class="font-medium">Night Peak Slot</span>
+                            <span class="text-secondary font-bold">7:30 PM – 9:30 PM</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20join%20the%20Evening%20Batch%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-secondary hover:text-white text-white font-bold rounded-xl text-center block transition-all">
+                        Book Evening Slot
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase / Gallery -->
+    <section id="gallery" class="py-16 sm:py-24 bg-zinc-950 border-t border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Gym Facility &amp; Equipment</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mt-4 mb-4">EXPLORE OUR TRAINING ARENA</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Take a visual tour of Power Zone Gym located near Dilip Mahal, Purabsarai, Munger.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="relative h-72 rounded-2xl overflow-hidden group border border-zinc-800">
+                    <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Dumbbell Rack Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-6 top-3 right-3">
+                        <div>
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider">Free Weights</span>
+                            <h3 class="break-words text-lg font-bold font-syne text-white">Heavy Dumbbell Rack</h3>
+                        </div>
+                    </div></div>
+                    
+                </div>
+
+                <div class="relative h-72 rounded-2xl overflow-hidden group border border-zinc-800">
+                    <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Cardio Zone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider">Endurance</span>
+                            <h3 class="break-words text-lg font-bold font-syne text-white">Pro Treadmills &amp; Bikes</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative h-72 rounded-2xl overflow-hidden group border border-zinc-800">
+                    <div class="relative w-full rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&amp;fit=crop&amp;q=80&amp;w=600" alt="Strength Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&amp;fit=crop&amp;q=80&amp;w=600'"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider">Resistance</span>
+                            <h3 class="break-words text-lg font-bold font-syne text-white">Advanced Cable Stations</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans & Pricing Section -->
+    <section id="pricing" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Affordable Memberships</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mt-4 mb-4">INVEST IN YOUR HEALTH</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Transparent pricing with zero hidden fees. Choose a plan that suits your fitness commitment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Plan 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-5 sm:p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-sm font-bold text-zinc-400 uppercase tracking-wider mb-2">Monthly Pass</div>
+                        <div class="text-4xl font-extrabold font-syne text-white mb-4">Flexible <span class="text-xs text-primary font-normal">/ month</span></div>
+                        <p class="text-zinc-400 text-xs sm:text-sm mb-6">Perfect for beginners wanting to test out the gym floor and atmosphere.</p>
+                        <ul class="space-y-3 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Full Gym Floor Access</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Cardio &amp; Weight Machines</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Locker &amp; Changing Room</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20inquire%20about%20the%20Monthly%20Membership%20Plan." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-xl text-center block transition-all">
+                        Inquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Plan 2 (Featured) -->
+                <div class="bg-zinc-900 border-2 border-primary p-5 sm:p-8 rounded-3xl flex flex-col justify-between relative shadow-2xl shadow-primary/10">
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-black font-extrabold text-xs uppercase px-4 py-1 rounded-full tracking-wider">Most Popular</span>
+                    <div>
+                        <div class="text-sm font-bold text-primary uppercase tracking-wider mb-2">Quarterly / Half-Yearly</div>
+                        <div class="text-4xl font-extrabold font-syne text-white mb-4">Best Value <span class="text-xs text-primary font-normal">/ package</span></div>
+                        <p class="text-zinc-400 text-xs sm:text-sm mb-6">The ideal timeframe to build visible muscle and achieve serious fat loss.</p>
+                        <ul class="space-y-3 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Full Gym &amp; Cardio Access</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Free Trainer Guidance</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Diet &amp; Nutrition Advice</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Priority Slot Booking</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20claim%20the%20Best%20Value%20Gym%20Package." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-primary hover:bg-emerald-400 text-black font-extrabold rounded-xl text-center block transition-all shadow-lg">
+                        Claim Best Offer
+                    </a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-5 sm:p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-sm font-bold text-zinc-400 uppercase tracking-wider mb-2">Annual VIP Pass</div>
+                        <div class="text-4xl font-extrabold font-syne text-white mb-4">Maximum <span class="text-xs text-primary font-normal">/ year</span></div>
+                        <p class="text-zinc-400 text-xs sm:text-sm mb-6">For dedicated fitness enthusiasts committed to a year of absolute transformation.</p>
+                        <ul class="space-y-3 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> 12 Months Full Access</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Personal Coaching Discounts</li>
+                            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 text-primary"><path d="M20 6 9 17l-5-5"></path></svg> Guest Pass Privileges</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20inquire%20about%20the%20Annual%20VIP%20Gym%20Pass." target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-xl text-center block transition-all">
+                        Inquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-16 sm:py-24 bg-zinc-950 border-t border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <div class="inline-flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 text-amber-400 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full mb-4">
+                    <span>⭐ 4.8 Rating</span>
+                    <span class="text-zinc-400 font-normal">from 163+ Google Reviews</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mb-4">WHAT OUR MEMBERS SAY</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Real experiences from fitness members who transformed their physiques at Power Zone Gym, Munger.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                        </div>
+                        <p class="text-zinc-300 text-sm italic mb-6 leading-relaxed">"Best gym in Purabsarai, Munger! The equipment is top-tier and heavy duty. Trainers are very supportive and help with correct posture during squats and bench press."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-syne">AM</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Ankit Mishra</h4>
+                            <span class="text-xs text-zinc-500">Google Local Guide</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-1 text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
                         </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
-                            "Amazing atmosphere for workout. Clean environment, good ventilation, and proper heavy weights. Highly recommend to everyone in Bajrangpuri Patna."
-                        </p>
+                        <p class="text-zinc-300 text-sm italic mb-6 leading-relaxed">"Very spacious gym with separate areas for cardio and heavy lifting. Trainers like working with beginners to build confidence. Highly recommended!"</p>
                     </div>
                     <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
-                            PP
-                        </div>
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-primary font-bold flex items-center justify-center font-syne">RS</div>
                         <div>
-                            <h4 class="font-syne font-bold text-white text-sm">Pooja Priya</h4>
-                            <span class="text-[11px] text-zinc-400">Google Reviewer</span>
+                            <h4 class="font-bold text-sm text-white">Rohit Singh</h4>
+                            <span class="text-xs text-zinc-500">Google Reviewer</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-1 text-amber-400 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" aria-hidden="true" class="lucide lucide-star w-4 h-4 fill-amber-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
                         </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed mb-6">
-                            "Value for money packages and exceptional coaching. If you want serious muscle gain or fat loss, Power Zone is the right place."
-                        </p>
+                        <p class="text-zinc-300 text-sm italic mb-6 leading-relaxed">"Awesome atmosphere and energetic crowd. Perfect location near Munger station road. Great value membership rates for students and working professionals."</p>
                     </div>
                     <div class="flex items-center gap-3 pt-4 border-t border-zinc-800">
-                        <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 font-bold flex items-center justify-center text-sm">
-                            MK
+                        <div class="w-10 h-10 rounded-full bg-red-500/20 text-secondary font-bold flex items-center justify-center font-syne">PK</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Priya Kumari</h4>
+                            <span class="text-xs text-zinc-500">Google Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="py-16 sm:py-24 bg-[#09090B]">
+        <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Got Questions?</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mt-4 mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Everything you need to know about joining Power Zone Gym in Purabsarai, Munger.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left font-bold font-syne text-base sm:text-lg flex items-center justify-between focus:outline-none">
+                        <span>Do you provide personal trainers for beginners?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-primary transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        Yes! All new members receive initial guidance on gym etiquette and exercise form. We also offer dedicated 1-on-1 personal coaching packages for custom workout and diet plans tailored specifically to your body type.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left font-bold font-syne text-base sm:text-lg flex items-center justify-between focus:outline-none">
+                        <span>Can I get a free trial session before joining?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-primary transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        Absolutely! You can easily book a free trial session by clicking any of the WhatsApp buttons on our website or messaging us directly at +917349046105.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left font-bold font-syne text-base sm:text-lg flex items-center justify-between focus:outline-none">
+                        <span>What are the gym operating hours?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-primary transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        We are open daily across morning batches (5:30 AM – 11:30 AM) and evening batches (4:00 PM – 9:30 PM) to accommodate both early birds and evening workout enthusiasts.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left font-bold font-syne text-base sm:text-lg flex items-center justify-between focus:outline-none">
+                        <span>Where is Power Zone Gym located?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-primary transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-zinc-400 text-sm leading-relaxed">
+                        We are conveniently located at Purabsarai, Munger Station Rd, near Dilip Mahal, Munger, Bihar 811201. Easily accessible from all parts of the city.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Location & Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 bg-zinc-950 border-t border-zinc-900">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-primary font-bold text-xs sm:text-sm uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full">Visit Our Facility</span>
+                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight break-words font-syne mt-4 mb-4">GET IN TOUCH &amp; LOCATION</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">Drop by our gym in Purabsarai or send us an inquiry for instant membership details.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Contact Info & Form -->
+                <div class="col-span-1 lg:col-span-6 bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-3xl">
+                    <h3 class="break-words text-xl font-bold font-syne mb-6 text-white">Send Us a Message</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Your Full Name</label>
+                            <input type="text" id="form-name" required="" placeholder="e.g. Rahul Kumar" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors">
                         </div>
                         <div>
-                            <h4 class="font-syne font-bold text-white text-sm">Manish Kumar</h4>
-                            <span class="text-[11px] text-zinc-400">Google Local Guide</span>
+                            <label class="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Phone / WhatsApp Number</label>
+                            <input type="tel" id="form-phone" required="" placeholder="e.g. +91 98765 43210" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors">
                         </div>
-                    </div>
+                        <div class="min-w-0 max-w-full">
+                            <label class="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Interested Program</label>
+                            <select id="form-program" class="w-full max-w-full appearance-none bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors pr-10 bg-no-repeat bg-[right_1rem_center] truncate" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%239ca3af\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem;">
+                                <option value="Strength Training">Strength Training</option>
+                                <option value="Cardio &amp; Endurance">Cardio &amp; Endurance</option>
+                                <option value="Personal Coaching">Personal Coaching</option>
+                                <option value="Fat Loss &amp; Shred">Fat Loss &amp; Shred</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2">Message or Fitness Goal</label>
+                            <textarea id="form-message" rows="3" placeholder="Tell us about your fitness goals..." class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-primary hover:bg-emerald-400 text-black font-extrabold rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+                            <span>Send Inquiry on WhatsApp</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" aria-hidden="true" class="lucide lucide-send w-4 h-4"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                        </button>
+                    </form>
                 </div>
-            </div>
-        </section>
 
-        <!-- 11. INTERACTIVE LOCATION & CONTACT SECTION -->
-        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <!-- Location & Info -->
-                <div class="lg:col-span-6 space-y-8">
-                    <div>
-                        <span class="text-red-500 font-bold uppercase tracking-widest text-xs sm:text-sm block mb-3">Visit The Gym</span>
-                        <h2 class="break-words font-syne font-extrabold text-3xl sm:text-2xl sm:text-3xl md:text-4xl text-white mb-4">
-                            Power Zone Location &amp; Hours
-                        </h2>
-                        <p class="text-zinc-400 text-sm leading-relaxed">
-                            Drop by for a free consultation or tour our facility in Biscomaun Colony, Patna.
-                        </p>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
-                            <div class="w-10 h-10 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center shrink mt-1">
-                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                <!-- Google Maps & Details -->
+                <div class="col-span-1 lg:col-span-6 flex flex-col gap-6">
+                    <div class="bg-zinc-900 border border-zinc-800 p-6 sm:p-8 rounded-3xl">
+                        <h3 class="break-words text-xl font-bold font-syne mb-4 text-white">Power Zone Gym Address</h3>
+                        <div class="space-y-4 text-zinc-300 text-sm mb-6">
+                            <div class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5 text-primary shrink-0 mt-0.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span>Purabsarai, Munger Station Rd, near dilip mahal, Munger, Bihar 811201</span>
                             </div>
-                            <div>
-                                <h4 class="font-syne font-bold text-white text-base mb-1">Gym Address</h4>
-                                <p class="text-zinc-400 text-sm leading-relaxed">
-                                    Suman Nivas, Near Kidzee School, Biscomaun Colony, Bajrangpuri, Patna, Bihar 800007
-                                </p>
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5 text-primary shrink-0"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                                <a href="tel:+917349046105" class="hover:text-primary transition-colors">+91 73490 46105</a>
                             </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
-                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink mt-1">
-                                <i data-lucide="clock" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-syne font-bold text-white text-base mb-1">Operating Hours</h4>
-                                <p class="text-zinc-400 text-sm">Morning: 5:30 AM – 11:00 AM</p>
-                                <p class="text-zinc-400 text-sm">Evening: 4:00 PM – 10:00 PM</p>
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5 text-emerald-500 shrink-0"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                                <a href="https://wa.me/917349046105" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Chat on WhatsApp</a>
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
-                            <div class="w-10 h-10 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center shrink mt-1">
-                                <i data-lucide="phone-call" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-syne font-bold text-white text-base mb-1">Phone &amp; WhatsApp</h4>
-                                <a href="tel:+919852866577" class="text-red-400 hover:underline text-sm font-semibold">+91 98528 66577</a>
-                            </div>
+                        <!-- Google Maps Embed -->
+                        <div class="w-full rounded-2xl overflow-hidden border border-zinc-800 aspect-[4/3] sm:aspect-[16/9] relative">
+                            <iframe title="Power Zone Gym Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.0!2d86.47!3d25.37!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIyJzEyLjAiTiA4NsKwMjgnMTIuMCJF!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin" width="100%" height="100%" style="border: 0px; width: 100%; height: 100%; display: block;" allowfullscreen="" loading="lazy" class="w-full h-full block border-0"></iframe>
+                        </div>
+
+                        <div class="mt-6">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Power+Zone+Gym+Purabsarai+Munger+Bihar" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-xl text-center block transition-all flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation w-4 h-4 text-primary"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                                <span>Get Directions on Google Maps</span>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="flex gap-4">
-                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Power+Zone+The+Fitness+Club+Biscomaun+Colony+Patna" target="_blank" rel="noopener noreferrer" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg shadow-red-600/30">
-                            <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions
-                        </a>
-                        <a href="https://wa.me/919852866577" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Chat
-                        </a>
-                    </div>
                 </div>
 
-                <!-- Contact Form & Map -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 shadow-xl">
-                        <h3 class="font-syne font-extrabold text-2xl text-white mb-2">Book Free Trial / Inquiry</h3>
-                        <p class="text-zinc-400 text-sm mb-6">Fill out the quick form below and our team will contact you instantly.</p>
-                        
-                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">Full Name</label>
-                                <input type="text" id="form-name" required="" placeholder="Enter your name" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">Phone Number</label>
-                                <input type="tel" id="form-phone" required="" placeholder="10-digit mobile number" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1.5">Interested Program</label>
-                                <select id="form-service" class="pr-10 max-w-full truncate appearance-none w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%239ca3af\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem;">
-                                    <option>Powerlifting &amp; Strength Training</option>
-                                    <option>Fat Loss &amp; Weight Loss</option>
-                                    <option>Bodybuilding &amp; Hypertrophy</option>
-                                    <option>1-on-1 Personal Training</option>
-                                    <option>General Gym Membership</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2">
-                                <span id="form-btn-text">Submit Trial Request</span>
-                                <i data-lucide="send" class="w-4 h-4"></i>
-                            </button>
-                        </form>
-                    </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Google Maps Embed -->
-                    <div class="rounded-3xl overflow-hidden border border-zinc-800 h-[250px] shadow-lg">
-                        <iframe title="Power Zone Patna Google Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.778848419799!2d85.176!3d25.594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed594532b6e5e5%3A0x8e5f7a1f0a0d635c!2sBiscomaun%20Colony%2C%20Patna%2C%20Bihar%20800007!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 pt-10 sm:pt-12 pb-6 md:pb-8">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1 -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-primary text-black font-outfit font-black text-base flex items-center justify-center">PZ</div>
+                        <div>
+                            <span class="font-extrabold text-base font-syne tracking-wide">POWER ZONE</span>
+                            <span class="block text-[10px] text-primary font-bold tracking-widest uppercase">GYM MUNGER</span>
+                        </div>
                     </div>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Munger's elite destination for strength training, cardio, and total body transformation in Purabsarai.</p>
                 </div>
-            </div>
-        </section>
 
-    </main>
-
-    <!-- 12. FOOTER -->
-    <footer class="border-t border-zinc-800 bg-[#09090B] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-24 md:pb-12">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white font-outfit font-extrabold text-base sm:text-lg tracking-tight">
-                        PZ
-                    </div>
-                    <div>
-                        <span class="font-syne font-bold text-white text-base block">POWER ZONE</span>
-                        <span class="text-[10px] text-amber-400 font-semibold tracking-wider">THE FITNESS CLUB</span>
-                    </div>
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-white font-syne mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Training Programs</a></li>
+                        <li><a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="#schedule" class="hover:text-primary transition-colors">Workout Schedule</a></li>
+                        <li><a href="#pricing" class="hover:text-primary transition-colors">Membership Plans</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Location &amp; Contact</a></li>
+                    </ul>
                 </div>
-                <p class="text-zinc-400 text-sm leading-relaxed">
-                    Patna's premier strength, powerlifting, and bodybuilding destination. Unleash your absolute peak physical potential today.
-                </p>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-white font-syne mb-4">Training Programs</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Strength Training</a></li>
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Cardio &amp; Endurance</a></li>
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Personal Coaching</a></li>
+                        <li><a href="#programs" class="hover:text-primary transition-colors">Fat Loss &amp; Shred</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-white font-syne mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4 text-primary shrink-0 mt-0.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Purabsarai, Munger Station Rd, near dilip mahal, Munger, Bihar 811201</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-primary shrink-0"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            <a href="tel:+917349046105" class="hover:text-primary transition-colors">+91 73490 46105</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div>
-                <h4 class="font-syne font-bold text-white text-base mb-4">Quick Links</h4>
-                <ul class="space-y-2.5 text-sm text-zinc-400">
-                    <li><a href="#services" class="hover:text-red-500 transition-colors">Programs &amp; Services</a></li>
-                    <li><a href="#pricing" class="hover:text-red-500 transition-colors">Membership Pricing</a></li>
-                    <li><a href="#transformations" class="hover:text-red-500 transition-colors">Transformation Results</a></li>
-                    <li><a href="#coaches" class="hover:text-red-500 transition-colors">Expert Trainers</a></li>
-                    <li><a href="#bmi" class="hover:text-red-500 transition-colors">BMI Calculator</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-syne font-bold text-white text-base mb-4">Timing &amp; Hours</h4>
-                <ul class="space-y-2.5 text-sm text-zinc-400">
-                    <li><strong class="text-white">Morning:</strong> 5:30 AM – 11:00 AM</li>
-                    <li><strong class="text-white">Evening:</strong> 4:00 PM – 10:00 PM</li>
-                    <li><strong class="text-white">Days:</strong> Monday – Sunday</li>
-                    <li><strong class="text-white">Status:</strong> Open Daily</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-syne font-bold text-white text-base mb-4">Contact Info</h4>
-                <ul class="space-y-2.5 text-sm text-zinc-400">
-                    <li class="flex items-start gap-2">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-red-500 shrink mt-1"></i>
-                        <span>Suman Nivas, Near Kidzee School, Biscomaun Colony, Bajrangpuri, Patna 800007</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i data-lucide="phone" class="w-4 h-4 text-red-500 shrink-0"></i>
-                        <a href="tel:+919852866577" class="hover:text-white">+91 98528 66577</a>
-                    </li>
-                </ul>
-            </div>
-        
             
-        
             <!-- Unified ArcLane Verified Footer Signature -->
-            <div class="pt-6 mt-6 sm:mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-                <p>© <span id="current-year">2026</span> POWER ZONE (THE FITNESS CLUB). All rights reserved.</p>
+            <div class="pt-6 mt-6 sm:mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-3">
+                <p>© <span id="current-year">2026</span> Power Zone Gym. All rights reserved.</p>
                 <a href="https://www.arclanestudios.space" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-zinc-400 hover:text-white transition-colors group">
                     <span>Concept &amp; Digital Architecture by</span>
                     <span class="text-white font-bold tracking-tight group-hover:text-amber-400 transition-colors">ArcLane Studios</span>
@@ -882,191 +931,79 @@
         </div>
     </footer>
 
-    <!-- STICKY MOBILE BOTTOM ACTION BAR -->
-    <div class="md:hidden fixed inset-x-0 bottom-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex items-center justify-between gap-3 shadow-2xl">
-        <a href="tel:+919852866577" class="flex-1 bg-zinc-900 border border-zinc-700 text-white py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
-            <i data-lucide="phone-call" class="w-4 h-4 text-red-500"></i> Call Now
+    <!-- Sticky Mobile Action Bar -->
+    <div class="md:hidden fixed inset-x-0 bottom-0 z-40 bg-[#09090B] border-t border-zinc-800 p-3 flex gap-3">
+        <a href="tel:+917349046105" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-zinc-800 hover:bg-zinc-700 text-white shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-primary"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+            <span>Call Now</span>
         </a>
-        <a href="https://wa.me/919852866577" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30">
-            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        <a href="https://wa.me/917349046105?text=Hi%2C%20I%20want%20to%20book%20a%20free%20trial%20at%20Power%20Zone%20Gym." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 whitespace-nowrap bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-4 h-4"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+            <span>WhatsApp</span>
         </a>
-        <button onclick="openTrialModal()" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-1 shadow-lg shadow-red-600/30">
-            <i data-lucide="zap" class="w-4 h-4"></i> Free Trial
-        </button>
     </div>
 
-    <!-- BOOK FREE TRIAL MODAL -->
-    <div id="trial-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[110] hidden items-center justify-center p-4">
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl animate-in fade-in zoom-in duration-200">
-            <button onclick="closeTrialModal()" class="absolute top-4 right-4 p-2 rounded-xl bg-zinc-800 text-zinc-400 hover:text-white" aria-label="Close Modal">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-
-            <div class="text-center mb-6">
-                <div class="w-12 h-12 bg-red-600/20 text-red-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
-                    <i data-lucide="zap" class="w-6 h-6"></i>
-                </div>
-                <h3 class="font-syne font-extrabold text-2xl text-white">Book Your Free Trial</h3>
-                <p class="text-zinc-400 text-xs mt-1">Experience Power Zone Patna with zero obligation.</p>
-            </div>
-
-            <form id="modal-form" onsubmit="handleModalSubmit(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1">Your Name</label>
-                    <input type="text" id="modal-name" required="" placeholder="Enter full name" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1">Phone Number</label>
-                    <input type="tel" id="modal-phone" required="" placeholder="10-digit mobile number" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1">Preferred Time Slot</label>
-                    <select id="modal-time" class="pr-10 max-w-full truncate appearance-none w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-500" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%239ca3af\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem;">
-                        <option>Morning (5:30 AM – 11:00 AM)</option>
-                        <option>Evening (4:00 PM – 10:00 PM)</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-red-600/30 transition-all">
-                    Confirm Free Trial Booking
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- SUCCESS POPUP MODAL -->
-    <div id="success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[120] hidden items-center justify-center p-4">
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl">
-            <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i data-lucide="check-circle" class="w-8 h-8"></i>
-            </div>
-            <h3 class="font-syne font-extrabold text-2xl text-white mb-2">You're All Set!</h3>
-            <p id="success-msg" class="text-zinc-400 text-sm mb-6">Your trial request has been successfully submitted. We will call you shortly to confirm your session.</p>
-            <button onclick="closeSuccessModal()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-3 rounded-xl text-sm">
-                Done
-            </button>
-        </div>
-    </div>
-
-    <!-- SCRIPTS -->
+    <!-- JavaScript Interactivity -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
+        // Set current year in footer
+        const cyEl = document.getElementById('current-year'); if (cyEl) cyEl.textContent = new Date().getFullYear();
+
         // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
         function toggleMobileMenu() {
-            const drawer = document.getElementById('mobile-drawer');
-            const backdrop = document.getElementById('menu-backdrop');
-            const icon = document.getElementById('menu-icon');
-            
-            const isOpen = drawer.classList.contains('translate-x-full');
-            
+            const isOpen = !mobileDrawer.classList.contains('translate-x-full');
             if (isOpen) {
-                drawer.classList.remove('translate-x-full');
-                backdrop.classList.remove('hidden');
-                document.body.classList.add('overflow-hidden');
-                icon.setAttribute('data-lucide', 'x');
-            } else {
-                drawer.classList.add('translate-x-full');
-                backdrop.classList.add('hidden');
+                mobileDrawer.classList.add('translate-x-full');
+                menuBackdrop.classList.add('hidden');
                 document.body.classList.remove('overflow-hidden');
-                icon.setAttribute('data-lucide', 'menu');
-            }
-            lucide.createIcons();
-        }
-
-        // Modal Controls
-        function openTrialModal() {
-            document.getElementById('trial-modal').style.display = 'flex';
-            document.body.classList.add('overflow-hidden');
-        }
-
-        function closeTrialModal() {
-            document.getElementById('trial-modal').style.display = 'none';
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        function showSuccessModal(customText) {
-            if (customText) {
-                document.getElementById('success-msg').textContent = customText;
-            }
-            document.getElementById('success-modal').style.display = 'flex';
-        }
-
-        function closeSuccessModal() {
-            document.getElementById('success-modal').style.display = 'none';
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        // Form Handlers
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('form-name').value;
-            // Sanitize
-            const safeName = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-            showSuccessModal(`Thank you, ${safeName}! Your inquiry has been received. Our team at Power Zone Patna will contact you shortly.`);
-            document.getElementById('contact-form').reset();
-        }
-
-        function handleModalSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('modal-name').value;
-            const safeName = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-            closeTrialModal();
-            showSuccessModal(`Congratulations ${safeName}! Your Free Trial at Power Zone Patna is booked successfully.`);
-            document.getElementById('modal-form').reset();
-        }
-
-        // BMI Calculator Logic
-        function calculateBMI() {
-            const heightInput = document.getElementById('bmi-height').value;
-            const weightInput = document.getElementById('bmi-weight').value;
-            const resultDiv = document.getElementById('bmi-result');
-            const scoreEl = document.getElementById('bmi-score');
-            const categoryEl = document.getElementById('bmi-category');
-
-            if (!heightInput || !weightInput || heightInput <= 0 || weightInput <= 0) {
-                alert('Please enter valid height and weight values.');
-                return;
-            }
-
-            const heightM = heightInput / 100;
-            const bmi = (weightInput / (heightM * heightM)).toFixed(1);
-
-            scoreEl.textContent = bmi;
-            
-            let category = '';
-            let color = '';
-
-            if (bmi < 18.5) {
-                category = 'Underweight (Muscle Building Recommended)';
-                color = 'text-amber-400';
-            } else if (bmi >= 18.5 && bmi <= 24.9) {
-                category = 'Normal Weight (Great Physical Shape)';
-                color = 'text-emerald-400';
-            } else if (bmi >= 25 && bmi <= 29.9) {
-                category = 'Overweight (Fat Loss Program Recommended)';
-                color = 'text-amber-400';
             } else {
-                category = 'High BMI (Intensive Conditioning Recommended)';
-                color = 'text-red-500';
-            }
-
-            categoryEl.textContent = category;
-            categoryEl.className = `font-bold text-sm mb-4 ${color}`;
-            resultDiv.classList.remove('hidden');
-        }
-
-        // Close modals on outside click
-        window.onclick = function(event) {
-            const trialModal = document.getElementById('trial-modal');
-            const successModal = document.getElementById('success-modal');
-            if (event.target === trialModal) {
-                closeTrialModal();
-            }
-            if (event.target === successModal) {
-                closeSuccessModal();
+                mobileDrawer.classList.remove('translate-x-full');
+                menuBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
             }
         }
+
+        menuBtn.addEventListener('click', toggleMobileMenu);
+        closeMenuBtn.addEventListener('click', toggleMobileMenu);
+        menuBackdrop.addEventListener('click', toggleMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const program = document.getElementById('form-program').value;
+            const message = document.getElementById('form-message').value.trim();
+
+            const waText = encodeURIComponent(`Hi, my name is ${name} (${phone}). I am interested in ${program}. Message: ${message}`);
+            window.open(`https://wa.me/917349046105?text=${waText}`, '_blank', 'noopener,noreferrer');
+        });
     </script>
 
 </body></html>
